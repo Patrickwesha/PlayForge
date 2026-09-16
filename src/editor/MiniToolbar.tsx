@@ -20,9 +20,9 @@ export function MiniToolbar({ svgRef, wrapRef }: { svgRef: RefObject<SVGSVGEleme
   const { doc, selection, view, drawingPathId, guides } = useEditor(
     useShallow((s) => ({ doc: s.doc, selection: s.selection, view: s.view, drawingPathId: s.drawingPathId, guides: s.guides })),
   );
-  const [pos, setPos] = useState<{ x: number; y: number } | null>(null);
-  const [treeOpen, setTreeOpen] = useState(false);
-  const [labelEdit, setLabelEdit] = useState<string | null>(null);
+  const [pos, setPos] = useState<{ x: number; y: number; wrapW: number } | null>(null);
+  // Per-selection UI state, reset whenever the selection changes (adjust-state-on-prop-change pattern).
+  const [ui, setUi] = useState<{ key: string; treeOpen: boolean; labelEdit: string | null }>({ key: '', treeOpen: false, labelEdit: null });
   const diagram = diagramOf(doc);
   const isPlay = doc?.kind === 'play';
 
@@ -31,30 +31,42 @@ export function MiniToolbar({ svgRef, wrapRef }: { svgRef: RefObject<SVGSVGEleme
   const ann = selection.annotationId ? diagram.annotations[selection.annotationId] : undefined;
   const hasSel = players.length > 0 || !!path || !!ann;
   const dragging = guides.length > 0;
-
-  useEffect(() => {
-    setTreeOpen(false);
-    setLabelEdit(null);
-  }, [selection.playerIds, selection.pathId, selection.annotationId]);
+  const selectionKey = `${selection.playerIds.join(',')}|${selection.pathId ?? ''}|${selection.annotationId ?? ''}`;
+  if (ui.key !== selectionKey) setUi({ key: selectionKey, treeOpen: false, labelEdit: null });
+  const treeOpen = ui.key === selectionKey && ui.treeOpen;
+  const labelEdit = ui.key === selectionKey ? ui.labelEdit : null;
+  const setTreeOpen = (v: boolean | ((p: boolean) => boolean)) => setUi((u) => ({ ...u, key: selectionKey, treeOpen: typeof v === 'function' ? v(u.treeOpen) : v }));
+  const setLabelEdit = (v: string | null) => setUi((u) => ({ ...u, key: selectionKey, labelEdit: v }));
 
   useEffect(() => {
     const svg = svgRef.current;
     const wrap = wrapRef.current;
-    if (!svg || !wrap || !hasSel || drawingPathId) {
-      setPos(null);
+    const update = (next: { x: number; y: number; wrapW: number } | null) =>
+      setPos((cur) => {
+        if (cur === next) return cur;
+        if (cur && next && Math.abs(cur.x - next.x) < 0.5 && Math.abs(cur.y - next.y) < 0.5 && cur.wrapW === next.wrapW) return cur;
+        return next;
+      });
+    if (!svg || !wrap || !hasSel || drawingPathId || dragging) {
+      update(null);
       return;
     }
+    const d = diagramOf(doc);
     const pts: { x: number; y: number }[] = [];
-    for (const p of players) pts.push(toSvg(p, view));
-    if (path) for (const p of resolvePoints(path, diagram.players)) pts.push(toSvg(p, view));
-    if (ann) pts.push(toSvg(ann, view));
-    if (pts.length === 0) {
-      setPos(null);
+    for (const id of selection.playerIds) {
+      const p = d.players[id];
+      if (p) pts.push(toSvg(p, view));
+    }
+    const sp = selection.pathId ? d.paths[selection.pathId] : undefined;
+    if (sp) for (const p of resolvePoints(sp, d.players)) pts.push(toSvg(p, view));
+    const sa = selection.annotationId ? d.annotations[selection.annotationId] : undefined;
+    if (sa) pts.push(toSvg(sa, view));
+    const ctm = svg.getScreenCTM();
+    if (pts.length === 0 || !ctm) {
+      update(null);
       return;
     }
-    const ctm = svg.getScreenCTM();
     const wr = wrap.getBoundingClientRect();
-    if (!ctm) return;
     let minX = Infinity;
     let minY = Infinity;
     let maxX = -Infinity;
@@ -64,10 +76,11 @@ export function MiniToolbar({ svgRef, wrapRef }: { svgRef: RefObject<SVGSVGEleme
       maxX = Math.max(maxX, s.x);
       minY = Math.min(minY, s.y);
     }
-    setPos({ x: (minX + maxX) / 2 - wr.left, y: minY - wr.top - 14 });
-  }, [svgRef, wrapRef, hasSel, drawingPathId, players, path, ann, view, diagram.players]);
+    update({ x: (minX + maxX) / 2 - wr.left, y: minY - wr.top - 14, wrapW: wrap.clientWidth });
+  }, [svgRef, wrapRef, hasSel, drawingPathId, dragging, selectionKey, selection.playerIds, selection.pathId, selection.annotationId, view, doc]);
 
   if (!pos || dragging) return null;
+  const wrapW = pos.wrapW;
 
   const ids = selection.playerIds;
   const side: 'L' | 'R' = players.length && players[0].x < 0 ? 'L' : 'R';
@@ -76,10 +89,10 @@ export function MiniToolbar({ svgRef, wrapRef }: { svgRef: RefObject<SVGSVGEleme
     <div
       className="absolute z-20 flex flex-wrap items-center justify-center bg-neutral-900 text-white rounded-md shadow-lg px-1 py-1 -translate-x-1/2 -translate-y-full"
       style={{
-        left: Math.max(8, Math.min(pos.x, (wrapRef.current?.clientWidth ?? 800) - 8)),
+        left: Math.max(8, Math.min(pos.x, wrapW - 8)),
         top: Math.max(72, pos.y),
-        maxWidth: Math.min(720, (wrapRef.current?.clientWidth ?? 800) - 16),
-        transform: `translate(${clampTranslate(pos.x, wrapRef.current?.clientWidth ?? 800)}, -100%)`,
+        maxWidth: Math.min(720, wrapW - 16),
+        transform: `translate(${clampTranslate(pos.x, wrapW)}, -100%)`,
       }}
       onPointerDown={(e) => e.stopPropagation()}
     >

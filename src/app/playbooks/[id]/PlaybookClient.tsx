@@ -15,8 +15,10 @@ const field = 'border border-neutral-300 rounded px-2 py-1 text-sm bg-white';
 
 export function PlaybookClient({ id }: { id: string }) {
   const [pb, setPb] = useState<Playbook | null | undefined>(undefined);
-  const plays = useLiveQuery(() => repo.listPlays(), []) ?? [];
-  const formations = useLiveQuery(() => repo.listFormations(), []) ?? [];
+  const playsQ = useLiveQuery(() => repo.listPlays(), []);
+  const formationsQ = useLiveQuery(() => repo.listFormations(), []);
+  const plays = useMemo(() => playsQ ?? [], [playsQ]);
+  const formations = useMemo(() => formationsQ ?? [], [formationsQ]);
   const playMap = useMemo(() => new Map(plays.map((p) => [p.id, p])), [plays]);
   const formMap = useMemo(() => new Map(formations.map((f) => [f.id, f])), [formations]);
   const [adding, setAdding] = useState<string | null>(null);

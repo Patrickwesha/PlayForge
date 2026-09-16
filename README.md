@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PlayForge
 
-## Getting Started
+Football play, formation, and playbook designer that prints NFL/Visio-style play sheets from the browser.
 
-First, run the development server:
+- Draw plays on formations: drag players, draw routes, blocks (T-bar ends), motion squiggles, red-caps annotations, split markers, handoff marks.
+- Formation library (offense and defense) with flip, duplicate, and personnel tags. Youth counts (6 to 12 a side) supported.
+- Playbooks with sections, cover page, and call sheet.
+- Print 1-up, 2-up, 4-up, 6-up, or 8-up play sheets and 9-up or 10-up formation sheets on Letter or A4. Save as PDF from the print dialog. Export a single play as PNG.
+- Everything is stored in the browser (IndexedDB). Export a JSON backup from Settings. Imports PlayForge-Lite exports.
+
+## Run
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. The gallery of seed formations and demo plays is at `/dev/gallery`. Unit tests: `npm test`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Layout
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/model` types, zod schemas, constants (all sizes in yards)
+- `src/geometry` pure math: yards to SVG, paths (Catmull-Rom curves), markers, snapping, flip, route tree, block presets, sheet layout
+- `src/render` the one SVG renderer shared by the editor, thumbnails, print, and PNG export
+- `src/editor` pointer state machine, canvas, mini toolbar, inspector, shortcuts
+- `src/store` Dexie database, repo, editor store (zustand + immer, snapshot undo), autosave
+- `src/print` sheets, cells, cover, call sheet, PNG export
+- `src/io` backup and PlayForge-Lite import
+- `src/seeds` built-in formations, fronts, and demo plays
 
-## Learn More
+Coordinates: x = 0 at the ball (positive right), y = 0 at the line of scrimmage (positive downfield). Route points are stored relative to their player, so moving a player moves its routes.
 
-To learn more about Next.js, take a look at the following resources:
+## Printing tips
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+In the Chrome or Edge print dialog turn off "Headers and footers", keep margins at "Default" or "None", and enable "Background graphics" only if you use the yard-line theme. The page size and orientation are set by the app for each layout.
