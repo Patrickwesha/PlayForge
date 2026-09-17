@@ -21,13 +21,33 @@ export class PlayForgeDB extends Dexie {
     this.on('populate', () => {
       void seedDatabase(this);
     });
+    this.on('ready', () => ensureSeeds(this));
   }
 }
 
 export const DEMO_PLAYBOOK_ID = 'seed-playbook-beast';
+/** Bump when built-in formations or demo plays change; untouched seed rows are refreshed on open. */
+export const SEED_VERSION = 2;
+const SEED_TIME = '2026-01-01T00:00:00.000Z';
+
+export async function ensureSeeds(database: PlayForgeDB) {
+  const row = await database.settings.get('seedVersion');
+  if (row?.value === SEED_VERSION) return;
+  await database.transaction('rw', database.formations, database.plays, database.settings, async () => {
+    for (const f of [...OFFENSE_FORMATIONS, ...DEFENSE_FORMATIONS]) {
+      const existing = await database.formations.get(f.id);
+      if (!existing || existing.builtin) await database.formations.put(f);
+    }
+    for (const p of DEMO_PLAYS) {
+      const existing = await database.plays.get(p.id);
+      if (!existing || existing.updatedAt === SEED_TIME) await database.plays.put(p);
+    }
+    await database.settings.put({ key: 'seedVersion', value: SEED_VERSION });
+  });
+}
 
 export async function seedDatabase(database: PlayForgeDB) {
-  const t = '2026-01-01T00:00:00.000Z';
+  const t = SEED_TIME;
   await database.formations.bulkPut([...OFFENSE_FORMATIONS, ...DEFENSE_FORMATIONS]);
   await database.plays.bulkPut(DEMO_PLAYS);
   await database.playbooks.put({
@@ -45,6 +65,7 @@ export async function seedDatabase(database: PlayForgeDB) {
     createdAt: t,
     updatedAt: t,
   });
+  await database.settings.put({ key: 'seedVersion', value: SEED_VERSION });
 }
 
 let instance: PlayForgeDB | null = null;

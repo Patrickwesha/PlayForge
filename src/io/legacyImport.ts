@@ -1,5 +1,5 @@
 import type { Diagram, Formation, Path, PathPoint, Play, Playbook, Player } from '@/model/types';
-import { cubicMidpoint } from '@/geometry/path';
+import { quadraticFromCubic } from '@/geometry/path';
 import { nowIso } from '@/model/ids';
 import type { LegacyExport, LegacyPlayer, LegacyRouteSegment } from './legacyTypes';
 
@@ -74,10 +74,8 @@ function convertRoutes(playerId: string, segs: LegacyRouteSegment[], s: number, 
     if (seg.type === 'curve' && seg.cp1) {
       const c1 = seg.cp1;
       const c2 = seg.cp2 ?? seg.cp1;
-      const mid = cubicMidpoint(seg.start, c1, c2, seg.end);
-      cur.points.push({ ...rel(mid), smooth: true });
-    }
-    cur.points.push(rel(seg.end));
+      cur.points.push({ ...rel(seg.end), bend: rel(quadraticFromCubic(seg.start, c1, c2, seg.end)) });
+    } else cur.points.push(rel(seg.end));
     curEnd = seg.end;
     // style from the latest segment
     cur.end = seg.endpointStyle === 'T' ? 'tbar' : seg.endpointStyle === 'circle' ? 'dot' : seg.endpointStyle === 'none' ? 'none' : 'arrow';

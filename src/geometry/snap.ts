@@ -1,6 +1,12 @@
 import type { Point } from '@/model/types';
 
-export type SnapGuide = { axis: 'x' | 'y'; value: number; kind: 'align' | 'hash' | 'symmetry' | 'grid' | 'los' };
+export type SnapGuide = {
+  axis: 'x' | 'y';
+  value: number;
+  kind: 'align' | 'hash' | 'symmetry' | 'grid' | 'los' | 'spacing';
+  /** For spacing guides: the neighbour the gap was measured from. */
+  ref?: number;
+};
 export type SnapResult = { point: Point; guides: SnapGuide[] };
 
 export type SnapContext = {
@@ -18,10 +24,14 @@ export type SnapContext = {
   disabled?: boolean;
   /** Lock to one axis relative to the drag origin (Shift held). */
   axisLock?: { origin: Point };
+  /** Default gap used to line players up next to a neighbour when the row has no established gap. */
+  spacing?: number;
 };
 
-function nearest(value: number, candidates: { v: number; kind: SnapGuide['kind'] }[], threshold: number) {
-  let best: { v: number; kind: SnapGuide['kind'] } | null = null;
+type Cand = { v: number; kind: SnapGuide['kind']; ref?: number };
+
+function nearest(value: number, candidates: Cand[], threshold: number) {
+  let best: Cand | null = null;
   let bestD = threshold;
   for (const c of candidates) {
     const d = Math.abs(c.v - value);
@@ -33,9 +43,27 @@ function nearest(value: number, candidates: { v: number; kind: SnapGuide['kind']
   return best;
 }
 
+const round3 = (n: number) => Math.round(n * 1000) / 1000;
+const ROW_TOL = 0.3;
+
+/** Most common gap between consecutive x positions (rounded to 0.25), or undefined. */
+function commonGap(xs: number[]): number | undefined {
+  if (xs.length < 2) return undefined;
+  const counts = new Map<number, number>();
+  for (let i = 1; i < xs.length; i++) {
+    const g = Math.round((xs[i] - xs[i - 1]) * 4) / 4;
+    if (g > 0.2) counts.set(g, (counts.get(g) ?? 0) + 1);
+  }
+  let best: number | undefined;
+  let bestN = 0;
+  for (const [g, n] of counts) if (n > bestN || (n === bestN && best !== undefined && g < best)) { best = g; bestN = n; }
+  return best;
+}
+
 /**
- * Snap a raw yard point. Priority per axis: align with another player, hash marks,
- * mirror of another player, LOS (y only), then the grid.
+ * Snap a raw yard point. y: align with another player or the LOS, else grid.
+ * x: players on the same row offer "next to me" slots (row gap or 1 yd) and midpoints between
+ * neighbours; players on other rows offer vertical alignment; then hashes, mirror, center, grid.
  */
 export function snapPoint(raw: Point, ctx: SnapContext): SnapResult {
   let p = { ...raw };
@@ -49,41 +77,66 @@ export function snapPoint(raw: Point, ctx: SnapContext): SnapResult {
   const th = ctx.threshold ?? 0.35;
   const grid = ctx.grid ?? 0.5;
 
-  const xs: { v: number; kind: SnapGuide['kind'] }[] = [];
-  const ys: { v: number; kind: SnapGuide['kind'] }[] = [];
-  for (const o of ctx.others) {
-    xs.push({ v: o.x, kind: 'align' });
-    ys.push({ v: o.y, kind: 'align' });
-  }
-  if (ctx.hashX) xs.push({ v: ctx.hashX, kind: 'hash' }, { v: -ctx.hashX, kind: 'hash' });
-  if (ctx.symmetry) for (const o of ctx.others) if (Math.abs(o.x) > 0.01) xs.push({ v: -o.x, kind: 'symmetry' });
-  xs.push({ v: 0, kind: 'symmetry' });
+  // ---- y ----
+  const ys: Cand[] = ctx.others.map((o) => ({ v: o.y, kind: 'align' as const }));
   ys.push({ v: 0, kind: 'los' });
-
-  const sx = nearest(p.x, xs, th);
   const sy = nearest(p.y, ys, th);
-  if (sx) {
-    p.x = sx.v;
-    guides.push({ axis: 'x', value: sx.v, kind: sx.kind });
-  } else if (grid > 0) p.x = Math.round(p.x / grid) * grid;
   if (sy) {
     p.y = sy.v;
     guides.push({ axis: 'y', value: sy.v, kind: sy.kind });
   } else if (grid > 0) p.y = Math.round(p.y / grid) * grid;
 
+  // ---- x ----
+  const mates = ctx.others.filter((o) => Math.abs(o.y - p.y) < ROW_TOL).map((o) => o.x).sort((a, b) => a - b);
+  const xs: Cand[] = [];
+  const gap = commonGap(mates) ?? ctx.spacing ?? 1;
+  const occupied = (v: number) => mates.some((m) => Math.abs(m - v) < 0.15);
+  for (let i = 0; i < mates.length; i++) {
+    const m = mates[i];
+    for (const v of [m + gap, m - gap]) if (!occupied(v)) xs.push({ v, kind: 'spacing', ref: m });
+    if (i + 1 < mates.length && mates[i + 1] - m >= 1.2) xs.push({ v: (m + mates[i + 1]) / 2, kind: 'spacing', ref: m });
+  }
+  for (const o of ctx.others) if (Math.abs(o.y - p.y) >= ROW_TOL) xs.push({ v: o.x, kind: 'align' });
+  if (ctx.hashX) xs.push({ v: ctx.hashX, kind: 'hash' }, { v: -ctx.hashX, kind: 'hash' });
+  if (ctx.symmetry) for (const o of ctx.others) if (Math.abs(o.x) > 0.01 && !occupied(-o.x)) xs.push({ v: -o.x, kind: 'symmetry' });
+  if (!occupied(0)) xs.push({ v: 0, kind: 'symmetry' });
+
+  const sx = nearest(p.x, xs, th);
+  if (sx) {
+    p.x = sx.v;
+    guides.push({ axis: 'x', value: sx.v, kind: sx.kind, ref: sx.ref });
+  } else if (grid > 0) p.x = Math.round(p.x / grid) * grid;
+
   p = { x: round3(p.x), y: round3(p.y) };
   return { point: p, guides };
 }
 
-const round3 = (n: number) => Math.round(n * 1000) / 1000;
+export type WaypointOptions = {
+  grid?: number;
+  disabled?: boolean;
+  threshold?: number;
+  axisLock?: boolean;
+  /** Snap the segment direction to multiples of this angle in degrees (e.g. 45 for blocks). */
+  angleSnap?: number;
+};
 
-/** Snap a route waypoint: grid only, plus alignment with the path's previous point. */
-export function snapWaypoint(raw: Point, prev: Point | null, opts: { grid?: number; disabled?: boolean; threshold?: number; axisLock?: boolean } = {}): SnapResult {
+/** Snap a route waypoint: optional angle snap from the previous point, alignment with it, else grid. */
+export function snapWaypoint(raw: Point, prev: Point | null, opts: WaypointOptions = {}): SnapResult {
   if (opts.disabled) return { point: raw, guides: [] };
   const grid = opts.grid ?? 0.5;
   const th = opts.threshold ?? 0.3;
   const p = { x: raw.x, y: raw.y };
   const guides: SnapGuide[] = [];
+  if (prev && opts.angleSnap) {
+    const dx = raw.x - prev.x;
+    const dy = raw.y - prev.y;
+    const dist = Math.round(Math.hypot(dx, dy) * 4) / 4;
+    if (dist > 0) {
+      const step = (opts.angleSnap * Math.PI) / 180;
+      const a = Math.round(Math.atan2(dy, dx) / step) * step;
+      return { point: { x: round3(prev.x + Math.cos(a) * dist), y: round3(prev.y + Math.sin(a) * dist) }, guides };
+    }
+  }
   if (prev) {
     if (opts.axisLock) {
       if (Math.abs(raw.x - prev.x) >= Math.abs(raw.y - prev.y)) p.y = prev.y; else p.x = prev.x;

@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 const point = z.object({ x: z.number(), y: z.number() });
-const pathPoint = point.extend({ smooth: z.boolean().optional() });
+const pathPoint = point.extend({ smooth: z.boolean().optional(), bend: point.optional() });
 
 export const playerSchema = z.object({
   id: z.string(),

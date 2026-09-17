@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { fromSvg, toSvg, viewBox, zoomWindow } from './transform';
-import { buildD, endTangent, shortenEnd, toSegments, trimStart } from './path';
+import { bendThrough, buildD, endTangent, segmentMidpoints, shortenEnd, toSegments, trimStart } from './path';
 import { arrowHead, tBar } from './markers';
 import { flipDiagram, flipLabel, flipName } from './flip';
 import { applyRouteTree } from './routeTree';
@@ -60,6 +60,17 @@ describe('path', () => {
     const t = trimStart([{ x: 0, y: 0 }, { x: 0, y: 5 }], 0.5);
     expect(t[0]).toEqual({ x: 0, y: 0.5 });
     expect(trimStart([{ x: 0, y: 0 }, { x: 0, y: 0.6 }], 0.5)[0]).toEqual({ x: 0, y: 0 });
+  });
+  it('bends a segment through a dragged midpoint and straightens near the chord', () => {
+    const a = { x: 0, y: 0 };
+    const b = { x: 0, y: 4 };
+    const c = bendThrough(a, b, { x: 1, y: 2 })!;
+    expect(c).toEqual({ x: 2, y: 2 });
+    expect(bendThrough(a, b, { x: 0.05, y: 2 })).toBeUndefined();
+    const mids = segmentMidpoints([a, { ...b, bend: c }]);
+    expect(mids[0].x).toBeCloseTo(1, 5);
+    expect(mids[0].y).toBeCloseTo(2, 5);
+    expect(buildD(toSegments([a, { ...b, bend: c }]), id)).toContain(' C ');
   });
   it('shortens the end along the tangent', () => {
     const s = shortenEnd([{ x: 0, y: 0 }, { x: 0, y: 5 }], 1);

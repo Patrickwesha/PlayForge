@@ -51,8 +51,8 @@ describe('legacy import', () => {
     const paths = Object.values(r.plays[0].diagram.paths).filter((p) => p.anchor.kind === 'player' && p.anchor.playerId === 'player-2');
     expect(paths.length).toBe(2);
     const chained = paths[0];
-    expect(chained.points.length).toBe(4);
-    expect(chained.points[2].smooth).toBe(true);
+    expect(chained.points.length).toBe(3);
+    expect(chained.points[2].bend).toBeDefined();
     expect(chained.end).toBe('arrow');
     expect(chained.points[1]).toEqual({ x: 0, y: 5 });
     expect(paths[1].line).toBe('squiggle');

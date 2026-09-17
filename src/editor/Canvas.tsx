@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef } from 'react';
 import { useShallow } from 'zustand/react/shallow';
 import { COLORS } from '@/model/constants';
 import { matchAspect, toSvg, windowAspect, yd } from '@/geometry/transform';
-import { resolvePoints } from '@/geometry/path';
+import { resolvePoints, segmentMidpoints } from '@/geometry/path';
 import { PlaySvg } from '@/render/PlaySvg';
 import { themeFor } from '@/render/theme';
 import { diagramOf, useEditor } from '@/store/editorStore';
@@ -53,6 +53,20 @@ export function Canvas() {
   const guideEls = guides.map((g, i) => {
     if (g.axis === 'x') {
       const x = toSvg({ x: g.value, y: 0 }, view).x;
+      if (g.kind === 'spacing' && g.ref !== undefined) {
+        // short dimension bar from the neighbour to the snapped slot, drawn just above the row
+        const rowY = guides.find((q) => q.axis === 'y')?.value;
+        const yv = rowY ?? 0;
+        const y = toSvg({ x: 0, y: yv }, view).y - yd(0.8);
+        const rx = toSvg({ x: g.ref, y: 0 }, view).x;
+        return (
+          <g key={i} stroke={COLORS.orange} strokeWidth={yd(0.05)}>
+            <line x1={rx} x2={x} y1={y} y2={y} />
+            <line x1={rx} x2={rx} y1={y - yd(0.2)} y2={y + yd(0.2)} />
+            <line x1={x} x2={x} y1={y - yd(0.2)} y2={y + yd(0.2)} />
+          </g>
+        );
+      }
       return <line key={i} x1={x} x2={x} y1={top} y2={bottom} stroke={COLORS.guide} strokeWidth={yd(0.04)} strokeDasharray={`${yd(0.25)} ${yd(0.15)}`} />;
     }
     const y = toSvg({ x: 0, y: g.value }, view).y;
@@ -60,17 +74,31 @@ export function Canvas() {
   });
 
   const selPath = selection.pathId ? diagram.paths[selection.pathId] : undefined;
+  const selAbs = selPath ? resolvePoints(selPath, diagram.players) : [];
   const handleEls = selPath
-    ? resolvePoints(selPath, diagram.players).map((pt, i) => {
-        const s = toSvg(pt, view);
-        const active = selection.pointIndex === i;
-        return (
-          <g key={i} data-hit={`point:${selPath.id}:${i}`} style={{ cursor: 'move' }}>
-            <circle cx={s.x} cy={s.y} r={yd(0.45)} fill="transparent" />
-            <circle cx={s.x} cy={s.y} r={yd(active ? 0.22 : 0.17)} fill={pt.smooth ? COLORS.paper : COLORS.selection} stroke={COLORS.selection} strokeWidth={yd(0.05)} />
-          </g>
-        );
-      })
+    ? [
+        // bend handles at each segment midpoint: drag to bow the segment (FirstDown-style curve)
+        ...segmentMidpoints(selAbs).map((m, i) => {
+          const s = toSvg(m, view);
+          const bent = !!selAbs[i + 1]?.bend;
+          return (
+            <g key={`m${i}`} data-hit={`mid:${selPath.id}:${i + 1}`} style={{ cursor: 'ns-resize' }}>
+              <circle cx={s.x} cy={s.y} r={yd(0.4)} fill="transparent" />
+              <rect x={s.x - yd(0.13)} y={s.y - yd(0.13)} width={yd(0.26)} height={yd(0.26)} transform={`rotate(45 ${s.x} ${s.y})`} fill={bent ? COLORS.selection : COLORS.paper} stroke={COLORS.selection} strokeWidth={yd(0.05)} />
+            </g>
+          );
+        }),
+        ...selAbs.map((pt, i) => {
+          const s = toSvg(pt, view);
+          const active = selection.pointIndex === i;
+          return (
+            <g key={i} data-hit={`point:${selPath.id}:${i}`} style={{ cursor: 'move' }}>
+              <circle cx={s.x} cy={s.y} r={yd(0.45)} fill="transparent" />
+              <circle cx={s.x} cy={s.y} r={yd(active ? 0.22 : 0.17)} fill={pt.smooth ? COLORS.paper : COLORS.selection} stroke={COLORS.selection} strokeWidth={yd(0.05)} />
+            </g>
+          );
+        }),
+      ]
     : null;
 
   let rubber: React.ReactNode = null;
@@ -119,7 +147,7 @@ export function Canvas() {
       />
       {drawingPathId && (
         <div className="absolute top-2 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-3 py-1.5 rounded shadow">
-          Click to add points &middot; double-click or Enter to finish &middot; C = curve last point &middot; Backspace = undo point &middot; Esc = cancel
+          Click to add points &middot; double-click or Enter to finish &middot; Backspace = undo point &middot; Esc = cancel &middot; then drag a segment&apos;s middle handle to bend it
           <button className="ml-3 underline" onClick={() => finishDrawing()}>
             Done
           </button>

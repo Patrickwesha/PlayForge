@@ -4,7 +4,7 @@ import type { Annotation, Diagram, Formation, MarkAnnotation, Path, PathPoint, P
 import { aid, pid, rid } from '@/model/ids';
 import { flipDiagram, flipFormationPlayers, flipName } from '@/geometry/flip';
 import { applyRouteTree, routeScaleFor } from '@/geometry/routeTree';
-import { baseBlock, downBlock, kickOutBlock, pullBlock, reachBlock, type Playside } from '@/geometry/blockPresets';
+import { blockPreset, doubleTeam, type BlockPreset, type Playside } from '@/geometry/blockPresets';
 import { diagramOf, useEditor, type EditorDoc } from './editorStore';
 
 type Draft = EditorDoc;
@@ -280,23 +280,73 @@ export function applyRouteTreeTo(n: number, playerIds: string[]) {
   });
 }
 
-export type BlockPreset = 'base' | 'down' | 'reach' | 'pull' | 'kickout';
+export type { BlockPreset };
 
 export function applyBlockPresetTo(kind: BlockPreset, playerIds: string[], side: Playside) {
   store().commit((d) => {
     const dg = diagram(d);
     if (!dg) return;
+    const clear = (id: string) => {
+      for (const [pathId, p] of Object.entries(dg.paths)) if (p.anchor.kind === 'player' && p.anchor.playerId === id && p.role === 'block') delete dg.paths[pathId];
+    };
+    if (kind === 'double') {
+      const [a, b] = playerIds.map((id) => dg.players[id]).filter(Boolean);
+      if (!a || !b) return;
+      clear(a.id);
+      clear(b.id);
+      for (const path of doubleTeam(a, b)) dg.paths[path.id] = path;
+      return;
+    }
     for (const id of playerIds) {
       const player = dg.players[id];
       if (!player) continue;
-      for (const [pathId, p] of Object.entries(dg.paths)) if (p.anchor.kind === 'player' && p.anchor.playerId === id && p.role === 'block') delete dg.paths[pathId];
-      const path =
-        kind === 'base' ? baseBlock(player)
-        : kind === 'down' ? downBlock(player)
-        : kind === 'reach' ? reachBlock(player, side)
-        : kind === 'pull' ? pullBlock(player, side)
-        : kickOutBlock(player, side);
-      dg.paths[path.id] = path;
+      clear(id);
+      for (const path of blockPreset(kind, player, side)) dg.paths[path.id] = path;
+    }
+  });
+}
+
+/** Set (or clear) the bend control of the segment ending at `index`. */
+export function setBend(pathId: string, index: number, bend: Point | undefined, live = false) {
+  const fn = live ? store().live : store().commit;
+  fn((d) => {
+    const p = diagram(d)?.paths[pathId];
+    if (!p || !p.points[index] || index === 0) return;
+    if (bend) p.points[index].bend = bend; else delete p.points[index].bend;
+  });
+}
+
+/** Remove every bend and smooth flag: sharp, straight segments. */
+export function straightenPath(pathId: string) {
+  store().commit((d) => {
+    const p = diagram(d)?.paths[pathId];
+    if (!p) return;
+    for (const pt of p.points) {
+      delete pt.bend;
+      delete pt.smooth;
+    }
+  });
+}
+
+/** Bend every segment into a gentle arc that bows away from the previous direction (FirstDown-style rounding). */
+export function roundPath(pathId: string, amount = 0.35) {
+  store().commit((d) => {
+    const p = diagram(d)?.paths[pathId];
+    if (!p) return;
+    for (let i = 1; i < p.points.length; i++) {
+      const a = p.points[i - 1];
+      const b = p.points[i];
+      const dx = b.x - a.x;
+      const dy = b.y - a.y;
+      const prev = i >= 2 ? { x: a.x - p.points[i - 2].x, y: a.y - p.points[i - 2].y } : null;
+      // bow toward the side the path is turning away from, so corners get rounded
+      let sideSign = 1;
+      if (prev) sideSign = Math.sign(prev.x * dy - prev.y * dx) || 1;
+      const len = Math.hypot(dx, dy) || 1;
+      const nx = (-dy / len) * amount * Math.min(len, 6);
+      const ny = (dx / len) * amount * Math.min(len, 6);
+      b.bend = { x: (a.x + b.x) / 2 - nx * sideSign, y: (a.y + b.y) / 2 - ny * sideSign };
+      delete b.smooth;
     }
   });
 }

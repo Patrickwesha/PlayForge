@@ -5,7 +5,7 @@ import type { Point } from '@/model/types';
 import { UNITS_PER_YARD } from '@/model/constants';
 import { fromSvg, panWindow, zoomWindow } from '@/geometry/transform';
 import { snapPoint, snapWaypoint } from '@/geometry/snap';
-import { resolvePoints, distanceToPolyline, samplePolyline, toSegments } from '@/geometry/path';
+import { bendThrough, resolvePoints, distanceToPolyline, samplePolyline, toSegments } from '@/geometry/path';
 import { hashX } from '@/geometry/yards';
 import { diagramOf, useEditor } from '@/store/editorStore';
 import * as A from '@/store/editorActions';
@@ -17,6 +17,7 @@ type IState =
   | { mode: 'down'; origin: Point; screen: Point; hit: Hit; shift: boolean; alt: boolean }
   | { mode: 'dragPlayers'; ids: string[]; primary: string; start: Record<string, Point>; origin: Point }
   | { mode: 'dragPoint'; pathId: string; index: number }
+  | { mode: 'dragBend'; pathId: string; index: number }
   | { mode: 'dragAnnotation'; id: string; offset: Point }
   | { mode: 'marquee'; from: Point }
   | { mode: 'panning'; startScreen: Point; startView: { minX: number; maxX: number; minY: number; maxY: number } };
@@ -143,7 +144,7 @@ export function useInteraction(svgRef: RefObject<SVGSVGElement | null>) {
       if (!p) return;
       const abs = resolvePoints(p, d.players);
       const prev = abs[abs.length - 1] ?? null;
-      const snapped = snapWaypoint(pt, prev, { disabled: e.altKey, axisLock: e.shiftKey }).point;
+      const snapped = snapWaypoint(pt, prev, { disabled: e.altKey, axisLock: e.shiftKey, angleSnap: p.role === 'block' ? 45 : undefined }).point;
       const anchor = p.anchor.kind === 'player' ? d.players[p.anchor.playerId] : { x: 0, y: 0 };
       if (prev && Math.hypot(prev.x - snapped.x, prev.y - snapped.y) < 0.2) return;
       A.appendPoint(id, { x: snapped.x - anchor.x, y: snapped.y - anchor.y });
@@ -240,6 +241,10 @@ export function useInteraction(svgRef: RefObject<SVGSVGElement | null>) {
             s.checkpoint();
             s.setSelection({ playerIds: [], pathId: cur.hit.pathId, pointIndex: cur.hit.index });
             st.current = { mode: 'dragPoint', pathId: cur.hit.pathId, index: cur.hit.index };
+          } else if (cur.hit.kind === 'mid') {
+            s.checkpoint();
+            s.setSelection({ playerIds: [], pathId: cur.hit.pathId });
+            st.current = { mode: 'dragBend', pathId: cur.hit.pathId, index: cur.hit.index };
           } else if (cur.hit.kind === 'ann') {
             const a = d.annotations[cur.hit.id];
             s.checkpoint();
@@ -268,10 +273,23 @@ export function useInteraction(svgRef: RefObject<SVGSVGElement | null>) {
           if (!p) return;
           const abs = resolvePoints(p, d.players);
           const prev = cur.index > 0 ? abs[cur.index - 1] : null;
-          const snapped = snapWaypoint(yd, prev, { disabled: e.altKey, axisLock: e.shiftKey });
+          const snapped = snapWaypoint(yd, prev, { disabled: e.altKey, axisLock: e.shiftKey, angleSnap: p.role === 'block' && !p.points[cur.index]?.bend ? 45 : undefined });
           const anchor = p.anchor.kind === 'player' ? d.players[p.anchor.playerId] : { x: 0, y: 0 };
           A.setPoint(cur.pathId, cur.index, { x: round3(snapped.point.x - anchor.x), y: round3(snapped.point.y - anchor.y) }, true);
           s.setGuides(snapped.guides);
+          return;
+        }
+        case 'dragBend': {
+          const d = diagramOf(s.doc);
+          const p = d.paths[cur.pathId];
+          if (!p || cur.index === 0) return;
+          const abs = resolvePoints(p, d.players);
+          const a = abs[cur.index - 1];
+          const b = abs[cur.index];
+          if (!a || !b) return;
+          const bend = bendThrough(a, b, yd);
+          const anchor = p.anchor.kind === 'player' ? d.players[p.anchor.playerId] : { x: 0, y: 0 };
+          A.setBend(cur.pathId, cur.index, bend ? { x: round3(bend.x - anchor.x), y: round3(bend.y - anchor.y) } : undefined, true);
           return;
         }
         case 'dragAnnotation': {
@@ -313,6 +331,7 @@ export function useInteraction(svgRef: RefObject<SVGSVGElement | null>) {
             } else s.setSelection({ playerIds: [h.id] });
           } else if (h.kind === 'path') s.setSelection({ playerIds: [], pathId: h.id });
           else if (h.kind === 'point') s.setSelection({ playerIds: [], pathId: h.pathId, pointIndex: h.index });
+          else if (h.kind === 'mid') s.setSelection({ playerIds: [], pathId: h.pathId });
           else if (h.kind === 'ann') s.setSelection({ playerIds: [], annotationId: h.id });
           else if (!cur.shift) s.clearSelection();
           break;

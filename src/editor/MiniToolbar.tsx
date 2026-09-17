@@ -8,6 +8,42 @@ import { resolvePoints } from '@/geometry/path';
 import { diagramOf, useEditor } from '@/store/editorStore';
 import * as A from '@/store/editorActions';
 import { ROUTE_TREE } from '@/geometry/routeTree';
+import { BLOCK_PRESETS, blockPreset, doubleTeam, type BlockPreset, type Playside } from '@/geometry/blockPresets';
+import { buildD, toSegments } from '@/geometry/path';
+import { arrowHead, tBar } from '@/geometry/markers';
+
+/** Tiny preview of a block preset drawn from a dummy player at the origin. */
+function BlockIcon({ kind, side }: { kind: BlockPreset; side: Playside }) {
+  const dummy: Player = { id: 'd', side: 'offense', symbol: 'circle', label: '', x: side === 'R' ? 1 : -1, y: 0 };
+  const paths = kind === 'double'
+    ? doubleTeam({ ...dummy, id: 'a', x: -0.6 }, { ...dummy, id: 'b', x: 0.6 })
+    : blockPreset(kind, dummy, side);
+  // fit: x in [-5,5], y in [-2,4.5] -> 40x28 box, y up
+  const S = 5.5;
+  const map = (p: { x: number; y: number }) => ({ x: 20 + p.x * S, y: 22 - p.y * S });
+  return (
+    <svg width={40} height={28} viewBox="0 0 40 28">
+      {paths.map((p, i) => {
+        const origin = kind === 'double' ? (i === 0 ? { x: -0.6, y: 0 } : { x: 0.6, y: 0 }) : { x: 0, y: 0 };
+        const abs = p.points.map((pt) => ({ ...pt, x: pt.x + origin.x, y: pt.y + origin.y, bend: pt.bend ? { x: pt.bend.x + origin.x, y: pt.bend.y + origin.y } : undefined }));
+        const segs = toSegments(abs);
+        const end = abs[abs.length - 1];
+        const last = segs[segs.length - 1];
+        const from = last?.c2 ?? last?.from ?? abs[0];
+        const l = Math.hypot(end.x - from.x, end.y - from.y) || 1;
+        const dir = { x: (end.x - from.x) / l, y: (end.y - from.y) / l };
+        return (
+          <g key={i} stroke="#fff" fill="none" strokeWidth={1.5} strokeLinecap="round">
+            <circle cx={map(origin).x} cy={map(origin).y} r={2.2} />
+            <path d={buildD(segs, map)} />
+            {p.end === 'tbar' && (() => { const [a, b] = tBar(end, dir, 0.55).map(map); return <line x1={a.x} y1={a.y} x2={b.x} y2={b.y} strokeWidth={2} />; })()}
+            {p.end === 'arrow' && (() => { const [a, b, c] = arrowHead(end, dir, 0.8, 0.4).map(map); return <polygon points={`${a.x},${a.y} ${b.x},${b.y} ${c.x},${c.y}`} fill="#fff" />; })()}
+          </g>
+        );
+      })}
+    </svg>
+  );
+}
 
 const btn = 'px-2 h-7 text-xs rounded hover:bg-neutral-700 disabled:opacity-40 whitespace-nowrap';
 const active = 'bg-white text-black hover:bg-white';
@@ -22,7 +58,7 @@ export function MiniToolbar({ svgRef, wrapRef }: { svgRef: RefObject<SVGSVGEleme
   );
   const [pos, setPos] = useState<{ x: number; y: number; wrapW: number } | null>(null);
   // Per-selection UI state, reset whenever the selection changes (adjust-state-on-prop-change pattern).
-  const [ui, setUi] = useState<{ key: string; treeOpen: boolean; labelEdit: string | null }>({ key: '', treeOpen: false, labelEdit: null });
+  const [ui, setUi] = useState<{ key: string; treeOpen: boolean; blocksOpen: boolean; labelEdit: string | null }>({ key: '', treeOpen: false, blocksOpen: false, labelEdit: null });
   const diagram = diagramOf(doc);
   const isPlay = doc?.kind === 'play';
 
@@ -32,10 +68,12 @@ export function MiniToolbar({ svgRef, wrapRef }: { svgRef: RefObject<SVGSVGEleme
   const hasSel = players.length > 0 || !!path || !!ann;
   const dragging = guides.length > 0;
   const selectionKey = `${selection.playerIds.join(',')}|${selection.pathId ?? ''}|${selection.annotationId ?? ''}`;
-  if (ui.key !== selectionKey) setUi({ key: selectionKey, treeOpen: false, labelEdit: null });
+  if (ui.key !== selectionKey) setUi({ key: selectionKey, treeOpen: false, blocksOpen: false, labelEdit: null });
   const treeOpen = ui.key === selectionKey && ui.treeOpen;
+  const blocksOpen = ui.key === selectionKey && ui.blocksOpen;
   const labelEdit = ui.key === selectionKey ? ui.labelEdit : null;
-  const setTreeOpen = (v: boolean | ((p: boolean) => boolean)) => setUi((u) => ({ ...u, key: selectionKey, treeOpen: typeof v === 'function' ? v(u.treeOpen) : v }));
+  const setTreeOpen = (v: boolean | ((p: boolean) => boolean)) => setUi((u) => ({ ...u, key: selectionKey, blocksOpen: false, treeOpen: typeof v === 'function' ? v(u.treeOpen) : v }));
+  const setBlocksOpen = (v: boolean | ((p: boolean) => boolean)) => setUi((u) => ({ ...u, key: selectionKey, treeOpen: false, blocksOpen: typeof v === 'function' ? v(u.blocksOpen) : v }));
   const setLabelEdit = (v: string | null) => setUi((u) => ({ ...u, key: selectionKey, labelEdit: v }));
 
   useEffect(() => {
@@ -92,7 +130,8 @@ export function MiniToolbar({ svgRef, wrapRef }: { svgRef: RefObject<SVGSVGEleme
         left: Math.max(8, Math.min(pos.x, wrapW - 8)),
         top: Math.max(72, pos.y),
         maxWidth: Math.min(720, wrapW - 16),
-        transform: `translate(${clampTranslate(pos.x, wrapW)}, -100%)`,
+        // centered on the selection, but kept inside the canvas: percentages resolve against the toolbar's own width
+        transform: `translate(clamp(${(8 - pos.x).toFixed(1)}px, -50%, calc(${(wrapW - 8 - pos.x).toFixed(1)}px - 100%)), -100%)`,
       }}
       onPointerDown={(e) => e.stopPropagation()}
     >
@@ -115,14 +154,28 @@ export function MiniToolbar({ svgRef, wrapRef }: { svgRef: RefObject<SVGSVGEleme
                   </div>
                 )}
               </div>
-              <select className="h-7 text-xs bg-neutral-800 rounded px-1" defaultValue="" onChange={(e) => { if (e.target.value) A.applyBlockPresetTo(e.target.value as A.BlockPreset, ids, side); e.target.value = ''; }} title="Blocking presets">
-                <option value="">Blocks…</option>
-                <option value="base">Base</option>
-                <option value="down">Down</option>
-                <option value="reach">Reach</option>
-                <option value="pull">Pull</option>
-                <option value="kickout">Kick out</option>
-              </select>
+              <div className="relative">
+                <button className={`${btn} ${blocksOpen ? active : ''}`} onClick={() => setBlocksOpen((v) => !v)} title="Blocking presets">Blocks</button>
+                {blocksOpen && (
+                  <div className="absolute left-0 top-8 bg-neutral-900 rounded shadow-lg p-1.5 grid grid-cols-4 gap-1 w-72 z-30">
+                    {BLOCK_PRESETS.map((b) => (
+                      <button
+                        key={b.id}
+                        disabled={b.multi && ids.length < 2}
+                        className="flex flex-col items-center gap-0.5 px-1 py-1 rounded hover:bg-neutral-700 disabled:opacity-30"
+                        title={b.hint}
+                        onClick={() => { A.applyBlockPresetTo(b.id, ids, side); setBlocksOpen(false); }}
+                      >
+                        <BlockIcon kind={b.id} side={side} />
+                        <span className="text-[10px] leading-tight">{b.name}</span>
+                      </button>
+                    ))}
+                    <div className="col-span-4 text-[10px] text-neutral-400 px-1 pt-1 border-t border-neutral-700">
+                      Playside: {side === 'R' ? 'right' : 'left'} (from the player&apos;s side of the ball). Select two linemen for Double.
+                    </div>
+                  </div>
+                )}
+              </div>
             </Group>
           )}
           <Group>
@@ -199,11 +252,8 @@ export function MiniToolbar({ svgRef, wrapRef }: { svgRef: RefObject<SVGSVGEleme
             ))}
           </Group>
           <Group>
-            <button className={btn} onClick={() => A.setPathSmooth(path.id, true)} title="Curve through all points">Curve</button>
-            <button className={btn} onClick={() => A.setPathSmooth(path.id, false)} title="Sharp corners">Straight</button>
-            {selection.pointIndex !== undefined && selection.pointIndex > 0 && (
-              <button className={btn} onClick={() => A.togglePointSmooth(path.id, selection.pointIndex!)} title="Toggle curve at this point (S)">Pt curve</button>
-            )}
+            <button className={btn} onClick={() => A.roundPath(path.id)} title="Bow every segment into an arc; drag the diamond handles to adjust">Curve</button>
+            <button className={btn} onClick={() => A.straightenPath(path.id)} title="Remove all bends">Straighten</button>
             {selection.pointIndex !== undefined && selection.pointIndex > 0 && (
               <button className={btn} onClick={() => A.deletePoint(path.id, selection.pointIndex!)} title="Delete this point">Del pt</button>
             )}
@@ -262,14 +312,6 @@ export function MiniToolbar({ svgRef, wrapRef }: { svgRef: RefObject<SVGSVGEleme
       )}
     </div>
   );
-
-  /** Keep the toolbar inside the canvas: shift the anchor from centered toward the edges. */
-  function clampTranslate(x: number, width: number): string {
-    const half = Math.min(360, (width - 16) / 2);
-    if (x < half + 8) return `${-(x - 8)}px`;
-    if (x > width - half - 8) return `${-(half * 2 - (width - 8 - x))}px`;
-    return '-50%';
-  }
 
   function startDraw(playerId: string, tool: 'route' | 'block' | 'motion') {
     const s = useEditor.getState();

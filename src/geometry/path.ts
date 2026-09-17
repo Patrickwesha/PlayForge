@@ -32,8 +32,9 @@ export function trimStart(points: PathPoint[], r: number): PathPoint[] {
 }
 
 /**
- * Convert points to segments. A point flagged `smooth` gets a Catmull-Rom style tangent
- * (half the chord between its neighbours); other points are corners.
+ * Convert points to segments. A segment whose end point carries `bend` is a quadratic arc
+ * through that control (stored as the equivalent cubic). Otherwise a point flagged `smooth`
+ * gets a Catmull-Rom style tangent (half the chord between its neighbours); other points are corners.
  */
 export function toSegments(points: PathPoint[]): Segment[] {
   const n = points.length;
@@ -41,7 +42,12 @@ export function toSegments(points: PathPoint[]): Segment[] {
   for (let i = 0; i < n - 1; i++) {
     const p1 = points[i];
     const p2 = points[i + 1];
-    const s1 = !!p1.smooth && i > 0;
+    if (p2.bend) {
+      const c = p2.bend;
+      segs.push({ from: p1, to: p2, c1: add(p1, mul(sub(c, p1), 2 / 3)), c2: add(p2, mul(sub(c, p2), 2 / 3)) });
+      continue;
+    }
+    const s1 = !!p1.smooth && i > 0 && !p1.bend;
     const s2 = !!p2.smooth && i + 2 < n;
     if (!s1 && !s2) {
       segs.push({ from: p1, to: p2 });
@@ -95,7 +101,30 @@ export function buildD(segs: Segment[], map: (p: Point) => Point, decimals = 2):
   return d;
 }
 
-function bezierAt(s: Segment, t: number): Point {
+/** Midpoint of each segment (where the bend handles sit). */
+export function segmentMidpoints(points: PathPoint[]): Point[] {
+  return toSegments(points).map((s) => bezierAt(s, 0.5));
+}
+
+/**
+ * Quadratic control point that makes the arc from a to b pass through m at t = 0.5.
+ * Returns undefined when m is (nearly) on the chord, meaning "straight".
+ */
+export function bendThrough(a: Point, b: Point, m: Point, straightTolerance = 0.2): Point | undefined {
+  const chordMid = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
+  const chord = sub(b, a);
+  const l = len(chord);
+  const off = l === 0 ? len(sub(m, chordMid)) : Math.abs((m.x - a.x) * chord.y - (m.y - a.y) * chord.x) / l;
+  if (off < straightTolerance) return undefined;
+  return { x: 2 * m.x - chordMid.x, y: 2 * m.y - chordMid.y };
+}
+
+/** Approximate a cubic (c1, c2) with a single quadratic control point. */
+export function quadraticFromCubic(p0: Point, c1: Point, c2: Point, p3: Point): Point {
+  return { x: (3 * (c1.x + c2.x) - (p0.x + p3.x)) / 4, y: (3 * (c1.y + c2.y) - (p0.y + p3.y)) / 4 };
+}
+
+export function bezierAt(s: Segment, t: number): Point {
   if (!s.c1 || !s.c2) return add(s.from, mul(sub(s.to, s.from), t));
   const mt = 1 - t;
   const a = mt * mt * mt;

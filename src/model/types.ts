@@ -35,6 +35,11 @@ export type Player = {
 export type PathPoint = Point & {
   /** When true the path curves smoothly through this point (Catmull-Rom). */
   smooth?: boolean;
+  /**
+   * Bend control for the segment that ENDS at this point (quadratic bezier control,
+   * same coordinate space as the point). Set by dragging the segment's midpoint handle.
+   */
+  bend?: Point;
 };
 
 export type PathEnd = 'arrow' | 'tbar' | 'none' | 'dot';

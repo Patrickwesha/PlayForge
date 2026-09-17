@@ -18,6 +18,13 @@ function diagramFrom(offense: string, defense?: string): Diagram {
   return d;
 }
 
+/** Offensive lineman by x position (LT -2, LG -1, C 0, RG 1, RT 2). */
+function lineman(d: Diagram, x: number) {
+  const p = Object.values(d.players).find((q) => (q.role === 'OL' || q.role === 'C') && q.side === 'offense' && Math.abs(q.x - x) < 0.01);
+  if (!p) throw new Error(`lineman at ${x} not found`);
+  return p;
+}
+
 let annCounter = 0;
 function text(d: Diagram, x: number, y: number, t: string, style: 'redCaps' | 'plain' | 'split' | 'bold' = 'redCaps', size?: 'sm' | 'md' | 'lg') {
   annCounter += 1;
@@ -47,11 +54,11 @@ function beastCounter(): Play {
   const d = diagramFrom('BEAST LEFT');
   const P = (l: string) => byLabel(d.players, l, 'offense');
   addPaths(d, [
-    seedPath(P('LT').id, [{ x: 0, y: 0 }, { x: 0, y: 1.3 }], { end: 'tbar', role: 'block' }),
-    seedPath(P('LG').id, [{ x: 0, y: 0 }, { x: 0, y: 1.3 }], { end: 'tbar', role: 'block' }),
-    seedPath(P('C').id, [{ x: 0, y: 0 }, { x: 0, y: 1.3 }], { end: 'tbar', role: 'block' }),
-    seedPath(P('RG').id, [{ x: 0, y: 0 }, { x: 0, y: 1.3 }], { end: 'tbar', role: 'block' }),
-    seedPath(P('RT').id, [{ x: 0, y: 0 }, { x: 0, y: 1.3 }], { end: 'tbar', role: 'block' }),
+    seedPath(lineman(d, -2).id, [{ x: 0, y: 0 }, { x: 0, y: 1.3 }], { end: 'tbar', role: 'block' }),
+    seedPath(lineman(d, -1).id, [{ x: 0, y: 0 }, { x: 0, y: 1.3 }], { end: 'tbar', role: 'block' }),
+    seedPath(lineman(d, 0).id, [{ x: 0, y: 0 }, { x: 0, y: 1.3 }], { end: 'tbar', role: 'block' }),
+    seedPath(lineman(d, 1).id, [{ x: 0, y: 0 }, { x: 0, y: 1.3 }], { end: 'tbar', role: 'block' }),
+    seedPath(lineman(d, 2).id, [{ x: 0, y: 0 }, { x: 0, y: 1.3 }], { end: 'tbar', role: 'block' }),
     seedPath(P('F').id, [{ x: 0, y: 0 }, { x: 0, y: 1.3 }], { end: 'tbar', role: 'block' }),
     seedPath(P('Y').id, [{ x: 0, y: 0 }, { x: -1.6, y: 0.6, smooth: true }, { x: -2.4, y: 2.2 }], { end: 'tbar', role: 'block' }),
     seedPath(P('4').id, [{ x: 0, y: 0 }, { x: 1.6, y: 2.2 }], { end: 'tbar', role: 'block' }),
@@ -132,12 +139,12 @@ function beastBuck(): Play {
   const d = diagramFrom('BEAST RIGHT');
   const P = (l: string) => byLabel(d.players, l, 'offense');
   addPaths(d, [
-    seedPath(P('LT').id, [{ x: 0, y: 0 }, { x: 0, y: 1.2 }], { end: 'tbar', role: 'block' }),
+    seedPath(lineman(d, -2).id, [{ x: 0, y: 0 }, { x: 0, y: 1.2 }], { end: 'tbar', role: 'block' }),
     seedPath(P('F').id, [{ x: 0, y: 0 }, { x: 1, y: 1 }], { end: 'tbar', role: 'block' }),
-    seedPath(P('LG').id, [{ x: 0, y: 0 }, { x: 1.2, y: -1, smooth: true }, { x: 3.5, y: -0.9, smooth: true }, { x: 4.6, y: 1.8 }], { end: 'arrow', role: 'block' }),
-    seedPath(P('C').id, [{ x: 0, y: 0 }, { x: 1.2, y: -1, smooth: true }, { x: 3.8, y: -0.6, smooth: true }, { x: 5.2, y: 0.8 }], { end: 'tbar', role: 'block' }),
-    seedPath(P('RG').id, [{ x: 0, y: 0 }, { x: -0.9, y: 1.0 }], { end: 'tbar', role: 'block' }),
-    seedPath(P('RT').id, [{ x: 0, y: 0 }, { x: -0.9, y: 1.0 }], { end: 'tbar', role: 'block' }),
+    seedPath(lineman(d, -1).id, [{ x: 0, y: 0 }, { x: 1.2, y: -1, smooth: true }, { x: 3.5, y: -0.9, smooth: true }, { x: 4.6, y: 1.8 }], { end: 'arrow', role: 'block' }),
+    seedPath(lineman(d, 0).id, [{ x: 0, y: 0 }, { x: 1.2, y: -1, smooth: true }, { x: 3.8, y: -0.6, smooth: true }, { x: 5.2, y: 0.8 }], { end: 'tbar', role: 'block' }),
+    seedPath(lineman(d, 1).id, [{ x: 0, y: 0 }, { x: -0.9, y: 1.0 }], { end: 'tbar', role: 'block' }),
+    seedPath(lineman(d, 2).id, [{ x: 0, y: 0 }, { x: -0.9, y: 1.0 }], { end: 'tbar', role: 'block' }),
     seedPath(P('Y').id, [{ x: 0, y: 0 }, { x: -0.9, y: 1.0 }], { end: 'tbar', role: 'block' }),
     seedPath(P('3').id, [{ x: 0, y: 0 }, { x: 1.5, y: 1.6 }, { x: 2.2, y: 4 }], { end: 'tbar', role: 'block' }),
     seedPath(P('4').id, [{ x: 0, y: 0 }, { x: 0, y: 5 }], { end: 'tbar', role: 'block' }),

@@ -188,7 +188,11 @@ export function Inspector() {
           <br />
           Double-click player: draw route · 0-9: route tree · P: primary · F: flip · Del: delete · Ctrl+Z/Y undo/redo · Ctrl+D duplicate · Ctrl+0 fit
           <br />
-          While drawing: click adds points · C curves the last point · Enter/double-click finishes · Esc cancels
+          While drawing: click adds points · Enter/double-click finishes · Esc cancels · Block tool snaps to 45°
+          <br />
+          Curves: select a line, then drag the diamond handle in the middle of a segment to bend it. Drag it back to the line to straighten.
+          <br />
+          Lining up: dragging a player near a row snaps to the next open slot at that row&apos;s spacing (orange bar). Alt = no snap, Shift = one axis.
         </div>
       </Section>
     </aside>
