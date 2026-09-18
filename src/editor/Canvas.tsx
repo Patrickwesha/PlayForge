@@ -77,14 +77,28 @@ export function Canvas() {
   const selAbs = selPath ? resolvePoints(selPath, diagram.players) : [];
   const handleEls = selPath
     ? [
-        // bend handles at each segment midpoint: drag to bow the segment (FirstDown-style curve)
+        // Apex handles (FirstDown style): a curved segment shows its control point as a hollow circle
+        // tied to the arc; a straight segment shows a small diamond at its midpoint. Drag either to bend.
         ...segmentMidpoints(selAbs).map((m, i) => {
+          const endPt = selAbs[i + 1];
+          const bend = endPt?.bend;
+          if (bend) {
+            const anchorPt = selPath.anchor.kind === 'player' ? diagram.players[selPath.anchor.playerId] : { x: 0, y: 0 };
+            const c = toSvg({ x: bend.x + anchorPt.x, y: bend.y + anchorPt.y }, view);
+            const s = toSvg(m, view);
+            return (
+              <g key={`m${i}`} data-hit={`mid:${selPath.id}:${i + 1}`} style={{ cursor: 'move' }}>
+                <line x1={s.x} y1={s.y} x2={c.x} y2={c.y} stroke={COLORS.selection} strokeWidth={yd(0.03)} strokeDasharray={`${yd(0.12)} ${yd(0.1)}`} style={{ pointerEvents: 'none' }} />
+                <circle cx={c.x} cy={c.y} r={yd(0.45)} fill="transparent" />
+                <circle cx={c.x} cy={c.y} r={yd(0.18)} fill={COLORS.paper} stroke={COLORS.selection} strokeWidth={yd(0.06)} />
+              </g>
+            );
+          }
           const s = toSvg(m, view);
-          const bent = !!selAbs[i + 1]?.bend;
           return (
-            <g key={`m${i}`} data-hit={`mid:${selPath.id}:${i + 1}`} style={{ cursor: 'ns-resize' }}>
+            <g key={`m${i}`} data-hit={`mid:${selPath.id}:${i + 1}`} style={{ cursor: 'move' }}>
               <circle cx={s.x} cy={s.y} r={yd(0.4)} fill="transparent" />
-              <rect x={s.x - yd(0.13)} y={s.y - yd(0.13)} width={yd(0.26)} height={yd(0.26)} transform={`rotate(45 ${s.x} ${s.y})`} fill={bent ? COLORS.selection : COLORS.paper} stroke={COLORS.selection} strokeWidth={yd(0.05)} />
+              <rect x={s.x - yd(0.13)} y={s.y - yd(0.13)} width={yd(0.26)} height={yd(0.26)} transform={`rotate(45 ${s.x} ${s.y})`} fill={COLORS.paper} stroke={COLORS.selection} strokeWidth={yd(0.05)} />
             </g>
           );
         }),

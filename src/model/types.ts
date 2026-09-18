@@ -42,10 +42,14 @@ export type PathPoint = Point & {
   bend?: Point;
 };
 
-export type PathEnd = 'arrow' | 'tbar' | 'none' | 'dot';
+export type PathEnd = 'arrow' | 'tbar' | 'none' | 'dot' | 'openArrow' | 'tbarAngled';
+
+/** A symbol placed on the line at fraction t (0..1) of its length. */
+export type PathInsertKind = 'bars' | 'chip' | 'zigzag' | 'x';
+export type PathInsert = { kind: PathInsertKind; t: number };
 export type LineStyle = 'solid' | 'dashed' | 'dotted' | 'squiggle';
 export type PathRole = 'route' | 'block' | 'motion' | 'ball' | 'blitz' | 'zone' | 'free';
-export type PathColor = 'black' | 'red' | 'blue';
+export type PathColor = 'black' | 'red' | 'blue' | 'green' | 'orange' | 'gray' | 'purple' | 'yellow';
 export type PathWidth = 'thin' | 'normal' | 'thick';
 
 export type PathAnchor = { kind: 'player'; playerId: string } | { kind: 'free' };
@@ -63,6 +67,7 @@ export type Path = {
   primary?: boolean;
   color?: PathColor;
   width?: PathWidth;
+  inserts?: PathInsert[];
 };
 
 export type TextStyle = 'redCaps' | 'plain' | 'split' | 'bold';

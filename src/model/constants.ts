@@ -21,7 +21,7 @@ export const LABEL_SIZE = 0.62;        // letter inside a circle
 export const LABEL_SIZE_2CH = 0.5;     // two-character labels (LT, RG, FS)
 
 /** Strokes */
-export const STROKE = { thin: 0.045, normal: 0.07, thick: 0.1 } as const;
+export const STROKE = { thin: 0.05, normal: 0.085, thick: 0.13 } as const;
 export const SYMBOL_STROKE = 0.06;
 export const PRIMARY_UNDERLAY = 0.32;
 export const HIT_STROKE = 0.6;
@@ -49,7 +49,9 @@ export const COLORS = {
   green: '#1E8A3C',
   brown: '#8B4A1C',
   orange: '#E07B00',
-  gray: '#9AA0A6',
+  gray: '#8A8F94',
+  purple: '#6B3FD6',
+  yellow: '#D4B200',
   primary: '#FFE600',
   yardline: '#D9D9D9',
   los: '#8C8C8C',

@@ -287,8 +287,10 @@ export function useInteraction(svgRef: RefObject<SVGSVGElement | null>) {
           const a = abs[cur.index - 1];
           const b = abs[cur.index];
           if (!a || !b) return;
-          const bend = bendThrough(a, b, yd);
           const anchor = p.anchor.kind === 'player' ? d.players[p.anchor.playerId] : { x: 0, y: 0 };
+          // Already curved: the handle IS the apex control point (FirstDown style), so it follows the pointer.
+          // Straight: dragging the midpoint starts the curve through the pointer.
+          const bend = p.points[cur.index].bend ? bendThrough(a, b, { x: (a.x + b.x) / 4 + yd.x / 2, y: (a.y + b.y) / 4 + yd.y / 2 }) : bendThrough(a, b, yd);
           A.setBend(cur.pathId, cur.index, bend ? { x: round3(bend.x - anchor.x), y: round3(bend.y - anchor.y) } : undefined, true);
           return;
         }

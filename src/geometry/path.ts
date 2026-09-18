@@ -161,6 +161,25 @@ export function cubicMidpoint(p0: Point, c1: Point, c2: Point, p3: Point): Point
   return bezierAt({ from: p0, c1, c2, to: p3 }, 0.5);
 }
 
+/** Point and unit tangent at fraction t (0..1) of a polyline's length. */
+export function pointAlong(poly: Point[], t: number): { point: Point; dir: Point } {
+  if (poly.length === 0) return { point: { x: 0, y: 0 }, dir: { x: 0, y: 1 } };
+  if (poly.length === 1) return { point: poly[0], dir: { x: 0, y: 1 } };
+  const total = polylineLength(poly);
+  let target = Math.max(0, Math.min(1, t)) * total;
+  for (let i = 1; i < poly.length; i++) {
+    const a = poly[i - 1];
+    const b = poly[i];
+    const l = len(sub(b, a));
+    if (target <= l || i === poly.length - 1) {
+      const k = l === 0 ? 0 : Math.min(1, target / l);
+      return { point: add(a, mul(sub(b, a), k)), dir: norm(sub(b, a)) };
+    }
+    target -= l;
+  }
+  return { point: poly[poly.length - 1], dir: norm(sub(poly[poly.length - 1], poly[poly.length - 2])) };
+}
+
 /** Distance from a point to the nearest point on a polyline (yards). */
 export function distanceToPolyline(p: Point, poly: Point[]): number {
   let best = Infinity;

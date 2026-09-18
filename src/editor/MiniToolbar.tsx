@@ -8,6 +8,8 @@ import { resolvePoints } from '@/geometry/path';
 import { diagramOf, useEditor } from '@/store/editorStore';
 import * as A from '@/store/editorActions';
 import { ROUTE_TREE } from '@/geometry/routeTree';
+import { PATH_COLORS } from '@/render/theme';
+import { ColorSwatch, END_OPTIONS, EndIcon, STYLE_OPTIONS, StyleIcon, ThicknessIcon, WIDTH_OPTIONS } from './LineIcons';
 import { BLOCK_PRESETS, blockPreset, doubleTeam, type BlockPreset, type Playside } from '@/geometry/blockPresets';
 import { buildD, toSegments } from '@/geometry/path';
 import { arrowHead, tBar } from '@/geometry/markers';
@@ -46,6 +48,7 @@ function BlockIcon({ kind, side }: { kind: BlockPreset; side: Playside }) {
 }
 
 const btn = 'px-2 h-7 text-xs rounded hover:bg-neutral-700 disabled:opacity-40 whitespace-nowrap';
+const ibtn = 'h-7 px-0.5 flex items-center justify-center rounded hover:bg-neutral-700';
 const active = 'bg-white text-black hover:bg-white';
 
 function Group({ children }: { children: React.ReactNode }) {
@@ -238,16 +241,23 @@ export function MiniToolbar({ svgRef, wrapRef }: { svgRef: RefObject<SVGSVGEleme
       {path && (
         <>
           <Group>
-            {(['arrow', 'tbar', 'dot', 'none'] as const).map((e) => (
-              <button key={e} className={`${btn} ${path.end === e ? active : ''}`} onClick={() => A.updatePath(path.id, { end: e })}>
-                {e === 'arrow' ? 'Arrow' : e === 'tbar' ? 'T' : e === 'dot' ? 'Dot' : 'None'}
+            {END_OPTIONS.map((o) => (
+              <button key={o.end} title={o.name} className={`${ibtn} ${path.end === o.end ? active : ''}`} onClick={() => A.updatePath(path.id, { end: o.end })}>
+                <EndIcon end={o.end} />
               </button>
             ))}
           </Group>
           <Group>
-            {(['solid', 'dashed', 'dotted', 'squiggle'] as const).map((l) => (
-              <button key={l} className={`${btn} ${path.line === l ? active : ''}`} onClick={() => A.updatePath(path.id, { line: l })}>
-                {l[0].toUpperCase() + l.slice(1)}
+            {STYLE_OPTIONS.map((o) => (
+              <button key={o.line} title={o.name} className={`${ibtn} ${path.line === o.line ? active : ''}`} onClick={() => A.updatePath(path.id, { line: o.line })}>
+                <StyleIcon line={o.line} />
+              </button>
+            ))}
+          </Group>
+          <Group>
+            {WIDTH_OPTIONS.map((o) => (
+              <button key={o.width} title={o.name} className={`${ibtn} ${(path.width ?? 'normal') === o.width ? active : ''}`} onClick={() => A.updatePath(path.id, { width: o.width })}>
+                <ThicknessIcon width={o.width} />
               </button>
             ))}
           </Group>
@@ -259,17 +269,15 @@ export function MiniToolbar({ svgRef, wrapRef }: { svgRef: RefObject<SVGSVGEleme
             )}
           </Group>
           <Group>
+            {PATH_COLORS.map((c) => (
+              <button key={c} title={c} className="h-7 w-6 flex items-center justify-center rounded hover:bg-neutral-700" onClick={() => A.updatePath(path.id, { color: c })}>
+                <ColorSwatch color={c} selected={(path.color ?? 'black') === c} />
+              </button>
+            ))}
+          </Group>
+          <Group>
             <button className={`${btn} ${path.primary ? 'bg-yellow-300 text-black hover:bg-yellow-300' : ''}`} onClick={() => A.updatePath(path.id, { primary: !path.primary })} title="Highlight (P)">Primary</button>
-            <select className="h-7 text-xs bg-neutral-800 rounded px-1" value={path.color ?? 'black'} onChange={(e) => A.updatePath(path.id, { color: e.target.value as 'black' | 'red' | 'blue' })}>
-              <option value="black">Black</option>
-              <option value="red">Red</option>
-              <option value="blue">Blue</option>
-            </select>
-            <select className="h-7 text-xs bg-neutral-800 rounded px-1" value={path.width ?? 'normal'} onChange={(e) => A.updatePath(path.id, { width: e.target.value as 'thin' | 'normal' | 'thick' })}>
-              <option value="thin">Thin</option>
-              <option value="normal">Normal</option>
-              <option value="thick">Thick</option>
-            </select>
+            <button className={btn} onClick={() => A.branchFromEnd(path.id)} title="Add another line starting at this line's end (alternate route, second leg)">Branch</button>
             <button className={`${btn} text-red-300`} onClick={() => A.deletePath(path.id)}>Delete</button>
           </Group>
         </>

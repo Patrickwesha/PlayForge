@@ -3,7 +3,9 @@
 Football play, formation, and playbook designer that prints NFL/Visio-style play sheets from the browser.
 
 - Draw plays on formations: drag players (they snap into the next open slot of a row at that row's spacing), draw routes, blocks (T-bar ends, 45-degree snapping), motion squiggles, red-caps annotations, split markers, handoff marks.
-- Curves work like FirstDown PlayBook: draw straight segments, then drag the diamond handle in the middle of a segment to bend it into an arc. Drag it back to straighten.
+- Curves work like FirstDown PlayBook: draw straight segments, then drag the diamond handle in the middle of a segment to bend it. A curved segment shows its apex control point as a hollow circle; drag that to reshape. Drag it back to the line to straighten.
+- Every line has Thickness (thick, medium, thin), Style (solid, dashed, dotted, wavy), Endpoint (none, arrow, open arrow, dot, T block, angled block), Color (8), and Inserts (double bar, chip, zigzag, X placed anywhere along the line). "Branch" starts another line from a line's end for alternate routes.
+- Lines start at the player's edge and stop at the edge of any symbol they run into, so T-bars and arrows never overlap a player.
 - Block presets on the player toolbar: base, down, reach, crack, cutoff, trap, kick out, pull/lead, wrap, pass set, combo, and double team (select two linemen).
 - Formation library (offense and defense) with flip, duplicate, and personnel tags. Youth counts (6 to 12 a side) supported.
 - Playbooks with sections, cover page, and call sheet.

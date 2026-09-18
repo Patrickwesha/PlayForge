@@ -1,6 +1,6 @@
 'use client';
 
-import type { Annotation, Diagram, Formation, MarkAnnotation, Path, PathPoint, Play, Player, Point, TextAnnotation } from '@/model/types';
+import type { Annotation, Diagram, Formation, MarkAnnotation, Path, PathInsert, PathInsertKind, PathPoint, Play, Player, Point, TextAnnotation } from '@/model/types';
 import { aid, pid, rid } from '@/model/ids';
 import { flipDiagram, flipFormationPlayers, flipName } from '@/geometry/flip';
 import { applyRouteTree, routeScaleFor } from '@/geometry/routeTree';
@@ -314,6 +314,61 @@ export function setBend(pathId: string, index: number, bend: Point | undefined, 
     if (!p || !p.points[index] || index === 0) return;
     if (bend) p.points[index].bend = bend; else delete p.points[index].bend;
   });
+}
+
+/** Add a symbol on the line at fraction t of its length. */
+export function addInsert(pathId: string, kind: PathInsertKind, t = 0.5) {
+  store().commit((d) => {
+    const p = diagram(d)?.paths[pathId];
+    if (!p) return;
+    p.inserts = [...(p.inserts ?? []), { kind, t }];
+  });
+}
+
+export function updateInsert(pathId: string, index: number, patch: Partial<PathInsert>) {
+  store().commit((d) => {
+    const p = diagram(d)?.paths[pathId];
+    if (p?.inserts?.[index]) Object.assign(p.inserts[index], patch);
+  });
+}
+
+export function removeInsert(pathId: string, index: number) {
+  store().commit((d) => {
+    const p = diagram(d)?.paths[pathId];
+    if (p?.inserts) p.inserts.splice(index, 1);
+  });
+}
+
+/**
+ * Start a new line from the end of an existing one (alternate route / second leg).
+ * The new path shares the anchor and begins at the old end point. Returns the new id.
+ */
+export function branchFromEnd(pathId: string): string | null {
+  let newId: string | null = null;
+  store().commit((d) => {
+    const dg = diagram(d);
+    const p = dg?.paths[pathId];
+    if (!dg || !p || p.points.length < 2) return;
+    const last = p.points[p.points.length - 1];
+    const prev = p.points[p.points.length - 2];
+    const dx = last.x - prev.x;
+    const dy = last.y - prev.y;
+    const l = Math.hypot(dx, dy) || 1;
+    const id = rid();
+    dg.paths[id] = {
+      id,
+      anchor: p.anchor,
+      points: [{ x: last.x, y: last.y }, { x: last.x + (dx / l) * 3, y: last.y + (dy / l) * 3 }],
+      end: p.end === 'none' ? 'arrow' : p.end,
+      line: p.line === 'squiggle' ? 'solid' : p.line,
+      role: p.role,
+      color: p.color,
+      width: p.width,
+    };
+    newId = id;
+  });
+  if (newId) store().setSelection({ playerIds: [], pathId: newId, pointIndex: 1 });
+  return newId;
 }
 
 /** Remove every bend and smooth flag: sharp, straight segments. */

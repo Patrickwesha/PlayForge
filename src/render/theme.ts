@@ -29,6 +29,13 @@ export function pathColorHex(c: PathColor | undefined): string {
   switch (c) {
     case 'red': return COLORS.red;
     case 'blue': return COLORS.blue;
+    case 'green': return COLORS.green;
+    case 'orange': return COLORS.orange;
+    case 'gray': return COLORS.gray;
+    case 'purple': return COLORS.purple;
+    case 'yellow': return COLORS.yellow;
     default: return COLORS.ink;
   }
 }
+
+export const PATH_COLORS: PathColor[] = ['black', 'gray', 'red', 'blue', 'green', 'orange', 'purple', 'yellow'];

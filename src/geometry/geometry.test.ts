@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { fromSvg, toSvg, viewBox, zoomWindow } from './transform';
-import { bendThrough, buildD, endTangent, segmentMidpoints, shortenEnd, toSegments, trimStart } from './path';
+import { bendThrough, buildD, endTangent, pointAlong, segmentMidpoints, shortenEnd, toSegments, trimStart } from './path';
 import { arrowHead, tBar } from './markers';
 import { flipDiagram, flipLabel, flipName } from './flip';
 import { applyRouteTree } from './routeTree';
@@ -71,6 +71,14 @@ describe('path', () => {
     expect(mids[0].x).toBeCloseTo(1, 5);
     expect(mids[0].y).toBeCloseTo(2, 5);
     expect(buildD(toSegments([a, { ...b, bend: c }]), id)).toContain(' C ');
+  });
+  it('finds points along a polyline by fraction of length', () => {
+    const poly = [{ x: 0, y: 0 }, { x: 0, y: 4 }, { x: 4, y: 4 }];
+    expect(pointAlong(poly, 0.5).point).toEqual({ x: 0, y: 4 });
+    const q = pointAlong(poly, 0.75);
+    expect(q.point.x).toBeCloseTo(2);
+    expect(q.dir).toEqual({ x: 1, y: 0 });
+    expect(pointAlong(poly, 1).point).toEqual({ x: 4, y: 4 });
   });
   it('shortens the end along the tangent', () => {
     const s = shortenEnd([{ x: 0, y: 0 }, { x: 0, y: 5 }], 1);

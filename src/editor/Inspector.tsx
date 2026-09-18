@@ -7,10 +7,14 @@ import { diagramOf, useEditor } from '@/store/editorStore';
 import * as A from '@/store/editorActions';
 import { COVERAGES } from '@/seeds';
 import { FormationPicker } from './FormationPicker';
+import { PATH_COLORS } from '@/render/theme';
+import { ColorSwatch, END_OPTIONS, EndIcon, INSERT_OPTIONS, InsertIcon, STYLE_OPTIONS, StyleIcon, ThicknessIcon, WIDTH_OPTIONS } from './LineIcons';
 
 const field = 'w-full border border-neutral-300 rounded px-2 py-1 text-sm bg-white';
 const label = 'block text-[11px] uppercase tracking-wide text-neutral-500 mt-3 mb-0.5';
 const btn = 'text-xs px-2 py-1 rounded border border-neutral-300 bg-white hover:border-black';
+const ibtn = 'h-8 px-0.5 flex items-center justify-center rounded border border-neutral-300 bg-white hover:border-black';
+const iactive = 'bg-black text-white border-black hover:border-black';
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -27,6 +31,7 @@ export function Inspector() {
   if (!doc) return null;
   const diagram = diagramOf(doc);
   const selPlayer = selection.playerIds.length === 1 ? diagram.players[selection.playerIds[0]] : undefined;
+  const selPath = selection.pathId ? diagram.paths[selection.pathId] : undefined;
 
   const addPlayer = (side: 'offense' | 'defense') => {
     const s = useEditor.getState();
@@ -111,6 +116,65 @@ export function Inspector() {
               <button className={btn} onClick={() => addMark('fakeArrow')}>Fake arrow</button>
             </div>
           </Section>
+
+          {selPath && (
+            <Section title="Line">
+              <div className={label}>Thickness</div>
+              <div className="flex gap-1">
+                {WIDTH_OPTIONS.map((o) => (
+                  <button key={o.width} title={o.name} className={`${ibtn} ${(selPath.width ?? 'normal') === o.width ? iactive : ''}`} onClick={() => A.updatePath(selPath.id, { width: o.width })}>
+                    <ThicknessIcon width={o.width} />
+                  </button>
+                ))}
+              </div>
+              <div className={label}>Style</div>
+              <div className="flex gap-1">
+                {STYLE_OPTIONS.map((o) => (
+                  <button key={o.line} title={o.name} className={`${ibtn} ${selPath.line === o.line ? iactive : ''}`} onClick={() => A.updatePath(selPath.id, { line: o.line })}>
+                    <StyleIcon line={o.line} />
+                  </button>
+                ))}
+              </div>
+              <div className={label}>Endpoint</div>
+              <div className="flex gap-1 flex-wrap">
+                {END_OPTIONS.map((o) => (
+                  <button key={o.end} title={o.name} className={`${ibtn} ${selPath.end === o.end ? iactive : ''}`} onClick={() => A.updatePath(selPath.id, { end: o.end })}>
+                    <EndIcon end={o.end} />
+                  </button>
+                ))}
+              </div>
+              <div className={label}>Color</div>
+              <div className="flex gap-1 flex-wrap">
+                {PATH_COLORS.map((c) => (
+                  <button key={c} title={c} className="h-7 w-7 flex items-center justify-center rounded hover:bg-neutral-100" onClick={() => A.updatePath(selPath.id, { color: c })}>
+                    <ColorSwatch color={c} selected={(selPath.color ?? 'black') === c} />
+                  </button>
+                ))}
+              </div>
+              <div className={label}>Inserts (symbols on the line)</div>
+              <div className="flex gap-1">
+                {INSERT_OPTIONS.map((o) => (
+                  <button key={o.kind} title={`Add ${o.name}`} className={ibtn} onClick={() => A.addInsert(selPath.id, o.kind, 0.5)}>
+                    <InsertIcon kind={o.kind} />
+                  </button>
+                ))}
+              </div>
+              {(selPath.inserts ?? []).map((ins, i) => (
+                <div key={i} className="flex items-center gap-2 mt-1.5 text-xs">
+                  <span className="w-20 text-neutral-600">{INSERT_OPTIONS.find((o) => o.kind === ins.kind)?.name}</span>
+                  <input type="range" min={0.05} max={0.95} step={0.05} value={ins.t} onChange={(e) => A.updateInsert(selPath.id, i, { t: Number(e.target.value) })} className="flex-1" title="Position along the line" />
+                  <button className="text-red-700 px-1" onClick={() => A.removeInsert(selPath.id, i)} title="Remove">✕</button>
+                </div>
+              ))}
+              <div className="flex gap-2 mt-3 flex-wrap">
+                <button className={btn} onClick={() => A.roundPath(selPath.id)}>Curve</button>
+                <button className={btn} onClick={() => A.straightenPath(selPath.id)}>Straighten</button>
+                <button className={btn} onClick={() => A.branchFromEnd(selPath.id)}>Branch from end</button>
+                <button className={`${btn} ${selPath.primary ? 'bg-yellow-200' : ''}`} onClick={() => A.updatePath(selPath.id, { primary: !selPath.primary })}>Primary</button>
+              </div>
+              <div className="text-xs text-neutral-500 mt-2">Drag the hollow circle (curve apex) or the diamond (straight segment) on the canvas to bend the line.</div>
+            </Section>
+          )}
 
           {selPlayer && (
             <Section title={`Coaching point: ${selPlayer.label || selPlayer.role || 'player'}`}>
