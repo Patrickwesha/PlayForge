@@ -1,6 +1,7 @@
-import { ARROW_LEN, COLORS, DASH, DOT_R, HIT_STROKE, LETTER_SIZE, PRIMARY_UNDERLAY, STROKE, SYMBOL_R } from '@/model/constants';
+import { useId } from 'react';
+import { ARROW_LEN, COLORS, DASH, DOT_R, HIT_STROKE, LETTER_SIZE, PRIMARY_UNDERLAY, STROKE, SYMBOL_R, UNITS_PER_YARD } from '@/model/constants';
 import type { Diagram, Path, Point, ViewWindow } from '@/model/types';
-import { toSvg, yd } from '@/geometry/transform';
+import { toSvg, windowHeight, windowWidth, yd } from '@/geometry/transform';
 import { buildD, endTangent, pointAlong, resolvePoints, samplePolyline, shortenEnd, toSegments, trimStart } from '@/geometry/path';
 import { angledBar, arrowHead, insertGlyph, squiggle, tBar } from '@/geometry/markers';
 import { pathColorHex } from './theme';
@@ -112,47 +113,68 @@ function Inserts({ path, built, view, color, sw }: { path: Path; built: BuiltPat
   );
 }
 
-/** Clear space on each side of a line where it crosses a line drawn after it (yards). */
+/** Clear space on each side of a line where it crosses a line drawn before it (yards). */
 const CROSS_GAP = 0.13;
 
+const strokeOf = (path: Path) => yd(STROKE[path.width ?? 'normal']);
+
 /**
- * Paths render newest-first so the FIRST line drawn ends up on top. Every line carries a
- * paper-colored halo under its stroke, so wherever a line on top crosses one beneath it, the
- * halo cuts a small gap in the lower line (FirstDown-style bridges) while the top line stays whole.
+ * Paths render newest-first so the FIRST line drawn ends up on top. Each line is masked by the
+ * outlines of every line above it, which cuts a small gap where a top line crosses (FirstDown-style
+ * bridges). Masks only affect the lines, so yard lines and the LOS underneath stay whole.
  */
 export function PathLayer({ diagram, view, selectedPathId }: { diagram: Diagram; view: ViewWindow; selectedPathId?: string }) {
+  const uid = useId().replace(/[^a-zA-Z0-9]/g, '');
   const paths = Object.values(diagram.paths).reverse();
   const builtList = paths.map((p) => ({ path: p, built: buildPath(p, diagram.players, view) }));
+  const W = windowWidth(view) * UNITS_PER_YARD;
+  const H = windowHeight(view) * UNITS_PER_YARD;
+  const withBuilt = builtList.filter((b): b is { path: Path; built: BuiltPath } => b.built !== null);
   return (
     <g data-layer="paths">
-      {builtList.map(({ path, built }) => {
-        if (!built) return null;
+      <defs>
+        {withBuilt.map((b, i) => {
+          const above = withBuilt.slice(i + 1);
+          if (above.length === 0) return null;
+          return (
+            <mask key={`m${b.path.id}`} id={`${uid}m${i}`} maskUnits="userSpaceOnUse" x={0} y={0} width={W} height={H}>
+              <rect x={0} y={0} width={W} height={H} fill="#fff" />
+              {above.map((a) => (
+                <path key={a.path.id} d={a.built.d} fill="none" stroke="#000" strokeWidth={strokeOf(a.path) + 2 * yd(CROSS_GAP)} strokeLinecap="butt" strokeLinejoin="round" />
+              ))}
+            </mask>
+          );
+        })}
+      </defs>
+      {withBuilt.map(({ path, built }, i) => {
         const color = pathColorHex(path.color);
-        const sw = yd(STROKE[path.width ?? 'normal']);
+        const sw = strokeOf(path);
         const dash =
           path.line === 'dashed' ? DASH.dashed.map(yd).join(' ')
           : path.line === 'dotted' ? `${(sw * 0.1).toFixed(2)} ${(sw * 2.6).toFixed(2)}`
           : undefined;
         const selected = selectedPathId === path.id;
+        const masked = i < withBuilt.length - 1;
         return (
           <g key={path.id} data-hit={`path:${path.id}`} style={{ cursor: 'pointer' }}>
             <path d={built.d} fill="none" stroke="transparent" strokeWidth={yd(HIT_STROKE)} />
-            <path d={built.d} fill="none" stroke={COLORS.paper} strokeWidth={sw + 2 * yd(CROSS_GAP)} strokeLinecap="butt" strokeLinejoin="round" />
-            {path.primary && (
-              <path d={built.d} fill="none" stroke={COLORS.primary} strokeWidth={yd(PRIMARY_UNDERLAY)} strokeLinecap="round" strokeLinejoin="round" opacity={0.95} />
-            )}
             {selected && <path d={built.d} fill="none" stroke={COLORS.selection} strokeWidth={sw * 3} opacity={0.3} strokeLinecap="round" strokeLinejoin="round" />}
-            <path
-              d={built.d}
-              fill="none"
-              stroke={color}
-              strokeWidth={sw}
-              strokeDasharray={dash}
-              strokeLinecap={path.line === 'dotted' ? 'round' : 'butt'}
-              strokeLinejoin="round"
-            />
-            <Inserts path={path} built={built} view={view} color={color} sw={sw} />
-            <Marker path={path} built={built} view={view} color={color} sw={sw} />
+            <g mask={masked ? `url(#${uid}m${i})` : undefined}>
+              {path.primary && (
+                <path d={built.d} fill="none" stroke={COLORS.primary} strokeWidth={yd(PRIMARY_UNDERLAY)} strokeLinecap="round" strokeLinejoin="round" opacity={0.95} />
+              )}
+              <path
+                d={built.d}
+                fill="none"
+                stroke={color}
+                strokeWidth={sw}
+                strokeDasharray={dash}
+                strokeLinecap={path.line === 'dotted' ? 'round' : 'butt'}
+                strokeLinejoin="round"
+              />
+              <Inserts path={path} built={built} view={view} color={color} sw={sw} />
+              <Marker path={path} built={built} view={view} color={color} sw={sw} />
+            </g>
           </g>
         );
       })}

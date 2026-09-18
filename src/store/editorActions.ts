@@ -371,6 +371,30 @@ export function branchFromEnd(pathId: string): string | null {
   return newId;
 }
 
+/** Draw order decides stacking: the FIRST line in the record is on top. */
+function reorderPaths(pathId: string, where: 'front' | 'back') {
+  store().commit((d) => {
+    const dg = diagram(d);
+    if (!dg || !dg.paths[pathId]) return;
+    const target = dg.paths[pathId];
+    const rest = Object.values(dg.paths).filter((p) => p.id !== pathId);
+    const ordered = where === 'front' ? [target, ...rest] : [...rest, target];
+    const next: Diagram['paths'] = {};
+    for (const p of ordered) next[p.id] = p;
+    dg.paths = next;
+  });
+}
+
+/** Put this line on top of every crossing line. */
+export function bringPathToFront(pathId: string) {
+  reorderPaths(pathId, 'front');
+}
+
+/** Put this line underneath every crossing line. */
+export function sendPathToBack(pathId: string) {
+  reorderPaths(pathId, 'back');
+}
+
 /** Remove every bend and smooth flag: sharp, straight segments. */
 export function straightenPath(pathId: string) {
   store().commit((d) => {

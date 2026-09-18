@@ -170,6 +170,8 @@ export function Inspector() {
                 <button className={btn} onClick={() => A.curvePath(selPath.id)}>Curve</button>
                 <button className={btn} onClick={() => A.straightenPath(selPath.id)}>Straighten</button>
                 <button className={btn} onClick={() => A.branchFromEnd(selPath.id)}>Branch from end</button>
+                <button className={btn} onClick={() => A.bringPathToFront(selPath.id)} title="On top where lines cross">Bring to front</button>
+                <button className={btn} onClick={() => A.sendPathToBack(selPath.id)} title="Underneath where lines cross">Send to back</button>
                 <button className={`${btn} ${selPath.primary ? 'bg-yellow-200' : ''}`} onClick={() => A.updatePath(selPath.id, { primary: !selPath.primary })}>Primary</button>
               </div>
               <div className="text-xs text-neutral-500 mt-2">Drag the hollow circle (curve apex) or the diamond (straight segment) on the canvas to bend the line.</div>
