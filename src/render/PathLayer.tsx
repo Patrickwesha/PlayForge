@@ -42,7 +42,9 @@ function clearEnd(pts: Point[], path: Path, players: Diagram['players']): Point[
 export function buildPath(path: Path, players: Diagram['players'], view: ViewWindow): BuiltPath | null {
   let pts = resolvePoints(path, players);
   if (pts.length < 2) return null;
-  if (path.anchor.kind === 'player') pts = trimStart(pts, SYMBOL_R + 0.05);
+  // Lines start at the player's center; a filled symbol drawn on top hides that stub so there is
+  // no visible gap. Bare-letter defenders have nothing to hide it, so trim to the letter's edge.
+  if (path.anchor.kind === 'player' && players[path.anchor.playerId]?.symbol === 'letter') pts = trimStart(pts, LETTER_SIZE * 0.55);
   pts = clearEnd(pts, path, players);
   const end = pts[pts.length - 1];
   const tangent = endTangent(pts);
@@ -110,16 +112,19 @@ function Inserts({ path, built, view, color, sw }: { path: Path; built: BuiltPat
   );
 }
 
+/** Clear space on each side of a line where it crosses a line drawn after it (yards). */
+const CROSS_GAP = 0.13;
+
+/**
+ * Paths render newest-first so the FIRST line drawn ends up on top. Every line carries a
+ * paper-colored halo under its stroke, so wherever a line on top crosses one beneath it, the
+ * halo cuts a small gap in the lower line (FirstDown-style bridges) while the top line stays whole.
+ */
 export function PathLayer({ diagram, view, selectedPathId }: { diagram: Diagram; view: ViewWindow; selectedPathId?: string }) {
-  const paths = Object.values(diagram.paths);
+  const paths = Object.values(diagram.paths).reverse();
   const builtList = paths.map((p) => ({ path: p, built: buildPath(p, diagram.players, view) }));
   return (
     <g data-layer="paths">
-      {builtList.map(({ path, built }) =>
-        built && path.primary ? (
-          <path key={`u${path.id}`} d={built.d} fill="none" stroke={COLORS.primary} strokeWidth={yd(PRIMARY_UNDERLAY)} strokeLinecap="round" strokeLinejoin="round" opacity={0.95} />
-        ) : null,
-      )}
       {builtList.map(({ path, built }) => {
         if (!built) return null;
         const color = pathColorHex(path.color);
@@ -132,6 +137,10 @@ export function PathLayer({ diagram, view, selectedPathId }: { diagram: Diagram;
         return (
           <g key={path.id} data-hit={`path:${path.id}`} style={{ cursor: 'pointer' }}>
             <path d={built.d} fill="none" stroke="transparent" strokeWidth={yd(HIT_STROKE)} />
+            <path d={built.d} fill="none" stroke={COLORS.paper} strokeWidth={sw + 2 * yd(CROSS_GAP)} strokeLinecap="butt" strokeLinejoin="round" />
+            {path.primary && (
+              <path d={built.d} fill="none" stroke={COLORS.primary} strokeWidth={yd(PRIMARY_UNDERLAY)} strokeLinecap="round" strokeLinejoin="round" opacity={0.95} />
+            )}
             {selected && <path d={built.d} fill="none" stroke={COLORS.selection} strokeWidth={sw * 3} opacity={0.3} strokeLinecap="round" strokeLinejoin="round" />}
             <path
               d={built.d}
