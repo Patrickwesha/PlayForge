@@ -31,6 +31,17 @@ body {
   color-scheme: light;
 }
 
+/* ---------- Touch: bigger toolbar targets ---------- */
+.touch button,
+.touch select,
+.touch input {
+  min-height: 40px;
+}
+.touch button {
+  min-width: 40px;
+  font-size: 13px;
+}
+
 /* ---------- Print sheets ---------- */
 .sheet {
   background: #fff;

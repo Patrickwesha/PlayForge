@@ -11,6 +11,7 @@ import { diagramOf, useEditor } from '@/store/editorStore';
 import { useSettings } from '@/store/settingsStore';
 import { useInteraction } from './useInteraction';
 import { MiniToolbar } from './MiniToolbar';
+import { useCoarsePointer } from './useCoarsePointer';
 
 export function Canvas() {
   const svgRef = useRef<SVGSVGElement | null>(null);
@@ -75,6 +76,10 @@ export function Canvas() {
 
   const selPath = selection.pathId ? diagram.paths[selection.pathId] : undefined;
   const selAbs = selPath ? resolvePoints(selPath, diagram.players) : [];
+  // touch screens get bigger handles and hit areas (in yards, so they scale with zoom)
+  const coarse = useCoarsePointer();
+  const handleR = coarse ? 0.26 : 0.17;
+  const hitR = coarse ? 0.75 : 0.45;
   const handleEls = selPath
     ? [
         // Apex handles (FirstDown style): a curved segment shows its control point as a hollow circle
@@ -89,16 +94,18 @@ export function Canvas() {
             return (
               <g key={`m${i}`} data-hit={`mid:${selPath.id}:${i + 1}`} style={{ cursor: 'move' }}>
                 <line x1={s.x} y1={s.y} x2={c.x} y2={c.y} stroke={COLORS.selection} strokeWidth={yd(0.03)} strokeDasharray={`${yd(0.12)} ${yd(0.1)}`} style={{ pointerEvents: 'none' }} />
-                <circle cx={c.x} cy={c.y} r={yd(0.45)} fill="transparent" />
-                <circle cx={c.x} cy={c.y} r={yd(0.18)} fill={COLORS.paper} stroke={COLORS.selection} strokeWidth={yd(0.06)} />
+                <circle cx={c.x} cy={c.y} r={yd(hitR)} fill="transparent" />
+                <circle cx={c.x} cy={c.y} r={yd(handleR * 1.1)} fill={COLORS.paper} stroke={COLORS.selection} strokeWidth={yd(0.06)} />
               </g>
             );
           }
+          // smooth spline segments have no midpoint handle: shape them by moving the points
+          if (endPt?.smooth || selAbs[i]?.smooth) return null;
           const s = toSvg(m, view);
           return (
             <g key={`m${i}`} data-hit={`mid:${selPath.id}:${i + 1}`} style={{ cursor: 'move' }}>
-              <circle cx={s.x} cy={s.y} r={yd(0.4)} fill="transparent" />
-              <rect x={s.x - yd(0.13)} y={s.y - yd(0.13)} width={yd(0.26)} height={yd(0.26)} transform={`rotate(45 ${s.x} ${s.y})`} fill={COLORS.paper} stroke={COLORS.selection} strokeWidth={yd(0.05)} />
+              <circle cx={s.x} cy={s.y} r={yd(hitR)} fill="transparent" />
+              <rect x={s.x - yd(handleR * 0.8)} y={s.y - yd(handleR * 0.8)} width={yd(handleR * 1.6)} height={yd(handleR * 1.6)} transform={`rotate(45 ${s.x} ${s.y})`} fill={COLORS.paper} stroke={COLORS.selection} strokeWidth={yd(0.05)} />
             </g>
           );
         }),
@@ -107,8 +114,8 @@ export function Canvas() {
           const active = selection.pointIndex === i;
           return (
             <g key={i} data-hit={`point:${selPath.id}:${i}`} style={{ cursor: 'move' }}>
-              <circle cx={s.x} cy={s.y} r={yd(0.45)} fill="transparent" />
-              <circle cx={s.x} cy={s.y} r={yd(active ? 0.22 : 0.17)} fill={pt.smooth ? COLORS.paper : COLORS.selection} stroke={COLORS.selection} strokeWidth={yd(0.05)} />
+              <circle cx={s.x} cy={s.y} r={yd(hitR)} fill="transparent" />
+              <circle cx={s.x} cy={s.y} r={yd(active ? handleR * 1.3 : handleR)} fill={COLORS.selection} stroke={COLORS.paper} strokeWidth={yd(0.04)} />
             </g>
           );
         }),

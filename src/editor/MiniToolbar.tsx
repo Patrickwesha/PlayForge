@@ -10,6 +10,7 @@ import * as A from '@/store/editorActions';
 import { ROUTE_TREE } from '@/geometry/routeTree';
 import { PATH_COLORS } from '@/render/theme';
 import { ColorSwatch, END_OPTIONS, EndIcon, STYLE_OPTIONS, StyleIcon, ThicknessIcon, WIDTH_OPTIONS } from './LineIcons';
+import { useCoarsePointer, useNarrowScreen } from './useCoarsePointer';
 import { BLOCK_PRESETS, blockPreset, doubleTeam, type BlockPreset, type Playside } from '@/geometry/blockPresets';
 import { buildD, toSegments } from '@/geometry/path';
 import { arrowHead, tBar } from '@/geometry/markers';
@@ -70,6 +71,8 @@ export function MiniToolbar({ svgRef, wrapRef }: { svgRef: RefObject<SVGSVGEleme
   const ann = selection.annotationId ? diagram.annotations[selection.annotationId] : undefined;
   const hasSel = players.length > 0 || !!path || !!ann;
   const dragging = guides.length > 0;
+  const coarse = useCoarsePointer();
+  const narrow = useNarrowScreen();
   const selectionKey = `${selection.playerIds.join(',')}|${selection.pathId ?? ''}|${selection.annotationId ?? ''}`;
   if (ui.key !== selectionKey) setUi({ key: selectionKey, treeOpen: false, blocksOpen: false, labelEdit: null });
   const treeOpen = ui.key === selectionKey && ui.treeOpen;
@@ -126,16 +129,20 @@ export function MiniToolbar({ svgRef, wrapRef }: { svgRef: RefObject<SVGSVGEleme
   const ids = selection.playerIds;
   const side: 'L' | 'R' = players.length && players[0].x < 0 ? 'L' : 'R';
 
+  // Touch screens and narrow windows: dock the toolbar along the bottom of the canvas so it never covers the play.
+  const docked = coarse || narrow;
+  const floatStyle = {
+    left: Math.max(8, Math.min(pos.x, wrapW - 8)),
+    top: Math.max(72, pos.y),
+    maxWidth: Math.min(720, wrapW - 16),
+    // centered on the selection, but kept inside the canvas: percentages resolve against the toolbar's own width
+    transform: `translate(clamp(${(8 - pos.x).toFixed(1)}px, -50%, calc(${(wrapW - 8 - pos.x).toFixed(1)}px - 100%)), -100%)`,
+  };
+
   return (
     <div
-      className="absolute z-20 flex flex-wrap items-center justify-center bg-neutral-900 text-white rounded-md shadow-lg px-1 py-1 -translate-x-1/2 -translate-y-full"
-      style={{
-        left: Math.max(8, Math.min(pos.x, wrapW - 8)),
-        top: Math.max(72, pos.y),
-        maxWidth: Math.min(720, wrapW - 16),
-        // centered on the selection, but kept inside the canvas: percentages resolve against the toolbar's own width
-        transform: `translate(clamp(${(8 - pos.x).toFixed(1)}px, -50%, calc(${(wrapW - 8 - pos.x).toFixed(1)}px - 100%)), -100%)`,
-      }}
+      className={`absolute z-20 flex flex-wrap items-center justify-center bg-neutral-900 text-white shadow-lg px-1 py-1 ${docked ? 'left-2 right-2 bottom-2 rounded-lg gap-y-1' : 'rounded-md'} ${coarse ? 'touch' : ''}`}
+      style={docked ? undefined : floatStyle}
       onPointerDown={(e) => e.stopPropagation()}
     >
       {players.length > 0 && (
@@ -262,8 +269,8 @@ export function MiniToolbar({ svgRef, wrapRef }: { svgRef: RefObject<SVGSVGEleme
             ))}
           </Group>
           <Group>
-            <button className={btn} onClick={() => A.roundPath(path.id)} title="Bow every segment into an arc; drag the diamond handles to adjust">Curve</button>
-            <button className={btn} onClick={() => A.straightenPath(path.id)} title="Remove all bends">Straighten</button>
+            <button className={btn} onClick={() => A.curvePath(path.id)} title="Make the whole line one smooth curve; drag the apex handle or the points to shape it">Curve</button>
+            <button className={btn} onClick={() => A.straightenPath(path.id)} title="Straight segments">Straighten</button>
             {selection.pointIndex !== undefined && selection.pointIndex > 0 && (
               <button className={btn} onClick={() => A.deletePoint(path.id, selection.pointIndex!)} title="Delete this point">Del pt</button>
             )}

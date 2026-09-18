@@ -383,28 +383,41 @@ export function straightenPath(pathId: string) {
   });
 }
 
-/** Bend every segment into a gentle arc that bows away from the previous direction (FirstDown-style rounding). */
-export function roundPath(pathId: string, amount = 0.35) {
+/**
+ * FirstDown-style "Curve Line": the whole line becomes one smooth curve.
+ * Two points: a single arc with one apex handle, bowed toward the sideline.
+ * More points: a smooth spline through every point (no per-segment bulges).
+ */
+export function curvePath(pathId: string) {
   store().commit((d) => {
-    const p = diagram(d)?.paths[pathId];
-    if (!p) return;
-    for (let i = 1; i < p.points.length; i++) {
-      const a = p.points[i - 1];
-      const b = p.points[i];
+    const dg = diagram(d);
+    const p = dg?.paths[pathId];
+    if (!dg || !p || p.points.length < 2) return;
+    for (const pt of p.points) delete pt.bend;
+    if (p.points.length === 2) {
+      const a = p.points[0];
+      const b = p.points[1];
       const dx = b.x - a.x;
       const dy = b.y - a.y;
-      const prev = i >= 2 ? { x: a.x - p.points[i - 2].x, y: a.y - p.points[i - 2].y } : null;
-      // bow toward the side the path is turning away from, so corners get rounded
-      let sideSign = 1;
-      if (prev) sideSign = Math.sign(prev.x * dy - prev.y * dx) || 1;
       const len = Math.hypot(dx, dy) || 1;
-      const nx = (-dy / len) * amount * Math.min(len, 6);
-      const ny = (dx / len) * amount * Math.min(len, 6);
-      b.bend = { x: (a.x + b.x) / 2 - nx * sideSign, y: (a.y + b.y) / 2 - ny * sideSign };
-      delete b.smooth;
+      const anchorX = p.anchor.kind === 'player' ? (dg.players[p.anchor.playerId]?.x ?? 0) : a.x;
+      // bow away from the ball (outside), like a bench route; straight-down-the-field lines bow toward the sideline
+      const outward = anchorX >= 0 ? 1 : -1;
+      const nx = -dy / len;
+      const ny = dx / len;
+      const side = Math.sign(nx * outward) || 1;
+      const amt = Math.min(len * 0.35, 4);
+      b.bend = { x: (a.x + b.x) / 2 + nx * amt * side, y: (a.y + b.y) / 2 + ny * amt * side };
+      return;
     }
+    p.points.forEach((pt, i) => {
+      if (i > 0 && i < p.points.length - 1) pt.smooth = true;
+    });
   });
 }
+
+/** @deprecated use curvePath */
+export const roundPath = curvePath;
 
 // ---------------- annotations ----------------
 

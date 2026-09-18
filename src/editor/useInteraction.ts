@@ -34,6 +34,9 @@ export function useInteraction(svgRef: RefObject<SVGSVGElement | null>) {
   const spaceHeld = useRef(false);
   const lastClick = useRef<{ t: number; p: Point } | null>(null);
   const [overlay, setOverlay] = useState<Overlay>({ marquee: null, hover: null });
+  // Multi-touch: two fingers pinch to zoom and pan.
+  const pointers = useRef(new Map<number, Point>());
+  const pinch = useRef<{ d: number; mid: Point } | null>(null);
 
   const toYards = useCallback(
     (clientX: number, clientY: number): Point => {
@@ -161,6 +164,20 @@ export function useInteraction(svgRef: RefObject<SVGSVGElement | null>) {
       const hit = parseHit(e.target);
       const screen = { x: e.clientX, y: e.clientY };
 
+      // Second finger down: switch to pinch zoom/pan and abandon any single-finger gesture.
+      pointers.current.set(e.pointerId, screen);
+      if (e.pointerType === 'touch' && pointers.current.size === 2) {
+        svg.setPointerCapture(e.pointerId);
+        const [a, b] = [...pointers.current.values()];
+        pinch.current = { d: Math.hypot(a.x - b.x, a.y - b.y), mid: { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 } };
+        if (st.current.mode === 'dragPlayers' || st.current.mode === 'dragPoint' || st.current.mode === 'dragBend') s.undo();
+        st.current = { mode: 'idle' };
+        s.setGuides([]);
+        setOverlay({ marquee: null, hover: null });
+        return;
+      }
+      if (pinch.current) return;
+
       // Panning: middle button, pan tool, or space.
       if (e.button === 1 || s.tool === 'pan' || spaceHeld.current) {
         svg.setPointerCapture(e.pointerId);
@@ -216,6 +233,26 @@ export function useInteraction(svgRef: RefObject<SVGSVGElement | null>) {
       const s = useEditor.getState();
       const cur = st.current;
       const yd = toYards(e.clientX, e.clientY);
+
+      if (pointers.current.has(e.pointerId)) pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      if (pinch.current) {
+        if (pointers.current.size < 2) return;
+        const [a, b] = [...pointers.current.values()];
+        const d = Math.hypot(a.x - b.x, a.y - b.y);
+        const mid = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
+        const prev = pinch.current;
+        const ppy = pxPerYard();
+        let view = s.view;
+        if (prev.d > 0 && d > 0) {
+          const factor = d / prev.d;
+          const w = view.maxX - view.minX;
+          if ((factor > 1 && w / factor >= 8) || (factor < 1 && w / factor <= 120)) view = zoomWindow(view, factor, toYards(mid.x, mid.y));
+        }
+        view = panWindow(view, -(mid.x - prev.mid.x) / ppy, (mid.y - prev.mid.y) / ppy);
+        s.setView(view);
+        pinch.current = { d, mid };
+        return;
+      }
 
       if (s.drawingPathId) {
         setOverlay((o) => ({ ...o, hover: yd }));
@@ -319,6 +356,12 @@ export function useInteraction(svgRef: RefObject<SVGSVGElement | null>) {
       const s = useEditor.getState();
       const cur = st.current;
       const yd = toYards(e.clientX, e.clientY);
+      pointers.current.delete(e.pointerId);
+      if (pinch.current) {
+        if (pointers.current.size < 2) pinch.current = null;
+        st.current = { mode: 'idle' };
+        return;
+      }
       st.current = { mode: 'idle' };
       s.setGuides([]);
       if (s.drawingPathId) return;

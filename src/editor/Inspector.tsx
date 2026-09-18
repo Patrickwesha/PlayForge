@@ -167,7 +167,7 @@ export function Inspector() {
                 </div>
               ))}
               <div className="flex gap-2 mt-3 flex-wrap">
-                <button className={btn} onClick={() => A.roundPath(selPath.id)}>Curve</button>
+                <button className={btn} onClick={() => A.curvePath(selPath.id)}>Curve</button>
                 <button className={btn} onClick={() => A.straightenPath(selPath.id)}>Straighten</button>
                 <button className={btn} onClick={() => A.branchFromEnd(selPath.id)}>Branch from end</button>
                 <button className={`${btn} ${selPath.primary ? 'bg-yellow-200' : ''}`} onClick={() => A.updatePath(selPath.id, { primary: !selPath.primary })}>Primary</button>

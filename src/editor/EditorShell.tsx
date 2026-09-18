@@ -22,6 +22,7 @@ import type { ViewWindow } from '@/model/types';
 export function EditorShell({ kind, id }: { kind: 'play' | 'formation'; id: string }) {
   const router = useRouter();
   const [status, setStatus] = useState<'loading' | 'ready' | 'missing'>('loading');
+  const [panelOpen, setPanelOpen] = useState(true);
   const { doc, dirty, savedAt } = useEditor(useShallow((s) => ({ doc: s.doc, dirty: s.dirty, savedAt: s.savedAt })));
   const loadSettings = useSettings((s) => s.load);
 
@@ -112,6 +113,7 @@ export function EditorShell({ kind, id }: { kind: 'play' | 'formation'; id: stri
           <button className="text-xs px-2 py-1 rounded border border-neutral-300 hover:border-black" onClick={() => void saveNow()}>Save</button>
           <button className="text-xs px-2 py-1 rounded border border-neutral-300 hover:border-black" onClick={() => void onDuplicate()}>Duplicate</button>
           <button className="text-xs px-2 py-1 rounded border border-neutral-300 hover:border-black" onClick={() => void onPng()}>Export PNG</button>
+          <button className={`text-xs px-2 py-1 rounded border ${panelOpen ? 'border-black bg-neutral-100' : 'border-neutral-300'} hover:border-black`} onClick={() => setPanelOpen((v) => !v)} title="Show or hide the side panel">Panel</button>
           {doc.kind === 'play' && (
             <Link href={`/print?play=${doc.play.id}&layout=1up`} className="text-xs px-2 py-1 rounded bg-black text-white">Print</Link>
           )}
@@ -123,7 +125,7 @@ export function EditorShell({ kind, id }: { kind: 'play' | 'formation'; id: stri
       <div className="flex-1 flex min-h-0">
         <ToolRail />
         <Canvas />
-        <Inspector />
+        {panelOpen && <Inspector />}
       </div>
     </div>
   );
