@@ -147,7 +147,7 @@ export function useInteraction(svgRef: RefObject<SVGSVGElement | null>) {
       if (!p) return;
       const abs = resolvePoints(p, d.players);
       const prev = abs[abs.length - 1] ?? null;
-      const snapped = snapWaypoint(pt, prev, { disabled: e.altKey, axisLock: e.shiftKey, angleSnap: p.role === 'block' ? 45 : undefined }).point;
+      const snapped = snapWaypoint(pt, prev, { disabled: e.altKey, angleSnap: e.shiftKey ? 45 : undefined }).point;
       const anchor = p.anchor.kind === 'player' ? d.players[p.anchor.playerId] : { x: 0, y: 0 };
       if (prev && Math.hypot(prev.x - snapped.x, prev.y - snapped.y) < 0.2) return;
       A.appendPoint(id, { x: snapped.x - anchor.x, y: snapped.y - anchor.y });
@@ -215,7 +215,7 @@ export function useInteraction(svgRef: RefObject<SVGSVGElement | null>) {
 
       if (s.tool === 'text') {
         if (s.doc?.kind === 'play' && (hit.kind === 'bg' || hit.kind === 'none')) {
-          const pt = snapWaypoint(yd, null, { grid: 0.25 }).point;
+          const pt = snapWaypoint(yd, null, { grid: 0 }).point;
           A.addAnnotation({ kind: 'text', x: pt.x, y: pt.y, text: 'TEXT', style: 'redCaps', size: 'md' });
           s.setTool('select');
         }
@@ -310,7 +310,7 @@ export function useInteraction(svgRef: RefObject<SVGSVGElement | null>) {
           if (!p) return;
           const abs = resolvePoints(p, d.players);
           const prev = cur.index > 0 ? abs[cur.index - 1] : null;
-          const snapped = snapWaypoint(yd, prev, { disabled: e.altKey, axisLock: e.shiftKey, angleSnap: p.role === 'block' && !p.points[cur.index]?.bend ? 45 : undefined });
+          const snapped = snapWaypoint(yd, prev, { disabled: e.altKey, angleSnap: e.shiftKey ? 45 : undefined });
           const anchor = p.anchor.kind === 'player' ? d.players[p.anchor.playerId] : { x: 0, y: 0 };
           A.setPoint(cur.pathId, cur.index, { x: round3(snapped.point.x - anchor.x), y: round3(snapped.point.y - anchor.y) }, true);
           s.setGuides(snapped.guides);
@@ -332,7 +332,7 @@ export function useInteraction(svgRef: RefObject<SVGSVGElement | null>) {
           return;
         }
         case 'dragAnnotation': {
-          const pt = snapWaypoint({ x: yd.x + cur.offset.x, y: yd.y + cur.offset.y }, null, { grid: 0.25, disabled: e.altKey }).point;
+          const pt = snapWaypoint({ x: yd.x + cur.offset.x, y: yd.y + cur.offset.y }, null, { grid: 0, disabled: e.altKey }).point;
           A.moveAnnotationLive(cur.id, pt);
           return;
         }

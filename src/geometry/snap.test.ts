@@ -52,7 +52,8 @@ describe('snapWaypoint angle snap', () => {
   it('snaps to 45 degree increments and keeps the length', () => {
     const r = snapWaypoint({ x: 1.9, y: 2.1 }, { x: 0, y: 0 }, { angleSnap: 45 });
     expect(r.point.x).toBeCloseTo(r.point.y, 5);
-    expect(Math.hypot(r.point.x, r.point.y)).toBeCloseTo(2.75, 2);
+    expect(Math.hypot(r.point.x, r.point.y)).toBeCloseTo(Math.hypot(1.9, 2.1), 3);
+    expect(snapWaypoint({ x: 0.2, y: 5.3 }, { x: 0, y: 0 }).point).toEqual({ x: 0.2, y: 5.3 });
     const up = snapWaypoint({ x: 0.2, y: 3 }, { x: 0, y: 0 }, { angleSnap: 45 });
     expect(up.point.x).toBeCloseTo(0, 5);
   });
@@ -60,7 +61,7 @@ describe('snapWaypoint angle snap', () => {
 
 describe('snapWaypoint', () => {
   it('aligns with the previous point, else grid', () => {
-    expect(snapWaypoint({ x: 0.2, y: 5.3 }, { x: 0, y: 0 }).point).toEqual({ x: 0, y: 5.5 });
-    expect(snapWaypoint({ x: 2.2, y: 5.3 }, null).point).toEqual({ x: 2, y: 5.5 });
+    expect(snapWaypoint({ x: 0.2, y: 5.3 }, { x: 0, y: 0 }, { grid: 0.5, threshold: 0.3 }).point).toEqual({ x: 0, y: 5.5 });
+    expect(snapWaypoint({ x: 2.2, y: 5.3 }, null, { grid: 0.5 }).point).toEqual({ x: 2, y: 5.5 });
   });
 });

@@ -120,17 +120,20 @@ export type WaypointOptions = {
   angleSnap?: number;
 };
 
-/** Snap a route waypoint: optional angle snap from the previous point, alignment with it, else grid. */
+/**
+ * Snap a route waypoint. Freeform by default (no grid, no alignment) so points land exactly
+ * where they are dropped; pass `angleSnap` (Shift) for 45-degree lines, or a `grid`/`threshold`.
+ */
 export function snapWaypoint(raw: Point, prev: Point | null, opts: WaypointOptions = {}): SnapResult {
   if (opts.disabled) return { point: raw, guides: [] };
-  const grid = opts.grid ?? 0.5;
-  const th = opts.threshold ?? 0.3;
+  const grid = opts.grid ?? 0;
+  const th = opts.threshold ?? 0;
   const p = { x: raw.x, y: raw.y };
   const guides: SnapGuide[] = [];
   if (prev && opts.angleSnap) {
     const dx = raw.x - prev.x;
     const dy = raw.y - prev.y;
-    const dist = Math.round(Math.hypot(dx, dy) * 4) / 4;
+    const dist = Math.hypot(dx, dy);
     if (dist > 0) {
       const step = (opts.angleSnap * Math.PI) / 180;
       const a = Math.round(Math.atan2(dy, dx) / step) * step;
@@ -141,11 +144,11 @@ export function snapWaypoint(raw: Point, prev: Point | null, opts: WaypointOptio
     if (opts.axisLock) {
       if (Math.abs(raw.x - prev.x) >= Math.abs(raw.y - prev.y)) p.y = prev.y; else p.x = prev.x;
     }
-    if (Math.abs(p.x - prev.x) < th) {
+    if (th > 0 && Math.abs(p.x - prev.x) < th) {
       p.x = prev.x;
       guides.push({ axis: 'x', value: prev.x, kind: 'align' });
     }
-    if (Math.abs(p.y - prev.y) < th) {
+    if (th > 0 && Math.abs(p.y - prev.y) < th) {
       p.y = prev.y;
       guides.push({ axis: 'y', value: prev.y, kind: 'align' });
     }
