@@ -167,7 +167,7 @@ export function useInteraction(svgRef: RefObject<SVGSVGElement | null>) {
       // Second finger down: switch to pinch zoom/pan and abandon any single-finger gesture.
       pointers.current.set(e.pointerId, screen);
       if (e.pointerType === 'touch' && pointers.current.size === 2) {
-        svg.setPointerCapture(e.pointerId);
+        capture(svg, e.pointerId);
         const [a, b] = [...pointers.current.values()];
         pinch.current = { d: Math.hypot(a.x - b.x, a.y - b.y), mid: { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 } };
         if (st.current.mode === 'dragPlayers' || st.current.mode === 'dragPoint' || st.current.mode === 'dragBend') s.undo();
@@ -180,13 +180,13 @@ export function useInteraction(svgRef: RefObject<SVGSVGElement | null>) {
 
       // Panning: middle button, pan tool, or space.
       if (e.button === 1 || s.tool === 'pan' || spaceHeld.current) {
-        svg.setPointerCapture(e.pointerId);
+        capture(svg, e.pointerId);
         st.current = { mode: 'panning', startScreen: screen, startView: s.view };
         e.preventDefault();
         return;
       }
       if (e.button !== 0) return;
-      svg.setPointerCapture(e.pointerId);
+      capture(svg, e.pointerId);
 
       // Route drawing in progress: add a waypoint (double-click finishes).
       if (s.drawingPathId) {
@@ -441,4 +441,13 @@ export function isTyping(t: EventTarget | null): boolean {
   if (!(t instanceof HTMLElement)) return false;
   const tag = t.tagName;
   return tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || t.isContentEditable;
+}
+
+/** Pointer capture keeps drags alive when the finger leaves the SVG; ignore browsers/pointers that refuse it. */
+function capture(svg: SVGSVGElement, pointerId: number) {
+  try {
+    svg.setPointerCapture(pointerId);
+  } catch {
+    /* synthetic or already-released pointer */
+  }
 }
