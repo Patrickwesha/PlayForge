@@ -220,6 +220,10 @@ export function MiniToolbar({ svgRef, wrapRef }: { svgRef: RefObject<SVGSVGEleme
               <option value="right">Shade R</option>
               <option value="full">Filled</option>
             </select>
+            <select className="h-7 text-xs bg-neutral-800 rounded px-1" value={players[0].outline ?? 'solid'} onChange={(e) => A.updatePlayers(ids, { outline: e.target.value as Player['outline'] })} title="Outline: dashed shows where a player lines up before motion">
+              <option value="solid">Solid outline</option>
+              <option value="dashed">Dashed outline</option>
+            </select>
             <select className="h-7 text-xs bg-neutral-800 rounded px-1" value={players[0].labelColor ?? 'black'} onChange={(e) => A.updatePlayers(ids, { labelColor: e.target.value as Player['labelColor'] })} title="Label color">
               <option value="black">Black</option>
               <option value="red">Red</option>

@@ -92,7 +92,7 @@ export const OFFENSE_SEEDS: FormationSeed[] = [
   },
   {
     id: 'spread-8', name: 'SPREAD (8-MAN)', side: 'offense', personnel: '8', playersPerSide: 8, tags: ['youth', '8-man'],
-    players: [{ label: '', x: -1, y: 0, role: 'OL' }, { label: 'C', x: 0, y: 0, symbol: 'square', role: 'C' }, { label: '', x: 1, y: 0, role: 'OL' }, { label: 'Y', x: 3, y: 0, role: 'TE' }, { label: 'X', x: -10, y: 0, role: 'WR' }, { label: 'Z', x: 10, y: -1, role: 'WR' }, { label: 'Q', x: 0, y: -4, role: 'QB' }, { label: 'H', x: -2.5, y: -4, role: 'RB' }],
+    players: [{ label: '', x: -1, y: 0, role: 'OL' }, { label: '', x: 0, y: 0, symbol: 'square', role: 'C' }, { label: '', x: 1, y: 0, role: 'OL' }, { label: 'Y', x: 3, y: 0, role: 'TE' }, { label: 'X', x: -10, y: 0, role: 'WR' }, { label: 'Z', x: 10, y: -1, role: 'WR' }, { label: 'Q', x: 0, y: -4, role: 'QB' }, { label: 'H', x: -2.5, y: -4, role: 'RB' }],
   },
   {
     id: 'beast-9', name: 'BEAST (9-MAN)', side: 'offense', personnel: 'BEAST', playersPerSide: 9, tags: ['youth', 'beast', '9-man'],

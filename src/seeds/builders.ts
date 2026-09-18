@@ -37,13 +37,13 @@ export function buildPlayers(prefix: string, side: Side, specs: PlayerSpec[]): R
 
 export type OlLabels = 'none' | 'short' | 'long';
 
-/** Five offensive linemen on the LOS, 1 yd apart. Blank circles by default; the center is a square marked C. */
+/** Five offensive linemen on the LOS, 1 yd apart. Blank by default (center is a blank square); labels are opt-in. */
 export function ol(labels: OlLabels = 'none', spacing = 1): PlayerSpec[] {
   const L = labels === 'long' ? ['LT', 'LG', 'C', 'RG', 'RT'] : labels === 'short' ? ['T', 'G', 'C', 'G', 'T'] : ['', '', 'C', '', ''];
   return [
     { label: L[0], x: -2 * spacing, y: 0, role: 'OL' },
     { label: L[1], x: -1 * spacing, y: 0, role: 'OL' },
-    { label: 'C', x: 0, y: 0, symbol: 'square', role: 'C' },
+    { label: labels === 'none' ? '' : 'C', x: 0, y: 0, symbol: 'square', role: 'C' },
     { label: L[3], x: 1 * spacing, y: 0, role: 'OL' },
     { label: L[4], x: 2 * spacing, y: 0, role: 'OL' },
   ];

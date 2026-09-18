@@ -21,7 +21,9 @@ function shadePath(symbol: Player['symbol'], shade: Player['shade'], r: number):
 export function PlayerGlyph({ p, selected }: { p: Player; selected?: boolean }) {
   const r = yd(SYMBOL_R);
   const sw = yd(SYMBOL_STROKE);
-  const stroke = COLORS.ink;
+  // the outline follows the label color so a colored player reads as one unit; dashed = pre-motion ghost
+  const stroke = labelColorHex(p.labelColor);
+  const dash = p.outline === 'dashed' ? `${yd(0.16)} ${yd(0.12)}` : undefined;
   const labelFill = p.shade === 'full' ? COLORS.paper : labelColorHex(p.labelColor);
   const twoChar = p.label.length > 1;
   const labelSize = yd(twoChar ? LABEL_SIZE_2CH : LABEL_SIZE);
@@ -43,20 +45,20 @@ export function PlayerGlyph({ p, selected }: { p: Player; selected?: boolean }) 
   switch (p.symbol) {
     case 'square': {
       const s = yd(SQUARE_SIDE);
-      body = <rect x={-s / 2} y={-s / 2} width={s} height={s} fill={COLORS.paper} stroke={stroke} strokeWidth={sw} />;
+      body = <rect x={-s / 2} y={-s / 2} width={s} height={s} fill={COLORS.paper} stroke={stroke} strokeWidth={sw} strokeDasharray={dash} />;
       break;
     }
     case 'triangle':
-      body = <polygon points={`0,${-r * 1.15} ${r * 1.1},${r * 0.85} ${-r * 1.1},${r * 0.85}`} fill={COLORS.paper} stroke={stroke} strokeWidth={sw} strokeLinejoin="round" />;
+      body = <polygon points={`0,${-r * 1.15} ${r * 1.1},${r * 0.85} ${-r * 1.1},${r * 0.85}`} fill={COLORS.paper} stroke={stroke} strokeWidth={sw} strokeDasharray={dash} strokeLinejoin="round" />;
       break;
     case 'diamond':
-      body = <polygon points={`0,${-r * 1.2} ${r * 1.2},0 0,${r * 1.2} ${-r * 1.2},0`} fill={COLORS.paper} stroke={stroke} strokeWidth={sw} strokeLinejoin="round" />;
+      body = <polygon points={`0,${-r * 1.2} ${r * 1.2},0 0,${r * 1.2} ${-r * 1.2},0`} fill={COLORS.paper} stroke={stroke} strokeWidth={sw} strokeDasharray={dash} strokeLinejoin="round" />;
       break;
     case 'oval':
-      body = <ellipse rx={r * 1.25} ry={r * 0.8} fill={COLORS.paper} stroke={stroke} strokeWidth={sw} />;
+      body = <ellipse rx={r * 1.25} ry={r * 0.8} fill={COLORS.paper} stroke={stroke} strokeWidth={sw} strokeDasharray={dash} />;
       break;
     default:
-      body = <circle r={r} fill={COLORS.paper} stroke={stroke} strokeWidth={sw} />;
+      body = <circle r={r} fill={COLORS.paper} stroke={stroke} strokeWidth={sw} strokeDasharray={dash} />;
   }
 
   return (

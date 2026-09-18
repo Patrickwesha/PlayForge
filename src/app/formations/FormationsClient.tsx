@@ -27,7 +27,7 @@ export function FormationsClient() {
     const f = newFormation({
       name: side === 'offense' ? 'NEW FORMATION' : 'NEW FRONT',
       side,
-      players: side === 'offense' ? buildPlayers('new', 'offense', [...ol('long'), { label: 'Q', x: 0, y: -1.2, role: 'QB' }]) : {},
+      players: side === 'offense' ? buildPlayers('new', 'offense', [...ol(), { label: 'Q', x: 0, y: -1.2, role: 'QB' }]) : {},
     });
     await repo.saveFormation(f);
     router.push(`/formations/${f.id}`);

@@ -28,6 +28,8 @@ export type Player = {
   shade?: Shade;
   /** Visio "Center |" and "O-Line ||" vertical bar marks */
   bars?: 0 | 1 | 2;
+  /** Dashed outline marks a pre-motion or ghost alignment. */
+  outline?: 'solid' | 'dashed';
   labelColor?: LabelColor;
   role?: PlayerRole;
 };

@@ -12,6 +12,7 @@ export const playerSchema = z.object({
   y: z.number(),
   shade: z.enum(['none', 'left', 'right', 'full']).optional(),
   bars: z.union([z.literal(0), z.literal(1), z.literal(2)]).optional(),
+  outline: z.enum(['solid', 'dashed']).optional(),
   labelColor: z.enum(['black', 'red', 'green', 'blue', 'brown', 'orange']).optional(),
   role: z.enum(['OL', 'C', 'QB', 'RB', 'WR', 'TE', 'DL', 'LB', 'DB']).optional(),
 });

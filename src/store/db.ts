@@ -27,7 +27,7 @@ export class PlayForgeDB extends Dexie {
 
 export const DEMO_PLAYBOOK_ID = 'seed-playbook-beast';
 /** Bump when built-in formations or demo plays change; untouched seed rows are refreshed on open. */
-export const SEED_VERSION = 2;
+export const SEED_VERSION = 3;
 const SEED_TIME = '2026-01-01T00:00:00.000Z';
 
 export async function ensureSeeds(database: PlayForgeDB) {
