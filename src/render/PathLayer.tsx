@@ -83,8 +83,9 @@ function Marker({ path, built, view, color, sw }: { path: Path; built: BuiltPath
       const [a, b] = tBar(built.end, built.tangent, 0.35 * Math.max(1, scale * 0.9)).map(map);
       return <line x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke={color} strokeWidth={sw * 1.15} strokeLinecap="round" />;
     }
-    case 'tbarAngled': {
-      const [a, b] = angledBar(built.end, built.tangent).map(map);
+    case 'tbarAngled':
+    case 'tbarAngledL': {
+      const [a, b] = angledBar(built.end, built.tangent, undefined, path.end === 'tbarAngledL' ? -1 : 1).map(map);
       return <line x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke={color} strokeWidth={sw * 1.15} strokeLinecap="round" />;
     }
     case 'dot': {

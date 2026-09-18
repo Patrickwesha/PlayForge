@@ -25,7 +25,8 @@ export function flipPlayer(p: Player, opts: FlipOptions = {}): Player {
 }
 
 export function flipPath(path: Path): Path {
-  return { ...path, points: path.points.map((pt) => ({ ...pt, x: -pt.x, bend: pt.bend ? { x: -pt.bend.x, y: pt.bend.y } : undefined })) };
+  const end = path.end === 'tbarAngled' ? 'tbarAngledL' : path.end === 'tbarAngledL' ? 'tbarAngled' : path.end;
+  return { ...path, end, points: path.points.map((pt) => ({ ...pt, x: -pt.x, bend: pt.bend ? { x: -pt.bend.x, y: pt.bend.y } : undefined })) };
 }
 
 export function flipAnnotation(a: Annotation): Annotation {

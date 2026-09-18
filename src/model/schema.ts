@@ -20,7 +20,7 @@ export const pathSchema = z.object({
   id: z.string(),
   anchor: z.union([z.object({ kind: z.literal('player'), playerId: z.string() }), z.object({ kind: z.literal('free') })]),
   points: z.array(pathPoint),
-  end: z.enum(['arrow', 'tbar', 'none', 'dot', 'openArrow', 'tbarAngled']),
+  end: z.enum(['arrow', 'tbar', 'none', 'dot', 'openArrow', 'tbarAngled', 'tbarAngledL']),
   line: z.enum(['solid', 'dashed', 'dotted', 'squiggle']),
   role: z.enum(['route', 'block', 'motion', 'ball', 'blitz', 'zone', 'free']),
   primary: z.boolean().optional(),

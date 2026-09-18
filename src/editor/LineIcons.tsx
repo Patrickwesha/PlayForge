@@ -50,6 +50,7 @@ export function EndIcon({ end }: { end: PathEnd }) {
       {end === 'dot' && <circle cx={cx} cy={top + 2} r={3.5} fill={stroke} />}
       {end === 'tbar' && <line x1={cx - 7} y1={top + 1} x2={cx + 7} y2={top + 1} strokeWidth={2.6} />}
       {end === 'tbarAngled' && <line x1={cx - 6} y1={top + 6} x2={cx + 6} y2={top - 3} strokeWidth={2.6} />}
+      {end === 'tbarAngledL' && <line x1={cx - 6} y1={top - 3} x2={cx + 6} y2={top + 6} strokeWidth={2.6} />}
     </svg>
   );
 }
@@ -94,6 +95,7 @@ export const END_OPTIONS: { end: PathEnd; name: string }[] = [
   { end: 'dot', name: 'Dot' },
   { end: 'tbar', name: 'Block (T)' },
   { end: 'tbarAngled', name: 'Angled block' },
+  { end: 'tbarAngledL', name: 'Angled block (flipped)' },
 ];
 export const STYLE_OPTIONS: { line: LineStyle; name: string }[] = [
   { line: 'solid', name: 'Solid' },

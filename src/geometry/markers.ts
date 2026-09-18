@@ -24,12 +24,12 @@ export function tBar(end: Point, dir: Point, halfW = TBAR_HALF_W): [Point, Point
   ];
 }
 
-/** Bar rotated 45 degrees from perpendicular (cut / chip block mark). */
-export function angledBar(end: Point, dir: Point, halfW = TBAR_HALF_W * 1.15): [Point, Point] {
+/** Bar rotated 45 degrees from perpendicular (cut / chip block mark). `side` mirrors it. */
+export function angledBar(end: Point, dir: Point, halfW = TBAR_HALF_W * 1.15, side: 1 | -1 = 1): [Point, Point] {
   const c = Math.SQRT1_2;
-  // rotate the perpendicular by 45 degrees
-  const nx = -dir.y * c - dir.x * c;
-  const ny = dir.x * c - dir.y * c;
+  // rotate the perpendicular by +/-45 degrees
+  const nx = -dir.y * c - side * dir.x * c;
+  const ny = dir.x * c - side * dir.y * c;
   return [
     { x: end.x + nx * halfW, y: end.y + ny * halfW },
     { x: end.x - nx * halfW, y: end.y - ny * halfW },

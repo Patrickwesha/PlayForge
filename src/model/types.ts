@@ -42,7 +42,7 @@ export type PathPoint = Point & {
   bend?: Point;
 };
 
-export type PathEnd = 'arrow' | 'tbar' | 'none' | 'dot' | 'openArrow' | 'tbarAngled';
+export type PathEnd = 'arrow' | 'tbar' | 'none' | 'dot' | 'openArrow' | 'tbarAngled' | 'tbarAngledL';
 
 /** A symbol placed on the line at fraction t (0..1) of its length. */
 export type PathInsertKind = 'bars' | 'chip' | 'zigzag' | 'x';
