@@ -192,7 +192,7 @@ export function MiniToolbar({ svgRef, wrapRef }: { svgRef: RefObject<SVGSVGEleme
             {labelEdit !== null ? (
               <input
                 autoFocus
-                className="h-7 w-14 text-xs text-black px-1 rounded"
+                className="h-7 w-14 text-xs bg-white text-black px-1 rounded"
                 value={labelEdit}
                 onChange={(e) => setLabelEdit(e.target.value.toUpperCase().slice(0, 3))}
                 onKeyDown={(e) => {
@@ -300,7 +300,12 @@ export function MiniToolbar({ svgRef, wrapRef }: { svgRef: RefObject<SVGSVGEleme
         <>
           <Group>
             <input
-              className="h-7 w-32 text-xs text-black px-1 rounded"
+              key={ann.id}
+              className="h-7 w-32 text-xs bg-white text-black px-1 rounded"
+              // freshly placed text still reads TEXT: focus it with everything selected so typing replaces it
+              autoFocus={ann.text === 'TEXT'}
+              onFocus={(e) => e.target.select()}
+              placeholder="text"
               value={ann.text}
               onChange={(e) => A.updateAnnotation(ann.id, { text: e.target.value })}
               onKeyDown={(e) => e.stopPropagation()}
@@ -326,7 +331,7 @@ export function MiniToolbar({ svgRef, wrapRef }: { svgRef: RefObject<SVGSVGEleme
         <Group>
           <span className="text-xs px-1 text-neutral-300">{ann.mark}</span>
           {ann.mark === 'zoneBubble' && (
-            <input className="h-7 w-24 text-xs text-black px-1 rounded" placeholder="label" value={ann.label ?? ''} onChange={(e) => A.updateAnnotation(ann.id, { label: e.target.value })} onKeyDown={(e) => e.stopPropagation()} />
+            <input className="h-7 w-24 text-xs bg-white text-black px-1 rounded" placeholder="label" value={ann.label ?? ''} onChange={(e) => A.updateAnnotation(ann.id, { label: e.target.value })} onKeyDown={(e) => e.stopPropagation()} />
           )}
           <button className={`${btn} text-red-300`} onClick={() => A.deleteAnnotation(ann.id)}>Delete</button>
         </Group>
