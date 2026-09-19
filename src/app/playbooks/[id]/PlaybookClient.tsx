@@ -9,6 +9,7 @@ import { did } from '@/model/ids';
 import { PLAY_LAYOUTS } from '@/geometry/layout';
 import { PlayThumb } from '@/render/PlayThumb';
 import { playHeaderLine1 } from '@/model/factories';
+import { onApplied } from '@/sync/events';
 
 const btn = 'text-xs px-2 py-1 rounded border border-neutral-300 bg-white hover:border-black disabled:opacity-40';
 const field = 'border border-neutral-300 rounded px-2 py-1 text-sm bg-white';
@@ -26,6 +27,10 @@ export function PlaybookClient({ id }: { id: string }) {
 
   useEffect(() => {
     repo.getPlaybook(id).then((row) => setPb(row ?? null));
+    // a sync changed this playbook on another device: show that copy
+    return onApplied((changes) => {
+      if (changes.some((c) => c.kind === 'playbook' && c.id === id)) void repo.getPlaybook(id).then((row) => setPb(row ?? null));
+    });
   }, [id]);
 
   const update = (fn: (draft: Playbook) => void) => {

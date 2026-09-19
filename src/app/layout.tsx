@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { AppNav } from '@/components/AppNav';
+import { SyncProvider } from '@/sync/SyncProvider';
 
 export const metadata: Metadata = {
   title: 'PlayForge',
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
       <body className="min-h-full flex flex-col">
         <AppNav />
         <div className="flex-1 flex flex-col min-h-0">{children}</div>
+        <SyncProvider />
       </body>
     </html>
   );

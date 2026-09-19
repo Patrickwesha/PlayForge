@@ -18,6 +18,8 @@ import { useShortcuts } from './useShortcuts';
 import { diagramOf } from '@/store/editorStore';
 import { diagramBounds, fitWindow } from '@/geometry/bounds';
 import type { ViewWindow } from '@/model/types';
+import { onApplied } from '@/sync/events';
+import { useSync } from '@/sync/syncStore';
 
 export function EditorShell({ kind, id }: { kind: 'play' | 'formation'; id: string }) {
   const router = useRouter();
@@ -49,6 +51,29 @@ export function EditorShell({ kind, id }: { kind: 'play' | 'formation'; id: stri
       useEditor.getState().unload();
     };
   }, [kind, id]);
+
+  // A sync just wrote this document from another device. With unsaved edits here we leave it alone
+  // (the next autosave is newer and wins); otherwise show the fresh copy.
+  useEffect(
+    () =>
+      onApplied((changes) => {
+        const hit = changes.find((c) => c.id === id && c.kind === kind);
+        const s = useEditor.getState();
+        if (!hit || s.dirty) return;
+        if (hit.op === 'delete') {
+          setStatus('missing');
+          return;
+        }
+        void (kind === 'play' ? repo.getPlay(id) : repo.getFormation(id)).then((row) => {
+          const cur = useEditor.getState();
+          if (!row || cur.dirty || !cur.doc) return;
+          const d: EditorDoc = kind === 'play' ? { kind: 'play', play: row as never } : { kind: 'formation', formation: row as never };
+          cur.load(d, cur.view);
+          useSync.getState().set({ notice: 'Updated from your other device' });
+        });
+      }),
+    [kind, id],
+  );
 
   useAutosave();
 

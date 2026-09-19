@@ -7,6 +7,8 @@ import { repo } from '@/store/repo';
 import { useSettings } from '@/store/settingsStore';
 import { downloadBlob } from '@/print/exportPng';
 import { parseBackup } from '@/io/backup';
+import { useSync } from '@/sync/syncStore';
+import { AccountSync } from './AccountSync';
 
 const field = 'border border-neutral-300 rounded px-2 py-1 text-sm bg-white';
 const btn = 'text-sm px-3 py-1 rounded border border-neutral-300 bg-white hover:border-black';
@@ -17,6 +19,9 @@ export function SettingsClient() {
   const [msg, setMsg] = useState<string | null>(null);
   const fileRef = useRef<HTMLInputElement | null>(null);
   const [mode, setMode] = useState<'merge' | 'replace'>('merge');
+  // wiping this device while signed in would fight the cloud copy, so those two actions wait for a sign-out
+  const syncPhase = useSync((s) => s.phase);
+  const signedIn = syncPhase !== 'off' && syncPhase !== 'signedOut';
 
   useEffect(() => {
     void load();
@@ -85,17 +90,19 @@ export function SettingsClient() {
         </div>
       </section>
 
+      <AccountSync />
+
       <section className="bg-white border border-neutral-300 rounded p-4 mb-4">
         <h2 className="font-bold mb-1">Backup</h2>
         <p className="text-sm text-neutral-600 mb-3">
-          Everything is stored in this browser. Export a backup file regularly and keep it somewhere safe. {counts && `Currently ${counts.formations} formations, ${counts.plays} plays, ${counts.playbooks} playbooks.`}
+          {signedIn ? 'Your library is stored in this browser and synced to your account. A backup file is still a good safety net.' : 'Everything is stored in this browser. Export a backup file regularly and keep it somewhere safe.'} {counts && `Currently ${counts.formations} formations, ${counts.plays} plays, ${counts.playbooks} playbooks.`}
         </p>
         <div className="flex gap-2 items-center flex-wrap">
           <button className={btn} onClick={() => void exportAll()}>Export backup (.json)</button>
           <span className="text-neutral-300">|</span>
           <select className={field} value={mode} onChange={(e) => setMode(e.target.value as 'merge' | 'replace')}>
             <option value="merge">Import: merge</option>
-            <option value="replace">Import: replace everything</option>
+            <option value="replace" disabled={signedIn}>Import: replace everything{signedIn ? ' (sign out of sync first)' : ''}</option>
           </select>
           <input ref={fileRef} type="file" accept="application/json,.json" className="text-sm" onChange={(e) => e.target.files?.[0] && void importFile(e.target.files[0])} />
         </div>
@@ -105,9 +112,12 @@ export function SettingsClient() {
 
       <section className="bg-white border border-neutral-300 rounded p-4">
         <h2 className="font-bold mb-1">Reset</h2>
-        <p className="text-sm text-neutral-600 mb-3">Delete everything and restore the built-in formations and demo plays.</p>
+        <p className="text-sm text-neutral-600 mb-3">
+          Delete everything on this device and restore the built-in formations and demo plays.{signedIn && ' Sign out of sync first to reset this device. Your cloud copy is not touched and comes back when you sign in again.'}
+        </p>
         <button
-          className={`${btn} text-red-700`}
+          className={`${btn} text-red-700 disabled:opacity-40`}
+          disabled={signedIn}
           onClick={async () => {
             if (!confirm('Delete ALL plays, formations, and playbooks and restore the seeds? Export a backup first.')) return;
             await repo.resetToSeeds();

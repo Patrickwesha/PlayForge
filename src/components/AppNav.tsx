@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { SyncChip } from './SyncChip';
 
 const LINKS: { href: string; label: string }[] = [
   { href: '/plays', label: 'Plays' },
@@ -30,6 +31,7 @@ export function AppNav() {
           </Link>
         );
       })}
+      <SyncChip />
     </header>
   );
 }
