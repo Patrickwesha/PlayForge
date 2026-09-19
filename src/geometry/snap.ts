@@ -3,15 +3,21 @@ import type { Point } from '@/model/types';
 export type SnapGuide = {
   axis: 'x' | 'y';
   value: number;
-  kind: 'align' | 'hash' | 'symmetry' | 'grid' | 'los' | 'spacing';
-  /** For spacing guides: the neighbour the gap was measured from. */
+  kind: 'align' | 'hash' | 'symmetry' | 'grid' | 'los' | 'spacing' | 'between';
+  /** For spacing guides: the neighbour the gap was measured from. For between guides: the left neighbour. */
   ref?: number;
+  /** For between guides: the right neighbour. */
+  ref2?: number;
+  /** For spacing and between guides: the y of the dragged player, so the dimension bar sits on its row. */
+  at?: number;
 };
 export type SnapResult = { point: Point; guides: SnapGuide[] };
 
 export type SnapContext = {
   /** Positions of other players (not the ones being dragged). */
   others: Point[];
+  /** Same-side players (not the ones being dragged), used for the "evenly between" snap. Defaults to `others`. */
+  teammates?: Point[];
   /** Grid step in yards (0 disables grid snapping). */
   grid?: number;
   /** Hash mark x offset from center; snaps to +/- hashX. */
@@ -28,7 +34,7 @@ export type SnapContext = {
   spacing?: number;
 };
 
-type Cand = { v: number; kind: SnapGuide['kind']; ref?: number };
+type Cand = { v: number; kind: SnapGuide['kind']; ref?: number; ref2?: number };
 
 function nearest(value: number, candidates: Cand[], threshold: number) {
   let best: Cand | null = null;
@@ -45,6 +51,10 @@ function nearest(value: number, candidates: Cand[], threshold: number) {
 
 const round3 = (n: number) => Math.round(n * 1000) / 1000;
 const ROW_TOL = 0.3;
+/** Teammates within this many yards of the dragged player's depth count as neighbours for the between snap (on and off the ball). */
+const BETWEEN_BAND = 2;
+/** Smallest gap that gets a midpoint across rows, so the snap stays out of the way inside the box. */
+const BETWEEN_MIN_GAP = 2;
 
 /** Most common gap between consecutive x positions (rounded to 0.25), or undefined. */
 function commonGap(xs: number[]): number | undefined {
@@ -62,8 +72,8 @@ function commonGap(xs: number[]): number | undefined {
 
 /**
  * Snap a raw yard point. y: align with another player or the LOS, else grid.
- * x: players on the same row offer "next to me" slots (row gap or 1 yd) and midpoints between
- * neighbours; players on other rows offer vertical alignment; then hashes, mirror, center, grid.
+ * x: players on the same row offer "next to me" slots (row gap or 1 yd); the nearest teammates on
+ * either side (any row near the same depth) offer the spot evenly between them; players on other rows offer vertical alignment; then hashes, mirror, center, grid.
  */
 export function snapPoint(raw: Point, ctx: SnapContext): SnapResult {
   let p = { ...raw };
@@ -94,17 +104,32 @@ export function snapPoint(raw: Point, ctx: SnapContext): SnapResult {
   for (let i = 0; i < mates.length; i++) {
     const m = mates[i];
     for (const v of [m + gap, m - gap]) if (!occupied(v)) xs.push({ v, kind: 'spacing', ref: m });
-    if (i + 1 < mates.length && mates[i + 1] - m >= 1.2) xs.push({ v: (m + mates[i + 1]) / 2, kind: 'spacing', ref: m });
+    if (i + 1 < mates.length && mates[i + 1] - m >= 1.2) xs.push({ v: (m + mates[i + 1]) / 2, kind: 'between', ref: m, ref2: mates[i + 1] });
+  }
+  // Evenly between the nearest teammate on each side, even when they sit on a different row
+  // (slot halfway between the on-the-ball end man and the receiver on the numbers).
+  const band = (ctx.teammates ?? ctx.others)
+    .filter((o) => Math.abs(o.y - p.y) <= BETWEEN_BAND)
+    .map((o) => o.x)
+    .sort((a, b) => a - b);
+  for (let i = 0; i + 1 < band.length; i++) {
+    const a = band[i];
+    const b = band[i + 1];
+    if (b - a >= BETWEEN_MIN_GAP) xs.push({ v: (a + b) / 2, kind: 'between', ref: a, ref2: b });
   }
   for (const o of ctx.others) if (Math.abs(o.y - p.y) >= ROW_TOL) xs.push({ v: o.x, kind: 'align' });
   if (ctx.hashX) xs.push({ v: ctx.hashX, kind: 'hash' }, { v: -ctx.hashX, kind: 'hash' });
   if (ctx.symmetry) for (const o of ctx.others) if (Math.abs(o.x) > 0.01 && !occupied(-o.x)) xs.push({ v: -o.x, kind: 'symmetry' });
   if (!occupied(0)) xs.push({ v: 0, kind: 'symmetry' });
 
-  const sx = nearest(p.x, xs, th);
+  // The between snap has a wider catch and wins near-ties, so the halfway spot is easy to hit every time.
+  const any = nearest(p.x, xs, th);
+  const mid = nearest(p.x, xs.filter((c) => c.kind === 'between'), th * 1.6);
+  const sx = mid && (!any || Math.abs(mid.v - p.x) <= Math.abs(any.v - p.x) + 0.2) ? mid : any;
   if (sx) {
     p.x = sx.v;
-    guides.push({ axis: 'x', value: sx.v, kind: sx.kind, ref: sx.ref });
+    const dim = sx.kind === 'spacing' || sx.kind === 'between';
+    guides.push({ axis: 'x', value: sx.v, kind: sx.kind, ref: sx.ref, ref2: sx.ref2, at: dim ? p.y : undefined });
   } else if (grid > 0) p.x = Math.round(p.x / grid) * grid;
 
   p = { x: round3(p.x), y: round3(p.y) };

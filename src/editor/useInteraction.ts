@@ -102,6 +102,7 @@ export function useInteraction(svgRef: RefObject<SVGSVGElement | null>) {
     const settings = useSettings.getState().settings;
     return {
       others: Object.values(d.players).filter((p) => !excludeIds.includes(p.id)).map((p) => ({ x: p.x, y: p.y })),
+      teammates: Object.values(d.players).filter((p) => !excludeIds.includes(p.id) && p.side === d.players[excludeIds[0]]?.side).map((p) => ({ x: p.x, y: p.y })),
       grid: 0.5,
       hashX: hashX(settings.hashPreset),
       symmetry: true,

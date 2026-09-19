@@ -54,10 +54,24 @@ export function Canvas() {
   const guideEls = guides.map((g, i) => {
     if (g.axis === 'x') {
       const x = toSvg({ x: g.value, y: 0 }, view).x;
+      if (g.kind === 'between' && g.ref !== undefined && g.ref2 !== undefined) {
+        // two equal dimension bars: left neighbour -> player -> right neighbour
+        const y = toSvg({ x: 0, y: g.at ?? 0 }, view).y - yd(0.8);
+        const ax = toSvg({ x: g.ref, y: 0 }, view).x;
+        const bx = toSvg({ x: g.ref2, y: 0 }, view).x;
+        return (
+          <g key={i} stroke={COLORS.orange} strokeWidth={yd(0.05)}>
+            <line x1={ax} x2={bx} y1={y} y2={y} />
+            {[ax, x, bx].map((tx, k) => (
+              <line key={k} x1={tx} x2={tx} y1={y - yd(0.25)} y2={y + yd(0.25)} />
+            ))}
+          </g>
+        );
+      }
       if (g.kind === 'spacing' && g.ref !== undefined) {
         // short dimension bar from the neighbour to the snapped slot, drawn just above the row
         const rowY = guides.find((q) => q.axis === 'y')?.value;
-        const yv = rowY ?? 0;
+        const yv = g.at ?? rowY ?? 0;
         const y = toSvg({ x: 0, y: yv }, view).y - yd(0.8);
         const rx = toSvg({ x: g.ref, y: 0 }, view).x;
         return (

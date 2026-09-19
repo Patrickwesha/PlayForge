@@ -48,6 +48,31 @@ describe('row spacing', () => {
   });
 });
 
+describe('evenly between', () => {
+  // Trio Rt shape: end man on the ball at x=3, receiver on the numbers off the ball at x=18
+  const team = [{ x: -2, y: 0 }, { x: -1, y: 0 }, { x: 0, y: 0 }, { x: 1, y: 0 }, { x: 2, y: 0 }, { x: 3, y: 0 }, { x: 18, y: -1 }, { x: 0, y: -5 }, { x: 1, y: -6 }];
+  it('centres a slot between an on-the-ball end man and an off-the-ball receiver', () => {
+    const r = snapPoint({ x: 10.1, y: -1.05 }, { others: team, teammates: team });
+    expect(r.point).toEqual({ x: 10.5, y: -1 });
+    expect(r.guides.find((g) => g.axis === 'x')).toMatchObject({ kind: 'between', ref: 3, ref2: 18, at: -1 });
+  });
+  it('has a wider catch than the other snaps and works from either side', () => {
+    expect(snapPoint({ x: 11.0, y: -1 }, { others: team, teammates: team }).point.x).toBe(10.5);
+    expect(snapPoint({ x: 9.98, y: -1 }, { others: team, teammates: team }).point.x).toBe(10.5);
+    expect(snapPoint({ x: 8.9, y: -1 }, { others: team, teammates: team }).point.x).toBe(9);
+  });
+  it('ignores the defense and deep backs when finding neighbours', () => {
+    const defense = [{ x: 9, y: 1.2 }, { x: 12, y: 0.5 }];
+    const r = snapPoint({ x: 10.3, y: -1 }, { others: [...team, ...defense], teammates: team });
+    expect(r.point.x).toBe(10.5);
+    expect(r.guides.find((g) => g.axis === 'x')?.kind).toBe('between');
+  });
+  it('stays out of the way inside the box', () => {
+    const r = snapPoint({ x: 1.5, y: -1 }, { others: team, teammates: team });
+    expect(r.guides.find((g) => g.axis === 'x')?.kind).not.toBe('between');
+  });
+});
+
 describe('snapWaypoint angle snap', () => {
   it('snaps to 45 degree increments and keeps the length', () => {
     const r = snapWaypoint({ x: 1.9, y: 2.1 }, { x: 0, y: 0 }, { angleSnap: 45 });
