@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState, type PointerEvent as RPointerEvent, type RefObject } from 'react';
 import type { Point } from '@/model/types';
-import { UNITS_PER_YARD } from '@/model/constants';
+import { NUMBERS_X, UNITS_PER_YARD } from '@/model/constants';
 import { fromSvg, panWindow, zoomWindow } from '@/geometry/transform';
 import { snapPoint, snapWaypoint } from '@/geometry/snap';
 import { bendThrough, resolvePoints, distanceToPolyline, samplePolyline, toSegments } from '@/geometry/path';
@@ -104,6 +104,7 @@ export function useInteraction(svgRef: RefObject<SVGSVGElement | null>) {
       others: Object.values(d.players).filter((p) => !excludeIds.includes(p.id)).map((p) => ({ x: p.x, y: p.y })),
       grid: 0.5,
       hashX: hashX(settings.hashPreset),
+      numbersX: NUMBERS_X,
       symmetry: true,
       disabled: e.altKey,
       axisLock: e.shiftKey && origin ? { origin } : undefined,

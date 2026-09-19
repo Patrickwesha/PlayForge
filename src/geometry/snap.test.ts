@@ -27,6 +27,15 @@ describe('snapPoint', () => {
   });
 });
 
+describe('numbers landmark', () => {
+  it('snaps x to the field numbers on either side', () => {
+    const r = snapPoint({ x: 17.8, y: 0.1 }, { others: [], numbersX: 18 });
+    expect(r.point).toEqual({ x: 18, y: 0 });
+    expect(r.guides.find((g) => g.axis === 'x')?.kind).toBe('numbers');
+    expect(snapPoint({ x: -18.2, y: -1 }, { others: [], numbersX: 18 }).point.x).toBe(-18);
+  });
+});
+
 describe('row spacing', () => {
   const line = [{ x: -2, y: 0 }, { x: -1, y: 0 }, { x: 0, y: 0 }, { x: 1, y: 0 }];
   it('offers the next slot at the row gap', () => {

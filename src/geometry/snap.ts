@@ -3,7 +3,7 @@ import type { Point } from '@/model/types';
 export type SnapGuide = {
   axis: 'x' | 'y';
   value: number;
-  kind: 'align' | 'hash' | 'symmetry' | 'grid' | 'los' | 'spacing';
+  kind: 'align' | 'hash' | 'symmetry' | 'grid' | 'los' | 'spacing' | 'numbers';
   /** For spacing guides: the neighbour the gap was measured from. */
   ref?: number;
 };
@@ -16,6 +16,8 @@ export type SnapContext = {
   grid?: number;
   /** Hash mark x offset from center; snaps to +/- hashX. */
   hashX?: number;
+  /** Field numbers x offset from center; snaps to +/- numbersX. */
+  numbersX?: number;
   /** Snap distance in yards. */
   threshold?: number;
   /** Mirror other players about x = 0. */
@@ -98,6 +100,7 @@ export function snapPoint(raw: Point, ctx: SnapContext): SnapResult {
   }
   for (const o of ctx.others) if (Math.abs(o.y - p.y) >= ROW_TOL) xs.push({ v: o.x, kind: 'align' });
   if (ctx.hashX) xs.push({ v: ctx.hashX, kind: 'hash' }, { v: -ctx.hashX, kind: 'hash' });
+  if (ctx.numbersX) xs.push({ v: ctx.numbersX, kind: 'numbers' }, { v: -ctx.numbersX, kind: 'numbers' });
   if (ctx.symmetry) for (const o of ctx.others) if (Math.abs(o.x) > 0.01 && !occupied(-o.x)) xs.push({ v: -o.x, kind: 'symmetry' });
   if (!occupied(0)) xs.push({ v: 0, kind: 'symmetry' });
 
