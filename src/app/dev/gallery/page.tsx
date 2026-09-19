@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { DEFENSE_FORMATIONS, DEMO_PLAYS, OFFENSE_FORMATIONS } from '@/seeds';
+import { DEFENSE_FORMATIONS, DEMO_PLAYS, OFFENSE_FORMATIONS, PACKERS_2019_FORMATIONS } from '@/seeds';
 import { PlayThumb } from '@/render/PlayThumb';
 import { themeFor } from '@/render/theme';
 import { playDefenseLabel, playHeaderLine1 } from '@/model/factories';
@@ -9,15 +9,23 @@ function FormationCard({ f, theme }: { f: Formation; theme: ReturnType<typeof th
   const diagram = { players: f.players, paths: {}, annotations: {} };
   return (
     <div className="border border-black bg-white">
-      <div className="text-center font-bold text-xs py-1 border-b border-black uppercase">
+      <div className="text-center font-bold text-xs py-1 border-b border-black uppercase" title={f.note}>
         {f.personnel ? `[${f.personnel}] ` : ''}
         {f.name}
+        {f.confidence === 'needs-review' && <span className="ml-1.5 rounded bg-amber-100 text-amber-900 px-1 normal-case font-semibold">needs review</span>}
       </div>
       <div className="aspect-[3/2]">
         <PlayThumb diagram={diagram} aspect={1.5} theme={theme} fit={{ losBand: 2, maxBack: 8 }} />
       </div>
     </div>
   );
+}
+
+/** Pack formations grouped by family, in playbook order. */
+function byFamily(formations: Formation[]): [string, Formation[]][] {
+  const groups = new Map<string, Formation[]>();
+  for (const f of formations) groups.set(f.family ?? 'Other', [...(groups.get(f.family ?? 'Other') ?? []), f]);
+  return [...groups];
 }
 
 export default async function GalleryPage(props: PageProps<'/dev/gallery'>) {
@@ -62,6 +70,23 @@ export default async function GalleryPage(props: PageProps<'/dev/gallery'>) {
           <FormationCard key={f.id} f={f} theme={theme} />
         ))}
       </div>
+
+      <h2 className="font-bold mt-8 mb-1">Packers 2019 ({PACKERS_2019_FORMATIONS.length})</h2>
+      <p className="text-sm text-neutral-600 mb-2">
+        {PACKERS_2019_FORMATIONS.filter((f) => f.confidence === 'needs-review').length} need review: the name and personnel are right, the positions are a starting shape.
+      </p>
+      {byFamily(PACKERS_2019_FORMATIONS).map(([family, list]) => (
+        <section key={family}>
+          <h3 className="font-semibold text-sm mt-4 mb-2">
+            {family} ({list.length})
+          </h3>
+          <div className="grid gap-3 grid-cols-2 md:grid-cols-3">
+            {list.map((f) => (
+              <FormationCard key={f.id} f={f} theme={theme} />
+            ))}
+          </div>
+        </section>
+      ))}
 
       <h2 className="font-bold mt-8 mb-2">Defense ({DEFENSE_FORMATIONS.length})</h2>
       <div className="grid gap-3 grid-cols-2 md:grid-cols-3">

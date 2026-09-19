@@ -21,7 +21,7 @@ export function FormationPicker({
 }) {
   const formations = useLiveQuery(() => repo.listFormations(side), [side]);
   const [q, setQ] = useState('');
-  const list = useMemo(() => (formations ?? []).filter((f) => f.name.toLowerCase().includes(q.toLowerCase()) || (f.personnel ?? '').toLowerCase().includes(q.toLowerCase())), [formations, q]);
+  const list = useMemo(() => (formations ?? []).filter((f) => `${f.name} ${f.personnel ?? ''} ${f.family ?? ''}`.toLowerCase().includes(q.toLowerCase())), [formations, q]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose();

@@ -17,10 +17,20 @@ export function FormationsClient() {
   const router = useRouter();
   const [side, setSide] = useState<Side>('offense');
   const [q, setQ] = useState('');
+  const [family, setFamily] = useState('');
+  const [reviewOnly, setReviewOnly] = useState(false);
   const formations = useLiveQuery(() => repo.listFormations(side), [side]);
+  const families = useMemo(() => [...new Set((formations ?? []).map((f) => f.family).filter((x): x is string => !!x))].sort(), [formations]);
+  const reviewCount = useMemo(() => (formations ?? []).filter((f) => f.confidence === 'needs-review').length, [formations]);
   const list = useMemo(
-    () => (formations ?? []).filter((f) => `${f.name} ${f.personnel ?? ''} ${f.tags.join(' ')}`.toLowerCase().includes(q.toLowerCase())),
-    [formations, q],
+    () =>
+      (formations ?? []).filter(
+        (f) =>
+          (!family || f.family === family) &&
+          (!reviewOnly || f.confidence === 'needs-review') &&
+          `${f.name} ${f.personnel ?? ''} ${f.tags.join(' ')} ${f.family ?? ''} ${f.confidence ?? ''} ${f.note ?? ''}`.toLowerCase().includes(q.toLowerCase()),
+      ),
+    [formations, q, family, reviewOnly],
   );
 
   const create = async () => {
@@ -38,6 +48,7 @@ export function FormationsClient() {
   const flip = async (f: Formation) => {
     const copy = duplicateFormation(f, flipName(f.name) === f.name ? `${f.name} (FLIPPED)` : flipName(f.name));
     copy.players = flipFormationPlayers(copy);
+    if (copy.strength) copy.strength = copy.strength === 'left' ? 'right' : 'left';
     await repo.saveFormation(copy);
   };
   const del = async (f: Formation) => {
@@ -56,7 +67,21 @@ export function FormationsClient() {
             </button>
           ))}
         </div>
-        <input className="border border-neutral-300 rounded px-2 py-1 text-sm w-56" placeholder="Search name, personnel, tag" value={q} onChange={(e) => setQ(e.target.value)} />
+        <input className="border border-neutral-300 rounded px-2 py-1 text-sm w-56" placeholder="Search name, personnel, family, tag" value={q} onChange={(e) => setQ(e.target.value)} />
+        {families.length > 0 && (
+          <select className="border border-neutral-300 rounded px-2 py-1 text-sm bg-white" value={family} onChange={(e) => setFamily(e.target.value)} aria-label="Family">
+            <option value="">All families</option>
+            {families.map((fam) => (
+              <option key={fam} value={fam}>{fam}</option>
+            ))}
+          </select>
+        )}
+        {reviewCount > 0 && (
+          <label className="flex items-center gap-1.5 text-sm select-none">
+            <input type="checkbox" checked={reviewOnly} onChange={(e) => setReviewOnly(e.target.checked)} />
+            Needs review ({reviewCount})
+          </label>
+        )}
         <div className="ml-auto flex gap-2">
           <Link href={`/print?formations=${list.map((f) => f.id).join(',')}&layout=9up&title=${encodeURIComponent(side.toUpperCase() + ' FORMATIONS')}`} className={btn}>
             Print sheet
@@ -71,11 +96,18 @@ export function FormationsClient() {
         {list.map((f) => (
           <div key={f.id} className="border border-neutral-300 bg-white rounded overflow-hidden hover:border-black">
             <Link href={`/formations/${f.id}`} className="block">
-              <div className="text-xs font-bold px-2 py-1 border-b uppercase truncate">
+              <div className="text-xs font-bold px-2 py-1 border-b uppercase truncate" title={f.note}>
                 {f.personnel ? `[${f.personnel}] ` : ''}
                 {f.name}
                 {f.playersPerSide !== 11 && <span className="ml-1 text-neutral-400">({f.playersPerSide})</span>}
               </div>
+              {(f.family || f.confidence === 'needs-review') && (
+                <div className="flex items-center gap-1.5 px-2 py-0.5 border-b text-[11px] text-neutral-600">
+                  <span className="truncate">{f.family}</span>
+                  {f.sourcePage && <span className="text-neutral-400">p.{f.sourcePage}</span>}
+                  {f.confidence === 'needs-review' && <span className="ml-auto shrink-0 rounded bg-amber-100 text-amber-900 px-1 font-semibold">needs review</span>}
+                </div>
+              )}
               <div className="aspect-[3/2]">
                 <PlayThumb diagram={{ players: f.players, paths: {}, annotations: {} }} aspect={1.5} fit={{ losBand: 2, maxBack: 8 }} />
               </div>

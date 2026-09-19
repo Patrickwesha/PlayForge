@@ -21,6 +21,18 @@ npm run dev
 
 Open http://localhost:3000. The gallery of seed formations and demo plays is at `/dev/gallery`. Unit tests: `npm test`.
 
+## Formation packs
+
+The 2019 Packers pack (71 formations) is checked in as seeds. Source of truth: `data/formations/packers-2019.source.json`.
+
+```bash
+npm run import:formations                     # rebuild src/seeds/data/packers2019.json from the source, then validate it
+npm run import:formations -- path/to/new.json # replace the source with a new file first
+npm run render:formations                     # SVG + PNG + an index.html contact sheet in renders/packers-2019/
+```
+
+Entries are keyed on name + personnel, so re-running never duplicates. Alignment constants come from `src/model/constants.ts`; a source authored with a different line spacing is remapped. Open browsers pick up regenerated data on the next load, and a formation you edited in the app is never overwritten. Filter the library to `Needs review` to work through the entries whose positions are only a starting shape.
+
 ## Layout
 
 - `src/model` types, zod schemas, constants (all sizes in yards)
@@ -30,7 +42,7 @@ Open http://localhost:3000. The gallery of seed formations and demo plays is at 
 - `src/store` Dexie database, repo, editor store (zustand + immer, snapshot undo), autosave
 - `src/print` sheets, cells, cover, call sheet, PNG export
 - `src/io` backup and PlayForge-Lite import
-- `src/seeds` built-in formations, fronts, and demo plays
+- `src/seeds` built-in formations, fronts, demo plays, and the Packers 2019 pack
 
 Coordinates: x = 0 at the ball (positive right), y = 0 at the line of scrimmage (positive downfield). Route points are stored relative to their player, so moving a player moves its routes.
 

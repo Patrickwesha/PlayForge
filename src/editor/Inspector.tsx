@@ -238,6 +238,20 @@ export function Inspector() {
             )}
             <label className={label}>Tags</label>
             <input className={field} value={doc.formation.tags.join(', ')} onChange={(e) => A.setFormationMeta({ tags: e.target.value.split(',').map((t) => t.trim()).filter(Boolean) })} />
+            <label className={label}>Family</label>
+            <input className={field} placeholder="3x1 'T'" value={doc.formation.family ?? ''} onChange={(e) => A.setFormationMeta({ family: e.target.value || undefined })} />
+            <label className={label}>Note</label>
+            <textarea className={field} rows={2} value={doc.formation.note ?? ''} onChange={(e) => A.setFormationMeta({ note: e.target.value || undefined })} />
+            <label className="flex items-center gap-2 text-xs mt-2 select-none">
+              <input type="checkbox" checked={doc.formation.confidence === 'needs-review'} onChange={(e) => A.setFormationMeta({ confidence: e.target.checked ? 'needs-review' : 'derived' })} />
+              Needs review (positions are a starting shape)
+            </label>
+            {doc.formation.source && (
+              <div className="text-xs text-neutral-500 mt-1">
+                {doc.formation.source}
+                {doc.formation.sourcePage ? `, p.${doc.formation.sourcePage}` : ''}
+              </div>
+            )}
             <div className="flex gap-2 mt-3">
               <button className={btn} onClick={() => addPlayer(doc.formation.side)}>+ Player</button>
             </div>

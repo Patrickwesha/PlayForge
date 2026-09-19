@@ -1,0 +1,4731 @@
+{
+  "schema_note": "Matches PlayForge's own convention from src/model: all sizes in YARDS, x = 0 at the ball and positive right, y = 0 at the line of scrimmage and positive downfield. Offensive players sit at negative y; off the ball is y = -1. No unit conversion is needed on import. Spots are jobs, not players: Y is the TE and always goes to the strength, Z is the strong receiver, X is the weak receiver, H is the halfback, F is the primary adjuster.",
+  "source": "2019 Green Bay Packers offensive playbook (LaFleur), pages 13-24",
+  "constants_used": {
+    "OL_guard_split": 1.7,
+    "OL_tackle_split": 3.4,
+    "TE_attached": 5.1,
+    "outside_WR": 20.0,
+    "numbers": 18.0,
+    "slot": 12.55,
+    "comment": "Check these against src/model constants before importing. If PlayForge already defines an OL spacing or a default receiver split, use its value instead of mine."
+  },
+  "confidence_legend": {
+    "derived": "Position computed from a rule the playbook states in words.",
+    "needs-review": "Name, personnel and family are certain. Position is a reasonable starting shape only; the book shows it as a diagram and never states it in text."
+  },
+  "formations": [
+    {
+      "name": "I Rt",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 13,
+      "confidence": "derived",
+      "note": null,
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 0.0,
+          "y": -5.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Strong Rt",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 13,
+      "confidence": "derived",
+      "note": "F splits the inside leg of the OT to the strength",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 2.8,
+          "y": -5.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Weak Rt",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 13,
+      "confidence": "derived",
+      "note": "F splits the inside leg of the OT away from the strength",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": -2.8,
+          "y": -5.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Red Rt",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 13,
+      "confidence": "needs-review",
+      "note": "Split backs. Book shows this only as a diagram; verify the depths.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 2.8,
+          "y": -5.0
+        },
+        {
+          "spot": "H",
+          "x": -2.8,
+          "y": -5.0
+        }
+      ]
+    },
+    {
+      "name": "Change Rt",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 13,
+      "confidence": "needs-review",
+      "note": "Book shows this only as a diagram. Likely I with the backs swapped.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 0.0,
+          "y": -7.5
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -5.0
+        }
+      ]
+    },
+    {
+      "name": "West Rt",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 13,
+      "confidence": "derived",
+      "note": "F OUTSIDE the Y, off the ball. Warm in the West, get outside.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 6.5,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "East Rt",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 13,
+      "confidence": "derived",
+      "note": "F INSIDE the Y, off the ball. Cold in the East, get inside.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 4.0,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "I Rt Close",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 14,
+      "confidence": "derived",
+      "note": "5 yard split from the EMOL",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 10.1,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 0.0,
+          "y": -5.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "I Rt Closer",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 14,
+      "confidence": "derived",
+      "note": "On the hip of the Y",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 6.1,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 0.0,
+          "y": -5.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "I Rt Clamp",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 14,
+      "confidence": "derived",
+      "note": "5 from the EMOL, take the ball",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 10.1,
+          "y": 0.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 0.0,
+          "y": -5.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "I Rt Click",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 14,
+      "confidence": "derived",
+      "note": "Z on the ball inside the Y; Y takes the 5 split",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 4.1,
+          "y": 0.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 0.0,
+          "y": -5.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "I Rt Open",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 14,
+      "confidence": "derived",
+      "note": "Y takes a 5 yard split from the OT",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 8.4,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 0.0,
+          "y": -5.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "I Rt Out",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 14,
+      "confidence": "derived",
+      "note": "Z in the slot, Y goes outside",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 0.0,
+          "y": -5.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "I Rt Off",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 14,
+      "confidence": "derived",
+      "note": "Y off the ball next to the OT",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 4.2,
+          "y": -1.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 0.0,
+          "y": -5.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "I Rt Zoom",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 15,
+      "confidence": "derived",
+      "note": "X opposite the strength, in the slot",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -12.55,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 0.0,
+          "y": -5.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "I Rt Hip",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 15,
+      "confidence": "derived",
+      "note": "Opposite strength, 5 from OT, ON the ball",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": -8.4,
+          "y": 0.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 0.0,
+          "y": -5.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "I Rt Hop",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 15,
+      "confidence": "derived",
+      "note": "Opposite strength, 5 from OT, OFF the ball",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": -8.4,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 0.0,
+          "y": -5.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "I Rt Ace",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 15,
+      "confidence": "derived",
+      "note": "CLOSE AND TIGHT = ACE. Both at 5 yard splits.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 10.1,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -8.4,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 0.0,
+          "y": -5.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "I Rt Book",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 15,
+      "confidence": "derived",
+      "note": "Field WR -2 from the numbers, boundary WR -1 from the numbers",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 16.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -17.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 0.0,
+          "y": -5.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "I Rt Numbers",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 15,
+      "confidence": "derived",
+      "note": "Both receivers line up on the numbers",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 18.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -18.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 0.0,
+          "y": -5.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "West Rt Tight",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 14,
+      "confidence": "derived",
+      "note": "5 yard split from the OT",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -8.4,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 6.5,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "West Rt Tighter",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 14,
+      "confidence": "derived",
+      "note": "3 point stance next to the OT, usually a TE body",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -4.2,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 6.5,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "West Rt Slot",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 15,
+      "confidence": "derived",
+      "note": "X opposite the strength, outside; Z comes into the slot",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -12.55,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 6.5,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "West Rt Hip",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 21,
+      "confidence": "derived",
+      "note": "Inside WR on the ball",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": -8.4,
+          "y": 0.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 6.5,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "West Rt Hop",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 21,
+      "confidence": "derived",
+      "note": "Outside WR on the ball",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": -8.4,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 6.5,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "I Rt Slot",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 14,
+      "confidence": "derived",
+      "note": null,
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -12.55,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 0.0,
+          "y": -5.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "East Rt Zoom",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 21,
+      "confidence": "derived",
+      "note": null,
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -12.55,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 4.0,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "East Rt Hop",
+      "personnel": "21",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 21,
+      "confidence": "derived",
+      "note": "Outside WR on the ball",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": -8.4,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 4.0,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Trips Rt",
+      "personnel": "11",
+      "family": "3x1 'T'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 16,
+      "confidence": "needs-review",
+      "note": "3 receivers to the right ALIGNMENT NOT STATED IN TEXT. Set from page 16.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Trio Rt",
+      "personnel": "11",
+      "family": "3x1 'T'",
+      "strength": "Right",
+      "qb_alignment": "gun",
+      "source_page": 16,
+      "confidence": "needs-review",
+      "note": "Gun. 3 to the right ALIGNMENT NOT STATED IN TEXT. Set from page 16.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -5.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 1.7,
+          "y": -5.8
+        }
+      ]
+    },
+    {
+      "name": "Train Rt",
+      "personnel": "11",
+      "family": "3x1 'T'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 16,
+      "confidence": "needs-review",
+      "note": " ALIGNMENT NOT STATED IN TEXT. Set from page 16.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Trout Rt",
+      "personnel": "11",
+      "family": "3x1 'T'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 16,
+      "confidence": "needs-review",
+      "note": " ALIGNMENT NOT STATED IN TEXT. Set from page 16.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Trax Rt",
+      "personnel": "11",
+      "family": "3x1 'T'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 16,
+      "confidence": "needs-review",
+      "note": " ALIGNMENT NOT STATED IN TEXT. Set from page 16.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Bunch Rt",
+      "personnel": "11",
+      "family": "Bunch 'B'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 16,
+      "confidence": "needs-review",
+      "note": "Bunch to the right ALIGNMENT NOT STATED IN TEXT. Set from page 16.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Bin Rt",
+      "personnel": "11",
+      "family": "Bunch 'B'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 16,
+      "confidence": "needs-review",
+      "note": " ALIGNMENT NOT STATED IN TEXT. Set from page 16.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Buddy Rt",
+      "personnel": "11",
+      "family": "Bunch 'B'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 16,
+      "confidence": "needs-review",
+      "note": " ALIGNMENT NOT STATED IN TEXT. Set from page 16.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Box Rt",
+      "personnel": "11",
+      "family": "Bunch 'B'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 16,
+      "confidence": "needs-review",
+      "note": " ALIGNMENT NOT STATED IN TEXT. Set from page 16.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Deuce Rt",
+      "personnel": "12",
+      "family": "2x2 'D'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 17,
+      "confidence": "needs-review",
+      "note": "Also runs from 11 ALIGNMENT NOT STATED IN TEXT. Set from page 17.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Dice Rt",
+      "personnel": "11",
+      "family": "2x2 'D'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 17,
+      "confidence": "needs-review",
+      "note": " ALIGNMENT NOT STATED IN TEXT. Set from page 17.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Dixie Rt",
+      "personnel": "11",
+      "family": "2x2 'D'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 17,
+      "confidence": "needs-review",
+      "note": " ALIGNMENT NOT STATED IN TEXT. Set from page 17.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Dyno Rt",
+      "personnel": "11",
+      "family": "2x2 'D'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 17,
+      "confidence": "needs-review",
+      "note": " ALIGNMENT NOT STATED IN TEXT. Set from page 17.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Stack Rt",
+      "personnel": "11",
+      "family": "2x2 Stack 'S'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 17,
+      "confidence": "needs-review",
+      "note": "F 5 from the OT, takes the ball ALIGNMENT NOT STATED IN TEXT. Set from page 17.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "South Rt",
+      "personnel": "11",
+      "family": "2x2 Stack 'S'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 17,
+      "confidence": "needs-review",
+      "note": "F on the outside hip of the X. Warm in the South. ALIGNMENT NOT STATED IN TEXT. Set from page 17.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Stamp Rt",
+      "personnel": "11",
+      "family": "2x2 Stack 'S'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 17,
+      "confidence": "needs-review",
+      "note": "Book note: = STAMP ALIGNMENT NOT STATED IN TEXT. Set from page 17.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Swamp Rt",
+      "personnel": "11",
+      "family": "2x2 Stack 'S'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 17,
+      "confidence": "needs-review",
+      "note": "Book note: = SWAMP ALIGNMENT NOT STATED IN TEXT. Set from page 17.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Sink Rt",
+      "personnel": "11",
+      "family": "2x2 Stack 'S'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 17,
+      "confidence": "needs-review",
+      "note": " ALIGNMENT NOT STATED IN TEXT. Set from page 17.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Snug Rt",
+      "personnel": "11",
+      "family": "2x2 Stack 'S'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 17,
+      "confidence": "needs-review",
+      "note": "Book note: CLAMP = SNUG ALIGNMENT NOT STATED IN TEXT. Set from page 17.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Fast Rt",
+      "personnel": "11",
+      "family": "1x3 'F'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 18,
+      "confidence": "needs-review",
+      "note": "1 receiver left, 3 right ALIGNMENT NOT STATED IN TEXT. Set from page 18.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Fit Rt",
+      "personnel": "11",
+      "family": "1x3 'F'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 18,
+      "confidence": "needs-review",
+      "note": " ALIGNMENT NOT STATED IN TEXT. Set from page 18.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Foot Rt",
+      "personnel": "11",
+      "family": "1x3 'F'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 18,
+      "confidence": "needs-review",
+      "note": " ALIGNMENT NOT STATED IN TEXT. Set from page 18.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Crip Rt",
+      "personnel": "11",
+      "family": "1x3 Bunch 'CR'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 18,
+      "confidence": "needs-review",
+      "note": " ALIGNMENT NOT STATED IN TEXT. Set from page 18.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Crack Rt",
+      "personnel": "11",
+      "family": "1x3 Bunch 'CR'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 18,
+      "confidence": "needs-review",
+      "note": " ALIGNMENT NOT STATED IN TEXT. Set from page 18.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Crush Rt",
+      "personnel": "11",
+      "family": "1x3 Bunch 'CR'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 18,
+      "confidence": "needs-review",
+      "note": " ALIGNMENT NOT STATED IN TEXT. Set from page 18.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Cruz Rt",
+      "personnel": "11",
+      "family": "1x3 Bunch 'CR'",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 18,
+      "confidence": "needs-review",
+      "note": " ALIGNMENT NOT STATED IN TEXT. Set from page 18.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Gold Rt",
+      "personnel": "21",
+      "family": "Special",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 19,
+      "confidence": "needs-review",
+      "note": "Heels at 4 ALIGNMENT NOT STATED IN TEXT. Set from page 19.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Pistol Bone Rt",
+      "personnel": "21",
+      "family": "Special",
+      "strength": "Right",
+      "qb_alignment": "pistol",
+      "source_page": 19,
+      "confidence": "needs-review",
+      "note": "Heels 0-4, toes 6-7 ALIGNMENT NOT STATED IN TEXT. Set from page 19.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -4.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "I Rt Tighter",
+      "personnel": "22Z",
+      "family": "Big",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 22,
+      "confidence": "needs-review",
+      "note": "Heavy personnel. In 22 and 13 the WR is tagged Z or X to set his side. ALIGNMENT NOT STATED IN TEXT. Set from page 22.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": -5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 10.1,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Strong Rt Closer",
+      "personnel": "22X",
+      "family": "Big",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 22,
+      "confidence": "needs-review",
+      "note": "Heavy personnel. In 22 and 13 the WR is tagged Z or X to set his side. ALIGNMENT NOT STATED IN TEXT. Set from page 22.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": -5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 10.1,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Weak Rt Closer",
+      "personnel": "22X",
+      "family": "Big",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 22,
+      "confidence": "needs-review",
+      "note": "Heavy personnel. In 22 and 13 the WR is tagged Z or X to set his side. ALIGNMENT NOT STATED IN TEXT. Set from page 22.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": -5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 10.1,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "West Rt Closer",
+      "personnel": "13X",
+      "family": "Big",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 22,
+      "confidence": "needs-review",
+      "note": "Heavy personnel. In 22 and 13 the WR is tagged Z or X to set his side. ALIGNMENT NOT STATED IN TEXT. Set from page 22.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": -5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 10.1,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "West Rt Tighter",
+      "personnel": "13Z",
+      "family": "Big",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 22,
+      "confidence": "needs-review",
+      "note": "Heavy personnel. In 22 and 13 the WR is tagged Z or X to set his side. ALIGNMENT NOT STATED IN TEXT. Set from page 22.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": -5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 10.1,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Wax Rt",
+      "personnel": "13Z",
+      "family": "Big",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 22,
+      "confidence": "needs-review",
+      "note": "Heavy personnel. In 22 and 13 the WR is tagged Z or X to set his side. ALIGNMENT NOT STATED IN TEXT. Set from page 22.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": -5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 10.1,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "I Rt",
+      "personnel": "23",
+      "family": "Big",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 22,
+      "confidence": "needs-review",
+      "note": "Heavy personnel. In 22 and 13 the WR is tagged Z or X to set his side. ALIGNMENT NOT STATED IN TEXT. Set from page 22.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": -5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 10.1,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Strong Rt",
+      "personnel": "23",
+      "family": "Big",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 22,
+      "confidence": "needs-review",
+      "note": "Heavy personnel. In 22 and 13 the WR is tagged Z or X to set his side. ALIGNMENT NOT STATED IN TEXT. Set from page 22.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": -5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 10.1,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Weak Rt",
+      "personnel": "23",
+      "family": "Big",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 22,
+      "confidence": "needs-review",
+      "note": "Heavy personnel. In 22 and 13 the WR is tagged Z or X to set his side. ALIGNMENT NOT STATED IN TEXT. Set from page 22.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": -5.1,
+          "y": 0.0
+        },
+        {
+          "spot": "Z",
+          "x": 10.1,
+          "y": -1.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "I Rt",
+      "personnel": "20",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 23,
+      "confidence": "needs-review",
+      "note": "20 personnel: 2 backs, no TE, 3 WRs (X, Z, Y). ALIGNMENT NOT STATED IN TEXT. Set from page 23.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Z",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 0.0,
+          "y": -5.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Weak Rt",
+      "personnel": "20",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 23,
+      "confidence": "needs-review",
+      "note": "20 personnel: 2 backs, no TE, 3 WRs (X, Z, Y). ALIGNMENT NOT STATED IN TEXT. Set from page 23.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Z",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 0.0,
+          "y": -5.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Strong Rt Close",
+      "personnel": "20",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 23,
+      "confidence": "needs-review",
+      "note": "20 personnel: 2 backs, no TE, 3 WRs (X, Z, Y). ALIGNMENT NOT STATED IN TEXT. Set from page 23.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Z",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 0.0,
+          "y": -5.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Red Rt",
+      "personnel": "20",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 23,
+      "confidence": "needs-review",
+      "note": "20 personnel: 2 backs, no TE, 3 WRs (X, Z, Y). ALIGNMENT NOT STATED IN TEXT. Set from page 23.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Z",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 0.0,
+          "y": -5.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Red Rt Tight",
+      "personnel": "20",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 23,
+      "confidence": "needs-review",
+      "note": "20 personnel: 2 backs, no TE, 3 WRs (X, Z, Y). ALIGNMENT NOT STATED IN TEXT. Set from page 23.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Z",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 0.0,
+          "y": -5.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    },
+    {
+      "name": "Red Rt Ace",
+      "personnel": "20",
+      "family": "2 Back",
+      "strength": "Right",
+      "qb_alignment": "under",
+      "source_page": 23,
+      "confidence": "needs-review",
+      "note": "20 personnel: 2 backs, no TE, 3 WRs (X, Z, Y). ALIGNMENT NOT STATED IN TEXT. Set from page 23.",
+      "players": [
+        {
+          "spot": "LT",
+          "x": -3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "LG",
+          "x": -1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "C",
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "spot": "RG",
+          "x": 1.7,
+          "y": 0.0
+        },
+        {
+          "spot": "RT",
+          "x": 3.4,
+          "y": 0.0
+        },
+        {
+          "spot": "QB",
+          "x": 0.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Y",
+          "x": 20.0,
+          "y": -1.0
+        },
+        {
+          "spot": "Z",
+          "x": 12.55,
+          "y": -1.0
+        },
+        {
+          "spot": "X",
+          "x": -20.0,
+          "y": 0.0
+        },
+        {
+          "spot": "F",
+          "x": 0.0,
+          "y": -5.0
+        },
+        {
+          "spot": "H",
+          "x": 0.0,
+          "y": -7.5
+        }
+      ]
+    }
+  ]
+}

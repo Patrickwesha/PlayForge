@@ -111,6 +111,10 @@ export type ViewWindow = { minX: number; maxX: number; minY: number; maxY: numbe
 export type PersonnelTag = string;
 export type PlayersPerSide = 6 | 7 | 8 | 9 | 11 | 12;
 
+export type QbAlignment = 'under' | 'gun' | 'pistol';
+/** 'needs-review' = name and personnel are right, positions are a starting shape only. */
+export type FormationConfidence = 'derived' | 'needs-review';
+
 export type Formation = {
   id: string;
   name: string;
@@ -121,6 +125,15 @@ export type Formation = {
   /** Defense only: default coverage label, e.g. "COVER 3". */
   coverage?: string;
   tags: string[];
+  /** Family inside the source system, e.g. "3x1 'T'". The way to find a formation later. */
+  family?: string;
+  strength?: 'left' | 'right';
+  qbAlignment?: QbAlignment;
+  /** Provenance, e.g. a playbook title and the page the alignment came from. */
+  source?: string;
+  sourcePage?: number;
+  note?: string;
+  confidence?: FormationConfidence;
   builtin?: boolean;
   createdAt: string;
   updatedAt: string;
