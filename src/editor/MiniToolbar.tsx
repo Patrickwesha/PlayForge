@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, type RefObject } from 'react';
+import { useEffect, useRef, useState, type RefObject } from 'react';
 import { useShallow } from 'zustand/react/shallow';
 import type { Player } from '@/model/types';
 import { toSvg } from '@/geometry/transform';
@@ -52,6 +52,27 @@ const btn = 'px-2 h-7 text-xs rounded hover:bg-neutral-700 disabled:opacity-40 w
 const ibtn = 'h-7 px-0.5 flex items-center justify-center rounded hover:bg-neutral-700';
 const active = 'bg-white text-black hover:bg-white';
 
+const PIN_KEY = 'playforge.toolbarPin';
+type Pin = { x: number; y: number };
+
+function loadPin(): Pin | null {
+  try {
+    const v = JSON.parse(window.localStorage.getItem(PIN_KEY) ?? 'null');
+    return v && typeof v.x === 'number' && typeof v.y === 'number' ? v : null;
+  } catch {
+    return null;
+  }
+}
+
+function savePin(pin: Pin | null) {
+  try {
+    if (pin) window.localStorage.setItem(PIN_KEY, JSON.stringify(pin));
+    else window.localStorage.removeItem(PIN_KEY);
+  } catch {
+    // private window or blocked storage: the pin just lasts for this visit
+  }
+}
+
 function Group({ children }: { children: React.ReactNode }) {
   return <div className="flex items-center gap-0.5 px-1 border-r border-neutral-700 last:border-0">{children}</div>;
 }
@@ -61,6 +82,10 @@ export function MiniToolbar({ svgRef, wrapRef }: { svgRef: RefObject<SVGSVGEleme
     useShallow((s) => ({ doc: s.doc, selection: s.selection, view: s.view, drawingPathId: s.drawingPathId, guides: s.guides })),
   );
   const [pos, setPos] = useState<{ x: number; y: number; wrapW: number } | null>(null);
+  // Dragging the grip pins the toolbar to a spot on the canvas (top-left, in canvas pixels) until the grip is double-clicked.
+  const [pin, setPin] = useState<Pin | null>(loadPin);
+  const barRef = useRef<HTMLDivElement | null>(null);
+  const grab = useRef<{ dx: number; dy: number; last: Pin | null } | null>(null);
   // Per-selection UI state, reset whenever the selection changes (adjust-state-on-prop-change pattern).
   const [ui, setUi] = useState<{ key: string; treeOpen: boolean; blocksOpen: boolean; labelEdit: string | null }>({ key: '', treeOpen: false, blocksOpen: false, labelEdit: null });
   const diagram = diagramOf(doc);
@@ -139,12 +164,63 @@ export function MiniToolbar({ svgRef, wrapRef }: { svgRef: RefObject<SVGSVGEleme
     transform: `translate(clamp(${(8 - pos.x).toFixed(1)}px, -50%, calc(${(wrapW - 8 - pos.x).toFixed(1)}px - 100%)), -100%)`,
   };
 
+  const pinStyle = pin && { left: Math.max(0, Math.min(pin.x, wrapW - 48)), top: Math.max(0, pin.y), maxWidth: Math.min(720, wrapW - 16) };
+
+  const onGripDown = (e: React.PointerEvent) => {
+    const bar = barRef.current;
+    if (!bar) return;
+    e.preventDefault();
+    const r = bar.getBoundingClientRect();
+    grab.current = { dx: e.clientX - r.left, dy: e.clientY - r.top, last: null };
+    try { e.currentTarget.setPointerCapture(e.pointerId); } catch { /* synthetic or refused pointer: the drag still works while over the grip */ }
+  };
+  const onGripMove = (e: React.PointerEvent) => {
+    const g = grab.current;
+    const bar = barRef.current;
+    const wrap = wrapRef.current;
+    if (!g || !bar || !wrap) return;
+    const wr = wrap.getBoundingClientRect();
+    const br = bar.getBoundingClientRect();
+    g.last = {
+      x: Math.round(Math.max(0, Math.min(e.clientX - g.dx - wr.left, wr.width - br.width))),
+      y: Math.round(Math.max(0, Math.min(e.clientY - g.dy - wr.top, wr.height - br.height))),
+    };
+    setPin(g.last);
+  };
+  const onGripUp = () => {
+    const g = grab.current;
+    grab.current = null;
+    if (g?.last) savePin(g.last);
+  };
+  const unpin = () => { setPin(null); savePin(null); };
+
   return (
     <div
-      className={`absolute z-20 flex flex-wrap items-center justify-center bg-neutral-900 text-white shadow-lg px-1 py-1 ${docked ? 'left-2 right-2 bottom-2 rounded-lg gap-y-1' : 'rounded-md'} ${coarse ? 'touch' : ''}`}
-      style={docked ? undefined : floatStyle}
+      ref={barRef}
+      className={`absolute z-20 flex flex-wrap items-center justify-center bg-neutral-900 text-white shadow-lg px-1 py-1 ${pinStyle ? 'rounded-md' : docked ? 'left-2 right-2 bottom-2 rounded-lg gap-y-1' : 'rounded-md'} ${coarse ? 'touch' : ''}`}
+      style={pinStyle || (docked ? undefined : floatStyle)}
       onPointerDown={(e) => e.stopPropagation()}
     >
+      <div
+        data-toolbar-grip
+        className={`self-stretch flex items-center justify-center rounded cursor-grab active:cursor-grabbing hover:bg-neutral-700 ${coarse ? 'w-9 min-h-10' : 'w-5 min-h-7'} ${pin ? 'text-sky-300' : 'text-neutral-400'}`}
+        style={{ touchAction: 'none' }}
+        title={pin ? 'Drag to move. Double-click to snap back to the selection.' : 'Drag to move this panel. It stays where you put it.'}
+        onPointerDown={onGripDown}
+        onPointerMove={onGripMove}
+        onPointerUp={onGripUp}
+        onPointerCancel={onGripUp}
+        onDoubleClick={unpin}
+      >
+        <svg width={8} height={16} viewBox="0 0 8 16" fill="currentColor" aria-hidden>
+          {[2, 8, 14].map((y) => [1.5, 6.5].map((x) => <circle key={`${x}${y}`} cx={x} cy={y} r={1.3} />))}
+        </svg>
+      </div>
+      {pin && (
+        <button className={`${btn} text-sky-300`} onClick={unpin} title="Let the panel follow the selection again">
+          Unpin
+        </button>
+      )}
       {players.length > 0 && (
         <>
           {isPlay && (
