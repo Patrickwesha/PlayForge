@@ -6,8 +6,6 @@ export const UNITS_PER_YARD = 24;
 
 /** Field geometry */
 export const FIELD_WIDTH_YD = 53.333;
-/** Field numbers landmark: x distance from the ball to the yard-line numbers (matches the formation packs). */
-export const NUMBERS_X = 18;
 export const HASH_PRESETS = {
   nfl: 3.083,   // 18'6" from center
   ncaa: 6.667,  // 40' from sideline

@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef } from 'react';
 import { useShallow } from 'zustand/react/shallow';
-import { COLORS, NUMBERS_X } from '@/model/constants';
+import { COLORS } from '@/model/constants';
 import { matchAspect, toSvg, windowAspect, yd } from '@/geometry/transform';
 import { resolvePoints, segmentMidpoints } from '@/geometry/path';
 import { PlaySvg } from '@/render/PlaySvg';
@@ -51,24 +51,7 @@ export function Canvas() {
   const top = toSvg({ x: 0, y: view.maxY }, view).y;
   const bottom = toSvg({ x: 0, y: view.minY }, view).y;
 
-  // Field numbers landmarks: always visible in the editor (never printed), and a snap target while dragging.
-  const numbersEls = [-NUMBERS_X, NUMBERS_X]
-    .filter((x) => x >= view.minX && x <= view.maxX)
-    .map((x) => {
-      const sx = toSvg({ x, y: 0 }, view).x;
-      const active = guides.some((g) => g.kind === 'numbers' && g.value === x);
-      return (
-        <g key={`num${x}`}>
-          <line x1={sx} x2={sx} y1={top} y2={bottom} stroke={COLORS.red} strokeWidth={yd(active ? 0.07 : 0.04)} strokeDasharray={`${yd(0.35)} ${yd(0.25)}`} opacity={active ? 0.9 : 0.35} />
-          <text x={sx} y={top + yd(0.7)} textAnchor="middle" fontFamily="Arial, Helvetica, sans-serif" fontSize={yd(0.45)} fill={COLORS.red} opacity={0.6}>
-            NUMBERS
-          </text>
-        </g>
-      );
-    });
-
   const guideEls = guides.map((g, i) => {
-    if (g.kind === 'numbers') return null;
     if (g.axis === 'x') {
       const x = toSvg({ x: g.value, y: 0 }, view).x;
       if (g.kind === 'spacing' && g.ref !== undefined) {
@@ -176,7 +159,6 @@ export function Canvas() {
         svgProps={{ 'data-editor-svg': '', onPointerDown, onPointerMove, onPointerUp, onPointerCancel: onPointerUp, onDoubleClick, onContextMenu: (e) => e.preventDefault() } as React.SVGProps<SVGSVGElement>}
         overlay={
           <g data-layer="overlay" style={{ pointerEvents: 'none' }}>
-            {numbersEls}
             {guideEls}
             {rubber}
             {marquee}
