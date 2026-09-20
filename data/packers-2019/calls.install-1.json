@@ -1,0 +1,3837 @@
+{
+ "install_number": 1,
+ "pages": [
+  104,
+  157
+ ],
+ "calls": [
+  {
+   "install_number": 1,
+   "source_page": 106,
+   "page_title": "",
+   "cell": {
+    "x": 224,
+    "y": 226
+   },
+   "raw_formation_line": "DEUCE RT ACE",
+   "raw_call_line": "18 AL OSCAR",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "DEUCE",
+   "direction": "RT",
+   "adjustment_tags": [
+    "ACE"
+   ],
+   "protection": null,
+   "concept": "18 AL OSCAR",
+   "run_number": 18,
+   "ocr_confidence": 94,
+   "raw_call_string": "DEUCE RT ACE / 18 AL OSCAR",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 106,
+   "page_title": "",
+   "cell": {
+    "x": 226,
+    "y": 667
+   },
+   "raw_formation_line": "DEUCE RT ACE",
+   "raw_call_line": "18 AL OSCAR",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "DEUCE",
+   "direction": "RT",
+   "adjustment_tags": [
+    "ACE"
+   ],
+   "protection": null,
+   "concept": "18 AL OSCAR",
+   "run_number": 18,
+   "ocr_confidence": 95,
+   "raw_call_string": "DEUCE RT ACE / 18 AL OSCAR",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 106,
+   "page_title": "",
+   "cell": {
+    "x": 750,
+    "y": 667
+   },
+   "raw_formation_line": "WEST LT BOOK F RT",
+   "raw_call_line": "19 AL OSCAR",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "WEST",
+   "direction": "LT",
+   "adjustment_tags": [
+    "BOOK",
+    "F",
+    "RT"
+   ],
+   "protection": null,
+   "concept": "19 AL OSCAR",
+   "run_number": 19,
+   "ocr_confidence": 87,
+   "raw_call_string": "WEST LT BOOK F RT / 19 AL OSCAR",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 106,
+   "page_title": "",
+   "cell": {
+    "x": 228,
+    "y": 1110
+   },
+   "raw_formation_line": "WEST RT BOOK F LT",
+   "raw_call_line": "18 AL OSCAR",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "WEST",
+   "direction": "RT",
+   "adjustment_tags": [
+    "BOOK",
+    "F",
+    "LT"
+   ],
+   "protection": null,
+   "concept": "18 AL OSCAR",
+   "run_number": 18,
+   "ocr_confidence": 81,
+   "raw_call_string": "WEST RT BOOK F LT / 18 AL OSCAR",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 108,
+   "page_title": "[21] (TOSS) 18-19 (19-18) ZORRO (X-Z NOW) G)",
+   "cell": {
+    "x": 234,
+    "y": 225
+   },
+   "raw_formation_line": "Y MO STRONG RT CLAMP",
+   "raw_call_line": "18 ZORRO",
+   "personnel": "21",
+   "motion_tag": "Y MO",
+   "formation": "STRONG",
+   "direction": "RT",
+   "adjustment_tags": [
+    "CLAMP"
+   ],
+   "protection": null,
+   "concept": "18 ZORRO",
+   "run_number": 18,
+   "ocr_confidence": 96,
+   "raw_call_string": "[21] Y MO STRONG RT CLAMP / 18 ZORRO",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 108,
+   "page_title": "[21] (TOSS) 18-19 (19-18) ZORRO (X-Z NOW) G)",
+   "cell": {
+    "x": 754,
+    "y": 225
+   },
+   "raw_formation_line": "I LT CLAMP BUMP",
+   "raw_call_line": "TOSS 19 ZORRO",
+   "personnel": "21",
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "LT",
+   "adjustment_tags": [
+    "CLAMP",
+    "BUMP"
+   ],
+   "protection": null,
+   "concept": "TOSS 19 ZORRO",
+   "run_number": 19,
+   "ocr_confidence": 84,
+   "raw_call_string": "[21] I LT CLAMP BUMP / TOSS 19 ZORRO",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 108,
+   "page_title": "[21] (TOSS) 18-19 (19-18) ZORRO (X-Z NOW) G)",
+   "cell": {
+    "x": 236,
+    "y": 665
+   },
+   "raw_formation_line": "STRONG RT BOOK Y CTR",
+   "raw_call_line": "18 ZORRO",
+   "personnel": "21",
+   "motion_tag": null,
+   "formation": "STRONG",
+   "direction": "RT",
+   "adjustment_tags": [
+    "BOOK",
+    "Y",
+    "CTR"
+   ],
+   "protection": null,
+   "concept": "18 ZORRO",
+   "run_number": 18,
+   "ocr_confidence": 91,
+   "raw_call_string": "[21] STRONG RT BOOK Y CTR / 18 ZORRO",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 108,
+   "page_title": "[21] (TOSS) 18-19 (19-18) ZORRO (X-Z NOW) G)",
+   "cell": {
+    "x": 754,
+    "y": 665
+   },
+   "raw_formation_line": "WEAK RT CLAMP Y LT",
+   "raw_call_line": "TOSS 19 ZORRO Z NOW",
+   "personnel": "21",
+   "motion_tag": null,
+   "formation": "WEAK",
+   "direction": "RT",
+   "adjustment_tags": [
+    "CLAMP",
+    "Y",
+    "LT"
+   ],
+   "protection": null,
+   "concept": "TOSS 19 ZORRO Z NOW",
+   "run_number": 19,
+   "ocr_confidence": 74,
+   "raw_call_string": "[21] WEAK RT CLAMP Y LT / TOSS 19 ZORRO Z NOW",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 108,
+   "page_title": "[21] (TOSS) 18-19 (19-18) ZORRO (X-Z NOW) G)",
+   "cell": {
+    "x": 238,
+    "y": 1110
+   },
+   "raw_formation_line": "STRONG RT HOP Z RT",
+   "raw_call_line": "18 ZORRO X NOW",
+   "personnel": "21",
+   "motion_tag": null,
+   "formation": "STRONG",
+   "direction": "RT",
+   "adjustment_tags": [
+    "HOP",
+    "Z",
+    "RT"
+   ],
+   "protection": null,
+   "concept": "18 ZORRO X NOW",
+   "run_number": 18,
+   "ocr_confidence": 71,
+   "raw_call_string": "[21] STRONG RT HOP Z RT / 18 ZORRO X NOW",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 108,
+   "page_title": "[21] (TOSS) 18-19 (19-18) ZORRO (X-Z NOW) G)",
+   "cell": {
+    "x": 756,
+    "y": 1110
+   },
+   "raw_formation_line": "STRONG LT HIP X LT",
+   "raw_call_line": "19 ZORRO Z NOW",
+   "personnel": "21",
+   "motion_tag": null,
+   "formation": "STRONG",
+   "direction": "LT",
+   "adjustment_tags": [
+    "HIP",
+    "X",
+    "LT"
+   ],
+   "protection": null,
+   "concept": "19 ZORRO Z NOW",
+   "run_number": 19,
+   "ocr_confidence": 74,
+   "raw_call_string": "[21] STRONG LT HIP X LT / 19 ZORRO Z NOW",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 109,
+   "page_title": "[12] (TOSS) 18-19 ZORRO (X NOW)",
+   "cell": {
+    "x": 368,
+    "y": 228
+   },
+   "raw_formation_line": "WEST RT TIGHT F CTR",
+   "raw_call_line": "18 ZORRO X NOW",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "WEST",
+   "direction": "RT",
+   "adjustment_tags": [
+    "TIGHT",
+    "F",
+    "CTR"
+   ],
+   "protection": null,
+   "concept": "18 ZORRO X NOW",
+   "run_number": 18,
+   "ocr_confidence": 91,
+   "raw_call_string": "[12] WEST RT TIGHT F CTR / 18 ZORRO X NOW",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 109,
+   "page_title": "[12] (TOSS) 18-19 ZORRO (X NOW)",
+   "cell": {
+    "x": 890,
+    "y": 228
+   },
+   "raw_formation_line": "DEUCE LT BOOK F LT",
+   "raw_call_line": "TOSS 19 ZORRO",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "DEUCE",
+   "direction": "LT",
+   "adjustment_tags": [
+    "BOOK",
+    "F",
+    "LT"
+   ],
+   "protection": null,
+   "concept": "TOSS 19 ZORRO",
+   "run_number": 19,
+   "ocr_confidence": 84,
+   "raw_call_string": "[12] DEUCE LT BOOK F LT / TOSS 19 ZORRO",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 109,
+   "page_title": "[12] (TOSS) 18-19 ZORRO (X NOW)",
+   "cell": {
+    "x": 368,
+    "y": 671
+   },
+   "raw_formation_line": "WEST RT TIGHT F CTR",
+   "raw_call_line": "18 ZORRO X NOW",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "WEST",
+   "direction": "RT",
+   "adjustment_tags": [
+    "TIGHT",
+    "F",
+    "CTR"
+   ],
+   "protection": null,
+   "concept": "18 ZORRO X NOW",
+   "run_number": 18,
+   "ocr_confidence": 93,
+   "raw_call_string": "[12] WEST RT TIGHT F CTR / 18 ZORRO X NOW",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 109,
+   "page_title": "[12] (TOSS) 18-19 ZORRO (X NOW)",
+   "cell": {
+    "x": 889,
+    "y": 671
+   },
+   "raw_formation_line": "DEUCE LT BOOK F LT",
+   "raw_call_line": "19 ZORRO",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "DEUCE",
+   "direction": "LT",
+   "adjustment_tags": [
+    "BOOK",
+    "F",
+    "LT"
+   ],
+   "protection": null,
+   "concept": "19 ZORRO",
+   "run_number": 19,
+   "ocr_confidence": 93,
+   "raw_call_string": "[12] DEUCE LT BOOK F LT / 19 ZORRO",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 109,
+   "page_title": "[12] (TOSS) 18-19 ZORRO (X NOW)",
+   "cell": {
+    "x": 367,
+    "y": 1115
+   },
+   "raw_formation_line": "WEST RT TIGHT F CTR",
+   "raw_call_line": "18 ZORRO X NOW",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "WEST",
+   "direction": "RT",
+   "adjustment_tags": [
+    "TIGHT",
+    "F",
+    "CTR"
+   ],
+   "protection": null,
+   "concept": "18 ZORRO X NOW",
+   "run_number": 18,
+   "ocr_confidence": 74,
+   "raw_call_string": "[12] WEST RT TIGHT F CTR / 18 ZORRO X NOW",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 109,
+   "page_title": "[12] (TOSS) 18-19 ZORRO (X NOW)",
+   "cell": {
+    "x": 888,
+    "y": 1115
+   },
+   "raw_formation_line": "WEST LT BOOK F CTR",
+   "raw_call_line": "19 ZORRO",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "WEST",
+   "direction": "LT",
+   "adjustment_tags": [
+    "BOOK",
+    "F",
+    "CTR"
+   ],
+   "protection": null,
+   "concept": "19 ZORRO",
+   "run_number": 19,
+   "ocr_confidence": 93,
+   "raw_call_string": "[12] WEST LT BOOK F CTR / 19 ZORRO",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 111,
+   "page_title": "",
+   "cell": {
+    "x": 890,
+    "y": 229
+   },
+   "raw_formation_line": "I LT CLAMP",
+   "raw_call_line": "19 MIKE (CAN) 18 WEAK",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "LT",
+   "adjustment_tags": [
+    "CLAMP"
+   ],
+   "protection": null,
+   "concept": "19 MIKE (CAN) 18 WEAK",
+   "run_number": 19,
+   "ocr_confidence": 61,
+   "raw_call_string": "I LT CLAMP / 19 MIKE (CAN) 18 WEAK",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 111,
+   "page_title": "",
+   "cell": {
+    "x": 887,
+    "y": 672
+   },
+   "raw_formation_line": "I LT HIP XLT",
+   "raw_call_line": "19 MIKE (CAN) 18 WEAK",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "LT",
+   "adjustment_tags": [
+    "HIP",
+    "XLT"
+   ],
+   "protection": null,
+   "concept": "19 MIKE (CAN) 18 WEAK",
+   "run_number": 19,
+   "ocr_confidence": 78,
+   "raw_call_string": "I LT HIP XLT / 19 MIKE (CAN) 18 WEAK",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 111,
+   "page_title": "",
+   "cell": {
+    "x": 363,
+    "y": 1116
+   },
+   "raw_formation_line": "I LT BOOK Y RT",
+   "raw_call_line": "18 MIKE (CAN) 19 WEAK",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "LT",
+   "adjustment_tags": [
+    "BOOK",
+    "Y",
+    "RT"
+   ],
+   "protection": null,
+   "concept": "18 MIKE (CAN) 19 WEAK",
+   "run_number": 18,
+   "ocr_confidence": 86,
+   "raw_call_string": "I LT BOOK Y RT / 18 MIKE (CAN) 19 WEAK",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 111,
+   "page_title": "",
+   "cell": {
+    "x": 885,
+    "y": 1116
+   },
+   "raw_formation_line": "WEST LT BOOK F HOME",
+   "raw_call_line": "19 MIKE (CAN) 18 WEAK",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "WEST",
+   "direction": "LT",
+   "adjustment_tags": [
+    "BOOK",
+    "F",
+    "HOME"
+   ],
+   "protection": null,
+   "concept": "19 MIKE (CAN) 18 WEAK",
+   "run_number": 19,
+   "ocr_confidence": 87,
+   "raw_call_string": "WEST LT BOOK F HOME / 19 MIKE (CAN) 18 WEAK",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 112,
+   "page_title": "[21] 19-18 WEAK (cAN) 18-19 MIKE",
+   "cell": {
+    "x": 222,
+    "y": 228
+   },
+   "raw_formation_line": "Y MO I RT BOOK",
+   "raw_call_line": "19 WEAK (CAN) 18 MIKE",
+   "personnel": "21",
+   "motion_tag": "Y MO",
+   "formation": "I",
+   "direction": "RT",
+   "adjustment_tags": [
+    "BOOK"
+   ],
+   "protection": null,
+   "concept": "19 WEAK (CAN) 18 MIKE",
+   "run_number": 19,
+   "ocr_confidence": 94,
+   "raw_call_string": "[21] Y MO I RT BOOK / 19 WEAK (CAN) 18 MIKE",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 112,
+   "page_title": "[21] 19-18 WEAK (cAN) 18-19 MIKE",
+   "cell": {
+    "x": 749,
+    "y": 228
+   },
+   "raw_formation_line": "Y MO I LT BOOK",
+   "raw_call_line": "18 WEAK (CAN) 19 MIKE",
+   "personnel": "21",
+   "motion_tag": "Y MO",
+   "formation": "I",
+   "direction": "LT",
+   "adjustment_tags": [
+    "BOOK"
+   ],
+   "protection": null,
+   "concept": "18 WEAK (CAN) 19 MIKE",
+   "run_number": 18,
+   "ocr_confidence": 89,
+   "raw_call_string": "[21] Y MO I LT BOOK / 18 WEAK (CAN) 19 MIKE",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 112,
+   "page_title": "[21] 19-18 WEAK (cAN) 18-19 MIKE",
+   "cell": {
+    "x": 226,
+    "y": 671
+   },
+   "raw_formation_line": "I RT HOP Z RT",
+   "raw_call_line": "19 WEAK (CAN) 18 MIKE",
+   "personnel": "21",
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "RT",
+   "adjustment_tags": [
+    "HOP",
+    "Z",
+    "RT"
+   ],
+   "protection": null,
+   "concept": "19 WEAK (CAN) 18 MIKE",
+   "run_number": 19,
+   "ocr_confidence": 89,
+   "raw_call_string": "[21] I RT HOP Z RT / 19 WEAK (CAN) 18 MIKE",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 112,
+   "page_title": "[21] 19-18 WEAK (cAN) 18-19 MIKE",
+   "cell": {
+    "x": 752,
+    "y": 671
+   },
+   "raw_formation_line": "I LT HIP XLT",
+   "raw_call_line": "18 WEAK (CAN) 19 MIKE",
+   "personnel": "21",
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "LT",
+   "adjustment_tags": [
+    "HIP",
+    "XLT"
+   ],
+   "protection": null,
+   "concept": "18 WEAK (CAN) 19 MIKE",
+   "run_number": 18,
+   "ocr_confidence": 78,
+   "raw_call_string": "[21] I LT HIP XLT / 18 WEAK (CAN) 19 MIKE",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 112,
+   "page_title": "[21] 19-18 WEAK (cAN) 18-19 MIKE",
+   "cell": {
+    "x": 228,
+    "y": 1113
+   },
+   "raw_formation_line": "I RT BOOK",
+   "raw_call_line": "19 WEAK (CAN) 18 MIKE",
+   "personnel": "21",
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "RT",
+   "adjustment_tags": [
+    "BOOK"
+   ],
+   "protection": null,
+   "concept": "19 WEAK (CAN) 18 MIKE",
+   "run_number": 19,
+   "ocr_confidence": 66,
+   "raw_call_string": "[21] I RT BOOK / 19 WEAK (CAN) 18 MIKE",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 114,
+   "page_title": "1 [12] (TOSS) 18-19 (can) 19-18 WANDA \u00a9",
+   "cell": {
+    "x": 230,
+    "y": 224
+   },
+   "raw_formation_line": "DICE RT",
+   "raw_call_line": "18 (CAN) 19 WANDA",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "DICE",
+   "direction": "RT",
+   "adjustment_tags": [],
+   "protection": null,
+   "concept": "18 (CAN) 19 WANDA",
+   "run_number": 18,
+   "ocr_confidence": 96,
+   "raw_call_string": "[12] DICE RT / 18 (CAN) 19 WANDA",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 114,
+   "page_title": "1 [12] (TOSS) 18-19 (can) 19-18 WANDA \u00a9",
+   "cell": {
+    "x": 750,
+    "y": 224
+   },
+   "raw_formation_line": "WEST LT CLOSE F RIGHTY",
+   "raw_call_line": "19 (CAN) 18 WANDA",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "WEST",
+   "direction": "LT",
+   "adjustment_tags": [
+    "CLOSE",
+    "F",
+    "RIGHTY"
+   ],
+   "protection": null,
+   "concept": "19 (CAN) 18 WANDA",
+   "run_number": 19,
+   "ocr_confidence": 92,
+   "raw_call_string": "[12] WEST LT CLOSE F RIGHTY / 19 (CAN) 18 WANDA",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 114,
+   "page_title": "1 [12] (TOSS) 18-19 (can) 19-18 WANDA \u00a9",
+   "cell": {
+    "x": 236,
+    "y": 666
+   },
+   "raw_formation_line": "DICE RT CLOSE",
+   "raw_call_line": "TOSS 18 (CAN) 19 WANDA",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "DICE",
+   "direction": "RT",
+   "adjustment_tags": [
+    "CLOSE"
+   ],
+   "protection": null,
+   "concept": "TOSS 18 (CAN) 19 WANDA",
+   "run_number": 18,
+   "ocr_confidence": 96,
+   "raw_call_string": "[12] DICE RT CLOSE / TOSS 18 (CAN) 19 WANDA",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 114,
+   "page_title": "1 [12] (TOSS) 18-19 (can) 19-18 WANDA \u00a9",
+   "cell": {
+    "x": 756,
+    "y": 666
+   },
+   "raw_formation_line": "WEST LT BOOK F RIGHTY",
+   "raw_call_line": "19 (CAN) 18 WANDA",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "WEST",
+   "direction": "LT",
+   "adjustment_tags": [
+    "BOOK",
+    "F",
+    "RIGHTY"
+   ],
+   "protection": null,
+   "concept": "19 (CAN) 18 WANDA",
+   "run_number": 19,
+   "ocr_confidence": 60,
+   "raw_call_string": "[12] WEST LT BOOK F RIGHTY / 19 (CAN) 18 WANDA",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 114,
+   "page_title": "1 [12] (TOSS) 18-19 (can) 19-18 WANDA \u00a9",
+   "cell": {
+    "x": 229,
+    "y": 1111
+   },
+   "raw_formation_line": "WEST RT BOOK F LEFTY",
+   "raw_call_line": "18 (CAN) 19 WANDA",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "WEST",
+   "direction": "RT",
+   "adjustment_tags": [
+    "BOOK",
+    "F",
+    "LEFTY"
+   ],
+   "protection": null,
+   "concept": "18 (CAN) 19 WANDA",
+   "run_number": 18,
+   "ocr_confidence": 93,
+   "raw_call_string": "[12] WEST RT BOOK F LEFTY / 18 (CAN) 19 WANDA",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 114,
+   "page_title": "1 [12] (TOSS) 18-19 (can) 19-18 WANDA \u00a9",
+   "cell": {
+    "x": 759,
+    "y": 1111
+   },
+   "raw_formation_line": "DICE LT CLOSE",
+   "raw_call_line": "19 (CAN) 18 WANDA",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "DICE",
+   "direction": "LT",
+   "adjustment_tags": [
+    "CLOSE"
+   ],
+   "protection": null,
+   "concept": "19 (CAN) 18 WANDA",
+   "run_number": 19,
+   "ocr_confidence": 96,
+   "raw_call_string": "[12] DICE LT CLOSE / 19 (CAN) 18 WANDA",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 115,
+   "page_title": "[G]l [11] (TOSS) 18-19 (CAN) 19-18 WANDA",
+   "cell": {
+    "x": 370,
+    "y": 230
+   },
+   "raw_formation_line": "DICE RT CLOSE",
+   "raw_call_line": "18 (CAN) 19 WANDA",
+   "personnel": "11",
+   "motion_tag": null,
+   "formation": "DICE",
+   "direction": "RT",
+   "adjustment_tags": [
+    "CLOSE"
+   ],
+   "protection": null,
+   "concept": "18 (CAN) 19 WANDA",
+   "run_number": 18,
+   "ocr_confidence": 96,
+   "raw_call_string": "[11] DICE RT CLOSE / 18 (CAN) 19 WANDA",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 115,
+   "page_title": "[G]l [11] (TOSS) 18-19 (CAN) 19-18 WANDA",
+   "cell": {
+    "x": 891,
+    "y": 230
+   },
+   "raw_formation_line": "Y MO DIXIE LT CLOSE",
+   "raw_call_line": "19 (CAN) 18 WANDA",
+   "personnel": "11",
+   "motion_tag": "Y MO",
+   "formation": "DIXIE",
+   "direction": "LT",
+   "adjustment_tags": [
+    "CLOSE"
+   ],
+   "protection": null,
+   "concept": "19 (CAN) 18 WANDA",
+   "run_number": 19,
+   "ocr_confidence": 96,
+   "raw_call_string": "[11] Y MO DIXIE LT CLOSE / 19 (CAN) 18 WANDA",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 115,
+   "page_title": "[G]l [11] (TOSS) 18-19 (CAN) 19-18 WANDA",
+   "cell": {
+    "x": 370,
+    "y": 674
+   },
+   "raw_formation_line": "SOUTH RT CLOSE",
+   "raw_call_line": "18 (CAN) 19 WANDA",
+   "personnel": "11",
+   "motion_tag": null,
+   "formation": "SOUTH",
+   "direction": "RT",
+   "adjustment_tags": [
+    "CLOSE"
+   ],
+   "protection": null,
+   "concept": "18 (CAN) 19 WANDA",
+   "run_number": 18,
+   "ocr_confidence": 93,
+   "raw_call_string": "[11] SOUTH RT CLOSE / 18 (CAN) 19 WANDA",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 115,
+   "page_title": "[G]l [11] (TOSS) 18-19 (CAN) 19-18 WANDA",
+   "cell": {
+    "x": 890,
+    "y": 674
+   },
+   "raw_formation_line": "STACK LT CLOSE Y CTR",
+   "raw_call_line": "19 (CAN) 18 WANDA",
+   "personnel": "11",
+   "motion_tag": null,
+   "formation": "STACK",
+   "direction": "LT",
+   "adjustment_tags": [
+    "CLOSE",
+    "Y",
+    "CTR"
+   ],
+   "protection": null,
+   "concept": "19 (CAN) 18 WANDA",
+   "run_number": 19,
+   "ocr_confidence": 93,
+   "raw_call_string": "[11] STACK LT CLOSE Y CTR / 19 (CAN) 18 WANDA",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 115,
+   "page_title": "[G]l [11] (TOSS) 18-19 (CAN) 19-18 WANDA",
+   "cell": {
+    "x": 368,
+    "y": 1116
+   },
+   "raw_formation_line": "TRIPS LT TIGHT Y RT",
+   "raw_call_line": "18 (CAN) 19 WANDA",
+   "personnel": "11",
+   "motion_tag": null,
+   "formation": "TRIPS",
+   "direction": "LT",
+   "adjustment_tags": [
+    "TIGHT",
+    "Y",
+    "RT"
+   ],
+   "protection": null,
+   "concept": "18 (CAN) 19 WANDA",
+   "run_number": 18,
+   "ocr_confidence": 91,
+   "raw_call_string": "[11] TRIPS LT TIGHT Y RT / 18 (CAN) 19 WANDA",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 115,
+   "page_title": "[G]l [11] (TOSS) 18-19 (CAN) 19-18 WANDA",
+   "cell": {
+    "x": 888,
+    "y": 1116
+   },
+   "raw_formation_line": "BUNCH RT TIGHT Y LT",
+   "raw_call_line": "19 (CAN) 18 WANDA",
+   "personnel": "11",
+   "motion_tag": null,
+   "formation": "BUNCH",
+   "direction": "RT",
+   "adjustment_tags": [
+    "TIGHT",
+    "Y",
+    "LT"
+   ],
+   "protection": null,
+   "concept": "19 (CAN) 18 WANDA",
+   "run_number": 19,
+   "ocr_confidence": 93,
+   "raw_call_string": "[11] BUNCH RT TIGHT Y LT / 19 (CAN) 18 WANDA",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 116,
+   "page_title": "",
+   "cell": {
+    "x": 220,
+    "y": 225
+   },
+   "raw_formation_line": "DICE RT",
+   "raw_call_line": "19 WANDA (CAN) 18",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "DICE",
+   "direction": "RT",
+   "adjustment_tags": [],
+   "protection": null,
+   "concept": "19 WANDA (CAN) 18",
+   "run_number": 19,
+   "ocr_confidence": 96,
+   "raw_call_string": "DICE RT / 19 WANDA (CAN) 18",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 116,
+   "page_title": "",
+   "cell": {
+    "x": 751,
+    "y": 225
+   },
+   "raw_formation_line": "WEST LT BOOK F RIGHTY",
+   "raw_call_line": "18 WANDA (CAN) 19",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "WEST",
+   "direction": "LT",
+   "adjustment_tags": [
+    "BOOK",
+    "F",
+    "RIGHTY"
+   ],
+   "protection": null,
+   "concept": "18 WANDA (CAN) 19",
+   "run_number": 18,
+   "ocr_confidence": 80,
+   "raw_call_string": "WEST LT BOOK F RIGHTY / 18 WANDA (CAN) 19",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 116,
+   "page_title": "",
+   "cell": {
+    "x": 222,
+    "y": 670
+   },
+   "raw_formation_line": "WEST RT BOOK F LEFTY",
+   "raw_call_line": "10 WANDA (CAN) 18",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "WEST",
+   "direction": "RT",
+   "adjustment_tags": [
+    "BOOK",
+    "F",
+    "LEFTY"
+   ],
+   "protection": null,
+   "concept": "10 WANDA (CAN) 18",
+   "run_number": 18,
+   "ocr_confidence": 91,
+   "raw_call_string": "WEST RT BOOK F LEFTY / 10 WANDA (CAN) 18",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 116,
+   "page_title": "",
+   "cell": {
+    "x": 754,
+    "y": 670
+   },
+   "raw_formation_line": "DICE LT",
+   "raw_call_line": "18 WANDA (CAN) 19",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "DICE",
+   "direction": "LT",
+   "adjustment_tags": [],
+   "protection": null,
+   "concept": "18 WANDA (CAN) 19",
+   "run_number": 18,
+   "ocr_confidence": 94,
+   "raw_call_string": "DICE LT / 18 WANDA (CAN) 19",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 116,
+   "page_title": "",
+   "cell": {
+    "x": 225,
+    "y": 1110
+   },
+   "raw_formation_line": "DICE RT",
+   "raw_call_line": "10 WANDA (CAN) 18",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "DICE",
+   "direction": "RT",
+   "adjustment_tags": [],
+   "protection": null,
+   "concept": "10 WANDA (CAN) 18",
+   "run_number": 18,
+   "ocr_confidence": 91,
+   "raw_call_string": "DICE RT / 10 WANDA (CAN) 18",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 116,
+   "page_title": "",
+   "cell": {
+    "x": 754,
+    "y": 1110
+   },
+   "raw_formation_line": "DICE LT",
+   "raw_call_line": "18 WANDA (CAN) 19",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "DICE",
+   "direction": "LT",
+   "adjustment_tags": [],
+   "protection": null,
+   "concept": "18 WANDA (CAN) 19",
+   "run_number": 18,
+   "ocr_confidence": 89,
+   "raw_call_string": "DICE LT / 18 WANDA (CAN) 19",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 117,
+   "page_title": "",
+   "cell": {
+    "x": 364,
+    "y": 230
+   },
+   "raw_formation_line": "Y MO DICE RT",
+   "raw_call_line": "19 WANDA (CAN) 18",
+   "personnel": null,
+   "motion_tag": "Y MO",
+   "formation": "DICE",
+   "direction": "RT",
+   "adjustment_tags": [],
+   "protection": null,
+   "concept": "19 WANDA (CAN) 18",
+   "run_number": 19,
+   "ocr_confidence": 95,
+   "raw_call_string": "Y MO DICE RT / 19 WANDA (CAN) 18",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 117,
+   "page_title": "",
+   "cell": {
+    "x": 892,
+    "y": 230
+   },
+   "raw_formation_line": "SOUTH LT AL F SHORT",
+   "raw_call_line": "18 WANDA (CAN) 19 SIFT",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "SOUTH",
+   "direction": "LT",
+   "adjustment_tags": [
+    "AL",
+    "F",
+    "SHORT"
+   ],
+   "protection": null,
+   "concept": "18 WANDA (CAN) 19 SIFT",
+   "run_number": 18,
+   "ocr_confidence": 92,
+   "raw_call_string": "SOUTH LT AL F SHORT / 18 WANDA (CAN) 19 SIFT",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 117,
+   "page_title": "",
+   "cell": {
+    "x": 890,
+    "y": 675
+   },
+   "raw_formation_line": "DIXIE LT F SHORT",
+   "raw_call_line": "18 WANDA (CAN) 19",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "DIXIE",
+   "direction": "LT",
+   "adjustment_tags": [
+    "F",
+    "SHORT"
+   ],
+   "protection": null,
+   "concept": "18 WANDA (CAN) 19",
+   "run_number": 18,
+   "ocr_confidence": 93,
+   "raw_call_string": "DIXIE LT F SHORT / 18 WANDA (CAN) 19",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 117,
+   "page_title": "",
+   "cell": {
+    "x": 888,
+    "y": 1116
+   },
+   "raw_formation_line": "DIXIE LT F SHORT",
+   "raw_call_line": "18 WANDA (CAN) 19",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "DIXIE",
+   "direction": "LT",
+   "adjustment_tags": [
+    "F",
+    "SHORT"
+   ],
+   "protection": null,
+   "concept": "18 WANDA (CAN) 19",
+   "run_number": 18,
+   "ocr_confidence": 93,
+   "raw_call_string": "DIXIE LT F SHORT / 18 WANDA (CAN) 19",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 121,
+   "page_title": "G [12/11] (TOSS) 18-19 (19-18) STRUCTURE (SIFT)",
+   "cell": {
+    "x": 362,
+    "y": 229
+   },
+   "raw_formation_line": "DEUCE RT",
+   "raw_call_line": "18 STRUCTURE SIFT",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "DEUCE",
+   "direction": "RT",
+   "adjustment_tags": [],
+   "protection": null,
+   "concept": "18 STRUCTURE SIFT",
+   "run_number": 18,
+   "ocr_confidence": 96,
+   "raw_call_string": "[12/11] DEUCE RT / 18 STRUCTURE SIFT",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 121,
+   "page_title": "G [12/11] (TOSS) 18-19 (19-18) STRUCTURE (SIFT)",
+   "cell": {
+    "x": 881,
+    "y": 674
+   },
+   "raw_formation_line": "TRIPS LT F RT",
+   "raw_call_line": "19 STRUCTURE SIFT",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "TRIPS",
+   "direction": "LT",
+   "adjustment_tags": [
+    "F",
+    "RT"
+   ],
+   "protection": null,
+   "concept": "19 STRUCTURE SIFT",
+   "run_number": 19,
+   "ocr_confidence": 93,
+   "raw_call_string": "[12/11] TRIPS LT F RT / 19 STRUCTURE SIFT",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 121,
+   "page_title": "G [12/11] (TOSS) 18-19 (19-18) STRUCTURE (SIFT)",
+   "cell": {
+    "x": 358,
+    "y": 1116
+   },
+   "raw_formation_line": "BUNCH LT Y RT",
+   "raw_call_line": "18 STRUCTURE",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "BUNCH",
+   "direction": "LT",
+   "adjustment_tags": [
+    "Y",
+    "RT"
+   ],
+   "protection": null,
+   "concept": "18 STRUCTURE",
+   "run_number": 18,
+   "ocr_confidence": 93,
+   "raw_call_string": "[12/11] BUNCH LT Y RT / 18 STRUCTURE",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 121,
+   "page_title": "G [12/11] (TOSS) 18-19 (19-18) STRUCTURE (SIFT)",
+   "cell": {
+    "x": 880,
+    "y": 1116
+   },
+   "raw_formation_line": "DICE LT",
+   "raw_call_line": "19 STRUCTURE",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "DICE",
+   "direction": "LT",
+   "adjustment_tags": [],
+   "protection": null,
+   "concept": "19 STRUCTURE",
+   "run_number": 19,
+   "ocr_confidence": 70,
+   "raw_call_string": "[12/11] DICE LT / 19 STRUCTURE",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 124,
+   "page_title": "[21] (TOSS) 15-14 (14-15) WEAK (INSERT)",
+   "cell": {
+    "x": 231,
+    "y": 223
+   },
+   "raw_formation_line": "I RT BOOK AL Z MAYBE",
+   "raw_call_line": "TOSS 15 WEAK",
+   "personnel": "21",
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "RT",
+   "adjustment_tags": [
+    "BOOK",
+    "AL",
+    "Z",
+    "MAYBE"
+   ],
+   "protection": null,
+   "concept": "TOSS 15 WEAK",
+   "run_number": 15,
+   "ocr_confidence": 91,
+   "raw_call_string": "[21] I RT BOOK AL Z MAYBE / TOSS 15 WEAK",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 124,
+   "page_title": "[21] (TOSS) 15-14 (14-15) WEAK (INSERT)",
+   "cell": {
+    "x": 752,
+    "y": 223
+   },
+   "raw_formation_line": "I LT BOOK Z SHORT",
+   "raw_call_line": "14 WEAK INSERT",
+   "personnel": "21",
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "LT",
+   "adjustment_tags": [
+    "BOOK",
+    "Z",
+    "SHORT"
+   ],
+   "protection": null,
+   "concept": "14 WEAK INSERT",
+   "run_number": 14,
+   "ocr_confidence": 88,
+   "raw_call_string": "[21] I LT BOOK Z SHORT / 14 WEAK INSERT",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 124,
+   "page_title": "[21] (TOSS) 15-14 (14-15) WEAK (INSERT)",
+   "cell": {
+    "x": 754,
+    "y": 665
+   },
+   "raw_formation_line": "I LT SLOT Z LT MIGHT",
+   "raw_call_line": "14 WEAK",
+   "personnel": "21",
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "LT",
+   "adjustment_tags": [
+    "SLOT",
+    "Z",
+    "LT",
+    "MIGHT"
+   ],
+   "protection": null,
+   "concept": "14 WEAK",
+   "run_number": 14,
+   "ocr_confidence": 84,
+   "raw_call_string": "[21] I LT SLOT Z LT MIGHT / 14 WEAK",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 125,
+   "page_title": "[21] 15-14 WEAK X-Z GHOST",
+   "cell": {
+    "x": 372,
+    "y": 229
+   },
+   "raw_formation_line": "I RT HOP",
+   "raw_call_line": "15 WEAK Z GHOST",
+   "personnel": "21",
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "RT",
+   "adjustment_tags": [
+    "HOP"
+   ],
+   "protection": null,
+   "concept": "15 WEAK Z GHOST",
+   "run_number": 15,
+   "ocr_confidence": 74,
+   "raw_call_string": "[21] I RT HOP / 15 WEAK Z GHOST",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 125,
+   "page_title": "[21] 15-14 WEAK X-Z GHOST",
+   "cell": {
+    "x": 890,
+    "y": 229
+   },
+   "raw_formation_line": "I LT SLOT X SHORTY",
+   "raw_call_line": "14 WEAK X GHOST",
+   "personnel": "21",
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "LT",
+   "adjustment_tags": [
+    "SLOT",
+    "X",
+    "SHORTY"
+   ],
+   "protection": null,
+   "concept": "14 WEAK X GHOST",
+   "run_number": 14,
+   "ocr_confidence": 88,
+   "raw_call_string": "[21] I LT SLOT X SHORTY / 14 WEAK X GHOST",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 125,
+   "page_title": "[21] 15-14 WEAK X-Z GHOST",
+   "cell": {
+    "x": 888,
+    "y": 673
+   },
+   "raw_formation_line": "I LT SLOT X SHORTY",
+   "raw_call_line": "14 WEAK X GHOST",
+   "personnel": "21",
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "LT",
+   "adjustment_tags": [
+    "SLOT",
+    "X",
+    "SHORTY"
+   ],
+   "protection": null,
+   "concept": "14 WEAK X GHOST",
+   "run_number": 14,
+   "ocr_confidence": 90,
+   "raw_call_string": "[21] I LT SLOT X SHORTY / 14 WEAK X GHOST",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 125,
+   "page_title": "[21] 15-14 WEAK X-Z GHOST",
+   "cell": {
+    "x": 364,
+    "y": 1116
+   },
+   "raw_formation_line": "I RT HIP X SHORT",
+   "raw_call_line": "15 WEAK X GHOST",
+   "personnel": "21",
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "RT",
+   "adjustment_tags": [
+    "HIP",
+    "X",
+    "SHORT"
+   ],
+   "protection": null,
+   "concept": "15 WEAK X GHOST",
+   "run_number": 15,
+   "ocr_confidence": 77,
+   "raw_call_string": "[21] I RT HIP X SHORT / 15 WEAK X GHOST",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 125,
+   "page_title": "[21] 15-14 WEAK X-Z GHOST",
+   "cell": {
+    "x": 896,
+    "y": 1116
+   },
+   "raw_formation_line": "I LT HIP X SHORT",
+   "raw_call_line": "14 WEAK X GHOST",
+   "personnel": "21",
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "LT",
+   "adjustment_tags": [
+    "HIP",
+    "X",
+    "SHORT"
+   ],
+   "protection": null,
+   "concept": "14 WEAK X GHOST",
+   "run_number": 14,
+   "ocr_confidence": 87,
+   "raw_call_string": "[21] I LT HIP X SHORT / 14 WEAK X GHOST",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 126,
+   "page_title": ") SIELL*",
+   "cell": {
+    "x": 749,
+    "y": 229
+   },
+   "raw_formation_line": "I LT BOOK",
+   "raw_call_line": "14 WEAK (CAN) PASS",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "LT",
+   "adjustment_tags": [
+    "BOOK"
+   ],
+   "protection": null,
+   "concept": "14 WEAK (CAN) PASS",
+   "run_number": 14,
+   "ocr_confidence": 61,
+   "raw_call_string": "I LT BOOK / 14 WEAK (CAN) PASS",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 128,
+   "page_title": "[12] (TOSS) 15-14 (OSCAR)",
+   "cell": {
+    "x": 222,
+    "y": 218
+   },
+   "raw_formation_line": "DEUCE RT BOOK AL Z INSERT",
+   "raw_call_line": "15 AL OSCAR",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "DEUCE",
+   "direction": "RT",
+   "adjustment_tags": [
+    "BOOK",
+    "AL",
+    "Z",
+    "INSERT"
+   ],
+   "protection": null,
+   "concept": "15 AL OSCAR",
+   "run_number": 15,
+   "ocr_confidence": 93,
+   "raw_call_string": "[12] DEUCE RT BOOK AL Z INSERT / 15 AL OSCAR",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 128,
+   "page_title": "[12] (TOSS) 15-14 (OSCAR)",
+   "cell": {
+    "x": 748,
+    "y": 218
+   },
+   "raw_formation_line": "DEUCE LT BOOK AL Z INSERT",
+   "raw_call_line": "TOSS 14 AL OSCAR",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "DEUCE",
+   "direction": "LT",
+   "adjustment_tags": [
+    "BOOK",
+    "AL",
+    "Z",
+    "INSERT"
+   ],
+   "protection": null,
+   "concept": "TOSS 14 AL OSCAR",
+   "run_number": 14,
+   "ocr_confidence": 92,
+   "raw_call_string": "[12] DEUCE LT BOOK AL Z INSERT / TOSS 14 AL OSCAR",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 128,
+   "page_title": "[12] (TOSS) 15-14 (OSCAR)",
+   "cell": {
+    "x": 224,
+    "y": 662
+   },
+   "raw_formation_line": "DEUCE RT BOOK AL Z INSERT",
+   "raw_call_line": "15 AL OSCAR",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "DEUCE",
+   "direction": "RT",
+   "adjustment_tags": [
+    "BOOK",
+    "AL",
+    "Z",
+    "INSERT"
+   ],
+   "protection": null,
+   "concept": "15 AL OSCAR",
+   "run_number": 15,
+   "ocr_confidence": 93,
+   "raw_call_string": "[12] DEUCE RT BOOK AL Z INSERT / 15 AL OSCAR",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 128,
+   "page_title": "[12] (TOSS) 15-14 (OSCAR)",
+   "cell": {
+    "x": 228,
+    "y": 1102
+   },
+   "raw_formation_line": "SNUG RT",
+   "raw_call_line": "15 AL OSCAR",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "SNUG",
+   "direction": "RT",
+   "adjustment_tags": [],
+   "protection": null,
+   "concept": "15 AL OSCAR",
+   "run_number": 15,
+   "ocr_confidence": 92,
+   "raw_call_string": "[12] SNUG RT / 15 AL OSCAR",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 128,
+   "page_title": "[12] (TOSS) 15-14 (OSCAR)",
+   "cell": {
+    "x": 754,
+    "y": 1102
+   },
+   "raw_formation_line": "DEUCE LT BOOK AL Z INSERT",
+   "raw_call_line": "14 AL OSCAR",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "DEUCE",
+   "direction": "LT",
+   "adjustment_tags": [
+    "BOOK",
+    "AL",
+    "Z",
+    "INSERT"
+   ],
+   "protection": null,
+   "concept": "14 AL OSCAR",
+   "run_number": 14,
+   "ocr_confidence": 93,
+   "raw_call_string": "[12] DEUCE LT BOOK AL Z INSERT / 14 AL OSCAR",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 129,
+   "page_title": "#10 STIADE* 121/12] 1",
+   "cell": {
+    "x": 374,
+    "y": 222
+   },
+   "raw_formation_line": "SNUG RT",
+   "raw_call_line": "15 WANDA F SIFT (AL OSCAR)",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "SNUG",
+   "direction": "RT",
+   "adjustment_tags": [],
+   "protection": null,
+   "concept": "15 WANDA F SIFT (AL OSCAR)",
+   "run_number": 15,
+   "ocr_confidence": 93,
+   "raw_call_string": "SNUG RT / 15 WANDA F SIFT (AL OSCAR)",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 129,
+   "page_title": "#10 STIADE* 121/12] 1",
+   "cell": {
+    "x": 365,
+    "y": 1107
+   },
+   "raw_formation_line": "SNUG RT",
+   "raw_call_line": "15 WANDA F SIFT (AL OSCAR)",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "SNUG",
+   "direction": "RT",
+   "adjustment_tags": [],
+   "protection": null,
+   "concept": "15 WANDA F SIFT (AL OSCAR)",
+   "run_number": 15,
+   "ocr_confidence": 93,
+   "raw_call_string": "SNUG RT / 15 WANDA F SIFT (AL OSCAR)",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 131,
+   "page_title": "[21/12] SPIRIT/ALASKA",
+   "cell": {
+    "x": 367,
+    "y": 229
+   },
+   "raw_formation_line": "WEST RT SLOT Z FLY",
+   "raw_call_line": "SPIRIT",
+   "personnel": "21/12",
+   "motion_tag": null,
+   "formation": "WEST",
+   "direction": "RT",
+   "adjustment_tags": [
+    "SLOT",
+    "Z",
+    "FLY"
+   ],
+   "protection": null,
+   "concept": "SPIRIT",
+   "run_number": null,
+   "ocr_confidence": 74,
+   "raw_call_string": "[21/12] WEST RT SLOT Z FLY / SPIRIT",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 131,
+   "page_title": "[21/12] SPIRIT/ALASKA",
+   "cell": {
+    "x": 886,
+    "y": 229
+   },
+   "raw_formation_line": "WEST LT HIP X FLY",
+   "raw_call_line": "ALAKSA",
+   "personnel": "21/12",
+   "motion_tag": null,
+   "formation": "WEST",
+   "direction": "LT",
+   "adjustment_tags": [
+    "HIP",
+    "X",
+    "FLY"
+   ],
+   "protection": null,
+   "concept": "ALAKSA",
+   "run_number": null,
+   "ocr_confidence": 91,
+   "raw_call_string": "[21/12] WEST LT HIP X FLY / ALAKSA",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 131,
+   "page_title": "[21/12] SPIRIT/ALASKA",
+   "cell": {
+    "x": 884,
+    "y": 673
+   },
+   "raw_formation_line": "WEST LT ZOOM X FLY",
+   "raw_call_line": "ALASKA",
+   "personnel": "21/12",
+   "motion_tag": null,
+   "formation": "WEST",
+   "direction": "LT",
+   "adjustment_tags": [
+    "ZOOM",
+    "X",
+    "FLY"
+   ],
+   "protection": null,
+   "concept": "ALASKA",
+   "run_number": null,
+   "ocr_confidence": 77,
+   "raw_call_string": "[21/12] WEST LT ZOOM X FLY / ALASKA",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 131,
+   "page_title": "[21/12] SPIRIT/ALASKA",
+   "cell": {
+    "x": 362,
+    "y": 1116
+   },
+   "raw_formation_line": "WEST RT HOP Z FLY",
+   "raw_call_line": "SPIRIT",
+   "personnel": "21/12",
+   "motion_tag": null,
+   "formation": "WEST",
+   "direction": "RT",
+   "adjustment_tags": [
+    "HOP",
+    "Z",
+    "FLY"
+   ],
+   "protection": null,
+   "concept": "SPIRIT",
+   "run_number": null,
+   "ocr_confidence": 72,
+   "raw_call_string": "[21/12] WEST RT HOP Z FLY / SPIRIT",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 131,
+   "page_title": "[21/12] SPIRIT/ALASKA",
+   "cell": {
+    "x": 882,
+    "y": 1116
+   },
+   "raw_formation_line": "WEST LT HIP X FLY",
+   "raw_call_line": "ALASKA",
+   "personnel": "21/12",
+   "motion_tag": null,
+   "formation": "WEST",
+   "direction": "LT",
+   "adjustment_tags": [
+    "HIP",
+    "X",
+    "FLY"
+   ],
+   "protection": null,
+   "concept": "ALASKA",
+   "run_number": null,
+   "ocr_confidence": 60,
+   "raw_call_string": "[21/12] WEST LT HIP X FLY / ALASKA",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 133,
+   "page_title": "(3 STEP) (X-F) STICK",
+   "cell": {
+    "x": 896,
+    "y": 250
+   },
+   "raw_formation_line": "[12] WEST RT TIGHT FLT",
+   "raw_call_line": "200 JET X STICK",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "WEST",
+   "direction": "RT",
+   "adjustment_tags": [
+    "TIGHT",
+    "FLT"
+   ],
+   "protection": "200 JET",
+   "concept": "X STICK",
+   "run_number": null,
+   "ocr_confidence": 63,
+   "raw_call_string": "[12] WEST RT TIGHT FLT / 200 JET X STICK",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 134,
+   "page_title": "(3 STEP) (Y-Z) STICK",
+   "cell": {
+    "x": 231,
+    "y": 244
+   },
+   "raw_formation_line": "[21/12/11] BUNCH RT Y LT",
+   "raw_call_line": "300 JET Z STICK",
+   "personnel": "21/12/11",
+   "motion_tag": null,
+   "formation": "BUNCH",
+   "direction": "RT",
+   "adjustment_tags": [
+    "Y",
+    "LT"
+   ],
+   "protection": "300 JET",
+   "concept": "Z STICK",
+   "run_number": null,
+   "ocr_confidence": 63,
+   "raw_call_string": "[21/12/11] BUNCH RT Y LT / 300 JET Z STICK",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 134,
+   "page_title": "(3 STEP) (Y-Z) STICK",
+   "cell": {
+    "x": 232,
+    "y": 664
+   },
+   "raw_formation_line": "[12/11] FAST RT OPEN ZRT",
+   "raw_call_line": "300 JET Y STICK",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "FAST",
+   "direction": "RT",
+   "adjustment_tags": [
+    "OPEN",
+    "ZRT"
+   ],
+   "protection": "300 JET",
+   "concept": "Y STICK",
+   "run_number": null,
+   "ocr_confidence": 55,
+   "raw_call_string": "[12/11] FAST RT OPEN ZRT / 300 JET Y STICK",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 135,
+   "page_title": "",
+   "cell": {
+    "x": 374,
+    "y": 250
+   },
+   "raw_formation_line": "[12] DEUCE RT",
+   "raw_call_line": "200 JET BOTH OMAHA",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "DEUCE",
+   "direction": "RT",
+   "adjustment_tags": [],
+   "protection": "200 JET",
+   "concept": "BOTH OMAHA",
+   "run_number": null,
+   "ocr_confidence": 94,
+   "raw_call_string": "[12] DEUCE RT / 200 JET BOTH OMAHA",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 135,
+   "page_title": "",
+   "cell": {
+    "x": 895,
+    "y": 250
+   },
+   "raw_formation_line": "[12] DEUCE RT ACE",
+   "raw_call_line": "200 JET BOTH OMAHA",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "DEUCE",
+   "direction": "RT",
+   "adjustment_tags": [
+    "ACE"
+   ],
+   "protection": "200 JET",
+   "concept": "BOTH OMAHA",
+   "run_number": null,
+   "ocr_confidence": 95,
+   "raw_call_string": "[12] DEUCE RT ACE / 200 JET BOTH OMAHA",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 135,
+   "page_title": "",
+   "cell": {
+    "x": 373,
+    "y": 672
+   },
+   "raw_formation_line": "[12/11] Y MO STAMP RT",
+   "raw_call_line": "200 JET BOTH OMAHA",
+   "personnel": "12/11",
+   "motion_tag": "Y MO",
+   "formation": "STAMP",
+   "direction": "RT",
+   "adjustment_tags": [],
+   "protection": "200 JET",
+   "concept": "BOTH OMAHA",
+   "run_number": null,
+   "ocr_confidence": 92,
+   "raw_call_string": "[12/11] Y MO STAMP RT / 200 JET BOTH OMAHA",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 135,
+   "page_title": "",
+   "cell": {
+    "x": 894,
+    "y": 672
+   },
+   "raw_formation_line": "[12/11] STACK RT Z SHORT",
+   "raw_call_line": "200 JET BOTH OMAHA",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "STACK",
+   "direction": "RT",
+   "adjustment_tags": [
+    "Z",
+    "SHORT"
+   ],
+   "protection": "200 JET",
+   "concept": "BOTH OMAHA",
+   "run_number": null,
+   "ocr_confidence": 82,
+   "raw_call_string": "[12/11] STACK RT Z SHORT / 200 JET BOTH OMAHA",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 135,
+   "page_title": "",
+   "cell": {
+    "x": 372,
+    "y": 1093
+   },
+   "raw_formation_line": "[12/11] CRUSH RT ZRT",
+   "raw_call_line": "200 JET BOTH OMAHA",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "CRUSH",
+   "direction": "RT",
+   "adjustment_tags": [
+    "ZRT"
+   ],
+   "protection": "200 JET",
+   "concept": "BOTH OMAHA",
+   "run_number": null,
+   "ocr_confidence": 84,
+   "raw_call_string": "[12/11] CRUSH RT ZRT / 200 JET BOTH OMAHA",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 136,
+   "page_title": "(3 STEP) BOTH STITCH",
+   "cell": {
+    "x": 232,
+    "y": 245
+   },
+   "raw_formation_line": "12] DEUCE RT",
+   "raw_call_line": "200 JET BOTH STITCH",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "DEUCE",
+   "direction": "RT",
+   "adjustment_tags": [],
+   "protection": "200 JET",
+   "concept": "BOTH STITCH",
+   "run_number": null,
+   "ocr_confidence": 94,
+   "raw_call_string": "[12] DEUCE RT / 200 JET BOTH STITCH",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 137,
+   "page_title": "",
+   "cell": {
+    "x": 898,
+    "y": 251
+   },
+   "raw_formation_line": "12/11] SNUG RT",
+   "raw_call_line": "2 JET F COCO BOW",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "SNUG",
+   "direction": "RT",
+   "adjustment_tags": [],
+   "protection": "2 JET",
+   "concept": "F COCO BOW",
+   "run_number": null,
+   "ocr_confidence": 88,
+   "raw_call_string": "[12/11] SNUG RT / 2 JET F COCO BOW",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 137,
+   "page_title": "",
+   "cell": {
+    "x": 372,
+    "y": 672
+   },
+   "raw_formation_line": "(12/11) BUNCH RT TIGHT Y LT",
+   "raw_call_line": "2 JET Y COCO BOW",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "BUNCH",
+   "direction": "RT",
+   "adjustment_tags": [
+    "TIGHT",
+    "Y",
+    "LT"
+   ],
+   "protection": "2 JET",
+   "concept": "Y COCO BOW",
+   "run_number": null,
+   "ocr_confidence": 69,
+   "raw_call_string": "[12/11] (12/11) BUNCH RT TIGHT Y LT / 2 JET Y COCO BOW",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 137,
+   "page_title": "",
+   "cell": {
+    "x": 894,
+    "y": 672
+   },
+   "raw_formation_line": "[12/11] Y MO BOX RT",
+   "raw_call_line": "3 JET Y COCO SWAB",
+   "personnel": "12/11",
+   "motion_tag": "Y MO",
+   "formation": "BOX",
+   "direction": "RT",
+   "adjustment_tags": [],
+   "protection": "3 JET",
+   "concept": "Y COCO SWAB",
+   "run_number": null,
+   "ocr_confidence": 60,
+   "raw_call_string": "[12/11] Y MO BOX RT / 3 JET Y COCO SWAB",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 139,
+   "page_title": "(DROP BACK) DOUBLE SCOUT SNAG / SNOUT BOW",
+   "cell": {
+    "x": 376,
+    "y": 249
+   },
+   "raw_formation_line": "12/11] Y MO BUNCH RT",
+   "raw_call_line": "3 JET DBL SCOUT F SNAG",
+   "personnel": "12/11",
+   "motion_tag": "Y MO",
+   "formation": "BUNCH",
+   "direction": "RT",
+   "adjustment_tags": [],
+   "protection": "3 JET",
+   "concept": "DBL SCOUT F SNAG",
+   "run_number": null,
+   "ocr_confidence": 88,
+   "raw_call_string": "[12/11] Y MO BUNCH RT / 3 JET DBL SCOUT F SNAG",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 139,
+   "page_title": "(DROP BACK) DOUBLE SCOUT SNAG / SNOUT BOW",
+   "cell": {
+    "x": 372,
+    "y": 672
+   },
+   "raw_formation_line": "[12/11] FAST RT OPEN",
+   "raw_call_line": "2 JET DBL SCOUT Z SNAG",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "FAST",
+   "direction": "RT",
+   "adjustment_tags": [
+    "OPEN"
+   ],
+   "protection": "2 JET",
+   "concept": "DBL SCOUT Z SNAG",
+   "run_number": null,
+   "ocr_confidence": 63,
+   "raw_call_string": "[12/11] FAST RT OPEN / 2 JET DBL SCOUT Z SNAG",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 139,
+   "page_title": "(DROP BACK) DOUBLE SCOUT SNAG / SNOUT BOW",
+   "cell": {
+    "x": 892,
+    "y": 1093
+   },
+   "raw_formation_line": "[12/11] CRUSH RT ZRT",
+   "raw_call_line": "2 JET F SNOUT BOW",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "CRUSH",
+   "direction": "RT",
+   "adjustment_tags": [
+    "ZRT"
+   ],
+   "protection": "2 JET",
+   "concept": "F SNOUT BOW",
+   "run_number": null,
+   "ocr_confidence": 78,
+   "raw_call_string": "[12/11] CRUSH RT ZRT / 2 JET F SNOUT BOW",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 142,
+   "page_title": "",
+   "cell": {
+    "x": 229,
+    "y": 249
+   },
+   "raw_formation_line": "[12/11] (G) TRIPS RT TIGHT HAX",
+   "raw_call_line": "2 SCRAM X COIN BUFFALO",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "TRIPS",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "TIGHT",
+    "HAX"
+   ],
+   "protection": "2 SCRAM",
+   "concept": "X COIN BUFFALO",
+   "run_number": null,
+   "ocr_confidence": 91,
+   "raw_call_string": "[12/11] (G) TRIPS RT TIGHT HAX / 2 SCRAM X COIN BUFFALO",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 142,
+   "page_title": "",
+   "cell": {
+    "x": 754,
+    "y": 249
+   },
+   "raw_formation_line": "[12/11] (G) SOUTH RT OUT HAX",
+   "raw_call_line": "3 SCRAM Z COIN BUFFALO",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "SOUTH",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "OUT",
+    "HAX"
+   ],
+   "protection": "3 SCRAM",
+   "concept": "Z COIN BUFFALO",
+   "run_number": null,
+   "ocr_confidence": 84,
+   "raw_call_string": "[12/11] (G) SOUTH RT OUT HAX / 3 SCRAM Z COIN BUFFALO",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 142,
+   "page_title": "",
+   "cell": {
+    "x": 232,
+    "y": 670
+   },
+   "raw_formation_line": "[12/11] (G) DEUCE RT SLOT HAY",
+   "raw_call_line": "3 SCRAM Y COIN BUFFALO",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "DEUCE",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "SLOT",
+    "HAY"
+   ],
+   "protection": "3 SCRAM",
+   "concept": "Y COIN BUFFALO",
+   "run_number": null,
+   "ocr_confidence": 74,
+   "raw_call_string": "[12/11] (G) DEUCE RT SLOT HAY / 3 SCRAM Y COIN BUFFALO",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 143,
+   "page_title": "(PLAY PASS) STRIKE / BLAZE OUT",
+   "cell": {
+    "x": 372,
+    "y": 667
+   },
+   "raw_formation_line": "[21/12] I RT BOOK",
+   "raw_call_line": "P15 WEAK Z STRIKE X BLAZE OUT",
+   "personnel": "21/12",
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "RT",
+   "adjustment_tags": [
+    "BOOK"
+   ],
+   "protection": null,
+   "concept": "P15 WEAK Z STRIKE X BLAZE OUT",
+   "run_number": null,
+   "ocr_confidence": 88,
+   "raw_call_string": "[21/12] I RT BOOK / P15 WEAK Z STRIKE X BLAZE OUT",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 143,
+   "page_title": "(PLAY PASS) STRIKE / BLAZE OUT",
+   "cell": {
+    "x": 370,
+    "y": 1087
+   },
+   "raw_formation_line": "[21/12] WEST RT BOOK F LT",
+   "raw_call_line": "P15 WEAK Z STRIKE X BLAZE OUT",
+   "personnel": "21/12",
+   "motion_tag": null,
+   "formation": "WEST",
+   "direction": "RT",
+   "adjustment_tags": [
+    "BOOK",
+    "F",
+    "LT"
+   ],
+   "protection": null,
+   "concept": "P15 WEAK Z STRIKE X BLAZE OUT",
+   "run_number": null,
+   "ocr_confidence": 78,
+   "raw_call_string": "[21/12] WEST RT BOOK F LT / P15 WEAK Z STRIKE X BLAZE OUT",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 144,
+   "page_title": "MOVEMENT 50/15 ne",
+   "cell": {
+    "x": 755,
+    "y": 247
+   },
+   "raw_formation_line": "[12] WEST RT BOOK FLT",
+   "raw_call_line": "FK 18 KEEP LT",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "WEST",
+   "direction": "RT",
+   "adjustment_tags": [
+    "BOOK",
+    "FLT"
+   ],
+   "protection": null,
+   "concept": "FK 18 KEEP LT",
+   "run_number": 18,
+   "ocr_confidence": 64,
+   "raw_call_string": "[12] WEST RT BOOK FLT / FK 18 KEEP LT",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 144,
+   "page_title": "MOVEMENT 50/15 ne",
+   "cell": {
+    "x": 757,
+    "y": 667
+   },
+   "raw_formation_line": "[11] DICE RT",
+   "raw_call_line": "FK 19 KEEP RT",
+   "personnel": "11",
+   "motion_tag": null,
+   "formation": "DICE",
+   "direction": "RT",
+   "adjustment_tags": [],
+   "protection": null,
+   "concept": "FK 19 KEEP RT",
+   "run_number": 19,
+   "ocr_confidence": 79,
+   "raw_call_string": "[11] DICE RT / FK 19 KEEP RT",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 144,
+   "page_title": "MOVEMENT 50/15 ne",
+   "cell": {
+    "x": 759,
+    "y": 1088
+   },
+   "raw_formation_line": "[11] BUNCH RT TIGHT Y LT",
+   "raw_call_line": "FK 18 KEEP LT",
+   "personnel": "11",
+   "motion_tag": null,
+   "formation": "BUNCH",
+   "direction": "RT",
+   "adjustment_tags": [
+    "TIGHT",
+    "Y",
+    "LT"
+   ],
+   "protection": null,
+   "concept": "FK 18 KEEP LT",
+   "run_number": 18,
+   "ocr_confidence": 91,
+   "raw_call_string": "[11] BUNCH RT TIGHT Y LT / FK 18 KEEP LT",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 146,
+   "page_title": "SPECIAL SCREEN PAGICERS",
+   "cell": {
+    "x": 234,
+    "y": 246
+   },
+   "raw_formation_line": "21/12] I RT BOOK BUMP",
+   "raw_call_line": "SPECIAL SCREEN LT",
+   "personnel": "21/12",
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "RT",
+   "adjustment_tags": [
+    "BOOK",
+    "BUMP"
+   ],
+   "protection": null,
+   "concept": "SPECIAL SCREEN LT",
+   "run_number": null,
+   "ocr_confidence": 94,
+   "raw_call_string": "[21/12] I RT BOOK BUMP / SPECIAL SCREEN LT",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 146,
+   "page_title": "SPECIAL SCREEN PAGICERS",
+   "cell": {
+    "x": 760,
+    "y": 246
+   },
+   "raw_formation_line": "12/11] DEUCE RT F RT",
+   "raw_call_line": "SPECIAL SCREEN LT",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "DEUCE",
+   "direction": "RT",
+   "adjustment_tags": [
+    "F",
+    "RT"
+   ],
+   "protection": null,
+   "concept": "SPECIAL SCREEN LT",
+   "run_number": null,
+   "ocr_confidence": 83,
+   "raw_call_string": "[12/11] DEUCE RT F RT / SPECIAL SCREEN LT",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 146,
+   "page_title": "SPECIAL SCREEN PAGICERS",
+   "cell": {
+    "x": 232,
+    "y": 668
+   },
+   "raw_formation_line": "[12/11] BUNCH RT",
+   "raw_call_line": "SPECIAL SCREEN LT",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "BUNCH",
+   "direction": "RT",
+   "adjustment_tags": [],
+   "protection": null,
+   "concept": "SPECIAL SCREEN LT",
+   "run_number": null,
+   "ocr_confidence": 94,
+   "raw_call_string": "[12/11] BUNCH RT / SPECIAL SCREEN LT",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 147,
+   "page_title": "SPECIAL CHIP SCREEN",
+   "cell": {
+    "x": 374,
+    "y": 252
+   },
+   "raw_formation_line": "[21/12/11] (G) TRIO RT",
+   "raw_call_line": "SPECIAL CHIP SCREEN LT",
+   "personnel": "21/12/11",
+   "motion_tag": null,
+   "formation": "TRIO",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN"
+   ],
+   "protection": null,
+   "concept": "SPECIAL CHIP SCREEN LT",
+   "run_number": null,
+   "ocr_confidence": 92,
+   "raw_call_string": "[21/12/11] (G) TRIO RT / SPECIAL CHIP SCREEN LT",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 147,
+   "page_title": "SPECIAL CHIP SCREEN",
+   "cell": {
+    "x": 898,
+    "y": 252
+   },
+   "raw_formation_line": "21/12/11] (G) RED RT CLOSE FOY",
+   "raw_call_line": "SPECIAL CHIP SCREEN LT",
+   "personnel": "21/12/11",
+   "motion_tag": null,
+   "formation": "RED",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "CLOSE",
+    "FOY"
+   ],
+   "protection": null,
+   "concept": "SPECIAL CHIP SCREEN LT",
+   "run_number": null,
+   "ocr_confidence": 92,
+   "raw_call_string": "[21/12/11] (G) RED RT CLOSE FOY / SPECIAL CHIP SCREEN LT",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 147,
+   "page_title": "SPECIAL CHIP SCREEN",
+   "cell": {
+    "x": 892,
+    "y": 674
+   },
+   "raw_formation_line": "[12/11] (G) CRUSH RT OUT",
+   "raw_call_line": "SPECIAL CHIP SCREEN RT",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "CRUSH",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "OUT"
+   ],
+   "protection": null,
+   "concept": "SPECIAL CHIP SCREEN RT",
+   "run_number": null,
+   "ocr_confidence": 90,
+   "raw_call_string": "[12/11] (G) CRUSH RT OUT / SPECIAL CHIP SCREEN RT",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 149,
+   "page_title": "",
+   "cell": {
+    "x": 374,
+    "y": 236
+   },
+   "raw_formation_line": "[21/12/11] (G) SWAMP RT STACK D",
+   "raw_call_line": "200 SCRAM Z STICK BOW (SBA)",
+   "personnel": "21/12/11",
+   "motion_tag": null,
+   "formation": "SWAMP",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "STACK",
+    "D"
+   ],
+   "protection": "200 SCRAM",
+   "concept": "Z STICK BOW (SBA)",
+   "run_number": null,
+   "ocr_confidence": 89,
+   "raw_call_string": "[21/12/11] (G) SWAMP RT STACK D / 200 SCRAM Z STICK BOW (SBA)",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 149,
+   "page_title": "",
+   "cell": {
+    "x": 372,
+    "y": 659
+   },
+   "raw_formation_line": "[21/12/11] (G) CRIP RT OPEN C",
+   "raw_call_line": "200 SCRAM Y STICK BOW (SBA)",
+   "personnel": "21/12/11",
+   "motion_tag": null,
+   "formation": "CRIP",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "OPEN",
+    "C"
+   ],
+   "protection": "200 SCRAM",
+   "concept": "Y STICK BOW (SBA)",
+   "run_number": null,
+   "ocr_confidence": 80,
+   "raw_call_string": "[21/12/11] (G) CRIP RT OPEN C / 200 SCRAM Y STICK BOW (SBA)",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 150,
+   "page_title": "(QUICK GAME) STICK BARK",
+   "cell": {
+    "x": 228,
+    "y": 237
+   },
+   "raw_formation_line": "[21/12/11] (G) SWAMP RT STACK D",
+   "raw_call_line": "200 SCRAM Z STICK BARK (SBA)",
+   "personnel": "21/12/11",
+   "motion_tag": null,
+   "formation": "SWAMP",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "STACK",
+    "D"
+   ],
+   "protection": "200 SCRAM",
+   "concept": "Z STICK BARK (SBA)",
+   "run_number": null,
+   "ocr_confidence": 74,
+   "raw_call_string": "[21/12/11] (G) SWAMP RT STACK D / 200 SCRAM Z STICK BARK (SBA)",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 150,
+   "page_title": "(QUICK GAME) STICK BARK",
+   "cell": {
+    "x": 230,
+    "y": 657
+   },
+   "raw_formation_line": "[21/12/11] (G) CRIP RT OPEN C",
+   "raw_call_line": "300 SCATY STICK BARK (SBA)",
+   "personnel": "21/12/11",
+   "motion_tag": null,
+   "formation": "CRIP",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "OPEN",
+    "C"
+   ],
+   "protection": null,
+   "concept": "300 SCATY STICK BARK (SBA)",
+   "run_number": null,
+   "ocr_confidence": 88,
+   "raw_call_string": "[21/12/11] (G) CRIP RT OPEN C / 300 SCATY STICK BARK (SBA)",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 150,
+   "page_title": "(QUICK GAME) STICK BARK",
+   "cell": {
+    "x": 755,
+    "y": 657
+   },
+   "raw_formation_line": "[21/12/11] (G) EAST RT OPEN HIP D",
+   "raw_call_line": "200 SCRAM Y STICK BARK (SBA)",
+   "personnel": "21/12/11",
+   "motion_tag": null,
+   "formation": "EAST",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "OPEN",
+    "HIP",
+    "D"
+   ],
+   "protection": "200 SCRAM",
+   "concept": "Y STICK BARK (SBA)",
+   "run_number": null,
+   "ocr_confidence": 70,
+   "raw_call_string": "[21/12/11] (G) EAST RT OPEN HIP D / 200 SCRAM Y STICK BARK (SBA)",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 151,
+   "page_title": "(SCAT) REDSKIN / CHIEF",
+   "cell": {
+    "x": 372,
+    "y": 242
+   },
+   "raw_formation_line": "[12/11] (G) WEST RT HIP",
+   "raw_call_line": "2 SCATY REDSKIN",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "WEST",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "HIP"
+   ],
+   "protection": null,
+   "concept": "2 SCATY REDSKIN",
+   "run_number": null,
+   "ocr_confidence": 90,
+   "raw_call_string": "[12/11] (G) WEST RT HIP / 2 SCATY REDSKIN",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 151,
+   "page_title": "(SCAT) REDSKIN / CHIEF",
+   "cell": {
+    "x": 371,
+    "y": 663
+   },
+   "raw_formation_line": "[12/11] (G) STACK RT CLOSE",
+   "raw_call_line": "2 SCATY REDSKIN (SBA)",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "STACK",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "CLOSE"
+   ],
+   "protection": null,
+   "concept": "2 SCATY REDSKIN (SBA)",
+   "run_number": null,
+   "ocr_confidence": 79,
+   "raw_call_string": "[12/11] (G) STACK RT CLOSE / 2 SCATY REDSKIN (SBA)",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 153,
+   "page_title": "(SCAT) CHEROKEE / DRIVE CHOW",
+   "cell": {
+    "x": 374,
+    "y": 241
+   },
+   "raw_formation_line": "[11] (G) STACK RT Z SHORT",
+   "raw_call_line": "2 SCAT Z CHEROKEE",
+   "personnel": "11",
+   "motion_tag": null,
+   "formation": "STACK",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "Z",
+    "SHORT"
+   ],
+   "protection": "2 SCAT",
+   "concept": "Z CHEROKEE",
+   "run_number": null,
+   "ocr_confidence": 84,
+   "raw_call_string": "[11] (G) STACK RT Z SHORT / 2 SCAT Z CHEROKEE",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 153,
+   "page_title": "(SCAT) CHEROKEE / DRIVE CHOW",
+   "cell": {
+    "x": 892,
+    "y": 1085
+   },
+   "raw_formation_line": "[11] (G) Y MO BOX RT",
+   "raw_call_line": "2 SCAT X DRIVE Y CHOW",
+   "personnel": "11",
+   "motion_tag": "Y MO",
+   "formation": "BOX",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN"
+   ],
+   "protection": "2 SCAT",
+   "concept": "X DRIVE Y CHOW",
+   "run_number": null,
+   "ocr_confidence": 71,
+   "raw_call_string": "[11] (G) Y MO BOX RT / 2 SCAT X DRIVE Y CHOW",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 154,
+   "page_title": "(DROP BACK) SKINNER RETURN",
+   "cell": {
+    "x": 228,
+    "y": 238
+   },
+   "raw_formation_line": "[12/11] (G) BUNCH RT (-) Y RIGHTY",
+   "raw_call_line": "2 JET Z SKINNER RETURN BURST",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "BUNCH",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "(-)",
+    "Y",
+    "RIGHTY"
+   ],
+   "protection": "2 JET",
+   "concept": "Z SKINNER RETURN BURST",
+   "run_number": null,
+   "ocr_confidence": 87,
+   "raw_call_string": "[12/11] (G) BUNCH RT (-) Y RIGHTY / 2 JET Z SKINNER RETURN BURST",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 154,
+   "page_title": "(DROP BACK) SKINNER RETURN",
+   "cell": {
+    "x": 750,
+    "y": 238
+   },
+   "raw_formation_line": "[12/11] (G) Z MO FAST RT OPEN (+",
+   "raw_call_line": "3 JET Y SKINNER RETURN BURST",
+   "personnel": "12/11",
+   "motion_tag": "Z MO",
+   "formation": "FAST",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "OPEN",
+    "(+"
+   ],
+   "protection": "3 JET",
+   "concept": "Y SKINNER RETURN BURST",
+   "run_number": null,
+   "ocr_confidence": 89,
+   "raw_call_string": "[12/11] (G) Z MO FAST RT OPEN (+ / 3 JET Y SKINNER RETURN BURST",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 154,
+   "page_title": "(DROP BACK) SKINNER RETURN",
+   "cell": {
+    "x": 230,
+    "y": 660
+   },
+   "raw_formation_line": "[12/11] (G) Y MO TRAIN RT (-)",
+   "raw_call_line": "2 JET Y SKINNER RETURN BURST",
+   "personnel": "12/11",
+   "motion_tag": "Y MO",
+   "formation": "TRAIN",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "(-)"
+   ],
+   "protection": "2 JET",
+   "concept": "Y SKINNER RETURN BURST",
+   "run_number": null,
+   "ocr_confidence": 69,
+   "raw_call_string": "[12/11] (G) Y MO TRAIN RT (-) / 2 JET Y SKINNER RETURN BURST",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 154,
+   "page_title": "(DROP BACK) SKINNER RETURN",
+   "cell": {
+    "x": 232,
+    "y": 1080
+   },
+   "raw_formation_line": "[11] (G) FAST RT HAY",
+   "raw_call_line": "2 SCRAM Z SKINNER RETURN Y PILE",
+   "personnel": "11",
+   "motion_tag": null,
+   "formation": "FAST",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "HAY"
+   ],
+   "protection": "2 SCRAM",
+   "concept": "Z SKINNER RETURN Y PILE",
+   "run_number": null,
+   "ocr_confidence": 87,
+   "raw_call_string": "[11] (G) FAST RT HAY / 2 SCRAM Z SKINNER RETURN Y PILE",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 154,
+   "page_title": "(DROP BACK) SKINNER RETURN",
+   "cell": {
+    "x": 759,
+    "y": 1080
+   },
+   "raw_formation_line": "[11] (G) SOUTH RT OUT HAX",
+   "raw_call_line": "2 SCRAM F SKINNER RETURN Z PILE",
+   "personnel": "11",
+   "motion_tag": null,
+   "formation": "SOUTH",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "OUT",
+    "HAX"
+   ],
+   "protection": "2 SCRAM",
+   "concept": "F SKINNER RETURN Z PILE",
+   "run_number": null,
+   "ocr_confidence": 88,
+   "raw_call_string": "[11] (G) SOUTH RT OUT HAX / 2 SCRAM F SKINNER RETURN Z PILE",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 155,
+   "page_title": "(DROP BACK) SKINNER WHEEL",
+   "cell": {
+    "x": 374,
+    "y": 243
+   },
+   "raw_formation_line": "[11] (G) CRUSH RT Z RT",
+   "raw_call_line": "2 SCAT Z SKINNER WHEEL DASH",
+   "personnel": "11",
+   "motion_tag": null,
+   "formation": "CRUSH",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "Z",
+    "RT"
+   ],
+   "protection": "2 SCAT",
+   "concept": "Z SKINNER WHEEL DASH",
+   "run_number": null,
+   "ocr_confidence": 91,
+   "raw_call_string": "[11] (G) CRUSH RT Z RT / 2 SCAT Z SKINNER WHEEL DASH",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 155,
+   "page_title": "(DROP BACK) SKINNER WHEEL",
+   "cell": {
+    "x": 895,
+    "y": 243
+   },
+   "raw_formation_line": "[11] (G) SOUTH RT CLOSE",
+   "raw_call_line": "2 SCAT Z SKINNER WHEEL DASH",
+   "personnel": "11",
+   "motion_tag": null,
+   "formation": "SOUTH",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "CLOSE"
+   ],
+   "protection": "2 SCAT",
+   "concept": "Z SKINNER WHEEL DASH",
+   "run_number": null,
+   "ocr_confidence": 58,
+   "raw_call_string": "[11] (G) SOUTH RT CLOSE / 2 SCAT Z SKINNER WHEEL DASH",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 156,
+   "page_title": "",
+   "cell": {
+    "x": 228,
+    "y": 235
+   },
+   "raw_formation_line": "[11] (G) FAST RT OPEN HAY",
+   "raw_call_line": "2 SCRAM Z SCAR RETURN Y PILE",
+   "personnel": "11",
+   "motion_tag": null,
+   "formation": "FAST",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "OPEN",
+    "HAY"
+   ],
+   "protection": "2 SCRAM",
+   "concept": "Z SCAR RETURN Y PILE",
+   "run_number": null,
+   "ocr_confidence": 71,
+   "raw_call_string": "[11] (G) FAST RT OPEN HAY / 2 SCRAM Z SCAR RETURN Y PILE",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 156,
+   "page_title": "",
+   "cell": {
+    "x": 758,
+    "y": 235
+   },
+   "raw_formation_line": "11] (G) SOUTH RT OUT HAX",
+   "raw_call_line": "2 SCRAM F SCAR RETURN Z PILE",
+   "personnel": "11",
+   "motion_tag": null,
+   "formation": "SOUTH",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "OUT",
+    "HAX"
+   ],
+   "protection": "2 SCRAM",
+   "concept": "F SCAR RETURN Z PILE",
+   "run_number": null,
+   "ocr_confidence": 72,
+   "raw_call_string": "[11] (G) SOUTH RT OUT HAX / 2 SCRAM F SCAR RETURN Z PILE",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 157,
+   "page_title": "",
+   "cell": {
+    "x": 373,
+    "y": 240
+   },
+   "raw_formation_line": "[12/11] (G) SNUG RT",
+   "raw_call_line": "3 JET Z NUNCHUCK",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "SNUG",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN"
+   ],
+   "protection": "3 JET",
+   "concept": "Z NUNCHUCK",
+   "run_number": null,
+   "ocr_confidence": 60,
+   "raw_call_string": "[12/11] (G) SNUG RT / 3 JET Z NUNCHUCK",
+   "status": "parsed"
+  }
+ ],
+ "unparsed": [
+  {
+   "install_number": 1,
+   "source_page": 111,
+   "page_title": "",
+   "cell": {
+    "x": 368,
+    "y": 229
+   },
+   "raw_formation_line": "I RT BOOK",
+   "raw_call_line": "18 MIKE (CAN) 19 WEAK",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "RT",
+   "adjustment_tags": [
+    "BOOK"
+   ],
+   "protection": null,
+   "concept": "18 MIKE (CAN) 19 WEAK",
+   "run_number": 18,
+   "ocr_confidence": 14,
+   "raw_call_string": "I RT BOOK / 18 MIKE (CAN) 19 WEAK",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (14)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 111,
+   "page_title": "",
+   "cell": {
+    "x": 364,
+    "y": 672
+   },
+   "raw_formation_line": "I RT HOP Z RT",
+   "raw_call_line": "18 MIKE (CAN) 19 WEAK",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "RT",
+   "adjustment_tags": [
+    "HOP",
+    "Z",
+    "RT"
+   ],
+   "protection": null,
+   "concept": "18 MIKE (CAN) 19 WEAK",
+   "run_number": 18,
+   "ocr_confidence": 7,
+   "raw_call_string": "I RT HOP Z RT / 18 MIKE (CAN) 19 WEAK",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (7)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 112,
+   "page_title": "[21] 19-18 WEAK (cAN) 18-19 MIKE",
+   "cell": {
+    "x": 755,
+    "y": 1113
+   },
+   "raw_formation_line": "I RT BOOK YLT",
+   "raw_call_line": "18 WEAK (CAN) 19 MIKE",
+   "personnel": "21",
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "RT",
+   "adjustment_tags": [
+    "BOOK",
+    "YLT"
+   ],
+   "protection": null,
+   "concept": "18 WEAK (CAN) 19 MIKE",
+   "run_number": 18,
+   "ocr_confidence": 50,
+   "raw_call_string": "[21] I RT BOOK YLT / 18 WEAK (CAN) 19 MIKE",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (50)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 124,
+   "page_title": "[21] (TOSS) 15-14 (14-15) WEAK (INSERT)",
+   "cell": {
+    "x": 756,
+    "y": 1109
+   },
+   "raw_formation_line": "I RT ACE YLT",
+   "raw_call_line": "14 WEAK",
+   "personnel": "21",
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "RT",
+   "adjustment_tags": [
+    "ACE",
+    "YLT"
+   ],
+   "protection": null,
+   "concept": "14 WEAK",
+   "run_number": 14,
+   "ocr_confidence": 25,
+   "raw_call_string": "[21] I RT ACE YLT / 14 WEAK",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (25)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 125,
+   "page_title": "[21] 15-14 WEAK X-Z GHOST",
+   "cell": {
+    "x": 367,
+    "y": 673
+   },
+   "raw_formation_line": "I RT HOP",
+   "raw_call_line": "15 WEAK Z GHOST",
+   "personnel": "21",
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "RT",
+   "adjustment_tags": [
+    "HOP"
+   ],
+   "protection": null,
+   "concept": "15 WEAK Z GHOST",
+   "run_number": 15,
+   "ocr_confidence": 52,
+   "raw_call_string": "[21] I RT HOP / 15 WEAK Z GHOST",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (52)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 126,
+   "page_title": ") SIELL*",
+   "cell": {
+    "x": 234,
+    "y": 1113
+   },
+   "raw_formation_line": "I RT BOOK",
+   "raw_call_line": "15 WEAK (CAN) PASS",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "RT",
+   "adjustment_tags": [
+    "BOOK"
+   ],
+   "protection": null,
+   "concept": "15 WEAK (CAN) PASS",
+   "run_number": 15,
+   "ocr_confidence": 43,
+   "raw_call_string": "I RT BOOK / 15 WEAK (CAN) PASS",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (43)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 126,
+   "page_title": ") SIELL*",
+   "cell": {
+    "x": 755,
+    "y": 1113
+   },
+   "raw_formation_line": "I RT BOOK YLT",
+   "raw_call_line": "14 WEAK (CAN) PASS",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "RT",
+   "adjustment_tags": [
+    "BOOK",
+    "YLT"
+   ],
+   "protection": null,
+   "concept": "14 WEAK (CAN) PASS",
+   "run_number": 14,
+   "ocr_confidence": 0,
+   "raw_call_string": "I RT BOOK YLT / 14 WEAK (CAN) PASS",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (0)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 129,
+   "page_title": "#10 STIADE* 121/12] 1",
+   "cell": {
+    "x": 890,
+    "y": 222
+   },
+   "raw_formation_line": "SNUG LT",
+   "raw_call_line": "14 WANDA F SIFT (AL OSCAR)",
+   "personnel": null,
+   "motion_tag": null,
+   "formation": "SNUG",
+   "direction": "LT",
+   "adjustment_tags": [],
+   "protection": null,
+   "concept": "14 WANDA F SIFT (AL OSCAR)",
+   "run_number": 14,
+   "ocr_confidence": 0,
+   "raw_call_string": "SNUG LT / 14 WANDA F SIFT (AL OSCAR)",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (0)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 131,
+   "page_title": "[21/12] SPIRIT/ALASKA",
+   "cell": {
+    "x": 366,
+    "y": 673
+   },
+   "raw_formation_line": "WEST RT HOP Z FLY",
+   "raw_call_line": null,
+   "personnel": "21/12",
+   "motion_tag": null,
+   "formation": "WEST",
+   "direction": "RT",
+   "adjustment_tags": [
+    "HOP",
+    "Z",
+    "FLY"
+   ],
+   "raw_call_string": "[21/12] WEST RT HOP Z FLY / ?",
+   "status": "UNPARSED",
+   "reason": "no call line under the formation line"
+  },
+  {
+   "install_number": 1,
+   "source_page": 137,
+   "page_title": "",
+   "cell": {
+    "x": 892,
+    "y": 1094
+   },
+   "raw_formation_line": "[12/11] CRACK RT",
+   "raw_call_line": "2 JET Z COCO SWAB",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "CRACK",
+   "direction": "RT",
+   "adjustment_tags": [],
+   "protection": "2 JET",
+   "concept": "Z COCO SWAB",
+   "run_number": null,
+   "ocr_confidence": 34,
+   "raw_call_string": "[12/11] CRACK RT / 2 JET Z COCO SWAB",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (34)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 138,
+   "page_title": "(DROP BACK) COIN CUT / COIN TARGET",
+   "cell": {
+    "x": 232,
+    "y": 244
+   },
+   "raw_formation_line": "[21/12] I RT SLOT FOY",
+   "raw_call_line": "2 JET Z COIN CUT",
+   "personnel": "21/12",
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "RT",
+   "adjustment_tags": [
+    "SLOT",
+    "FOY"
+   ],
+   "protection": "2 JET",
+   "concept": "Z COIN CUT",
+   "run_number": null,
+   "ocr_confidence": 40,
+   "raw_call_string": "[21/12] I RT SLOT FOY / 2 JET Z COIN CUT",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (40)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 138,
+   "page_title": "(DROP BACK) COIN CUT / COIN TARGET",
+   "cell": {
+    "x": 234,
+    "y": 662
+   },
+   "raw_formation_line": "[12/11] (G) SOUTH RT",
+   "raw_call_line": "3 JET Y COIN CUT",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "SOUTH",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN"
+   ],
+   "protection": "3 JET",
+   "concept": "Y COIN CUT",
+   "run_number": null,
+   "ocr_confidence": 36,
+   "raw_call_string": "[12/11] (G) SOUTH RT / 3 JET Y COIN CUT",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (36)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 140,
+   "page_title": "(DROP BACK) SHALLOW CROSS (ARCHO)",
+   "cell": {
+    "x": 230,
+    "y": 667
+   },
+   "raw_formation_line": "[12] WEST RT SLOT",
+   "raw_call_line": "3 JET Z SHALLOW CROSS F ARCHO",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "WEST",
+   "direction": "RT",
+   "adjustment_tags": [
+    "SLOT"
+   ],
+   "protection": "3 JET",
+   "concept": "Z SHALLOW CROSS F ARCHO",
+   "run_number": null,
+   "ocr_confidence": 39,
+   "raw_call_string": "[12] WEST RT SLOT / 3 JET Z SHALLOW CROSS F ARCHO",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (39)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 140,
+   "page_title": "(DROP BACK) SHALLOW CROSS (ARCHO)",
+   "cell": {
+    "x": 756,
+    "y": 667
+   },
+   "raw_formation_line": "(12) TRAX RT TIGHTER X LT",
+   "raw_call_line": "3 JET F SHALLOW CROSS",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "TRAX",
+   "direction": "RT",
+   "adjustment_tags": [
+    "TIGHTER",
+    "X",
+    "LT"
+   ],
+   "protection": "3 JET",
+   "concept": "F SHALLOW CROSS",
+   "run_number": null,
+   "ocr_confidence": 43,
+   "raw_call_string": "[12] (12) TRAX RT TIGHTER X LT / 3 JET F SHALLOW CROSS",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (43)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 140,
+   "page_title": "(DROP BACK) SHALLOW CROSS (ARCHO)",
+   "cell": {
+    "x": 758,
+    "y": 1089
+   },
+   "raw_formation_line": "[12/11] CRACK RT ZRT",
+   "raw_call_line": "3 JET F SHALLOW CROSS Z ARCHO",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "CRACK",
+   "direction": "RT",
+   "adjustment_tags": [
+    "ZRT"
+   ],
+   "protection": "3 JET",
+   "concept": "F SHALLOW CROSS Z ARCHO",
+   "run_number": null,
+   "ocr_confidence": 46,
+   "raw_call_string": "[12/11] CRACK RT ZRT / 3 JET F SHALLOW CROSS Z ARCHO",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (46)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 141,
+   "page_title": "(DROP BACK) SHALLOW CROSS GLARE",
+   "cell": {
+    "x": 376,
+    "y": 251
+   },
+   "raw_formation_line": "[12/11] (G) FAST RT",
+   "raw_call_line": "2 JET Y SHALLOW CROSS Z GLARE",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "FAST",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN"
+   ],
+   "protection": "2 JET",
+   "concept": "Y SHALLOW CROSS Z GLARE",
+   "run_number": null,
+   "ocr_confidence": 19,
+   "raw_call_string": "[12/11] (G) FAST RT / 2 JET Y SHALLOW CROSS Z GLARE",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (19)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 141,
+   "page_title": "(DROP BACK) SHALLOW CROSS GLARE",
+   "cell": {
+    "x": 373,
+    "y": 674
+   },
+   "raw_formation_line": "[12] (G) TRAX RT TIGHTER",
+   "raw_call_line": "3 JET F SHALLOW CROSS Z GLARE",
+   "personnel": "12",
+   "motion_tag": null,
+   "formation": "TRAX",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "TIGHTER"
+   ],
+   "protection": "3 JET",
+   "concept": "F SHALLOW CROSS Z GLARE",
+   "run_number": null,
+   "ocr_confidence": 13,
+   "raw_call_string": "[12] (G) TRAX RT TIGHTER / 3 JET F SHALLOW CROSS Z GLARE",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (13)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 141,
+   "page_title": "(DROP BACK) SHALLOW CROSS GLARE",
+   "cell": {
+    "x": 894,
+    "y": 674
+   },
+   "raw_formation_line": "[12/11] (G) TRIPS RT",
+   "raw_call_line": "3 JET X SHALLOW CROSS F GLARE",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "TRIPS",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN"
+   ],
+   "protection": "3 JET",
+   "concept": "X SHALLOW CROSS F GLARE",
+   "run_number": null,
+   "ocr_confidence": 10,
+   "raw_call_string": "[12/11] (G) TRIPS RT / 3 JET X SHALLOW CROSS F GLARE",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (10)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 143,
+   "page_title": "(PLAY PASS) STRIKE / BLAZE OUT",
+   "cell": {
+    "x": 374,
+    "y": 245
+   },
+   "raw_formation_line": "[21/12] I RT BOOK",
+   "raw_call_line": null,
+   "personnel": "21/12",
+   "motion_tag": null,
+   "formation": "I",
+   "direction": "RT",
+   "adjustment_tags": [
+    "BOOK"
+   ],
+   "raw_call_string": "[21/12] I RT BOOK / ?",
+   "status": "UNPARSED",
+   "reason": "no call line under the formation line"
+  },
+  {
+   "install_number": 1,
+   "source_page": 144,
+   "page_title": "MOVEMENT 50/15 ne",
+   "cell": {
+    "x": 231,
+    "y": 667
+   },
+   "raw_formation_line": "[11] SOUTH RT F SHORTY",
+   "raw_call_line": "FK 18 SIFT KEEP LT",
+   "personnel": "11",
+   "motion_tag": null,
+   "formation": "SOUTH",
+   "direction": "RT",
+   "adjustment_tags": [
+    "F",
+    "SHORTY"
+   ],
+   "protection": null,
+   "concept": "FK 18 SIFT KEEP LT",
+   "run_number": 18,
+   "ocr_confidence": 51,
+   "raw_call_string": "[11] SOUTH RT F SHORTY / FK 18 SIFT KEEP LT",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (51)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 147,
+   "page_title": "SPECIAL CHIP SCREEN",
+   "cell": {
+    "x": 370,
+    "y": 674
+   },
+   "raw_formation_line": "[12/11] (G) STACK RT YLT",
+   "raw_call_line": "SPECIAL CHIP SCREEN RT",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "STACK",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "YLT"
+   ],
+   "protection": null,
+   "concept": "SPECIAL CHIP SCREEN RT",
+   "run_number": null,
+   "ocr_confidence": 20,
+   "raw_call_string": "[12/11] (G) STACK RT YLT / SPECIAL CHIP SCREEN RT",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (20)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 149,
+   "page_title": "",
+   "cell": {
+    "x": 895,
+    "y": 236
+   },
+   "raw_formation_line": "[12/11] (G) CRACK RT",
+   "raw_call_line": "200 SCAT Y STICK BOW (SBA)",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "CRACK",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN"
+   ],
+   "protection": "200 SCAT",
+   "concept": "Y STICK BOW (SBA)",
+   "run_number": null,
+   "ocr_confidence": 25,
+   "raw_call_string": "[12/11] (G) CRACK RT / 200 SCAT Y STICK BOW (SBA)",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (25)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 149,
+   "page_title": "",
+   "cell": {
+    "x": 892,
+    "y": 659
+   },
+   "raw_formation_line": "[21/12/11] (G) EAST RT OPEN HIP D",
+   "raw_call_line": "200 SCRAM Y STICK BOW (SBA)",
+   "personnel": "21/12/11",
+   "motion_tag": null,
+   "formation": "EAST",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "OPEN",
+    "HIP",
+    "D"
+   ],
+   "protection": "200 SCRAM",
+   "concept": "Y STICK BOW (SBA)",
+   "run_number": null,
+   "ocr_confidence": 54,
+   "raw_call_string": "[21/12/11] (G) EAST RT OPEN HIP D / 200 SCRAM Y STICK BOW (SBA)",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (54)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 150,
+   "page_title": "(QUICK GAME) STICK BARK",
+   "cell": {
+    "x": 752,
+    "y": 237
+   },
+   "raw_formation_line": "[12/11] (G) CRACK RT",
+   "raw_call_line": "200 SCAT Y STICK BARK (SBA)",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "CRACK",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN"
+   ],
+   "protection": "200 SCAT",
+   "concept": "Y STICK BARK (SBA)",
+   "run_number": null,
+   "ocr_confidence": 48,
+   "raw_call_string": "[12/11] (G) CRACK RT / 200 SCAT Y STICK BARK (SBA)",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (48)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 151,
+   "page_title": "(SCAT) REDSKIN / CHIEF",
+   "cell": {
+    "x": 893,
+    "y": 242
+   },
+   "raw_formation_line": "[12/11] (G) CRUSH RT Z RT",
+   "raw_call_line": "2 SCATY REDSKIN",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "CRUSH",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "Z",
+    "RT"
+   ],
+   "protection": null,
+   "concept": "2 SCATY REDSKIN",
+   "run_number": null,
+   "ocr_confidence": 48,
+   "raw_call_string": "[12/11] (G) CRUSH RT Z RT / 2 SCATY REDSKIN",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (48)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 151,
+   "page_title": "(SCAT) REDSKIN / CHIEF",
+   "cell": {
+    "x": 892,
+    "y": 663
+   },
+   "raw_formation_line": "[12/11] (G) SOUTH RT CLOSE",
+   "raw_call_line": "3 SCAT X REDSKIN (524)",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "SOUTH",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "CLOSE"
+   ],
+   "protection": "3 SCAT",
+   "concept": "X REDSKIN (524)",
+   "run_number": null,
+   "ocr_confidence": 23,
+   "raw_call_string": "[12/11] (G) SOUTH RT CLOSE / 3 SCAT X REDSKIN (524)",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (23)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 152,
+   "page_title": "(SCAT) REDSKIN / CHIEF",
+   "cell": {
+    "x": 229,
+    "y": 236
+   },
+   "raw_formation_line": "[11] (G) BUNCH RT TIGHT",
+   "raw_call_line": "2 SCAT Y CHIEF (SBA)",
+   "personnel": "11",
+   "motion_tag": null,
+   "formation": "BUNCH",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "TIGHT"
+   ],
+   "protection": "2 SCAT",
+   "concept": "Y CHIEF (SBA)",
+   "run_number": null,
+   "ocr_confidence": 39,
+   "raw_call_string": "[11] (G) BUNCH RT TIGHT / 2 SCAT Y CHIEF (SBA)",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (39)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 152,
+   "page_title": "(SCAT) REDSKIN / CHIEF",
+   "cell": {
+    "x": 754,
+    "y": 236
+   },
+   "raw_formation_line": "[11] (G) BIN RT TIGHT",
+   "raw_call_line": "2 SCAT F CHIEF (SBA)",
+   "personnel": "11",
+   "motion_tag": null,
+   "formation": "BIN",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "TIGHT"
+   ],
+   "protection": "2 SCAT",
+   "concept": "F CHIEF (SBA)",
+   "run_number": null,
+   "ocr_confidence": 46,
+   "raw_call_string": "[11] (G) BIN RT TIGHT / 2 SCAT F CHIEF (SBA)",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (46)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 152,
+   "page_title": "(SCAT) REDSKIN / CHIEF",
+   "cell": {
+    "x": 232,
+    "y": 658
+   },
+   "raw_formation_line": "[11] (G) CRACK RT",
+   "raw_call_line": "3 SCAT Z CHIEF (SBA)",
+   "personnel": "11",
+   "motion_tag": null,
+   "formation": "CRACK",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN"
+   ],
+   "protection": "3 SCAT",
+   "concept": "Z CHIEF (SBA)",
+   "run_number": null,
+   "ocr_confidence": 0,
+   "raw_call_string": "[11] (G) CRACK RT / 3 SCAT Z CHIEF (SBA)",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (0)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 153,
+   "page_title": "(SCAT) CHEROKEE / DRIVE CHOW",
+   "cell": {
+    "x": 372,
+    "y": 663
+   },
+   "raw_formation_line": "[11] (G) CRUZ RT XRT",
+   "raw_call_line": "2 SCAT X CHEROKEE",
+   "personnel": "11",
+   "motion_tag": null,
+   "formation": "CRUZ",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "XRT"
+   ],
+   "protection": "2 SCAT",
+   "concept": "X CHEROKEE",
+   "run_number": null,
+   "ocr_confidence": 33,
+   "raw_call_string": "[11] (G) CRUZ RT XRT / 2 SCAT X CHEROKEE",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (33)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 153,
+   "page_title": "(SCAT) CHEROKEE / DRIVE CHOW",
+   "cell": {
+    "x": 892,
+    "y": 663
+   },
+   "raw_formation_line": "[11] (G) BUNCH RT",
+   "raw_call_line": "2 SCAT Z DRIVE Y CHOW",
+   "personnel": "11",
+   "motion_tag": null,
+   "formation": "BUNCH",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN"
+   ],
+   "protection": "2 SCAT",
+   "concept": "Z DRIVE Y CHOW",
+   "run_number": null,
+   "ocr_confidence": 27,
+   "raw_call_string": "[11] (G) BUNCH RT / 2 SCAT Z DRIVE Y CHOW",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (27)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 153,
+   "page_title": "(SCAT) CHEROKEE / DRIVE CHOW",
+   "cell": {
+    "x": 372,
+    "y": 1085
+   },
+   "raw_formation_line": "[11] (G) F MO BIN RT",
+   "raw_call_line": "2 SCAT Z DRIVE F CHOW",
+   "personnel": "11",
+   "motion_tag": "F MO",
+   "formation": "BIN",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN"
+   ],
+   "protection": "2 SCAT",
+   "concept": "Z DRIVE F CHOW",
+   "run_number": null,
+   "ocr_confidence": 45,
+   "raw_call_string": "[11] (G) F MO BIN RT / 2 SCAT Z DRIVE F CHOW",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (45)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 157,
+   "page_title": "",
+   "cell": {
+    "x": 892,
+    "y": 662
+   },
+   "raw_formation_line": "[12/11] (G) BUDDY RT TIGHT Y LT",
+   "raw_call_line": "3 JET ZNUNCHUCK",
+   "personnel": "12/11",
+   "motion_tag": null,
+   "formation": "BUDDY",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN",
+    "TIGHT",
+    "Y",
+    "LT"
+   ],
+   "protection": "3 JET",
+   "concept": "ZNUNCHUCK",
+   "run_number": null,
+   "ocr_confidence": 0,
+   "raw_call_string": "[12/11] (G) BUDDY RT TIGHT Y LT / 3 JET ZNUNCHUCK",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (0)"
+  }
+ ]
+}

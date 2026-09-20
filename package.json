@@ -9,7 +9,9 @@
     "lint": "eslint",
     "test": "vitest run",
     "import:formations": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/import-formations.mjs",
-    "render:formations": "vitest run --config vitest.render.config.mts"
+    "render:formations": "vitest run --config vitest.render.config.mts scripts/render-formations.render.tsx",
+    "import:plays": "python scripts/playbook/build_plays.py && vitest run src/seeds/packers2019Plays.test.ts",
+    "render:plays": "vitest run --config vitest.render.config.mts scripts/render-plays.render.tsx"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.116.0",

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { DEFENSE_FORMATIONS, DEMO_PLAYS, OFFENSE_FORMATIONS, PACKERS_2019_FORMATIONS } from '@/seeds';
+import { DEFENSE_FORMATIONS, DEMO_PLAYS, OFFENSE_FORMATIONS, PACKERS_2019_FORMATIONS, PACKERS_2019_PLAYS, PACKERS_2019_ROUTES } from '@/seeds';
 import { PlayThumb } from '@/render/PlayThumb';
 import { themeFor } from '@/render/theme';
 import { playDefenseLabel, playHeaderLine1 } from '@/model/factories';
@@ -87,6 +87,31 @@ export default async function GalleryPage(props: PageProps<'/dev/gallery'>) {
           </div>
         </section>
       ))}
+
+      <h2 className="font-bold mt-8 mb-1">Packers 2019 plays ({PACKERS_2019_PLAYS.length})</h2>
+      <p className="text-sm text-neutral-600 mb-2">
+        Composed from an imported formation, a protection, and a route word per receiver out of the {PACKERS_2019_ROUTES.length}-route library. Nothing is traced from the scans.{' '}
+        {PACKERS_2019_PLAYS.filter((p) => p.confidence === 'needs-review').length} need review (the reasons are on each play).
+      </p>
+      <div className="grid gap-3 grid-cols-2 md:grid-cols-3">
+        {PACKERS_2019_PLAYS.map((p) => (
+          <div key={p.id} className="border border-black bg-white">
+            <div className="text-center border-b border-black py-1 leading-tight px-1">
+              <div className="font-bold text-xs uppercase">{playHeaderLine1(p)}</div>
+              <div className="font-bold text-sm uppercase">{p.name}</div>
+            </div>
+            <div className="aspect-[4/3]">
+              <PlayThumb diagram={p.diagram} aspect={4 / 3} theme={theme} />
+            </div>
+            <div className="flex justify-between text-[11px] px-2 py-1 border-t border-black">
+              <span>
+                {p.category} &middot; install {p.install} &middot; p.{p.sourcePage}
+              </span>
+              {p.confidence === 'needs-review' && <span className="bg-amber-200 font-bold px-1" title={p.reviewNotes?.join(' | ')}>needs review</span>}
+            </div>
+          </div>
+        ))}
+      </div>
 
       <h2 className="font-bold mt-8 mb-2">Defense ({DEFENSE_FORMATIONS.length})</h2>
       <div className="grid gap-3 grid-cols-2 md:grid-cols-3">

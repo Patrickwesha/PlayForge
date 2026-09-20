@@ -2,7 +2,7 @@ import Dexie, { type EntityTable } from 'dexie';
 import type { Formation, Play, Playbook } from '@/model/types';
 import { SEED_TIME, itemKey } from '@/model/seedRules';
 import type { OutboxRow, TombstoneRow } from '@/sync/types';
-import { DEFENSE_FORMATIONS, DEMO_PLAYS, OFFENSE_FORMATIONS, PACKERS_2019_FORMATIONS, PACKERS_2019_ID_PREFIX, PACKERS_2019_REVISION } from '@/seeds';
+import { DEFENSE_FORMATIONS, DEMO_PLAYS, OFFENSE_FORMATIONS, PACKERS_2019_FORMATIONS, PACKERS_2019_ID_PREFIX, PACKERS_2019_PLAYS, PACKERS_2019_PLAYS_REVISION, PACKERS_2019_PLAY_ID_PREFIX, PACKERS_2019_REVISION } from '@/seeds';
 
 export type SettingRow = { key: string; value: unknown };
 
@@ -37,8 +37,9 @@ export const DEMO_PLAYBOOK_ID = 'seed-playbook-beast';
 /** Bump when built-in formations or demo plays change; untouched seed rows are refreshed on open. */
 export const SEED_VERSION = 3;
 /** What the database records as seeded. The pack revision is a content hash, so re-running the formation import refreshes open databases without a manual bump. */
-export const SEED_STAMP = `${SEED_VERSION}:${PACKERS_2019_REVISION}`;
+export const SEED_STAMP = `${SEED_VERSION}:${PACKERS_2019_REVISION}:${PACKERS_2019_PLAYS_REVISION}`;
 const SEED_FORMATIONS = [...OFFENSE_FORMATIONS, ...DEFENSE_FORMATIONS, ...PACKERS_2019_FORMATIONS];
+const SEED_PLAYS = [...DEMO_PLAYS, ...PACKERS_2019_PLAYS];
 
 export async function ensureSeeds(database: PlayForgeDB) {
   const row = await database.settings.get('seedVersion');
@@ -55,11 +56,15 @@ export async function ensureSeeds(database: PlayForgeDB) {
     const packIds = new Set(PACKERS_2019_FORMATIONS.map((f) => f.id));
     const stale = await database.formations.filter((f) => f.id.startsWith(PACKERS_2019_ID_PREFIX) && f.builtin === true && !packIds.has(f.id)).primaryKeys();
     await database.formations.bulkDelete(stale);
-    for (const p of DEMO_PLAYS) {
+    for (const p of SEED_PLAYS) {
       if (gone.has(itemKey('play', p.id))) continue;
       const existing = await database.plays.get(p.id);
       if (!existing || existing.updatedAt === SEED_TIME) await database.plays.put(p);
     }
+    // Pack plays that were renamed or dropped by a re-import: remove the untouched copies.
+    const playIds = new Set(PACKERS_2019_PLAYS.map((p) => p.id));
+    const stalePlays = await database.plays.filter((p) => p.id.startsWith(PACKERS_2019_PLAY_ID_PREFIX) && p.updatedAt === SEED_TIME && !playIds.has(p.id)).primaryKeys();
+    await database.plays.bulkDelete(stalePlays);
     await database.settings.put({ key: 'seedVersion', value: SEED_STAMP });
   });
 }
@@ -67,7 +72,7 @@ export async function ensureSeeds(database: PlayForgeDB) {
 export async function seedDatabase(database: PlayForgeDB) {
   const t = SEED_TIME;
   await database.formations.bulkPut(SEED_FORMATIONS);
-  await database.plays.bulkPut(DEMO_PLAYS);
+  await database.plays.bulkPut(SEED_PLAYS);
   await database.playbooks.put({
     id: DEMO_PLAYBOOK_ID,
     name: 'BEAST OFFENSE',

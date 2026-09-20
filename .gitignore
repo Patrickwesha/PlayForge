@@ -42,3 +42,9 @@ next-env.d.ts
 
 # rendered formation previews (npm run render:formations)
 /renders/
+
+# playbook scans and OCR text (copyrighted source material, stays on this machine)
+/data/packers-2019/ocr/
+/data/packers-2019/local/
+
+__pycache__/

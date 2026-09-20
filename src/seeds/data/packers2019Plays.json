@@ -1,0 +1,5668 @@
+{
+ "_generated": "Written by scripts/playbook/build_plays.py. Do not edit by hand.",
+ "pack": "packers-2019-plays",
+ "source": "2019 Green Bay Packers offensive playbook (LaFleur)",
+ "revision": "96c918437402",
+ "plays": [
+  {
+   "key": "bin-rt-f-lt-300-jet-z-stick",
+   "name": "300 JET Z STICK",
+   "formationLabel": "BIN RT F LT",
+   "formationKey": "bin-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 134,
+   "rawCall": "[12/11] BIN RT F LT / 300 JET Z STICK",
+   "callSource": "read-from-page",
+   "adjustmentTags": [
+    "F",
+    "LT"
+   ],
+   "unappliedTags": [
+    "F",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": "300 JET",
+   "concept": "Z STICK",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "Z": "wr-stick",
+    "Y": "wr-flat",
+    "F": "wr-over",
+    "X": "wr-thunder",
+    "H": "hb-check-slow"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Bin Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: F LT",
+    "call text was read from the page (OCR missed the cell)"
+   ]
+  },
+  {
+   "key": "bin-rt-tight-2-scat-f-chief-sba",
+   "name": "2 SCAT F CHIEF (SBA)",
+   "formationLabel": "BIN RT TIGHT",
+   "formationKey": "bin-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 152,
+   "rawCall": "[11] BIN RT TIGHT / 2 SCAT F CHIEF (SBA)",
+   "callSource": "ocr-flagged-confirmed-by-reading",
+   "adjustmentTags": [
+    "GUN",
+    "TIGHT"
+   ],
+   "unappliedTags": [
+    "TIGHT"
+   ],
+   "motionTag": null,
+   "protection": "2 SCAT",
+   "concept": "F CHIEF (SBA)",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-low-shallow-cross",
+    "F": "wr-high-shallow-cross",
+    "Y": "wr-deep-sit",
+    "Z": "wr-corner",
+    "H": "hb-check-flat"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Bin Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: TIGHT",
+    "call text was flagged by OCR and confirmed by reading the page"
+   ]
+  },
+  {
+   "key": "buddy-rt-tight-y-lt-3-jet-z-nunchuck",
+   "name": "3 JET Z NUNCHUCK",
+   "formationLabel": "BUDDY RT TIGHT Y LT",
+   "formationKey": "buddy-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 157,
+   "rawCall": "[12/11] BUDDY RT TIGHT Y LT / 3 JET Z NUNCHUCK",
+   "callSource": "ocr-flagged-confirmed-by-reading",
+   "adjustmentTags": [
+    "GUN",
+    "TIGHT",
+    "Y",
+    "LT"
+   ],
+   "unappliedTags": [
+    "TIGHT",
+    "Y",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": "3 JET",
+   "concept": "Z NUNCHUCK",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-corner",
+    "Y": "wr-drag-china",
+    "Z": "wr-stick-nod",
+    "F": "wr-drag-china",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Buddy Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: TIGHT Y LT",
+    "call text was flagged by OCR and confirmed by reading the page",
+    "route DRAG CHINA is needs-review in the library",
+    "route DRAG CHINA is needs-review in the library"
+   ]
+  },
+  {
+   "key": "bunch-lt-y-rt-18-structure",
+   "name": "18 STRUCTURE",
+   "formationLabel": "BUNCH LT Y RT",
+   "formationKey": "bunch-rt-11",
+   "direction": "LT",
+   "personnel": "12/11",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 121,
+   "rawCall": "[12/11] BUNCH LT Y RT / 18 STRUCTURE",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "Y",
+    "RT"
+   ],
+   "unappliedTags": [
+    "Y",
+    "RT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "18 STRUCTURE",
+   "runNumber": 18,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Bunch Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: Y RT",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "bunch-rt-2-scat-z-drive-y-chow",
+   "name": "2 SCAT Z DRIVE Y CHOW",
+   "formationLabel": "BUNCH RT",
+   "formationKey": "bunch-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 153,
+   "rawCall": "[11] BUNCH RT / 2 SCAT Z DRIVE Y CHOW",
+   "callSource": "ocr-flagged-confirmed-by-reading",
+   "adjustmentTags": [
+    "GUN"
+   ],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": "2 SCAT",
+   "concept": "Z DRIVE Y CHOW",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-go",
+    "F": "wr-basic",
+    "Y": "wr-drag-china",
+    "Z": "wr-shallow-cross"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Bunch Rt [11] is itself needs-review (positions are a starting shape)",
+    "The back is marked hot with an outlet arrow but has no route word on the page.",
+    "call text was flagged by OCR and confirmed by reading the page",
+    "route DRAG CHINA is needs-review in the library"
+   ]
+  },
+  {
+   "key": "bunch-rt-special-screen-lt",
+   "name": "SPECIAL SCREEN LT",
+   "formationLabel": "BUNCH RT",
+   "formationKey": "bunch-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Screen",
+   "install": 1,
+   "sourcePage": 146,
+   "rawCall": "[12/11] BUNCH RT / SPECIAL SCREEN LT",
+   "callSource": "ocr",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": null,
+   "concept": "SPECIAL SCREEN LT",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "H": "hb-screen"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Bunch Rt [11] is itself needs-review (positions are a starting shape)",
+    "Screen: everyone else blocks. Only the back's route is a route-tree word.",
+    "route SCREEN is needs-review in the library"
+   ]
+  },
+  {
+   "key": "bunch-rt-tight-2-scat-y-chief-sba",
+   "name": "2 SCAT Y CHIEF (SBA)",
+   "formationLabel": "BUNCH RT TIGHT",
+   "formationKey": "bunch-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 152,
+   "rawCall": "[11] BUNCH RT TIGHT / 2 SCAT Y CHIEF (SBA)",
+   "callSource": "ocr-flagged-confirmed-by-reading",
+   "adjustmentTags": [
+    "GUN",
+    "TIGHT"
+   ],
+   "unappliedTags": [
+    "TIGHT"
+   ],
+   "motionTag": null,
+   "protection": "2 SCAT",
+   "concept": "Y CHIEF (SBA)",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-low-shallow-cross",
+    "Y": "wr-high-shallow-cross",
+    "F": "wr-deep-sit",
+    "Z": "wr-corner",
+    "H": "hb-check-flat"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Bunch Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: TIGHT",
+    "call text was flagged by OCR and confirmed by reading the page"
+   ]
+  },
+  {
+   "key": "bunch-rt-tight-y-lt-19-can-18-wanda",
+   "name": "19 (CAN) 18 WANDA",
+   "formationLabel": "BUNCH RT TIGHT Y LT",
+   "formationKey": "bunch-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 115,
+   "rawCall": "[11] BUNCH RT TIGHT Y LT / 19 (CAN) 18 WANDA",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "TIGHT",
+    "Y",
+    "LT"
+   ],
+   "unappliedTags": [
+    "TIGHT",
+    "Y",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "19 (CAN) 18 WANDA",
+   "runNumber": 19,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "OL/TE (p-113): Outside Zone scheme principles and rules. X play. Box declared.",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Bunch Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: TIGHT Y LT",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "bunch-rt-tight-y-lt-2-jet-y-coco-bow",
+   "name": "2 JET Y COCO BOW",
+   "formationLabel": "BUNCH RT TIGHT Y LT",
+   "formationKey": "bunch-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 137,
+   "rawCall": "[12/11] BUNCH RT TIGHT Y LT / 2 JET Y COCO BOW",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "TIGHT",
+    "Y",
+    "LT"
+   ],
+   "unappliedTags": [
+    "TIGHT",
+    "Y",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": "2 JET",
+   "concept": "Y COCO BOW",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-corner",
+    "Y": "wr-c-o",
+    "F": "wr-basic",
+    "Z": "wr-arrow-inside-basic-route",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Bunch Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: TIGHT Y LT"
+   ]
+  },
+  {
+   "key": "bunch-rt-tight-y-lt-fk-18-keep-lt",
+   "name": "FK 18 KEEP LT",
+   "formationLabel": "BUNCH RT TIGHT Y LT",
+   "formationKey": "bunch-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "PA",
+   "install": 1,
+   "sourcePage": 144,
+   "rawCall": "[11] BUNCH RT TIGHT Y LT / FK 18 KEEP LT",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "TIGHT",
+    "Y",
+    "LT"
+   ],
+   "unappliedTags": [
+    "TIGHT",
+    "Y",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "FK 18 KEEP LT",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-high-corner",
+    "Y": "wr-down-flat-in-line-late",
+    "F": "wr-low-cross-2-split",
+    "Z": "wr-far-corner",
+    "H": "hb-check-flat"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Bunch Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: TIGHT Y LT",
+    "route DOWN FLAT is needs-review in the library",
+    "route FAR CORNER is needs-review in the library"
+   ]
+  },
+  {
+   "key": "bunch-rt-y-lt-300-jet-z-stick",
+   "name": "300 JET Z STICK",
+   "formationLabel": "BUNCH RT Y LT",
+   "formationKey": "bunch-rt-11",
+   "direction": "RT",
+   "personnel": "21/12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 134,
+   "rawCall": "[21/12/11] BUNCH RT Y LT / 300 JET Z STICK",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "Y",
+    "LT"
+   ],
+   "unappliedTags": [
+    "Y",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": "300 JET",
+   "concept": "Z STICK",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "Z": "wr-stick",
+    "F": "wr-flat",
+    "Y": "wr-over",
+    "X": "wr-thunder",
+    "H": "hb-check-slow"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Bunch Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: Y LT"
+   ]
+  },
+  {
+   "key": "bunch-rt-y-righty-2-jet-z-skinner-return-burst",
+   "name": "2 JET Z SKINNER RETURN BURST",
+   "formationLabel": "BUNCH RT (-) Y RIGHTY",
+   "formationKey": "bunch-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 154,
+   "rawCall": "[12/11] BUNCH RT (-) Y RIGHTY / 2 JET Z SKINNER RETURN BURST",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN",
+    "(-)",
+    "Y",
+    "RIGHTY"
+   ],
+   "unappliedTags": [
+    "(-)",
+    "Y",
+    "RIGHTY"
+   ],
+   "motionTag": null,
+   "protection": "2 JET",
+   "concept": "Z SKINNER RETURN BURST",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-go",
+    "F": "wr-thru",
+    "Z": "wr-skinner",
+    "Y": "wr-now-return",
+    "H": "hb-check-burst"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Bunch Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: (-) Y RIGHTY"
+   ]
+  },
+  {
+   "key": "crack-rt-2-jet-z-coco-swab",
+   "name": "2 JET Z COCO SWAB",
+   "formationLabel": "CRACK RT",
+   "formationKey": "crack-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 137,
+   "rawCall": "[12/11] CRACK RT / 2 JET Z COCO SWAB",
+   "callSource": "ocr-flagged-confirmed-by-reading",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": "2 JET",
+   "concept": "Z COCO SWAB",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-corner",
+    "F": "wr-shallow-cross",
+    "Z": "wr-c-o",
+    "Y": "wr-basic",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Crack Rt [11] is itself needs-review (positions are a starting shape)",
+    "call text was flagged by OCR and confirmed by reading the page"
+   ]
+  },
+  {
+   "key": "crack-rt-200-scat-y-stick-bark-sba",
+   "name": "200 SCAT Y STICK BARK (SBA)",
+   "formationLabel": "CRACK RT",
+   "formationKey": "crack-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 150,
+   "rawCall": "[12/11] CRACK RT / 200 SCAT Y STICK BARK (SBA)",
+   "callSource": "ocr-flagged-confirmed-by-reading",
+   "adjustmentTags": [
+    "GUN"
+   ],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": "200 SCAT",
+   "concept": "Y STICK BARK (SBA)",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-dart",
+    "F": "wr-basic",
+    "Z": "wr-drag-china",
+    "Y": "wr-stick",
+    "H": "hb-check-flat"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Crack Rt [11] is itself needs-review (positions are a starting shape)",
+    "call text was flagged by OCR and confirmed by reading the page",
+    "route DRAG CHINA is needs-review in the library"
+   ]
+  },
+  {
+   "key": "crack-rt-200-scat-y-stick-bow-sba",
+   "name": "200 SCAT Y STICK BOW (SBA)",
+   "formationLabel": "CRACK RT",
+   "formationKey": "crack-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 149,
+   "rawCall": "[12/11] CRACK RT / 200 SCAT Y STICK BOW (SBA)",
+   "callSource": "ocr-flagged-confirmed-by-reading",
+   "adjustmentTags": [
+    "GUN"
+   ],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": "200 SCAT",
+   "concept": "Y STICK BOW (SBA)",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-arrow-inside-basic-route",
+    "F": "wr-basic",
+    "Z": "wr-flat",
+    "Y": "wr-stick",
+    "H": "hb-check-flat"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Crack Rt [11] is itself needs-review (positions are a starting shape)",
+    "call text was flagged by OCR and confirmed by reading the page"
+   ]
+  },
+  {
+   "key": "crack-rt-3-scat-z-chief-sba",
+   "name": "3 SCAT Z CHIEF (SBA)",
+   "formationLabel": "CRACK RT",
+   "formationKey": "crack-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 152,
+   "rawCall": "[11] CRACK RT / 3 SCAT Z CHIEF (SBA)",
+   "callSource": "ocr-flagged-confirmed-by-reading",
+   "adjustmentTags": [
+    "GUN"
+   ],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": "3 SCAT",
+   "concept": "Z CHIEF (SBA)",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-corner",
+    "F": "wr-deep-sit",
+    "Z": "wr-high-shallow-cross",
+    "Y": "wr-low-shallow-cross",
+    "H": "hb-check-flat"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Crack Rt [11] is itself needs-review (positions are a starting shape)",
+    "call text was flagged by OCR and confirmed by reading the page"
+   ]
+  },
+  {
+   "key": "crack-rt-z-rt-3-jet-f-shallow-cross-z-archo",
+   "name": "3 JET F SHALLOW CROSS Z ARCHO",
+   "formationLabel": "CRACK RT Z RT",
+   "formationKey": "crack-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 140,
+   "rawCall": "[12/11] CRACK RT Z RT / 3 JET F SHALLOW CROSS Z ARCHO",
+   "callSource": "read-from-page",
+   "adjustmentTags": [
+    "Z",
+    "RT"
+   ],
+   "unappliedTags": [
+    "Z",
+    "RT"
+   ],
+   "motionTag": null,
+   "protection": "3 JET",
+   "concept": "F SHALLOW CROSS Z ARCHO",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-swig",
+    "F": "wr-shallow-cross",
+    "Z": "wr-archo",
+    "Y": "wr-deep-sit",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Crack Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: Z RT",
+    "call text was read from the page (OCR missed the cell)",
+    "route ARCHO is needs-review in the library"
+   ]
+  },
+  {
+   "key": "crack-rt-z-rt-3-jet-x-shallow-cross",
+   "name": "3 JET X SHALLOW CROSS",
+   "formationLabel": "CRACK RT Z RT",
+   "formationKey": "crack-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 140,
+   "rawCall": "[12/11] CRACK RT Z RT / 3 JET X SHALLOW CROSS",
+   "callSource": "ocr-flagged-confirmed-by-reading",
+   "adjustmentTags": [
+    "Z",
+    "RT"
+   ],
+   "unappliedTags": [
+    "Z",
+    "RT"
+   ],
+   "motionTag": null,
+   "protection": "3 JET",
+   "concept": "X SHALLOW CROSS",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-shallow-cross",
+    "F": "wr-swig",
+    "Z": "wr-post-widen",
+    "Y": "wr-deep-sit",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Crack Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: Z RT",
+    "call text was flagged by OCR and confirmed by reading the page"
+   ]
+  },
+  {
+   "key": "crip-rt-open-c-200-scram-y-stick-bow-sba",
+   "name": "200 SCRAM Y STICK BOW (SBA)",
+   "formationLabel": "CRIP RT OPEN C",
+   "formationKey": "crip-rt-11",
+   "direction": "RT",
+   "personnel": "21/12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 149,
+   "rawCall": "[21/12/11] CRIP RT OPEN C / 200 SCRAM Y STICK BOW (SBA)",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN",
+    "OPEN",
+    "C"
+   ],
+   "unappliedTags": [
+    "OPEN",
+    "C"
+   ],
+   "motionTag": null,
+   "protection": "200 SCRAM",
+   "concept": "Y STICK BOW (SBA)",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-arrow-inside-basic-route",
+    "Z": "wr-basic",
+    "F": "wr-flat",
+    "H": "wr-flat",
+    "Y": "wr-stick"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Crip Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: OPEN C",
+    "H runs FLAT from a receiver spot, but the imported formation has him in the backfield"
+   ]
+  },
+  {
+   "key": "crip-rt-open-c-300-scat-y-stick-bark-sba",
+   "name": "300 SCAT Y STICK BARK (SBA)",
+   "formationLabel": "CRIP RT OPEN C",
+   "formationKey": "crip-rt-11",
+   "direction": "RT",
+   "personnel": "21/12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 150,
+   "rawCall": "[21/12/11] CRIP RT OPEN C / 300 SCAT Y STICK BARK (SBA)",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN",
+    "OPEN",
+    "C"
+   ],
+   "unappliedTags": [
+    "OPEN",
+    "C"
+   ],
+   "motionTag": null,
+   "protection": "300 SCAT",
+   "concept": "Y STICK BARK (SBA)",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-dart",
+    "Z": "wr-basic",
+    "F": "wr-drag-china",
+    "H": "wr-flat",
+    "Y": "wr-stick"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Crip Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: OPEN C",
+    "route DRAG CHINA is needs-review in the library",
+    "H runs FLAT from a receiver spot, but the imported formation has him in the backfield"
+   ]
+  },
+  {
+   "key": "crush-rt-out-special-chip-screen-rt",
+   "name": "SPECIAL CHIP SCREEN RT",
+   "formationLabel": "CRUSH RT OUT",
+   "formationKey": "crush-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Screen",
+   "install": 1,
+   "sourcePage": 147,
+   "rawCall": "[12/11] CRUSH RT OUT / SPECIAL CHIP SCREEN RT",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN",
+    "OUT"
+   ],
+   "unappliedTags": [
+    "OUT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "SPECIAL CHIP SCREEN RT",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "H": "hb-screen"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Crush Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: OUT",
+    "Chip screen: the back shows a chip and turns in; everyone else blocks.",
+    "route SCREEN is needs-review in the library"
+   ]
+  },
+  {
+   "key": "crush-rt-z-rt-2-jet-f-snout-bow",
+   "name": "2 JET F SNOUT BOW",
+   "formationLabel": "CRUSH RT Z RT",
+   "formationKey": "crush-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 139,
+   "rawCall": "[12/11] CRUSH RT Z RT / 2 JET F SNOUT BOW",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "Z",
+    "RT"
+   ],
+   "unappliedTags": [
+    "Z",
+    "RT"
+   ],
+   "motionTag": null,
+   "protection": "2 JET",
+   "concept": "F SNOUT BOW",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "F": "wr-snag",
+    "X": "wr-scout",
+    "Z": "wr-arrow-inside-basic-route",
+    "Y": "wr-basic",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Crush Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: Z RT"
+   ]
+  },
+  {
+   "key": "crush-rt-z-rt-2-scat-y-redskin",
+   "name": "2 SCAT Y REDSKIN",
+   "formationLabel": "CRUSH RT Z RT",
+   "formationKey": "crush-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 151,
+   "rawCall": "[12/11] CRUSH RT Z RT / 2 SCAT Y REDSKIN",
+   "callSource": "ocr-flagged-confirmed-by-reading",
+   "adjustmentTags": [
+    "GUN",
+    "Z",
+    "RT"
+   ],
+   "unappliedTags": [
+    "Z",
+    "RT"
+   ],
+   "motionTag": null,
+   "protection": "2 SCAT",
+   "concept": "Y REDSKIN",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "F": "wr-low-shallow-cross",
+    "X": "wr-corner",
+    "Z": "wr-deep-sit",
+    "Y": "wr-high-shallow-cross",
+    "H": "hb-rail"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Crush Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: Z RT",
+    "call text was flagged by OCR and confirmed by reading the page"
+   ]
+  },
+  {
+   "key": "crush-rt-z-rt-2-scat-z-skinner-wheel-dash",
+   "name": "2 SCAT Z SKINNER WHEEL DASH",
+   "formationLabel": "CRUSH RT Z RT",
+   "formationKey": "crush-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 155,
+   "rawCall": "[11] CRUSH RT Z RT / 2 SCAT Z SKINNER WHEEL DASH",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN",
+    "Z",
+    "RT"
+   ],
+   "unappliedTags": [
+    "Z",
+    "RT"
+   ],
+   "motionTag": null,
+   "protection": "2 SCAT",
+   "concept": "Z SKINNER WHEEL DASH",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "F": "wr-dart",
+    "X": "wr-swirl",
+    "Z": "wr-skinner",
+    "Y": "wr-thru",
+    "H": "hb-wheel"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Crush Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: Z RT"
+   ]
+  },
+  {
+   "key": "crush-rt-z-rt-200-jet-both-omaha",
+   "name": "200 JET BOTH OMAHA",
+   "formationLabel": "CRUSH RT Z RT",
+   "formationKey": "crush-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 135,
+   "rawCall": "[12/11] CRUSH RT Z RT / 200 JET BOTH OMAHA",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "Z",
+    "RT"
+   ],
+   "unappliedTags": [
+    "Z",
+    "RT"
+   ],
+   "motionTag": null,
+   "protection": "200 JET",
+   "concept": "BOTH OMAHA",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "F": "wr-omaha",
+    "X": "wr-coin",
+    "Y": "wr-coin",
+    "Z": "wr-omaha",
+    "H": "hb-check-thru"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Crush Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: Z RT"
+   ]
+  },
+  {
+   "key": "cruz-rt-x-rt-2-scat-x-cherokee",
+   "name": "2 SCAT X CHEROKEE",
+   "formationLabel": "CRUZ RT X RT",
+   "formationKey": "cruz-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 153,
+   "rawCall": "[11] CRUZ RT X RT / 2 SCAT X CHEROKEE",
+   "callSource": "ocr-flagged-confirmed-by-reading",
+   "adjustmentTags": [
+    "GUN",
+    "X",
+    "RT"
+   ],
+   "unappliedTags": [
+    "X",
+    "RT"
+   ],
+   "motionTag": null,
+   "protection": "2 SCAT",
+   "concept": "X CHEROKEE",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "Z": "wr-low-shallow-cross",
+    "F": "wr-corner",
+    "X": "wr-high-shallow-cross",
+    "Y": "wr-basic",
+    "H": "hb-rail"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Cruz Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: X RT",
+    "call text was flagged by OCR and confirmed by reading the page"
+   ]
+  },
+  {
+   "key": "deuce-lt-book-al-z-insert-14-al-oscar",
+   "name": "14 AL OSCAR",
+   "formationLabel": "DEUCE LT BOOK AL Z INSERT",
+   "formationKey": "deuce-rt-12",
+   "direction": "LT",
+   "personnel": "12",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 128,
+   "rawCall": "[12] DEUCE LT BOOK AL Z INSERT / 14 AL OSCAR",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "BOOK",
+    "AL",
+    "Z",
+    "INSERT"
+   ],
+   "unappliedTags": [
+    "BOOK",
+    "AL",
+    "Z",
+    "INSERT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "14 AL OSCAR",
+   "runNumber": 14,
+   "runFamily": "inside-zone",
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Deuce Rt [12] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: BOOK AL Z INSERT",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "deuce-lt-book-al-z-insert-toss-14-al-oscar",
+   "name": "TOSS 14 AL OSCAR",
+   "formationLabel": "DEUCE LT BOOK AL Z INSERT",
+   "formationKey": "deuce-rt-12",
+   "direction": "LT",
+   "personnel": "12",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 128,
+   "rawCall": "[12] DEUCE LT BOOK AL Z INSERT / TOSS 14 AL OSCAR",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "BOOK",
+    "AL",
+    "Z",
+    "INSERT"
+   ],
+   "unappliedTags": [
+    "BOOK",
+    "AL",
+    "Z",
+    "INSERT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "TOSS 14 AL OSCAR",
+   "runNumber": 14,
+   "runFamily": "inside-zone",
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Deuce Rt [12] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: BOOK AL Z INSERT",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "deuce-lt-book-f-lt-19-zorro",
+   "name": "19 ZORRO",
+   "formationLabel": "DEUCE LT BOOK F LT",
+   "formationKey": "deuce-rt-12",
+   "direction": "LT",
+   "personnel": "12",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 109,
+   "rawCall": "[12] DEUCE LT BOOK F LT / 19 ZORRO",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "BOOK",
+    "F",
+    "LT"
+   ],
+   "unappliedTags": [
+    "BOOK",
+    "F",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "19 ZORRO",
+   "runNumber": 19,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "QB (p-107): Open play side at 4:30 or 7:30. Run keeper fake. OL/TE (p-107): Outside zone blocking principles and rules. Mike Declared. Front 7 rul for PSG back. PST no ‘Triples’. TE/FB are combination blocking EMOL : Support. ALERT ‘4 Call’ WK Rotation, PSG slap hip. PST communica vs ‘4’ to TE — TE blocks man w/ ...",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Deuce Rt [12] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: BOOK F LT",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "deuce-lt-book-f-lt-toss-19-zorro",
+   "name": "TOSS 19 ZORRO",
+   "formationLabel": "DEUCE LT BOOK F LT",
+   "formationKey": "deuce-rt-12",
+   "direction": "LT",
+   "personnel": "12",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 109,
+   "rawCall": "[12] DEUCE LT BOOK F LT / TOSS 19 ZORRO",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "BOOK",
+    "F",
+    "LT"
+   ],
+   "unappliedTags": [
+    "BOOK",
+    "F",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "TOSS 19 ZORRO",
+   "runNumber": 19,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "QB (p-107): Open play side at 4:30 or 7:30. Run keeper fake. OL/TE (p-107): Outside zone blocking principles and rules. Mike Declared. Front 7 rul for PSG back. PST no ‘Triples’. TE/FB are combination blocking EMOL : Support. ALERT ‘4 Call’ WK Rotation, PSG slap hip. PST communica vs ‘4’ to TE — TE blocks man w/ ...",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Deuce Rt [12] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: BOOK F LT",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "deuce-rt-18-structure-sift",
+   "name": "18 STRUCTURE SIFT",
+   "formationLabel": "DEUCE RT",
+   "formationKey": "deuce-rt-12",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 121,
+   "rawCall": "[12/11] DEUCE RT / 18 STRUCTURE SIFT",
+   "callSource": "ocr",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": null,
+   "concept": "18 STRUCTURE SIFT",
+   "runNumber": 18,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Deuce Rt [12] is itself needs-review (positions are a starting shape)",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "deuce-rt-200-jet-both-omaha",
+   "name": "200 JET BOTH OMAHA",
+   "formationLabel": "DEUCE RT",
+   "formationKey": "deuce-rt-12",
+   "direction": "RT",
+   "personnel": "12",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 135,
+   "rawCall": "[12] DEUCE RT / 200 JET BOTH OMAHA",
+   "callSource": "ocr",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": "200 JET",
+   "concept": "BOTH OMAHA",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-omaha",
+    "F": "wr-coin",
+    "Y": "wr-coin",
+    "Z": "wr-omaha",
+    "H": "hb-check-thru"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Deuce Rt [12] is itself needs-review (positions are a starting shape)"
+   ]
+  },
+  {
+   "key": "deuce-rt-200-jet-both-stitch",
+   "name": "200 JET BOTH STITCH",
+   "formationLabel": "DEUCE RT",
+   "formationKey": "deuce-rt-12",
+   "direction": "RT",
+   "personnel": "12",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 136,
+   "rawCall": "[12] DEUCE RT / 200 JET BOTH STITCH",
+   "callSource": "ocr",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": "200 JET",
+   "concept": "BOTH STITCH",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-hitch",
+    "F": "wr-coin",
+    "Y": "wr-coin",
+    "Z": "wr-hitch",
+    "H": "hb-check-thru"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Deuce Rt [12] is itself needs-review (positions are a starting shape)"
+   ]
+  },
+  {
+   "key": "deuce-rt-ace-18-al-oscar",
+   "name": "18 AL OSCAR",
+   "formationLabel": "DEUCE RT ACE",
+   "formationKey": "deuce-rt-12",
+   "direction": "RT",
+   "personnel": "12",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 106,
+   "rawCall": "[12] DEUCE RT ACE / 18 AL OSCAR",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "ACE"
+   ],
+   "unappliedTags": [
+    "ACE"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "18 AL OSCAR",
+   "runNumber": 18,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "QB (p-105): Open play side at 4:30 or 7:30. Run keeper fake. Oscar Towards Bounce Read. Oscar Away From Unblockable Support OL/TE (p-105): Outside zone blocking principles and cails. Mike Declared. Front 7 play. NKL TE Declared. vs",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Deuce Rt [12] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: ACE",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ],
+   "alsoOnPages": [
+    106
+   ]
+  },
+  {
+   "key": "deuce-rt-ace-200-jet-both-omaha",
+   "name": "200 JET BOTH OMAHA",
+   "formationLabel": "DEUCE RT ACE",
+   "formationKey": "deuce-rt-12",
+   "direction": "RT",
+   "personnel": "12",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 135,
+   "rawCall": "[12] DEUCE RT ACE / 200 JET BOTH OMAHA",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "ACE"
+   ],
+   "unappliedTags": [
+    "ACE"
+   ],
+   "motionTag": null,
+   "protection": "200 JET",
+   "concept": "BOTH OMAHA",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-omaha",
+    "F": "wr-coin",
+    "Y": "wr-coin",
+    "Z": "wr-omaha",
+    "H": "hb-check-thru"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Deuce Rt [12] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: ACE"
+   ]
+  },
+  {
+   "key": "deuce-rt-book-al-z-insert-15-al-oscar",
+   "name": "15 AL OSCAR",
+   "formationLabel": "DEUCE RT BOOK AL Z INSERT",
+   "formationKey": "deuce-rt-12",
+   "direction": "RT",
+   "personnel": "12",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 128,
+   "rawCall": "[12] DEUCE RT BOOK AL Z INSERT / 15 AL OSCAR",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "BOOK",
+    "AL",
+    "Z",
+    "INSERT"
+   ],
+   "unappliedTags": [
+    "BOOK",
+    "AL",
+    "Z",
+    "INSERT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "15 AL OSCAR",
+   "runNumber": 15,
+   "runFamily": "inside-zone",
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Deuce Rt [12] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: BOOK AL Z INSERT",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ],
+   "alsoOnPages": [
+    128
+   ]
+  },
+  {
+   "key": "deuce-rt-f-rt-special-screen-lt",
+   "name": "SPECIAL SCREEN LT",
+   "formationLabel": "DEUCE RT F RT",
+   "formationKey": "deuce-rt-12",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Screen",
+   "install": 1,
+   "sourcePage": 146,
+   "rawCall": "[12/11] DEUCE RT F RT / SPECIAL SCREEN LT",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "F",
+    "RT"
+   ],
+   "unappliedTags": [
+    "F",
+    "RT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "SPECIAL SCREEN LT",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "H": "hb-screen"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Deuce Rt [12] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: F RT",
+    "Screen: everyone else blocks. Only the back's route is a route-tree word.",
+    "route SCREEN is needs-review in the library"
+   ]
+  },
+  {
+   "key": "deuce-rt-slot-hay-3-scram-y-coin-buffalo",
+   "name": "3 SCRAM Y COIN BUFFALO",
+   "formationLabel": "DEUCE RT SLOT HAY",
+   "formationKey": "deuce-rt-12",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 142,
+   "rawCall": "[12/11] DEUCE RT SLOT HAY / 3 SCRAM Y COIN BUFFALO",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN",
+    "SLOT",
+    "HAY"
+   ],
+   "unappliedTags": [
+    "SLOT",
+    "HAY"
+   ],
+   "motionTag": null,
+   "protection": "3 SCRAM",
+   "concept": "Y COIN BUFFALO",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-now",
+    "Z": "wr-pick-curl",
+    "F": "wr-thru",
+    "Y": "wr-coin",
+    "H": "wr-go-m-o-r"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Deuce Rt [12] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: SLOT HAY",
+    "H runs GO from a receiver spot, but the imported formation has him in the backfield"
+   ]
+  },
+  {
+   "key": "dice-lt-18-wanda-can-19",
+   "name": "18 WANDA (CAN) 19",
+   "formationLabel": "DICE LT",
+   "formationKey": "dice-rt-11",
+   "direction": "LT",
+   "personnel": "11",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 116,
+   "rawCall": "[11] DICE LT / 18 WANDA (CAN) 19",
+   "callSource": "ocr",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": null,
+   "concept": "18 WANDA (CAN) 19",
+   "runNumber": 18,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "OL/TE (p-113): Outside Zone scheme principles and rules. X play. Box declared.",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Dice Rt [11] is itself needs-review (positions are a starting shape)",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ],
+   "alsoOnPages": [
+    116
+   ]
+  },
+  {
+   "key": "dice-lt-19-structure",
+   "name": "19 STRUCTURE",
+   "formationLabel": "DICE LT",
+   "formationKey": "dice-rt-11",
+   "direction": "LT",
+   "personnel": "12/11",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 121,
+   "rawCall": "[12/11] DICE LT / 19 STRUCTURE",
+   "callSource": "ocr",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": null,
+   "concept": "19 STRUCTURE",
+   "runNumber": 19,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Dice Rt [11] is itself needs-review (positions are a starting shape)",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "dice-lt-close-19-can-18-wanda",
+   "name": "19 (CAN) 18 WANDA",
+   "formationLabel": "DICE LT CLOSE",
+   "formationKey": "dice-rt-11",
+   "direction": "LT",
+   "personnel": "12",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 114,
+   "rawCall": "[12] DICE LT CLOSE / 19 (CAN) 18 WANDA",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "CLOSE"
+   ],
+   "unappliedTags": [
+    "CLOSE"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "19 (CAN) 18 WANDA",
+   "runNumber": 19,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "OL/TE (p-113): Outside Zone scheme principles and rules. X play. Box declared.",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Dice Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: CLOSE",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "dice-rt-10-wanda-can-18",
+   "name": "10 WANDA (CAN) 18",
+   "formationLabel": "DICE RT",
+   "formationKey": "dice-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 116,
+   "rawCall": "[11] DICE RT / 10 WANDA (CAN) 18",
+   "callSource": "ocr",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": null,
+   "concept": "10 WANDA (CAN) 18",
+   "runNumber": 18,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "OL/TE (p-113): Outside Zone scheme principles and rules. X play. Box declared.",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Dice Rt [11] is itself needs-review (positions are a starting shape)",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "dice-rt-18-can-19-wanda",
+   "name": "18 (CAN) 19 WANDA",
+   "formationLabel": "DICE RT",
+   "formationKey": "dice-rt-11",
+   "direction": "RT",
+   "personnel": "12",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 114,
+   "rawCall": "[12] DICE RT / 18 (CAN) 19 WANDA",
+   "callSource": "ocr",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": null,
+   "concept": "18 (CAN) 19 WANDA",
+   "runNumber": 18,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "OL/TE (p-113): Outside Zone scheme principles and rules. X play. Box declared.",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Dice Rt [11] is itself needs-review (positions are a starting shape)",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "dice-rt-19-wanda-can-18",
+   "name": "19 WANDA (CAN) 18",
+   "formationLabel": "DICE RT",
+   "formationKey": "dice-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 116,
+   "rawCall": "[11] DICE RT / 19 WANDA (CAN) 18",
+   "callSource": "ocr",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": null,
+   "concept": "19 WANDA (CAN) 18",
+   "runNumber": 19,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "OL/TE (p-113): Outside Zone scheme principles and rules. X play. Box declared.",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Dice Rt [11] is itself needs-review (positions are a starting shape)",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "dice-rt-200-jet-both-stitch",
+   "name": "200 JET BOTH STITCH",
+   "formationLabel": "DICE RT",
+   "formationKey": "dice-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 136,
+   "rawCall": "[12/11] DICE RT / 200 JET BOTH STITCH",
+   "callSource": "read-from-page",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": "200 JET",
+   "concept": "BOTH STITCH",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-hitch",
+    "F": "wr-coin",
+    "Y": "wr-coin",
+    "Z": "wr-hitch",
+    "H": "hb-check-thru"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Dice Rt [11] is itself needs-review (positions are a starting shape)",
+    "call text was read from the page (OCR missed the cell)"
+   ]
+  },
+  {
+   "key": "dice-rt-close-18-can-19-wanda",
+   "name": "18 (CAN) 19 WANDA",
+   "formationLabel": "DICE RT CLOSE",
+   "formationKey": "dice-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 115,
+   "rawCall": "[11] DICE RT CLOSE / 18 (CAN) 19 WANDA",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "CLOSE"
+   ],
+   "unappliedTags": [
+    "CLOSE"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "18 (CAN) 19 WANDA",
+   "runNumber": 18,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "OL/TE (p-113): Outside Zone scheme principles and rules. X play. Box declared.",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Dice Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: CLOSE",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "dice-rt-close-toss-18-can-19-wanda",
+   "name": "TOSS 18 (CAN) 19 WANDA",
+   "formationLabel": "DICE RT CLOSE",
+   "formationKey": "dice-rt-11",
+   "direction": "RT",
+   "personnel": "12",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 114,
+   "rawCall": "[12] DICE RT CLOSE / TOSS 18 (CAN) 19 WANDA",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "CLOSE"
+   ],
+   "unappliedTags": [
+    "CLOSE"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "TOSS 18 (CAN) 19 WANDA",
+   "runNumber": 18,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "OL/TE (p-113): Outside Zone scheme principles and rules. X play. Box declared.",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Dice Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: CLOSE",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "dice-rt-fk-19-keep-rt",
+   "name": "FK 19 KEEP RT",
+   "formationLabel": "DICE RT",
+   "formationKey": "dice-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "PA",
+   "install": 1,
+   "sourcePage": 144,
+   "rawCall": "[11] DICE RT / FK 19 KEEP RT",
+   "callSource": "ocr",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": null,
+   "concept": "FK 19 KEEP RT",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-far-corner",
+    "F": "wr-low-cross-2-split",
+    "Y": "wr-down-flat-in-line-late",
+    "Z": "wr-runback",
+    "H": "hb-check-flat"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Dice Rt [11] is itself needs-review (positions are a starting shape)",
+    "route FAR CORNER is needs-review in the library",
+    "route DOWN FLAT is needs-review in the library"
+   ]
+  },
+  {
+   "key": "dixie-lt-f-short-18-wanda-can-19",
+   "name": "18 WANDA (CAN) 19",
+   "formationLabel": "DIXIE LT F SHORT",
+   "formationKey": "dixie-rt-11",
+   "direction": "LT",
+   "personnel": "11",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 117,
+   "rawCall": "[11] DIXIE LT F SHORT / 18 WANDA (CAN) 19",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "F",
+    "SHORT"
+   ],
+   "unappliedTags": [
+    "F",
+    "SHORT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "18 WANDA (CAN) 19",
+   "runNumber": 18,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "OL/TE (p-113): Outside Zone scheme principles and rules. X play. Box declared.",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Dixie Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: F SHORT",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ],
+   "alsoOnPages": [
+    117
+   ]
+  },
+  {
+   "key": "dixie-rt-out-3-jet-x-shallow-cross",
+   "name": "3 JET X SHALLOW CROSS",
+   "formationLabel": "DIXIE RT OUT",
+   "formationKey": "dixie-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 140,
+   "rawCall": "[12/11] DIXIE RT OUT / 3 JET X SHALLOW CROSS",
+   "callSource": "read-from-page",
+   "adjustmentTags": [
+    "OUT"
+   ],
+   "unappliedTags": [
+    "OUT"
+   ],
+   "motionTag": null,
+   "protection": "3 JET",
+   "concept": "X SHALLOW CROSS",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "F": "wr-swig",
+    "X": "wr-shallow-cross",
+    "Z": "wr-deep-sit",
+    "Y": "wr-post",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Dixie Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: OUT",
+    "call text was read from the page (OCR missed the cell)"
+   ]
+  },
+  {
+   "key": "east-rt-open-hip-d-200-scram-y-stick-bark-sba",
+   "name": "200 SCRAM Y STICK BARK (SBA)",
+   "formationLabel": "EAST RT OPEN HIP D",
+   "formationKey": "east-rt-21",
+   "direction": "RT",
+   "personnel": "21/12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 150,
+   "rawCall": "[21/12/11] EAST RT OPEN HIP D / 200 SCRAM Y STICK BARK (SBA)",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN",
+    "OPEN",
+    "HIP",
+    "D"
+   ],
+   "unappliedTags": [
+    "OPEN",
+    "HIP",
+    "D"
+   ],
+   "motionTag": null,
+   "protection": "200 SCRAM",
+   "concept": "Y STICK BARK (SBA)",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-dart",
+    "Z": "wr-basic",
+    "H": "wr-drag-china",
+    "F": "wr-flat",
+    "Y": "wr-stick"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: OPEN HIP D",
+    "H runs DRAG CHINA from a receiver spot, but the imported formation has him in the backfield",
+    "route DRAG CHINA is needs-review in the library"
+   ]
+  },
+  {
+   "key": "east-rt-open-hip-d-200-scram-y-stick-bow-sba",
+   "name": "200 SCRAM Y STICK BOW (SBA)",
+   "formationLabel": "EAST RT OPEN HIP D",
+   "formationKey": "east-rt-21",
+   "direction": "RT",
+   "personnel": "21/12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 149,
+   "rawCall": "[21/12/11] EAST RT OPEN HIP D / 200 SCRAM Y STICK BOW (SBA)",
+   "callSource": "ocr-flagged-confirmed-by-reading",
+   "adjustmentTags": [
+    "GUN",
+    "OPEN",
+    "HIP",
+    "D"
+   ],
+   "unappliedTags": [
+    "OPEN",
+    "HIP",
+    "D"
+   ],
+   "motionTag": null,
+   "protection": "200 SCRAM",
+   "concept": "Y STICK BOW (SBA)",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-arrow-inside-basic-route",
+    "Z": "wr-basic",
+    "H": "wr-flat",
+    "F": "wr-flat",
+    "Y": "wr-stick"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: OPEN HIP D",
+    "call text was flagged by OCR and confirmed by reading the page",
+    "H runs FLAT from a receiver spot, but the imported formation has him in the backfield"
+   ]
+  },
+  {
+   "key": "f-mo-bin-rt-2-scat-z-drive-f-chow",
+   "name": "2 SCAT Z DRIVE F CHOW",
+   "formationLabel": "F MO BIN RT",
+   "formationKey": "bin-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 153,
+   "rawCall": "[11] F MO BIN RT / 2 SCAT Z DRIVE F CHOW",
+   "callSource": "ocr-flagged-confirmed-by-reading",
+   "adjustmentTags": [
+    "GUN"
+   ],
+   "unappliedTags": [],
+   "motionTag": "F MO",
+   "protection": "2 SCAT",
+   "concept": "Z DRIVE F CHOW",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-go",
+    "F": "wr-drag-china",
+    "Y": "wr-basic",
+    "Z": "wr-shallow-cross"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Bin Rt [11] is itself needs-review (positions are a starting shape)",
+    "motion F MO is recorded but not drawn",
+    "The back is marked hot with an outlet arrow but has no route word on the page.",
+    "call text was flagged by OCR and confirmed by reading the page",
+    "route DRAG CHINA is needs-review in the library"
+   ]
+  },
+  {
+   "key": "f-mo-bin-rt-3-jet-f-coco-swab",
+   "name": "3 JET F COCO SWAB",
+   "formationLabel": "F MO BIN RT",
+   "formationKey": "bin-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 137,
+   "rawCall": "[12/11] F MO BIN RT / 3 JET F COCO SWAB",
+   "callSource": "read-from-page",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": "F MO",
+   "protection": "3 JET",
+   "concept": "F COCO SWAB",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-basic",
+    "F": "wr-c-o",
+    "Y": "wr-shallow-cross",
+    "Z": "wr-corner",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Bin Rt [11] is itself needs-review (positions are a starting shape)",
+    "motion F MO is recorded but not drawn",
+    "call text was read from the page (OCR missed the cell)"
+   ]
+  },
+  {
+   "key": "fast-rt-2-jet-y-shallow-cross-z-glare",
+   "name": "2 JET Y SHALLOW CROSS Z GLARE",
+   "formationLabel": "FAST RT",
+   "formationKey": "fast-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 141,
+   "rawCall": "[12/11] FAST RT / 2 JET Y SHALLOW CROSS Z GLARE",
+   "callSource": "ocr-flagged-confirmed-by-reading",
+   "adjustmentTags": [
+    "GUN"
+   ],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": "2 JET",
+   "concept": "Y SHALLOW CROSS Z GLARE",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-glance",
+    "Z": "wr-rail",
+    "F": "wr-deep-sit",
+    "Y": "wr-shallow-cross",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Fast Rt [11] is itself needs-review (positions are a starting shape)",
+    "call text was flagged by OCR and confirmed by reading the page"
+   ]
+  },
+  {
+   "key": "fast-rt-hay-2-scram-z-skinner-return-y-pile",
+   "name": "2 SCRAM Z SKINNER RETURN Y PILE",
+   "formationLabel": "FAST RT HAY",
+   "formationKey": "fast-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 154,
+   "rawCall": "[11] FAST RT HAY / 2 SCRAM Z SKINNER RETURN Y PILE",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN",
+    "HAY"
+   ],
+   "unappliedTags": [
+    "HAY"
+   ],
+   "motionTag": null,
+   "protection": "2 SCRAM",
+   "concept": "Z SKINNER RETURN Y PILE",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-now-return",
+    "Z": "wr-skinner",
+    "F": "wr-thru",
+    "Y": "wr-pile",
+    "H": "wr-now"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Fast Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: HAY",
+    "H runs NOW from a receiver spot, but the imported formation has him in the backfield"
+   ]
+  },
+  {
+   "key": "fast-rt-open-2-jet-dbl-scout-z-snag",
+   "name": "2 JET DBL SCOUT Z SNAG",
+   "formationLabel": "FAST RT OPEN",
+   "formationKey": "fast-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 139,
+   "rawCall": "[12/11] FAST RT OPEN / 2 JET DBL SCOUT Z SNAG",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "OPEN"
+   ],
+   "unappliedTags": [
+    "OPEN"
+   ],
+   "motionTag": null,
+   "protection": "2 JET",
+   "concept": "DBL SCOUT Z SNAG",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-scout",
+    "Z": "wr-snag",
+    "F": "wr-basic",
+    "Y": "wr-scout",
+    "H": "hb-check-slow"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Fast Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: OPEN"
+   ]
+  },
+  {
+   "key": "fast-rt-open-hay-2-scram-z-scar-return-y-pile",
+   "name": "2 SCRAM Z SCAR RETURN Y PILE",
+   "formationLabel": "FAST RT OPEN HAY",
+   "formationKey": "fast-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 156,
+   "rawCall": "[11] FAST RT OPEN HAY / 2 SCRAM Z SCAR RETURN Y PILE",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN",
+    "OPEN",
+    "HAY"
+   ],
+   "unappliedTags": [
+    "OPEN",
+    "HAY"
+   ],
+   "motionTag": null,
+   "protection": "2 SCRAM",
+   "concept": "Z SCAR RETURN Y PILE",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-nash",
+    "Z": "wr-scooter",
+    "F": "wr-corner",
+    "Y": "wr-pile",
+    "H": "wr-now"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Fast Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: OPEN HAY",
+    "X's label is cut off by the scan edge (reads ...SH); Nash matches the other cell.",
+    "H runs NOW from a receiver spot, but the imported formation has him in the backfield"
+   ]
+  },
+  {
+   "key": "fast-rt-open-z-rt-300-jet-y-stick",
+   "name": "300 JET Y STICK",
+   "formationLabel": "FAST RT OPEN Z RT",
+   "formationKey": "fast-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 134,
+   "rawCall": "[12/11] FAST RT OPEN Z RT / 300 JET Y STICK",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "OPEN",
+    "Z",
+    "RT"
+   ],
+   "unappliedTags": [
+    "OPEN",
+    "Z",
+    "RT"
+   ],
+   "motionTag": null,
+   "protection": "300 JET",
+   "concept": "Y STICK",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "Y": "wr-stick",
+    "Z": "wr-flat",
+    "F": "wr-over",
+    "X": "wr-thunder",
+    "H": "hb-check-slow"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Fast Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: OPEN Z RT"
+   ]
+  },
+  {
+   "key": "fit-rt-2-jet-y-shallow-cross-f-glare",
+   "name": "2 JET Y SHALLOW CROSS F GLARE",
+   "formationLabel": "FIT RT",
+   "formationKey": "fit-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 141,
+   "rawCall": "[11] FIT RT / 2 JET Y SHALLOW CROSS F GLARE",
+   "callSource": "ocr-flagged-confirmed-by-reading",
+   "adjustmentTags": [
+    "GUN"
+   ],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": "2 JET",
+   "concept": "Y SHALLOW CROSS F GLARE",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-glance",
+    "F": "wr-rail",
+    "Z": "wr-deep-sit",
+    "Y": "wr-shallow-cross",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Fit Rt [11] is itself needs-review (positions are a starting shape)",
+    "call text was flagged by OCR and confirmed by reading the page"
+   ]
+  },
+  {
+   "key": "foot-rt-x-rt-3-jet-y-coin-cut",
+   "name": "3 JET Y COIN CUT",
+   "formationLabel": "FOOT RT X RT",
+   "formationKey": "foot-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 138,
+   "rawCall": "[12/11] FOOT RT X RT / 3 JET Y COIN CUT",
+   "callSource": "ocr-flagged-confirmed-by-reading",
+   "adjustmentTags": [
+    "GUN",
+    "X",
+    "RT"
+   ],
+   "unappliedTags": [
+    "X",
+    "RT"
+   ],
+   "motionTag": null,
+   "protection": "3 JET",
+   "concept": "Y COIN CUT",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "F": "wr-under",
+    "Z": "wr-thru",
+    "Y": "wr-coin",
+    "X": "wr-go-m-o-r",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Foot Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: X RT",
+    "call text was flagged by OCR and confirmed by reading the page"
+   ]
+  },
+  {
+   "key": "i-lt-book-14-weak-can-pass",
+   "name": "14 WEAK (CAN) PASS",
+   "formationLabel": "I LT BOOK",
+   "formationKey": "i-rt-book-21",
+   "direction": "LT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 126,
+   "rawCall": "[21] I LT BOOK / 14 WEAK (CAN) PASS",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "BOOK"
+   ],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": null,
+   "concept": "14 WEAK (CAN) PASS",
+   "runNumber": 14,
+   "runFamily": "inside-zone",
+   "routeTags": {},
+   "notes": "QB (p-123): Open deep at 5/7 o'clock. Keeper fake. ALERT ‘SPOT’ Unblockable Support. Fist vs. signal to PSWR. OL/TE (p-123): Inside blocking principles and zone calls. Mike declared. Front 7 Play. OT slap hip fan with Will on LOS and PSG uncovered. vs NKL OC target Mike. ‘SPOT’ Push #1 to playside. = If ‘INSERT’ is called: BST and BSTE work SLB only don’t to - ...",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "i-lt-book-y-rt-18-mike-can-19-weak",
+   "name": "18 MIKE (CAN) 19 WEAK",
+   "formationLabel": "I LT BOOK Y RT",
+   "formationKey": "i-rt-book-21",
+   "direction": "LT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 111,
+   "rawCall": "[21] I LT BOOK Y RT / 18 MIKE (CAN) 19 WEAK",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "BOOK",
+    "Y",
+    "RT"
+   ],
+   "unappliedTags": [
+    "Y",
+    "RT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "18 MIKE (CAN) 19 WEAK",
+   "runNumber": 18,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: Y RT",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "i-lt-book-z-short-14-weak-insert",
+   "name": "14 WEAK INSERT",
+   "formationLabel": "I LT BOOK Z SHORT",
+   "formationKey": "i-rt-book-21",
+   "direction": "LT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 124,
+   "rawCall": "[21] I LT BOOK Z SHORT / 14 WEAK INSERT",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "BOOK",
+    "Z",
+    "SHORT"
+   ],
+   "unappliedTags": [
+    "Z",
+    "SHORT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "14 WEAK INSERT",
+   "runNumber": 14,
+   "runFamily": "inside-zone",
+   "routeTags": {},
+   "notes": "QB (p-123): Open deep at 5/7 o'clock. Keeper fake. ALERT ‘SPOT’ Unblockable Support. Fist vs. signal to PSWR. OL/TE (p-123): Inside blocking principles and zone calls. Mike declared. Front 7 Play. OT slap hip fan with Will on LOS and PSG uncovered. vs NKL OC target Mike. ‘SPOT’ Push #1 to playside. = If ‘INSERT’ is called: BST and BSTE work SLB only don’t to - ...",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: Z SHORT",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "i-lt-clamp-19-mike-can-18-weak",
+   "name": "19 MIKE (CAN) 18 WEAK",
+   "formationLabel": "I LT CLAMP",
+   "formationKey": "i-rt-clamp-21",
+   "direction": "LT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 111,
+   "rawCall": "[21] I LT CLAMP / 19 MIKE (CAN) 18 WEAK",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "CLAMP"
+   ],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": null,
+   "concept": "19 MIKE (CAN) 18 WEAK",
+   "runNumber": 19,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "i-lt-clamp-bump-toss-19-zorro",
+   "name": "TOSS 19 ZORRO",
+   "formationLabel": "I LT CLAMP BUMP",
+   "formationKey": "i-rt-clamp-21",
+   "direction": "LT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 108,
+   "rawCall": "[21] I LT CLAMP BUMP / TOSS 19 ZORRO",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "CLAMP",
+    "BUMP"
+   ],
+   "unappliedTags": [
+    "BUMP"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "TOSS 19 ZORRO",
+   "runNumber": 19,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "QB (p-107): Open play side at 4:30 or 7:30. Run keeper fake. OL/TE (p-107): Outside zone blocking principles and rules. Mike Declared. Front 7 rul for PSG back. PST no ‘Triples’. TE/FB are combination blocking EMOL : Support. ALERT ‘4 Call’ WK Rotation, PSG slap hip. PST communica vs ‘4’ to TE — TE blocks man w/ ...",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: BUMP",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "i-lt-close-bump-fk-19-keep-rt-y-shallow",
+   "name": "FK 19 KEEP RT Y SHALLOW",
+   "formationLabel": "I LT CLOSE BUMP",
+   "formationKey": "i-rt-close-21",
+   "direction": "LT",
+   "personnel": "21/12",
+   "category": "PA",
+   "install": 1,
+   "sourcePage": 145,
+   "rawCall": "[21/12] I LT CLOSE BUMP / FK 19 KEEP RT Y SHALLOW",
+   "callSource": "read-from-page",
+   "adjustmentTags": [
+    "CLOSE",
+    "BUMP"
+   ],
+   "unappliedTags": [
+    "BUMP"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "FK 19 KEEP RT Y SHALLOW",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "Z": "wr-low-cross-2-split",
+    "Y": "wr-shallow-cross",
+    "F": "hb-check-flat",
+    "X": "wr-runback"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: BUMP",
+    "call text was read from the page (OCR missed the cell)"
+   ]
+  },
+  {
+   "key": "i-lt-hip-x-short-14-weak-x-ghost",
+   "name": "14 WEAK X GHOST",
+   "formationLabel": "I LT HIP X SHORT",
+   "formationKey": "i-rt-hip-21",
+   "direction": "LT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 125,
+   "rawCall": "[21] I LT HIP X SHORT / 14 WEAK X GHOST",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "HIP",
+    "X",
+    "SHORT"
+   ],
+   "unappliedTags": [
+    "X",
+    "SHORT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "14 WEAK X GHOST",
+   "runNumber": 14,
+   "runFamily": "inside-zone",
+   "routeTags": {},
+   "notes": "QB (p-123): Open deep at 5/7 o'clock. Keeper fake. ALERT ‘SPOT’ Unblockable Support. Fist vs. signal to PSWR. OL/TE (p-123): Inside blocking principles and zone calls. Mike declared. Front 7 Play. OT slap hip fan with Will on LOS and PSG uncovered. vs NKL OC target Mike. ‘SPOT’ Push #1 to playside. = If ‘INSERT’ is called: BST and BSTE work SLB only don’t to - ...",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: X SHORT",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "i-lt-hip-xlt-18-weak-can-19-mike",
+   "name": "18 WEAK (CAN) 19 MIKE",
+   "formationLabel": "I LT HIP XLT",
+   "formationKey": "i-rt-hip-21",
+   "direction": "LT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 112,
+   "rawCall": "[21] I LT HIP XLT / 18 WEAK (CAN) 19 MIKE",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "HIP",
+    "XLT"
+   ],
+   "unappliedTags": [
+    "XLT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "18 WEAK (CAN) 19 MIKE",
+   "runNumber": 18,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: XLT",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "i-lt-hip-xlt-19-mike-can-18-weak",
+   "name": "19 MIKE (CAN) 18 WEAK",
+   "formationLabel": "I LT HIP XLT",
+   "formationKey": "i-rt-hip-21",
+   "direction": "LT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 111,
+   "rawCall": "[21] I LT HIP XLT / 19 MIKE (CAN) 18 WEAK",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "HIP",
+    "XLT"
+   ],
+   "unappliedTags": [
+    "XLT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "19 MIKE (CAN) 18 WEAK",
+   "runNumber": 19,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: XLT",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "i-lt-slot-x-shorty-14-weak-x-ghost",
+   "name": "14 WEAK X GHOST",
+   "formationLabel": "I LT SLOT X SHORTY",
+   "formationKey": "i-rt-slot-21",
+   "direction": "LT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 125,
+   "rawCall": "[21] I LT SLOT X SHORTY / 14 WEAK X GHOST",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "SLOT",
+    "X",
+    "SHORTY"
+   ],
+   "unappliedTags": [
+    "X",
+    "SHORTY"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "14 WEAK X GHOST",
+   "runNumber": 14,
+   "runFamily": "inside-zone",
+   "routeTags": {},
+   "notes": "QB (p-123): Open deep at 5/7 o'clock. Keeper fake. ALERT ‘SPOT’ Unblockable Support. Fist vs. signal to PSWR. OL/TE (p-123): Inside blocking principles and zone calls. Mike declared. Front 7 Play. OT slap hip fan with Will on LOS and PSG uncovered. vs NKL OC target Mike. ‘SPOT’ Push #1 to playside. = If ‘INSERT’ is called: BST and BSTE work SLB only don’t to - ...",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: X SHORTY",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ],
+   "alsoOnPages": [
+    125
+   ]
+  },
+  {
+   "key": "i-lt-slot-z-lt-might-14-weak",
+   "name": "14 WEAK",
+   "formationLabel": "I LT SLOT Z LT MIGHT",
+   "formationKey": "i-rt-slot-21",
+   "direction": "LT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 124,
+   "rawCall": "[21] I LT SLOT Z LT MIGHT / 14 WEAK",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "SLOT",
+    "Z",
+    "LT",
+    "MIGHT"
+   ],
+   "unappliedTags": [
+    "Z",
+    "LT",
+    "MIGHT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "14 WEAK",
+   "runNumber": 14,
+   "runFamily": "inside-zone",
+   "routeTags": {},
+   "notes": "QB (p-123): Open deep at 5/7 o'clock. Keeper fake. ALERT ‘SPOT’ Unblockable Support. Fist vs. signal to PSWR. OL/TE (p-123): Inside blocking principles and zone calls. Mike declared. Front 7 Play. OT slap hip fan with Will on LOS and PSG uncovered. vs NKL OC target Mike. ‘SPOT’ Push #1 to playside. = If ‘INSERT’ is called: BST and BSTE work SLB only don’t to - ...",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: Z LT MIGHT",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "i-rt-book-15-weak-can-pass-x-strike",
+   "name": "15 WEAK (CAN) PASS X STRIKE",
+   "formationLabel": "I RT BOOK",
+   "formationKey": "i-rt-book-21",
+   "direction": "RT",
+   "personnel": "21/12",
+   "category": "PA",
+   "install": 1,
+   "sourcePage": 143,
+   "rawCall": "[21/12] I RT BOOK / 15 WEAK (CAN) PASS X STRIKE",
+   "callSource": "read-from-page",
+   "adjustmentTags": [
+    "BOOK"
+   ],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": null,
+   "concept": "15 WEAK (CAN) PASS X STRIKE",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-strike",
+    "Z": "wr-streak",
+    "F": "hb-check-flat",
+    "H": "hb-check-thru"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "call text was read from the page (OCR missed the cell)"
+   ]
+  },
+  {
+   "key": "i-rt-book-19-weak-can-18-mike",
+   "name": "19 WEAK (CAN) 18 MIKE",
+   "formationLabel": "I RT BOOK",
+   "formationKey": "i-rt-book-21",
+   "direction": "RT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 112,
+   "rawCall": "[21] I RT BOOK / 19 WEAK (CAN) 18 MIKE",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "BOOK"
+   ],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": null,
+   "concept": "19 WEAK (CAN) 18 MIKE",
+   "runNumber": 19,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "i-rt-book-al-z-maybe-toss-15-weak",
+   "name": "TOSS 15 WEAK",
+   "formationLabel": "I RT BOOK AL Z MAYBE",
+   "formationKey": "i-rt-book-21",
+   "direction": "RT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 124,
+   "rawCall": "[21] I RT BOOK AL Z MAYBE / TOSS 15 WEAK",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "BOOK",
+    "AL",
+    "Z",
+    "MAYBE"
+   ],
+   "unappliedTags": [
+    "AL",
+    "Z",
+    "MAYBE"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "TOSS 15 WEAK",
+   "runNumber": 15,
+   "runFamily": "inside-zone",
+   "routeTags": {},
+   "notes": "QB (p-123): Open deep at 5/7 o'clock. Keeper fake. ALERT ‘SPOT’ Unblockable Support. Fist vs. signal to PSWR. OL/TE (p-123): Inside blocking principles and zone calls. Mike declared. Front 7 Play. OT slap hip fan with Will on LOS and PSG uncovered. vs NKL OC target Mike. ‘SPOT’ Push #1 to playside. = If ‘INSERT’ is called: BST and BSTE work SLB only don’t to - ...",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: AL Z MAYBE",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "i-rt-book-bump-special-screen-lt",
+   "name": "SPECIAL SCREEN LT",
+   "formationLabel": "I RT BOOK BUMP",
+   "formationKey": "i-rt-book-21",
+   "direction": "RT",
+   "personnel": "21/12",
+   "category": "Screen",
+   "install": 1,
+   "sourcePage": 146,
+   "rawCall": "[21/12] I RT BOOK BUMP / SPECIAL SCREEN LT",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "BOOK",
+    "BUMP"
+   ],
+   "unappliedTags": [
+    "BUMP"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "SPECIAL SCREEN LT",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "H": "hb-screen"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: BUMP",
+    "Screen: everyone else blocks (B.D.D., far deep safety, 3rd level). Only the back's route is a route-tree word.",
+    "route SCREEN is needs-review in the library"
+   ]
+  },
+  {
+   "key": "i-rt-book-p15-weak-z-strike-x-blaze-out",
+   "name": "P15 WEAK Z STRIKE X BLAZE OUT",
+   "formationLabel": "I RT BOOK",
+   "formationKey": "i-rt-book-21",
+   "direction": "RT",
+   "personnel": "21/12",
+   "category": "PA",
+   "install": 1,
+   "sourcePage": 143,
+   "rawCall": "[21/12] I RT BOOK / P15 WEAK Z STRIKE X BLAZE OUT",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "BOOK"
+   ],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": null,
+   "concept": "P15 WEAK Z STRIKE X BLAZE OUT",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-blaze-out",
+    "Z": "wr-strike",
+    "F": "hb-check-flat",
+    "H": "hb-check-thru"
+   },
+   "notes": null,
+   "confidence": "derived",
+   "reviewNotes": []
+  },
+  {
+   "key": "i-rt-book-y-lt-14-weak-can-pass-z-strike",
+   "name": "14 WEAK (CAN) PASS Z STRIKE",
+   "formationLabel": "I RT BOOK Y LT",
+   "formationKey": "i-rt-book-21",
+   "direction": "RT",
+   "personnel": "21/12",
+   "category": "PA",
+   "install": 1,
+   "sourcePage": 143,
+   "rawCall": "[21/12] I RT BOOK Y LT / 14 WEAK (CAN) PASS Z STRIKE",
+   "callSource": "read-from-page",
+   "adjustmentTags": [
+    "BOOK",
+    "Y",
+    "LT"
+   ],
+   "unappliedTags": [
+    "Y",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "14 WEAK (CAN) PASS Z STRIKE",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "Z": "wr-strike",
+    "X": "wr-streak",
+    "F": "hb-check-flat",
+    "H": "hb-check-thru"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: Y LT",
+    "call text was read from the page (OCR missed the cell)"
+   ]
+  },
+  {
+   "key": "i-rt-book-y-lt-fk-19-keep-rt-y-shallow",
+   "name": "FK 19 KEEP RT Y SHALLOW",
+   "formationLabel": "I RT BOOK Y LT",
+   "formationKey": "i-rt-book-21",
+   "direction": "RT",
+   "personnel": "21/12",
+   "category": "PA",
+   "install": 1,
+   "sourcePage": 145,
+   "rawCall": "[21/12] I RT BOOK Y LT / FK 19 KEEP RT Y SHALLOW",
+   "callSource": "read-from-page",
+   "adjustmentTags": [
+    "BOOK",
+    "Y",
+    "LT"
+   ],
+   "unappliedTags": [
+    "Y",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "FK 19 KEEP RT Y SHALLOW",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-low-cross-2-split",
+    "Y": "wr-shallow-cross",
+    "F": "hb-check-flat",
+    "Z": "wr-high-corner"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: Y LT",
+    "call text was read from the page (OCR missed the cell)"
+   ]
+  },
+  {
+   "key": "i-rt-book-y-lt-p14-weak-x-strike-z-blaze-out",
+   "name": "P14 WEAK X STRIKE Z BLAZE OUT",
+   "formationLabel": "I RT BOOK Y LT",
+   "formationKey": "i-rt-book-21",
+   "direction": "RT",
+   "personnel": "21/12",
+   "category": "PA",
+   "install": 1,
+   "sourcePage": 143,
+   "rawCall": "[21/12] I RT BOOK Y LT / P14 WEAK X STRIKE Z BLAZE OUT",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "BOOK",
+    "Y",
+    "LT"
+   ],
+   "unappliedTags": [
+    "Y",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "P14 WEAK X STRIKE Z BLAZE OUT",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-strike",
+    "Z": "wr-blaze-out",
+    "F": "hb-check-flat",
+    "H": "hb-check-thru"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: Y LT"
+   ]
+  },
+  {
+   "key": "i-rt-hip-x-short-15-weak-x-ghost",
+   "name": "15 WEAK X GHOST",
+   "formationLabel": "I RT HIP X SHORT",
+   "formationKey": "i-rt-hip-21",
+   "direction": "RT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 125,
+   "rawCall": "[21] I RT HIP X SHORT / 15 WEAK X GHOST",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "HIP",
+    "X",
+    "SHORT"
+   ],
+   "unappliedTags": [
+    "X",
+    "SHORT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "15 WEAK X GHOST",
+   "runNumber": 15,
+   "runFamily": "inside-zone",
+   "routeTags": {},
+   "notes": "QB (p-123): Open deep at 5/7 o'clock. Keeper fake. ALERT ‘SPOT’ Unblockable Support. Fist vs. signal to PSWR. OL/TE (p-123): Inside blocking principles and zone calls. Mike declared. Front 7 Play. OT slap hip fan with Will on LOS and PSG uncovered. vs NKL OC target Mike. ‘SPOT’ Push #1 to playside. = If ‘INSERT’ is called: BST and BSTE work SLB only don’t to - ...",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: X SHORT",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "i-rt-hop-15-weak-z-ghost",
+   "name": "15 WEAK Z GHOST",
+   "formationLabel": "I RT HOP",
+   "formationKey": "i-rt-hop-21",
+   "direction": "RT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 125,
+   "rawCall": "[21] I RT HOP / 15 WEAK Z GHOST",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "HOP"
+   ],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": null,
+   "concept": "15 WEAK Z GHOST",
+   "runNumber": 15,
+   "runFamily": "inside-zone",
+   "routeTags": {},
+   "notes": "QB (p-123): Open deep at 5/7 o'clock. Keeper fake. ALERT ‘SPOT’ Unblockable Support. Fist vs. signal to PSWR. OL/TE (p-123): Inside blocking principles and zone calls. Mike declared. Front 7 Play. OT slap hip fan with Will on LOS and PSG uncovered. vs NKL OC target Mike. ‘SPOT’ Push #1 to playside. = If ‘INSERT’ is called: BST and BSTE work SLB only don’t to - ...",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "i-rt-hop-z-rt-19-weak-can-18-mike",
+   "name": "19 WEAK (CAN) 18 MIKE",
+   "formationLabel": "I RT HOP Z RT",
+   "formationKey": "i-rt-hop-21",
+   "direction": "RT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 112,
+   "rawCall": "[21] I RT HOP Z RT / 19 WEAK (CAN) 18 MIKE",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "HOP",
+    "Z",
+    "RT"
+   ],
+   "unappliedTags": [
+    "Z",
+    "RT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "19 WEAK (CAN) 18 MIKE",
+   "runNumber": 19,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: Z RT",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "i-rt-slot-foy-2-jet-z-coin-cut",
+   "name": "2 JET Z COIN CUT",
+   "formationLabel": "I RT SLOT FOY",
+   "formationKey": "i-rt-slot-21",
+   "direction": "RT",
+   "personnel": "21/12",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 138,
+   "rawCall": "[21/12] I RT SLOT FOY / 2 JET Z COIN CUT",
+   "callSource": "ocr-flagged-confirmed-by-reading",
+   "adjustmentTags": [
+    "SLOT",
+    "FOY"
+   ],
+   "unappliedTags": [
+    "FOY"
+   ],
+   "motionTag": null,
+   "protection": "2 JET",
+   "concept": "Z COIN CUT",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-go-m-o-r",
+    "Z": "wr-coin",
+    "Y": "wr-thru",
+    "F": "wr-under",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: FOY",
+    "call text was flagged by OCR and confirmed by reading the page",
+    "F runs UNDER from a receiver spot, but the imported formation has him in the backfield"
+   ]
+  },
+  {
+   "key": "i-rt-tight-f-lt-200-jet-x-stick",
+   "name": "200 JET X STICK",
+   "formationLabel": "I RT TIGHT F LT",
+   "formationKey": "i-rt-21",
+   "direction": "RT",
+   "personnel": "21/12",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 133,
+   "rawCall": "[21/12] I RT TIGHT F LT / 200 JET X STICK",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "TIGHT",
+    "F",
+    "LT"
+   ],
+   "unappliedTags": [
+    "TIGHT",
+    "F",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": "200 JET",
+   "concept": "X STICK",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-stick",
+    "F": "wr-flat",
+    "Y": "wr-over",
+    "Z": "wr-thunder",
+    "H": "hb-check-slow"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: TIGHT F LT",
+    "F runs FLAT from a receiver spot, but the imported formation has him in the backfield"
+   ]
+  },
+  {
+   "key": "red-rt-close-foy-special-chip-screen-lt",
+   "name": "SPECIAL CHIP SCREEN LT",
+   "formationLabel": "RED RT CLOSE FOY",
+   "formationKey": "red-rt-21",
+   "direction": "RT",
+   "personnel": "21/12/11",
+   "category": "Screen",
+   "install": 1,
+   "sourcePage": 147,
+   "rawCall": "[21/12/11] RED RT CLOSE FOY / SPECIAL CHIP SCREEN LT",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN",
+    "CLOSE",
+    "FOY"
+   ],
+   "unappliedTags": [
+    "CLOSE",
+    "FOY"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "SPECIAL CHIP SCREEN LT",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "H": "hb-screen"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Red Rt [21] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: CLOSE FOY",
+    "Chip screen: the back shows a chip and turns in; everyone else blocks.",
+    "route SCREEN is needs-review in the library"
+   ]
+  },
+  {
+   "key": "snug-rt-15-al-oscar",
+   "name": "15 AL OSCAR",
+   "formationLabel": "SNUG RT",
+   "formationKey": "snug-rt-11",
+   "direction": "RT",
+   "personnel": "12",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 128,
+   "rawCall": "[12] SNUG RT / 15 AL OSCAR",
+   "callSource": "ocr",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": null,
+   "concept": "15 AL OSCAR",
+   "runNumber": 15,
+   "runFamily": "inside-zone",
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Snug Rt [11] is itself needs-review (positions are a starting shape)",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "snug-rt-15-wanda-f-sift-al-oscar",
+   "name": "15 WANDA F SIFT (AL OSCAR)",
+   "formationLabel": "SNUG RT",
+   "formationKey": "snug-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 129,
+   "rawCall": "[11] SNUG RT / 15 WANDA F SIFT (AL OSCAR)",
+   "callSource": "ocr",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": null,
+   "concept": "15 WANDA F SIFT (AL OSCAR)",
+   "runNumber": 15,
+   "runFamily": "inside-zone",
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Snug Rt [11] is itself needs-review (positions are a starting shape)",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ],
+   "alsoOnPages": [
+    129
+   ]
+  },
+  {
+   "key": "snug-rt-2-jet-f-coco-bow",
+   "name": "2 JET F COCO BOW",
+   "formationLabel": "SNUG RT",
+   "formationKey": "snug-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 137,
+   "rawCall": "[12/11] SNUG RT / 2 JET F COCO BOW",
+   "callSource": "read-from-page",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": "2 JET",
+   "concept": "F COCO BOW",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-corner",
+    "F": "wr-c-o",
+    "Y": "wr-arrow-inside-basic-route",
+    "Z": "wr-basic",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Snug Rt [11] is itself needs-review (positions are a starting shape)",
+    "call text was read from the page (OCR missed the cell)"
+   ]
+  },
+  {
+   "key": "snug-rt-3-jet-y-coco-bow",
+   "name": "3 JET Y COCO BOW",
+   "formationLabel": "SNUG RT",
+   "formationKey": "snug-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 137,
+   "rawCall": "[12/11] SNUG RT / 3 JET Y COCO BOW",
+   "callSource": "ocr",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": "3 JET",
+   "concept": "Y COCO BOW",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-basic",
+    "F": "wr-arrow-inside-basic-route",
+    "Z": "wr-corner",
+    "Y": "wr-c-o",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Snug Rt [11] is itself needs-review (positions are a starting shape)"
+   ]
+  },
+  {
+   "key": "snug-rt-3-jet-z-nunchuck",
+   "name": "3 JET Z NUNCHUCK",
+   "formationLabel": "SNUG RT",
+   "formationKey": "snug-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 157,
+   "rawCall": "[12/11] SNUG RT / 3 JET Z NUNCHUCK",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN"
+   ],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": "3 JET",
+   "concept": "Z NUNCHUCK",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-corner",
+    "F": "wr-drag-china",
+    "Y": "wr-drag-china",
+    "Z": "wr-stick-nod",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Snug Rt [11] is itself needs-review (positions are a starting shape)",
+    "route DRAG CHINA is needs-review in the library",
+    "route DRAG CHINA is needs-review in the library"
+   ]
+  },
+  {
+   "key": "south-lt-al-f-short-18-wanda-can-19-sift",
+   "name": "18 WANDA (CAN) 19 SIFT",
+   "formationLabel": "SOUTH LT AL F SHORT",
+   "formationKey": "south-rt-11",
+   "direction": "LT",
+   "personnel": "11",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 117,
+   "rawCall": "[11] SOUTH LT AL F SHORT / 18 WANDA (CAN) 19 SIFT",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "AL",
+    "F",
+    "SHORT"
+   ],
+   "unappliedTags": [
+    "AL",
+    "F",
+    "SHORT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "18 WANDA (CAN) 19 SIFT",
+   "runNumber": 18,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "OL/TE (p-113): Outside Zone scheme principles and rules. X play. Box declared.",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation South Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: AL F SHORT",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "south-rt-200-jet-f-stick",
+   "name": "200 JET F STICK",
+   "formationLabel": "SOUTH RT",
+   "formationKey": "south-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 133,
+   "rawCall": "[12/11] SOUTH RT / 200 JET F STICK",
+   "callSource": "read-from-page",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": "200 JET",
+   "concept": "F STICK",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "F": "wr-stick",
+    "X": "wr-flat",
+    "Y": "wr-over",
+    "Z": "wr-thunder",
+    "H": "hb-check-slow"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation South Rt [11] is itself needs-review (positions are a starting shape)",
+    "call text was read from the page (OCR missed the cell)"
+   ]
+  },
+  {
+   "key": "south-rt-3-jet-y-coin-cut",
+   "name": "3 JET Y COIN CUT",
+   "formationLabel": "SOUTH RT",
+   "formationKey": "south-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 138,
+   "rawCall": "[12/11] SOUTH RT / 3 JET Y COIN CUT",
+   "callSource": "read-from-page",
+   "adjustmentTags": [
+    "GUN"
+   ],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": "3 JET",
+   "concept": "Y COIN CUT",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "F": "wr-under",
+    "X": "wr-thru",
+    "Y": "wr-coin",
+    "Z": "wr-go-m-o-r",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation South Rt [11] is itself needs-review (positions are a starting shape)",
+    "call text was read from the page (OCR missed the cell)"
+   ]
+  },
+  {
+   "key": "south-rt-close-18-can-19-wanda",
+   "name": "18 (CAN) 19 WANDA",
+   "formationLabel": "SOUTH RT CLOSE",
+   "formationKey": "south-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 115,
+   "rawCall": "[11] SOUTH RT CLOSE / 18 (CAN) 19 WANDA",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "CLOSE"
+   ],
+   "unappliedTags": [
+    "CLOSE"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "18 (CAN) 19 WANDA",
+   "runNumber": 18,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "OL/TE (p-113): Outside Zone scheme principles and rules. X play. Box declared.",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation South Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: CLOSE",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "south-rt-close-2-scat-z-skinner-wheel-dash",
+   "name": "2 SCAT Z SKINNER WHEEL DASH",
+   "formationLabel": "SOUTH RT CLOSE",
+   "formationKey": "south-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 155,
+   "rawCall": "[11] SOUTH RT CLOSE / 2 SCAT Z SKINNER WHEEL DASH",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN",
+    "CLOSE"
+   ],
+   "unappliedTags": [
+    "CLOSE"
+   ],
+   "motionTag": null,
+   "protection": "2 SCAT",
+   "concept": "Z SKINNER WHEEL DASH",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "F": "wr-dart",
+    "X": "wr-swirl",
+    "Y": "wr-thru",
+    "Z": "wr-skinner",
+    "H": "hb-wheel"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation South Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: CLOSE"
+   ]
+  },
+  {
+   "key": "south-rt-close-3-scat-x-redskin-sba",
+   "name": "3 SCAT X REDSKIN (SBA)",
+   "formationLabel": "SOUTH RT CLOSE",
+   "formationKey": "south-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 151,
+   "rawCall": "[12/11] SOUTH RT CLOSE / 3 SCAT X REDSKIN (SBA)",
+   "callSource": "ocr-flagged-confirmed-by-reading",
+   "adjustmentTags": [
+    "GUN",
+    "CLOSE"
+   ],
+   "unappliedTags": [
+    "CLOSE"
+   ],
+   "motionTag": null,
+   "protection": "3 SCAT",
+   "concept": "X REDSKIN (SBA)",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "F": "wr-deep-sit",
+    "X": "wr-high-shallow-cross",
+    "H": "hb-rail",
+    "Y": "wr-corner",
+    "Z": "wr-low-shallow-cross"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation South Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: CLOSE",
+    "call text was flagged by OCR and confirmed by reading the page"
+   ]
+  },
+  {
+   "key": "south-rt-f-shorty-fk-18-sift-keep-lt",
+   "name": "FK 18 SIFT KEEP LT",
+   "formationLabel": "SOUTH RT F SHORTY",
+   "formationKey": "south-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "PA",
+   "install": 1,
+   "sourcePage": 144,
+   "rawCall": "[11] SOUTH RT F SHORTY / FK 18 SIFT KEEP LT",
+   "callSource": "ocr-flagged-confirmed-by-reading",
+   "adjustmentTags": [
+    "F",
+    "SHORTY"
+   ],
+   "unappliedTags": [
+    "F",
+    "SHORTY"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "FK 18 SIFT KEEP LT",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "F": "wr-down-flat-in-line-late",
+    "X": "wr-high-corner",
+    "Y": "wr-low-cross-tight-end",
+    "Z": "wr-far-corner",
+    "H": "hb-check-flat"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation South Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: F SHORTY",
+    "call text was flagged by OCR and confirmed by reading the page",
+    "route DOWN FLAT is needs-review in the library",
+    "route FAR CORNER is needs-review in the library"
+   ]
+  },
+  {
+   "key": "south-rt-out-3-jet-z-coin-target",
+   "name": "3 JET Z COIN TARGET",
+   "formationLabel": "SOUTH RT OUT",
+   "formationKey": "south-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 138,
+   "rawCall": "[12/11] SOUTH RT OUT / 3 JET Z COIN TARGET",
+   "callSource": "read-from-page",
+   "adjustmentTags": [
+    "GUN",
+    "OUT"
+   ],
+   "unappliedTags": [
+    "OUT"
+   ],
+   "motionTag": null,
+   "protection": "3 JET",
+   "concept": "Z COIN TARGET",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "F": "wr-arrow-inside-basic-route",
+    "X": "wr-thru",
+    "Z": "wr-coin",
+    "Y": "wr-go-m-o-r",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation South Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: OUT",
+    "call text was read from the page (OCR missed the cell)"
+   ]
+  },
+  {
+   "key": "south-rt-out-hax-2-scram-f-scar-return-z-pile",
+   "name": "2 SCRAM F SCAR RETURN Z PILE",
+   "formationLabel": "SOUTH RT OUT HAX",
+   "formationKey": "south-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 156,
+   "rawCall": "[11] SOUTH RT OUT HAX / 2 SCRAM F SCAR RETURN Z PILE",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN",
+    "OUT",
+    "HAX"
+   ],
+   "unappliedTags": [
+    "OUT",
+    "HAX"
+   ],
+   "motionTag": null,
+   "protection": "2 SCRAM",
+   "concept": "F SCAR RETURN Z PILE",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "H": "wr-nash",
+    "F": "wr-scooter",
+    "X": "wr-corner",
+    "Z": "wr-pile",
+    "Y": "wr-now"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation South Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: OUT HAX",
+    "H runs NASH from a receiver spot, but the imported formation has him in the backfield"
+   ]
+  },
+  {
+   "key": "south-rt-out-hax-2-scram-f-skinner-return-z-pile",
+   "name": "2 SCRAM F SKINNER RETURN Z PILE",
+   "formationLabel": "SOUTH RT OUT HAX",
+   "formationKey": "south-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 154,
+   "rawCall": "[11] SOUTH RT OUT HAX / 2 SCRAM F SKINNER RETURN Z PILE",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN",
+    "OUT",
+    "HAX"
+   ],
+   "unappliedTags": [
+    "OUT",
+    "HAX"
+   ],
+   "motionTag": null,
+   "protection": "2 SCRAM",
+   "concept": "F SKINNER RETURN Z PILE",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "H": "wr-now-return",
+    "F": "wr-skinner",
+    "X": "wr-thru",
+    "Z": "wr-pile",
+    "Y": "wr-now"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation South Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: OUT HAX",
+    "H runs NOW RETURN from a receiver spot, but the imported formation has him in the backfield"
+   ]
+  },
+  {
+   "key": "south-rt-out-hax-3-scram-z-coin-buffalo",
+   "name": "3 SCRAM Z COIN BUFFALO",
+   "formationLabel": "SOUTH RT OUT HAX",
+   "formationKey": "south-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 142,
+   "rawCall": "[12/11] SOUTH RT OUT HAX / 3 SCRAM Z COIN BUFFALO",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN",
+    "OUT",
+    "HAX"
+   ],
+   "unappliedTags": [
+    "OUT",
+    "HAX"
+   ],
+   "motionTag": null,
+   "protection": "3 SCRAM",
+   "concept": "Z COIN BUFFALO",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "F": "wr-pick-curl",
+    "X": "wr-thru",
+    "H": "wr-now",
+    "Z": "wr-coin",
+    "Y": "wr-go-m-o-r"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation South Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: OUT HAX",
+    "H runs NOW from a receiver spot, but the imported formation has him in the backfield"
+   ]
+  },
+  {
+   "key": "stack-lt-close-y-ctr-19-can-18-wanda",
+   "name": "19 (CAN) 18 WANDA",
+   "formationLabel": "STACK LT CLOSE Y CTR",
+   "formationKey": "stack-rt-11",
+   "direction": "LT",
+   "personnel": "11",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 115,
+   "rawCall": "[11] STACK LT CLOSE Y CTR / 19 (CAN) 18 WANDA",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "CLOSE",
+    "Y",
+    "CTR"
+   ],
+   "unappliedTags": [
+    "CLOSE",
+    "Y",
+    "CTR"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "19 (CAN) 18 WANDA",
+   "runNumber": 19,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "OL/TE (p-113): Outside Zone scheme principles and rules. X play. Box declared.",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Stack Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: CLOSE Y CTR",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "stack-rt-close-2-scat-y-redskin-sba",
+   "name": "2 SCAT Y REDSKIN (SBA)",
+   "formationLabel": "STACK RT CLOSE",
+   "formationKey": "stack-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 151,
+   "rawCall": "[12/11] STACK RT CLOSE / 2 SCAT Y REDSKIN (SBA)",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN",
+    "CLOSE"
+   ],
+   "unappliedTags": [
+    "CLOSE"
+   ],
+   "motionTag": null,
+   "protection": "2 SCAT",
+   "concept": "Y REDSKIN (SBA)",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-low-shallow-cross",
+    "F": "wr-corner",
+    "Y": "wr-high-shallow-cross",
+    "Z": "wr-deep-sit",
+    "H": "hb-rail"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Stack Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: CLOSE"
+   ]
+  },
+  {
+   "key": "stack-rt-y-lt-2-jet-dbl-scout-f-snag",
+   "name": "2 JET DBL SCOUT F SNAG",
+   "formationLabel": "STACK RT Y LT",
+   "formationKey": "stack-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 139,
+   "rawCall": "[11] STACK RT Y LT / 2 JET DBL SCOUT F SNAG",
+   "callSource": "read-from-page",
+   "adjustmentTags": [
+    "GUN",
+    "Y",
+    "LT"
+   ],
+   "unappliedTags": [
+    "Y",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": "2 JET",
+   "concept": "DBL SCOUT F SNAG",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-scout",
+    "F": "wr-snag",
+    "Y": "wr-basic",
+    "Z": "wr-scout",
+    "H": "hb-check-slow"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Stack Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: Y LT",
+    "call text was read from the page (OCR missed the cell)"
+   ]
+  },
+  {
+   "key": "stack-rt-y-lt-special-chip-screen-rt",
+   "name": "SPECIAL CHIP SCREEN RT",
+   "formationLabel": "STACK RT Y LT",
+   "formationKey": "stack-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Screen",
+   "install": 1,
+   "sourcePage": 147,
+   "rawCall": "[12/11] STACK RT Y LT / SPECIAL CHIP SCREEN RT",
+   "callSource": "ocr-flagged-confirmed-by-reading",
+   "adjustmentTags": [
+    "GUN",
+    "Y",
+    "LT"
+   ],
+   "unappliedTags": [
+    "Y",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "SPECIAL CHIP SCREEN RT",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "H": "hb-screen"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Stack Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: Y LT",
+    "Chip screen: the back shows a chip and turns in; everyone else blocks.",
+    "call text was flagged by OCR and confirmed by reading the page",
+    "route SCREEN is needs-review in the library"
+   ]
+  },
+  {
+   "key": "stack-rt-z-short-2-scat-z-cherokee",
+   "name": "2 SCAT Z CHEROKEE",
+   "formationLabel": "STACK RT Z SHORT",
+   "formationKey": "stack-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 153,
+   "rawCall": "[11] STACK RT Z SHORT / 2 SCAT Z CHEROKEE",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN",
+    "Z",
+    "SHORT"
+   ],
+   "unappliedTags": [
+    "Z",
+    "SHORT"
+   ],
+   "motionTag": null,
+   "protection": "2 SCAT",
+   "concept": "Z CHEROKEE",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-low-shallow-cross",
+    "F": "wr-corner",
+    "Y": "wr-basic",
+    "Z": "wr-high-shallow-cross",
+    "H": "hb-rail"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Stack Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: Z SHORT"
+   ]
+  },
+  {
+   "key": "stack-rt-z-short-200-jet-both-omaha",
+   "name": "200 JET BOTH OMAHA",
+   "formationLabel": "STACK RT Z SHORT",
+   "formationKey": "stack-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 135,
+   "rawCall": "[12/11] STACK RT Z SHORT / 200 JET BOTH OMAHA",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "Z",
+    "SHORT"
+   ],
+   "unappliedTags": [
+    "Z",
+    "SHORT"
+   ],
+   "motionTag": null,
+   "protection": "200 JET",
+   "concept": "BOTH OMAHA",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-omaha",
+    "F": "wr-coin",
+    "Y": "wr-coin",
+    "Z": "wr-omaha",
+    "H": "hb-check-thru"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Stack Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: Z SHORT"
+   ]
+  },
+  {
+   "key": "strong-lt-hip-x-lt-19-zorro-z-now",
+   "name": "19 ZORRO Z NOW",
+   "formationLabel": "STRONG LT HIP X LT",
+   "formationKey": "strong-rt-21",
+   "direction": "LT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 108,
+   "rawCall": "[21] STRONG LT HIP X LT / 19 ZORRO Z NOW",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "HIP",
+    "X",
+    "LT"
+   ],
+   "unappliedTags": [
+    "HIP",
+    "X",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "19 ZORRO Z NOW",
+   "runNumber": 19,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "QB (p-107): Open play side at 4:30 or 7:30. Run keeper fake. OL/TE (p-107): Outside zone blocking principles and rules. Mike Declared. Front 7 rul for PSG back. PST no ‘Triples’. TE/FB are combination blocking EMOL : Support. ALERT ‘4 Call’ WK Rotation, PSG slap hip. PST communica vs ‘4’ to TE — TE blocks man w/ ...",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: HIP X LT",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "strong-rt-ace-f-lt-3-jet-x-shallow-cross",
+   "name": "3 JET X SHALLOW CROSS",
+   "formationLabel": "STRONG RT ACE F LT",
+   "formationKey": "strong-rt-21",
+   "direction": "RT",
+   "personnel": "21/12",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 140,
+   "rawCall": "[21/12] STRONG RT ACE F LT / 3 JET X SHALLOW CROSS",
+   "callSource": "read-from-page",
+   "adjustmentTags": [
+    "ACE",
+    "F",
+    "LT"
+   ],
+   "unappliedTags": [
+    "ACE",
+    "F",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": "3 JET",
+   "concept": "X SHALLOW CROSS",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-shallow-cross",
+    "F": "wr-swig",
+    "Y": "wr-deep-sit",
+    "Z": "wr-post-widen",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: ACE F LT",
+    "call text was read from the page (OCR missed the cell)",
+    "F runs SWIG from a receiver spot, but the imported formation has him in the backfield"
+   ]
+  },
+  {
+   "key": "strong-rt-book-y-ctr-18-zorro",
+   "name": "18 ZORRO",
+   "formationLabel": "STRONG RT BOOK Y CTR",
+   "formationKey": "strong-rt-21",
+   "direction": "RT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 108,
+   "rawCall": "[21] STRONG RT BOOK Y CTR / 18 ZORRO",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "BOOK",
+    "Y",
+    "CTR"
+   ],
+   "unappliedTags": [
+    "BOOK",
+    "Y",
+    "CTR"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "18 ZORRO",
+   "runNumber": 18,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "QB (p-107): Open play side at 4:30 or 7:30. Run keeper fake. OL/TE (p-107): Outside zone blocking principles and rules. Mike Declared. Front 7 rul for PSG back. PST no ‘Triples’. TE/FB are combination blocking EMOL : Support. ALERT ‘4 Call’ WK Rotation, PSG slap hip. PST communica vs ‘4’ to TE — TE blocks man w/ ...",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: BOOK Y CTR",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "strong-rt-hop-z-rt-18-zorro-x-now",
+   "name": "18 ZORRO X NOW",
+   "formationLabel": "STRONG RT HOP Z RT",
+   "formationKey": "strong-rt-21",
+   "direction": "RT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 108,
+   "rawCall": "[21] STRONG RT HOP Z RT / 18 ZORRO X NOW",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "HOP",
+    "Z",
+    "RT"
+   ],
+   "unappliedTags": [
+    "HOP",
+    "Z",
+    "RT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "18 ZORRO X NOW",
+   "runNumber": 18,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "QB (p-107): Open play side at 4:30 or 7:30. Run keeper fake. OL/TE (p-107): Outside zone blocking principles and rules. Mike Declared. Front 7 rul for PSG back. PST no ‘Triples’. TE/FB are combination blocking EMOL : Support. ALERT ‘4 Call’ WK Rotation, PSG slap hip. PST communica vs ‘4’ to TE — TE blocks man w/ ...",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: HOP Z RT",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "swamp-rt-stack-d-200-scram-z-stick-bark-sba",
+   "name": "200 SCRAM Z STICK BARK (SBA)",
+   "formationLabel": "SWAMP RT STACK D",
+   "formationKey": "swamp-rt-11",
+   "direction": "RT",
+   "personnel": "21/12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 150,
+   "rawCall": "[21/12/11] SWAMP RT STACK D / 200 SCRAM Z STICK BARK (SBA)",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN",
+    "STACK",
+    "D"
+   ],
+   "unappliedTags": [
+    "STACK",
+    "D"
+   ],
+   "motionTag": null,
+   "protection": "200 SCRAM",
+   "concept": "Z STICK BARK (SBA)",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "F": "wr-dart",
+    "X": "wr-basic",
+    "H": "wr-drag-china",
+    "Y": "wr-flat",
+    "Z": "wr-stick"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Swamp Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: STACK D",
+    "H runs DRAG CHINA from a receiver spot, but the imported formation has him in the backfield",
+    "route DRAG CHINA is needs-review in the library"
+   ]
+  },
+  {
+   "key": "swamp-rt-stack-d-200-scram-z-stick-bow-sba",
+   "name": "200 SCRAM Z STICK BOW (SBA)",
+   "formationLabel": "SWAMP RT STACK D",
+   "formationKey": "swamp-rt-11",
+   "direction": "RT",
+   "personnel": "21/12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 149,
+   "rawCall": "[21/12/11] SWAMP RT STACK D / 200 SCRAM Z STICK BOW (SBA)",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN",
+    "STACK",
+    "D"
+   ],
+   "unappliedTags": [
+    "STACK",
+    "D"
+   ],
+   "motionTag": null,
+   "protection": "200 SCRAM",
+   "concept": "Z STICK BOW (SBA)",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "F": "wr-arrow-inside-basic-route",
+    "X": "wr-basic",
+    "H": "wr-flat",
+    "Y": "wr-flat",
+    "Z": "wr-stick"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Swamp Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: STACK D",
+    "H runs FLAT from a receiver spot, but the imported formation has him in the backfield"
+   ]
+  },
+  {
+   "key": "trax-rt-tighter-3-jet-f-shallow-cross-z-glare",
+   "name": "3 JET F SHALLOW CROSS Z GLARE",
+   "formationLabel": "TRAX RT TIGHTER",
+   "formationKey": "trax-rt-11",
+   "direction": "RT",
+   "personnel": "12",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 141,
+   "rawCall": "[12] TRAX RT TIGHTER / 3 JET F SHALLOW CROSS Z GLARE",
+   "callSource": "ocr-flagged-confirmed-by-reading",
+   "adjustmentTags": [
+    "GUN",
+    "TIGHTER"
+   ],
+   "unappliedTags": [
+    "TIGHTER"
+   ],
+   "motionTag": null,
+   "protection": "3 JET",
+   "concept": "F SHALLOW CROSS Z GLARE",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "F": "wr-shallow-cross",
+    "Y": "wr-deep-sit",
+    "Z": "wr-rail",
+    "X": "wr-glance",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Trax Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: TIGHTER",
+    "call text was flagged by OCR and confirmed by reading the page"
+   ]
+  },
+  {
+   "key": "trax-rt-tighter-x-lt-3-jet-f-shallow-cross",
+   "name": "3 JET F SHALLOW CROSS",
+   "formationLabel": "TRAX RT TIGHTER X LT",
+   "formationKey": "trax-rt-11",
+   "direction": "RT",
+   "personnel": "12",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 140,
+   "rawCall": "[12] TRAX RT TIGHTER X LT / 3 JET F SHALLOW CROSS",
+   "callSource": "ocr-flagged-confirmed-by-reading",
+   "adjustmentTags": [
+    "TIGHTER",
+    "X",
+    "LT"
+   ],
+   "unappliedTags": [
+    "TIGHTER",
+    "X",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": "3 JET",
+   "concept": "F SHALLOW CROSS",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "F": "wr-shallow-cross",
+    "Y": "wr-deep-sit",
+    "Z": "wr-post-widen",
+    "X": "wr-swig",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Trax Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: TIGHTER X LT",
+    "call text was flagged by OCR and confirmed by reading the page"
+   ]
+  },
+  {
+   "key": "trio-rt-special-chip-screen-lt",
+   "name": "SPECIAL CHIP SCREEN LT",
+   "formationLabel": "TRIO RT",
+   "formationKey": "trio-rt-11",
+   "direction": "RT",
+   "personnel": "21/12/11",
+   "category": "Screen",
+   "install": 1,
+   "sourcePage": 147,
+   "rawCall": "[21/12/11] TRIO RT / SPECIAL CHIP SCREEN LT",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN"
+   ],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": null,
+   "concept": "SPECIAL CHIP SCREEN LT",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "H": "hb-screen"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Trio Rt [11] is itself needs-review (positions are a starting shape)",
+    "Chip screen: the back shows a chip and turns in; everyone else blocks.",
+    "route SCREEN is needs-review in the library"
+   ]
+  },
+  {
+   "key": "trips-lt-f-rt-19-structure-sift",
+   "name": "19 STRUCTURE SIFT",
+   "formationLabel": "TRIPS LT F RT",
+   "formationKey": "trips-rt-11",
+   "direction": "LT",
+   "personnel": "12/11",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 121,
+   "rawCall": "[12/11] TRIPS LT F RT / 19 STRUCTURE SIFT",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "F",
+    "RT"
+   ],
+   "unappliedTags": [
+    "F",
+    "RT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "19 STRUCTURE SIFT",
+   "runNumber": 19,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Trips Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: F RT",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "trips-lt-tight-y-rt-18-can-19-wanda",
+   "name": "18 (CAN) 19 WANDA",
+   "formationLabel": "TRIPS LT TIGHT Y RT",
+   "formationKey": "trips-rt-11",
+   "direction": "LT",
+   "personnel": "11",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 115,
+   "rawCall": "[11] TRIPS LT TIGHT Y RT / 18 (CAN) 19 WANDA",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "TIGHT",
+    "Y",
+    "RT"
+   ],
+   "unappliedTags": [
+    "TIGHT",
+    "Y",
+    "RT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "18 (CAN) 19 WANDA",
+   "runNumber": 18,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "OL/TE (p-113): Outside Zone scheme principles and rules. X play. Box declared.",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Trips Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: TIGHT Y RT",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "trips-rt-3-jet-x-shallow-cross-f-glare",
+   "name": "3 JET X SHALLOW CROSS F GLARE",
+   "formationLabel": "TRIPS RT",
+   "formationKey": "trips-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 141,
+   "rawCall": "[12/11] TRIPS RT / 3 JET X SHALLOW CROSS F GLARE",
+   "callSource": "read-from-page",
+   "adjustmentTags": [
+    "GUN"
+   ],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": "3 JET",
+   "concept": "X SHALLOW CROSS F GLARE",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-shallow-cross",
+    "Y": "wr-deep-sit",
+    "F": "wr-rail",
+    "Z": "wr-glance",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Trips Rt [11] is itself needs-review (positions are a starting shape)",
+    "The outside receiver's label is cut off by the scan edge; Glance is inferred from the other three cells.",
+    "call text was read from the page (OCR missed the cell)"
+   ]
+  },
+  {
+   "key": "trips-rt-tight-hax-2-scram-x-coin-buffalo",
+   "name": "2 SCRAM X COIN BUFFALO",
+   "formationLabel": "TRIPS RT TIGHT HAX",
+   "formationKey": "trips-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 142,
+   "rawCall": "[12/11] TRIPS RT TIGHT HAX / 2 SCRAM X COIN BUFFALO",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN",
+    "TIGHT",
+    "HAX"
+   ],
+   "unappliedTags": [
+    "TIGHT",
+    "HAX"
+   ],
+   "motionTag": null,
+   "protection": "2 SCRAM",
+   "concept": "X COIN BUFFALO",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "H": "wr-go-m-o-r",
+    "X": "wr-coin",
+    "Y": "wr-thru",
+    "F": "wr-pick-curl",
+    "Z": "wr-now"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Trips Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: TIGHT HAX",
+    "H runs GO from a receiver spot, but the imported formation has him in the backfield"
+   ]
+  },
+  {
+   "key": "trips-rt-y-lt-fk-18-keep-lt",
+   "name": "FK 18 KEEP LT",
+   "formationLabel": "TRIPS RT Y LT",
+   "formationKey": "trips-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "PA",
+   "install": 1,
+   "sourcePage": 144,
+   "rawCall": "[11] TRIPS RT Y LT / FK 18 KEEP LT",
+   "callSource": "read-from-page",
+   "adjustmentTags": [
+    "Y",
+    "LT"
+   ],
+   "unappliedTags": [
+    "Y",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "FK 18 KEEP LT",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-runback",
+    "Y": "wr-down-flat-in-line-late",
+    "F": "wr-low-cross-2-split",
+    "Z": "wr-far-corner",
+    "H": "hb-check-flat"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Trips Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: Y LT",
+    "call text was read from the page (OCR missed the cell)",
+    "route DOWN FLAT is needs-review in the library",
+    "route FAR CORNER is needs-review in the library"
+   ]
+  },
+  {
+   "key": "weak-rt-clamp-y-lt-toss-19-zorro-z-now",
+   "name": "TOSS 19 ZORRO Z NOW",
+   "formationLabel": "WEAK RT CLAMP Y LT",
+   "formationKey": "weak-rt-21",
+   "direction": "RT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 108,
+   "rawCall": "[21] WEAK RT CLAMP Y LT / TOSS 19 ZORRO Z NOW",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "CLAMP",
+    "Y",
+    "LT"
+   ],
+   "unappliedTags": [
+    "CLAMP",
+    "Y",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "TOSS 19 ZORRO Z NOW",
+   "runNumber": 19,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "QB (p-107): Open play side at 4:30 or 7:30. Run keeper fake. OL/TE (p-107): Outside zone blocking principles and rules. Mike Declared. Front 7 rul for PSG back. PST no ‘Triples’. TE/FB are combination blocking EMOL : Support. ALERT ‘4 Call’ WK Rotation, PSG slap hip. PST communica vs ‘4’ to TE — TE blocks man w/ ...",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: CLAMP Y LT",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "west-lt-book-f-ctr-19-zorro",
+   "name": "19 ZORRO",
+   "formationLabel": "WEST LT BOOK F CTR",
+   "formationKey": "west-rt-21",
+   "direction": "LT",
+   "personnel": "12",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 109,
+   "rawCall": "[12] WEST LT BOOK F CTR / 19 ZORRO",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "BOOK",
+    "F",
+    "CTR"
+   ],
+   "unappliedTags": [
+    "BOOK",
+    "F",
+    "CTR"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "19 ZORRO",
+   "runNumber": 19,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "QB (p-107): Open play side at 4:30 or 7:30. Run keeper fake. OL/TE (p-107): Outside zone blocking principles and rules. Mike Declared. Front 7 rul for PSG back. PST no ‘Triples’. TE/FB are combination blocking EMOL : Support. ALERT ‘4 Call’ WK Rotation, PSG slap hip. PST communica vs ‘4’ to TE — TE blocks man w/ ...",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: BOOK F CTR",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "west-lt-book-f-home-19-mike-can-18-weak",
+   "name": "19 MIKE (CAN) 18 WEAK",
+   "formationLabel": "WEST LT BOOK F HOME",
+   "formationKey": "west-rt-21",
+   "direction": "LT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 111,
+   "rawCall": "[21] WEST LT BOOK F HOME / 19 MIKE (CAN) 18 WEAK",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "BOOK",
+    "F",
+    "HOME"
+   ],
+   "unappliedTags": [
+    "BOOK",
+    "F",
+    "HOME"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "19 MIKE (CAN) 18 WEAK",
+   "runNumber": 19,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: BOOK F HOME",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "west-lt-book-f-righty-18-wanda-can-19",
+   "name": "18 WANDA (CAN) 19",
+   "formationLabel": "WEST LT BOOK F RIGHTY",
+   "formationKey": "west-rt-21",
+   "direction": "LT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 116,
+   "rawCall": "[21] WEST LT BOOK F RIGHTY / 18 WANDA (CAN) 19",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "BOOK",
+    "F",
+    "RIGHTY"
+   ],
+   "unappliedTags": [
+    "BOOK",
+    "F",
+    "RIGHTY"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "18 WANDA (CAN) 19",
+   "runNumber": 18,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "OL/TE (p-113): Outside Zone scheme principles and rules. X play. Box declared.",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: BOOK F RIGHTY",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "west-lt-book-f-righty-19-can-18-wanda",
+   "name": "19 (CAN) 18 WANDA",
+   "formationLabel": "WEST LT BOOK F RIGHTY",
+   "formationKey": "west-rt-21",
+   "direction": "LT",
+   "personnel": "12",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 114,
+   "rawCall": "[12] WEST LT BOOK F RIGHTY / 19 (CAN) 18 WANDA",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "BOOK",
+    "F",
+    "RIGHTY"
+   ],
+   "unappliedTags": [
+    "BOOK",
+    "F",
+    "RIGHTY"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "19 (CAN) 18 WANDA",
+   "runNumber": 19,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "OL/TE (p-113): Outside Zone scheme principles and rules. X play. Box declared.",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: BOOK F RIGHTY",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "west-lt-book-f-rt-19-al-oscar",
+   "name": "19 AL OSCAR",
+   "formationLabel": "WEST LT BOOK F RT",
+   "formationKey": "west-rt-21",
+   "direction": "LT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 106,
+   "rawCall": "[21] WEST LT BOOK F RT / 19 AL OSCAR",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "BOOK",
+    "F",
+    "RT"
+   ],
+   "unappliedTags": [
+    "BOOK",
+    "F",
+    "RT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "19 AL OSCAR",
+   "runNumber": 19,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "QB (p-105): Open play side at 4:30 or 7:30. Run keeper fake. Oscar Towards Bounce Read. Oscar Away From Unblockable Support OL/TE (p-105): Outside zone blocking principles and cails. Mike Declared. Front 7 play. NKL TE Declared. vs",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: BOOK F RT",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "west-lt-close-f-righty-19-can-18-wanda",
+   "name": "19 (CAN) 18 WANDA",
+   "formationLabel": "WEST LT CLOSE F RIGHTY",
+   "formationKey": "west-rt-21",
+   "direction": "LT",
+   "personnel": "12",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 114,
+   "rawCall": "[12] WEST LT CLOSE F RIGHTY / 19 (CAN) 18 WANDA",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "CLOSE",
+    "F",
+    "RIGHTY"
+   ],
+   "unappliedTags": [
+    "CLOSE",
+    "F",
+    "RIGHTY"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "19 (CAN) 18 WANDA",
+   "runNumber": 19,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "OL/TE (p-113): Outside Zone scheme principles and rules. X play. Box declared.",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: CLOSE F RIGHTY",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "west-lt-hip-x-fly-alaksa",
+   "name": "ALAKSA",
+   "formationLabel": "WEST LT HIP X FLY",
+   "formationKey": "west-rt-hip-21",
+   "direction": "LT",
+   "personnel": "21/12",
+   "category": "Special",
+   "install": 1,
+   "sourcePage": 131,
+   "rawCall": "[21/12] WEST LT HIP X FLY / ALAKSA",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "HIP",
+    "X",
+    "FLY"
+   ],
+   "unappliedTags": [
+    "X",
+    "FLY"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "ALAKSA",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: X FLY",
+    "no run family or route words could be bound for this call; formation only"
+   ]
+  },
+  {
+   "key": "west-lt-hip-x-fly-alaska",
+   "name": "ALASKA",
+   "formationLabel": "WEST LT HIP X FLY",
+   "formationKey": "west-rt-hip-21",
+   "direction": "LT",
+   "personnel": "21/12",
+   "category": "Special",
+   "install": 1,
+   "sourcePage": 131,
+   "rawCall": "[21/12] WEST LT HIP X FLY / ALASKA",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "HIP",
+    "X",
+    "FLY"
+   ],
+   "unappliedTags": [
+    "X",
+    "FLY"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "ALASKA",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: X FLY",
+    "no run family or route words could be bound for this call; formation only"
+   ]
+  },
+  {
+   "key": "west-lt-zoom-x-fly-alaska",
+   "name": "ALASKA",
+   "formationLabel": "WEST LT ZOOM X FLY",
+   "formationKey": "west-rt-21",
+   "direction": "LT",
+   "personnel": "21/12",
+   "category": "Special",
+   "install": 1,
+   "sourcePage": 131,
+   "rawCall": "[21/12] WEST LT ZOOM X FLY / ALASKA",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "ZOOM",
+    "X",
+    "FLY"
+   ],
+   "unappliedTags": [
+    "ZOOM",
+    "X",
+    "FLY"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "ALASKA",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: ZOOM X FLY",
+    "no run family or route words could be bound for this call; formation only"
+   ]
+  },
+  {
+   "key": "west-rt-ace-z-lt-2-jet-x-nunchuck",
+   "name": "2 JET X NUNCHUCK",
+   "formationLabel": "WEST RT ACE Z LT",
+   "formationKey": "west-rt-21",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 157,
+   "rawCall": "[12/11] WEST RT ACE Z LT / 2 JET X NUNCHUCK",
+   "callSource": "read-from-page",
+   "adjustmentTags": [
+    "GUN",
+    "ACE",
+    "Z",
+    "LT"
+   ],
+   "unappliedTags": [
+    "ACE",
+    "Z",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": "2 JET",
+   "concept": "X NUNCHUCK",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-stick-nod",
+    "Z": "wr-drag-china",
+    "Y": "wr-corner",
+    "F": "wr-drag-china",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: ACE Z LT",
+    "call text was read from the page (OCR missed the cell)",
+    "route DRAG CHINA is needs-review in the library",
+    "route DRAG CHINA is needs-review in the library"
+   ]
+  },
+  {
+   "key": "west-rt-book-f-lefty-10-wanda-can-18",
+   "name": "10 WANDA (CAN) 18",
+   "formationLabel": "WEST RT BOOK F LEFTY",
+   "formationKey": "west-rt-21",
+   "direction": "RT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 116,
+   "rawCall": "[21] WEST RT BOOK F LEFTY / 10 WANDA (CAN) 18",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "BOOK",
+    "F",
+    "LEFTY"
+   ],
+   "unappliedTags": [
+    "BOOK",
+    "F",
+    "LEFTY"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "10 WANDA (CAN) 18",
+   "runNumber": 18,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "OL/TE (p-113): Outside Zone scheme principles and rules. X play. Box declared.",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: BOOK F LEFTY",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "west-rt-book-f-lefty-18-can-19-wanda",
+   "name": "18 (CAN) 19 WANDA",
+   "formationLabel": "WEST RT BOOK F LEFTY",
+   "formationKey": "west-rt-21",
+   "direction": "RT",
+   "personnel": "12",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 114,
+   "rawCall": "[12] WEST RT BOOK F LEFTY / 18 (CAN) 19 WANDA",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "BOOK",
+    "F",
+    "LEFTY"
+   ],
+   "unappliedTags": [
+    "BOOK",
+    "F",
+    "LEFTY"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "18 (CAN) 19 WANDA",
+   "runNumber": 18,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "OL/TE (p-113): Outside Zone scheme principles and rules. X play. Box declared.",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: BOOK F LEFTY",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "west-rt-book-f-lt-18-al-oscar",
+   "name": "18 AL OSCAR",
+   "formationLabel": "WEST RT BOOK F LT",
+   "formationKey": "west-rt-21",
+   "direction": "RT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 106,
+   "rawCall": "[21] WEST RT BOOK F LT / 18 AL OSCAR",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "BOOK",
+    "F",
+    "LT"
+   ],
+   "unappliedTags": [
+    "BOOK",
+    "F",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "18 AL OSCAR",
+   "runNumber": 18,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "QB (p-105): Open play side at 4:30 or 7:30. Run keeper fake. Oscar Towards Bounce Read. Oscar Away From Unblockable Support OL/TE (p-105): Outside zone blocking principles and cails. Mike Declared. Front 7 play. NKL TE Declared. vs",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: BOOK F LT",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "west-rt-book-f-lt-fk-18-keep-lt",
+   "name": "FK 18 KEEP LT",
+   "formationLabel": "WEST RT BOOK F LT",
+   "formationKey": "west-rt-21",
+   "direction": "RT",
+   "personnel": "12",
+   "category": "PA",
+   "install": 1,
+   "sourcePage": 144,
+   "rawCall": "[12] WEST RT BOOK F LT / FK 18 KEEP LT",
+   "callSource": "read-from-page",
+   "adjustmentTags": [
+    "BOOK",
+    "F",
+    "LT"
+   ],
+   "unappliedTags": [
+    "BOOK",
+    "F",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "FK 18 KEEP LT",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-high-corner",
+    "Z": "wr-far-corner",
+    "H": "hb-check-flat"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: BOOK F LT",
+    "Could not tell from the page which of Y and F runs the Low Cross and which the Down Flat.",
+    "call text was read from the page (OCR missed the cell)",
+    "route FAR CORNER is needs-review in the library"
+   ]
+  },
+  {
+   "key": "west-rt-book-f-lt-p15-weak-z-strike-x-blaze-out",
+   "name": "P15 WEAK Z STRIKE X BLAZE OUT",
+   "formationLabel": "WEST RT BOOK F LT",
+   "formationKey": "west-rt-21",
+   "direction": "RT",
+   "personnel": "21/12",
+   "category": "PA",
+   "install": 1,
+   "sourcePage": 143,
+   "rawCall": "[21/12] WEST RT BOOK F LT / P15 WEAK Z STRIKE X BLAZE OUT",
+   "callSource": "read-from-page",
+   "adjustmentTags": [
+    "BOOK",
+    "F",
+    "LT"
+   ],
+   "unappliedTags": [
+    "BOOK",
+    "F",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "P15 WEAK Z STRIKE X BLAZE OUT",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-blaze-out",
+    "Z": "wr-strike",
+    "F": "hb-check-flat",
+    "H": "hb-check-thru"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: BOOK F LT",
+    "call text was read from the page (OCR missed the cell)"
+   ]
+  },
+  {
+   "key": "west-rt-f-lt-fk-18-keep-lt",
+   "name": "FK 18 KEEP LT",
+   "formationLabel": "WEST RT F LT",
+   "formationKey": "west-rt-21",
+   "direction": "RT",
+   "personnel": "12",
+   "category": "PA",
+   "install": 1,
+   "sourcePage": 144,
+   "rawCall": "[12] WEST RT F LT / FK 18 KEEP LT",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "F",
+    "LT"
+   ],
+   "unappliedTags": [
+    "F",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "FK 18 KEEP LT",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-runback",
+    "Y": "wr-low-cross-tight-end",
+    "F": "wr-down-flat-in-line-late",
+    "Z": "wr-far-corner",
+    "H": "hb-check-flat"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: F LT",
+    "route DOWN FLAT is needs-review in the library",
+    "route FAR CORNER is needs-review in the library"
+   ]
+  },
+  {
+   "key": "west-rt-hip-2-scat-y-redskin",
+   "name": "2 SCAT Y REDSKIN",
+   "formationLabel": "WEST RT HIP",
+   "formationKey": "west-rt-hip-21",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 151,
+   "rawCall": "[12/11] WEST RT HIP / 2 SCAT Y REDSKIN",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN",
+    "HIP"
+   ],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": "2 SCAT",
+   "concept": "Y REDSKIN",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-low-shallow-cross",
+    "Z": "wr-corner",
+    "Y": "wr-high-shallow-cross",
+    "F": "wr-deep-sit",
+    "H": "hb-rail"
+   },
+   "notes": null,
+   "confidence": "derived",
+   "reviewNotes": []
+  },
+  {
+   "key": "west-rt-hop-z-fly-spirit",
+   "name": "SPIRIT",
+   "formationLabel": "WEST RT HOP Z FLY",
+   "formationKey": "west-rt-hop-21",
+   "direction": "RT",
+   "personnel": "21/12",
+   "category": "Special",
+   "install": 1,
+   "sourcePage": 131,
+   "rawCall": "[21/12] WEST RT HOP Z FLY / SPIRIT",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "HOP",
+    "Z",
+    "FLY"
+   ],
+   "unappliedTags": [
+    "Z",
+    "FLY"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "SPIRIT",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: Z FLY",
+    "no run family or route words could be bound for this call; formation only"
+   ]
+  },
+  {
+   "key": "west-rt-slot-3-jet-z-shallow-cross-f-archo",
+   "name": "3 JET Z SHALLOW CROSS F ARCHO",
+   "formationLabel": "WEST RT SLOT",
+   "formationKey": "west-rt-slot-21",
+   "direction": "RT",
+   "personnel": "12",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 140,
+   "rawCall": "[12] WEST RT SLOT / 3 JET Z SHALLOW CROSS F ARCHO",
+   "callSource": "ocr-flagged-confirmed-by-reading",
+   "adjustmentTags": [
+    "SLOT"
+   ],
+   "unappliedTags": [],
+   "motionTag": null,
+   "protection": "3 JET",
+   "concept": "Z SHALLOW CROSS F ARCHO",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-swig",
+    "Z": "wr-shallow-cross",
+    "Y": "wr-deep-sit",
+    "F": "wr-archo",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "call text was flagged by OCR and confirmed by reading the page",
+    "route ARCHO is needs-review in the library"
+   ]
+  },
+  {
+   "key": "west-rt-slot-z-fly-spirit",
+   "name": "SPIRIT",
+   "formationLabel": "WEST RT SLOT Z FLY",
+   "formationKey": "west-rt-slot-21",
+   "direction": "RT",
+   "personnel": "21/12",
+   "category": "Special",
+   "install": 1,
+   "sourcePage": 131,
+   "rawCall": "[21/12] WEST RT SLOT Z FLY / SPIRIT",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "SLOT",
+    "Z",
+    "FLY"
+   ],
+   "unappliedTags": [
+    "Z",
+    "FLY"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "SPIRIT",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: Z FLY",
+    "no run family or route words could be bound for this call; formation only"
+   ]
+  },
+  {
+   "key": "west-rt-tight-f-ctr-18-zorro-x-now",
+   "name": "18 ZORRO X NOW",
+   "formationLabel": "WEST RT TIGHT F CTR",
+   "formationKey": "west-rt-tight-21",
+   "direction": "RT",
+   "personnel": "12",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 109,
+   "rawCall": "[12] WEST RT TIGHT F CTR / 18 ZORRO X NOW",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "TIGHT",
+    "F",
+    "CTR"
+   ],
+   "unappliedTags": [
+    "F",
+    "CTR"
+   ],
+   "motionTag": null,
+   "protection": null,
+   "concept": "18 ZORRO X NOW",
+   "runNumber": 18,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "QB (p-107): Open play side at 4:30 or 7:30. Run keeper fake. OL/TE (p-107): Outside zone blocking principles and rules. Mike Declared. Front 7 rul for PSG back. PST no ‘Triples’. TE/FB are combination blocking EMOL : Support. ALERT ‘4 Call’ WK Rotation, PSG slap hip. PST communica vs ‘4’ to TE — TE blocks man w/ ...",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: F CTR",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ],
+   "alsoOnPages": [
+    109
+   ]
+  },
+  {
+   "key": "west-rt-tight-f-lt-200-jet-x-stick",
+   "name": "200 JET X STICK",
+   "formationLabel": "WEST RT TIGHT F LT",
+   "formationKey": "west-rt-tight-21",
+   "direction": "RT",
+   "personnel": "12",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 133,
+   "rawCall": "[12] WEST RT TIGHT F LT / 200 JET X STICK",
+   "callSource": "read-from-page",
+   "adjustmentTags": [
+    "TIGHT",
+    "F",
+    "LT"
+   ],
+   "unappliedTags": [
+    "F",
+    "LT"
+   ],
+   "motionTag": null,
+   "protection": "200 JET",
+   "concept": "X STICK",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-stick",
+    "F": "wr-flat",
+    "Y": "wr-over",
+    "Z": "wr-thunder",
+    "H": "hb-check-slow"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: F LT",
+    "call text was read from the page (OCR missed the cell)"
+   ]
+  },
+  {
+   "key": "y-mo-box-rt-2-scat-x-drive-y-chow",
+   "name": "2 SCAT X DRIVE Y CHOW",
+   "formationLabel": "Y MO BOX RT",
+   "formationKey": "box-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 153,
+   "rawCall": "[11] Y MO BOX RT / 2 SCAT X DRIVE Y CHOW",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN"
+   ],
+   "unappliedTags": [],
+   "motionTag": "Y MO",
+   "protection": "2 SCAT",
+   "concept": "X DRIVE Y CHOW",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "F": "wr-go",
+    "Y": "wr-drag-china",
+    "Z": "wr-basic",
+    "X": "wr-shallow-cross"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Box Rt [11] is itself needs-review (positions are a starting shape)",
+    "motion Y MO is recorded but not drawn",
+    "The back is marked hot with an outlet arrow but has no route word on the page.",
+    "route DRAG CHINA is needs-review in the library"
+   ]
+  },
+  {
+   "key": "y-mo-box-rt-3-jet-y-coco-swab",
+   "name": "3 JET Y COCO SWAB",
+   "formationLabel": "Y MO BOX RT",
+   "formationKey": "box-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 137,
+   "rawCall": "[12/11] Y MO BOX RT / 3 JET Y COCO SWAB",
+   "callSource": "ocr",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": "Y MO",
+   "protection": "3 JET",
+   "concept": "Y COCO SWAB",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "F": "wr-basic",
+    "Y": "wr-c-o",
+    "Z": "wr-shallow-cross",
+    "X": "wr-corner",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Box Rt [11] is itself needs-review (positions are a starting shape)",
+    "motion Y MO is recorded but not drawn"
+   ]
+  },
+  {
+   "key": "y-mo-bunch-rt-3-jet-dbl-scout-f-snag",
+   "name": "3 JET DBL SCOUT F SNAG",
+   "formationLabel": "Y MO BUNCH RT",
+   "formationKey": "bunch-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 139,
+   "rawCall": "[12/11] Y MO BUNCH RT / 3 JET DBL SCOUT F SNAG",
+   "callSource": "ocr",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": "Y MO",
+   "protection": "3 JET",
+   "concept": "DBL SCOUT F SNAG",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-scout",
+    "Y": "wr-basic",
+    "F": "wr-snag",
+    "Z": "wr-scout",
+    "H": "hb-check-slow"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Bunch Rt [11] is itself needs-review (positions are a starting shape)",
+    "motion Y MO is recorded but not drawn"
+   ]
+  },
+  {
+   "key": "y-mo-dice-rt-19-wanda-can-18",
+   "name": "19 WANDA (CAN) 18",
+   "formationLabel": "Y MO DICE RT",
+   "formationKey": "dice-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 117,
+   "rawCall": "[11] Y MO DICE RT / 19 WANDA (CAN) 18",
+   "callSource": "ocr",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": "Y MO",
+   "protection": null,
+   "concept": "19 WANDA (CAN) 18",
+   "runNumber": 19,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "OL/TE (p-113): Outside Zone scheme principles and rules. X play. Box declared.",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Dice Rt [11] is itself needs-review (positions are a starting shape)",
+    "motion Y MO is recorded but not drawn",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "y-mo-dixie-lt-close-19-can-18-wanda",
+   "name": "19 (CAN) 18 WANDA",
+   "formationLabel": "Y MO DIXIE LT CLOSE",
+   "formationKey": "dixie-rt-11",
+   "direction": "LT",
+   "personnel": "11",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 115,
+   "rawCall": "[11] Y MO DIXIE LT CLOSE / 19 (CAN) 18 WANDA",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "CLOSE"
+   ],
+   "unappliedTags": [
+    "CLOSE"
+   ],
+   "motionTag": "Y MO",
+   "protection": null,
+   "concept": "19 (CAN) 18 WANDA",
+   "runNumber": 19,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "OL/TE (p-113): Outside Zone scheme principles and rules. X play. Box declared.",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Dixie Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: CLOSE",
+    "motion Y MO is recorded but not drawn",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "y-mo-i-lt-book-18-weak-can-19-mike",
+   "name": "18 WEAK (CAN) 19 MIKE",
+   "formationLabel": "Y MO I LT BOOK",
+   "formationKey": "i-rt-book-21",
+   "direction": "LT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 112,
+   "rawCall": "[21] Y MO I LT BOOK / 18 WEAK (CAN) 19 MIKE",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "BOOK"
+   ],
+   "unappliedTags": [],
+   "motionTag": "Y MO",
+   "protection": null,
+   "concept": "18 WEAK (CAN) 19 MIKE",
+   "runNumber": 18,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "motion Y MO is recorded but not drawn",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "y-mo-i-rt-book-19-weak-can-18-mike",
+   "name": "19 WEAK (CAN) 18 MIKE",
+   "formationLabel": "Y MO I RT BOOK",
+   "formationKey": "i-rt-book-21",
+   "direction": "RT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 112,
+   "rawCall": "[21] Y MO I RT BOOK / 19 WEAK (CAN) 18 MIKE",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "BOOK"
+   ],
+   "unappliedTags": [],
+   "motionTag": "Y MO",
+   "protection": null,
+   "concept": "19 WEAK (CAN) 18 MIKE",
+   "runNumber": 19,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "motion Y MO is recorded but not drawn",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)",
+    "'can' call: two plays in one call, only the first is drawn"
+   ]
+  },
+  {
+   "key": "y-mo-stamp-rt-200-jet-both-omaha",
+   "name": "200 JET BOTH OMAHA",
+   "formationLabel": "Y MO STAMP RT",
+   "formationKey": "stamp-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 135,
+   "rawCall": "[12/11] Y MO STAMP RT / 200 JET BOTH OMAHA",
+   "callSource": "ocr",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": "Y MO",
+   "protection": "200 JET",
+   "concept": "BOTH OMAHA",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-omaha",
+    "F": "wr-coin",
+    "Y": "wr-coin",
+    "Z": "wr-omaha",
+    "H": "hb-check-thru"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Stamp Rt [11] is itself needs-review (positions are a starting shape)",
+    "motion Y MO is recorded but not drawn"
+   ]
+  },
+  {
+   "key": "y-mo-strong-rt-clamp-18-zorro",
+   "name": "18 ZORRO",
+   "formationLabel": "Y MO STRONG RT CLAMP",
+   "formationKey": "strong-rt-21",
+   "direction": "RT",
+   "personnel": "21",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 108,
+   "rawCall": "[21] Y MO STRONG RT CLAMP / 18 ZORRO",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "CLAMP"
+   ],
+   "unappliedTags": [
+    "CLAMP"
+   ],
+   "motionTag": "Y MO",
+   "protection": null,
+   "concept": "18 ZORRO",
+   "runNumber": 18,
+   "runFamily": "outside-zone",
+   "routeTags": {},
+   "notes": "QB (p-107): Open play side at 4:30 or 7:30. Run keeper fake. OL/TE (p-107): Outside zone blocking principles and rules. Mike Declared. Front 7 rul for PSG back. PST no ‘Triples’. TE/FB are combination blocking EMOL : Support. ALERT ‘4 Call’ WK Rotation, PSG slap hip. PST communica vs ‘4’ to TE — TE blocks man w/ ...",
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "alignment or motion tags not applied to the formation: CLAMP",
+    "motion Y MO is recorded but not drawn",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "y-mo-train-rt-2-jet-y-skinner-return-burst",
+   "name": "2 JET Y SKINNER RETURN BURST",
+   "formationLabel": "Y MO TRAIN RT (-)",
+   "formationKey": "train-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 154,
+   "rawCall": "[12/11] Y MO TRAIN RT (-) / 2 JET Y SKINNER RETURN BURST",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN",
+    "(-)"
+   ],
+   "unappliedTags": [
+    "(-)"
+   ],
+   "motionTag": "Y MO",
+   "protection": "2 JET",
+   "concept": "Y SKINNER RETURN BURST",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-go",
+    "F": "wr-thru",
+    "Y": "wr-skinner",
+    "Z": "wr-now-return",
+    "H": "hb-check-burst"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Train Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: (-)",
+    "motion Y MO is recorded but not drawn"
+   ]
+  },
+  {
+   "key": "z-mo-fast-rt-open-3-jet-y-skinner-return-burst",
+   "name": "3 JET Y SKINNER RETURN BURST",
+   "formationLabel": "Z MO FAST RT OPEN (+)",
+   "formationKey": "fast-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 154,
+   "rawCall": "[12/11] Z MO FAST RT OPEN (+) / 3 JET Y SKINNER RETURN BURST",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN",
+    "OPEN",
+    "(+)"
+   ],
+   "unappliedTags": [
+    "OPEN",
+    "(+)"
+   ],
+   "motionTag": "Z MO",
+   "protection": "3 JET",
+   "concept": "Y SKINNER RETURN BURST",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "Z": "wr-now-return",
+    "F": "wr-thru",
+    "Y": "wr-go-widen",
+    "H": "hb-check-burst"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Fast Rt [11] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: OPEN (+)",
+    "motion Z MO is recorded but not drawn",
+    "The Skinner runner's circle is not drawn (motion); could not tell who runs it."
+   ]
+  }
+ ]
+}

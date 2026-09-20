@@ -141,6 +141,39 @@ export type Formation = {
 
 export type PlayCategory = 'Run' | 'Pass' | 'PA' | 'Screen' | 'Special';
 
+/** 'needs-review' = the call and assignments are from the source, but something about the drawing is a starting shape. */
+export type PlayConfidence = 'derived' | 'needs-review';
+
+/**
+ * One named route from a system's route tree, with geometry derived from the written description.
+ * frame 'receiver': points are relative to the player for a RIGHT-side receiver (+x = toward the sideline,
+ * -x = inside, +y = downfield) and y is the depth from the line of scrimmage. frame 'back': x is relative
+ * to the back (+x = his release side), y is the depth from the line of scrimmage unless relativeY is set.
+ */
+export type RouteDefPoint = Point & { smooth?: boolean; relativeY?: boolean };
+export type RouteLandmark = { kind: string; point?: number; y?: number; offset?: number; text?: string };
+export type RouteDef = {
+  key: string;
+  name: string;
+  variant?: string | null;
+  group: 'WR' | 'HB';
+  frame: 'receiver' | 'back';
+  sourcePage: number;
+  /** Midpoint of depthRange (or the step count converted to yards when the source gives only steps). */
+  breakDepthYards: number | null;
+  depthRange?: [number, number] | null;
+  steps?: number | null;
+  depthFromSteps?: boolean;
+  breakDirection: string;
+  isDoubleMove: boolean;
+  vsCoverageAdjustments: string[];
+  landmark?: RouteLandmark | null;
+  aliasOf?: string[] | null;
+  points: RouteDefPoint[];
+  confidence: PlayConfidence;
+  note?: string | null;
+};
+
 export type PlayDefense = { formationId?: string; front?: string; coverage?: string };
 
 export type Play = {
@@ -164,6 +197,18 @@ export type Play = {
   diagram: Diagram;
   /** Explicit view window; undefined = auto-fit. */
   view?: ViewWindow;
+  /** Provenance for imported plays: the playbook, its install number, the page, and the call exactly as read. */
+  source?: string;
+  sourcePage?: number;
+  install?: number;
+  rawCall?: string;
+  protection?: string;
+  concept?: string;
+  /** player id -> route library key, so a drawn route can be traced back to its route word. */
+  routeTags?: Record<string, string>;
+  confidence?: PlayConfidence;
+  /** Why an imported play is needs-review (one reason per line). */
+  reviewNotes?: string[];
   createdAt: string;
   updatedAt: string;
 };

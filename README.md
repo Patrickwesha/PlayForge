@@ -33,6 +33,24 @@ npm run render:formations                     # SVG + PNG + an index.html contac
 
 Entries are keyed on name + personnel, so re-running never duplicates. Alignment constants come from `src/model/constants.ts`; a source authored with a different line spacing is remapped. Open browsers pick up regenerated data on the next load, and a formation you edited in the app is never overwritten. Filter the library to `Needs review` to work through the entries whose positions are only a starting shape.
 
+## Play and route packs
+
+The 2019 Packers route library (159 routes, pages 70-103) and the Install #1 plays are checked in as seeds next to the formation pack. Nothing is traced from the scanned diagrams: route geometry is derived from the depths and breaks the book states in words, and a play is an imported formation + a protection + a route word per receiver (or a run family), drawn with `src/geometry/routeLibrary.ts` and the block presets.
+
+```bash
+python scripts/playbook/rasterize.py "path/to/playbook.pdf"   # one PNG per page at 200 DPI (needs: pip install pymupdf)
+npm i --no-save tesseract.js && node scripts/playbook/ocr.mjs  # Tesseract OCR: text + word boxes per page
+python scripts/playbook/parse_route_pages.py                  # route tree tables -> local raw records
+python scripts/playbook/parse_calls.py 1 104 157              # install N, first page, last page -> calls.install-N.json
+npm run import:plays                                          # bind calls + route words + formations, write the seed data, validate
+npm run render:plays                                          # SVG + PNG + an index.html contact sheet in renders/packers-2019-plays/
+```
+
+- Sources you edit: `data/packers-2019/routes.source.json` (one record per route) and `data/packers-2019/tags.install-N.json` (route word per player, read from the page because those labels are too small for OCR).
+- The scans, the OCR text, and anything verbatim from the book stay in `data/packers-2019/ocr/` and `local/`, which are gitignored. The checked-in records carry depths, breaks, page numbers, and short paraphrased notes.
+- Rerunnable: plays are keyed on formation line + call line, so a rerun updates in place and never duplicates. A play you edited in the app is never overwritten.
+- Every play carries `install`, `sourcePage`, `rawCall`, `personnel`, `protection`, `concept`, `routeTags`, `confidence`, and `reviewNotes` as real fields. `data/packers-2019/import-report.json` lists what was flagged UNPARSED or needs-review and why.
+
 ## Sync across devices (optional)
 
 Without setup the app is fully local, exactly as before. With a free Supabase project it keeps plays, formations, and playbooks the same on every device you sign in on. The newest edit wins per play, deletes carry over, and it keeps working offline and catches up later. Untouched built-ins never upload. Settings (look, hashes, paper) stay per device.

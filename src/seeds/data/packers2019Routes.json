@@ -1,0 +1,6183 @@
+{
+ "_generated": "Written by scripts/playbook/build_plays.py from data/packers-2019/routes.source.json. Do not edit by hand.",
+ "pack": "packers-2019-routes",
+ "source": "2019 Green Bay Packers offensive playbook (LaFleur), pages 70-103",
+ "stepsToYards": 1.4,
+ "revision": "aff08bb878b4",
+ "routes": [
+  {
+   "key": "wr-arches",
+   "name": "ARCHES",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 71,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    5,
+    5
+   ],
+   "steps": 4,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Hard inside leverage: can go over the top, but cross the defender's face when possible"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 1,
+     "y": 2.5,
+     "smooth": true
+    },
+    {
+     "x": 0.5,
+     "y": 5
+    },
+    {
+     "x": -5,
+     "y": 9.5
+    }
+   ],
+   "confidence": "derived",
+   "note": null
+  },
+  {
+   "key": "wr-archo",
+   "name": "ARCHO",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 71,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 1,
+     "y": 2.5,
+     "smooth": true
+    },
+    {
+     "x": 0.5,
+     "y": 5
+    },
+    {
+     "x": -1.5,
+     "y": 6.5
+    },
+    {
+     "x": 2.5,
+     "y": 15
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Sells Arches, then exits back out to the red line. Book gives no depth (\"get on the DB's toes\"); used the Arches break at 5."
+  },
+  {
+   "key": "wr-arrow-inside-basic-route",
+   "name": "ARROW",
+   "variant": "inside basic route",
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 71,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    4,
+    6
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "sit",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Matched: break back out when the QB gives you his eyes"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 5
+    },
+    {
+     "x": -0.8,
+     "y": 4.4
+    }
+   ],
+   "confidence": "derived",
+   "note": null
+  },
+  {
+   "key": "wr-arrow-outside-basic-route",
+   "name": "ARROW",
+   "variant": "outside basic route",
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 71,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    4,
+    6
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "sit",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Matched: break back out when the QB gives you his eyes"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -2,
+     "y": 5
+    },
+    {
+     "x": -2.8,
+     "y": 4.4
+    }
+   ],
+   "confidence": "derived",
+   "note": null
+  },
+  {
+   "key": "wr-attack",
+   "name": "ATTACK",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 71,
+   "breakDepthYards": 10.0,
+   "depthRange": [
+    10,
+    10
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Tampa 2: replace the Mike",
+    "Not Tampa 2: work between the hashes",
+    "2 Man: sell a Thru, then break away from the defender"
+   ],
+   "landmark": {
+    "kind": "middle",
+    "point": 1
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -6,
+     "y": 10
+    }
+   ],
+   "confidence": "derived",
+   "note": "Inside release angled at the Mike at 10 yards. The end point is pulled to the middle of the formation when composed."
+  },
+  {
+   "key": "wr-basic",
+   "name": "BASIC",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 72,
+   "breakDepthYards": 13.0,
+   "depthRange": [
+    12,
+    14
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 13
+    },
+    {
+     "x": -8,
+     "y": 13
+    }
+   ],
+   "confidence": "derived",
+   "note": null
+  },
+  {
+   "key": "wr-basic-outside-the-numbers",
+   "name": "BASIC",
+   "variant": "outside the numbers",
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 72,
+   "breakDepthYards": 13.0,
+   "depthRange": [
+    12,
+    14
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -3,
+     "y": 5
+    },
+    {
+     "x": -3,
+     "y": 13
+    },
+    {
+     "x": -11,
+     "y": 13
+    }
+   ],
+   "confidence": "derived",
+   "note": "Split rule: boundary = numbers +2, field = outside edge. Slant burst 5 yards to the inside edge of the numbers first."
+  },
+  {
+   "key": "wr-bench",
+   "name": "BENCH",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 72,
+   "breakDepthYards": 15.0,
+   "depthRange": [
+    15,
+    15
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Free access: attack leverage, no wider than the bottom of the numbers",
+    "Corner trailing: high angle",
+    "Corner on top: cross face"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 15
+    },
+    {
+     "x": 1.5,
+     "y": 19,
+     "smooth": true
+    },
+    {
+     "x": 7,
+     "y": 21
+    }
+   ],
+   "confidence": "derived",
+   "note": "Speed cut from 15 that finishes at 21. Outside the numbers: slant burst 5 yards to the inside edge of the numbers first (variant, not drawn)."
+  },
+  {
+   "key": "wr-bike",
+   "name": "BIKE",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 72,
+   "breakDepthYards": 10.0,
+   "depthRange": [
+    10,
+    10
+   ],
+   "steps": 3,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [
+    "Free access: attack the corner's leverage"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 10
+    },
+    {
+     "x": 2.5,
+     "y": 12.5
+    },
+    {
+     "x": -3,
+     "y": 17.5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Breaks at 10 to sell the Bench for 3 steps, then back inside to the hole."
+  },
+  {
+   "key": "wr-blazer",
+   "name": "BLAZER",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 72,
+   "breakDepthYards": 17.5,
+   "depthRange": [
+    15,
+    20
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "vertical",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Cloud: widen slip, get vertical on the safety",
+    "Bump: widen Go to the red line",
+    "DB does not widen: go around him"
+   ],
+   "landmark": {
+    "kind": "numbers-outside-edge-max"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 5,
+     "y": 17.5,
+     "smooth": true
+    },
+    {
+     "x": 4.5,
+     "y": 26
+    }
+   ],
+   "confidence": "derived",
+   "note": "Book split. Widen 4-6 yards outside the original alignment, get skinny by 15-20 and stay vertical."
+  },
+  {
+   "key": "wr-blaze-out",
+   "name": "BLAZE OUT",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 72,
+   "breakDepthYards": 23.5,
+   "depthRange": [
+    22,
+    25
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 5,
+     "y": 17.5,
+     "smooth": true
+    },
+    {
+     "x": 4.5,
+     "y": 23.5
+    },
+    {
+     "x": 10,
+     "y": 23.5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Book split. Blazer, then a 90 degree out at 22-25. Coaching point: run through 20."
+  },
+  {
+   "key": "wr-c-o",
+   "name": "C.O.",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 73,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    4,
+    6
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Stack alignment: chase the outside hip of the near receiver"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0.8,
+     "y": 2,
+     "smooth": true
+    },
+    {
+     "x": 0.5,
+     "y": 5
+    },
+    {
+     "x": 6,
+     "y": 5
+    }
+   ],
+   "confidence": "derived",
+   "note": "A predetermined Choice that always breaks out. Arc release."
+  },
+  {
+   "key": "wr-choice-full-width",
+   "name": "CHOICE",
+   "variant": "full width",
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 73,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    4,
+    6
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "option",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Man: beat the man over you (in or out)",
+    "Zone: find a soft spot and sit"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 5
+    },
+    {
+     "x": -0.8,
+     "y": 4.4
+    }
+   ],
+   "confidence": "derived",
+   "note": "Three-way go at 4-6. Base drawn as the sit; in and out are the other two answers."
+  },
+  {
+   "key": "wr-choice-outside-of-stack",
+   "name": "CHOICE",
+   "variant": "outside of stack",
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 73,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    4,
+    6
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "option",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Nickel disappears: work the outermost defender"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 5
+    },
+    {
+     "x": -0.8,
+     "y": 4.4
+    }
+   ],
+   "confidence": "derived",
+   "note": "Slightly miss the count, then the same three-way go."
+  },
+  {
+   "key": "wr-choice-inside-of-stack",
+   "name": "CHOICE",
+   "variant": "inside of stack",
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 73,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    4,
+    6
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "option",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Nickel disappears: work the outermost defender"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -0.8,
+     "y": 2,
+     "smooth": true
+    },
+    {
+     "x": -0.5,
+     "y": 5
+    },
+    {
+     "x": -1.3,
+     "y": 4.4
+    }
+   ],
+   "confidence": "derived",
+   "note": "Arc release, then the same three-way go."
+  },
+  {
+   "key": "wr-clear",
+   "name": "CLEAR",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 73,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "vertical",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "MFO: does NOT bend (that is the difference from Seam)"
+   ],
+   "landmark": {
+    "kind": "seam"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 22
+    }
+   ],
+   "confidence": "derived",
+   "note": "Seam landmarks: field = 2 yards inside the numbers, boundary = 1 yard inside."
+  },
+  {
+   "key": "wr-coin",
+   "name": "COIN",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 73,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    4,
+    6
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "option",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Zone: sit",
+    "Man or matched: break out"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 5
+    },
+    {
+     "x": -0.8,
+     "y": 4.4
+    }
+   ],
+   "confidence": "derived",
+   "note": "A Choice with only two answers. Some concepts ask for lose 2 on the stem."
+  },
+  {
+   "key": "wr-colorado-red-zone",
+   "name": "COLORADO",
+   "variant": "red zone",
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 74,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": 3,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [
+    "DB undercutting: come out at a high angle",
+    "Press: sell a Now, come out on an angle to win"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 3
+    },
+    {
+     "x": -3,
+     "y": 6
+    },
+    {
+     "x": 2,
+     "y": 11.5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Slant, sold for 3 steps, then out across the DB's face. Depths come from the Slant (3 steps)."
+  },
+  {
+   "key": "wr-comeback",
+   "name": "COMEBACK",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 74,
+   "breakDepthYards": 18.0,
+   "depthRange": [
+    18,
+    18
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "back-out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Cloud: Go"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 18
+    },
+    {
+     "x": 3,
+     "y": 15
+    }
+   ],
+   "confidence": "derived",
+   "note": "Plant at 18 and break out at 45 degrees downhill."
+  },
+  {
+   "key": "wr-corner",
+   "name": "CORNER",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 74,
+   "breakDepthYards": 12.0,
+   "depthRange": [
+    12,
+    12
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "corner",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Corner on top: the QB can flatten the throw"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 12
+    },
+    {
+     "x": 6,
+     "y": 20
+    }
+   ],
+   "confidence": "derived",
+   "note": null
+  },
+  {
+   "key": "wr-corner-post",
+   "name": "CORNER POST",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 74,
+   "breakDepthYards": 12.0,
+   "depthRange": [
+    12,
+    12
+   ],
+   "steps": 3,
+   "depthFromSteps": false,
+   "breakDirection": "post",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 12
+    },
+    {
+     "x": 2.5,
+     "y": 15
+    },
+    {
+     "x": -3,
+     "y": 25
+    }
+   ],
+   "confidence": "derived",
+   "note": "Corner at 12 sold for 3 steps, then to the near upright."
+  },
+  {
+   "key": "wr-curl",
+   "name": "CURL",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 74,
+   "breakDepthYards": 12.0,
+   "depthRange": [
+    12,
+    12
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "back-in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Press man: best release",
+    "Cloud: widen and slip inside the corner"
+   ],
+   "landmark": {
+    "kind": "note",
+    "text": "field = middle of the numbers, boundary = outside edge of the numbers"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 12
+    },
+    {
+     "x": -1.5,
+     "y": 10.5
+    }
+   ],
+   "confidence": "derived",
+   "note": null
+  },
+  {
+   "key": "wr-curl-thru",
+   "name": "CURL THRU",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 74,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -4,
+     "y": 10
+    },
+    {
+     "x": -8,
+     "y": 13
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Angle at the near high safety, over the top of the hook defender, break to daylight. No depth stated; shape is a starting point."
+  },
+  {
+   "key": "wr-dart",
+   "name": "DART",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 75,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    4,
+    6
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 5
+    },
+    {
+     "x": -10,
+     "y": 5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Arrow, work the defender at the top, then burst flat across the ball at 4-6."
+  },
+  {
+   "key": "wr-deep-shallow-red-zone",
+   "name": "DEEP SHALLOW",
+   "variant": "red zone",
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 75,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "cross",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -4,
+     "y": 1.5
+    },
+    {
+     "x": -18,
+     "y": 5
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "A Shallow Cross that gets 2 yards into the end zone, so its depth depends on the yard line. Drawn as a Shallow Cross."
+  },
+  {
+   "key": "wr-deep-sit",
+   "name": "DEEP SIT",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 75,
+   "breakDepthYards": 11.0,
+   "depthRange": [
+    10,
+    12
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "sit",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Man or match: break away flat"
+   ],
+   "landmark": {
+    "kind": "middle",
+    "point": 1
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -8,
+     "y": 11
+    }
+   ],
+   "confidence": "derived",
+   "note": "Angle to a spot over the ball at 10-12."
+  },
+  {
+   "key": "wr-deep-thru",
+   "name": "DEEP THRU",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 75,
+   "breakDepthYards": 15.0,
+   "depthRange": [
+    15,
+    15
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "MFC: get head up on the middle safety"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -4,
+     "y": 15
+    },
+    {
+     "x": -8,
+     "y": 21
+    }
+   ],
+   "confidence": "derived",
+   "note": "Angle at the near high safety, push to 15, break to daylight. 7-step timing: do not break early."
+  },
+  {
+   "key": "wr-dig",
+   "name": "DIG",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 75,
+   "breakDepthYards": 18.0,
+   "depthRange": [
+    18,
+    18
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Cloud: widen slip"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 18
+    },
+    {
+     "x": -9,
+     "y": 17
+    }
+   ],
+   "confidence": "derived",
+   "note": "Sell Go to 18, snap down, work back to the QB."
+  },
+  {
+   "key": "wr-dover",
+   "name": "DOVER",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 75,
+   "breakDepthYards": 15.0,
+   "depthRange": [
+    15,
+    15
+   ],
+   "steps": 9,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Corner squatting: possible double up"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 15
+    },
+    {
+     "x": -2,
+     "y": 18.5,
+     "smooth": true
+    },
+    {
+     "x": -7,
+     "y": 20
+    }
+   ],
+   "confidence": "derived",
+   "note": "Go for 15 (9 steps), plant outside foot, roll to 20 between the numbers and the hash. Tight split: stem to the outside edge of the numbers first."
+  },
+  {
+   "key": "wr-down-flat-in-line-hot",
+   "name": "DOWN FLAT",
+   "variant": "in-line, hot",
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 76,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Edge pressure or a 9 tech upfield: plant and come out as the hot throw"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -1,
+     "y": 1.5
+    },
+    {
+     "x": 5,
+     "y": 2.5
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Sell a run cutoff on the C-gap defender, then the flat. No depth stated."
+  },
+  {
+   "key": "wr-down-flat-in-line-late",
+   "name": "DOWN FLAT",
+   "variant": "in-line, late",
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 76,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -1,
+     "y": 1.5
+    },
+    {
+     "x": 5,
+     "y": 2.5
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Same as the hot version but not the hot throw (another hot element is built in). No depth stated."
+  },
+  {
+   "key": "wr-drag",
+   "name": "DRAG",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 76,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Man: work an edge and take an angle to win",
+    "Zone: it is a Flat route"
+   ],
+   "landmark": {
+    "kind": "sideline",
+    "y": 6
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 8,
+     "y": 6
+    }
+   ],
+   "confidence": "derived",
+   "note": "Geometry is the Flat route (6 deep on the sideline)."
+  },
+  {
+   "key": "wr-drag-china",
+   "name": "DRAG CHINA",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 76,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [],
+   "landmark": {
+    "kind": "note",
+    "text": "field: sell to the outside edge of the numbers. boundary: sell to numbers +2"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 4,
+     "y": 3
+    },
+    {
+     "x": -5,
+     "y": 3
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Sell the Drag, plant, burst back flat inside. The turn-back spot is a field landmark, so the width here is a placeholder."
+  },
+  {
+   "key": "wr-eliminator",
+   "name": "ELIMINATOR",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 77,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "cross",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Zone: sit at the opposite guard area",
+    "Man: run it to win"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -2,
+     "y": 2
+    },
+    {
+     "x": -14,
+     "y": 5
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Attack the outside shoulder of the first defender inside, cross his face, then a Shallow Cross. Shape depends on that defender."
+  },
+  {
+   "key": "wr-fade",
+   "name": "FADE",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 78,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "vertical",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Inside the +10: up to 4 steps onto the DB's toes, angle for 1 yard short of the back pylon"
+   ],
+   "landmark": {
+    "kind": "redline"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 2,
+     "y": 4,
+     "smooth": true
+    },
+    {
+     "x": 3,
+     "y": 18
+    }
+   ],
+   "confidence": "derived",
+   "note": "Mandatory outside release, hold the red line, eyes at 8 yards, react to the back shoulder."
+  },
+  {
+   "key": "wr-fade-back-red-zone",
+   "name": "FADE BACK",
+   "variant": "red zone",
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 78,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "back-out",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 2,
+     "y": 4,
+     "smooth": true
+    },
+    {
+     "x": 3,
+     "y": 15
+    },
+    {
+     "x": 4,
+     "y": 12
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Widen Fade to 5 yards deep in the end zone, then back to the front pylon. Depth depends on the yard line."
+  },
+  {
+   "key": "wr-far-corner",
+   "name": "FAR CORNER",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 78,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "cross",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -24,
+     "y": 18
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Direct angle to the far pylon, run on the backside of keepers. Aim point depends on the yard line."
+  },
+  {
+   "key": "wr-field-post",
+   "name": "FIELD POST",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 78,
+   "breakDepthYards": 18.0,
+   "depthRange": [
+    18,
+    18
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "post",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 18
+    },
+    {
+     "x": -12,
+     "y": 30
+    }
+   ],
+   "confidence": "derived",
+   "note": "Book split. Read stem to 18, burst before the break, then across the field. Ball expected 42-45 deep on the far numbers."
+  },
+  {
+   "key": "wr-flag",
+   "name": "FLAG",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 78,
+   "breakDepthYards": 10.0,
+   "depthRange": [
+    10,
+    10
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "corner",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "China coming from inside you: stem inside (lose 2) on the release"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 10
+    },
+    {
+     "x": 1.5,
+     "y": 13.5,
+     "smooth": true
+    },
+    {
+     "x": 6,
+     "y": 16
+    }
+   ],
+   "confidence": "derived",
+   "note": "Vertical to 10 and roll to 16."
+  },
+  {
+   "key": "wr-flat",
+   "name": "FLAT",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 78,
+   "breakDepthYards": 6.0,
+   "depthRange": [
+    6,
+    6
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": {
+    "kind": "sideline",
+    "y": 6
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 8,
+     "y": 6
+    }
+   ],
+   "confidence": "derived",
+   "note": "No break point: outside release on an angle that puts you 6 deep on the sideline. Eyes on the 3rd step."
+  },
+  {
+   "key": "wr-glance",
+   "name": "GLANCE",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 79,
+   "breakDepthYards": 7.0,
+   "depthRange": null,
+   "steps": 5,
+   "depthFromSteps": true,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Press man: best release, vertical to 5, angle to win",
+    "Cloud: widen slip, vertical to 5, flat angle"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 7
+    },
+    {
+     "x": -6,
+     "y": 13
+    }
+   ],
+   "confidence": "derived",
+   "note": "Go for 5 steps (3 big, 2 little), break inside at 45 degrees or flatter."
+  },
+  {
+   "key": "wr-go",
+   "name": "GO",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 79,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "vertical",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Cloud: widen slip, then vertical"
+   ],
+   "landmark": {
+    "kind": "redline"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 22
+    }
+   ],
+   "confidence": "derived",
+   "note": "Stack the defender and hold the red line. Look for the ball at 15."
+  },
+  {
+   "key": "wr-go-m-o-r",
+   "name": "GO",
+   "variant": "M.O.R.",
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 79,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "vertical",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 1.5,
+     "y": 3,
+     "smooth": true
+    },
+    {
+     "x": 1.5,
+     "y": 22
+    }
+   ],
+   "confidence": "derived",
+   "note": "Mandatory outside release through the corner's outside shoulder (fish hook)."
+  },
+  {
+   "key": "wr-go-widen",
+   "name": "GO",
+   "variant": "widen",
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 79,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "vertical",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": {
+    "kind": "redline"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 3,
+     "y": 8,
+     "smooth": true
+    },
+    {
+     "x": 4,
+     "y": 22
+    }
+   ],
+   "confidence": "derived",
+   "note": "From a reduced split: width and depth to the red line, then hold it."
+  },
+  {
+   "key": "wr-high-corner",
+   "name": "HIGH CORNER",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 80,
+   "breakDepthYards": 15.0,
+   "depthRange": [
+    15,
+    15
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "corner",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "DB trailing: higher angle",
+    "Defender on top or level: be ready to cross face"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -3,
+     "y": 5
+    },
+    {
+     "x": -3,
+     "y": 15
+    },
+    {
+     "x": -1,
+     "y": 21,
+     "smooth": true
+    },
+    {
+     "x": 5,
+     "y": 25
+    }
+   ],
+   "confidence": "derived",
+   "note": "Slant burst to 5, vertical to 15, speed cut and roll to 25."
+  },
+  {
+   "key": "wr-high-cross",
+   "name": "HIGH CROSS",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 80,
+   "breakDepthYards": 20.0,
+   "depthRange": [
+    18,
+    22
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "cross",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Man: alert to stair step and run away"
+   ],
+   "landmark": {
+    "kind": "note",
+    "text": "8-10 deep on the near hash, vertical between the hashes, finish 18-22 between the far numbers and hash"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -6,
+     "y": 9
+    },
+    {
+     "x": -7,
+     "y": 13
+    },
+    {
+     "x": -22,
+     "y": 20
+    }
+   ],
+   "confidence": "derived",
+   "note": "Widths are from a normal split; the hash landmarks move with alignment."
+  },
+  {
+   "key": "wr-high-shallow-cross",
+   "name": "HIGH SHALLOW CROSS",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 80,
+   "breakDepthYards": 7.0,
+   "depthRange": [
+    7,
+    7
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "cross",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Man: stay on the move",
+    "Zone: sit at the hash (field) or the split (boundary)"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -14,
+     "y": 7
+    }
+   ],
+   "confidence": "derived",
+   "note": "Paired with a Low Shallow Cross from the other side; this one sets the depth of the rub."
+  },
+  {
+   "key": "wr-hitch",
+   "name": "HITCH",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 80,
+   "breakDepthYards": 7.0,
+   "depthRange": null,
+   "steps": 5,
+   "depthFromSteps": true,
+   "breakDirection": "stop",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Free access or bail: run it",
+    "Tuff: Fade"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 7
+    },
+    {
+     "x": -0.8,
+     "y": 6.3
+    }
+   ],
+   "confidence": "derived",
+   "note": "Go sold for 3 big, 2 little, snap up. Shoulders vertical to separate."
+  },
+  {
+   "key": "wr-juke",
+   "name": "JUKE",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 80,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    4,
+    6
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Coverage vacates: snap up, hands to the QB",
+    "Walled: break out"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -2,
+     "y": 5
+    },
+    {
+     "x": -7,
+     "y": 6
+    }
+   ],
+   "confidence": "derived",
+   "note": "Sell a Thru to 4-6, then across the defender's face."
+  },
+  {
+   "key": "wr-jo",
+   "name": "JO",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 80,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "vertical",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [],
+   "landmark": {
+    "kind": "middle",
+    "point": 1
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -5,
+     "y": 6
+    },
+    {
+     "x": -5,
+     "y": 18
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Run at the MLB, set him, break vertical. No depth stated."
+  },
+  {
+   "key": "wr-key",
+   "name": "KEY",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 81,
+   "breakDepthYards": 1.5,
+   "depthRange": null,
+   "steps": 1,
+   "depthFromSteps": true,
+   "breakDirection": "stop",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Gun: 3 steps and snap up",
+    "Tuff: Fade"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 1.5
+    },
+    {
+     "x": -0.5,
+     "y": 1.1
+    }
+   ],
+   "confidence": "derived",
+   "note": "1 step and snap up."
+  },
+  {
+   "key": "wr-lock",
+   "name": "LOCK",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 82,
+   "breakDepthYards": 20.0,
+   "depthRange": [
+    20,
+    20
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "stop",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 20
+    },
+    {
+     "x": -1,
+     "y": 18.5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Book split. The Read route with no read: always sit at 20 in the split."
+  },
+  {
+   "key": "wr-locker",
+   "name": "LOCKER",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 82,
+   "breakDepthYards": 19.0,
+   "depthRange": [
+    18,
+    20
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 19
+    },
+    {
+     "x": -10,
+     "y": 19
+    }
+   ],
+   "confidence": "derived",
+   "note": "Book split. Lock to 18-20, plant, break flat across."
+  },
+  {
+   "key": "wr-lookie",
+   "name": "LOOKIE",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 82,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Walled: break out"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 2
+    },
+    {
+     "x": -6,
+     "y": 8
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Vertical release, slant until you cannot, cross the defender's face. No depth stated."
+  },
+  {
+   "key": "wr-low-cross-tight-end",
+   "name": "LOW CROSS",
+   "variant": "tight end",
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 82,
+   "breakDepthYards": 11.0,
+   "depthRange": [
+    10,
+    12
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "cross",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Defender running it for you: hook up on the numbers"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -3,
+     "y": 6,
+     "smooth": true
+    },
+    {
+     "x": -18,
+     "y": 11
+    }
+   ],
+   "confidence": "derived",
+   "note": "Best release, avoid second-level contact, get into the QB's vision fast."
+  },
+  {
+   "key": "wr-low-cross-2-split",
+   "name": "LOW CROSS",
+   "variant": "+2 split",
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 82,
+   "breakDepthYards": 11.0,
+   "depthRange": [
+    10,
+    12
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "cross",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Zone, defender running it for you: hook up on the numbers"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -3,
+     "y": 6,
+     "smooth": true
+    },
+    {
+     "x": -20,
+     "y": 11
+    }
+   ],
+   "confidence": "derived",
+   "note": null
+  },
+  {
+   "key": "wr-low-shallow-cross",
+   "name": "LOW SHALLOW CROSS",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 82,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    4,
+    6
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "cross",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Zone: do NOT sit, stay on the move"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -4,
+     "y": 1.5
+    },
+    {
+     "x": -18,
+     "y": 5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Sharp inside release through the heels of the DE, climb to 4-6. Paired with a High Shallow Cross. The page heading is cropped to SHALLOW CROSS; the index on p-070 names it Low Shallow Cross."
+  },
+  {
+   "key": "wr-mini",
+   "name": "MINI",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 83,
+   "breakDepthYards": 10.0,
+   "depthRange": null,
+   "steps": 7,
+   "depthFromSteps": true,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Zone: wrap the near hook defender, no depth needed",
+    "Man: run it like a Basic"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 10
+    },
+    {
+     "x": -6,
+     "y": 10
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "6-8 steps vertical; the depth here is from the step count and the break changes with coverage."
+  },
+  {
+   "key": "wr-nash",
+   "name": "NASH",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 83,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": 1,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": {
+    "kind": "note",
+    "text": "can sit once +2 from the near hash"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 1
+    },
+    {
+     "x": -7,
+     "y": 4.5
+    }
+   ],
+   "confidence": "derived",
+   "note": "A Now route expecting the ball (hot)."
+  },
+  {
+   "key": "wr-now",
+   "name": "NOW",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 83,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": 1,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Bump: work a release to separate"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 1
+    },
+    {
+     "x": -8,
+     "y": 5
+    }
+   ],
+   "confidence": "derived",
+   "note": "1 step slant, under every second-level defender, stay on the move."
+  },
+  {
+   "key": "wr-now-return",
+   "name": "NOW RETURN",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 83,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": 1,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [
+    "Zone: possible sit, by concept"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 1
+    },
+    {
+     "x": -4,
+     "y": 3.5
+    },
+    {
+     "x": 3,
+     "y": 4.5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Now route, then back outside to the sideline once you reach the split."
+  },
+  {
+   "key": "wr-omaha",
+   "name": "OMAHA",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 84,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    4,
+    6
+   ],
+   "steps": 4,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Press: Omaha",
+    "Cloud: Fade",
+    "Outside the numbers: square cut",
+    "Inside the numbers: speed cut"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0.5,
+     "y": 5
+    },
+    {
+     "x": 6,
+     "y": 5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Inside foot up. Sell a (widen) Go for 4 steps, plant inside foot, run out."
+  },
+  {
+   "key": "wr-omaha-china",
+   "name": "OMAHA CHINA",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 84,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    4,
+    6
+   ],
+   "steps": 4,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0.5,
+     "y": 5
+    },
+    {
+     "x": 5,
+     "y": 5
+    },
+    {
+     "x": -4,
+     "y": 5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Omaha, 4 steps to the sideline, back inside flat."
+  },
+  {
+   "key": "wr-omaha-pump",
+   "name": "OMAHA PUMP",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 84,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    4,
+    6
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "vertical",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [
+    "Press man: run the route",
+    "Cloud: Fade"
+   ],
+   "landmark": {
+    "kind": "redline"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0.5,
+     "y": 5
+    },
+    {
+     "x": 4,
+     "y": 5
+    },
+    {
+     "x": 5,
+     "y": 20
+    }
+   ],
+   "confidence": "derived",
+   "note": "Omaha, burst to the sideline, turn up the red line."
+  },
+  {
+   "key": "wr-over",
+   "name": "OVER",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 84,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    5,
+    5
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "sit",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Dragon: if matched, break back the way you came",
+    "Spacing or Stick: stay static"
+   ],
+   "landmark": {
+    "kind": "middle",
+    "point": 1
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -8,
+     "y": 5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Inside release and sit A gap to A gap at 5."
+  },
+  {
+   "key": "wr-pick-curl",
+   "name": "PICK CURL",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 85,
+   "breakDepthYards": 12.0,
+   "depthRange": [
+    12,
+    12
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "back-in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Zone: vertical stem to push off the underneath defender, then widen",
+    "Man: attack the DB over the outside receiver, no collision"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 6
+    },
+    {
+     "x": 2,
+     "y": 12
+    },
+    {
+     "x": 0.8,
+     "y": 10.5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Pick first, route second. Finishes as a widen Curl at 12."
+  },
+  {
+   "key": "wr-pile",
+   "name": "PILE",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 85,
+   "breakDepthYards": 6.0,
+   "depthRange": [
+    6,
+    6
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "corner",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Inside the 5: push 1 yard into the end zone, roll to halfway between the goal line and end line"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 6
+    },
+    {
+     "x": 1.5,
+     "y": 8.5,
+     "smooth": true
+    },
+    {
+     "x": 5,
+     "y": 10
+    }
+   ],
+   "confidence": "derived",
+   "note": "Vertical to 6 and roll to 10."
+  },
+  {
+   "key": "wr-post",
+   "name": "POST",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 85,
+   "breakDepthYards": 18.0,
+   "depthRange": [
+    18,
+    18
+   ],
+   "steps": 9,
+   "depthFromSteps": false,
+   "breakDirection": "post",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 18
+    },
+    {
+     "x": -6,
+     "y": 30
+    }
+   ],
+   "confidence": "derived",
+   "note": "Go to 18 (9 steps), plant outside foot, aim at the near upright. Stays on vs all coverages."
+  },
+  {
+   "key": "wr-post-widen",
+   "name": "POST",
+   "variant": "widen",
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 85,
+   "breakDepthYards": 18.0,
+   "depthRange": [
+    18,
+    18
+   ],
+   "steps": 10,
+   "depthFromSteps": false,
+   "breakDirection": "post",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 2,
+     "y": 9,
+     "smooth": true
+    },
+    {
+     "x": 2,
+     "y": 18
+    },
+    {
+     "x": -4,
+     "y": 30
+    }
+   ],
+   "confidence": "derived",
+   "note": null
+  },
+  {
+   "key": "wr-pull",
+   "name": "PULL",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 85,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    4,
+    6
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "sit",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Matched: pivot away"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0.8,
+     "y": 2,
+     "smooth": true
+    },
+    {
+     "x": 0.5,
+     "y": 5
+    },
+    {
+     "x": -0.3,
+     "y": 4.4
+    }
+   ],
+   "confidence": "derived",
+   "note": "Arc release, vertical to 4-6, turn inside."
+  },
+  {
+   "key": "wr-pull-basic",
+   "name": "PULL BASIC",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 85,
+   "breakDepthYards": 11.0,
+   "depthRange": [
+    10,
+    12
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 1,
+     "y": 4,
+     "smooth": true
+    },
+    {
+     "x": 1,
+     "y": 11
+    },
+    {
+     "x": -7,
+     "y": 11
+    }
+   ],
+   "confidence": "derived",
+   "note": "The only Basic that is 10-12. Slight outside stem."
+  },
+  {
+   "key": "wr-push",
+   "name": "PUSH",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 86,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "vertical",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -5,
+     "y": 18
+    },
+    {
+     "x": -6,
+     "y": 25
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Same angle as Deep Thru but no break: run through the near high safety to clear. No depth stated."
+  },
+  {
+   "key": "wr-pylon",
+   "name": "PYLON",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 86,
+   "breakDepthYards": 15.0,
+   "depthRange": [
+    15,
+    15
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "corner",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Ball on the minus side of the 50: aim at the front pylon",
+    "Ball on the plus side: aim at the back pylon"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 15
+    },
+    {
+     "x": 7,
+     "y": 24
+    }
+   ],
+   "confidence": "derived",
+   "note": "Book split. Read stem to 15, high angle to the pylon."
+  },
+  {
+   "key": "wr-pylon-post",
+   "name": "PYLON POST",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 86,
+   "breakDepthYards": 15.0,
+   "depthRange": [
+    15,
+    15
+   ],
+   "steps": 3,
+   "depthFromSteps": false,
+   "breakDirection": "post",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 15
+    },
+    {
+     "x": 2.5,
+     "y": 18
+    },
+    {
+     "x": -3,
+     "y": 28
+    }
+   ],
+   "confidence": "derived",
+   "note": "Book split. Pylon sold for 3 steps, then the near upright."
+  },
+  {
+   "key": "wr-race-red-zone",
+   "name": "RACE",
+   "variant": "red zone",
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 87,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Tight split: widen slip first"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -1,
+     "y": 2
+    },
+    {
+     "x": -1,
+     "y": 10,
+     "smooth": true
+    },
+    {
+     "x": -8,
+     "y": 12
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Speed cut that saves 2 yards from the back end line, so the depth depends on the yard line."
+  },
+  {
+   "key": "wr-race-pivot",
+   "name": "RACE PIVOT",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 87,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "sit",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Man or match: break away from the defender"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -1,
+     "y": 4
+    },
+    {
+     "x": -1.8,
+     "y": 3.4
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Work up to the goal line and turn inside. Depth depends on the yard line."
+  },
+  {
+   "key": "wr-rail",
+   "name": "RAIL",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 87,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "vertical",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": {
+    "kind": "redline"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 3,
+     "y": 6,
+     "smooth": true
+    },
+    {
+     "x": 5,
+     "y": 22
+    }
+   ],
+   "confidence": "derived",
+   "note": "Switch release Go from inside the numbers: width and depth to the red line, then hold it."
+  },
+  {
+   "key": "wr-read",
+   "name": "READ",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 87,
+   "breakDepthYards": 20.0,
+   "depthRange": [
+    20,
+    20
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "stop",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Flat-footed safety: stay vertical 2 yards outside the hash",
+    "Safety backing up: snap down at 20 in the split",
+    "Someone squatting: burst at the top"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 20
+    },
+    {
+     "x": -1,
+     "y": 18.5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Book split. Decision at 15. Base drawn as the snap down at 20; vertical is the other answer."
+  },
+  {
+   "key": "wr-read-out",
+   "name": "READ OUT",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 87,
+   "breakDepthYards": 20.0,
+   "depthRange": [
+    20,
+    20
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "corner",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Any non-cloud coverage: must cross face"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 20
+    },
+    {
+     "x": 2,
+     "y": 23.5,
+     "smooth": true
+    },
+    {
+     "x": 7,
+     "y": 25
+    }
+   ],
+   "confidence": "derived",
+   "note": "Book split. Read stem to 15, vertical to 20, roll out to 25."
+  },
+  {
+   "key": "wr-rub-corner",
+   "name": "RUB CORNER",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 88,
+   "breakDepthYards": 10.0,
+   "depthRange": [
+    10,
+    10
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "corner",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0.5,
+     "y": 3,
+     "smooth": true
+    },
+    {
+     "x": 0,
+     "y": 10
+    },
+    {
+     "x": 6,
+     "y": 18
+    }
+   ],
+   "confidence": "derived",
+   "note": "Outside release, angle at the near shoulder of the defender covering #2, vertical for 10, finish to the corner. Do not let him play over the top."
+  },
+  {
+   "key": "wr-rub-under",
+   "name": "RUB UNDER",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 88,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    4,
+    6
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Rub Corner off the ball or getting bumped: slightly miss the count"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -1,
+     "y": 5
+    },
+    {
+     "x": -9,
+     "y": 5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Inside release at the man over the top, 4-6, use the Rub Corner as the pick."
+  },
+  {
+   "key": "wr-runback",
+   "name": "RUNBACK",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 88,
+   "breakDepthYards": 25.0,
+   "depthRange": [
+    25,
+    25
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "back-out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Cloud: outside release, sit on the sideline at 15"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 25
+    },
+    {
+     "x": 3,
+     "y": 22
+    }
+   ],
+   "confidence": "derived",
+   "note": "A Comeback pushed to 25."
+  },
+  {
+   "key": "wr-sail",
+   "name": "SAIL",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 89,
+   "breakDepthYards": 13.5,
+   "depthRange": [
+    12,
+    15
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "corner",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Defender high: the QB flattens you with the throw"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -1,
+     "y": 4,
+     "smooth": true
+    },
+    {
+     "x": -1,
+     "y": 13.5
+    },
+    {
+     "x": 7,
+     "y": 20
+    }
+   ],
+   "confidence": "derived",
+   "note": "Preferred inside release to the near hash, vertical to 12-15, break to a depth of 18-22."
+  },
+  {
+   "key": "wr-scab",
+   "name": "SCAB",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 89,
+   "breakDepthYards": 15.0,
+   "depthRange": [
+    15,
+    15
+   ],
+   "steps": 5,
+   "depthFromSteps": false,
+   "breakDirection": "back-out",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [
+    "Cloud: outside release, sit on the sideline at 15",
+    "Full width: stutter Comeback at 15"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 7
+    },
+    {
+     "x": 2.5,
+     "y": 8
+    },
+    {
+     "x": 3,
+     "y": 15
+    },
+    {
+     "x": 6,
+     "y": 12
+    }
+   ],
+   "confidence": "derived",
+   "note": "Sells a widen Scout pump: 5 steps vertical, 3 out, burst to 15, break out 45 degrees downhill."
+  },
+  {
+   "key": "wr-scout",
+   "name": "SCOUT",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 89,
+   "breakDepthYards": 10.0,
+   "depthRange": [
+    10,
+    10
+   ],
+   "steps": 7,
+   "depthFromSteps": false,
+   "breakDirection": "stop",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Bump: must get 10",
+    "Cloud: Go",
+    "Tight split: widen 7-step speed out at the corner"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 10
+    },
+    {
+     "x": 0.8,
+     "y": 9.2
+    }
+   ],
+   "confidence": "derived",
+   "note": "Full width: sell Go and snap up (5 big, 2 little)."
+  },
+  {
+   "key": "wr-scooter",
+   "name": "SCOOTER",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 89,
+   "breakDepthYards": 14.0,
+   "depthRange": [
+    14,
+    14
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "stop",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Bump: must get 14",
+    "Cloud: Go",
+    "Tight split: widen 7-step speed out with a double up at the top"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 14
+    },
+    {
+     "x": 0.8,
+     "y": 12.8
+    }
+   ],
+   "confidence": "derived",
+   "note": null
+  },
+  {
+   "key": "wr-scoop",
+   "name": "SCOOP",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 89,
+   "breakDepthYards": 18.0,
+   "depthRange": [
+    18,
+    18
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "stop",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Cloud: Go"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 18
+    },
+    {
+     "x": 0.5,
+     "y": 16
+    }
+   ],
+   "confidence": "derived",
+   "note": "Snap down at 18 and burst back down the stem; the ball can lead you outside."
+  },
+  {
+   "key": "wr-seam",
+   "name": "SEAM",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 90,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "vertical",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "MFC: preferred outside release, work to the landmark",
+    "MFO: landmarks are off, vertical to 10-12 and break to daylight across the safety's face",
+    "2 Man: set the defender at the break point"
+   ],
+   "landmark": {
+    "kind": "seam"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 22
+    }
+   ],
+   "confidence": "derived",
+   "note": "Landmarks: field = 2 yards inside the numbers, boundary = 1 yard inside. Base drawn as the MFC vertical."
+  },
+  {
+   "key": "wr-seam-stop",
+   "name": "SEAM STOP",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 90,
+   "breakDepthYards": 10.0,
+   "depthRange": [
+    10,
+    10
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "stop",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": {
+    "kind": "seam"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 10
+    },
+    {
+     "x": -0.8,
+     "y": 9.3
+    }
+   ],
+   "confidence": "derived",
+   "note": "Seam landmarks vs everything; sit at 10 over the inside shoulder."
+  },
+  {
+   "key": "wr-search",
+   "name": "SEARCH",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 90,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "stop",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 8
+    },
+    {
+     "x": -0.8,
+     "y": 7.3
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Red zone: a Seam that gets 2-3 yards across the goal line, then hooks up between the numbers and hash. Depth depends on the yard line."
+  },
+  {
+   "key": "wr-shake",
+   "name": "SHAKE",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 90,
+   "breakDepthYards": 10.0,
+   "depthRange": null,
+   "steps": 7,
+   "depthFromSteps": true,
+   "breakDirection": "corner",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [
+    "Cloud or bump: run a Bench",
+    "DB undercutting: come out at a high angle"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 10
+    },
+    {
+     "x": -3,
+     "y": 12.5
+    },
+    {
+     "x": 2,
+     "y": 18.5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Strike sold for 3 steps, then out across the DB's face."
+  },
+  {
+   "key": "wr-shallow-cross",
+   "name": "SHALLOW CROSS",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 90,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    4,
+    6
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "cross",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Zone: sit at your landmark",
+    "Man: stay on the move"
+   ],
+   "landmark": {
+    "kind": "note",
+    "text": "zone sit spot: field = opposite hash, boundary = the split"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -4,
+     "y": 1.5
+    },
+    {
+     "x": -18,
+     "y": 5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Inside release through the heels of the DE, climbing to 4-6."
+  },
+  {
+   "key": "wr-shallow-return",
+   "name": "SHALLOW RETURN",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 90,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [
+    "Matched: return back out"
+   ],
+   "landmark": {
+    "kind": "middle",
+    "point": 2
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -3,
+     "y": 1.5
+    },
+    {
+     "x": -8,
+     "y": 4.5
+    },
+    {
+     "x": -3,
+     "y": 5.5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Shallow over the ball, then back out. Depth taken from the Shallow Cross (4-6)."
+  },
+  {
+   "key": "wr-short-corner",
+   "name": "SHORT CORNER",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 91,
+   "breakDepthYards": 8.0,
+   "depthRange": [
+    8,
+    8
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "corner",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Defender on top: alert for the QB to flatten the throw"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 8
+    },
+    {
+     "x": 5,
+     "y": 14
+    }
+   ],
+   "confidence": "derived",
+   "note": "Vertical to 8, high angle (or 5 yards inside the pylon)."
+  },
+  {
+   "key": "wr-short-hook",
+   "name": "SHORT HOOK",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 91,
+   "breakDepthYards": 8.0,
+   "depthRange": [
+    8,
+    8
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "stop",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": {
+    "kind": "note",
+    "text": "field = between the numbers and hash, boundary = 1 yard inside the numbers"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 8
+    },
+    {
+     "x": -0.8,
+     "y": 7.3
+    }
+   ],
+   "confidence": "derived",
+   "note": null
+  },
+  {
+   "key": "wr-skinner",
+   "name": "SKINNER",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 91,
+   "breakDepthYards": 11.0,
+   "depthRange": [
+    10,
+    12
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "post",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Reduced split: widen on the release"
+   ],
+   "landmark": {
+    "kind": "note",
+    "text": "field = middle of the numbers, boundary = outside edge of the numbers"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 11
+    },
+    {
+     "x": -4,
+     "y": 21
+    }
+   ],
+   "confidence": "derived",
+   "note": "Go for 10-12, double up at the top, break to the post."
+  },
+  {
+   "key": "wr-slant-outside",
+   "name": "SLANT",
+   "variant": "outside",
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 91,
+   "breakDepthYards": 4.0,
+   "depthRange": null,
+   "steps": 3,
+   "depthFromSteps": true,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Press man: best release, up to 5, cross his face",
+    "Cloud: widen slip, vertical to 5, come flat"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 4
+    },
+    {
+     "x": -7,
+     "y": 10
+    }
+   ],
+   "confidence": "derived",
+   "note": "Go for 3 steps and break at an angle to win."
+  },
+  {
+   "key": "wr-slant-inside",
+   "name": "SLANT",
+   "variant": "inside",
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 91,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Defender buzzes outside you: eyes back, expect the ball"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -5,
+     "y": 5
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Release at the first defender head up or inside and shave his inside shoulder. No depth stated."
+  },
+  {
+   "key": "wr-sluggo",
+   "name": "SLUGGO",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 91,
+   "breakDepthYards": 4.0,
+   "depthRange": null,
+   "steps": 3,
+   "depthFromSteps": true,
+   "breakDirection": "vertical",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [
+    "Press man: outside release, 1 hard step to the slant, then go"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 4
+    },
+    {
+     "x": -3,
+     "y": 7
+    },
+    {
+     "x": -3,
+     "y": 24
+    }
+   ],
+   "confidence": "derived",
+   "note": "3 steps vertical, 3 steps selling the Slant, then vertical."
+  },
+  {
+   "key": "wr-sluggo-under",
+   "name": "SLUGGO UNDER",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 92,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 5
+    },
+    {
+     "x": -2.5,
+     "y": 5
+    },
+    {
+     "x": 0,
+     "y": 9,
+     "smooth": true
+    },
+    {
+     "x": -8,
+     "y": 9
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Sell an Under Pump, then run an Under. +3 split outside the numbers. The second Under's depth is not stated."
+  },
+  {
+   "key": "wr-slide",
+   "name": "SLIDE",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 92,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "cross",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -3,
+     "y": -1.2,
+     "smooth": true
+    },
+    {
+     "x": -12,
+     "y": -1
+    },
+    {
+     "x": -16,
+     "y": 1.5
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Keeper route: start on the fake side, slide behind the LOS past the backside DE or OLB. First in the progression and hot. Width depends on the formation."
+  },
+  {
+   "key": "wr-smash",
+   "name": "SMASH",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 92,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    4,
+    6
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "stop",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": {
+    "kind": "redline"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 1,
+     "y": 5
+    },
+    {
+     "x": 0.3,
+     "y": 4.4
+    }
+   ],
+   "confidence": "derived",
+   "note": "Push 4-6 toward the red line and snap up."
+  },
+  {
+   "key": "wr-snag",
+   "name": "SNAG",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 92,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [
+    "Man: sell the Shallow to the near guard",
+    "Zone: no need to sell it as far, be ready to sit"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -5,
+     "y": 3.5
+    },
+    {
+     "x": -3.5,
+     "y": 4.8
+    }
+   ],
+   "confidence": "derived",
+   "note": "Sell a Shallow Cross, plant, snap down, break back out. Depth from the Shallow Cross."
+  },
+  {
+   "key": "wr-stalk-flat",
+   "name": "STALK FLAT",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 92,
+   "breakDepthYards": 4.0,
+   "depthRange": [
+    3,
+    5
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Nickel head up to outside: release vertical, sell a stalk block, break out when he looks inside"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -1.5,
+     "y": 4
+    },
+    {
+     "x": 5,
+     "y": 4
+    }
+   ],
+   "confidence": "derived",
+   "note": "Inside release selling a backside cutoff of the nickel for 3-5, then out flat."
+  },
+  {
+   "key": "wr-stalk-rail",
+   "name": "STALK RAIL",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 92,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "vertical",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [],
+   "landmark": {
+    "kind": "redline"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 3
+    },
+    {
+     "x": 3,
+     "y": 18
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Sell a stalk block, then run to the red line. No depth stated for the sell."
+  },
+  {
+   "key": "wr-stalk-shallow",
+   "name": "STALK SHALLOW",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 93,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    4,
+    6
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "cross",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -4,
+     "y": 1.5
+    },
+    {
+     "x": -18,
+     "y": 5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Block for a 2 count, then a Shallow Cross. Stay on the move."
+  },
+  {
+   "key": "wr-stick",
+   "name": "STICK",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 93,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    5,
+    5
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Flat route inside you: release inside 2 yards (lose 2) on the stem"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 5
+    },
+    {
+     "x": 5,
+     "y": 5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Vertical to 5 and out flat, thinking man and reacting to zone."
+  },
+  {
+   "key": "wr-stick-china",
+   "name": "STICK CHINA",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 93,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    5,
+    5
+   ],
+   "steps": 4,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 5
+    },
+    {
+     "x": 4,
+     "y": 5
+    },
+    {
+     "x": -5,
+     "y": 5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Stick, 4 full steps out looking hot, then back flat inside."
+  },
+  {
+   "key": "wr-stick-nod",
+   "name": "STICK NOD",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 93,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    5,
+    5
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "vertical",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [
+    "MFC: stay thin",
+    "MFO: cross face",
+    "Complementary route inside: lose 2 on the stem"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 5
+    },
+    {
+     "x": 2,
+     "y": 5.5
+    },
+    {
+     "x": 2,
+     "y": 20
+    }
+   ],
+   "confidence": "derived",
+   "note": "5 vertical, sell the Stick for 1 to 3 steps, then up."
+  },
+  {
+   "key": "wr-sting",
+   "name": "STING",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 93,
+   "breakDepthYards": 7.0,
+   "depthRange": null,
+   "steps": 5,
+   "depthFromSteps": true,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Cover 4: shave the angle as flat as needed to cross the safety's face"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 7
+    },
+    {
+     "x": -7,
+     "y": 13
+    }
+   ],
+   "confidence": "derived",
+   "note": "Inside foot up. Go for 5 steps, break inside on a slant angle."
+  },
+  {
+   "key": "wr-sting-shake",
+   "name": "STING SHAKE",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 93,
+   "breakDepthYards": 7.0,
+   "depthRange": null,
+   "steps": 5,
+   "depthFromSteps": true,
+   "breakDirection": "corner",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [
+    "DB undercutting: come out at a high angle"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 7
+    },
+    {
+     "x": -3,
+     "y": 9.5
+    },
+    {
+     "x": 2,
+     "y": 15.5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Sting sold for 3 steps, then out across the DB's face."
+  },
+  {
+   "key": "wr-stogie",
+   "name": "STOGIE",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 94,
+   "breakDepthYards": 10.0,
+   "depthRange": [
+    10,
+    10
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "back-out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": {
+    "kind": "note",
+    "text": "stem to a point 10 deep on the numbers, work back to the red line"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -2,
+     "y": 10
+    },
+    {
+     "x": 1,
+     "y": 8.5
+    }
+   ],
+   "confidence": "derived",
+   "note": null
+  },
+  {
+   "key": "wr-stomp",
+   "name": "STOMP",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 94,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "vertical",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Press: preferred outside release to the red line",
+    "Free access: close the cushion, set the defender, work to the red line"
+   ],
+   "landmark": {
+    "kind": "redline"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 4
+    },
+    {
+     "x": 3,
+     "y": 10,
+     "smooth": true
+    },
+    {
+     "x": 4,
+     "y": 22
+    }
+   ],
+   "confidence": "derived",
+   "note": "Attack the defender, then a widen Go to the red line."
+  },
+  {
+   "key": "wr-stool",
+   "name": "STOOL",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 94,
+   "breakDepthYards": 12.0,
+   "depthRange": [
+    12,
+    12
+   ],
+   "steps": 4,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -3,
+     "y": 5
+    },
+    {
+     "x": -3,
+     "y": 9.5
+    },
+    {
+     "x": -1.5,
+     "y": 11.5,
+     "smooth": true
+    },
+    {
+     "x": 3,
+     "y": 12
+    }
+   ],
+   "confidence": "derived",
+   "note": "Locked route. Slant burst 4 steps to the inside edge of the numbers, vertical 4 steps, roll out to 12."
+  },
+  {
+   "key": "wr-streak",
+   "name": "STREAK",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 94,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "post",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 15
+    },
+    {
+     "x": -3,
+     "y": 36
+    }
+   ],
+   "confidence": "derived",
+   "note": "Automatic book split. Read stem to the near upright, blowing the top off."
+  },
+  {
+   "key": "wr-streak-rider-concept",
+   "name": "STREAK",
+   "variant": "rider concept",
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 94,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "vertical",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Quarters or single safety cut with the corner squeezing: slight tick at 15 to buckle him, stay vertical"
+   ],
+   "landmark": {
+    "kind": "hash",
+    "offset": 2
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 26
+    }
+   ],
+   "confidence": "derived",
+   "note": "Book split. Vertical 2 yards outside the hash; let the QB bring you inside. Do not break down."
+  },
+  {
+   "key": "wr-strike",
+   "name": "STRIKE",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 95,
+   "breakDepthYards": 10.0,
+   "depthRange": null,
+   "steps": 7,
+   "depthFromSteps": true,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Bump: get 10",
+    "Cover 2: widen slip",
+    "Widen Strike: 6 steps, 1-2 yards outside your alignment"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 10
+    },
+    {
+     "x": -2,
+     "y": 12,
+     "smooth": true
+    },
+    {
+     "x": -9,
+     "y": 13.5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Vertical 7 steps and in without a hard stick. Catch it just outside the hash."
+  },
+  {
+   "key": "wr-strike-pump",
+   "name": "STRIKE PUMP",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 95,
+   "breakDepthYards": 10.0,
+   "depthRange": null,
+   "steps": 7,
+   "depthFromSteps": true,
+   "breakDirection": "vertical",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 10
+    },
+    {
+     "x": -3,
+     "y": 12.5
+    },
+    {
+     "x": -3,
+     "y": 27
+    }
+   ],
+   "confidence": "derived",
+   "note": "Strike: 7 steps vertical, 3 steps in, vertical on the 3rd. Ball between the hash and numbers."
+  },
+  {
+   "key": "wr-surge-arrow",
+   "name": "SURGE ARROW",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 95,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    5,
+    5
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "stop",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Near the goal line: 2 yards into the end zone"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 1,
+     "y": 2,
+     "smooth": true
+    },
+    {
+     "x": 1,
+     "y": 5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Surge concept. Outside release, vertical to 5; the inside receiver's Surge Flat uses you as the pick."
+  },
+  {
+   "key": "wr-surge-flat",
+   "name": "SURGE FLAT",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 95,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 2.5
+    },
+    {
+     "x": 7,
+     "y": 3
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Surge concept. Push upfield to freeze the defender, break flat under the Surge Arrow. No depth stated."
+  },
+  {
+   "key": "wr-swirl",
+   "name": "SWIRL",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 95,
+   "breakDepthYards": 15.0,
+   "depthRange": [
+    15,
+    15
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "back-in",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [],
+   "landmark": {
+    "kind": "note",
+    "text": "field = push to the inside edge of the numbers, boundary = the outside edge"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 10
+    },
+    {
+     "x": 4,
+     "y": 15
+    },
+    {
+     "x": 1.5,
+     "y": 13
+    }
+   ],
+   "confidence": "derived",
+   "note": "Sell the Corner: vertical 10, break to the corner at 15, snap down, straight back to the QB."
+  },
+  {
+   "key": "wr-swig",
+   "name": "SWIG",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 95,
+   "breakDepthYards": 18.0,
+   "depthRange": [
+    18,
+    18
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": [
+    "SWIRL",
+    "DIG"
+   ],
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 18
+    },
+    {
+     "x": -9,
+     "y": 17
+    }
+   ],
+   "confidence": "derived",
+   "note": "Not its own shape: Swirl from a condensed split, Dig from a normal alignment. Drawn as the Dig."
+  },
+  {
+   "key": "wr-takeoff",
+   "name": "TAKEOFF",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 96,
+   "breakDepthYards": 15.0,
+   "depthRange": [
+    15,
+    15
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "vertical",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [
+    "Cloud: sit briefly on the sideline at 15, then burst",
+    "Keepers: be patient, do not outrun the QB's arm"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 15
+    },
+    {
+     "x": 0.8,
+     "y": 14.2
+    },
+    {
+     "x": 1,
+     "y": 29
+    }
+   ],
+   "confidence": "derived",
+   "note": "Vertical to 15, drop your weight like a Comeback, then go."
+  },
+  {
+   "key": "wr-throttle",
+   "name": "THROTTLE",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 96,
+   "breakDepthYards": 15.0,
+   "depthRange": [
+    15,
+    15
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "sit",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Zone, no safety cut: sit on the near hash at 15",
+    "Man or a safety cut: break away flat, parallel to the LOS",
+    "Tighter than a book split: sell the Thru between the hashes"
+   ],
+   "landmark": {
+    "kind": "note",
+    "text": "15 deep on the near hash"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -5,
+     "y": 10
+    },
+    {
+     "x": -6,
+     "y": 15
+    }
+   ],
+   "confidence": "derived",
+   "note": "Sell a High Cross to 10, burst to 15 on the near hash."
+  },
+  {
+   "key": "wr-thru",
+   "name": "THRU",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 96,
+   "breakDepthYards": 9.0,
+   "depthRange": [
+    8,
+    10
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "MFC: get head up on the middle safety",
+    "MFO: safety outside your alignment = vertical release"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -2,
+     "y": 9
+    },
+    {
+     "x": -6,
+     "y": 16
+    }
+   ],
+   "confidence": "derived",
+   "note": "Angle at the near high safety, vertical 8-10 over the first defender inside, break to daylight."
+  },
+  {
+   "key": "wr-thru-return",
+   "name": "THRU RETURN",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 96,
+   "breakDepthYards": 11.0,
+   "depthRange": [
+    10,
+    12
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [],
+   "landmark": {
+    "kind": "middle",
+    "point": 1
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -8,
+     "y": 11
+    },
+    {
+     "x": -4,
+     "y": 15.5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Sell the Thru to the middle of the hashes at 10-12, roll out at an angle to win."
+  },
+  {
+   "key": "wr-thunder",
+   "name": "THUNDER",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 96,
+   "breakDepthYards": 7.0,
+   "depthRange": null,
+   "steps": 5,
+   "depthFromSteps": true,
+   "breakDirection": "stop",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Free access or bail: run it",
+    "Cloud: Fade",
+    "Press man: stop route, Go sold to 8, snap up"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 7
+    },
+    {
+     "x": -0.8,
+     "y": 6.3
+    }
+   ],
+   "confidence": "derived",
+   "note": "Go sold for 3 big, 2 little, snap up."
+  },
+  {
+   "key": "wr-thunder-pump",
+   "name": "THUNDER PUMP",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 96,
+   "breakDepthYards": 7.0,
+   "depthRange": null,
+   "steps": 5,
+   "depthFromSteps": true,
+   "breakDirection": "vertical",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [
+    "Cloud: Fade"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 7
+    },
+    {
+     "x": 0.6,
+     "y": 6.4
+    },
+    {
+     "x": 1,
+     "y": 22
+    }
+   ],
+   "confidence": "derived",
+   "note": "Sell the Thunder, avoid contact, run to win."
+  },
+  {
+   "key": "wr-trash-shallow",
+   "name": "TRASH SHALLOW",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 97,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    4,
+    6
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "cross",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -4,
+     "y": 1.5
+    },
+    {
+     "x": -20,
+     "y": 5
+    }
+   ],
+   "confidence": "derived",
+   "note": "+2 split. A Shallow Cross that never sits."
+  },
+  {
+   "key": "wr-trickle",
+   "name": "TRICKLE",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 97,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": {
+    "kind": "note",
+    "text": "field = the split, boundary = inside edge of the numbers"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0.5,
+     "y": 0.5
+    },
+    {
+     "x": 4,
+     "y": 3
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Chip through the outside shoulder of the widest rusher, then release slowly outside looking back over the inside shoulder. No depth stated."
+  },
+  {
+   "key": "wr-tree",
+   "name": "TREE",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 97,
+   "breakDepthYards": 10.0,
+   "depthRange": [
+    10,
+    10
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 10
+    },
+    {
+     "x": 1.5,
+     "y": 11.5,
+     "smooth": true
+    },
+    {
+     "x": 7,
+     "y": 12
+    }
+   ],
+   "confidence": "derived",
+   "note": "Vertical 10, attack leverage, speed cut to 12. Completed between the numbers and the sideline."
+  },
+  {
+   "key": "wr-trunk",
+   "name": "TRUNK",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 97,
+   "breakDepthYards": 9.0,
+   "depthRange": [
+    8,
+    10
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Cover 2: inside release, break out downhill",
+    "Inside or head-up man: inside release, break out running away",
+    "Single-high zone or hard outside leverage: widen release, break IN downhill"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -1,
+     "y": 3,
+     "smooth": true
+    },
+    {
+     "x": -1,
+     "y": 9
+    },
+    {
+     "x": 5,
+     "y": 7.5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Base drawn as the Cover 2 version. The single-high answer flips the break inside."
+  },
+  {
+   "key": "wr-under",
+   "name": "UNDER",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 98,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    5,
+    5
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": {
+    "kind": "note",
+    "text": "widen Under: field = inside edge of the numbers, boundary = outside edge"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 5
+    },
+    {
+     "x": -10,
+     "y": 5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Go to 5, plant, come inside flat, stay on the move. Never deeper than 5."
+  },
+  {
+   "key": "wr-under-pump",
+   "name": "UNDER PUMP",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 98,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    5,
+    5
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "vertical",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 5
+    },
+    {
+     "x": -2.5,
+     "y": 5
+    },
+    {
+     "x": 0,
+     "y": 9,
+     "smooth": true
+    },
+    {
+     "x": 2,
+     "y": 22
+    }
+   ],
+   "confidence": "derived",
+   "note": "Sell the Under, avoid contact, beat the corner outside and widen away from the safety."
+  },
+  {
+   "key": "wr-under-return",
+   "name": "UNDER RETURN",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 98,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    5,
+    5
+   ],
+   "steps": 4,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 5
+    },
+    {
+     "x": -5,
+     "y": 5
+    },
+    {
+     "x": 3,
+     "y": 5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Under, 4 full steps inside, then back flat outside."
+  },
+  {
+   "key": "wr-vert",
+   "name": "VERT",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 98,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "vertical",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 22
+    }
+   ],
+   "confidence": "derived",
+   "note": "Straight vertical from wherever you line up."
+  },
+  {
+   "key": "wr-wheel",
+   "name": "WHEEL",
+   "variant": null,
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 98,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "vertical",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": {
+    "kind": "redline"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 6,
+     "y": 3,
+     "smooth": true
+    },
+    {
+     "x": 8,
+     "y": 8,
+     "smooth": true
+    },
+    {
+     "x": 8.5,
+     "y": 22
+    }
+   ],
+   "confidence": "derived",
+   "note": "A Flat route expecting the ball (the flat is the hot throw); once you clear the numbers, wheel up the red line."
+  },
+  {
+   "key": "wr-whirl-red-zone",
+   "name": "WHIRL",
+   "variant": "red zone",
+   "group": "WR",
+   "frame": "receiver",
+   "sourcePage": 98,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 1,
+     "y": 2,
+     "smooth": true
+    },
+    {
+     "x": 1,
+     "y": 10
+    },
+    {
+     "x": 7,
+     "y": 10
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Outside release selling the Race, save 2 yards on the back end line, break out flat to the back pylon. Depth depends on the yard line."
+  },
+  {
+   "key": "hb-check-thru",
+   "name": "CHECK THRU",
+   "variant": null,
+   "group": "HB",
+   "frame": "back",
+   "sourcePage": 100,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    5,
+    5
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "sit",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Quick game: 3 yards",
+    "Dropback: 5 yards"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 1.5,
+     "y": 0.5,
+     "smooth": true
+    },
+    {
+     "x": 0.5,
+     "y": 5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Check protection, through the LOS, check down over the ball."
+  },
+  {
+   "key": "hb-check-option",
+   "name": "CHECK OPTION",
+   "variant": null,
+   "group": "HB",
+   "frame": "back",
+   "sourcePage": 100,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    5,
+    5
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "option",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Zone: sit",
+    "Man or match: break away from leverage"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 1,
+     "y": 0.5
+    },
+    {
+     "x": 1.5,
+     "y": 5
+    },
+    {
+     "x": 0.8,
+     "y": 4.4
+    }
+   ],
+   "confidence": "derived",
+   "note": "Check protection, through the LOS to 5, read the defender in front of you."
+  },
+  {
+   "key": "hb-check-slow",
+   "name": "CHECK SLOW",
+   "variant": null,
+   "group": "HB",
+   "frame": "back",
+   "sourcePage": 100,
+   "breakDepthYards": 3.0,
+   "depthRange": [
+    3,
+    3
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Quick game: 3x1"
+   ],
+   "landmark": {
+    "kind": "outside-tackle",
+    "offset": 3,
+    "point": 1
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 5,
+     "y": 3
+    },
+    {
+     "x": 5.8,
+     "y": 2.6
+    }
+   ],
+   "confidence": "derived",
+   "note": "Check protection, 3 yards deep by 3 yards outside the tackle, turn outside."
+  },
+  {
+   "key": "hb-check-wide",
+   "name": "CHECK WIDE",
+   "variant": null,
+   "group": "HB",
+   "frame": "back",
+   "sourcePage": 100,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": {
+    "kind": "numbers-outside",
+    "point": 1
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 16,
+     "y": -2,
+     "relativeY": true
+    }
+   ],
+   "confidence": "derived",
+   "note": "Check protection, lose 2 yards, work for width outside the numbers; the ball brings you downhill. The end depth is 2 yards behind the back's own spot."
+  },
+  {
+   "key": "hb-ride",
+   "name": "RIDE",
+   "variant": null,
+   "group": "HB",
+   "frame": "back",
+   "sourcePage": 100,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": [
+    "CHECK WIDE"
+   ],
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 16,
+     "y": -2,
+     "relativeY": true
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Align opposite the protection call, play fake with the QB across the formation, check, then the Wide route. The fake path is not drawn."
+  },
+  {
+   "key": "hb-check-flat",
+   "name": "CHECK FLAT",
+   "variant": null,
+   "group": "HB",
+   "frame": "back",
+   "sourcePage": 100,
+   "breakDepthYards": 4.0,
+   "depthRange": [
+    3,
+    5
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Quick game: eyes back once you clear the tackle",
+    "No ball by 5 yards from the sideline: throttle"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 4,
+     "y": 0,
+     "smooth": true
+    },
+    {
+     "x": 14,
+     "y": 4
+    }
+   ],
+   "confidence": "derived",
+   "note": "Check protection, release toward the sideline on an angle to 3-5 yards downfield."
+  },
+  {
+   "key": "hb-choice",
+   "name": "CHOICE",
+   "variant": null,
+   "group": "HB",
+   "frame": "back",
+   "sourcePage": 101,
+   "breakDepthYards": 3.0,
+   "depthRange": [
+    2,
+    4
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "option",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Blitz from your side: 1 yard Flat"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 3,
+     "y": 0,
+     "smooth": true
+    },
+    {
+     "x": 3.5,
+     "y": 3
+    },
+    {
+     "x": 2.8,
+     "y": 2.5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Arc release, vertical to 2-4, three-way go."
+  },
+  {
+   "key": "hb-check-coin",
+   "name": "CHECK COIN",
+   "variant": null,
+   "group": "HB",
+   "frame": "back",
+   "sourcePage": 101,
+   "breakDepthYards": 3.0,
+   "depthRange": [
+    2,
+    4
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "option",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Zone: sit in the open area at 2-4",
+    "Man or match: break out",
+    "Blitz from your side: 1 yard Flat"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 3,
+     "y": 0,
+     "smooth": true
+    },
+    {
+     "x": 3.5,
+     "y": 3
+    },
+    {
+     "x": 2.8,
+     "y": 2.5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Arc release around the DE to 2-4, read the defender in front of you."
+  },
+  {
+   "key": "hb-c-o",
+   "name": "C.O.",
+   "variant": null,
+   "group": "HB",
+   "frame": "back",
+   "sourcePage": 101,
+   "breakDepthYards": 3.0,
+   "depthRange": [
+    2,
+    4
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Man or match: alert to double up",
+    "Blitz from your side: 1 yard Flat"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 3,
+     "y": 0,
+     "smooth": true
+    },
+    {
+     "x": 3.5,
+     "y": 3
+    },
+    {
+     "x": 9,
+     "y": 3
+    }
+   ],
+   "confidence": "derived",
+   "note": "Choice Out. Arc around the DE to 2-4; do not break before crossing the LOS."
+  },
+  {
+   "key": "hb-rail",
+   "name": "RAIL",
+   "variant": null,
+   "group": "HB",
+   "frame": "back",
+   "sourcePage": 101,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "vertical",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Defender over the top: width, head around",
+    "Defender underneath: expect it downfield"
+   ],
+   "landmark": {
+    "kind": "redline"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 8,
+     "y": 0,
+     "smooth": true
+    },
+    {
+     "x": 18,
+     "y": 8,
+     "smooth": true
+    },
+    {
+     "x": 20,
+     "y": 22
+    }
+   ],
+   "confidence": "derived",
+   "note": "Flat out for the red line."
+  },
+  {
+   "key": "hb-clear",
+   "name": "CLEAR",
+   "variant": null,
+   "group": "HB",
+   "frame": "back",
+   "sourcePage": 101,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "vertical",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": {
+    "kind": "seam"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 5,
+     "y": 0,
+     "smooth": true
+    },
+    {
+     "x": 12,
+     "y": 8,
+     "smooth": true
+    },
+    {
+     "x": 14,
+     "y": 22
+    }
+   ],
+   "confidence": "derived",
+   "note": "Arc release to the Seam landmarks (field = 2 inside the numbers, boundary = 1 inside)."
+  },
+  {
+   "key": "hb-wheel",
+   "name": "WHEEL",
+   "variant": null,
+   "group": "HB",
+   "frame": "back",
+   "sourcePage": 101,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "vertical",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": {
+    "kind": "redline"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 4,
+     "y": 0,
+     "smooth": true
+    },
+    {
+     "x": 15,
+     "y": 3,
+     "smooth": true
+    },
+    {
+     "x": 18,
+     "y": 8,
+     "smooth": true
+    },
+    {
+     "x": 19,
+     "y": 22
+    }
+   ],
+   "confidence": "derived",
+   "note": "Flat route looking for the ball; without it, turn up on the numbers to the red line."
+  },
+  {
+   "key": "hb-check-burst",
+   "name": "CHECK BURST",
+   "variant": null,
+   "group": "HB",
+   "frame": "back",
+   "sourcePage": 102,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    4,
+    6
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "cross",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Zone: throttle down in the open area",
+    "Curl, Swirl, Skinner concepts: push to 4 before bursting across"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0.5,
+     "y": 1
+    },
+    {
+     "x": -8,
+     "y": 5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Check protection, through the LOS, 4-6 across the ball."
+  },
+  {
+   "key": "hb-check-star",
+   "name": "CHECK STAR",
+   "variant": null,
+   "group": "HB",
+   "frame": "back",
+   "sourcePage": 102,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Zone: throttle down in the open area"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0.5,
+     "y": 4
+    },
+    {
+     "x": 8,
+     "y": 5
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "A Burst to the same side. Get depth before bursting; the depth is not stated."
+  },
+  {
+   "key": "hb-check-trail",
+   "name": "CHECK TRAIL",
+   "variant": null,
+   "group": "HB",
+   "frame": "back",
+   "sourcePage": 102,
+   "breakDepthYards": 1.5,
+   "depthRange": [
+    1,
+    2
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [],
+   "landmark": {
+    "kind": "note",
+    "text": "release to the inside edge of the numbers (Scat protection: the outside edge)"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 5,
+     "y": 0,
+     "smooth": true
+    },
+    {
+     "x": 12,
+     "y": 1.5
+    },
+    {
+     "x": 6,
+     "y": 5
+    }
+   ],
+   "confidence": "derived",
+   "note": "Sell the Flat, plant the outside foot 1-2 past the LOS, break inside to daylight."
+  },
+  {
+   "key": "hb-check-sneak",
+   "name": "CHECK SNEAK",
+   "variant": null,
+   "group": "HB",
+   "frame": "back",
+   "sourcePage": 102,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "vertical",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "Man: ready to cross face"
+   ],
+   "landmark": {
+    "kind": "note",
+    "text": "field = the split, boundary = inside edge of the numbers"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 4,
+     "y": 0,
+     "smooth": true
+    },
+    {
+     "x": 7,
+     "y": 5,
+     "smooth": true
+    },
+    {
+     "x": 8,
+     "y": 14
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Check protection, arc release under control to a landmark. No depth stated."
+  },
+  {
+   "key": "hb-slither",
+   "name": "SLITHER",
+   "variant": null,
+   "group": "HB",
+   "frame": "back",
+   "sourcePage": 102,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "cross",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": -3,
+     "y": 1
+    },
+    {
+     "x": -10,
+     "y": 3
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Cross the ball through the best exit in the LOS, work under the pick routes, run away from the defender. No depth stated."
+  },
+  {
+   "key": "hb-c-o-china",
+   "name": "C.O. CHINA",
+   "variant": null,
+   "group": "HB",
+   "frame": "back",
+   "sourcePage": 102,
+   "breakDepthYards": 3.0,
+   "depthRange": [
+    2,
+    4
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "in",
+   "isDoubleMove": true,
+   "vsCoverageAdjustments": [],
+   "landmark": {
+    "kind": "note",
+    "text": "field = clear the split, boundary = outside edge of the numbers"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 3,
+     "y": 0,
+     "smooth": true
+    },
+    {
+     "x": 3.5,
+     "y": 3
+    },
+    {
+     "x": 9,
+     "y": 3
+    },
+    {
+     "x": 2,
+     "y": 3
+    }
+   ],
+   "confidence": "derived",
+   "note": "C.O., then break flat back inside."
+  },
+  {
+   "key": "hb-middle",
+   "name": "MIDDLE",
+   "variant": null,
+   "group": "HB",
+   "frame": "back",
+   "sourcePage": 103,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "sit",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "LB blitzes: block him"
+   ],
+   "landmark": {
+    "kind": "middle",
+    "point": 1
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0,
+     "y": 4
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Attack the LB, bluff and avoid, head around once you clear him. No depth stated."
+  },
+  {
+   "key": "hb-collision-flat",
+   "name": "COLLISION FLAT",
+   "variant": null,
+   "group": "HB",
+   "frame": "back",
+   "sourcePage": 103,
+   "breakDepthYards": 4.0,
+   "depthRange": [
+    3,
+    5
+   ],
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [
+    "LB blitzes: must block him",
+    "LB drops: do not chase him"
+   ],
+   "landmark": null,
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 0.5,
+     "y": 2
+    },
+    {
+     "x": 9,
+     "y": 4
+    }
+   ],
+   "confidence": "derived",
+   "note": "Attack the LB; if he plays run, collision him and run a Flat to 3-5."
+  },
+  {
+   "key": "hb-screen",
+   "name": "SCREEN",
+   "variant": null,
+   "group": "HB",
+   "frame": "back",
+   "sourcePage": 103,
+   "breakDepthYards": null,
+   "depthRange": null,
+   "steps": null,
+   "depthFromSteps": false,
+   "breakDirection": "out",
+   "isDoubleMove": false,
+   "vsCoverageAdjustments": [],
+   "landmark": {
+    "kind": "note",
+    "text": "field = the split, boundary = the numbers"
+   },
+   "aliasOf": null,
+   "points": [
+    {
+     "x": 0,
+     "y": 0
+    },
+    {
+     "x": 2,
+     "y": -1,
+     "relativeY": true
+    },
+    {
+     "x": 8,
+     "y": -1.5,
+     "relativeY": true
+    }
+   ],
+   "confidence": "needs-review",
+   "note": "Key the guard, find a window to the QB, stay in phase with the guard; bounce or bluff the playside blitzer. Drawn as a placeholder behind the LOS."
+  }
+ ]
+}

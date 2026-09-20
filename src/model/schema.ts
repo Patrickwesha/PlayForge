@@ -98,8 +98,38 @@ export const playSchema = z.object({
   wristband: z.string().optional(),
   diagram: diagramSchema,
   view: viewWindow.optional(),
+  source: z.string().optional(),
+  sourcePage: z.number().int().positive().optional(),
+  install: z.number().int().positive().optional(),
+  rawCall: z.string().optional(),
+  protection: z.string().optional(),
+  concept: z.string().optional(),
+  routeTags: z.record(z.string(), z.string()).optional(),
+  confidence: z.enum(['derived', 'needs-review']).optional(),
+  reviewNotes: z.array(z.string()).optional(),
   createdAt: z.string(),
   updatedAt: z.string(),
+});
+
+export const routeDefSchema = z.object({
+  key: z.string().min(1),
+  name: z.string().min(1),
+  variant: z.string().nullish(),
+  group: z.enum(['WR', 'HB']),
+  frame: z.enum(['receiver', 'back']),
+  sourcePage: z.number().int().positive(),
+  breakDepthYards: z.number().nullable(),
+  depthRange: z.tuple([z.number(), z.number()]).nullish(),
+  steps: z.number().nullish(),
+  depthFromSteps: z.boolean().optional(),
+  breakDirection: z.string(),
+  isDoubleMove: z.boolean(),
+  vsCoverageAdjustments: z.array(z.string()),
+  landmark: z.object({ kind: z.string(), point: z.number().optional(), y: z.number().optional(), offset: z.number().optional(), text: z.string().optional() }).nullish(),
+  aliasOf: z.array(z.string()).nullish(),
+  points: z.array(z.object({ x: z.number(), y: z.number(), smooth: z.boolean().optional(), relativeY: z.boolean().optional() })).min(2),
+  confidence: z.enum(['derived', 'needs-review']),
+  note: z.string().nullish(),
 });
 
 export const playbookSchema = z.object({
