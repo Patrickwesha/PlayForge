@@ -1,44 +1,14 @@
 {
  "installs": {
   "1": {
-   "calls_ocr_parsed": 120,
-   "calls_unparsed": 33,
-   "unparsed_confirmed_by_reading": 23,
+   "calls_ocr_parsed": 127,
+   "calls_unparsed": 34,
+   "unparsed_confirmed_by_reading": 24,
    "cells_ocr_missed": 21,
-   "plays": 156,
+   "plays": 164,
    "derived": 2,
-   "needs_review": 154,
+   "needs_review": 162,
    "skipped_unparsed": [
-    {
-     "page": 133,
-     "raw": "[21/12/11] F SHORT SINK RT / 200 JET X STICK",
-     "reason": "formation line does not fit the grammar"
-    },
-    {
-     "page": 134,
-     "raw": "[12/11] Y SHORT DEUCE RT CLAMP / 300 JET Z STICK",
-     "reason": "formation line does not fit the grammar"
-    },
-    {
-     "page": 139,
-     "raw": "[12/11] Y SHORT SWAMP RT / 2 JET F SNOUT BOW",
-     "reason": "formation line does not fit the grammar"
-    },
-    {
-     "page": 153,
-     "raw": "[11] (G) Y SHORT SWAMP RT / 2 SCAT Z CHEROKEE",
-     "reason": "formation line does not fit the grammar"
-    },
-    {
-     "page": 155,
-     "raw": "[11] (G) Y SHORT SWAMP RT / 2 SCAT Z SKINNER WHEEL DASH",
-     "reason": "formation line does not fit the grammar"
-    },
-    {
-     "page": 157,
-     "raw": "[12/11] (G) Y SHORT SWAMP RT / 2 JET X NUNCHUCK",
-     "reason": "formation line does not fit the grammar"
-    },
     {
      "page": 111,
      "raw": "I RT BOOK / 18 MIKE (CAN) 19 WEAK",
@@ -88,8 +58,8 @@
    "missing_formations": [],
    "missing_routes": [],
    "by_category": {
-    "Run": 59,
-    "Pass": 72,
+    "Run": 61,
+    "Pass": 78,
     "PA": 13,
     "Screen": 7,
     "Special": 5

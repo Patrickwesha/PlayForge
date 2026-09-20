@@ -2,7 +2,7 @@
  "_generated": "Written by scripts/playbook/build_plays.py. Do not edit by hand.",
  "pack": "packers-2019-plays",
  "source": "2019 Green Bay Packers offensive playbook (LaFleur)",
- "revision": "96c918437402",
+ "revision": "27ea0995de3e",
  "plays": [
   {
    "key": "bin-rt-f-lt-300-jet-z-stick",
@@ -1977,6 +1977,67 @@
     "formation Bin Rt [11] is itself needs-review (positions are a starting shape)",
     "motion F MO is recorded but not drawn",
     "call text was read from the page (OCR missed the cell)"
+   ]
+  },
+  {
+   "key": "f-short-sink-rt-200-jet-x-stick",
+   "name": "200 JET X STICK",
+   "formationLabel": "F SHORT SINK RT",
+   "formationKey": "sink-rt-11",
+   "direction": "RT",
+   "personnel": "21/12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 133,
+   "rawCall": "[21/12/11] F SHORT SINK RT / 200 JET X STICK",
+   "callSource": "ocr",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": "F SHORT",
+   "protection": "200 JET",
+   "concept": "X STICK",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "X": "wr-stick",
+    "F": "wr-flat",
+    "Y": "wr-over",
+    "Z": "wr-thunder",
+    "H": "hb-check-slow"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Sink Rt [11] is itself needs-review (positions are a starting shape)",
+    "motion F SHORT is recorded but not drawn"
+   ]
+  },
+  {
+   "key": "f-short-snug-lt-14-wanda-f-sift-al-oscar",
+   "name": "14 WANDA F SIFT (AL OSCAR)",
+   "formationLabel": "F SHORT SNUG LT",
+   "formationKey": "snug-rt-11",
+   "direction": "LT",
+   "personnel": "11",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 129,
+   "rawCall": "[11] F SHORT SNUG LT / 14 WANDA F SIFT (AL OSCAR)",
+   "callSource": "ocr",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": "F SHORT",
+   "protection": null,
+   "concept": "14 WANDA F SIFT (AL OSCAR)",
+   "runNumber": 14,
+   "runFamily": "inside-zone",
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Snug Rt [11] is itself needs-review (positions are a starting shape)",
+    "motion F SHORT is recorded but not drawn",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
    ]
   },
   {
@@ -5621,6 +5682,213 @@
     "formation Train Rt [11] is itself needs-review (positions are a starting shape)",
     "alignment or motion tags not applied to the formation: (-)",
     "motion Y MO is recorded but not drawn"
+   ]
+  },
+  {
+   "key": "y-short-deuce-rt-clamp-300-jet-z-stick",
+   "name": "300 JET Z STICK",
+   "formationLabel": "Y SHORT DEUCE RT CLAMP",
+   "formationKey": "deuce-rt-12",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 134,
+   "rawCall": "[12/11] Y SHORT DEUCE RT CLAMP / 300 JET Z STICK",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "CLAMP"
+   ],
+   "unappliedTags": [
+    "CLAMP"
+   ],
+   "motionTag": "Y SHORT",
+   "protection": "300 JET",
+   "concept": "Z STICK",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "Z": "wr-stick",
+    "Y": "wr-flat",
+    "F": "wr-over",
+    "X": "wr-thunder",
+    "H": "hb-check-slow"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Deuce Rt [12] is itself needs-review (positions are a starting shape)",
+    "alignment or motion tags not applied to the formation: CLAMP",
+    "motion Y SHORT is recorded but not drawn"
+   ]
+  },
+  {
+   "key": "y-short-snug-rt-15-wanda-f-sift-al-oscar",
+   "name": "15 WANDA F SIFT (AL OSCAR)",
+   "formationLabel": "Y SHORT SNUG RT",
+   "formationKey": "snug-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Run",
+   "install": 1,
+   "sourcePage": 129,
+   "rawCall": "[11] Y SHORT SNUG RT / 15 WANDA F SIFT (AL OSCAR)",
+   "callSource": "ocr",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": "Y SHORT",
+   "protection": null,
+   "concept": "15 WANDA F SIFT (AL OSCAR)",
+   "runNumber": 15,
+   "runFamily": "inside-zone",
+   "routeTags": {},
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Snug Rt [11] is itself needs-review (positions are a starting shape)",
+    "motion Y SHORT is recorded but not drawn",
+    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+   ]
+  },
+  {
+   "key": "y-short-swamp-rt-2-jet-f-snout-bow",
+   "name": "2 JET F SNOUT BOW",
+   "formationLabel": "Y SHORT SWAMP RT",
+   "formationKey": "swamp-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 139,
+   "rawCall": "[12/11] Y SHORT SWAMP RT / 2 JET F SNOUT BOW",
+   "callSource": "ocr",
+   "adjustmentTags": [],
+   "unappliedTags": [],
+   "motionTag": "Y SHORT",
+   "protection": "2 JET",
+   "concept": "F SNOUT BOW",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "F": "wr-snag",
+    "X": "wr-scout",
+    "Z": "wr-basic",
+    "Y": "wr-arrow-inside-basic-route",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Swamp Rt [11] is itself needs-review (positions are a starting shape)",
+    "motion Y SHORT is recorded but not drawn"
+   ]
+  },
+  {
+   "key": "y-short-swamp-rt-2-jet-x-nunchuck",
+   "name": "2 JET X NUNCHUCK",
+   "formationLabel": "Y SHORT SWAMP RT",
+   "formationKey": "swamp-rt-11",
+   "direction": "RT",
+   "personnel": "12/11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 157,
+   "rawCall": "[12/11] Y SHORT SWAMP RT / 2 JET X NUNCHUCK",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN"
+   ],
+   "unappliedTags": [],
+   "motionTag": "Y SHORT",
+   "protection": "2 JET",
+   "concept": "X NUNCHUCK",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "F": "wr-omaha-china",
+    "X": "wr-stick-nod",
+    "Z": "wr-corner",
+    "Y": "wr-drag-china",
+    "H": "hb-check-wide"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Swamp Rt [11] is itself needs-review (positions are a starting shape)",
+    "motion Y SHORT is recorded but not drawn",
+    "route DRAG CHINA is needs-review in the library"
+   ]
+  },
+  {
+   "key": "y-short-swamp-rt-2-scat-z-cherokee",
+   "name": "2 SCAT Z CHEROKEE",
+   "formationLabel": "Y SHORT SWAMP RT",
+   "formationKey": "swamp-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 153,
+   "rawCall": "[11] Y SHORT SWAMP RT / 2 SCAT Z CHEROKEE",
+   "callSource": "ocr",
+   "adjustmentTags": [
+    "GUN"
+   ],
+   "unappliedTags": [],
+   "motionTag": "Y SHORT",
+   "protection": "2 SCAT",
+   "concept": "Z CHEROKEE",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "F": "wr-low-shallow-cross",
+    "X": "wr-corner",
+    "Y": "wr-basic",
+    "Z": "wr-high-shallow-cross",
+    "H": "hb-rail"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Swamp Rt [11] is itself needs-review (positions are a starting shape)",
+    "motion Y SHORT is recorded but not drawn",
+    "The right edge of this cell is cut off by the scan; Y running the Basic is read from the 12-14 yard label."
+   ]
+  },
+  {
+   "key": "y-short-swamp-rt-2-scat-z-skinner-wheel-dash",
+   "name": "2 SCAT Z SKINNER WHEEL DASH",
+   "formationLabel": "Y SHORT SWAMP RT",
+   "formationKey": "swamp-rt-11",
+   "direction": "RT",
+   "personnel": "11",
+   "category": "Pass",
+   "install": 1,
+   "sourcePage": 155,
+   "rawCall": "[11] Y SHORT SWAMP RT / 2 SCAT Z SKINNER WHEEL DASH",
+   "callSource": "ocr-flagged-confirmed-by-reading",
+   "adjustmentTags": [
+    "GUN"
+   ],
+   "unappliedTags": [],
+   "motionTag": "Y SHORT",
+   "protection": "2 SCAT",
+   "concept": "Z SKINNER WHEEL DASH",
+   "runNumber": null,
+   "runFamily": null,
+   "routeTags": {
+    "F": "wr-dart",
+    "X": "wr-swirl",
+    "Z": "wr-skinner",
+    "Y": "wr-thru",
+    "H": "hb-wheel"
+   },
+   "notes": null,
+   "confidence": "needs-review",
+   "reviewNotes": [
+    "formation Swamp Rt [11] is itself needs-review (positions are a starting shape)",
+    "motion Y SHORT is recorded but not drawn",
+    "call text was flagged by OCR and confirmed by reading the page"
    ]
   },
   {

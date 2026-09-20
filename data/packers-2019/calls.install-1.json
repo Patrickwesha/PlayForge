@@ -1657,6 +1657,50 @@
    "source_page": 129,
    "page_title": "#10 STIADE* 121/12] 1",
    "cell": {
+    "x": 367,
+    "y": 666
+   },
+   "raw_formation_line": "Y SHORT SNUG RT",
+   "raw_call_line": "15 WANDA F SIFT (AL OSCAR)",
+   "personnel": null,
+   "motion_tag": "Y SHORT",
+   "formation": "SNUG",
+   "direction": "RT",
+   "adjustment_tags": [],
+   "protection": null,
+   "concept": "15 WANDA F SIFT (AL OSCAR)",
+   "run_number": 15,
+   "ocr_confidence": 90,
+   "raw_call_string": "Y SHORT SNUG RT / 15 WANDA F SIFT (AL OSCAR)",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 129,
+   "page_title": "#10 STIADE* 121/12] 1",
+   "cell": {
+    "x": 886,
+    "y": 666
+   },
+   "raw_formation_line": "F SHORT SNUG LT",
+   "raw_call_line": "14 WANDA F SIFT (AL OSCAR)",
+   "personnel": null,
+   "motion_tag": "F SHORT",
+   "formation": "SNUG",
+   "direction": "LT",
+   "adjustment_tags": [],
+   "protection": null,
+   "concept": "14 WANDA F SIFT (AL OSCAR)",
+   "run_number": 14,
+   "ocr_confidence": 92,
+   "raw_call_string": "F SHORT SNUG LT / 14 WANDA F SIFT (AL OSCAR)",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 129,
+   "page_title": "#10 STIADE* 121/12] 1",
+   "cell": {
     "x": 365,
     "y": 1107
    },
@@ -1831,6 +1875,28 @@
   },
   {
    "install_number": 1,
+   "source_page": 133,
+   "page_title": "(3 STEP) (X-F) STICK",
+   "cell": {
+    "x": 372,
+    "y": 671
+   },
+   "raw_formation_line": "[21/12/11] F SHORT SINK RT",
+   "raw_call_line": "200 JET X STICK",
+   "personnel": "21/12/11",
+   "motion_tag": "F SHORT",
+   "formation": "SINK",
+   "direction": "RT",
+   "adjustment_tags": [],
+   "protection": "200 JET",
+   "concept": "X STICK",
+   "run_number": null,
+   "ocr_confidence": 92,
+   "raw_call_string": "[21/12/11] F SHORT SINK RT / 200 JET X STICK",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
    "source_page": 134,
    "page_title": "(3 STEP) (Y-Z) STICK",
    "cell": {
@@ -1877,6 +1943,30 @@
    "run_number": null,
    "ocr_confidence": 55,
    "raw_call_string": "[12/11] FAST RT OPEN ZRT / 300 JET Y STICK",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 134,
+   "page_title": "(3 STEP) (Y-Z) STICK",
+   "cell": {
+    "x": 758,
+    "y": 664
+   },
+   "raw_formation_line": "[12/11] Y SHORT DEUCE RT CLAMP",
+   "raw_call_line": "300 JET Z STICK",
+   "personnel": "12/11",
+   "motion_tag": "Y SHORT",
+   "formation": "DEUCE",
+   "direction": "RT",
+   "adjustment_tags": [
+    "CLAMP"
+   ],
+   "protection": "300 JET",
+   "concept": "Z STICK",
+   "run_number": null,
+   "ocr_confidence": 91,
+   "raw_call_string": "[12/11] Y SHORT DEUCE RT CLAMP / 300 JET Z STICK",
    "status": "parsed"
   },
   {
@@ -2132,6 +2222,28 @@
    "run_number": null,
    "ocr_confidence": 63,
    "raw_call_string": "[12/11] FAST RT OPEN / 2 JET DBL SCOUT Z SNAG",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 139,
+   "page_title": "(DROP BACK) DOUBLE SCOUT SNAG / SNOUT BOW",
+   "cell": {
+    "x": 372,
+    "y": 1093
+   },
+   "raw_formation_line": "[12/11] Y SHORT SWAMP RT",
+   "raw_call_line": "2 JET F SNOUT BOW",
+   "personnel": "12/11",
+   "motion_tag": "Y SHORT",
+   "formation": "SWAMP",
+   "direction": "RT",
+   "adjustment_tags": [],
+   "protection": "2 JET",
+   "concept": "F SNOUT BOW",
+   "run_number": null,
+   "ocr_confidence": 86,
+   "raw_call_string": "[12/11] Y SHORT SWAMP RT / 2 JET F SNOUT BOW",
    "status": "parsed"
   },
   {
@@ -2718,6 +2830,30 @@
    "source_page": 153,
    "page_title": "(SCAT) CHEROKEE / DRIVE CHOW",
    "cell": {
+    "x": 895,
+    "y": 241
+   },
+   "raw_formation_line": "[11] (G) Y SHORT SWAMP RT",
+   "raw_call_line": "2 SCAT Z CHEROKEE",
+   "personnel": "11",
+   "motion_tag": "Y SHORT",
+   "formation": "SWAMP",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN"
+   ],
+   "protection": "2 SCAT",
+   "concept": "Z CHEROKEE",
+   "run_number": null,
+   "ocr_confidence": 77,
+   "raw_call_string": "[11] (G) Y SHORT SWAMP RT / 2 SCAT Z CHEROKEE",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 153,
+   "page_title": "(SCAT) CHEROKEE / DRIVE CHOW",
+   "cell": {
     "x": 892,
     "y": 1085
    },
@@ -2991,6 +3127,30 @@
    "run_number": null,
    "ocr_confidence": 60,
    "raw_call_string": "[12/11] (G) SNUG RT / 3 JET Z NUNCHUCK",
+   "status": "parsed"
+  },
+  {
+   "install_number": 1,
+   "source_page": 157,
+   "page_title": "",
+   "cell": {
+    "x": 894,
+    "y": 240
+   },
+   "raw_formation_line": "[12/11] (G) Y SHORT SWAMP RT",
+   "raw_call_line": "2 JET XNUNCHUCK",
+   "personnel": "12/11",
+   "motion_tag": "Y SHORT",
+   "formation": "SWAMP",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN"
+   ],
+   "protection": "2 JET",
+   "concept": "XNUNCHUCK",
+   "run_number": null,
+   "ocr_confidence": 90,
+   "raw_call_string": "[12/11] (G) Y SHORT SWAMP RT / 2 JET XNUNCHUCK",
    "status": "parsed"
   }
  ],
@@ -3802,6 +3962,31 @@
    "run_number": null,
    "ocr_confidence": 45,
    "raw_call_string": "[11] (G) F MO BIN RT / 2 SCAT Z DRIVE F CHOW",
+   "status": "UNPARSED",
+   "reason": "low OCR confidence (45)"
+  },
+  {
+   "install_number": 1,
+   "source_page": 155,
+   "page_title": "(DROP BACK) SKINNER WHEEL",
+   "cell": {
+    "x": 372,
+    "y": 663
+   },
+   "raw_formation_line": "[11] (G) Y SHORT SWAMP RT",
+   "raw_call_line": "2 SCAT Z SKINNER WHEEL DASH",
+   "personnel": "11",
+   "motion_tag": "Y SHORT",
+   "formation": "SWAMP",
+   "direction": "RT",
+   "adjustment_tags": [
+    "GUN"
+   ],
+   "protection": "2 SCAT",
+   "concept": "Z SKINNER WHEEL DASH",
+   "run_number": null,
+   "ocr_confidence": 45,
+   "raw_call_string": "[11] (G) Y SHORT SWAMP RT / 2 SCAT Z SKINNER WHEEL DASH",
    "status": "UNPARSED",
    "reason": "low OCR confidence (45)"
   },

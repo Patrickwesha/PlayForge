@@ -22,7 +22,7 @@ ROOT = os.path.join("data", "packers-2019")
 FORMATIONS = json.load(open(os.path.join("src", "seeds", "data", "packers2019.json"), encoding="utf-8"))["formations"]
 # base words that start a formation name in the pack ("I", "WEST", "DEUCE", "PISTOL BONE", ...)
 BASES = sorted({f["name"].upper().split(" RT")[0] for f in FORMATIONS}, key=len, reverse=True)
-MOTION = re.compile(r"^\(?\s*([XYZFH](?:-[XYZFH])?)\s+(MO|SH)\s*\)?\s+")
+MOTION = re.compile(r"^\(?\s*([XYZFH](?:-[XYZFH])?)\s+(MO|SHORTY|SHORT|SH)\s*\)?\s+")
 PERSONNEL = re.compile(r"^[\[\(I1l]?\s*(\d{2}[XZ]?(?:/\d{2}[XZ]?)*)\s*[\]\)]\s*")
 PROTECTION = re.compile(r"^(P?\d{1,3}|2|3)\s+(JET|SCAT|SCRAM|SOLID|WILLIE|FLOW|FK|KP)\b")
 
