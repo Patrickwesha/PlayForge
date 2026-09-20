@@ -113,6 +113,7 @@ export const playSchema = z.object({
   protection: z.string().optional(),
   concept: z.string().optional(),
   routeTags: z.record(z.string(), z.string()).optional(),
+  hotRoutes: z.record(z.string(), z.boolean()).optional(),
   alternate: z
     .object({
       name: z.string().min(1),
@@ -129,6 +130,12 @@ export const playSchema = z.object({
   updatedAt: z.string(),
 });
 
+const landmarkSpot = z.object({
+  spot: z.enum(['front-pylon', 'back-pylon', 'far-pylon', 'near-upright', 'goal-line', 'end-line', 'redline', 'split', 'numbers', 'hash', 'opposite-hash', 'middle', 'sideline', 'tackle']),
+  offset: z.number().optional(),
+  edge: z.enum(['inside', 'middle', 'outside']).optional(),
+});
+
 export const routeDefSchema = z.object({
   key: z.string().min(1),
   name: z.string().min(1),
@@ -143,7 +150,10 @@ export const routeDefSchema = z.object({
   breakDirection: z.string(),
   isDoubleMove: z.boolean(),
   vsCoverageAdjustments: z.array(z.string()),
-  landmark: z.object({ kind: z.string(), point: z.number().optional(), y: z.number().optional(), offset: z.number().optional(), text: z.string().optional() }).nullish(),
+  landmarks: z.array(z.object({ point: z.number().int(), mode: z.enum(['end', 'toward']), field: landmarkSpot, boundary: landmarkSpot.optional(), ballPlus: landmarkSpot.optional(), note: z.string().optional() })).nullish(),
+  landmarkNote: z.string().nullish(),
+  assumes: z.object({ yardsToGoal: z.number().positive() }).nullish(),
+  isHot: z.boolean().nullish(),
   aliasOf: z.array(z.string()).nullish(),
   points: z.array(z.object({ x: z.number(), y: z.number(), smooth: z.boolean().optional(), relativeY: z.boolean().optional() })).min(2),
   confidence: z.enum(['derived', 'needs-review']),

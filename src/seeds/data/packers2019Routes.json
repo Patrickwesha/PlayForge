@@ -3,7 +3,7 @@
  "pack": "packers-2019-routes",
  "source": "2019 Green Bay Packers offensive playbook (LaFleur), pages 70-103",
  "stepsToYards": 1.4,
- "revision": "aff08bb878b4",
+ "revision": "a4e8e00057e3",
  "routes": [
   {
    "key": "wr-arches",
@@ -24,7 +24,10 @@
    "vsCoverageAdjustments": [
     "Hard inside leverage: can go over the top, but cross the defender's face when possible"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -55,14 +58,28 @@
    "group": "WR",
    "frame": "receiver",
    "sourcePage": 71,
-   "breakDepthYards": null,
-   "depthRange": null,
-   "steps": null,
+   "breakDepthYards": 5.0,
+   "depthRange": [
+    5,
+    5
+   ],
+   "steps": 4,
    "depthFromSteps": false,
    "breakDirection": "out",
    "isDoubleMove": true,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "redline"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -87,8 +104,8 @@
      "y": 15
     }
    ],
-   "confidence": "needs-review",
-   "note": "Sells Arches, then exits back out to the red line. Book gives no depth (\"get on the DB's toes\"); used the Arches break at 5."
+   "confidence": "derived",
+   "note": "Double move built on Arches: slight widen to sell the seam, get on the DB's toes, snap down at 5 (4 steps, the Arches break) to sell it, then an exit angle back out toward the red line."
   },
   {
    "key": "wr-arrow-inside-basic-route",
@@ -109,7 +126,10 @@
    "vsCoverageAdjustments": [
     "Matched: break back out when the QB gives you his eyes"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -147,7 +167,10 @@
    "vsCoverageAdjustments": [
     "Matched: break back out when the QB gives you his eyes"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -187,10 +210,18 @@
     "Not Tampa 2: work between the hashes",
     "2 Man: sell a Thru, then break away from the defender"
    ],
-   "landmark": {
-    "kind": "middle",
-    "point": 1
-   },
+   "landmarks": [
+    {
+     "point": 1,
+     "mode": "end",
+     "field": {
+      "spot": "middle"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -222,7 +253,10 @@
    "breakDirection": "in",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -258,7 +292,10 @@
    "breakDirection": "in",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -302,7 +339,10 @@
     "Corner trailing: high angle",
     "Corner on top: cross face"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -345,7 +385,10 @@
    "vsCoverageAdjustments": [
     "Free access: attack the corner's leverage"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -389,9 +432,10 @@
     "Bump: widen Go to the red line",
     "DB does not widen: go around him"
    ],
-   "landmark": {
-    "kind": "numbers-outside-edge-max"
-   },
+   "landmarks": null,
+   "landmarkNote": "never wider than the outside edge of the numbers",
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -428,7 +472,10 @@
    "breakDirection": "out",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -471,7 +518,10 @@
    "vsCoverageAdjustments": [
     "Stack alignment: chase the outside hip of the near receiver"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -515,7 +565,10 @@
     "Man: beat the man over you (in or out)",
     "Zone: find a soft spot and sit"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -553,7 +606,10 @@
    "vsCoverageAdjustments": [
     "Nickel disappears: work the outermost defender"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -591,7 +647,10 @@
    "vsCoverageAdjustments": [
     "Nickel disappears: work the outermost defender"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -631,9 +690,23 @@
    "vsCoverageAdjustments": [
     "MFO: does NOT bend (that is the difference from Seam)"
    ],
-   "landmark": {
-    "kind": "seam"
-   },
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "numbers",
+      "offset": -2
+     },
+     "boundary": {
+      "spot": "numbers",
+      "offset": -1
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -668,7 +741,10 @@
     "Zone: sit",
     "Man or matched: break out"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -704,7 +780,10 @@
     "DB undercutting: come out at a high angle",
     "Press: sell a Now, come out on an angle to win"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -746,7 +825,10 @@
    "vsCoverageAdjustments": [
     "Cloud: Go"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -784,7 +866,10 @@
    "vsCoverageAdjustments": [
     "Corner on top: the QB can flatten the throw"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -820,7 +905,18 @@
    "breakDirection": "post",
    "isDoubleMove": true,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "toward",
+     "field": {
+      "spot": "near-upright"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -863,10 +959,24 @@
     "Press man: best release",
     "Cloud: widen and slip inside the corner"
    ],
-   "landmark": {
-    "kind": "note",
-    "text": "field = middle of the numbers, boundary = outside edge of the numbers"
-   },
+   "landmarks": [
+    {
+     "point": 1,
+     "mode": "end",
+     "field": {
+      "spot": "numbers",
+      "edge": "middle"
+     },
+     "boundary": {
+      "spot": "numbers",
+      "edge": "outside"
+     },
+     "note": "stem landmark"
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -899,7 +1009,10 @@
    "breakDirection": "in",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -935,7 +1048,10 @@
    "breakDirection": "in",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -968,7 +1084,21 @@
    "breakDirection": "cross",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "goal-line",
+      "offset": 2
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": {
+    "yardsToGoal": 10
+   },
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -981,11 +1111,11 @@
     },
     {
      "x": -18,
-     "y": 5
+     "y": 12
     }
    ],
-   "confidence": "needs-review",
-   "note": "A Shallow Cross that gets 2 yards into the end zone, so its depth depends on the yard line. Drawn as a Shallow Cross."
+   "confidence": "derived",
+   "note": "Red zone (Racer concept). A Shallow Cross that gets 2 yards into the end zone and stays on the move."
   },
   {
    "key": "wr-deep-sit",
@@ -1006,10 +1136,18 @@
    "vsCoverageAdjustments": [
     "Man or match: break away flat"
    ],
-   "landmark": {
-    "kind": "middle",
-    "point": 1
-   },
+   "landmarks": [
+    {
+     "point": 1,
+     "mode": "end",
+     "field": {
+      "spot": "middle"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -1043,7 +1181,10 @@
    "vsCoverageAdjustments": [
     "MFC: get head up on the middle safety"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -1081,7 +1222,10 @@
    "vsCoverageAdjustments": [
     "Cloud: widen slip"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -1119,7 +1263,10 @@
    "vsCoverageAdjustments": [
     "Corner squatting: possible double up"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -1144,9 +1291,9 @@
    "note": "Go for 15 (9 steps), plant outside foot, roll to 20 between the numbers and the hash. Tight split: stem to the outside edge of the numbers first."
   },
   {
-   "key": "wr-down-flat-in-line-hot",
+   "key": "wr-down-flat",
    "name": "DOWN FLAT",
-   "variant": "in-line, hot",
+   "variant": null,
    "group": "WR",
    "frame": "receiver",
    "sourcePage": 76,
@@ -1157,9 +1304,13 @@
    "breakDirection": "out",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [
-    "Edge pressure or a 9 tech upfield: plant and come out as the hot throw"
+    "Run Hot: vs edge pressure or a 9 technique upfield, plant and come out as the hot throw",
+    "Run Late: not the hot throw, another hot element is built in (a Slide or a second Down Flat)"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": null,
    "aliasOf": null,
    "points": [
     {
@@ -1175,41 +1326,8 @@
      "y": 2.5
     }
    ],
-   "confidence": "needs-review",
-   "note": "Sell a run cutoff on the C-gap defender, then the flat. No depth stated."
-  },
-  {
-   "key": "wr-down-flat-in-line-late",
-   "name": "DOWN FLAT",
-   "variant": "in-line, late",
-   "group": "WR",
-   "frame": "receiver",
-   "sourcePage": 76,
-   "breakDepthYards": null,
-   "depthRange": null,
-   "steps": null,
-   "depthFromSteps": false,
-   "breakDirection": "out",
-   "isDoubleMove": false,
-   "vsCoverageAdjustments": [],
-   "landmark": null,
-   "aliasOf": null,
-   "points": [
-    {
-     "x": 0,
-     "y": 0
-    },
-    {
-     "x": -1,
-     "y": 1.5
-    },
-    {
-     "x": 5,
-     "y": 2.5
-    }
-   ],
-   "confidence": "needs-review",
-   "note": "Same as the hot version but not the hot throw (another hot element is built in). No depth stated."
+   "confidence": "derived",
+   "note": "In-line. No depth exists: a flat release that cuts off the C-gap defender like a run block, head in front, never slowing down. Hot and Late are the same shape; the call says which (is_hot on the play)."
   },
   {
    "key": "wr-drag",
@@ -1228,10 +1346,18 @@
     "Man: work an edge and take an angle to win",
     "Zone: it is a Flat route"
    ],
-   "landmark": {
-    "kind": "sideline",
-    "y": 6
-   },
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "sideline"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -1253,17 +1379,35 @@
    "group": "WR",
    "frame": "receiver",
    "sourcePage": 76,
-   "breakDepthYards": null,
-   "depthRange": null,
+   "breakDepthYards": 4.0,
+   "depthRange": [
+    3,
+    5
+   ],
    "steps": null,
    "depthFromSteps": false,
    "breakDirection": "in",
    "isDoubleMove": true,
    "vsCoverageAdjustments": [],
-   "landmark": {
-    "kind": "note",
-    "text": "field: sell to the outside edge of the numbers. boundary: sell to numbers +2"
-   },
+   "landmarks": [
+    {
+     "point": 1,
+     "mode": "end",
+     "field": {
+      "spot": "numbers",
+      "edge": "outside"
+     },
+     "boundary": {
+      "spot": "numbers",
+      "edge": "outside",
+      "offset": 2
+     },
+     "note": "sell the Drag out to here, then plant"
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -1271,16 +1415,16 @@
      "y": 0
     },
     {
-     "x": 4,
-     "y": 3
+     "x": 5,
+     "y": 4
     },
     {
      "x": -5,
-     "y": 3
+     "y": 4
     }
    ],
-   "confidence": "needs-review",
-   "note": "Sell the Drag, plant, burst back flat inside. The turn-back spot is a field landmark, so the width here is a placeholder."
+   "confidence": "derived",
+   "note": "Double move at 3-5 yards. Sell the Drag to the outside edge of the numbers (boundary: +2 outside the numbers), plant, burst back flat inside."
   },
   {
    "key": "wr-eliminator",
@@ -1299,7 +1443,10 @@
     "Zone: sit at the opposite guard area",
     "Man: run it to win"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -1334,9 +1481,18 @@
    "vsCoverageAdjustments": [
     "Inside the +10: up to 4 steps onto the DB's toes, angle for 1 yard short of the back pylon"
    ],
-   "landmark": {
-    "kind": "redline"
-   },
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "redline"
+     }
+    }
+   ],
+   "landmarkNote": "inside the +10: angle for 1 yard short of the back pylon",
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -1370,7 +1526,29 @@
    "breakDirection": "back-out",
    "isDoubleMove": true,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": [
+    {
+     "point": 2,
+     "mode": "end",
+     "field": {
+      "spot": "goal-line",
+      "offset": 5
+     },
+     "note": "5 yards deep in the end zone"
+    },
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "front-pylon"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": {
+    "yardsToGoal": 10
+   },
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -1387,12 +1565,12 @@
      "y": 15
     },
     {
-     "x": 4,
-     "y": 12
+     "x": 5,
+     "y": 10
     }
    ],
-   "confidence": "needs-review",
-   "note": "Widen Fade to 5 yards deep in the end zone, then back to the front pylon. Depth depends on the yard line."
+   "confidence": "derived",
+   "note": "Red zone. Sell a widen Fade, get 5 yards deep in the end zone, snap down, come back to the front pylon."
   },
   {
    "key": "wr-far-corner",
@@ -1408,7 +1586,18 @@
    "breakDirection": "cross",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "toward",
+     "field": {
+      "spot": "far-pylon"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -1416,12 +1605,12 @@
      "y": 0
     },
     {
-     "x": -24,
-     "y": 18
+     "x": -12,
+     "y": 9
     }
    ],
-   "confidence": "needs-review",
-   "note": "Direct angle to the far pylon, run on the backside of keepers. Aim point depends on the yard line."
+   "confidence": "derived",
+   "note": "Landmark route, no depth: a direct angle to the far pylon. Run on the backside of keepers."
   },
   {
    "key": "wr-field-post",
@@ -1440,7 +1629,10 @@
    "breakDirection": "post",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -1478,7 +1670,10 @@
    "vsCoverageAdjustments": [
     "China coming from inside you: stem inside (lose 2) on the release"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -1519,10 +1714,18 @@
    "breakDirection": "out",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": {
-    "kind": "sideline",
-    "y": 6
-   },
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "sideline"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -1554,7 +1757,10 @@
     "Press man: best release, vertical to 5, angle to win",
     "Cloud: widen slip, vertical to 5, flat angle"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -1589,9 +1795,18 @@
    "vsCoverageAdjustments": [
     "Cloud: widen slip, then vertical"
    ],
-   "landmark": {
-    "kind": "redline"
-   },
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "redline"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -1620,7 +1835,18 @@
    "breakDirection": "vertical",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "redline"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -1654,9 +1880,18 @@
    "breakDirection": "vertical",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": {
-    "kind": "redline"
-   },
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "redline"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -1696,7 +1931,10 @@
     "DB trailing: higher angle",
     "Defender on top or level: be ready to cross face"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -1743,10 +1981,10 @@
    "vsCoverageAdjustments": [
     "Man: alert to stair step and run away"
    ],
-   "landmark": {
-    "kind": "note",
-    "text": "8-10 deep on the near hash, vertical between the hashes, finish 18-22 between the far numbers and hash"
-   },
+   "landmarks": null,
+   "landmarkNote": "8-10 deep on the near hash, vertical between the hashes, finish 18-22 between the far numbers and hash",
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -1789,7 +2027,10 @@
     "Man: stay on the move",
     "Zone: sit at the hash (field) or the split (boundary)"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -1821,7 +2062,10 @@
     "Free access or bail: run it",
     "Tuff: Fade"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -1860,7 +2104,10 @@
     "Coverage vacates: snap up, hands to the QB",
     "Walled: break out"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -1893,10 +2140,18 @@
    "breakDirection": "vertical",
    "isDoubleMove": true,
    "vsCoverageAdjustments": [],
-   "landmark": {
-    "kind": "middle",
-    "point": 1
-   },
+   "landmarks": [
+    {
+     "point": 1,
+     "mode": "end",
+     "field": {
+      "spot": "middle"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -1932,7 +2187,10 @@
     "Gun: 3 steps and snap up",
     "Tuff: Fade"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -1968,7 +2226,10 @@
    "breakDirection": "stop",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2004,7 +2265,10 @@
    "breakDirection": "in",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2039,7 +2303,10 @@
    "vsCoverageAdjustments": [
     "Walled: break out"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2077,7 +2344,10 @@
    "vsCoverageAdjustments": [
     "Defender running it for you: hook up on the numbers"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2116,7 +2386,10 @@
    "vsCoverageAdjustments": [
     "Zone, defender running it for you: hook up on the numbers"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2155,7 +2428,10 @@
    "vsCoverageAdjustments": [
     "Zone: do NOT sit, stay on the move"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2191,7 +2467,10 @@
     "Zone: wrap the near hook defender, no depth needed",
     "Man: run it like a Basic"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2224,10 +2503,10 @@
    "breakDirection": "in",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": {
-    "kind": "note",
-    "text": "can sit once +2 from the near hash"
-   },
+   "landmarks": null,
+   "landmarkNote": "can sit once +2 from the near hash",
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2262,7 +2541,10 @@
    "vsCoverageAdjustments": [
     "Bump: work a release to separate"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2297,7 +2579,10 @@
    "vsCoverageAdjustments": [
     "Zone: possible sit, by concept"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2342,7 +2627,10 @@
     "Outside the numbers: square cut",
     "Inside the numbers: speed cut"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2378,7 +2666,10 @@
    "breakDirection": "in",
    "isDoubleMove": true,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2421,9 +2712,18 @@
     "Press man: run the route",
     "Cloud: Fade"
    ],
-   "landmark": {
-    "kind": "redline"
-   },
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "redline"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2466,10 +2766,18 @@
     "Dragon: if matched, break back the way you came",
     "Spacing or Stick: stay static"
    ],
-   "landmark": {
-    "kind": "middle",
-    "point": 1
-   },
+   "landmarks": [
+    {
+     "point": 1,
+     "mode": "end",
+     "field": {
+      "spot": "middle"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2504,7 +2812,10 @@
     "Zone: vertical stem to push off the underneath defender, then widen",
     "Man: attack the DB over the outside receiver, no collision"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2546,7 +2857,10 @@
    "vsCoverageAdjustments": [
     "Inside the 5: push 1 yard into the end zone, roll to halfway between the goal line and end line"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2587,7 +2901,18 @@
    "breakDirection": "post",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "toward",
+     "field": {
+      "spot": "near-upright"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2623,7 +2948,18 @@
    "breakDirection": "post",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "toward",
+     "field": {
+      "spot": "near-upright"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2666,7 +3002,10 @@
    "vsCoverageAdjustments": [
     "Matched: pivot away"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2707,7 +3046,10 @@
    "breakDirection": "in",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2745,7 +3087,10 @@
    "breakDirection": "vertical",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2784,7 +3129,22 @@
     "Ball on the minus side of the 50: aim at the front pylon",
     "Ball on the plus side: aim at the back pylon"
    ],
-   "landmark": null,
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "toward",
+     "field": {
+      "spot": "front-pylon"
+     },
+     "ballPlus": {
+      "spot": "back-pylon"
+     },
+     "note": "ball on the -50 = front pylon, ball on the +50 = back pylon"
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2820,7 +3180,18 @@
    "breakDirection": "post",
    "isDoubleMove": true,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "toward",
+     "field": {
+      "spot": "near-upright"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2859,7 +3230,21 @@
    "vsCoverageAdjustments": [
     "Tight split: widen slip first"
    ],
-   "landmark": null,
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "end-line",
+      "offset": -2
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": {
+    "yardsToGoal": 10
+   },
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2872,16 +3257,16 @@
     },
     {
      "x": -1,
-     "y": 10,
+     "y": 16,
      "smooth": true
     },
     {
      "x": -8,
-     "y": 12
+     "y": 18
     }
    ],
-   "confidence": "needs-review",
-   "note": "Speed cut that saves 2 yards from the back end line, so the depth depends on the yard line."
+   "confidence": "derived",
+   "note": "Red zone. Inside release, vertical, speed cut saving 2 yards from the back end line. Tight split: widen slip first."
   },
   {
    "key": "wr-race-pivot",
@@ -2899,7 +3284,20 @@
    "vsCoverageAdjustments": [
     "Man or match: break away from the defender"
    ],
-   "landmark": null,
+   "landmarks": [
+    {
+     "point": 1,
+     "mode": "end",
+     "field": {
+      "spot": "goal-line"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": {
+    "yardsToGoal": 10
+   },
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2908,15 +3306,15 @@
     },
     {
      "x": -1,
-     "y": 4
+     "y": 10
     },
     {
      "x": -1.8,
-     "y": 3.4
+     "y": 9.4
     }
    ],
-   "confidence": "needs-review",
-   "note": "Work up to the goal line and turn inside. Depth depends on the yard line."
+   "confidence": "derived",
+   "note": "Work up to the goal line and turn inside."
   },
   {
    "key": "wr-rail",
@@ -2932,9 +3330,18 @@
    "breakDirection": "vertical",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": {
-    "kind": "redline"
-   },
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "redline"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -2975,7 +3382,10 @@
     "Safety backing up: snap down at 20 in the split",
     "Someone squatting: burst at the top"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3013,7 +3423,10 @@
    "vsCoverageAdjustments": [
     "Any non-cloud coverage: must cross face"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3054,7 +3467,10 @@
    "breakDirection": "corner",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3097,7 +3513,10 @@
    "vsCoverageAdjustments": [
     "Rub Corner off the ball or getting bumped: slightly miss the count"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3135,7 +3554,10 @@
    "vsCoverageAdjustments": [
     "Cloud: outside release, sit on the sideline at 15"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3173,7 +3595,10 @@
    "vsCoverageAdjustments": [
     "Defender high: the QB flattens you with the throw"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3217,7 +3642,10 @@
     "Cloud: outside release, sit on the sideline at 15",
     "Full width: stutter Comeback at 15"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3265,7 +3693,10 @@
     "Cloud: Go",
     "Tight split: widen 7-step speed out at the corner"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3305,7 +3736,10 @@
     "Cloud: Go",
     "Tight split: widen 7-step speed out with a double up at the top"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3343,7 +3777,10 @@
    "vsCoverageAdjustments": [
     "Cloud: Go"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3380,9 +3817,23 @@
     "MFO: landmarks are off, vertical to 10-12 and break to daylight across the safety's face",
     "2 Man: set the defender at the break point"
    ],
-   "landmark": {
-    "kind": "seam"
-   },
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "numbers",
+      "offset": -2
+     },
+     "boundary": {
+      "spot": "numbers",
+      "offset": -1
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3414,9 +3865,23 @@
    "breakDirection": "stop",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": {
-    "kind": "seam"
-   },
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "numbers",
+      "offset": -2
+     },
+     "boundary": {
+      "spot": "numbers",
+      "offset": -1
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3449,7 +3914,22 @@
    "breakDirection": "stop",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": [
+    {
+     "point": 1,
+     "mode": "end",
+     "field": {
+      "spot": "goal-line",
+      "offset": 2.5
+     },
+     "note": "2-3 yards across the goal line"
+    }
+   ],
+   "landmarkNote": "hook up between the numbers and the hash",
+   "assumes": {
+    "yardsToGoal": 10
+   },
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3458,15 +3938,15 @@
     },
     {
      "x": 0,
-     "y": 8
+     "y": 12.5
     },
     {
      "x": -0.8,
-     "y": 7.3
+     "y": 11.8
     }
    ],
-   "confidence": "needs-review",
-   "note": "Red zone: a Seam that gets 2-3 yards across the goal line, then hooks up between the numbers and hash. Depth depends on the yard line."
+   "confidence": "derived",
+   "note": "Red zone. A Seam that gets 2-3 yards across the goal line; no ball, hook up between the numbers and hash."
   },
   {
    "key": "wr-shake",
@@ -3485,7 +3965,10 @@
     "Cloud or bump: run a Bench",
     "DB undercutting: come out at a high angle"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3528,10 +4011,10 @@
     "Zone: sit at your landmark",
     "Man: stay on the move"
    ],
-   "landmark": {
-    "kind": "note",
-    "text": "zone sit spot: field = opposite hash, boundary = the split"
-   },
+   "landmarks": null,
+   "landmarkNote": "zone sit spot: field = opposite hash, boundary = the split",
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3566,10 +4049,18 @@
    "vsCoverageAdjustments": [
     "Matched: return back out"
    ],
-   "landmark": {
-    "kind": "middle",
-    "point": 2
-   },
+   "landmarks": [
+    {
+     "point": 2,
+     "mode": "end",
+     "field": {
+      "spot": "middle"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3611,7 +4102,10 @@
    "vsCoverageAdjustments": [
     "Defender on top: alert for the QB to flatten the throw"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": "high angle, or 5 yards inside the pylon",
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3647,10 +4141,24 @@
    "breakDirection": "stop",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": {
-    "kind": "note",
-    "text": "field = between the numbers and hash, boundary = 1 yard inside the numbers"
-   },
+   "landmarks": [
+    {
+     "point": 1,
+     "mode": "end",
+     "field": {
+      "spot": "hash",
+      "offset": 7.5
+     },
+     "boundary": {
+      "spot": "numbers",
+      "offset": -1
+     },
+     "note": "field = between the numbers and hash, boundary = 1 yard inside the numbers"
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3688,10 +4196,31 @@
    "vsCoverageAdjustments": [
     "Reduced split: widen on the release"
    ],
-   "landmark": {
-    "kind": "note",
-    "text": "field = middle of the numbers, boundary = outside edge of the numbers"
-   },
+   "landmarks": [
+    {
+     "point": 1,
+     "mode": "end",
+     "field": {
+      "spot": "numbers",
+      "edge": "middle"
+     },
+     "boundary": {
+      "spot": "numbers",
+      "edge": "outside"
+     },
+     "note": "stem landmark"
+    },
+    {
+     "point": -1,
+     "mode": "toward",
+     "field": {
+      "spot": "near-upright"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3727,7 +4256,10 @@
     "Press man: best release, up to 5, cross his face",
     "Cloud: widen slip, vertical to 5, come flat"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3762,7 +4294,10 @@
    "vsCoverageAdjustments": [
     "Defender buzzes outside you: eyes back, expect the ball"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3793,7 +4328,10 @@
    "vsCoverageAdjustments": [
     "Press man: outside release, 1 hard step to the slant, then go"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3830,7 +4368,10 @@
    "breakDirection": "in",
    "isDoubleMove": true,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3872,7 +4413,10 @@
    "breakDirection": "cross",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3913,9 +4457,18 @@
    "breakDirection": "stop",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": {
-    "kind": "redline"
-   },
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "redline"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3951,7 +4504,10 @@
     "Man: sell the Shallow to the near guard",
     "Zone: no need to sell it as far, be ready to sit"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -3989,7 +4545,10 @@
    "vsCoverageAdjustments": [
     "Nickel head up to outside: release vertical, sell a stalk block, break out when he looks inside"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4022,9 +4581,18 @@
    "breakDirection": "vertical",
    "isDoubleMove": true,
    "vsCoverageAdjustments": [],
-   "landmark": {
-    "kind": "redline"
-   },
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "redline"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4040,8 +4608,8 @@
      "y": 18
     }
    ],
-   "confidence": "needs-review",
-   "note": "Sell a stalk block, then run to the red line. No depth stated for the sell."
+   "confidence": "derived",
+   "note": "Sell the stalk block, then run to the red line."
   },
   {
    "key": "wr-stalk-shallow",
@@ -4060,7 +4628,10 @@
    "breakDirection": "cross",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4098,7 +4669,10 @@
    "vsCoverageAdjustments": [
     "Flat route inside you: release inside 2 yards (lose 2) on the stem"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4134,7 +4708,10 @@
    "breakDirection": "in",
    "isDoubleMove": true,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4178,7 +4755,10 @@
     "MFO: cross face",
     "Complementary route inside: lose 2 on the stem"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4217,7 +4797,10 @@
    "vsCoverageAdjustments": [
     "Cover 4: shave the angle as flat as needed to cross the safety's face"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4252,7 +4835,10 @@
    "vsCoverageAdjustments": [
     "DB undercutting: come out at a high angle"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4292,10 +4878,28 @@
    "breakDirection": "back-out",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": {
-    "kind": "note",
-    "text": "stem to a point 10 deep on the numbers, work back to the red line"
-   },
+   "landmarks": [
+    {
+     "point": 1,
+     "mode": "end",
+     "field": {
+      "spot": "numbers",
+      "edge": "middle"
+     },
+     "note": "a point 10 deep on the numbers"
+    },
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "redline"
+     },
+     "note": "work back to the red line"
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4331,9 +4935,18 @@
     "Press: preferred outside release to the red line",
     "Free access: close the cushion, set the defender, work to the red line"
    ],
-   "landmark": {
-    "kind": "redline"
-   },
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "redline"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4374,7 +4987,10 @@
    "breakDirection": "out",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4416,7 +5032,18 @@
    "breakDirection": "post",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "toward",
+     "field": {
+      "spot": "near-upright"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4451,10 +5078,19 @@
    "vsCoverageAdjustments": [
     "Quarters or single safety cut with the corner squeezing: slight tick at 15 to buckle him, stay vertical"
    ],
-   "landmark": {
-    "kind": "hash",
-    "offset": 2
-   },
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "hash",
+      "offset": 2
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4487,7 +5123,10 @@
     "Cover 2: widen slip",
     "Widen Strike: 6 steps, 1-2 yards outside your alignment"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4525,7 +5164,10 @@
    "breakDirection": "vertical",
    "isDoubleMove": true,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4567,7 +5209,10 @@
    "vsCoverageAdjustments": [
     "Near the goal line: 2 yards into the end zone"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4601,7 +5246,10 @@
    "breakDirection": "out",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4637,10 +5285,24 @@
    "breakDirection": "back-in",
    "isDoubleMove": true,
    "vsCoverageAdjustments": [],
-   "landmark": {
-    "kind": "note",
-    "text": "field = push to the inside edge of the numbers, boundary = the outside edge"
-   },
+   "landmarks": [
+    {
+     "point": 1,
+     "mode": "end",
+     "field": {
+      "spot": "numbers",
+      "edge": "inside"
+     },
+     "boundary": {
+      "spot": "numbers",
+      "edge": "outside"
+     },
+     "note": "push the stem to this edge of the numbers"
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4680,7 +5342,10 @@
    "breakDirection": "in",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": [
     "SWIRL",
     "DIG"
@@ -4722,7 +5387,10 @@
     "Cloud: sit briefly on the sideline at 15, then burst",
     "Keepers: be patient, do not outrun the QB's arm"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4766,10 +5434,19 @@
     "Man or a safety cut: break away flat, parallel to the LOS",
     "Tighter than a book split: sell the Thru between the hashes"
    ],
-   "landmark": {
-    "kind": "note",
-    "text": "15 deep on the near hash"
-   },
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "hash"
+     },
+     "note": "15 deep on the near hash"
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4808,7 +5485,10 @@
     "MFC: get head up on the middle safety",
     "MFO: safety outside your alignment = vertical release"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4844,10 +5524,18 @@
    "breakDirection": "out",
    "isDoubleMove": true,
    "vsCoverageAdjustments": [],
-   "landmark": {
-    "kind": "middle",
-    "point": 1
-   },
+   "landmarks": [
+    {
+     "point": 1,
+     "mode": "end",
+     "field": {
+      "spot": "middle"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4884,7 +5572,10 @@
     "Cloud: Fade",
     "Press man: stop route, Go sold to 8, snap up"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4919,7 +5610,10 @@
    "vsCoverageAdjustments": [
     "Cloud: Fade"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4959,7 +5653,10 @@
    "breakDirection": "cross",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -4992,10 +5689,22 @@
    "breakDirection": "out",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": {
-    "kind": "note",
-    "text": "field = the split, boundary = inside edge of the numbers"
-   },
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "split"
+     },
+     "boundary": {
+      "spot": "numbers",
+      "edge": "inside"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -5011,8 +5720,8 @@
      "y": 3
     }
    ],
-   "confidence": "needs-review",
-   "note": "Chip through the outside shoulder of the widest rusher, then release slowly outside looking back over the inside shoulder. No depth stated."
+   "confidence": "derived",
+   "note": "Chip through the outside shoulder of the widest rusher, release slowly outside looking back over the inside shoulder, widening to the landmark."
   },
   {
    "key": "wr-tree",
@@ -5031,7 +5740,10 @@
    "breakDirection": "out",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -5076,7 +5788,10 @@
     "Inside or head-up man: inside release, break out running away",
     "Single-high zone or hard outside leverage: widen release, break IN downhill"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -5117,10 +5832,10 @@
    "breakDirection": "in",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": {
-    "kind": "note",
-    "text": "widen Under: field = inside edge of the numbers, boundary = outside edge"
-   },
+   "landmarks": null,
+   "landmarkNote": "widen Under: field = inside edge of the numbers, boundary = outside edge",
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -5156,7 +5871,10 @@
    "breakDirection": "vertical",
    "isDoubleMove": true,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -5201,7 +5919,10 @@
    "breakDirection": "out",
    "isDoubleMove": true,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -5238,7 +5959,10 @@
    "breakDirection": "vertical",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -5267,9 +5991,18 @@
    "breakDirection": "vertical",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": {
-    "kind": "redline"
-   },
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "redline"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -5308,7 +6041,28 @@
    "breakDirection": "out",
    "isDoubleMove": true,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": [
+    {
+     "point": 2,
+     "mode": "end",
+     "field": {
+      "spot": "end-line",
+      "offset": -2
+     }
+    },
+    {
+     "point": -1,
+     "mode": "toward",
+     "field": {
+      "spot": "back-pylon"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": {
+    "yardsToGoal": 10
+   },
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -5322,15 +6076,15 @@
     },
     {
      "x": 1,
-     "y": 10
+     "y": 18
     },
     {
-     "x": 7,
-     "y": 10
+     "x": 8,
+     "y": 19.5
     }
    ],
-   "confidence": "needs-review",
-   "note": "Outside release selling the Race, save 2 yards on the back end line, break out flat to the back pylon. Depth depends on the yard line."
+   "confidence": "derived",
+   "note": "Red zone. Outside release selling the Race, save 2 yards on the back end line, break out flat for the back pylon. Late in the progression."
   },
   {
    "key": "hb-check-thru",
@@ -5352,7 +6106,10 @@
     "Quick game: 3 yards",
     "Dropback: 5 yards"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -5392,7 +6149,10 @@
     "Zone: sit",
     "Man or match: break away from leverage"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -5434,11 +6194,19 @@
    "vsCoverageAdjustments": [
     "Quick game: 3x1"
    ],
-   "landmark": {
-    "kind": "outside-tackle",
-    "offset": 3,
-    "point": 1
-   },
+   "landmarks": [
+    {
+     "point": 1,
+     "mode": "end",
+     "field": {
+      "spot": "tackle",
+      "offset": 3
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -5471,10 +6239,21 @@
    "breakDirection": "out",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": {
-    "kind": "numbers-outside",
-    "point": 1
-   },
+   "landmarks": [
+    {
+     "point": 1,
+     "mode": "end",
+     "field": {
+      "spot": "numbers",
+      "edge": "outside",
+      "offset": 1
+     },
+     "note": "work for width outside the numbers"
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -5504,7 +6283,10 @@
    "breakDirection": "out",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": [
     "CHECK WIDE"
    ],
@@ -5542,7 +6324,10 @@
     "Quick game: eyes back once you clear the tackle",
     "No ball by 5 yards from the sideline: throttle"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -5581,7 +6366,10 @@
    "vsCoverageAdjustments": [
     "Blitz from your side: 1 yard Flat"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -5626,7 +6414,10 @@
     "Man or match: break out",
     "Blitz from your side: 1 yard Flat"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -5670,7 +6461,10 @@
     "Man or match: alert to double up",
     "Blitz from your side: 1 yard Flat"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -5711,9 +6505,18 @@
     "Defender over the top: width, head around",
     "Defender underneath: expect it downfield"
    ],
-   "landmark": {
-    "kind": "redline"
-   },
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "redline"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -5752,9 +6555,23 @@
    "breakDirection": "vertical",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": {
-    "kind": "seam"
-   },
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "numbers",
+      "offset": -2
+     },
+     "boundary": {
+      "spot": "numbers",
+      "offset": -1
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -5793,9 +6610,18 @@
    "breakDirection": "vertical",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": {
-    "kind": "redline"
-   },
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "redline"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -5845,7 +6671,10 @@
     "Zone: throttle down in the open area",
     "Curl, Swirl, Skinner concepts: push to 4 before bursting across"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -5880,7 +6709,10 @@
    "vsCoverageAdjustments": [
     "Zone: throttle down in the open area"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -5916,10 +6748,20 @@
    "breakDirection": "in",
    "isDoubleMove": true,
    "vsCoverageAdjustments": [],
-   "landmark": {
-    "kind": "note",
-    "text": "release to the inside edge of the numbers (Scat protection: the outside edge)"
-   },
+   "landmarks": [
+    {
+     "point": 2,
+     "mode": "end",
+     "field": {
+      "spot": "numbers",
+      "edge": "inside"
+     },
+     "note": "Scat protection: the outside edge of the numbers"
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -5959,10 +6801,22 @@
    "vsCoverageAdjustments": [
     "Man: ready to cross face"
    ],
-   "landmark": {
-    "kind": "note",
-    "text": "field = the split, boundary = inside edge of the numbers"
-   },
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "split"
+     },
+     "boundary": {
+      "spot": "numbers",
+      "edge": "inside"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -5984,8 +6838,8 @@
      "y": 14
     }
    ],
-   "confidence": "needs-review",
-   "note": "Check protection, arc release under control to a landmark. No depth stated."
+   "confidence": "derived",
+   "note": "Check protection, arc release under control to the landmark."
   },
   {
    "key": "hb-slither",
@@ -6001,7 +6855,10 @@
    "breakDirection": "cross",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -6037,10 +6894,10 @@
    "breakDirection": "in",
    "isDoubleMove": true,
    "vsCoverageAdjustments": [],
-   "landmark": {
-    "kind": "note",
-    "text": "field = clear the split, boundary = outside edge of the numbers"
-   },
+   "landmarks": null,
+   "landmarkNote": "field = clear the split, boundary = outside edge of the numbers (where the turn back inside happens)",
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -6084,10 +6941,18 @@
    "vsCoverageAdjustments": [
     "LB blitzes: block him"
    ],
-   "landmark": {
-    "kind": "middle",
-    "point": 1
-   },
+   "landmarks": [
+    {
+     "point": 1,
+     "mode": "end",
+     "field": {
+      "spot": "middle"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -6122,7 +6987,10 @@
     "LB blitzes: must block him",
     "LB drops: do not chase him"
    ],
-   "landmark": null,
+   "landmarks": null,
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -6155,10 +7023,22 @@
    "breakDirection": "out",
    "isDoubleMove": false,
    "vsCoverageAdjustments": [],
-   "landmark": {
-    "kind": "note",
-    "text": "field = the split, boundary = the numbers"
-   },
+   "landmarks": [
+    {
+     "point": -1,
+     "mode": "end",
+     "field": {
+      "spot": "split"
+     },
+     "boundary": {
+      "spot": "numbers",
+      "edge": "middle"
+     }
+    }
+   ],
+   "landmarkNote": null,
+   "assumes": null,
+   "isHot": false,
    "aliasOf": null,
    "points": [
     {
@@ -6166,18 +7046,17 @@
      "y": 0
     },
     {
-     "x": 2,
-     "y": -1,
-     "relativeY": true
+     "x": 3,
+     "y": -3,
+     "smooth": true
     },
     {
-     "x": 8,
-     "y": -1.5,
-     "relativeY": true
+     "x": 10,
+     "y": -1
     }
    ],
-   "confidence": "needs-review",
-   "note": "Key the guard, find a window to the QB, stay in phase with the guard; bounce or bluff the playside blitzer. Drawn as a placeholder behind the LOS."
+   "confidence": "derived",
+   "note": "Landmark route, no depth. Key the guard, find the window to the QB, stay in phase with the guard; bounce or bluff the playside blitzer by timing. The path stays behind the line until the catch point."
   }
  ]
 }

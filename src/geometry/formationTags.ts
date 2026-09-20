@@ -15,8 +15,10 @@ import type { Player, Point } from '@/model/types';
  */
 export type TagBasis = 'words' | 'diagram' | 'pack';
 export type AppliedTag = { tag: string; player?: string; kind: 'alignment' | 'motion' | 'shift'; basis: TagBasis; page: number; effect: string };
-export type TagResult = { players: Player[]; applied: AppliedTag[]; review: string[]; ignored: string[] };
+export type TagResult = { players: Player[]; applied: AppliedTag[]; review: string[]; ignored: string[]; notes: string[] };
 export type CallTags = {
+  /** Base formation names of the pack ("STACK", "SWAMP" ...). One of these after the direction is not a tag. */
+  formationWords?: string[];
   /** e.g. "Y MO", "F SH", "Y-F MO": the words before the formation name. */
   pre?: string | null;
   /** The words after the direction, e.g. ['BOOK', 'F', 'LT'] or ['GUN', 'OUT', 'HAX']. */
@@ -26,7 +28,23 @@ export type CallTags = {
 };
 
 const LETTERS = ['X', 'Y', 'Z', 'F', 'H'];
-const SPLIT = 5; // the book's "-5-" marker: 5 yards from the end man on the line
+/**
+ * The book's "-5-" marker: a 5 yard split from the end man on the line. The hand-corrected pack draws
+ * that at 4.5 yards between centres (Stack, Sink, Snug, Red Rt Ace all put the man at 6.5 off a tackle at 2),
+ * so the engine uses the same number and a tagged formation lands exactly on its pack twin.
+ */
+const SPLIT = 4.5;
+
+/**
+ * Build rules printed on p-017: a family member is another member plus a tag. The engine has to
+ * reproduce these (see the tests), which is what lets a tagged call be derived instead of flagged.
+ */
+export const FORMATION_BUILD_RULES: { base: string; tag: string; result: string; page: number }[] = [
+  { base: 'Stack', tag: 'CLAMP', result: 'Stamp', page: 17 },
+  { base: 'South', tag: 'CLAMP', result: 'Swamp', page: 17 },
+  { base: 'Sink', tag: 'CLAMP', result: 'Snug', page: 17 },
+  { base: 'Dice', tag: 'OPEN', result: 'Dyno', page: 17 },
+];
 const NUMBERS = 18;
 const SLOT = 12.55; // the formation pack's slot constant
 const WIDE = 20;
@@ -154,10 +172,19 @@ const ALIGNMENT: Record<string, Align> = {
   OPEN: (b) => {
     const te = b.attachedTe(1);
     if (!te) return null;
+    const wide = b.receivers(1).find((p) => p !== te);
+    if (wide) {
+      // p-017: "Dice with Open = Dyno". The Y flexes off the ball into the strong slot, the same width as
+      // the weak slot when there is one, and the outside receiver steps onto the line.
+      const weakSlot = b.receivers(-1)[1];
+      te.x = weakSlot ? Math.abs(weakSlot.x) : (b.tackle(1) + wide.x) / 2;
+      te.y = OFF_BALL;
+      b.rebalance('OPEN', 1, [te]);
+      return { basis: 'words', page: 17, effect: `${te.label} flexes off the ball into the strong slot and ${wide.label} steps onto the line (Dice with Open = Dyno)` };
+    }
+    // p-024 (Crack Rt Open): alone on his side, he takes the 5 yard split and stays on the ball
     te.x = b.tackle(1) + SPLIT;
-    te.y = OFF_BALL;
-    b.rebalance('OPEN', 1, [te]);
-    return { basis: 'words', page: 24, effect: `${te.label} flexes to a 5 yard split from the tackle${onBall(te) ? ', staying on the ball because no one else is on his side' : ', off the ball'}` };
+    return { basis: 'words', page: 24, effect: `${te.label} flexes to a 5 yard split from the tackle, staying on the ball because no one else is on his side` };
   },
   OUT: (b) => {
     const te = b.attachedTe(1);
@@ -283,10 +310,11 @@ const ALERT_WORDS = ['AL', 'ALERT', 'MAYBE', 'MIGHT', 'CAN'];
 type Step = { tag: string; player?: string };
 
 /** Split the words of a call into alignment steps, then motion steps (motions act on the aligned formation). */
-export function readCallTags(call: CallTags): { alignment: Step[]; motion: Step[]; ignored: string[] } {
+export function readCallTags(call: CallTags): { alignment: Step[]; motion: Step[]; ignored: string[]; formationWords: string[] } {
   const alignment: Step[] = [];
   const motion: Step[] = [];
   const ignored: string[] = [];
+  const formationWords: string[] = [];
   const pre = (call.pre ?? '').toUpperCase().replace(/[()]/g, ' ').trim().split(/\s+/).filter(Boolean);
   if (pre.length >= 2) for (const who of pre[0].split('-')) motion.push({ tag: pre[1], player: who });
   const t = call.post.map((w) => w.toUpperCase());
@@ -306,9 +334,10 @@ export function readCallTags(call: CallTags): { alignment: Step[]; motion: Step[
     } else if (w in ALIGNMENT) alignment.push({ tag: w });
     else if (w in BACK_WORDS || ['BUMP', 'LAB', 'RAT', 'TRIXIE'].includes(w)) motion.push({ tag: w });
     else if (w in H_LETTER && call.post.length > 0) alignment.push({ tag: w, player: 'H' });
+    else if (call.formationWords?.includes(w)) formationWords.push(w);
     else ignored.push(w);
   }
-  return { alignment, motion, ignored };
+  return { alignment, motion, ignored, formationWords };
 }
 
 /** Apply every tag of a call to a formation (strong-right space). Throws if a tag leaves anything but 7 men on the line. */
@@ -434,5 +463,7 @@ export function applyCallTags(base: Player[], call: CallTags): TagResult {
   const firstAlert = steps.ignored.findIndex((w) => ALERT_WORDS.includes(w));
   const unknown = firstAlert < 0 ? steps.ignored : steps.ignored.slice(0, firstAlert);
   for (const w of unknown) b.review.push(`${w} is not a tag this importer knows; nothing was moved for it`);
-  return { players: b.players, applied: b.applied, review: b.review, ignored: b.ignored };
+  // a formation-family name after the direction (p-149 prints "SWAMP RT STACK D") is the book's wording, not a tag
+  const notes = steps.formationWords.map((w) => `The page prints the formation name ${w} after the direction; it is not a tag, so nothing was moved for it.`);
+  return { players: b.players, applied: b.applied, review: b.review, ignored: b.ignored, notes };
 }

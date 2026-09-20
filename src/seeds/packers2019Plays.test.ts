@@ -79,6 +79,87 @@ describe('packers 2019 route library', () => {
   });
 });
 
+describe('route landmarks (a named spot on the field instead of a yard depth)', () => {
+  const end = (name: string, p: Player, opts: Parameters<typeof routeDefPath>[2] = { id: 't' }, variant?: string, group: 'WR' | 'HB' = 'WR') => {
+    const path = routeDefPath(routeByName(name, variant, group)!, p, opts);
+    return path.points.map((pt) => ({ x: pt.x + p.x, y: pt.y + p.y }));
+  };
+
+  it('picks the Field or Boundary value by the side the player is on', () => {
+    // Curl stem: field = middle of the numbers, boundary = outside edge of the numbers (p-074)
+    expect(end('CURL', receiver(20), { id: 't', fieldSide: 1 })[1].x).toBe(18);
+    expect(end('CURL', receiver(-20), { id: 't', fieldSide: 1 })[1].x).toBe(-19);
+    expect(end('CURL', receiver(-20), { id: 't', fieldSide: -1 })[1].x).toBe(-18);
+    // Seam: 2 yards inside the numbers to the field, 1 yard inside to the boundary (p-090)
+    expect(end('SEAM', receiver(8)).at(-1)!.x).toBe(16);
+    expect(end('SEAM', receiver(-8)).at(-1)!.x).toBe(-17);
+  });
+
+  it('ball position picks the pylon: front on the minus side of the 50, back on the plus side (p-086)', () => {
+    const minus = end('PYLON', receiver(16), { id: 't', ballOn: 'minus', yardsToGoal: 25 });
+    const plus = end('PYLON', receiver(16), { id: 't', ballOn: 'plus', yardsToGoal: 25 });
+    const slope = (pts: { x: number; y: number }[]) => (pts.at(-1)!.y - pts.at(-2)!.y) / (pts.at(-1)!.x - pts.at(-2)!.x);
+    expect(slope(plus)).toBeGreaterThan(slope(minus)); // the back pylon is 10 yards deeper, so the angle is higher
+    expect(minus[1]).toMatchObject({ x: 16, y: 15 }); // the read stem to 15 does not move
+  });
+
+  it('Far Corner is a direct angle at the far pylon, Archo exits to the red line, Screen stays behind the line', () => {
+    const far = end('FAR CORNER', receiver(-12), { id: 't', yardsToGoal: 30 });
+    expect(far).toHaveLength(2);
+    expect((far[1].y - far[0].y) / (far[1].x - far[0].x)).toBeCloseTo(30 / (53.333 / 2 + 12), 1); // aimed at (+26.67, 30)
+    expect(routeByName('FAR CORNER')).toMatchObject({ confidence: 'derived', breakDepthYards: null });
+
+    const archo = end('ARCHO', receiver(14));
+    expect(archo.at(-1)!.x).toBe(21.5);
+    expect(archo.map((p) => p.y)).toContain(5);
+    expect(routeByName('ARCHO')).toMatchObject({ confidence: 'derived', breakDepthYards: 5, steps: 4, isDoubleMove: true });
+
+    const back: Player = { id: 'h', side: 'offense', symbol: 'circle', label: 'H', x: 0, y: -7.5, role: 'RB' };
+    const field = end('SCREEN', back, { id: 't', side: 1, fieldSide: 1 }, undefined, 'HB');
+    const boundary = end('SCREEN', back, { id: 't', side: -1, fieldSide: 1 }, undefined, 'HB');
+    expect(field.at(-1)!.x).toBe(16); // Field = the split
+    expect(boundary.at(-1)!.x).toBe(-18); // Boundary = the numbers
+    for (const pt of [...field, ...boundary]) expect(pt.y).toBeLessThanOrEqual(0);
+    expect(routeByName('SCREEN', undefined, 'HB')).toMatchObject({ confidence: 'derived', breakDepthYards: null });
+  });
+
+  it('Drag China sells the Drag out to the numbers at 3-5, then bursts back flat inside', () => {
+    const def = routeByName('DRAG CHINA')!;
+    expect(def).toMatchObject({ confidence: 'derived', depthRange: [3, 5], breakDepthYards: 4, isDoubleMove: true, breakDirection: 'in' });
+    const field = end('DRAG CHINA', receiver(6), { id: 't', fieldSide: 1 });
+    expect(field[1]).toMatchObject({ x: 19, y: 4 }); // outside edge of the numbers
+    expect(field[2].y).toBe(4); // flat
+    expect(field[1].x - field[2].x).toBeGreaterThanOrEqual(8); // a real burst back inside, not a stop
+    expect(end('DRAG CHINA', receiver(-6), { id: 't', fieldSide: 1 })[1].x).toBe(-21); // boundary: +2 outside the numbers
+  });
+
+  it('Down Flat is ONE shape; Hot or Late is a flag the call sets', () => {
+    const all = PACKERS_2019_ROUTES.filter((r) => r.name === 'DOWN FLAT');
+    expect(all).toHaveLength(1);
+    expect(all[0]).toMatchObject({ confidence: 'derived', isHot: null, breakDepthYards: null });
+    const users = PACKERS_2019_PLAYS.filter((p) => Object.values(p.routeTags ?? {}).includes(all[0].key));
+    expect(users.length).toBeGreaterThanOrEqual(5);
+    for (const p of users) {
+      const id = Object.entries(p.routeTags!).find(([, k]) => k === all[0].key)![0];
+      expect(p.hotRoutes?.[id], p.rawCall).toBe(false); // every Install #1 use is marked (LATE) on the page
+    }
+  });
+
+  it('red zone routes are measured from the goal line and end line', () => {
+    const race = end('RACE', receiver(10), { id: 't' }, 'red zone');
+    expect(race.at(-1)!.y).toBe(18); // assumes the +10: end line at 20, save 2 yards
+    expect(end('RACE', receiver(10), { id: 't', yardsToGoal: 6 }, 'red zone').at(-1)!.y).toBe(14);
+    expect(end('DEEP SHALLOW', receiver(10), { id: 't' }, 'red zone').at(-1)!.y).toBe(12); // 2 yards into the end zone
+  });
+
+  it('the library: 158 routes, and the only ones still needs-review aim at a defender or give nothing to aim at', () => {
+    expect(PACKERS_2019_ROUTES).toHaveLength(158);
+    expect(PACKERS_2019_ROUTES.filter((r) => r.confidence === 'needs-review').map((r) => r.name).sort()).toEqual(
+      ['CHECK STAR', 'CURL THRU', 'ELIMINATOR', 'JO', 'LOOKIE', 'MIDDLE', 'MINI', 'PUSH', 'RIDE', 'SLANT', 'SLIDE', 'SLITHER', 'SLUGGO UNDER', 'SURGE FLAT'],
+    );
+  });
+});
+
 describe('packers 2019 plays', () => {
   it('every play passes the real schema and keeps its provenance fields', () => {
     expect(PACKERS_2019_PLAYS.length).toBe(playPack.plays.length);
@@ -237,6 +318,11 @@ describe('packers 2019 plays', () => {
     expect(canPass.category).toBe('Run');
     expect(canPass.alternate).toMatchObject({ name: 'PASS X STRIKE', trigger: 'shell: middle of the field closed' });
     expect(Object.values(canPass.alternate!.routeTags ?? {}).sort()).toEqual(['hb-check-flat', 'hb-check-thru', 'wr-streak', 'wr-strike']);
+    // a keeper carries a run number in its call but it is a pass: it must be drawn with its routes, not as the run it fakes
+    const keeper = byCall('DICE RT / FK 19 KEEP RT');
+    expect(keeper.category).toBe('PA');
+    expect(Object.values(keeper.diagram.paths).filter((q) => q.role === 'route').length).toBeGreaterThanOrEqual(5);
+    expect(Object.values(keeper.diagram.paths).some((q) => q.role === 'ball')).toBe(false);
     expect(PACKERS_2019_PLAYS.some((p) => /ALAKSA/.test(p.name))).toBe(false); // the book's own typo on p-131
   });
 });

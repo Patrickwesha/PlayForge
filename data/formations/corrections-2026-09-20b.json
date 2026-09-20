@@ -1,0 +1,6 @@
+{
+  "note": "Red Rt [21], corrected by hand in the app on 2026-09-20 (afternoon) and pulled from the synced library. Same format as corrections-2026-09-20.json.",
+  "formations": {
+    "red-rt-21": "X:-20,0 H:-2,-5 OL:-2,0 OL:-1,0 Q:0,-1 C:0,0 OL:1,0 OL:2,0 F:2,-5 Y:3,0 Z:20,-1"
+  }
+}

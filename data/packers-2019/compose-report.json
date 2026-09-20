@@ -1,7 +1,7 @@
 {
  "plays": 171,
- "derived": 42,
- "needsReview": 129,
+ "derived": 53,
+ "needsReview": 118,
  "canCalls": 37,
  "playsWithMotion": 103,
  "tagUse": {
@@ -39,11 +39,10 @@
  },
  "reasons": {
   "run blocking is drawn from generic family rules (lower fidelity than routes)": {
-   "count": 79,
+   "count": 71,
    "pages": [
     121,
     115,
-    144,
     128,
     109,
     106,
@@ -55,7 +54,6 @@
     111,
     124,
     108,
-    145,
     112,
     125,
     143
@@ -77,27 +75,6 @@
     155
    ]
   },
-  "route DRAG CHINA is needs-review in the library": {
-   "count": 11,
-   "pages": [
-    157,
-    153,
-    150
-   ]
-  },
-  "route SCREEN is needs-review in the library": {
-   "count": 7,
-   "pages": [
-    146,
-    147
-   ]
-  },
-  "route FAR CORNER is needs-review in the library": {
-   "count": 6,
-   "pages": [
-    144
-   ]
-  },
   "SLOT is only drawn in the book (p-015), never put in words": {
    "count": 6,
    "pages": [
@@ -107,12 +84,6 @@
     138,
     140,
     131
-   ]
-  },
-  "route DOWN FLAT is needs-review in the library": {
-   "count": 5,
-   "pages": [
-    144
    ]
   },
   "OUT is only drawn in the book (p-014), never put in words": {
@@ -178,12 +149,6 @@
     154
    ]
   },
-  "route ARCHO is needs-review in the library": {
-   "count": 2,
-   "pages": [
-    140
-   ]
-  },
   "C (player) is only drawn in the book (p-024), never put in words": {
    "count": 2,
    "pages": [
@@ -196,13 +161,6 @@
    "pages": [
     133,
     140
-   ]
-  },
-  "STACK is not a tag this importer knows; nothing was moved for it": {
-   "count": 2,
-   "pages": [
-    150,
-    149
    ]
   },
   "TIGHTER is only drawn in the book (p-014), never put in words": {
@@ -222,12 +180,6 @@
    "count": 1,
    "pages": [
     156
-   ]
-  },
-  "formation Red Rt [21] is itself needs-review (positions are a starting shape)": {
-   "count": 1,
-   "pages": [
-    147
    ]
   },
   "The outside receiver's label is cut off by the scan edge; Glance is inferred from the other three cells.": {

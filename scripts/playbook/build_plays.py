@@ -73,7 +73,10 @@ for r in src["routes"]:
             "breakDirection": r["break_direction"],
             "isDoubleMove": r["is_double_move"],
             "vsCoverageAdjustments": r.get("vs", []),
-            "landmark": r.get("landmark"),
+            "landmarks": r.get("landmarks"),
+            "landmarkNote": r.get("landmark_note"),
+            "assumes": r.get("assumes"),
+            "isHot": r.get("is_hot") if "is_hot" in r else False,
             "aliasOf": r.get("alias_of"),
             "points": pts,
             "confidence": r["confidence"],
@@ -108,6 +111,8 @@ def find_route(word, in_backfield):
     """'NAME' or 'NAME:variant' -> route record, preferring the HB tree for a back in the backfield."""
     name, _, variant = word.partition(":")
     cands = by_name.get(name.strip(), [])
+    if variant.strip().lower() in ("hot", "late"):
+        variant = ""  # Hot / Late is a flag on the play, not a different route
     if variant:
         cands = [c for c in cands if (c["variant"] or "").lower() == variant.strip().lower()]
     if not cands:
@@ -297,9 +302,11 @@ for calls_path in sorted(glob.glob(os.path.join(ROOT, "calls.install-*.json"))):
             reasons.append(c["review"])
 
         run_no = parse_call_line(primary_call).get("run_number")
-        family = run_family(run_no) if run_no else None
         up = (c["raw_call_line"] or "").upper()
         has_routes = bool(c["route_tags"])
+        # a cell with route words is a pass even when its call carries a run number (FK 18 KEEP LT is a keeper
+        # off the 18 fake); the one exception is a Can call, where the run is the play and the pass is the alternate
+        family = run_family(run_no) if run_no and (not has_routes or alternate) else None
         if alternate:
             stats["can_calls"] += 1
         if family and alternate and has_routes:
@@ -325,6 +332,9 @@ for calls_path in sorted(glob.glob(os.path.join(ROOT, "calls.install-*.json"))):
                 continue
             # the composer picks between the receiver tree and the HB tree once tags have placed the player
             route_tags[letter] = {"wr": (wr or hb)["key"], "hb": (hb or wr)["key"], "startsInBackfield": backfield}
+            flag = word.partition(":")[2].strip().lower()
+            if flag in ("hot", "late"):
+                route_tags[letter]["isHot"] = flag == "hot"
             for r in {(wr or hb)["key"]: (wr or hb), (hb or wr)["key"]: (hb or wr)}.values():
                 if r["confidence"] != "derived" and f"route {r['name']} is needs-review in the library" not in reasons:
                     reasons.append(f"route {r['name']} is needs-review in the library")

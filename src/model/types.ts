@@ -181,7 +181,34 @@ export type PlayConfidence = 'derived' | 'needs-review';
  * to the back (+x = his release side), y is the depth from the line of scrimmage unless relativeY is set.
  */
 export type RouteDefPoint = Point & { smooth?: boolean; relativeY?: boolean };
-export type RouteLandmark = { kind: string; point?: number; y?: number; offset?: number; text?: string };
+/**
+ * A named spot on the field that a route ends at or breaks toward, instead of a yard depth.
+ * Vocabulary from the 2019 Packers route tree (pp. 71-103).
+ */
+export type LandmarkSpot = {
+  spot:
+    | 'front-pylon' | 'back-pylon' | 'far-pylon' | 'near-upright'
+    | 'goal-line' | 'end-line'
+    | 'redline' | 'split' | 'numbers' | 'hash' | 'opposite-hash' | 'middle' | 'sideline' | 'tackle';
+  /** Yards from the spot: + = toward the sideline (or deeper, for goal line / end line), - = inside (or short). */
+  offset?: number;
+  /** For the numbers: which edge of the painted numbers. */
+  edge?: 'inside' | 'middle' | 'outside';
+};
+/**
+ * Many landmarks are side-dependent ("Field = X / Boundary = Y"), and a few depend on where the ball is
+ * ("ball on the -50 = front pylon, +50 = back pylon"). `boundary` and `ballPlus` default to `field`.
+ */
+export type RouteLandmark = {
+  /** Index of the route point this landmark places; -1 = the last point. */
+  point: number;
+  /** 'end' = the point sits on the landmark; 'toward' = the leg into the point aims at it (pylons, uprights). */
+  mode: 'end' | 'toward';
+  field: LandmarkSpot;
+  boundary?: LandmarkSpot;
+  ballPlus?: LandmarkSpot;
+  note?: string;
+};
 export type RouteDef = {
   key: string;
   name: string;
@@ -197,7 +224,13 @@ export type RouteDef = {
   breakDirection: string;
   isDoubleMove: boolean;
   vsCoverageAdjustments: string[];
-  landmark?: RouteLandmark | null;
+  landmarks?: RouteLandmark[] | null;
+  /** A landmark the page states that is not a drawable spot (a defender, a variant's sit spot). */
+  landmarkNote?: string | null;
+  /** Field position the drawn depths assume, for routes measured from the goal line or end line (red zone). */
+  assumes?: { yardsToGoal: number } | null;
+  /** true/false = always or never the hot throw; null = the call says (DOWN FLAT is run Hot or Late with the same shape). */
+  isHot?: boolean | null;
   aliasOf?: string[] | null;
   points: RouteDefPoint[];
   confidence: PlayConfidence;
@@ -236,6 +269,8 @@ export type Play = {
   concept?: string;
   /** player id -> route library key, so a drawn route can be traced back to its route word. */
   routeTags?: Record<string, string>;
+  /** player id -> is this route the hot throw, for routes whose record leaves it to the call. */
+  hotRoutes?: Record<string, boolean>;
   /** Can call: this play is the primary, the alternate rides along. */
   alternate?: PlayAlternate;
   /** Alignment, shift and motion words of the call that were applied to the formation, in order. */

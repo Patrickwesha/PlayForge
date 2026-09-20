@@ -20,38 +20,23 @@
   }
  },
  "routes": {
-  "total": 159,
-  "derived": 130,
+  "total": 158,
+  "derived": 144,
   "needs_review": [
-   "ARCHO p-071",
    "CURL THRU p-074",
-   "DEEP SHALLOW (red zone) p-075",
-   "DOWN FLAT (in-line, hot) p-076",
-   "DOWN FLAT (in-line, late) p-076",
-   "DRAG CHINA p-076",
    "ELIMINATOR p-077",
-   "FADE BACK (red zone) p-078",
-   "FAR CORNER p-078",
    "JO p-080",
    "LOOKIE p-082",
    "MINI p-083",
    "PUSH p-086",
-   "RACE (red zone) p-087",
-   "RACE PIVOT p-087",
-   "SEARCH p-090",
    "SLANT (inside) p-091",
    "SLUGGO UNDER p-092",
    "SLIDE p-092",
-   "STALK RAIL p-092",
    "SURGE FLAT p-095",
-   "TRICKLE p-097",
-   "WHIRL (red zone) p-098",
    "RIDE p-100",
    "CHECK STAR p-102",
-   "CHECK SNEAK p-102",
    "SLITHER p-102",
-   "MIDDLE p-103",
-   "SCREEN p-103"
+   "MIDDLE p-103"
   ]
  },
  "note": "Confidence is decided when plays are composed (tags are applied there): see compose-report.json, written by `npm run render:plays`."

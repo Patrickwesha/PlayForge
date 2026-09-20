@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import type { Player } from '@/model/types';
 import { PACKERS_2019_FORMATIONS } from '@/seeds/packers2019';
-import { applyCallTags, assertSevenOnLine, menOnLine, readCallTags } from './formationTags';
+import { FORMATION_BUILD_RULES, applyCallTags, assertSevenOnLine, menOnLine, readCallTags } from './formationTags';
 
 const base = (name: string, personnel: string): Player[] => {
   const f = PACKERS_2019_FORMATIONS.find((g) => g.name === name && g.personnel === personnel);
@@ -31,12 +31,12 @@ describe('call grammar', () => {
 describe('alignment tags (pp. 13-24)', () => {
   it('Close + Tight = Ace: both outside receivers at 5 yard splits (p-021 item 20)', () => {
     const ace = tag(base('I Rt', '21'), ['ACE']).players;
-    expect(at(ace, 'Z')).toMatchObject({ x: 8, y: -1 }); // 5 from the attached Y at 3
-    expect(at(ace, 'X')).toMatchObject({ x: -7, y: 0 }); // 5 from the weak tackle at 2
+    expect(at(ace, 'Z')).toMatchObject({ x: 7.5, y: -1 }); // the "-5-" split off the attached Y at 3 (4.5 between centres, the corrected pack's convention)
+    expect(at(ace, 'X')).toMatchObject({ x: -6.5, y: 0 }); // off the weak tackle at 2, same spot as Red Rt Ace and Sink in the pack
     const two = tag(base('I Rt', '21'), ['CLOSE', 'TIGHT']).players;
     expect(two.map((p) => [p.label, p.x, p.y])).toEqual(ace.map((p) => [p.label, p.x, p.y]));
     const deuce = tag(base('Deuce Rt', '12'), ['ACE']).players;
-    expect(at(deuce, 'X').x).toBe(-8); // Deuce has a tight end (F) on the weak side too
+    expect(at(deuce, 'X').x).toBe(-7.5); // Deuce has a tight end (F) on the weak side too
   });
 
   it('Book: field receiver at numbers minus 2, boundary receiver at numbers minus 1 (p-021 item 19)', () => {
@@ -49,11 +49,11 @@ describe('alignment tags (pp. 13-24)', () => {
 
   it('Hip = inside receiver on the line, Hop = outside receiver on the line (p-021 items 15-17)', () => {
     const hip = tag(base('I Rt', '21'), ['HIP']).players;
-    expect(at(hip, 'Z')).toMatchObject({ x: -7, y: 0 });
-    expect(at(hip, 'X')).toMatchObject({ x: -8, y: -1 });
+    expect(at(hip, 'Z')).toMatchObject({ x: -6.5, y: 0 });
+    expect(at(hip, 'X')).toMatchObject({ x: -7.5, y: -1 });
     const hop = tag(base('I Rt', '21'), ['HOP']).players;
-    expect(at(hop, 'X')).toMatchObject({ x: -7, y: 0 });
-    expect(at(hop, 'Z')).toMatchObject({ x: -6, y: -1 });
+    expect(at(hop, 'X')).toMatchObject({ x: -6.5, y: 0 });
+    expect(at(hop, 'Z')).toMatchObject({ x: -5.5, y: -1 });
     for (const p of [hip, hop]) expect(menOnLine(p)).toHaveLength(7);
   });
 
@@ -69,11 +69,11 @@ describe('alignment tags (pp. 13-24)', () => {
 
   it('Clamp and Click put the Z on the ball at a 5 yard split with the Y off it, inside or outside', () => {
     const clamp = tag(base('I Rt', '21'), ['CLAMP']).players;
-    expect(at(clamp, 'Z')).toMatchObject({ x: 7, y: 0 });
+    expect(at(clamp, 'Z')).toMatchObject({ x: 6.5, y: 0 });
     expect(at(clamp, 'Y')).toMatchObject({ x: 3, y: -1 });
     const click = tag(base('I Rt', '21'), ['CLICK']).players;
-    expect(at(click, 'Z')).toMatchObject({ x: 7, y: 0 });
-    expect(at(click, 'Y')).toMatchObject({ x: 8, y: -1 });
+    expect(at(click, 'Z')).toMatchObject({ x: 6.5, y: 0 });
+    expect(at(click, 'Y')).toMatchObject({ x: 7.5, y: -1 });
   });
 
   it('flags a tag the book only draws, and leaves unknown words alone', () => {
@@ -96,6 +96,28 @@ describe('alignment tags (pp. 13-24)', () => {
       }
     }
     expect(applied).toBeGreaterThan(500);
+  });
+
+  it('reproduces the build rules printed on p-017: Stack+Clamp=Stamp, South+Clamp=Swamp, Sink+Clamp=Snug, Dice+Open=Dyno', () => {
+    expect(FORMATION_BUILD_RULES.map((r) => `${r.base}+${r.tag}=${r.result}`)).toEqual(['Stack+CLAMP=Stamp', 'South+CLAMP=Swamp', 'Sink+CLAMP=Snug', 'Dice+OPEN=Dyno']);
+    for (const rule of FORMATION_BUILD_RULES) {
+      const built = applyCallTags(base(`${rule.base} Rt`, '11'), { post: [rule.tag], direction: 'RT', personnel: '11' });
+      const pack = base(`${rule.result} Rt`, '11');
+      // the tag only touches the strong side: the tight end and the outside receiver land on the hand-corrected pack formation
+      for (const l of ['Y', 'Z']) {
+        expect(at(built.players, l).x, `${rule.result}: ${l}.x`).toBeCloseTo(at(pack, l).x, 0);
+        expect(at(built.players, l).y, `${rule.result}: ${l} row`).toBe(at(pack, l).y);
+      }
+      expect(built.review, rule.result).toEqual([]);
+    }
+  });
+
+  it('a formation name after the direction is how the book words it, not a tag (p-149 prints "SWAMP RT STACK D")', () => {
+    const words = ['STACK', 'SWAMP', 'SOUTH'];
+    expect(readCallTags({ post: ['STACK', 'D'], direction: 'RT', formationWords: words })).toMatchObject({ alignment: [{ tag: 'D', player: 'H' }], ignored: [], formationWords: ['STACK'] });
+    const r = applyCallTags(base('Swamp Rt', '11'), { post: ['GUN', 'STACK', 'D'], direction: 'RT', personnel: '11', formationWords: words });
+    expect(r.review.some((n) => /STACK/.test(n))).toBe(false);
+    expect(r.notes[0]).toMatch(/STACK after the direction/);
   });
 
   it('fails loudly when the count is wrong', () => {

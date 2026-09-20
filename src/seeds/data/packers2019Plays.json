@@ -2,7 +2,7 @@
  "_generated": "Written by scripts/playbook/build_plays.py. Do not edit by hand.",
  "pack": "packers-2019-plays",
  "source": "2019 Green Bay Packers offensive playbook (LaFleur)",
- "revision": "eea0479daad9",
+ "revision": "4a820c52e216",
  "plays": [
   {
    "key": "bin-rt-f-lt-300-jet-z-stick",
@@ -166,9 +166,7 @@
     }
    },
    "notes": null,
-   "reviewNotes": [
-    "route DRAG CHINA is needs-review in the library"
-   ]
+   "reviewNotes": []
   },
   {
    "key": "bunch-lt-y-rt-18-structure",
@@ -247,8 +245,7 @@
    },
    "notes": null,
    "reviewNotes": [
-    "The back is marked hot with an outlet arrow but has no route word on the page.",
-    "route DRAG CHINA is needs-review in the library"
+    "The back is marked hot with an outlet arrow but has no route word on the page."
    ]
   },
   {
@@ -281,8 +278,7 @@
    },
    "notes": null,
    "reviewNotes": [
-    "Screen: everyone else blocks. Only the back's route is a route-tree word.",
-    "route SCREEN is needs-review in the library"
+    "Screen: everyone else blocks. Only the back's route is a route-tree word."
    ]
   },
   {
@@ -453,8 +449,8 @@
    "concept": "FK 18 KEEP LT",
    "primaryCall": "FK 18 KEEP LT",
    "alternate": null,
-   "runNumber": 18,
-   "runFamily": "outside-zone",
+   "runNumber": null,
+   "runFamily": null,
    "routeTags": {
     "X": {
      "wr": "wr-high-corner",
@@ -462,9 +458,10 @@
      "startsInBackfield": false
     },
     "Y": {
-     "wr": "wr-down-flat-in-line-late",
-     "hb": "wr-down-flat-in-line-late",
-     "startsInBackfield": false
+     "wr": "wr-down-flat",
+     "hb": "wr-down-flat",
+     "startsInBackfield": false,
+     "isHot": false
     },
     "F": {
      "wr": "wr-low-cross-2-split",
@@ -483,11 +480,7 @@
     }
    },
    "notes": null,
-   "reviewNotes": [
-    "route DOWN FLAT is needs-review in the library",
-    "route FAR CORNER is needs-review in the library",
-    "run blocking is drawn from generic family rules (lower fidelity than routes)"
-   ]
+   "reviewNotes": []
   },
   {
    "key": "bunch-rt-y-lt-300-jet-z-stick",
@@ -701,9 +694,7 @@
     }
    },
    "notes": null,
-   "reviewNotes": [
-    "route DRAG CHINA is needs-review in the library"
-   ]
+   "reviewNotes": []
   },
   {
    "key": "crack-rt-200-scat-y-stick-bow-sba",
@@ -863,9 +854,7 @@
     }
    },
    "notes": null,
-   "reviewNotes": [
-    "route ARCHO is needs-review in the library"
-   ]
+   "reviewNotes": []
   },
   {
    "key": "crack-rt-z-rt-3-jet-x-shallow-cross",
@@ -1029,9 +1018,7 @@
     }
    },
    "notes": null,
-   "reviewNotes": [
-    "route DRAG CHINA is needs-review in the library"
-   ]
+   "reviewNotes": []
   },
   {
    "key": "crush-rt-out-special-chip-screen-rt",
@@ -1066,8 +1053,7 @@
    },
    "notes": null,
    "reviewNotes": [
-    "Chip screen: the back shows a chip and turns in; everyone else blocks.",
-    "route SCREEN is needs-review in the library"
+    "Chip screen: the back shows a chip and turns in; everyone else blocks."
    ]
   },
   {
@@ -1751,8 +1737,7 @@
    },
    "notes": null,
    "reviewNotes": [
-    "Screen: everyone else blocks. Only the back's route is a route-tree word.",
-    "route SCREEN is needs-review in the library"
+    "Screen: everyone else blocks. Only the back's route is a route-tree word."
    ]
   },
   {
@@ -2105,8 +2090,8 @@
    "concept": "FK 19 KEEP RT",
    "primaryCall": "FK 19 KEEP RT",
    "alternate": null,
-   "runNumber": 19,
-   "runFamily": "outside-zone",
+   "runNumber": null,
+   "runFamily": null,
    "routeTags": {
     "X": {
      "wr": "wr-far-corner",
@@ -2119,9 +2104,10 @@
      "startsInBackfield": false
     },
     "Y": {
-     "wr": "wr-down-flat-in-line-late",
-     "hb": "wr-down-flat-in-line-late",
-     "startsInBackfield": false
+     "wr": "wr-down-flat",
+     "hb": "wr-down-flat",
+     "startsInBackfield": false,
+     "isHot": false
     },
     "Z": {
      "wr": "wr-runback",
@@ -2135,11 +2121,7 @@
     }
    },
    "notes": null,
-   "reviewNotes": [
-    "route FAR CORNER is needs-review in the library",
-    "route DOWN FLAT is needs-review in the library",
-    "run blocking is drawn from generic family rules (lower fidelity than routes)"
-   ]
+   "reviewNotes": []
   },
   {
    "key": "dixie-lt-f-short-18-wanda-can-19",
@@ -2286,9 +2268,7 @@
     }
    },
    "notes": null,
-   "reviewNotes": [
-    "route DRAG CHINA is needs-review in the library"
-   ]
+   "reviewNotes": []
   },
   {
    "key": "east-rt-open-hip-d-200-scram-y-stick-bow-sba",
@@ -2393,8 +2373,7 @@
    },
    "notes": null,
    "reviewNotes": [
-    "The back is marked hot with an outlet arrow but has no route word on the page.",
-    "route DRAG CHINA is needs-review in the library"
+    "The back is marked hot with an outlet arrow but has no route word on the page."
    ]
   },
   {
@@ -3093,8 +3072,8 @@
    "concept": "FK 19 KEEP RT Y SHALLOW",
    "primaryCall": "FK 19 KEEP RT Y SHALLOW",
    "alternate": null,
-   "runNumber": 19,
-   "runFamily": "outside-zone",
+   "runNumber": null,
+   "runFamily": null,
    "routeTags": {
     "Z": {
      "wr": "wr-low-cross-2-split",
@@ -3118,9 +3097,7 @@
     }
    },
    "notes": null,
-   "reviewNotes": [
-    "run blocking is drawn from generic family rules (lower fidelity than routes)"
-   ]
+   "reviewNotes": []
   },
   {
    "key": "i-lt-hip-x-lt-18-weak-can-19-mike",
@@ -3574,8 +3551,7 @@
    },
    "notes": null,
    "reviewNotes": [
-    "Screen: everyone else blocks (B.D.D., far deep safety, 3rd level). Only the back's route is a route-tree word.",
-    "route SCREEN is needs-review in the library"
+    "Screen: everyone else blocks (B.D.D., far deep safety, 3rd level). Only the back's route is a route-tree word."
    ]
   },
   {
@@ -3779,8 +3755,8 @@
    "concept": "FK 19 KEEP RT Y SHALLOW",
    "primaryCall": "FK 19 KEEP RT Y SHALLOW",
    "alternate": null,
-   "runNumber": 19,
-   "runFamily": "outside-zone",
+   "runNumber": null,
+   "runFamily": null,
    "routeTags": {
     "X": {
      "wr": "wr-low-cross-2-split",
@@ -3804,9 +3780,7 @@
     }
    },
    "notes": null,
-   "reviewNotes": [
-    "run blocking is drawn from generic family rules (lower fidelity than routes)"
-   ]
+   "reviewNotes": []
   },
   {
    "key": "i-rt-book-y-lt-p14-weak-x-strike-z-blaze-out",
@@ -4133,9 +4107,7 @@
    },
    "notes": null,
    "reviewNotes": [
-    "formation Red Rt [21] is itself needs-review (positions are a starting shape)",
-    "Chip screen: the back shows a chip and turns in; everyone else blocks.",
-    "route SCREEN is needs-review in the library"
+    "Chip screen: the back shows a chip and turns in; everyone else blocks."
    ]
   },
   {
@@ -4372,9 +4344,7 @@
     }
    },
    "notes": null,
-   "reviewNotes": [
-    "route DRAG CHINA is needs-review in the library"
-   ]
+   "reviewNotes": []
   },
   {
    "key": "south-lt-al-f-short-18-wanda-can-19-sift",
@@ -4680,13 +4650,14 @@
    "concept": "FK 18 SIFT KEEP LT",
    "primaryCall": "FK 18 SIFT KEEP LT",
    "alternate": null,
-   "runNumber": 18,
-   "runFamily": "outside-zone",
+   "runNumber": null,
+   "runFamily": null,
    "routeTags": {
     "F": {
-     "wr": "wr-down-flat-in-line-late",
-     "hb": "wr-down-flat-in-line-late",
-     "startsInBackfield": false
+     "wr": "wr-down-flat",
+     "hb": "wr-down-flat",
+     "startsInBackfield": false,
+     "isHot": false
     },
     "X": {
      "wr": "wr-high-corner",
@@ -4710,11 +4681,7 @@
     }
    },
    "notes": null,
-   "reviewNotes": [
-    "route DOWN FLAT is needs-review in the library",
-    "route FAR CORNER is needs-review in the library",
-    "run blocking is drawn from generic family rules (lower fidelity than routes)"
-   ]
+   "reviewNotes": []
   },
   {
    "key": "south-rt-out-3-jet-z-coin-target",
@@ -5114,8 +5081,7 @@
    },
    "notes": null,
    "reviewNotes": [
-    "Chip screen: the back shows a chip and turns in; everyone else blocks.",
-    "route SCREEN is needs-review in the library"
+    "Chip screen: the back shows a chip and turns in; everyone else blocks."
    ]
   },
   {
@@ -5428,9 +5394,7 @@
     }
    },
    "notes": null,
-   "reviewNotes": [
-    "route DRAG CHINA is needs-review in the library"
-   ]
+   "reviewNotes": []
   },
   {
    "key": "swamp-rt-stack-d-200-scram-z-stick-bow-sba",
@@ -5628,8 +5592,7 @@
    },
    "notes": null,
    "reviewNotes": [
-    "Chip screen: the back shows a chip and turns in; everyone else blocks.",
-    "route SCREEN is needs-review in the library"
+    "Chip screen: the back shows a chip and turns in; everyone else blocks."
    ]
   },
   {
@@ -5830,8 +5793,8 @@
    "concept": "FK 18 KEEP LT",
    "primaryCall": "FK 18 KEEP LT",
    "alternate": null,
-   "runNumber": 18,
-   "runFamily": "outside-zone",
+   "runNumber": null,
+   "runFamily": null,
    "routeTags": {
     "X": {
      "wr": "wr-runback",
@@ -5839,9 +5802,10 @@
      "startsInBackfield": false
     },
     "Y": {
-     "wr": "wr-down-flat-in-line-late",
-     "hb": "wr-down-flat-in-line-late",
-     "startsInBackfield": false
+     "wr": "wr-down-flat",
+     "hb": "wr-down-flat",
+     "startsInBackfield": false,
+     "isHot": false
     },
     "F": {
      "wr": "wr-low-cross-2-split",
@@ -5860,11 +5824,7 @@
     }
    },
    "notes": null,
-   "reviewNotes": [
-    "route DOWN FLAT is needs-review in the library",
-    "route FAR CORNER is needs-review in the library",
-    "run blocking is drawn from generic family rules (lower fidelity than routes)"
-   ]
+   "reviewNotes": []
   },
   {
    "key": "weak-rt-clamp-y-lt-toss-19-zorro-z-now",
@@ -6219,9 +6179,7 @@
     }
    },
    "notes": null,
-   "reviewNotes": [
-    "route DRAG CHINA is needs-review in the library"
-   ]
+   "reviewNotes": []
   },
   {
    "key": "west-rt-book-f-lefty-18-can-19-wanda",
@@ -6349,8 +6307,8 @@
    "concept": "FK 18 KEEP LT",
    "primaryCall": "FK 18 KEEP LT",
    "alternate": null,
-   "runNumber": 18,
-   "runFamily": "outside-zone",
+   "runNumber": null,
+   "runFamily": null,
    "routeTags": {
     "X": {
      "wr": "wr-high-corner",
@@ -6370,9 +6328,7 @@
    },
    "notes": null,
    "reviewNotes": [
-    "Could not tell from the page which of Y and F runs the Low Cross and which the Down Flat.",
-    "route FAR CORNER is needs-review in the library",
-    "run blocking is drawn from generic family rules (lower fidelity than routes)"
+    "Could not tell from the page which of Y and F runs the Low Cross and which the Down Flat."
    ]
   },
   {
@@ -6447,8 +6403,8 @@
    "concept": "FK 18 KEEP LT",
    "primaryCall": "FK 18 KEEP LT",
    "alternate": null,
-   "runNumber": 18,
-   "runFamily": "outside-zone",
+   "runNumber": null,
+   "runFamily": null,
    "routeTags": {
     "X": {
      "wr": "wr-runback",
@@ -6461,9 +6417,10 @@
      "startsInBackfield": false
     },
     "F": {
-     "wr": "wr-down-flat-in-line-late",
-     "hb": "wr-down-flat-in-line-late",
-     "startsInBackfield": false
+     "wr": "wr-down-flat",
+     "hb": "wr-down-flat",
+     "startsInBackfield": false,
+     "isHot": false
     },
     "Z": {
      "wr": "wr-far-corner",
@@ -6477,11 +6434,7 @@
     }
    },
    "notes": null,
-   "reviewNotes": [
-    "route DOWN FLAT is needs-review in the library",
-    "route FAR CORNER is needs-review in the library",
-    "run blocking is drawn from generic family rules (lower fidelity than routes)"
-   ]
+   "reviewNotes": []
   },
   {
    "key": "west-rt-hip-2-scat-y-redskin",
@@ -6619,9 +6572,7 @@
     }
    },
    "notes": null,
-   "reviewNotes": [
-    "route ARCHO is needs-review in the library"
-   ]
+   "reviewNotes": []
   },
   {
    "key": "west-rt-slot-z-fly-spirit",
@@ -6790,8 +6741,7 @@
    },
    "notes": null,
    "reviewNotes": [
-    "The back is marked hot with an outlet arrow but has no route word on the page.",
-    "route DRAG CHINA is needs-review in the library"
+    "The back is marked hot with an outlet arrow but has no route word on the page."
    ]
   },
   {
@@ -7380,9 +7330,7 @@
     }
    },
    "notes": null,
-   "reviewNotes": [
-    "route DRAG CHINA is needs-review in the library"
-   ]
+   "reviewNotes": []
   },
   {
    "key": "y-short-swamp-rt-2-scat-z-cherokee",

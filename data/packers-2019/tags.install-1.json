@@ -789,7 +789,7 @@
     "tags": {
      "X": "RUNBACK",
      "Y": "LOW CROSS:tight end",
-     "F": "DOWN FLAT:in-line, late",
+     "F": "DOWN FLAT:late",
      "Z": "FAR CORNER",
      "H": "CHECK FLAT"
     }
@@ -808,7 +808,7 @@
     "f": "[11] SOUTH RT F SHORTY",
     "c": "FK 18 SIFT KEEP LT",
     "tags": {
-     "F": "DOWN FLAT:in-line, late",
+     "F": "DOWN FLAT:late",
      "X": "HIGH CORNER",
      "Y": "LOW CROSS:tight end",
      "Z": "FAR CORNER",
@@ -821,7 +821,7 @@
     "tags": {
      "X": "FAR CORNER",
      "F": "LOW CROSS:+2 split",
-     "Y": "DOWN FLAT:in-line, late",
+     "Y": "DOWN FLAT:late",
      "Z": "RUNBACK",
      "H": "CHECK FLAT"
     }
@@ -831,7 +831,7 @@
     "c": "FK 18 KEEP LT",
     "tags": {
      "X": "RUNBACK",
-     "Y": "DOWN FLAT:in-line, late",
+     "Y": "DOWN FLAT:late",
      "F": "LOW CROSS:+2 split",
      "Z": "FAR CORNER",
      "H": "CHECK FLAT"
@@ -842,7 +842,7 @@
     "c": "FK 18 KEEP LT",
     "tags": {
      "X": "HIGH CORNER",
-     "Y": "DOWN FLAT:in-line, late",
+     "Y": "DOWN FLAT:late",
      "F": "LOW CROSS:+2 split",
      "Z": "FAR CORNER",
      "H": "CHECK FLAT"
@@ -941,7 +941,8 @@
      "H": "FLAT",
      "Y": "FLAT",
      "Z": "STICK"
-    }
+    },
+    "print_note": "Re-read from a 500 DPI crop on 2026-09-20: the page prints STACK after SWAMP RT in this one cell header. Stack is a formation (p-017, 2x2 Stack family), not a tag, so it moves no one; the D is the H empty alignment."
    },
    {
     "f": "[12/11] (G) CRACK RT",
@@ -987,7 +988,8 @@
      "H": "DRAG CHINA",
      "Y": "FLAT",
      "Z": "STICK"
-    }
+    },
+    "print_note": "Re-read from a 500 DPI crop on 2026-09-20: the page prints STACK after SWAMP RT in this one cell header. Stack is a formation (p-017, 2x2 Stack family), not a tag, so it moves no one; the D is the H empty alignment."
    },
    {
     "f": "[12/11] (G) CRACK RT",

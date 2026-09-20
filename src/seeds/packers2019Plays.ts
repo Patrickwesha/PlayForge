@@ -14,7 +14,7 @@ import playPack from './data/packers2019Plays.json';
  * imported formation + a protection + a route word per receiver (or a run family). Every line drawn
  * here comes from the route library records and the repo's block presets, never from the scans.
  */
-type RouteTag = { wr: string; hb: string; startsInBackfield: boolean };
+type RouteTag = { wr: string; hb: string; startsInBackfield: boolean; isHot?: boolean };
 
 type PlaySpec = {
   key: string;
@@ -46,6 +46,8 @@ export const PACKERS_2019_PLAYS_REVISION: string = `${routePack.revision}.${play
 export const PACKERS_2019_ROUTES: RouteDef[] = routePack.routes as RouteDef[];
 const ROUTE_BY_KEY = new Map(PACKERS_2019_ROUTES.map((r) => [r.key, r]));
 const FORMATION_BY_ID = new Map(PACKERS_2019_FORMATIONS.map((f) => [f.id, f]));
+/** "STACK", "SWAMP", "PISTOL BONE" ...: the first word(s) of every formation name in the pack. */
+const FORMATION_WORDS = [...new Set(PACKERS_2019_FORMATIONS.map((f) => f.name.toUpperCase().split(' RT')[0]))];
 
 /** Look a route word up the way a call names it, e.g. routeByName('BASIC') or routeByName('GO', 'widen'). */
 export function routeByName(name: string, variant?: string, group: 'WR' | 'HB' = 'WR'): RouteDef | undefined {
@@ -117,7 +119,9 @@ function composeRun(spec: PlaySpec, players: Player[], id: string, paths: Record
   }
 }
 
-function composePass(spec: PlaySpec, players: Player[], id: string, paths: Record<string, Path>, routeTags: Record<string, string>, review: string[]) {
+function composePass(spec: PlaySpec, players: Player[], id: string, paths: Record<string, Path>, routeTags: Record<string, string>, hotRoutes: Record<string, boolean>, review: string[]) {
+  // strength is set to the field, the same assumption Book makes, so "Field = X / Boundary = Y" landmarks pick by the call's side
+  const fieldSide = spec.direction === 'LT' ? -1 : 1;
   const tagged = new Set<string>();
   const right = players.filter((p) => p.x > 3.5 && p.role !== 'QB').length;
   const left = players.filter((p) => p.x < -3.5 && p.role !== 'QB').length;
@@ -131,8 +135,12 @@ function composePass(spec: PlaySpec, players: Player[], id: string, paths: Recor
     if (def.frame === 'receiver' && inBackfield) review.push(`${letter} runs ${def.name} (a receiver route) but is still in the backfield after the call's tags were applied`);
     // a player in the middle of the formation releases to the side with fewer receivers
     const side = Math.abs(p.x) < 0.5 ? (right <= left ? 1 : -1) : undefined;
-    paths[`${id}-r-${letter}`] = routeDefPath(def, p, { id: `${id}-r-${letter}`, side, hashX: HASH_PRESETS.nfl });
+    const routeSide = side ?? (p.x < 0 ? -1 : 1);
+    const tackleX = Math.max(...players.filter((q) => q.role === 'OL').map((q) => routeSide * q.x));
+    paths[`${id}-r-${letter}`] = routeDefPath(def, p, { id: `${id}-r-${letter}`, side, hashX: HASH_PRESETS.nfl, fieldSide, tackleX });
     routeTags[p.id] = def.key;
+    if (def.isHot === null && tag.isHot !== undefined) hotRoutes[p.id] = tag.isHot;
+    else if (def.isHot === null) review.push(`${letter} runs ${def.name}, which the book runs Hot or Late, and the page does not say which`);
     tagged.add(p.id);
   }
   for (const p of players) {
@@ -160,7 +168,7 @@ function toPlay(spec: PlaySpec): Play | null {
   // Tags are applied in strong-right space, then the whole thing is mirrored for a Lt call (ghosts and motion paths included).
   let tagged;
   try {
-    tagged = applyCallTags(base, { pre: spec.preTag, post: spec.postTags, direction: spec.direction, personnel: spec.personnel });
+    tagged = applyCallTags(base, { pre: spec.preTag, post: spec.postTags, direction: spec.direction, personnel: spec.personnel, formationWords: FORMATION_WORDS });
   } catch (e) {
     throw new Error(`${spec.rawCall} (p-${spec.sourcePage}): ${e instanceof Error ? e.message : String(e)}`);
   }
@@ -171,9 +179,10 @@ function toPlay(spec: PlaySpec): Play | null {
   const paths: Record<string, Path> = {};
   const annotations: Record<string, Annotation> = {};
   const routeTags: Record<string, string> = {};
+  const hotRoutes: Record<string, boolean> = {};
   const review = [...spec.reviewNotes, ...tagged.review];
   if (spec.runFamily === 'outside-zone' || spec.runFamily === 'inside-zone') composeRun(spec, players, id, paths, annotations);
-  else if (Object.keys(spec.routeTags).length > 0) composePass(spec, players, id, paths, routeTags, review);
+  else if (Object.keys(spec.routeTags).length > 0) composePass(spec, players, id, paths, routeTags, hotRoutes, review);
 
   // a Can call's alternate rides along as data; a pass alternate keeps its route words, keyed by player id
   let alternate: PlayAlternate | undefined;
@@ -203,7 +212,7 @@ function toPlay(spec: PlaySpec): Play | null {
     personnel: spec.personnel,
     category: spec.category,
     tags: [PACKERS_2019_TAG, `install-${spec.install}`, ...(spec.runFamily ? [spec.runFamily] : []), ...(alternate ? ['can'] : [])],
-    notes: spec.notes ?? undefined,
+    notes: [spec.notes, ...tagged.notes].filter(Boolean).join(' ') || undefined,
     positionNotes: {},
     diagram: { players: Object.fromEntries(players.map((p) => [p.id, p])), paths, annotations },
     source: playPack.source,
@@ -213,6 +222,7 @@ function toPlay(spec: PlaySpec): Play | null {
     protection: spec.protection ?? undefined,
     concept: spec.concept,
     routeTags: Object.keys(routeTags).length ? routeTags : undefined,
+    hotRoutes: Object.keys(hotRoutes).length ? hotRoutes : undefined,
     alternate,
     appliedTags: appliedTags.length ? appliedTags : undefined,
     confidence: uniqueReview.length ? 'needs-review' : 'derived',
