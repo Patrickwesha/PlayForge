@@ -16,7 +16,10 @@ export function diagramBounds(d: Diagram): BBox | null {
       b.maxY = Math.max(b.maxY, y + pad);
     }
   };
-  for (const p of Object.values(d.players)) grow(p.x, p.y, p.symbol === 'letter' ? LETTER_SIZE / 2 : SYMBOL_R);
+  for (const p of Object.values(d.players)) {
+    grow(p.x, p.y, p.symbol === 'letter' ? LETTER_SIZE / 2 : SYMBOL_R);
+    if (p.motion) for (const m of [p.motion.from, ...(p.motion.via ?? [])]) grow(m.x, m.y, SYMBOL_R);
+  }
   for (const path of Object.values(d.paths)) for (const pt of resolvePoints(path, d.players)) grow(pt.x, pt.y, 0.4);
   for (const a of Object.values(d.annotations)) {
     if (a.kind === 'text') {

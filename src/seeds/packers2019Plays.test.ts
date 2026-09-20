@@ -1,8 +1,13 @@
+import { createElement } from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
 import { FIELD_WIDTH_YD } from '@/model/constants';
 import { backupV2Schema, playSchema, routeDefSchema } from '@/model/schema';
 import { DEFAULT_SETTINGS, type Play, type Player } from '@/model/types';
+import { menOnLine } from '@/geometry/formationTags';
 import { routeDefPath, routeDepths } from '@/geometry/routeLibrary';
+import { motionPoints } from '@/render/MotionLayer';
+import { PlayThumb } from '@/render/PlayThumb';
 import { resolvePoints } from '@/geometry/path';
 import { DEMO_PLAYS } from './demoPlays';
 import { PACKERS_2019_PLAYS, PACKERS_2019_PLAY_ID_PREFIX, PACKERS_2019_ROUTES, routeByName } from './packers2019Plays';
@@ -110,7 +115,9 @@ describe('packers 2019 plays', () => {
     for (const p of iPlays) {
       const qb = label(p, 'Q');
       for (const b of [label(p, 'F'), label(p, 'H')]) {
-        expect(b.y, `${p.rawCall}: ${b.label}`).toBeLessThan(qb.y);
+        // where he lines up: a back sent in motion (Foy, F Lt ...) still STARTS behind the quarterback
+        const start = b.motion?.from ?? b;
+        expect(start.y, `${p.rawCall}: ${b.label}`).toBeLessThan(qb.y);
         expect(b.y).toBeLessThan(0);
       }
       for (const q of Object.values(p.diagram.players)) expect(q.y).toBeLessThanOrEqual(0);
@@ -143,10 +150,94 @@ describe('packers 2019 plays', () => {
     expect(omaha).toMatchObject({ personnel: '12', protection: '200 JET', category: 'Pass', install: 1, sourcePage: 135 });
     expect(Object.values(omaha.routeTags ?? {}).sort()).toEqual(['hb-check-thru', 'wr-coin', 'wr-coin', 'wr-omaha', 'wr-omaha']);
     const pa = byCall('I RT BOOK / P15 WEAK Z STRIKE X BLAZE OUT');
-    expect(pa).toMatchObject({ category: 'PA', confidence: 'derived' });
+    expect(pa).toMatchObject({ category: 'PA', confidence: 'derived', appliedTags: ['BOOK'] });
+    expect(label(pa, 'Z').x).toBe(16); // Book: field receiver 2 inside the numbers
     const oz = byCall('DEUCE RT / 18 STRUCTURE SIFT');
     expect(oz.tags).toContain('outside-zone');
     expect(Object.values(oz.diagram.paths).filter((q) => q.role === 'ball')).toHaveLength(1);
     expect(byCall('14 WEAK').tags).toContain('inside-zone');
   });
+
+  it('seven men on the line in every composed play, tagged or not', () => {
+    for (const p of PACKERS_2019_PLAYS) expect(menOnLine(Object.values(p.diagram.players)), p.rawCall).toHaveLength(7);
+  });
+
+  it('no play is flagged for an unapplied alignment tag or an undrawn Mo any more', () => {
+    const notes = PACKERS_2019_PLAYS.flatMap((p) => p.reviewNotes ?? []);
+    expect(notes.some((n) => /tags not applied|MO is recorded but not drawn/.test(n))).toBe(false);
+    // the 100 formation-caused flags: every corrected formation cleared; Red Rt [21] is the one still marked needs-review in the pack
+    expect(notes.filter((n) => /is itself needs-review/.test(n)).every((n) => n.includes('Red Rt [21]'))).toBe(true);
+  });
+
+  it('every Mo play has a ghost, a motion path behind the line, and a solid final spot that the routes hang off', () => {
+    const mo = PACKERS_2019_PLAYS.filter((p) => /\bMO\b/.test(p.formationLabel ?? ''));
+    expect(mo.length).toBeGreaterThanOrEqual(10);
+    for (const p of mo) {
+      const movers = Object.values(p.diagram.players).filter((q) => q.motion?.tag === 'MO');
+      expect(movers.length, p.rawCall).toBeGreaterThan(0);
+      for (const m of movers) {
+        const from = m.motion!.from;
+        // two different positions, the ghost away from the call (other side of the ball)
+        expect(Math.sign(from.x), `${p.rawCall}: ghost side`).toBe(-Math.sign(m.x));
+        expect(Math.hypot(from.x - m.x, from.y - m.y)).toBeGreaterThan(3);
+        // the path starts at the ghost, ends at the final spot, and never crosses the line of scrimmage
+        const pts = motionPoints(m);
+        expect(pts[0]).toEqual(from);
+        expect(pts[pts.length - 1]).toEqual({ x: m.x, y: m.y });
+        for (const pt of pts) expect(pt.y, `${p.rawCall}: motion path`).toBeLessThanOrEqual(-1);
+        // a route drawn off the ghost would still look plausible, so check the origin in yards
+        for (const path of Object.values(p.diagram.paths)) {
+          if (path.anchor.kind !== 'player' || path.anchor.playerId !== m.id) continue;
+          const origin = resolvePoints(path, p.diagram.players)[0];
+          expect(origin, `${p.rawCall}: ${m.label} ${path.role} origin`).toEqual({ x: m.x, y: m.y });
+          expect(Math.hypot(origin.x - from.x, origin.y - from.y)).toBeGreaterThan(3);
+        }
+      }
+      // and it really renders: one ghost glyph and one dotted path per mover, under the solid players
+      const svg = renderToStaticMarkup(createElement(PlayThumb, { diagram: p.diagram, aspect: 4 / 3 }));
+      for (const m of movers) {
+        expect(svg).toContain(`data-ghost="${m.id}"`);
+        expect(svg).toContain(`data-motion="${m.id}"`);
+        expect(svg.indexOf(`data-motion="${m.id}"`)).toBeLessThan(svg.indexOf(`data-hit="player:${m.id}"`));
+      }
+    }
+  });
+
+  it('Off plays show the swap by row: the tight end off the ball, a receiver up on the line in his place', () => {
+    const off = PACKERS_2019_PLAYS.filter((p) => p.appliedTags?.includes('OFF'));
+    for (const p of off) {
+      expect(label(p, 'Y').y, p.rawCall).toBe(-1);
+      expect(menOnLine(Object.values(p.diagram.players))).toHaveLength(7);
+    }
+  });
+
+  it('a back the call splits out (Hax, Hay, Foy) is out wide at the snap, not in the backfield', () => {
+    const wide = PACKERS_2019_PLAYS.filter((p) => (p.appliedTags ?? []).some((t) => /^(H HAX|H HAY|F FOY|F FOX)$/.test(t)));
+    expect(wide.length).toBeGreaterThan(5);
+    for (const p of wide) {
+      const back = label(p, p.appliedTags!.some((t) => t.startsWith('H ')) ? 'H' : 'F');
+      expect(back.y, p.rawCall).toBe(-1);
+      expect(back.motion?.from.y).toBeLessThan(-3);
+      expect((p.reviewNotes ?? []).some((n) => /still in the backfield/.test(n) && n.startsWith(back.label))).toBe(false);
+    }
+  });
+
+  it('a Can call draws the primary and stores the alternate with its trigger', () => {
+    const cans = PACKERS_2019_PLAYS.filter((p) => p.alternate);
+    expect(cans.length).toBeGreaterThanOrEqual(30);
+    for (const p of cans) {
+      expect(p.name).toMatch(/\(CAN\)/);
+      expect(p.alternate!.name.length).toBeGreaterThan(1);
+      expect(p.tags).toContain('can');
+    }
+    const mike = byCall('I RT BOOK / 18 MIKE (CAN) 19 WEAK');
+    expect(mike).toMatchObject({ category: 'Run', concept: '18 MIKE', alternate: { name: '19 WEAK', trigger: 'unblockable support', runNumber: 19, runFamily: 'outside-zone' } });
+    expect(Object.values(mike.diagram.paths).filter((q) => q.role === 'ball')).toHaveLength(1); // the primary is what is drawn
+    const canPass = byCall('I RT BOOK / 15 WEAK (CAN) PASS X STRIKE');
+    expect(canPass.category).toBe('Run');
+    expect(canPass.alternate).toMatchObject({ name: 'PASS X STRIKE', trigger: 'shell: middle of the field closed' });
+    expect(Object.values(canPass.alternate!.routeTags ?? {}).sort()).toEqual(['hb-check-flat', 'hb-check-thru', 'wr-streak', 'wr-strike']);
+    expect(PACKERS_2019_PLAYS.some((p) => /ALAKSA/.test(p.name))).toBe(false); // the book's own typo on p-131
+  });
 });
+

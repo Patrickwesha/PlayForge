@@ -1,5 +1,7 @@
 import { HASH_PRESETS } from '@/model/constants';
-import type { Annotation, Formation, Path, PathPoint, Play, PlayCategory, PlayConfidence, Player, RouteDef } from '@/model/types';
+import type { Annotation, Formation, Path, PathPoint, Play, PlayAlternate, PlayCategory, Player, RouteDef } from '@/model/types';
+import { flipPlayer } from '@/geometry/flip';
+import { applyCallTags, assertSevenOnLine, type AppliedTag } from '@/geometry/formationTags';
 import { baseBlock, passSetBlock, reachBlock, type Playside } from '@/geometry/blockPresets';
 import { routeDefPath } from '@/geometry/routeLibrary';
 import { PACKERS_2019_FORMATIONS, PACKERS_2019_ID_PREFIX, PACKERS_2019_TAG } from './packers2019';
@@ -12,6 +14,8 @@ import playPack from './data/packers2019Plays.json';
  * imported formation + a protection + a route word per receiver (or a run family). Every line drawn
  * here comes from the route library records and the repo's block presets, never from the scans.
  */
+type RouteTag = { wr: string; hb: string; startsInBackfield: boolean };
+
 type PlaySpec = {
   key: string;
   name: string;
@@ -27,10 +31,11 @@ type PlaySpec = {
   concept: string;
   runNumber: number | null;
   runFamily: 'outside-zone' | 'inside-zone' | 'gap' | null;
-  routeTags: Record<string, string>;
-  unappliedTags: string[];
+  routeTags: Record<string, RouteTag>;
+  preTag: string | null;
+  postTags: string[];
+  alternate: { name: string | null; trigger: string | null; runNumber: number | null; runFamily: string | null; routeTags?: Record<string, RouteTag> } | null;
   notes: string | null;
-  confidence: PlayConfidence;
   reviewNotes: string[];
 };
 
@@ -112,21 +117,22 @@ function composeRun(spec: PlaySpec, players: Player[], id: string, paths: Record
   }
 }
 
-function composePass(spec: PlaySpec, players: Player[], id: string, paths: Record<string, Path>, routeTags: Record<string, string>) {
+function composePass(spec: PlaySpec, players: Player[], id: string, paths: Record<string, Path>, routeTags: Record<string, string>, review: string[]) {
   const tagged = new Set<string>();
   const right = players.filter((p) => p.x > 3.5 && p.role !== 'QB').length;
   const left = players.filter((p) => p.x < -3.5 && p.role !== 'QB').length;
-  for (const [letter, key] of Object.entries(spec.routeTags)) {
+  for (const [letter, tag] of Object.entries(spec.routeTags)) {
     const p = players.find((q) => q.label === letter);
-    const def = ROUTE_BY_KEY.get(key);
-    if (!p || !def) continue;
-    // "F LT" in the call puts that player on the left even though the imported formation does not move him;
-    // otherwise a player in the middle of the formation releases to the side with fewer receivers
-    const at = spec.unappliedTags.indexOf(letter);
-    const told = at >= 0 ? spec.unappliedTags[at + 1] : undefined;
-    const side = told === 'LT' ? -1 : told === 'RT' ? 1 : Math.abs(p.x) < 0.5 ? (right <= left ? 1 : -1) : undefined;
+    if (!p) continue;
+    // after the tags have placed him: a man still in the backfield runs the HB tree, a man split out runs the receiver tree
+    const inBackfield = p.y <= -3;
+    const def = ROUTE_BY_KEY.get(inBackfield ? tag.hb : tag.wr);
+    if (!def) continue;
+    if (def.frame === 'receiver' && inBackfield) review.push(`${letter} runs ${def.name} (a receiver route) but is still in the backfield after the call's tags were applied`);
+    // a player in the middle of the formation releases to the side with fewer receivers
+    const side = Math.abs(p.x) < 0.5 ? (right <= left ? 1 : -1) : undefined;
     paths[`${id}-r-${letter}`] = routeDefPath(def, p, { id: `${id}-r-${letter}`, side, hashX: HASH_PRESETS.nfl });
-    routeTags[p.id] = key;
+    routeTags[p.id] = def.key;
     tagged.add(p.id);
   }
   for (const p of players) {
@@ -142,17 +148,52 @@ function composePass(spec: PlaySpec, players: Player[], id: string, paths: Recor
   }
 }
 
+/** What the tag engine did for one play, kept for the report and the tests. */
+export const PACKERS_2019_TAG_LOG = new Map<string, AppliedTag[]>();
+
 function toPlay(spec: PlaySpec): Play | null {
   const formation: Formation | undefined = FORMATION_BY_ID.get(`${PACKERS_2019_ID_PREFIX}${spec.formationKey}`);
   if (!formation) return null;
   const id = `${PACKERS_2019_PLAY_ID_PREFIX}${spec.key}`;
-  const flip = spec.direction === 'LT' ? -1 : 1;
-  const players: Player[] = Object.values(formation.players).map((p) => ({ ...p, id: `${id}-${p.id.slice(formation.id.length + 1)}`, x: r2(p.x * flip) }));
+  const base: Player[] = Object.values(formation.players).map((p) => ({ ...p, id: `${id}-${p.id.slice(formation.id.length + 1)}` }));
+
+  // Tags are applied in strong-right space, then the whole thing is mirrored for a Lt call (ghosts and motion paths included).
+  let tagged;
+  try {
+    tagged = applyCallTags(base, { pre: spec.preTag, post: spec.postTags, direction: spec.direction, personnel: spec.personnel });
+  } catch (e) {
+    throw new Error(`${spec.rawCall} (p-${spec.sourcePage}): ${e instanceof Error ? e.message : String(e)}`);
+  }
+  const players = tagged.players.map((p) => (spec.direction === 'LT' ? flipPlayer(p) : p)).map((p) => ({ ...p, x: r2(p.x), y: r2(p.y) }));
+  assertSevenOnLine(players, `${spec.rawCall} (p-${spec.sourcePage})`);
+  PACKERS_2019_TAG_LOG.set(id, tagged.applied);
+
   const paths: Record<string, Path> = {};
   const annotations: Record<string, Annotation> = {};
   const routeTags: Record<string, string> = {};
+  const review = [...spec.reviewNotes, ...tagged.review];
   if (spec.runFamily === 'outside-zone' || spec.runFamily === 'inside-zone') composeRun(spec, players, id, paths, annotations);
-  else if (Object.keys(spec.routeTags).length > 0) composePass(spec, players, id, paths, routeTags);
+  else if (Object.keys(spec.routeTags).length > 0) composePass(spec, players, id, paths, routeTags, review);
+
+  // a Can call's alternate rides along as data; a pass alternate keeps its route words, keyed by player id
+  let alternate: PlayAlternate | undefined;
+  if (spec.alternate?.name) {
+    const altRoutes: Record<string, string> = {};
+    for (const [letter, tag] of Object.entries(spec.alternate.routeTags ?? {})) {
+      const p = players.find((q) => q.label === letter);
+      if (p) altRoutes[p.id] = p.y <= -3 ? tag.hb : tag.wr;
+    }
+    alternate = {
+      name: spec.alternate.name,
+      ...(spec.alternate.trigger ? { trigger: spec.alternate.trigger } : {}),
+      ...(spec.alternate.runNumber ? { runNumber: spec.alternate.runNumber } : {}),
+      ...(spec.alternate.runFamily ? { runFamily: spec.alternate.runFamily } : {}),
+      ...(Object.keys(altRoutes).length ? { routeTags: altRoutes } : {}),
+    };
+    if (!spec.alternate.trigger) review.push('Can call: the page does not state what flips it to the alternate');
+  }
+  const appliedTags = tagged.applied.map((a) => (a.player ? `${a.player} ${a.tag}` : a.tag));
+  const uniqueReview = [...new Set(review)];
 
   return {
     id,
@@ -161,7 +202,7 @@ function toPlay(spec: PlaySpec): Play | null {
     formationLabel: spec.formationLabel,
     personnel: spec.personnel,
     category: spec.category,
-    tags: [PACKERS_2019_TAG, `install-${spec.install}`, ...(spec.runFamily ? [spec.runFamily] : [])],
+    tags: [PACKERS_2019_TAG, `install-${spec.install}`, ...(spec.runFamily ? [spec.runFamily] : []), ...(alternate ? ['can'] : [])],
     notes: spec.notes ?? undefined,
     positionNotes: {},
     diagram: { players: Object.fromEntries(players.map((p) => [p.id, p])), paths, annotations },
@@ -172,11 +213,13 @@ function toPlay(spec: PlaySpec): Play | null {
     protection: spec.protection ?? undefined,
     concept: spec.concept,
     routeTags: Object.keys(routeTags).length ? routeTags : undefined,
-    confidence: spec.confidence,
-    reviewNotes: spec.reviewNotes.length ? spec.reviewNotes : undefined,
+    alternate,
+    appliedTags: appliedTags.length ? appliedTags : undefined,
+    confidence: uniqueReview.length ? 'needs-review' : 'derived',
+    reviewNotes: uniqueReview.length ? uniqueReview : undefined,
     createdAt: SEED_TIME,
     updatedAt: SEED_TIME,
   };
 }
 
-export const PACKERS_2019_PLAYS: Play[] = (playPack.plays as PlaySpec[]).map(toPlay).filter((p): p is Play => p !== null);
+export const PACKERS_2019_PLAYS: Play[] = (playPack.plays as unknown as PlaySpec[]).map(toPlay).filter((p): p is Play => p !== null);

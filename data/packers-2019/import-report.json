@@ -3,66 +3,19 @@
   "1": {
    "calls_ocr_parsed": 127,
    "calls_unparsed": 34,
-   "unparsed_confirmed_by_reading": 24,
-   "cells_ocr_missed": 21,
-   "plays": 164,
-   "derived": 2,
-   "needs_review": 162,
-   "skipped_unparsed": [
-    {
-     "page": 111,
-     "raw": "I RT BOOK / 18 MIKE (CAN) 19 WEAK",
-     "reason": "low OCR confidence (14)"
-    },
-    {
-     "page": 111,
-     "raw": "I RT HOP Z RT / 18 MIKE (CAN) 19 WEAK",
-     "reason": "low OCR confidence (7)"
-    },
-    {
-     "page": 112,
-     "raw": "[21] I RT BOOK YLT / 18 WEAK (CAN) 19 MIKE",
-     "reason": "low OCR confidence (50)"
-    },
-    {
-     "page": 124,
-     "raw": "[21] I RT ACE YLT / 14 WEAK",
-     "reason": "low OCR confidence (25)"
-    },
-    {
-     "page": 125,
-     "raw": "[21] I RT HOP / 15 WEAK Z GHOST",
-     "reason": "low OCR confidence (52)"
-    },
-    {
-     "page": 126,
-     "raw": "I RT BOOK / 15 WEAK (CAN) PASS",
-     "reason": "low OCR confidence (43)"
-    },
-    {
-     "page": 126,
-     "raw": "I RT BOOK YLT / 14 WEAK (CAN) PASS",
-     "reason": "low OCR confidence (0)"
-    },
-    {
-     "page": 129,
-     "raw": "SNUG LT / 14 WANDA F SIFT (AL OSCAR)",
-     "reason": "low OCR confidence (0)"
-    },
-    {
-     "page": 131,
-     "raw": "[21/12] WEST RT HOP Z FLY / ?",
-     "reason": "no call line under the formation line"
-    }
-   ],
+   "unparsed_confirmed_by_reading": 32,
+   "cells_ocr_missed": 23,
+   "plays": 171,
+   "can_calls": 37,
+   "skipped_unparsed": [],
    "missing_formations": [],
    "missing_routes": [],
    "by_category": {
-    "Run": 61,
+    "Run": 71,
     "Pass": 78,
-    "PA": 13,
+    "PA": 11,
     "Screen": 7,
-    "Special": 5
+    "Special": 4
    }
   }
  },
@@ -100,5 +53,6 @@
    "MIDDLE p-103",
    "SCREEN p-103"
   ]
- }
+ },
+ "note": "Confidence is decided when plays are composed (tags are applied there): see compose-report.json, written by `npm run render:plays`."
 }

@@ -82,6 +82,24 @@ export function Inspector() {
             </div>
           </Section>
 
+          {(doc.play.alternate || doc.play.confidence === 'needs-review') && (
+            <Section title={doc.play.alternate ? 'Can call' : 'Import notes'}>
+              {doc.play.alternate && (
+                <p className="text-sm">
+                  This drawing is the primary. Can to <b className="uppercase">{doc.play.alternate.name}</b>
+                  {doc.play.alternate.trigger && <> vs. {doc.play.alternate.trigger}</>}.
+                </p>
+              )}
+              {doc.play.reviewNotes && doc.play.reviewNotes.length > 0 && (
+                <ul className="mt-2 text-xs text-neutral-600 list-disc pl-4 space-y-1">
+                  {doc.play.reviewNotes.map((n) => (
+                    <li key={n}>{n}</li>
+                  ))}
+                </ul>
+              )}
+            </Section>
+          )}
+
           <Section title="Defense">
             <div className="grid grid-cols-2 gap-2">
               <div>

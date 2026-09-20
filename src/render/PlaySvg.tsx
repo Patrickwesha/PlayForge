@@ -5,6 +5,7 @@ import { COLORS } from '@/model/constants';
 import { AnnotationLayer } from './AnnotationLayer';
 import { FieldLayer } from './FieldLayer';
 import { PathLayer } from './PathLayer';
+import { MotionLayer } from './MotionLayer';
 import { PlayerLayer } from './PlayerLayer';
 import { DEFAULT_RENDER_THEME, type RenderTheme } from './theme';
 
@@ -57,6 +58,7 @@ export function PlaySvg({
       <FieldLayer view={view} theme={theme} />
       <PathLayer diagram={diagram} view={view} selectedPathId={selectedPathId} />
       <AnnotationLayer annotations={diagram.annotations} view={view} selectedId={selectedAnnotationId} />
+      <MotionLayer players={diagram.players} view={view} />
       <PlayerLayer players={diagram.players} view={view} selectedIds={selectedPlayerIds} />
       {overlay}
     </svg>

@@ -8,6 +8,7 @@ import type { Formation, Play, PlayCategory } from '@/model/types';
 import { repo } from '@/store/repo';
 import { duplicatePlay, newPlay, playDefenseLabel, playHeaderLine1 } from '@/model/factories';
 import { flipDiagram, flipName } from '@/geometry/flip';
+import { CanBadge } from '@/components/CanBadge';
 import { PlayThumb } from '@/render/PlayThumb';
 import { FormationPicker } from '@/editor/FormationPicker';
 
@@ -81,6 +82,7 @@ export function PlaysClient() {
               <div className="aspect-[4/3]">
                 <PlayThumb diagram={p.diagram} aspect={4 / 3} view={p.view} />
               </div>
+              <CanBadge play={p} />
             </Link>
             <div className="flex items-center gap-1 p-1.5 border-t border-neutral-200 text-xs">
               <span className="px-1.5 py-0.5 rounded bg-neutral-100">{p.category}</span>

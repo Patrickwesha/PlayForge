@@ -21,6 +21,7 @@ export function flipPlayer(p: Player, opts: FlipOptions = {}): Player {
   const out: Player = { ...p, x: -p.x, label: flipLabel(p.label, opts) };
   if (p.shade === 'left') out.shade = 'right';
   else if (p.shade === 'right') out.shade = 'left';
+  if (p.motion) out.motion = { ...p.motion, from: { x: -p.motion.from.x, y: p.motion.from.y }, via: p.motion.via?.map((v) => ({ x: -v.x, y: v.y })) };
   return out;
 }
 

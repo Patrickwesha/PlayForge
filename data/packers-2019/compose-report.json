@@ -1,0 +1,287 @@
+{
+ "plays": 171,
+ "derived": 42,
+ "needsReview": 129,
+ "canCalls": 37,
+ "playsWithMotion": 103,
+ "tagUse": {
+  "GUN": 50,
+  "BOOK": 35,
+  "LT": 31,
+  "RT": 18,
+  "SHORT": 14,
+  "MO": 14,
+  "CLOSE": 12,
+  "TIGHT": 11,
+  "HIP": 9,
+  "OPEN": 8,
+  "SLOT": 6,
+  "ACE": 5,
+  "OUT": 5,
+  "CLAMP": 5,
+  "HOP": 5,
+  "RIGHTY": 4,
+  "D": 4,
+  "HAX": 4,
+  "COUNTER": 4,
+  "FLY": 4,
+  "HAY": 3,
+  "BUMP": 3,
+  "(-)": 2,
+  "C": 2,
+  "SHORTY": 2,
+  "FOY": 2,
+  "TIGHTER": 2,
+  "LEFTY": 2,
+  "HOME": 1,
+  "ZOOM": 1,
+  "(+)": 1
+ },
+ "reasons": {
+  "run blocking is drawn from generic family rules (lower fidelity than routes)": {
+   "count": 79,
+   "pages": [
+    121,
+    115,
+    144,
+    128,
+    109,
+    106,
+    116,
+    114,
+    117,
+    129,
+    126,
+    111,
+    124,
+    108,
+    145,
+    112,
+    125,
+    143
+   ]
+  },
+  "SHORT (player) is only drawn in the book (p-033), never put in words": {
+   "count": 14,
+   "pages": [
+    117,
+    133,
+    129,
+    124,
+    125,
+    153,
+    135,
+    134,
+    139,
+    157,
+    155
+   ]
+  },
+  "route DRAG CHINA is needs-review in the library": {
+   "count": 11,
+   "pages": [
+    157,
+    153,
+    150
+   ]
+  },
+  "route SCREEN is needs-review in the library": {
+   "count": 7,
+   "pages": [
+    146,
+    147
+   ]
+  },
+  "route FAR CORNER is needs-review in the library": {
+   "count": 6,
+   "pages": [
+    144
+   ]
+  },
+  "SLOT is only drawn in the book (p-015), never put in words": {
+   "count": 6,
+   "pages": [
+    142,
+    125,
+    124,
+    138,
+    140,
+    131
+   ]
+  },
+  "route DOWN FLAT is needs-review in the library": {
+   "count": 5,
+   "pages": [
+    144
+   ]
+  },
+  "OUT is only drawn in the book (p-014), never put in words": {
+   "count": 5,
+   "pages": [
+    140,
+    138,
+    156,
+    154,
+    142
+   ]
+  },
+  "Chip screen": {
+   "count": 4,
+   "pages": [
+    147
+   ]
+  },
+  "D (player) is only drawn in the book (p-024), never put in words": {
+   "count": 4,
+   "pages": [
+    150,
+    149
+   ]
+  },
+  "COUNTER (player) is only drawn in the book (p-033), never put in words": {
+   "count": 4,
+   "pages": [
+    115,
+    108,
+    109
+   ]
+  },
+  "no run family or route words could be bound for this call; formation and motion only": {
+   "count": 4,
+   "pages": [
+    131
+   ]
+  },
+  "The back is marked hot with an outlet arrow but has no route word on the page.": {
+   "count": 3,
+   "pages": [
+    153
+   ]
+  },
+  "Screen": {
+   "count": 3,
+   "pages": [
+    146
+   ]
+  },
+  "BUMP is recorded but not drawn": {
+   "count": 3,
+   "pages": [
+    108,
+    145,
+    146
+   ]
+  },
+  "(-) is only drawn in the book (p-021), never put in words": {
+   "count": 2,
+   "pages": [
+    154
+   ]
+  },
+  "route ARCHO is needs-review in the library": {
+   "count": 2,
+   "pages": [
+    140
+   ]
+  },
+  "C (player) is only drawn in the book (p-024), never put in words": {
+   "count": 2,
+   "pages": [
+    149,
+    150
+   ]
+  },
+  "LT (player) is only drawn in the book (p-031), never put in words": {
+   "count": 2,
+   "pages": [
+    133,
+    140
+   ]
+  },
+  "STACK is not a tag this importer knows; nothing was moved for it": {
+   "count": 2,
+   "pages": [
+    150,
+    149
+   ]
+  },
+  "TIGHTER is only drawn in the book (p-014), never put in words": {
+   "count": 2,
+   "pages": [
+    141,
+    140
+   ]
+  },
+  "OUT could not be applied": {
+   "count": 1,
+   "pages": [
+    147
+   ]
+  },
+  "X's label is cut off by the scan edge (reads ...SH); Nash matches the other cell.": {
+   "count": 1,
+   "pages": [
+    156
+   ]
+  },
+  "formation Red Rt [21] is itself needs-review (positions are a starting shape)": {
+   "count": 1,
+   "pages": [
+    147
+   ]
+  },
+  "The outside receiver's label is cut off by the scan edge; Glance is inferred from the other three cells.": {
+   "count": 1,
+   "pages": [
+    141
+   ]
+  },
+  "ZOOM is only drawn in the book (p-015), never put in words": {
+   "count": 1,
+   "pages": [
+    131
+   ]
+  },
+  "Could not tell from the page which of Y and F runs the Low Cross and which the Down Flat.": {
+   "count": 1,
+   "pages": [
+    144
+   ]
+  },
+  "The right edge of this cell is cut off by the scan; Y running the Basic is read from the 12-14 yard label.": {
+   "count": 1,
+   "pages": [
+    153
+   ]
+  },
+  "The Skinner runner's circle is not drawn (motion); could not tell who runs it.": {
+   "count": 1,
+   "pages": [
+    154
+   ]
+  },
+  "(+) is only drawn in the book (p-021), never put in words": {
+   "count": 1,
+   "pages": [
+    154
+   ]
+  }
+ },
+ "renderedTagFamilies": {
+  "ACE": "[12] DEUCE RT ACE / 18 AL OSCAR",
+  "BOOK": "[12] DEUCE LT BOOK AL Z INSERT / 14 AL OSCAR",
+  "HIP": "[21/12/11] EAST RT OPEN HIP D / 200 SCRAM Y STICK BARK (SBA)",
+  "HOP": "[21/12] I RT HOP Z RT / 18 MIKE (CAN) 19 WEAK",
+  "CLAMP": "[21/12] I LT CLAMP / 19 MIKE (CAN) 18 WEAK",
+  "CLOSE": "[12] DICE LT CLOSE / 19 (CAN) 18 WANDA",
+  "TIGHT": "[11] BIN RT TIGHT / 2 SCAT F CHIEF (SBA)",
+  "Y MO": "[11] Y MO BOX RT / 2 SCAT X DRIVE Y CHOW",
+  "F MO": "[11] F MO BIN RT / 2 SCAT Z DRIVE F CHOW",
+  "H HAX": "[11] SOUTH RT OUT HAX / 2 SCRAM F SCAR RETURN Z PILE",
+  "H HAY": "[12/11] DEUCE RT SLOT HAY / 3 SCRAM Y COIN BUFFALO",
+  "F FOY": "[21/12] I RT SLOT FOY / 2 JET Z COIN CUT",
+  "Z FLY": "[21/12] WEST RT HOP Z FLY / SPIRIT",
+  "Y LT": "[12/11] BUDDY RT TIGHT Y LT / 3 JET Z NUNCHUCK",
+  "X SHORTY": "[21] I LT SLOT X SHORTY / 14 WEAK X GHOST"
+ }
+}

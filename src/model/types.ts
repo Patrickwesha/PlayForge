@@ -18,6 +18,20 @@ export type LabelColor = 'black' | 'red' | 'green' | 'blue' | 'brown' | 'orange'
 
 export type PlayerRole = 'OL' | 'C' | 'QB' | 'RB' | 'WR' | 'TE' | 'DL' | 'LB' | 'DB';
 
+/**
+ * A pre-snap shift or motion. The player's own x/y is where he ENDS UP (every route and block hangs
+ * off that spot); `from` is where he lines up first. Rendered as a dashed ghost at `from` plus a dotted
+ * path to the player, always behind the line of scrimmage.
+ */
+export type PlayerMotion = {
+  from: Point;
+  /** The call's word for it: MO, HAX, SHORT, LT ... */
+  tag: string;
+  kind: 'motion' | 'shift';
+  /** Absolute waypoints between `from` and the player (e.g. a counter motion's turn-back point). */
+  via?: Point[];
+};
+
 export type Player = {
   id: string;
   side: Side;
@@ -32,6 +46,7 @@ export type Player = {
   outline?: 'solid' | 'dashed';
   labelColor?: LabelColor;
   role?: PlayerRole;
+  motion?: PlayerMotion;
 };
 
 export type PathPoint = Point & {
@@ -141,6 +156,21 @@ export type Formation = {
 
 export type PlayCategory = 'Run' | 'Pass' | 'PA' | 'Screen' | 'Special';
 
+/**
+ * The built-in alternate of a "Can" call: two plays in one call, the quarterback cans to the alternate
+ * off a pre-snap trigger (box count, unblockable support, rotation, shell).
+ */
+export type PlayAlternate = {
+  /** The alternate's call, e.g. "18 MIKE" or "PASS X STRIKE". */
+  name: string;
+  /** What flips the call, as the page states it, e.g. "unblockable support". */
+  trigger?: string;
+  runNumber?: number;
+  runFamily?: string;
+  /** player id -> route library key, when the alternate is a pass. */
+  routeTags?: Record<string, string>;
+};
+
 /** 'needs-review' = the call and assignments are from the source, but something about the drawing is a starting shape. */
 export type PlayConfidence = 'derived' | 'needs-review';
 
@@ -206,6 +236,10 @@ export type Play = {
   concept?: string;
   /** player id -> route library key, so a drawn route can be traced back to its route word. */
   routeTags?: Record<string, string>;
+  /** Can call: this play is the primary, the alternate rides along. */
+  alternate?: PlayAlternate;
+  /** Alignment, shift and motion words of the call that were applied to the formation, in order. */
+  appliedTags?: string[];
   confidence?: PlayConfidence;
   /** Why an imported play is needs-review (one reason per line). */
   reviewNotes?: string[];

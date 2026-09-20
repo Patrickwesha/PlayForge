@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { DEFENSE_FORMATIONS, DEMO_PLAYS, OFFENSE_FORMATIONS, PACKERS_2019_FORMATIONS, PACKERS_2019_PLAYS, PACKERS_2019_ROUTES } from '@/seeds';
+import { CanBadge } from '@/components/CanBadge';
 import { PlayThumb } from '@/render/PlayThumb';
 import { themeFor } from '@/render/theme';
 import { playDefenseLabel, playHeaderLine1 } from '@/model/factories';
@@ -103,6 +104,7 @@ export default async function GalleryPage(props: PageProps<'/dev/gallery'>) {
             <div className="aspect-[4/3]">
               <PlayThumb diagram={p.diagram} aspect={4 / 3} theme={theme} />
             </div>
+            <CanBadge play={p} />
             <div className="flex justify-between text-[11px] px-2 py-1 border-t border-black">
               <span>
                 {p.category} &middot; install {p.install} &middot; p.{p.sourcePage}

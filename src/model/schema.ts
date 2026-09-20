@@ -15,6 +15,14 @@ export const playerSchema = z.object({
   outline: z.enum(['solid', 'dashed']).optional(),
   labelColor: z.enum(['black', 'red', 'green', 'blue', 'brown', 'orange']).optional(),
   role: z.enum(['OL', 'C', 'QB', 'RB', 'WR', 'TE', 'DL', 'LB', 'DB']).optional(),
+  motion: z
+    .object({
+      from: point,
+      tag: z.string(),
+      kind: z.enum(['motion', 'shift']),
+      via: z.array(point).optional(),
+    })
+    .optional(),
 });
 
 export const pathSchema = z.object({
@@ -105,6 +113,16 @@ export const playSchema = z.object({
   protection: z.string().optional(),
   concept: z.string().optional(),
   routeTags: z.record(z.string(), z.string()).optional(),
+  alternate: z
+    .object({
+      name: z.string().min(1),
+      trigger: z.string().optional(),
+      runNumber: z.number().int().optional(),
+      runFamily: z.string().optional(),
+      routeTags: z.record(z.string(), z.string()).optional(),
+    })
+    .optional(),
+  appliedTags: z.array(z.string()).optional(),
   confidence: z.enum(['derived', 'needs-review']).optional(),
   reviewNotes: z.array(z.string()).optional(),
   createdAt: z.string(),
