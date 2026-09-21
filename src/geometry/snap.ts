@@ -3,15 +3,21 @@ import type { Point } from '@/model/types';
 export type SnapGuide = {
   axis: 'x' | 'y';
   value: number;
-  kind: 'align' | 'hash' | 'symmetry' | 'grid' | 'los' | 'spacing' | 'between';
+  kind: 'align' | 'hash' | 'symmetry' | 'grid' | 'los' | 'spacing' | 'between' | 'landmark';
   /** For spacing guides: the neighbour the gap was measured from. For between guides: the left neighbour. */
   ref?: number;
   /** For between guides: the right neighbour. */
   ref2?: number;
-  /** For spacing and between guides: the y of the dragged player, so the dimension bar sits on its row. */
+  /** For spacing, between and landmark guides: the y of the dragged player, so the bar or label sits on its row. */
   at?: number;
+  /** For landmark guides: the landmark's id and its short name ("Hash +3"). */
+  id?: string;
+  label?: string;
 };
-export type SnapResult = { point: Point; guides: SnapGuide[] };
+export type SnapResult = { point: Point; guides: SnapGuide[]; /** The landmark x snapped to, if any. */ landmarkId?: string };
+
+/** A field landmark offered as a horizontal snap target (see geometry/landmarks.ts). */
+export type SnapLandmark = { id: string; x: number; label: string };
 
 export type SnapContext = {
   /** Positions of other players (not the ones being dragged). */
@@ -22,6 +28,10 @@ export type SnapContext = {
   grid?: number;
   /** Hash mark x offset from center; snaps to +/- hashX. */
   hashX?: number;
+  /** Field landmarks: x-only snap targets. They never touch y, so the row snap still applies. */
+  landmarks?: SnapLandmark[];
+  /** Landmark snap distance in yards (default 0.4). */
+  landmarkThreshold?: number;
   /** Snap distance in yards. */
   threshold?: number;
   /** Mirror other players about x = 0. */
@@ -78,10 +88,15 @@ function commonGap(xs: number[]): number | undefined {
 export function snapPoint(raw: Point, ctx: SnapContext): SnapResult {
   let p = { ...raw };
   const guides: SnapGuide[] = [];
+  let xLocked = false;
   if (ctx.axisLock) {
     const dx = Math.abs(raw.x - ctx.axisLock.origin.x);
     const dy = Math.abs(raw.y - ctx.axisLock.origin.y);
-    if (dx >= dy) p.y = ctx.axisLock.origin.y; else p.x = ctx.axisLock.origin.x;
+    if (dx >= dy) p.y = ctx.axisLock.origin.y;
+    else {
+      p.x = ctx.axisLock.origin.x;
+      xLocked = true;
+    }
   }
   if (ctx.disabled) return { point: p, guides };
   const th = ctx.threshold ?? 0.35;
@@ -126,14 +141,32 @@ export function snapPoint(raw: Point, ctx: SnapContext): SnapResult {
   const any = nearest(p.x, xs, th);
   const mid = nearest(p.x, xs.filter((c) => c.kind === 'between'), th * 1.6);
   const sx = mid && (!any || Math.abs(mid.v - p.x) <= Math.abs(any.v - p.x) + 0.2) ? mid : any;
-  if (sx) {
+  // Field landmarks: the closest one inside its own threshold wins unless a player-based snap is strictly closer.
+  // The evenly-between snap never outranks a landmark: a real field spot beats a computed midpoint.
+  let lm: SnapLandmark | null = null;
+  let lmD = ctx.landmarkThreshold ?? 0.4;
+  for (const l of ctx.landmarks ?? []) {
+    const d = Math.abs(l.x - p.x);
+    if (d < lmD) {
+      lmD = d;
+      lm = l;
+    }
+  }
+  let landmarkId: string | undefined;
+  if (xLocked) {
+    // Shift locked this axis: x stays exactly where the drag started
+  } else if (lm && (!sx || sx.kind === 'between' || lmD <= Math.abs(sx.v - p.x))) {
+    p.x = lm.x;
+    landmarkId = lm.id;
+    guides.push({ axis: 'x', value: lm.x, kind: 'landmark', id: lm.id, label: lm.label, at: p.y });
+  } else if (sx) {
     p.x = sx.v;
     const dim = sx.kind === 'spacing' || sx.kind === 'between';
     guides.push({ axis: 'x', value: sx.v, kind: sx.kind, ref: sx.ref, ref2: sx.ref2, at: dim ? p.y : undefined });
   } else if (grid > 0) p.x = Math.round(p.x / grid) * grid;
 
   p = { x: round3(p.x), y: round3(p.y) };
-  return { point: p, guides };
+  return { point: p, guides, landmarkId };
 }
 
 export type WaypointOptions = {

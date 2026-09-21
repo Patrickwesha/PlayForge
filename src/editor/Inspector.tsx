@@ -7,6 +7,9 @@ import { diagramOf, useEditor } from '@/store/editorStore';
 import * as A from '@/store/editorActions';
 import { COVERAGES } from '@/seeds';
 import { FormationPicker } from './FormationPicker';
+import { useSettings } from '@/store/settingsStore';
+import { FIELD_PRESETS, FIELD_WIDTH_FT } from '@/model/constants';
+import { fieldLandmarks, landmarkReadout } from '@/geometry/landmarks';
 import { PATH_COLORS } from '@/render/theme';
 import { ColorSwatch, END_OPTIONS, EndIcon, INSERT_OPTIONS, InsertIcon, STYLE_OPTIONS, StyleIcon, ThicknessIcon, WIDTH_OPTIONS } from './LineIcons';
 
@@ -25,9 +28,25 @@ function Section({ title, children }: { title: string; children: React.ReactNode
   );
 }
 
+/** Where the selected player sits across the field, in landmark terms. The check that alignments are consistent. */
+function AlignmentReadout({ x, label: who, preset }: { x: number; label: string; preset: keyof typeof FIELD_PRESETS }) {
+  const r = landmarkReadout(fieldLandmarks(preset), x);
+  const fromSideline = FIELD_WIDTH_FT / 3 / 2 - Math.abs(x);
+  const n = (v: number) => String(Math.round(v * 100) / 100);
+  return (
+    <Section title={`Alignment: ${who}`}>
+      <div data-alignment-readout="" className={`mt-1 text-base font-semibold ${r.aligned ? 'text-blue-700' : ''}`}>{r.text}</div>
+      <div className="text-xs text-neutral-500 mt-0.5">
+        {x === 0 ? 'On the ball' : `${n(Math.abs(x))} yd ${x > 0 ? 'right' : 'left'} of the ball`} · {n(fromSideline)} yd from the sideline · {FIELD_PRESETS[preset].label} field
+      </div>
+    </Section>
+  );
+}
+
 export function Inspector() {
   const { doc, selection } = useEditor(useShallow((s) => ({ doc: s.doc, selection: s.selection })));
   const [picker, setPicker] = useState<null | 'offense' | 'defense'>(null);
+  const hashPreset = useSettings((s) => s.settings.hashPreset);
   if (!doc) return null;
   const diagram = diagramOf(doc);
   const selPlayer = selection.playerIds.length === 1 ? diagram.players[selection.playerIds[0]] : undefined;
@@ -51,6 +70,7 @@ export function Inspector() {
 
   return (
     <aside className="w-72 shrink-0 bg-white border-l border-neutral-300 overflow-y-auto text-sm">
+      {selPlayer && <AlignmentReadout x={selPlayer.x} label={selPlayer.label || selPlayer.role || 'player'} preset={hashPreset} />}
       {doc.kind === 'play' ? (
         <>
           <Section title="Play">
@@ -291,6 +311,8 @@ export function Inspector() {
           Curves: select a line, then drag the diamond handle in the middle of a segment to bend it. Drag it back to the line to straighten.
           <br />
           Lining up: dragging a player near a row snaps to the next open slot at that row&apos;s spacing (orange bar). Alt = no snap, Shift = one axis.
+          <br />
+          Landmarks: dragging sideways also snaps to field spots (each yard around the hash, top / middle / bottom of the numbers, 2 and 4 from the sideline, middle of the field) and names the spot. G shows them all. They never print.
         </div>
       </Section>
     </aside>

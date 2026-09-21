@@ -23,6 +23,7 @@ export const playerSchema = z.object({
       via: z.array(point).optional(),
     })
     .optional(),
+  alignment: z.string().optional(),
 });
 
 export const pathSchema = z.object({
@@ -186,6 +187,8 @@ export const settingsSchema = z.object({
   paper: z.enum(['letter', 'a4']),
   defaultPlayersPerSide: playersPerSide,
   flipSwapsXZ: z.boolean(),
+  // absent in backups made before the landmark guides existed
+  showLandmarks: z.boolean().default(false),
 });
 
 export const backupV2Schema = z.object({

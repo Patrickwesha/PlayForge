@@ -1,4 +1,5 @@
 import type { Annotation, Diagram, Formation, Path, Player } from '@/model/types';
+import { landmarkById, mirrorLandmarkId, type Landmark } from './landmarks';
 
 const SWAP: Record<string, string> = {
   LT: 'RT', RT: 'LT', LG: 'RG', RG: 'LG', LE: 'RE', RE: 'LE',
@@ -6,7 +7,11 @@ const SWAP: Record<string, string> = {
   LOLB: 'ROLB', ROLB: 'LOLB', LCB: 'RCB', RCB: 'LCB',
 };
 
-export type FlipOptions = { swapXZ?: boolean };
+export type FlipOptions = {
+  swapXZ?: boolean;
+  /** Landmarks of the active field level. A landmark-aligned player lands ON the mirrored landmark, not just at -x. */
+  landmarks?: Landmark[];
+};
 
 export function flipLabel(label: string, opts: FlipOptions = {}): string {
   if (SWAP[label]) return SWAP[label];
@@ -19,6 +24,11 @@ export function flipLabel(label: string, opts: FlipOptions = {}): string {
 
 export function flipPlayer(p: Player, opts: FlipOptions = {}): Player {
   const out: Player = { ...p, x: -p.x, label: flipLabel(p.label, opts) };
+  if (p.alignment) {
+    out.alignment = mirrorLandmarkId(p.alignment);
+    const target = landmarkById(opts.landmarks ?? [], out.alignment);
+    if (target) out.x = target.x;
+  }
   if (p.shade === 'left') out.shade = 'right';
   else if (p.shade === 'right') out.shade = 'left';
   if (p.motion) out.motion = { ...p.motion, from: { x: -p.motion.from.x, y: p.motion.from.y }, via: p.motion.via?.map((v) => ({ x: -v.x, y: v.y })) };

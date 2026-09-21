@@ -47,6 +47,11 @@ export type Player = {
   labelColor?: LabelColor;
   role?: PlayerRole;
   motion?: PlayerMotion;
+  /**
+   * Field landmark this player is lined up on, e.g. "hash+3-right" (ids come from geometry/landmarks.ts).
+   * Set when he is dropped on a landmark, cleared when he is moved off; absent on older saves.
+   */
+  alignment?: string;
 };
 
 export type PathPoint = Point & {
@@ -328,6 +333,8 @@ export type Settings = {
   paper: Paper;
   defaultPlayersPerSide: PlayersPerSide;
   flipSwapsXZ: boolean;
+  /** Editor only: show every alignment landmark faintly (toolbar Guides button, G). Never printed or exported. */
+  showLandmarks: boolean;
 };
 
 export type BackupV2 = {
@@ -341,9 +348,10 @@ export type BackupV2 = {
 };
 
 export const DEFAULT_SETTINGS: Settings = {
-  hashPreset: 'ncaa',
+  hashPreset: 'nfl',
   theme: 'plain',
   paper: 'letter',
   defaultPlayersPerSide: 11,
   flipSwapsXZ: false,
+  showLandmarks: false,
 };

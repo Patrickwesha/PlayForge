@@ -5,11 +5,28 @@
 export const UNITS_PER_YARD = 24;
 
 /** Field geometry */
+export const FIELD_WIDTH_FT = 160;
 export const FIELD_WIDTH_YD = 53.333;
+
+/**
+ * Field levels. Everything that depends on the level (hash marks, numbers, alignment landmarks)
+ * is derived from these, so a new level is one more entry here.
+ * Numbers: `numbersTopYd` is the edge of the painted numbers nearest the middle of the field,
+ * measured from the sideline; they extend `numbersHeightYd` back toward the sideline.
+ */
+export const FIELD_PRESETS = {
+  nfl: { id: 'nfl', label: 'NFL', hashFromSidelineFt: 70.75, numbersTopYd: 12, numbersHeightYd: 2 },          // hashes 18'6" apart
+  ncaa: { id: 'ncaa', label: 'College', hashFromSidelineFt: 60, numbersTopYd: 9, numbersHeightYd: 2 },       // hashes 40' apart
+  hs: { id: 'hs', label: 'High School', hashFromSidelineFt: 160 / 3, numbersTopYd: 9, numbersHeightYd: 2 },  // field split in thirds (53'4")
+} as const;
+export type FieldPreset = (typeof FIELD_PRESETS)[keyof typeof FIELD_PRESETS];
+
+const hashFromCenterYd = (p: FieldPreset) => Math.round(((FIELD_WIDTH_FT / 2 - p.hashFromSidelineFt) / 3) * 1000) / 1000;
+/** Hash mark x offset from the middle of the field, in yards: nfl 3.083, ncaa 6.667, hs 8.889. */
 export const HASH_PRESETS = {
-  nfl: 3.083,   // 18'6" from center
-  ncaa: 6.667,  // 40' from sideline
-  hs: 8.889,    // 53'4" apart
+  nfl: hashFromCenterYd(FIELD_PRESETS.nfl),
+  ncaa: hashFromCenterYd(FIELD_PRESETS.ncaa),
+  hs: hashFromCenterYd(FIELD_PRESETS.hs),
 } as const;
 
 /** Player symbols */

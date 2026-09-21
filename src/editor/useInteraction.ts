@@ -6,7 +6,7 @@ import { UNITS_PER_YARD } from '@/model/constants';
 import { fromSvg, panWindow, zoomWindow } from '@/geometry/transform';
 import { snapPoint, snapWaypoint } from '@/geometry/snap';
 import { bendThrough, resolvePoints, distanceToPolyline, samplePolyline, toSegments } from '@/geometry/path';
-import { hashX } from '@/geometry/yards';
+import { fieldLandmarks } from '@/geometry/landmarks';
 import { diagramOf, useEditor } from '@/store/editorStore';
 import * as A from '@/store/editorActions';
 import { useSettings } from '@/store/settingsStore';
@@ -28,6 +28,9 @@ export type Overlay = {
 };
 
 const DRAG_PX = 3;
+/** Landmark snap distance: 0.4 yd, but never less than this many screen pixels when zoomed far out. */
+const LANDMARK_SNAP_YD = 0.4;
+const LANDMARK_SNAP_MIN_PX = 6;
 
 export function useInteraction(svgRef: RefObject<SVGSVGElement | null>) {
   const st = useRef<IState>({ mode: 'idle' });
@@ -104,12 +107,15 @@ export function useInteraction(svgRef: RefObject<SVGSVGElement | null>) {
       others: Object.values(d.players).filter((p) => !excludeIds.includes(p.id)).map((p) => ({ x: p.x, y: p.y })),
       teammates: Object.values(d.players).filter((p) => !excludeIds.includes(p.id) && p.side === d.players[excludeIds[0]]?.side).map((p) => ({ x: p.x, y: p.y })),
       grid: 0.5,
-      hashX: hashX(settings.hashPreset),
+      // field landmarks replace the bare hash snap: the hash is one of them
+      landmarks: fieldLandmarks(settings.hashPreset),
+      // screen-space floor so the catch stays usable zoomed out; capped under half the 1 yd landmark spacing
+      landmarkThreshold: Math.min(0.49, Math.max(LANDMARK_SNAP_YD, LANDMARK_SNAP_MIN_PX / pxPerYard())),
       symmetry: true,
       disabled: e.altKey,
       axisLock: e.shiftKey && origin ? { origin } : undefined,
     };
-  }, []);
+  }, [pxPerYard]);
 
   const finishDrawing = useCallback((cancel = false) => {
     const s = useEditor.getState();

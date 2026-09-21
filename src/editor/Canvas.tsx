@@ -2,7 +2,8 @@
 
 import { useEffect, useMemo, useRef } from 'react';
 import { useShallow } from 'zustand/react/shallow';
-import { COLORS } from '@/model/constants';
+import { COLORS, FONT_STACK } from '@/model/constants';
+import { fieldLandmarks } from '@/geometry/landmarks';
 import { matchAspect, toSvg, windowAspect, yd } from '@/geometry/transform';
 import { resolvePoints, segmentMidpoints } from '@/geometry/path';
 import { PlaySvg } from '@/render/PlaySvg';
@@ -51,9 +52,46 @@ export function Canvas() {
   const top = toSvg({ x: 0, y: view.maxY }, view).y;
   const bottom = toSvg({ x: 0, y: view.minY }, view).y;
 
+  // Alignment landmarks live in this overlay only, so they never reach thumbnails, print, or PNG.
+  // Label size follows the view width, which keeps it the same size on screen at any zoom.
+  const guideFont = yd((view.maxX - view.minX) * 0.0125);
+  const activeLandmarkId = guides.find((g) => g.kind === 'landmark')?.id;
+  const landmarkEls = settings.showLandmarks
+    ? fieldLandmarks(settings.hashPreset)
+        .filter((l) => l.x >= view.minX && l.x <= view.maxX && l.id !== activeLandmarkId)
+        .map((l) => {
+          const x = toSvg({ x: l.x, y: 0 }, view).x;
+          return (
+            <g key={l.id} data-landmark={l.id} opacity={0.55}>
+              <line x1={x} x2={x} y1={top} y2={bottom} stroke={COLORS.guide} strokeWidth={guideFont * 0.07} strokeDasharray={`${guideFont * 0.6} ${guideFont * 0.6}`} />
+              <text x={x} y={top + guideFont * 0.6} transform={`rotate(-90 ${x} ${top + guideFont * 0.6})`} textAnchor="end" dominantBaseline="central" fontFamily={FONT_STACK} fontSize={guideFont * 0.8} fill={COLORS.guide}>
+                {l.label}
+              </text>
+            </g>
+          );
+        })
+    : null;
+
   const guideEls = guides.map((g, i) => {
     if (g.axis === 'x') {
       const x = toSvg({ x: g.value, y: 0 }, view).x;
+      if (g.kind === 'landmark') {
+        // thin dashed line on the landmark plus its name beside the player
+        const text = g.label ?? '';
+        const w = guideFont * (0.62 * text.length + 0.9);
+        const h = guideFont * 1.5;
+        const lx = x + yd(0.75);
+        const ly = toSvg({ x: 0, y: g.at ?? 0 }, view).y - yd(0.75) - h;
+        return (
+          <g key={i} data-landmark-active={g.id}>
+            <line x1={x} x2={x} y1={top} y2={bottom} stroke={COLORS.guide} strokeWidth={guideFont * 0.09} strokeDasharray={`${guideFont * 0.6} ${guideFont * 0.4}`} />
+            <rect x={lx} y={ly} width={w} height={h} rx={h * 0.25} fill={COLORS.guide} />
+            <text x={lx + w / 2} y={ly + h / 2} textAnchor="middle" dominantBaseline="central" fontFamily={FONT_STACK} fontSize={guideFont} fontWeight="bold" fill={COLORS.paper}>
+              {text}
+            </text>
+          </g>
+        );
+      }
       if (g.kind === 'between' && g.ref !== undefined && g.ref2 !== undefined) {
         // two equal dimension bars: left neighbour -> player -> right neighbour
         const y = toSvg({ x: 0, y: g.at ?? 0 }, view).y - yd(0.8);
@@ -173,6 +211,7 @@ export function Canvas() {
         svgProps={{ 'data-editor-svg': '', onPointerDown, onPointerMove, onPointerUp, onPointerCancel: onPointerUp, onDoubleClick, onContextMenu: (e) => e.preventDefault() } as React.SVGProps<SVGSVGElement>}
         overlay={
           <g data-layer="overlay" style={{ pointerEvents: 'none' }}>
+            {landmarkEls}
             {guideEls}
             {rubber}
             {marquee}

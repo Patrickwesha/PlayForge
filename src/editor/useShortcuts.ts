@@ -73,6 +73,7 @@ export function useShortcuts(opts: { onSave: () => void; onFinishDrawing: (cance
         case 't': if (isPlay) s.setTool('text'); break;
         case 'h': s.setTool('pan'); break;
         case 'f': A.flipDocument(useSettings.getState().settings.flipSwapsXZ); break;
+        case 'g': { const st = useSettings.getState(); void st.update({ showLandmarks: !st.settings.showLandmarks }); break; }
         case 'p': if (s.selection.pathId) { const p = diagramOf(s.doc).paths[s.selection.pathId]; if (p) A.updatePath(p.id, { primary: !p.primary }); } break;
         case 's': if (s.selection.pathId && s.selection.pointIndex) A.togglePointSmooth(s.selection.pathId, s.selection.pointIndex); break;
       }

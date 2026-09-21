@@ -5,7 +5,9 @@ import { aid, pid, rid } from '@/model/ids';
 import { flipDiagram, flipFormationPlayers, flipName } from '@/geometry/flip';
 import { applyRouteTree, routeScaleFor } from '@/geometry/routeTree';
 import { blockPreset, doubleTeam, type BlockPreset, type Playside } from '@/geometry/blockPresets';
+import { fieldLandmarks, landmarkAtX, type Landmark } from '@/geometry/landmarks';
 import { diagramOf, useEditor, type EditorDoc } from './editorStore';
+import { useSettings } from './settingsStore';
 
 type Draft = EditorDoc;
 
@@ -16,6 +18,19 @@ function diagram(d: Draft): Diagram | null {
   return d.kind === 'play' ? d.play.diagram : null;
 }
 const store = () => useEditor.getState();
+
+/** Landmarks of the active field level (Settings). */
+const activeLandmarks = (): Landmark[] => fieldLandmarks(useSettings.getState().settings.hashPreset);
+
+/**
+ * Keep `player.alignment` honest after anything moves a player sideways: the landmark id when he
+ * sits on one, cleared when he does not. Players that are never moved keep whatever they loaded with.
+ */
+function stampAlignment(p: Player, landmarks: Landmark[]) {
+  const lm = landmarkAtX(landmarks, p.x);
+  if (lm) p.alignment = lm.id;
+  else delete p.alignment;
+}
 
 // ---------------- players ----------------
 
@@ -43,7 +58,9 @@ export function addPlayer(spec: Partial<Player> & { x: number; y: number }): str
 export function updatePlayer(id: string, patch: Partial<Player>) {
   store().commit((d) => {
     const p = players(d)[id];
-    if (p) Object.assign(p, patch);
+    if (!p) return;
+    Object.assign(p, patch);
+    if (patch.x !== undefined) stampAlignment(p, activeLandmarks());
   });
 }
 
@@ -51,13 +68,16 @@ export function updatePlayers(ids: string[], patch: Partial<Player>) {
   store().commit((d) => {
     for (const id of ids) {
       const p = players(d)[id];
-      if (p) Object.assign(p, patch);
+      if (!p) continue;
+      Object.assign(p, patch);
+      if (patch.x !== undefined) stampAlignment(p, activeLandmarks());
     }
   });
 }
 
 /** Live drag frame: set absolute positions for several players. */
 export function setPlayerPositionsLive(pos: Record<string, Point>) {
+  const landmarks = activeLandmarks();
   store().live((d) => {
     const ps = players(d);
     for (const [id, pt] of Object.entries(pos)) {
@@ -65,12 +85,14 @@ export function setPlayerPositionsLive(pos: Record<string, Point>) {
       if (p) {
         p.x = pt.x;
         p.y = pt.y;
+        stampAlignment(p, landmarks);
       }
     }
   });
 }
 
 export function nudgePlayers(ids: string[], dx: number, dy: number) {
+  const landmarks = activeLandmarks();
   store().commit((d) => {
     const ps = players(d);
     for (const id of ids) {
@@ -78,6 +100,7 @@ export function nudgePlayers(ids: string[], dx: number, dy: number) {
       if (p) {
         p.x = Math.round((p.x + dx) * 1000) / 1000;
         p.y = Math.round((p.y + dy) * 1000) / 1000;
+        if (dx !== 0) stampAlignment(p, landmarks);
       }
     }
   });
@@ -100,6 +123,7 @@ export function deletePlayers(ids: string[]) {
 
 export function duplicatePlayers(ids: string[]): string[] {
   const newIds: string[] = [];
+  const landmarks = activeLandmarks();
   store().commit((d) => {
     const ps = players(d);
     for (const id of ids) {
@@ -107,6 +131,7 @@ export function duplicatePlayers(ids: string[]): string[] {
       if (!p) continue;
       const nid = pid();
       ps[nid] = { ...p, id: nid, x: p.x + 1, y: p.y - 1 };
+      stampAlignment(ps[nid], landmarks);
       newIds.push(nid);
     }
   });
@@ -115,6 +140,7 @@ export function duplicatePlayers(ids: string[]): string[] {
 }
 
 export function alignPlayers(ids: string[], mode: 'left' | 'centerX' | 'right' | 'top' | 'centerY' | 'bottom' | 'los') {
+  const landmarks = activeLandmarks();
   store().commit((d) => {
     const ps = players(d);
     const sel = ids.map((id) => ps[id]).filter(Boolean);
@@ -131,12 +157,14 @@ export function alignPlayers(ids: string[], mode: 'left' | 'centerX' | 'right' |
         case 'centerY': p.y = (Math.min(...ys) + Math.max(...ys)) / 2; break;
         case 'los': p.y = 0; break;
       }
+      if (mode === 'left' || mode === 'right' || mode === 'centerX') stampAlignment(p, landmarks);
     }
   });
 }
 
 /** Even horizontal spacing between the leftmost and rightmost selected players. */
 export function distributePlayers(ids: string[], spacing?: number) {
+  const landmarks = activeLandmarks();
   store().commit((d) => {
     const ps = players(d);
     const sel = ids.map((id) => ps[id]).filter(Boolean).sort((a, b) => a.x - b.x);
@@ -145,10 +173,12 @@ export function distributePlayers(ids: string[], spacing?: number) {
       const total = spacing * (sel.length - 1);
       const start = (sel[0].x + sel[sel.length - 1].x) / 2 - total / 2;
       sel.forEach((p, i) => (p.x = Math.round((start + i * spacing) * 1000) / 1000));
+      sel.forEach((p) => stampAlignment(p, landmarks));
       return;
     }
     const step = (sel[sel.length - 1].x - sel[0].x) / (sel.length - 1);
     sel.forEach((p, i) => (p.x = Math.round((sel[0].x + i * step) * 1000) / 1000));
+    sel.forEach((p) => stampAlignment(p, landmarks));
   });
 }
 
@@ -504,13 +534,15 @@ export function setFormationMeta(patch: Partial<Omit<Formation, 'players' | 'id'
 }
 
 export function flipDocument(swapXZ: boolean) {
+  // landmark-aligned players go to the matching landmark on the other side, at the active field level
+  const landmarks = activeLandmarks();
   store().commit((d) => {
     if (d.kind === 'play') {
-      d.play.diagram = flipDiagram(d.play.diagram, { swapXZ });
+      d.play.diagram = flipDiagram(d.play.diagram, { swapXZ, landmarks });
       if (d.play.formationLabel) d.play.formationLabel = flipName(d.play.formationLabel);
       d.play.name = flipName(d.play.name);
     } else {
-      d.formation.players = flipFormationPlayers(d.formation, { swapXZ });
+      d.formation.players = flipFormationPlayers(d.formation, { swapXZ, landmarks });
       d.formation.name = flipName(d.formation.name);
     }
   });

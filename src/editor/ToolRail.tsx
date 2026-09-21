@@ -23,6 +23,8 @@ export function ToolRail() {
     useShallow((s) => ({ tool: s.tool, setTool: s.setTool, doc: s.doc, past: s.past, future: s.future, undo: s.undo, redo: s.redo })),
   );
   const flipSwapsXZ = useSettings((s) => s.settings.flipSwapsXZ);
+  const showLandmarks = useSettings((s) => s.settings.showLandmarks);
+  const updateSettings = useSettings((s) => s.update);
   const isPlay = doc?.kind === 'play';
   const b = 'w-14 h-12 flex flex-col items-center justify-center rounded text-[11px] leading-tight';
 
@@ -52,6 +54,16 @@ export function ToolRail() {
       <button title="Flip left/right (F)" onClick={() => A.flipDocument(flipSwapsXZ)} className={`${b} hover:bg-neutral-700`}>
         <span className="font-semibold">Flip</span>
         <span className="opacity-60">F</span>
+      </button>
+      <button
+        title="Show the alignment landmarks: hashes, numbers, sideline (G). Editor only, never printed."
+        aria-pressed={showLandmarks}
+        data-landmarks-toggle=""
+        onClick={() => void updateSettings({ showLandmarks: !showLandmarks })}
+        className={`${b} ${showLandmarks ? 'bg-white text-black' : 'hover:bg-neutral-700'}`}
+      >
+        <span className="font-semibold">Guides</span>
+        <span className="opacity-60">G</span>
       </button>
       <button title="Fit to content (Ctrl+0)" onClick={fit} className={`${b} hover:bg-neutral-700`}>
         <span className="font-semibold">Fit</span>

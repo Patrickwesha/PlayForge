@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import type { HashPreset, Paper, PlayersPerSide, Theme } from '@/model/types';
+import { FIELD_PRESETS } from '@/model/constants';
 import { repo } from '@/store/repo';
 import { useSettings } from '@/store/settingsStore';
 import { downloadBlob } from '@/print/exportPng';
@@ -61,11 +62,11 @@ export function SettingsClient() {
             </select>
           </label>
           <label>
-            <div className="text-xs uppercase text-neutral-500 mb-1">Hash marks</div>
+            <div className="text-xs uppercase text-neutral-500 mb-1">Field level (hashes, numbers, landmarks)</div>
             <select className={field} value={settings.hashPreset} onChange={(e) => void update({ hashPreset: e.target.value as HashPreset })}>
-              <option value="nfl">NFL</option>
-              <option value="ncaa">NCAA</option>
-              <option value="hs">High school</option>
+              {Object.values(FIELD_PRESETS).map((p) => (
+                <option key={p.id} value={p.id}>{p.label}</option>
+              ))}
             </select>
           </label>
           <label>
@@ -82,6 +83,10 @@ export function SettingsClient() {
                 <option key={n} value={n}>{n}</option>
               ))}
             </select>
+          </label>
+          <label className="flex items-center gap-2 col-span-2">
+            <input type="checkbox" checked={settings.showLandmarks} onChange={(e) => void update({ showLandmarks: e.target.checked })} />
+            Show alignment landmark lines in the editor (G). Never printed or exported.
           </label>
           <label className="flex items-center gap-2 col-span-2">
             <input type="checkbox" checked={settings.flipSwapsXZ} onChange={(e) => void update({ flipSwapsXZ: e.target.checked })} />

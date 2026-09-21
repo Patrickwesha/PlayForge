@@ -4,6 +4,8 @@
  */
 export async function svgToPngBlob(svg: SVGSVGElement, widthPx: number, heightPx: number, scale = 3): Promise<Blob> {
   const clone = svg.cloneNode(true) as SVGSVGElement;
+  // editor-only overlay (snap guides, landmark lines, handles) never goes into an export
+  clone.querySelectorAll('[data-layer="overlay"]').forEach((el) => el.remove());
   clone.setAttribute('width', String(widthPx));
   clone.setAttribute('height', String(heightPx));
   clone.style.width = '';
