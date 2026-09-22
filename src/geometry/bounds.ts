@@ -1,4 +1,4 @@
-import { ANNOTATION_SIZE, ARROW_HALF_W, ARROW_LEN, LABEL_SIZE, LETTER_SIZE, SQUARE_SIDE, SQUIGGLE_AMP, STROKE, SYMBOL_R, SYMBOL_STROKE, TBAR_HALF_W } from '@/model/constants';
+import { ANNOTATION_SIZE, ARROW_HALF_W, ARROW_LEN, LETTER_SIZE, SQUARE_SIDE, SQUIGGLE_AMP, STROKE, SYMBOL_R, SYMBOL_STROKE, TBAR_HALF_W } from '@/model/constants';
 import type { Diagram, Path, Player, ViewWindow } from '@/model/types';
 import { motionPoints } from './motion';
 import { resolvePoints, samplePolyline, toSegments } from './path';
