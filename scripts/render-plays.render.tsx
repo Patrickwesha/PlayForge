@@ -13,6 +13,7 @@ import sharp from 'sharp';
 import { expect, it } from 'vitest';
 import type { Play } from '@/model/types';
 import { PlayThumb } from '@/render/PlayThumb';
+import { FORMATION_FIT, MAX_READABLE_WIDTH_YD, fitReport } from '@/geometry/bounds';
 import { applyCallTags } from '@/geometry/formationTags';
 import { PACKERS_2019_FORMATIONS, PACKERS_2019_PLAYS, PACKERS_2019_PLAY_ID_PREFIX } from '@/seeds';
 
@@ -39,7 +40,7 @@ const DEFAULT = [
 ];
 
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
-const svgOf = (p: Play) => renderToStaticMarkup(<PlayThumb diagram={p.diagram} aspect={W / H} fit={{ maxDown: 32, maxW: 58, maxH: 44 }} />).replace('<svg ', `<svg width="${W}" height="${H}" `);
+const svgOf = (p: Play) => renderToStaticMarkup(<PlayThumb diagram={p.diagram} aspect={W / H}  />).replace('<svg ', `<svg width="${W}" height="${H}" `);
 
 it('renders plays to files', async () => {
   mkdirSync(OUT, { recursive: true });
@@ -63,7 +64,7 @@ it('renders plays to files', async () => {
   // the hand-built reference: Wax Rt Off, Y Mo (formation only)
   const wax = PACKERS_2019_FORMATIONS.find((f) => f.name === 'Wax Rt')!;
   const ref = applyCallTags(Object.values(wax.players), { pre: 'Y MO', post: ['OFF'], direction: 'RT', personnel: '13Z' });
-  const refSvg = renderToStaticMarkup(<PlayThumb diagram={{ players: Object.fromEntries(ref.players.map((q) => [q.id, q])), paths: {}, annotations: {} }} aspect={W / H} fit={{ losBand: 2, maxBack: 9 }} />).replace('<svg ', `<svg width="${W}" height="${H}" `);
+  const refSvg = renderToStaticMarkup(<PlayThumb diagram={{ players: Object.fromEntries(ref.players.map((q) => [q.id, q])), paths: {}, annotations: {} }} aspect={W / H} fit={FORMATION_FIT} />).replace('<svg ', `<svg width="${W}" height="${H}" `);
   writeFileSync(path.join(OUT, 'reference-wax-rt-off-y-mo.svg'), refSvg);
   await sharp(Buffer.from(refSvg)).png().toFile(path.join(OUT, 'reference-wax-rt-off-y-mo.png'));
 
@@ -90,6 +91,9 @@ it('renders plays to files', async () => {
         tagUse: Object.fromEntries(Object.entries(tagUse).sort((a, b) => b[1] - a[1])),
         reasons: Object.fromEntries(Object.entries(reasons).sort((a, b) => b[1].count - a[1].count)),
         renderedTagFamilies: families,
+        // one long path (a screen, a jet motion) can force a window so wide the line is unreadable: these are reported, never clipped
+        lineTooSmall: PACKERS_2019_PLAYS.filter((q) => fitReport(q.diagram, 4 / 3).lineTooSmall).map((q) => `${q.rawCall} (window ${fitReport(q.diagram, 4 / 3).widthYd.toFixed(1)} yd wide, limit ${MAX_READABLE_WIDTH_YD})`),
+        windowWidthYd: Object.fromEntries([...new Set(PACKERS_2019_PLAYS.map((q) => Math.round(fitReport(q.diagram, 4 / 3).widthYd / 4) * 4))].sort((a, b) => a - b).map((w) => [w, PACKERS_2019_PLAYS.filter((q) => Math.round(fitReport(q.diagram, 4 / 3).widthYd / 4) * 4 === w).length])),
       },
       null,
       1,

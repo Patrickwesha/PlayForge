@@ -8,6 +8,7 @@ import type { Formation, Side } from '@/model/types';
 import { repo } from '@/store/repo';
 import { duplicateFormation, newFormation } from '@/model/factories';
 import { flipFormationPlayers, flipName } from '@/geometry/flip';
+import { FORMATION_FIT } from '@/geometry/bounds';
 import { PlayThumb } from '@/render/PlayThumb';
 import { buildPlayers, ol } from '@/seeds/builders';
 
@@ -109,7 +110,7 @@ export function FormationsClient() {
                 </div>
               )}
               <div className="aspect-[3/2]">
-                <PlayThumb diagram={{ players: f.players, paths: {}, annotations: {} }} aspect={1.5} fit={{ losBand: 2, maxBack: 8 }} />
+                <PlayThumb diagram={{ players: f.players, paths: {}, annotations: {} }} aspect={1.5} fit={FORMATION_FIT} />
               </div>
             </Link>
             <div className="flex gap-1 p-1.5 border-t border-neutral-200 text-xs">

@@ -16,7 +16,8 @@ export function resolvePoints(path: Path, players: Diagram['players']): PathPoin
   if (path.anchor.kind === 'player') {
     const p = players[path.anchor.playerId];
     if (!p) return [];
-    return path.points.map((pt) => ({ ...pt, x: pt.x + p.x, y: pt.y + p.y }));
+    // the bend control lives in the same (relative) space as its point, so it moves with the player too
+    return path.points.map((pt) => ({ ...pt, x: pt.x + p.x, y: pt.y + p.y, ...(pt.bend ? { bend: { x: pt.bend.x + p.x, y: pt.bend.y + p.y } } : {}) }));
   }
   return path.points.map((pt) => ({ ...pt }));
 }

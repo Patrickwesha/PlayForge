@@ -1,6 +1,7 @@
 import type { Formation, Play } from '@/model/types';
 import type { SheetMetrics } from '@/geometry/layout';
 import { playDefenseLabel, playHeaderLine1 } from '@/model/factories';
+import { FORMATION_FIT } from '@/geometry/bounds';
 import { PlayThumb } from '@/render/PlayThumb';
 import type { RenderTheme } from '@/render/theme';
 
@@ -75,7 +76,7 @@ export function FormationCell({ formation, m, theme }: { formation: Formation; m
         {label}
       </div>
       <div style={{ flex: 1, minHeight: 0 }}>
-        <PlayThumb diagram={diagram} aspect={m.svgW / (m.cellH - Math.min(m.cellHeaderIn, 0.3) - 0.05)} theme={theme} fit={{ losBand: 2, maxBack: 8, minH: 12 }} />
+        <PlayThumb diagram={diagram} aspect={m.svgW / (m.cellH - Math.min(m.cellHeaderIn, 0.3) - 0.05)} theme={theme} fit={FORMATION_FIT} />
       </div>
     </div>
   );

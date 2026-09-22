@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { DEFENSE_FORMATIONS, DEMO_PLAYS, OFFENSE_FORMATIONS, PACKERS_2019_FORMATIONS, PACKERS_2019_PLAYS, PACKERS_2019_ROUTES } from '@/seeds';
 import { CanBadge } from '@/components/CanBadge';
+import { FORMATION_FIT } from '@/geometry/bounds';
 import { PlayThumb } from '@/render/PlayThumb';
 import { themeFor } from '@/render/theme';
 import { playDefenseLabel, playHeaderLine1 } from '@/model/factories';
@@ -16,7 +17,7 @@ function FormationCard({ f, theme }: { f: Formation; theme: ReturnType<typeof th
         {f.confidence === 'needs-review' && <span className="ml-1.5 rounded bg-amber-100 text-amber-900 px-1 normal-case font-semibold">needs review</span>}
       </div>
       <div className="aspect-[3/2]">
-        <PlayThumb diagram={diagram} aspect={1.5} theme={theme} fit={{ losBand: 2, maxBack: 8 }} />
+        <PlayThumb diagram={diagram} aspect={1.5} theme={theme} fit={FORMATION_FIT} />
       </div>
     </div>
   );

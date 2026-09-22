@@ -13,6 +13,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import sharp from 'sharp';
 import { expect, it } from 'vitest';
 import type { Formation } from '@/model/types';
+import { FORMATION_FIT } from '@/geometry/bounds';
 import { PlayThumb } from '@/render/PlayThumb';
 import { PACKERS_2019_FORMATIONS, PACKERS_2019_ID_PREFIX } from '@/seeds';
 
@@ -27,7 +28,7 @@ const title = (f: Formation) => `${f.name} [${f.personnel}]`;
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 
 function svgOf(f: Formation): string {
-  const markup = renderToStaticMarkup(<PlayThumb diagram={{ players: f.players, paths: {}, annotations: {} }} aspect={W / H} fit={{ losBand: 2, maxBack: 8 }} />);
+  const markup = renderToStaticMarkup(<PlayThumb diagram={{ players: f.players, paths: {}, annotations: {} }} aspect={W / H} fit={FORMATION_FIT} />);
   return markup.replace('<svg ', `<svg width="${W}" height="${H}" `);
 }
 

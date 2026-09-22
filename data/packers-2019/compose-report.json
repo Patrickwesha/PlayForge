@@ -235,5 +235,20 @@
   "Z FLY": "[21/12] WEST RT HOP Z FLY / SPIRIT",
   "Y LT": "[12/11] BUDDY RT TIGHT Y LT / 3 JET Z NUNCHUCK",
   "X SHORTY": "[21] I LT SLOT X SHORTY / 14 WEAK X GHOST"
+ },
+ "lineTooSmall": [
+  "[12/11] CRACK RT Z RT / 3 JET X SHALLOW CROSS (window 59.4 yd wide, limit 56)",
+  "[12/11] DIXIE RT OUT / 3 JET X SHALLOW CROSS (window 57.4 yd wide, limit 56)",
+  "[21/12] STRONG RT ACE F LT / 3 JET X SHALLOW CROSS (window 59.4 yd wide, limit 56)",
+  "[12] TRAX RT TIGHTER X LT / 3 JET F SHALLOW CROSS (window 58.7 yd wide, limit 56)"
+ ],
+ "windowWidthYd": {
+  "36": 51,
+  "40": 37,
+  "44": 46,
+  "48": 25,
+  "52": 4,
+  "56": 5,
+  "60": 3
  }
 }

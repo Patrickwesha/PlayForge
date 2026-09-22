@@ -7,6 +7,7 @@ import type { Formation, LayoutId, Paper, Play, Playbook, PlaybookSection } from
 import { repo } from '@/store/repo';
 import { did } from '@/model/ids';
 import { PLAY_LAYOUTS } from '@/geometry/layout';
+import { FORMATION_FIT } from '@/geometry/bounds';
 import { PlayThumb } from '@/render/PlayThumb';
 import { playHeaderLine1 } from '@/model/factories';
 import { onApplied } from '@/sync/events';
@@ -129,7 +130,7 @@ export function PlaybookClient({ id }: { id: string }) {
                     <span className="text-neutral-400 mr-1">{ii + 1}</span>
                     <span className="truncate">{play ? playHeaderLine1(play) + ' ' : ''}{title}</span>
                   </div>
-                  <div className="aspect-[4/3]">{diagram && <PlayThumb diagram={diagram} aspect={4 / 3} view={play?.view} fit={form ? { losBand: 2, maxBack: 8 } : undefined} />}</div>
+                  <div className="aspect-[4/3]">{diagram && <PlayThumb diagram={diagram} aspect={4 / 3} view={play?.view} fit={form ? FORMATION_FIT : undefined} />}</div>
                   <div className="flex text-[11px] border-t border-neutral-200">
                     <button className="px-1.5 py-0.5 hover:bg-neutral-100" disabled={ii === 0} onClick={() => update((d) => { const arr = d.sections[si].itemIds; [arr[ii - 1], arr[ii]] = [arr[ii], arr[ii - 1]]; })}>◀</button>
                     <button className="px-1.5 py-0.5 hover:bg-neutral-100" disabled={ii === sec.itemIds.length - 1} onClick={() => update((d) => { const arr = d.sections[si].itemIds; [arr[ii + 1], arr[ii]] = [arr[ii], arr[ii + 1]]; })}>▶</button>

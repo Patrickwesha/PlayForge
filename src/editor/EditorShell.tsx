@@ -43,7 +43,7 @@ export function EditorShell({ kind, id }: { kind: 'play' | 'formation'; id: stri
       }
       const d: EditorDoc = kind === 'play' ? { kind: 'play', play: row as never } : { kind: 'formation', formation: row as never };
       const savedView = kind === 'play' ? (row as { view?: ViewWindow }).view : undefined;
-      useEditor.getState().load(d, savedView ?? fitWindow(diagramBounds(diagramOf(d)), 1.6, { pad: 3, minW: 34, maxDown: 18 }));
+      useEditor.getState().load(d, savedView ?? fitWindow(diagramBounds(diagramOf(d)), 1.6, { pad: 2 }));
       setStatus('ready');
     })();
     return () => {

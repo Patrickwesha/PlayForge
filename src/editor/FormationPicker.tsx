@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import type { Formation, Side } from '@/model/types';
 import { repo } from '@/store/repo';
+import { FORMATION_FIT } from '@/geometry/bounds';
 import { PlayThumb } from '@/render/PlayThumb';
 
 export function FormationPicker({
@@ -52,7 +53,7 @@ export function FormationPicker({
                 {f.name}
               </div>
               <div className="aspect-[3/2]">
-                <PlayThumb diagram={{ players: f.players, paths: {}, annotations: {} }} aspect={1.5} fit={{ losBand: 2, maxBack: 8 }} />
+                <PlayThumb diagram={{ players: f.players, paths: {}, annotations: {} }} aspect={1.5} fit={FORMATION_FIT} />
               </div>
             </button>
           ))}
