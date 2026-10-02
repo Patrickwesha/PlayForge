@@ -8,23 +8,22 @@ import { PAGE_TYPE_LABEL, type Book, type BookBlock, type BookCell, type BookPag
 type Loading = 'eager' | 'lazy';
 
 /**
- * The whole book as one server-rendered document. Every word is HTML or SVG text, so the browser's own
- * find (Ctrl+F) reaches titles, notes, assignments and the labels drawn on the diagrams.
+ * The whole book as one server-rendered document, recreated: every word is HTML text, every diagram is a
+ * PlayForge drawing (inline SVG with real text), so the browser's own find (Ctrl+F) reaches titles, notes,
+ * assignments and the labels drawn on the diagrams, and all of it can be selected. Nothing is a scan.
  */
 export function BookReader({ book, base, range, print }: { book: Book; base: string; range?: [number, number]; print?: boolean }) {
-  const loading = print ? 'eager' : 'lazy';
+  const loading: Loading = print ? 'eager' : 'lazy';
   const inRange = (n: number) => !range || (n >= range[0] && n <= range[1]);
   const cellMap = new Map<string, BookCell>();
   for (const p of book.pages) for (const c of p.cells) cellMap.set(`${p.n}:${c.id}`, c);
-  const counts = { high: 0, medium: 0, low: 0, scan: 0 };
+  const counts = { high: 0, medium: 0, low: 0, scan: 0, guessed: 0 };
   for (const p of book.pages)
     for (const c of p.cells) {
       if (c.kind !== 'diagram') continue;
-      if (c.vector?.confidence === 'high') counts.high++;
-      else {
-        counts.scan++;
-        if (c.vector?.confidence === 'medium') counts.medium++;
-      }
+      if (!c.vector) counts.scan++;
+      else counts[c.vector.confidence]++;
+      if (c.guesses?.length) counts.guessed++;
     }
 
   return (
@@ -32,19 +31,23 @@ export function BookReader({ book, base, range, print }: { book: Book; base: str
       <header className="bk-doc-head">
         <h1>{book.title}</h1>
         <p>
-          {book.source}. All {book.pageCount} pages in their original order, with the original page number on each. Diagrams are
-          PlayForge drawings where the rebuild matches the scan with high confidence; every other diagram shows the cleaned scan.
+          {book.source}, recreated. All {book.pageCount} pages in their original order, with the original page number on each. Every diagram is a
+          PlayForge drawing rebuilt from the page; players the scan cut off or hid were placed by educated guess and are marked on the diagram.
         </p>
         <div className="bk-legend">
-          <span>{counts.high} diagrams shown as PlayForge drawings</span>
-          <span>{counts.scan} shown as the cleaned scan ({counts.medium} of them have a rebuild waiting for review)</span>
+          <span>{counts.high} diagrams match the page closely</span>
+          <span>{counts.medium + counts.low} rebuilt and flagged for a check</span>
+          <span>{counts.guessed} with guessed placements</span>
+          {counts.scan > 0 && <span>{counts.scan} could not be rebuilt</span>}
         </div>
       </header>
       <LibraryBar bookId={book.id} libraryUrl={`${base}/library.json`} />
       {inRange(1) && <PrintToc book={book} />}
-      {book.pages.filter((p) => inRange(p.n)).map((p) => (
-        <PageSection key={p.n} page={p} book={book} base={base} cellMap={cellMap} loading={loading} />
-      ))}
+      {book.pages
+        .filter((p) => inRange(p.n))
+        .map((p) => (
+          <PageSection key={p.n} page={p} book={book} base={base} cellMap={cellMap} loading={loading} />
+        ))}
     </ReaderChrome>
   );
 }
@@ -79,73 +82,6 @@ function PrintToc({ book }: { book: Book }) {
   );
 }
 
-function PageSection({ page, book, base, cellMap, loading }: { page: BookPage; book: Book; base: string; cellMap: Map<string, BookCell>; loading: Loading }) {
-  const section = book.sections[page.section];
-  const startsSection = section && section.start === page.n;
-  const inTable = new Set<string>();
-  for (const b of page.blocks)
-    if (b.kind === 'table') for (const r of b.rows) for (const v of r) if (/^@c\w+$/.test(v.trim())) inTable.add(v.trim().slice(1));
-  // covers and dividers are a photo and a few big words: show the whole cleaned page, not fragments of it
-  const wholePage = page.type === 'cover' || page.type === 'divider' || (page.cells.length > 0 && page.cells.every((c) => c.kind === 'photo' || c.kind === 'empty'));
-  const gridCells = wholePage ? [] : page.cells.filter((c) => !inTable.has(c.id) && c.kind === 'diagram');
-  const cols = columnCount(page.cells.filter((c) => !inTable.has(c.id) && c.kind === 'diagram'));
-  const rows = Math.max(1, Math.ceil(gridCells.length / cols));
-
-  return (
-    <>
-      <section className="bk-page" id={page.anchor} data-page={page.n} data-section={section?.id} aria-label={`Page ${page.n}`}>
-        {startsSection && (
-          <h2 className="bk-section-title" id={section.id}>
-            {section.title}
-          </h2>
-        )}
-        <div className="bk-page-head">
-          <a className="bk-page-no" href={`#${page.anchor}`}>
-            Page {page.n}
-          </a>
-          <span className="bk-chip">{PAGE_TYPE_LABEL[page.type] ?? page.type}</span>
-          {section && <span>{section.title}</span>}
-          {page.printedPage && <span>Book page {page.printedPage}</span>}
-          {page.unverified && <span className="bk-chip bk-chip-warn">Machine OCR, not yet checked</span>}
-          <a className="bk-scan no-print" href={`${base}/pages/p-${String(page.n).padStart(3, '0')}.webp`} target="_blank" rel="noreferrer">
-            Original scan
-          </a>
-        </div>
-        {page.title && (
-          <h3 className="bk-page-title" id={page.titleAnchor}>
-            {page.title}
-            {page.titleRestored && <span className="bk-chip" style={{ marginLeft: 8, fontSize: '0.65rem', fontWeight: 500 }} title="The scan cuts this title; restored from the page">restored</span>}
-          </h3>
-        )}
-        {page.blocks.map((b, i) => (
-          <Block key={i} block={b} page={page} base={base} cellMap={cellMap} loading={loading} />
-        ))}
-        {wholePage && page.type !== 'blank' && (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img className="bk-whole" src={`${base}/pages/p-${String(page.n).padStart(3, '0')}.webp`} alt={page.title || `Page ${page.n}`} loading={loading} />
-        )}
-        {gridCells.length > 0 && (
-          <div className="bk-grid" style={{ ['--cols' as string]: cols, ['--rows' as string]: rows, ['--print-h' as string]: `${printGridHeight(page).toFixed(2)}in` }}>
-            {gridCells.map((c) => (
-              <Cell key={c.id} cell={c} page={page} base={base} loading={loading} />
-            ))}
-          </div>
-        )}
-        {page.uncertain.length > 0 && !page.unverified && (
-          <details className="bk-uncertain no-print">
-            <summary>{page.uncertain.length} spot{page.uncertain.length > 1 ? 's' : ''} the scan leaves unclear</summary>
-            <ul>
-              {page.uncertain.map((u, i) => (
-                <li key={i}>{u}</li>
-              ))}
-            </ul>
-          </details>
-        )}
-      </section>
-    </>
-  );
-}
-
 /**
  * Height left for the diagram rows on a printed letter sheet once the page's text is set (inches).
  * Estimate: ~95 characters a line at 8.5pt over 7.5in, 0.16in a line, headings and table rows a little more.
@@ -174,6 +110,82 @@ function columnCount(cells: BookCell[]): number {
   return Math.min(Math.max(cols, 1), 4);
 }
 
+function PageSection({ page, book, base, cellMap, loading }: { page: BookPage; book: Book; base: string; cellMap: Map<string, BookCell>; loading: Loading }) {
+  const section = book.sections[page.section];
+  const startsSection = section && section.start === page.n;
+  const inTable = new Set<string>();
+  for (const b of page.blocks)
+    if (b.kind === 'table') for (const r of b.rows) for (const v of r) if (/^@c\w+$/.test(v.trim())) inTable.add(v.trim().slice(1));
+  const gridCells = page.cells.filter((c) => !inTable.has(c.id) && c.kind === 'diagram');
+  const cols = columnCount(gridCells);
+  const rows = Math.max(1, Math.ceil(gridCells.length / cols));
+  const titleCard = page.type === 'cover' || page.type === 'divider';
+
+  return (
+    <section className={`bk-page${titleCard ? ' bk-title-card' : ''}`} id={page.anchor} data-page={page.n} data-section={section?.id} aria-label={`Page ${page.n}`}>
+      {startsSection && (
+        <h2 className="bk-section-title" id={section.id}>
+          {section.title}
+        </h2>
+      )}
+      <div className="bk-page-head">
+        <a className="bk-page-no" href={`#${page.anchor}`}>
+          Page {page.n}
+        </a>
+        <span className="bk-chip">{PAGE_TYPE_LABEL[page.type] ?? page.type}</span>
+        {section && <span>{section.title}</span>}
+        {page.printedPage && <span>Book page {page.printedPage}</span>}
+        {page.unverified && <span className="bk-chip bk-chip-warn">Machine OCR, not yet checked</span>}
+        <a className="bk-scan no-print" href={`${base}/pages/p-${String(page.n).padStart(3, '0')}.webp`} target="_blank" rel="noreferrer">
+          Original scan
+        </a>
+      </div>
+      {titleCard ? (
+        <div className="bk-card">
+          <div className="bk-card-kicker">{page.type === 'cover' ? book.source : 'Section'}</div>
+          <h3 className="bk-page-title bk-card-title" id={page.titleAnchor}>
+            {page.title || (page.type === 'cover' ? book.title : 'Untitled')}
+          </h3>
+          {page.type === 'cover' && <div className="bk-card-sub">Rebuilt in PlayForge</div>}
+        </div>
+      ) : (
+        page.title && (
+          <h3 className="bk-page-title" id={page.titleAnchor}>
+            {page.title}
+            {page.titleRestored && (
+              <span className="bk-chip bk-chip-guess" title="The scan cuts this title; restored from the page">
+                restored
+              </span>
+            )}
+          </h3>
+        )
+      )}
+      {page.type === 'blank' && page.blocks.length === 0 && <p className="bk-muted">This page is blank in the book.</p>}
+      {page.blocks.map((b, i) => (
+        <Block key={i} block={b} page={page} cellMap={cellMap} />
+      ))}
+      {gridCells.length > 0 && (
+        <div className="bk-grid" style={{ ['--cols' as string]: cols, ['--rows' as string]: rows, ['--print-h' as string]: `${printGridHeight(page).toFixed(2)}in` }}>
+          {gridCells.map((c) => (
+            <Cell key={c.id} cell={c} page={page} />
+          ))}
+        </div>
+      )}
+      {page.uncertain.length > 0 && !page.unverified && (
+        <details className="bk-uncertain no-print">
+          <summary>{page.uncertain.length} spot{page.uncertain.length > 1 ? 's' : ''} the scan leaves unclear</summary>
+          <ul>
+            {page.uncertain.map((u, i) => (
+              <li key={i}>{u}</li>
+            ))}
+          </ul>
+        </details>
+      )}
+      {loading === 'eager' ? null : null}
+    </section>
+  );
+}
+
 function lines(text: string): ReactNode {
   const parts = text.split('\n');
   return parts.map((p, i) => (
@@ -184,7 +196,16 @@ function lines(text: string): ReactNode {
   ));
 }
 
-function Block({ block, page, base, cellMap, loading }: { block: BookBlock; page: BookPage; base: string; cellMap: Map<string, BookCell>; loading: Loading }) {
+function Restored({ children, on }: { children: ReactNode; on: boolean }) {
+  if (!on) return <>{children}</>;
+  return (
+    <span className="bk-restored" title="The scan cut this off; restored from the rest of the book">
+      {children}
+    </span>
+  );
+}
+
+function Block({ block, page, cellMap }: { block: BookBlock; page: BookPage; cellMap: Map<string, BookCell> }) {
   switch (block.kind) {
     case 'heading':
       return <h4 className="bk-block-head">{block.href ? <a href={block.href}>{block.text}</a> : block.text}</h4>;
@@ -199,7 +220,9 @@ function Block({ block, page, base, cellMap, loading }: { block: BookBlock; page
         <dl className="bk-kv">
           {block.rows.map(([k, v], i) => (
             <div key={i} style={{ display: 'contents' }}>
-              <dt>{k}</dt>
+              <dt>
+                <Restored on={!!block.restored?.includes(i)}>{k}</Restored>
+              </dt>
               <dd>{v}</dd>
             </div>
           ))}
@@ -228,12 +251,18 @@ function Block({ block, page, base, cellMap, loading }: { block: BookBlock; page
                       if (cell)
                         return (
                           <td key={j} className="bk-td-art">
-                            <Art cell={cell} page={page} base={base} loading={loading} />
+                            <Art cell={cell} page={page} />
                             <CellFoot cell={cell} />
                           </td>
                         );
                       const href = j === 0 ? block.hrefs?.[i] : null;
-                      return <td key={j}>{v === '@diagram' ? '(drawing)' : href ? <a href={href}>{v}</a> : v}</td>;
+                      const text = v === '@diagram' ? '(drawing)' : v;
+                      const body = href ? <a href={href}>{text}</a> : text;
+                      return (
+                        <td key={j}>
+                          <Restored on={j === 0 && !!block.restored?.includes(i)}>{body}</Restored>
+                        </td>
+                      );
                     })}
                   </tr>
                 ),
@@ -245,7 +274,7 @@ function Block({ block, page, base, cellMap, loading }: { block: BookBlock; page
   }
 }
 
-function Cell({ cell, page, base, loading }: { cell: BookCell; page: BookPage; base: string; loading: Loading }) {
+function Cell({ cell, page }: { cell: BookCell; page: BookPage }) {
   return (
     <figure className="bk-cell" id={cell.anchor} data-cell={cell.id}>
       {cell.lines.length > 0 && (
@@ -259,31 +288,15 @@ function Cell({ cell, page, base, loading }: { cell: BookCell; page: BookPage; b
           </h4>
         </figcaption>
       )}
-      <Art cell={cell} page={page} base={base} loading={loading} />
+      <Art cell={cell} page={page} />
       <CellFoot cell={cell} />
-      {cell.vector?.confidence === 'high' && (
-        <details className="bk-orig no-print">
-          <summary>Compare with the scan</summary>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={`${base}/${cell.crop}`} alt={`Scan of ${cell.lines.join(' / ') || 'the diagram'}`} loading="lazy" />
-        </details>
-      )}
-      {cell.vector?.confidence === 'medium' && (
-        <a className="bk-orig no-print" style={{ display: 'block', padding: '0.25rem 0.5rem', color: 'var(--bk-muted)' }} href={`/playbooks/${base.split('/').pop()}/review?c=medium&at=${cell.anchor}#${cell.anchor}`}>
-          PlayForge rebuild flagged for review: compare it with this scan
-        </a>
-      )}
     </figure>
   );
 }
 
-function Art({ cell, page, base, loading }: { cell: BookCell; page: BookPage; base: string; loading: Loading }) {
-  const [x0, y0, x1, y1] = cell.cropBox ?? cell.bbox;
-  const w = Math.max(x1 - x0, 1);
-  const h = Math.max(y1 - y0, 1);
+function Art({ cell, page }: { cell: BookCell; page: BookPage }) {
   const v = cell.vector;
-  // only a high-confidence rebuild stands in for the drawing; anything less shows the scan itself
-  if (v && v.confidence === 'high' && v.diagram && cell.kind === 'diagram') {
+  if (v && v.diagram) {
     const vw = v.view.maxX - v.view.minX;
     const vh = v.view.maxY - v.view.minY;
     return (
@@ -292,30 +305,22 @@ function Art({ cell, page, base, loading }: { cell: BookCell; page: BookPage; ba
       </div>
     );
   }
-  // the cleaned scan, with its words laid over it as invisible text so find-in-page lands on them
+  // nothing could be rebuilt for this cell: say so, and keep its words findable
   return (
-    <div className="bk-art" style={{ aspectRatio: `${w} / ${h}` }}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={`${base}/${cell.crop}`} alt={cell.lines.join(' / ') || `Diagram on page ${page.n}`} loading={loading} width={w} height={h} />
-      {cell.labels.length > 0 && (
-        <div className="bk-ocr-layer">
-          {cell.labels.map((l, i) =>
-            l.at ? (
-              <span key={i} style={{ left: `${((l.at[0] - x0) / w) * 100}%`, top: `${((l.at[1] - y0) / h) * 100}%` }}>
-                {l.text}
-              </span>
-            ) : null,
-          )}
-        </div>
-      )}
+    <div className="bk-art bk-art-empty">
+      <p>
+        Not rebuilt: the drawing on page {page.n} could not be traced.
+        {cell.labels.length > 0 && <> Printed on it: {cell.labels.map((l) => l.text).join(' · ')}</>}
+      </p>
     </div>
   );
 }
 
 function CellFoot({ cell }: { cell: BookCell }) {
   const v = cell.vector;
-  const conf = !v || v.confidence === 'low' ? 'scan' : v.confidence === 'medium' ? 'review' : 'high';
+  const conf = v ? v.confidence : 'none';
   const unplaced = cell.labels.filter((l) => !l.at);
+  const guessed = (cell.guesses ?? []).map((g) => g.split(':')[0].trim());
   return (
     <>
       <div className="bk-cell-foot">
@@ -326,8 +331,13 @@ function CellFoot({ cell }: { cell: BookCell }) {
           </span>
         ))}
         {cell.playId && <PlayLink id={cell.playId} />}
-        <span className={`bk-conf bk-conf-${conf === 'scan' ? 'low' : conf === 'review' ? 'medium' : 'high'}`} title={v?.issues.join('; ') || 'Shown as the cleaned scan'}>
-          {conf === 'scan' ? 'scan' : conf === 'review' ? 'scan · rebuild in review' : 'rebuilt'}
+        {guessed.length > 0 && (
+          <span className="bk-conf bk-conf-medium" title={(cell.guesses ?? []).join('\n')}>
+            guessed: {guessed.join(', ')}
+          </span>
+        )}
+        <span className={`bk-conf bk-conf-${conf === 'none' ? 'low' : conf}`} title={v?.issues.join('; ') || 'Not rebuilt'} style={guessed.length ? { marginLeft: 0 } : undefined}>
+          {conf === 'high' ? 'matches the page' : conf === 'none' ? 'not rebuilt' : 'check against the page'}
         </span>
       </div>
       {unplaced.length > 0 && <div className="bk-labels-note">{unplaced.map((l) => l.text).join(' · ')}</div>}

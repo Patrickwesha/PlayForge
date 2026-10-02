@@ -131,6 +131,14 @@
 .bk-table th { background: var(--bk-bg); font-weight: 800; }
 .bk-table td.bk-td-art { width: 34%; min-width: 9rem; padding: 0.25rem; }
 .bk-page a:not(.bk-page-no):not(.bk-scan):not(.bk-conf) { color: var(--bk-accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+.bk-title-card { text-align: center; padding: 3rem 1rem; }
+.bk-card-kicker { font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bk-muted); }
+.bk-card-title { font-size: clamp(1.8rem, 5vw, 3rem); margin: 0.5rem 0; letter-spacing: 0.02em; color: var(--bk-accent); }
+.bk-card-sub { color: var(--bk-muted); }
+.bk-muted { color: var(--bk-muted); }
+.bk-art-empty { padding: 0.75rem; font-size: 0.8rem; color: var(--bk-muted); background: var(--bk-bg); }
+.bk-restored { text-decoration: underline dotted var(--bk-gold); text-underline-offset: 3px; }
+.bk-chip-guess { margin-left: 8px; font-size: 0.65rem; font-weight: 500; border-color: var(--bk-gold); color: var(--bk-gold); }
 .bk-whole { display: block; max-width: min(100%, 26rem); height: auto; margin: 0.5rem auto; border: 1px solid var(--bk-line); border-radius: 0.3rem; background: #fff; }
 .bk-uncertain { font-size: 0.75rem; color: var(--bk-gold); margin-top: 0.6rem; }
 .bk-uncertain summary { cursor: pointer; }

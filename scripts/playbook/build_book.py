@@ -21,6 +21,67 @@ from collections import Counter, defaultdict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import cellgeom  # noqa: E402
+import complete  # noqa: E402
+import parse_calls  # noqa: E402
+
+_COMP_PATH = os.path.join("source", "book", "compositions.json")
+COMPOSITIONS = json.load(open(_COMP_PATH, encoding="utf8")) if os.path.exists(_COMP_PATH) else {"formations": {}, "routes": {}, "routeNames": []}
+
+
+CUT = "…"
+
+
+def comp_for(line):
+    key = re.sub(r"\s+", " ", parse_calls.clean(line).upper())
+    c = COMPOSITIONS["formations"].get(key)
+    return c if c and "players" in c else None
+
+
+def route_key_for(row_name):
+    """The route library record for a route-tree row: name, then the variant in brackets."""
+    txt = row_name.replace("\n", " ")
+    m = re.match(r"^\s*([^(]+?)\s*(?:\(([^)]*)\))?\s*$", txt)
+    if not m:
+        return None
+    name = re.sub(r"[^A-Z0-9]", "", m.group(1).upper())
+    variant = re.sub(r"[^A-Z0-9]", "", (m.group(2) or "").upper())
+    cands = [r for r in COMPOSITIONS["routeNames"] if re.sub(r"[^A-Z0-9]", "", r["name"].upper()) == name]
+    if not cands:
+        # the row name carries a note after the route ("BASIC Boundary = #'s +2 Field = Outside Edge"): try shorter prefixes
+        words = m.group(1).upper().split()
+        for k in range(len(words) - 1, 0, -1):
+            nm = re.sub(r"[^A-Z0-9]", "", "".join(words[:k]))
+            cands = [r for r in COMPOSITIONS["routeNames"] if re.sub(r"[^A-Z0-9]", "", r["name"].upper()) == nm]
+            if cands:
+                break
+    if not cands:
+        return None
+    if variant:
+        for r in cands:
+            if re.sub(r"[^A-Z0-9]", "", (r["variant"] or "").upper()) == variant:
+                return r["key"]
+    plain = [r for r in cands if not r["variant"]]
+    return (plain or cands)[0]["key"]
+
+
+def route_diagram(rkey, tcell):
+    """One receiver (or back) and his library route, with the page's depth labels beside it."""
+    rec = COMPOSITIONS["routes"].get(rkey) or {}
+    path = rec.get("wr") or rec.get("hb")
+    if not path:
+        return None
+    back = "wr" not in rec
+    rings = tcell.get("rings") or []
+    label = rings[0] if rings else ("H" if back else "")
+    d = {"players": {"p1": {"id": "p1", "side": "offense", "symbol": "circle", "label": label, "x": 0, "y": 0}},
+         "paths": {"r1": {**path, "id": "r1", "anchor": {"kind": "player", "playerId": "p1"}}}, "annotations": {}}
+    pts = path["points"]
+    ex, ey = pts[-1]["x"], pts[-1]["y"]
+    for i, l in enumerate(tcell.get("labels") or []):
+        aid = f"t{i + 1}"
+        d["annotations"][aid] = {"id": aid, "kind": "text", "x": round(ex + 2.2, 2), "y": round(ey - 0.9 * i, 2), "text": l["text"], "style": "plain", "size": "sm",
+                                 "color": l.get("color") if l.get("color") in ("black", "red", "green", "blue", "brown", "orange") else "black"}
+    return d
 
 ROOT = "source"
 OUT = os.path.join("public", "book", "gb-2019")
@@ -261,6 +322,25 @@ for n in range(1, 478):
     counts["pages"] += 1
     counts["unverified" if page["unverified"] else "verified"] += 1
     tcells = t.get("cells", [])
+    route_cells = {}
+    if t.get("type") == "route-tree":
+        for b in t.get("blocks", []):
+            if b.get("kind") == "table":
+                for r in b.get("rows", []):
+                    for vcell in r:
+                        m = re.fullmatch(r"@(\w+)", vcell.strip())
+                        if m and r and r[0].strip():
+                            if r[0].startswith(CUT):  # the scan cut the route's name: the library knows the rest of it
+                                first, _, rest = r[0].partition(chr(10))
+                                tail = re.sub(r"[^A-Z0-9]", "", first[1:].upper())
+                                full = [x["name"] for x in COMPOSITIONS["routeNames"] if re.sub(r"[^A-Z0-9]", "", x["name"].upper()).endswith(tail) and len(tail) >= 4]
+                                if full:
+                                    r[0] = full[0] + (chr(10) + rest if rest else "")
+                                    b.setdefault("restored", []).append(b["rows"].index(r))
+                                    counts["restored-route-names"] += 1
+                            rk = route_key_for(r[0])
+                            if rk:
+                                route_cells[m.group(1)] = rk
     order = [c["id"] for c in tcells] or list(cells_det)
     tc_map = {c["id"]: c for c in tcells}
     for cid in order:
@@ -280,14 +360,37 @@ for n in range(1, 478):
         cell["anchor"] = anchor(f"p{n}-" + slug(name or cid))
         v = vecs.get(cid)
         vector = None
-        if kind == "diagram" and v and "diagram" in v:
-            diag, conf, issues = reconcile(v, tc if tc else None, bbox)
-            if not tc:
-                issues.append("labels not yet checked against the page")
-                conf = "low" if conf != "high" else "medium"
-            vector = {"diagram": diag, "view": view_of(v), "confidence": conf, "recall": v["score"]["recall"],
-                      "precision": v["score"]["precision"], "issues": issues}
+        guesses = []
+        if kind == "diagram":
+            line1 = cell["lines"][0] if cell["lines"] else ""
+            comp = comp_for(line1) if line1 else None
+            gun = bool(re.search(r"\((G)\)|\bGUN\b", line1, re.I))
+            diag, conf, issues, base_view, recall, precision = None, "low", [], None, 0.0, 0.0
+            if v and "diagram" in v:
+                diag, conf, issues = reconcile(v, tc if tc else None, bbox)
+                base_view, recall, precision = view_of(v), v["score"]["recall"], v["score"]["precision"]
+            else:
+                issues = ["the drawing could not be traced"]
+                rk = route_cells.get(cid)
+                if page["type"] == "route-tree" and rk:
+                    diag = route_diagram(rk, tc)
+                    if diag:
+                        issues = ["drawn from the route library (the book's own route description), not traced"]
+                        conf = "medium"
+                if diag is None and comp:
+                    diag, guesses = complete.from_composition(comp, tc, gun)
+            if diag is not None:
+                diag, more = complete.Completion(diag, tc, page["type"], comp, cell["cutLeft"], cell["cutRight"], gun).run()
+                guesses += more
+                if guesses:
+                    issues = issues + [f"{len(guesses)} guessed placement(s)"]
+                vector = {"diagram": diag, "view": complete.view_for(diag, base_view), "confidence": conf, "recall": recall,
+                          "precision": precision, "issues": issues, "guesses": guesses}
+                counts["guesses"] += len(guesses)
+                if guesses:
+                    counts["cells-with-guesses"] += 1
         cell["vector"] = vector
+        cell["guesses"] = guesses
         if kind == "diagram":
             counts["diagrams"] += 1
             counts["conf-" + (vector["confidence"] if vector else "none")] += 1
@@ -304,16 +407,14 @@ for n in range(1, 478):
             pers = re.match(r"^\s*\[([0-9/]+)\]\s*", line1 or page["title"])
             personnel = pers.group(1) if pers else None
             form_label = re.sub(r"^\s*\[[0-9/]+\]\s*", "", line1).strip()
-            if vector and vector["confidence"] in ("high", "medium"):
-                diagram = vector["diagram"]
-                notes = None if vector["confidence"] == "high" else (
-                    f"Rebuilt from the scan with medium confidence: check it against page {n} in the Green Bay 2019 reader before relying on it.")
-            else:
-                # low: keep only what the scan check confirmed (players and defenders where they stand);
-                # the lines stay in the reader as the cleaned scan
-                base = (vector or {}).get("diagram") or {"players": {}, "paths": {}, "annotations": {}}
-                diagram = {"players": base["players"], "paths": {}, "annotations": base.get("annotations", {})}
-                notes = "Routes and blocks were not rebuilt: open the Green Bay 2019 reader for the original drawing."
+            diagram = (vector or {}).get("diagram") or {"players": {}, "paths": {}, "annotations": {}}
+            conf_word = vector["confidence"] if vector else "low"
+            notes = None
+            if conf_word != "high" or guesses:
+                parts = [f"Rebuilt from the scan with {conf_word} confidence"]
+                if guesses:
+                    parts.append(f"{len(guesses)} placement(s) by educated guess: " + "; ".join(g.split(":")[0] for g in guesses[:8]))
+                notes = "; ".join(parts) + f". Check it against page {n} in the Green Bay 2019 reader."
             play = {
                 "id": pid, "name": line2 or line1 or page["title"] or f"Page {n} {cid}",
                 "formationLabel": form_label or None, "personnel": personnel,
@@ -325,10 +426,8 @@ for n in range(1, 478):
                 "createdAt": STAMP, "updatedAt": STAMP,
             }
             if vector:
-                play["view"] = vector["view"]
-                play["rebuild"] = {"confidence": vector["confidence"] if diagram is vector["diagram"] else "low",
-                                   "recall": vector["recall"], "precision": vector["precision"],
-                                   "issues": vector["issues"][:12], "method": "traced"}
+                play["rebuild"] = {"confidence": vector["confidence"], "recall": vector["recall"], "precision": vector["precision"],
+                                   "issues": (vector["issues"] + guesses)[:20], "method": "traced"}
             if cell["footer"]:
                 play["defense"] = {"front": cell["footer"]}
             if notes:
@@ -336,7 +435,7 @@ for n in range(1, 478):
             play = {k: v for k, v in play.items() if v is not None}
             plays.append((si, play))
             # formation: one per distinct formation line (+ personnel); positions from its best drawing
-            if form_label and vector and vector["confidence"] in ("high", "medium"):
+            if form_label and vector and vector["confidence"] in ("high", "medium") and not guesses:
                 fkey = (form_label.upper(), personnel or "")
                 score = vector["recall"] + vector["precision"]
                 fid = "gb19-f-" + slug(form_label + ("-" + personnel if personnel else ""))
@@ -367,6 +466,54 @@ for (name, pers), (score, fid, players, n, cid) in form_best.items():
 for _, p in plays:
     if p.get("formationId") and p["formationId"] not in formations:
         del p["formationId"]
+
+# ------------------------------------------------------------------ text the scan cut off
+CUT = "\u2026"
+key_vocab = Counter()
+for p in pages:
+    for b in p["blocks"]:
+        if b.get("kind") == "kv":
+            for k, _v in b["rows"]:
+                if k and not k.startswith(CUT) and k != CUT:
+                    key_vocab[k] += 1
+# the label sequences of the concept pages, for rows whose label is wholly cut
+seq_vocab = Counter()
+for p in pages:
+    for b in p["blocks"]:
+        if b.get("kind") == "kv" and all(k and not k.startswith(CUT) and k != CUT for k, _v in b["rows"]):
+            seq_vocab[tuple(k for k, _v in b["rows"])] += 1
+for p in pages:
+    for b in p["blocks"]:
+        if b.get("kind") != "kv":
+            continue
+        restored = []
+        keys = [k for k, _v in b["rows"]]
+        for i, (k, _v) in enumerate(b["rows"]):
+            if k and k.startswith(CUT) and len(k) > 1:
+                tail = k[1:]
+                cands = [(cnt, full) for full, cnt in key_vocab.items() if full.endswith(tail) and len(full) > len(tail)]
+                if cands:
+                    cands.sort(reverse=True)
+                    keys[i] = cands[0][1]
+                    restored.append(i)
+        if any(k == CUT or not k for k in keys):
+            # a sequence of the same length whose known labels agree
+            best = None
+            for seq, cnt in seq_vocab.most_common():
+                if len(seq) != len(keys):
+                    continue
+                if all(k in (CUT, "") or k == sk for k, sk in zip(keys, seq)):
+                    best = seq
+                    break
+            if best:
+                for i, k in enumerate(keys):
+                    if k in (CUT, ""):
+                        keys[i] = best[i]
+                        restored.append(i)
+        if restored:
+            b["rows"] = [[keys[i], v] for i, (_k, v) in enumerate(b["rows"])]
+            b["restored"] = sorted(set(restored))
+            counts["restored-labels"] += len(set(restored))
 
 # ------------------------------------------------------------------ the book's own indexes become links
 def key(s):
@@ -404,6 +551,16 @@ for p in pages:
     for b in p["blocks"]:
         if b.get("kind") == "table":
             b["hrefs"] = [find_target(r[0] if r else "", lo, hi) for r in b.get("rows", [])]
+            restored = []
+            for i, (r, h) in enumerate(zip(b["rows"], b["hrefs"])):
+                if r and r[0].startswith(CUT) and h and h.startswith("#"):
+                    tgt = next((q for q in pages if "#" + q["anchor"] == h or "#" + q["titleAnchor"] == h), None)
+                    if tgt and tgt["title"] and key(r[0][1:]) and key(r[0][1:]) in key(tgt["title"]):
+                        r[0] = tgt["title"]
+                        restored.append(i)
+            if restored:
+                b["restored"] = restored
+                counts["restored-index-rows"] += len(restored)
         elif b.get("kind") == "heading":
             m = re.match(r"^PAGE\s+(\d+)", b["text"].strip(), re.I)
             if m:
@@ -463,7 +620,6 @@ for p in pages:
         if v and v["confidence"] != "high":
             review_cells.append({"page": p["n"], "cell": c["id"], "lines": c["lines"], "anchor": c["anchor"], "crop": c["crop"],
                                  "cropBox": c["cropBox"], "vector": v})
-            c["vector"] = {k: v[k] for k in ("confidence", "recall", "precision", "issues")} | {"diagram": None, "view": v["view"]}
 book = {"id": BOOK_ID, "title": "Green Bay 2019", "source": SOURCE_NAME, "pageCount": 477,
         "built": STAMP, "sections": sections, "pages": pages}
 with open(os.path.join(OUT, "book.json"), "w", encoding="utf8") as f:

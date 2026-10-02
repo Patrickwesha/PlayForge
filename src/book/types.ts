@@ -4,24 +4,28 @@ import type { Diagram, ViewWindow } from '@/model/types';
  * A scanned playbook rebuilt as a readable document (built by scripts/playbook/build_book.py).
  * Coordinates in `bbox` / `at` are pixels of the 300 DPI page renders (1650 x 2550).
  */
-/** `href` / `hrefs`: links the builder found from the book's own index pages to the pages they list. */
+/**
+ * `href` / `hrefs`: links the builder found from the book's own index pages to the pages they list.
+ * `restored`: row indexes whose cut-off label / first cell was restored from the rest of the book.
+ */
 export type BookBlock =
   | { kind: 'heading'; text: string; href?: string }
   | { kind: 'para'; text: string }
   | { kind: 'list'; ordered?: boolean; items: string[]; hrefs?: (string | null)[] }
-  | { kind: 'kv'; rows: [string, string][] }
-  | { kind: 'table'; header?: string[]; rows: string[][]; hrefs?: (string | null)[] };
+  | { kind: 'kv'; rows: [string, string][]; restored?: number[] }
+  | { kind: 'table'; header?: string[]; rows: string[][]; hrefs?: (string | null)[]; restored?: number[] };
 
 export type BookLabel = { text: string; color?: string; at?: [number, number] };
 
 export type BookVector = {
-  /** Only high-confidence rebuilds carry their drawing in book.json; the rest live in review.json. */
-  diagram: Diagram | null;
+  diagram: Diagram;
   view: ViewWindow;
   confidence: 'high' | 'medium' | 'low';
   recall: number;
   precision: number;
   issues: string[];
+  /** Players placed by educated guess (cut off or hidden in the scan), one line each. */
+  guesses?: string[];
 };
 
 export type BookCell = {
@@ -42,6 +46,7 @@ export type BookCell = {
   cutRight: boolean;
   anchor: string;
   vector: BookVector | null;
+  guesses?: string[];
   playId?: string;
 };
 

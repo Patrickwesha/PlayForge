@@ -614,8 +614,14 @@ def vectorize_cell(page, cell, bgr_page, ocr_rows, transcription=None, debug=Fal
     tlabels = [l for l in (transcription or {}).get("labels", []) if l.get("at")]
 
     players, r0 = find_players(bgr, masks, [t["box"] for t in texts])
-    if r0 is None or len(players) < 2:
+    if r0 is None:
         return None  # not a diagram this method can read (text table, photo, empty cell)
+    if len(players) < 2:
+        # a blocking-term drawing has two or three linemen, some half-shaded (no closed hole): look harder
+        players += ring_fallback(bgr, masks, players, r0)
+        players += find_squares(masks, players, r0)
+        if not players:
+            return None
     for q in ring_fallback(bgr, masks, players, r0):
         if any(t["box"][0] <= q["cx"] <= t["box"][2] and t["box"][1] <= q["cy"] <= t["box"][3]
                and re.search(r"[A-NP-Z1-9+]", t["text"].upper()) for t in texts):
