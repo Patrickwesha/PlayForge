@@ -12,7 +12,7 @@ type Loading = 'eager' | 'lazy';
  * PlayForge drawing (inline SVG with real text), so the browser's own find (Ctrl+F) reaches titles, notes,
  * assignments and the labels drawn on the diagrams, and all of it can be selected. Nothing is a scan.
  */
-export function BookReader({ book, base, range, print }: { book: Book; base: string; range?: [number, number]; print?: boolean }) {
+export function BookReader({ book, base, range, print, hasScans = true, canSaveEdits = true }: { book: Book; base: string; range?: [number, number]; print?: boolean; hasScans?: boolean; canSaveEdits?: boolean }) {
   const loading: Loading = print ? 'eager' : 'lazy';
   const inRange = (n: number) => !range || (n >= range[0] && n <= range[1]);
   const cellMap = new Map<string, BookCell>();
@@ -27,7 +27,7 @@ export function BookReader({ book, base, range, print }: { book: Book; base: str
     }
 
   return (
-    <ReaderChrome book={{ id: book.id, title: book.title, sections: book.sections, pageCount: book.pageCount }} counts={counts}>
+    <ReaderChrome book={{ id: book.id, title: book.title, sections: book.sections, pageCount: book.pageCount }} counts={counts} hasScans={hasScans}>
       <header className="bk-doc-head">
         <h1>{book.title}</h1>
         <p>
@@ -41,12 +41,12 @@ export function BookReader({ book, base, range, print }: { book: Book; base: str
           {counts.scan > 0 && <span>{counts.scan} could not be rebuilt</span>}
         </div>
       </header>
-      <LibraryBar bookId={book.id} libraryUrl={`${base}/library.json`} built={book.built} />
+      <LibraryBar bookId={book.id} libraryUrl={`/api/book/${book.id}/library`} built={book.built} canSaveEdits={canSaveEdits} />
       {inRange(1) && <PrintToc book={book} />}
       {book.pages
         .filter((p) => inRange(p.n))
         .map((p) => (
-          <PageSection key={p.n} page={p} book={book} base={base} cellMap={cellMap} loading={loading} />
+          <PageSection key={p.n} page={p} book={book} base={base} cellMap={cellMap} loading={loading} hasScans={hasScans} />
         ))}
     </ReaderChrome>
   );
@@ -110,7 +110,7 @@ function columnCount(cells: BookCell[]): number {
   return Math.min(Math.max(cols, 1), 4);
 }
 
-function PageSection({ page, book, base, cellMap, loading }: { page: BookPage; book: Book; base: string; cellMap: Map<string, BookCell>; loading: Loading }) {
+function PageSection({ page, book, base, cellMap, loading, hasScans }: { page: BookPage; book: Book; base: string; cellMap: Map<string, BookCell>; loading: Loading; hasScans: boolean }) {
   const section = book.sections[page.section];
   const startsSection = section && section.start === page.n;
   const inTable = new Set<string>();
@@ -136,9 +136,11 @@ function PageSection({ page, book, base, cellMap, loading }: { page: BookPage; b
         {section && <span>{section.title}</span>}
         {page.printedPage && <span>Book page {page.printedPage}</span>}
         {page.unverified && <span className="bk-chip bk-chip-warn">Machine OCR, not yet checked</span>}
-        <a className="bk-scan no-print" href={`${base}/pages/p-${String(page.n).padStart(3, '0')}.webp`} target="_blank" rel="noreferrer">
-          Original scan
-        </a>
+        {hasScans && (
+          <a className="bk-scan no-print" href={`${base}/pages/p-${String(page.n).padStart(3, '0')}.webp`} target="_blank" rel="noreferrer">
+            Original scan
+          </a>
+        )}
       </div>
       {titleCard ? (
         <div className="bk-card">

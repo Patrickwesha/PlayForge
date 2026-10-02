@@ -37,8 +37,10 @@ export function ReaderChrome({
   book,
   counts,
   children,
+  hasScans = true,
 }: {
   book: { id: string; title: string; sections: BookSection[]; pageCount: number };
+  hasScans?: boolean;
   counts: { high: number; medium: number; low: number; scan: number };
   children: ReactNode;
 }) {
@@ -165,9 +167,11 @@ export function ReaderChrome({
             ))}
           </nav>
           <div style={{ padding: '0.75rem 0.5rem', fontSize: '0.75rem' }}>
-            <a className="bk-btn" href={`/playbooks/${book.id}/review`}>
-              Review list
-            </a>
+            {hasScans && (
+              <a className="bk-btn" href={`/playbooks/${book.id}/review`}>
+                Review list
+              </a>
+            )}
           </div>
         </aside>
         <main className="bk-main" ref={mainRef}>

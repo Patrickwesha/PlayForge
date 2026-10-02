@@ -38,7 +38,7 @@ const editedAfter = (p: Play | undefined, built: string) => !!p && p.updatedAt >
  * Banner: add the book's formations, plays and the "Green Bay 2019" playbook to the library, update them from a
  * newer build (keeping every play you edited), and save your edits back into the book for the next build / PDF.
  */
-export function LibraryBar({ bookId, libraryUrl, built }: { bookId: string; libraryUrl: string; built: string }) {
+export function LibraryBar({ bookId, libraryUrl, built, canSaveEdits = true }: { bookId: string; libraryUrl: string; built: string; canSaveEdits?: boolean }) {
   const { loaded, hasPlaybook, plays, refresh } = useLib();
   const [busy, setBusy] = useState<string | null>(null);
   const [msg, setMsg] = useState<string | null>(null);
@@ -102,7 +102,7 @@ export function LibraryBar({ bookId, libraryUrl, built }: { bookId: string; libr
           <button type="button" className="bk-btn" onClick={add} disabled={!!busy} title="Re-import from this build; plays you edited are kept">
             {busy === 'add' ? 'Updating…' : 'Update from this build'}
           </button>
-          {edited.length > 0 && (
+          {edited.length > 0 && canSaveEdits && (
             <button type="button" className="bk-btn" onClick={saveEdits} disabled={!!busy} title="Write your edited plays into source/book/edits so the next book build and PDF use them">
               {busy === 'save' ? 'Saving…' : `Save ${edited.length} edit${edited.length > 1 ? 's' : ''} into the book`}
             </button>
