@@ -34,7 +34,7 @@ export const pathSchema = z.object({
   line: z.enum(['solid', 'dashed', 'dotted', 'squiggle']),
   role: z.enum(['route', 'block', 'motion', 'ball', 'blitz', 'zone', 'free']),
   primary: z.boolean().optional(),
-  color: z.enum(['black', 'red', 'blue', 'green', 'orange', 'gray', 'purple', 'yellow']).optional(),
+  color: z.enum(['black', 'red', 'blue', 'green', 'orange', 'gray', 'purple', 'yellow', 'brown']).optional(),
   width: z.enum(['thin', 'normal', 'thick']).optional(),
   inserts: z.array(z.object({ kind: z.enum(['bars', 'chip', 'zigzag', 'x']), t: z.number().min(0).max(1) })).optional(),
 });
@@ -49,6 +49,8 @@ export const annotationSchema = z.discriminatedUnion('kind', [
     style: z.enum(['redCaps', 'plain', 'split', 'bold']),
     size: z.enum(['sm', 'md', 'lg']).optional(),
     rotate: z.union([z.literal(0), z.literal(90), z.literal(-90)]).optional(),
+    color: z.enum(['black', 'red', 'green', 'blue', 'brown', 'orange']).optional(),
+    fontSize: z.number().positive().optional(),
   }),
   z.object({
     id: z.string(),
@@ -127,6 +129,16 @@ export const playSchema = z.object({
   appliedTags: z.array(z.string()).optional(),
   confidence: z.enum(['derived', 'needs-review']).optional(),
   reviewNotes: z.array(z.string()).optional(),
+  sourceCell: z.string().optional(),
+  rebuild: z
+    .object({
+      confidence: z.enum(['high', 'medium', 'low']),
+      recall: z.number(),
+      precision: z.number(),
+      issues: z.array(z.string()),
+      method: z.enum(['traced', 'reviewed']),
+    })
+    .optional(),
   createdAt: z.string(),
   updatedAt: z.string(),
 });

@@ -48,3 +48,7 @@ next-env.d.ts
 /data/packers-2019/local/
 
 __pycache__/
+
+# the playbook PDF, its page renders, OCR and the reader book (copyrighted source material, stays on this machine)
+/source/
+/public/book/

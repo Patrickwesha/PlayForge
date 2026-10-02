@@ -34,6 +34,7 @@ export function pathColorHex(c: PathColor | undefined): string {
     case 'gray': return COLORS.gray;
     case 'purple': return COLORS.purple;
     case 'yellow': return COLORS.yellow;
+    case 'brown': return COLORS.brown;
     default: return COLORS.ink;
   }
 }

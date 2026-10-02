@@ -55,6 +55,32 @@ npm run render:plays                                          # SVG + PNG + an i
 - Rerunnable: plays are keyed on formation line + call line, so a rerun updates in place and never duplicates. A play you edited in the app is never overwritten.
 - Every play carries `install`, `sourcePage`, `rawCall`, `personnel`, `protection`, `concept`, `routeTags`, `confidence`, and `reviewNotes` as real fields. `data/packers-2019/import-report.json` lists what was flagged UNPARSED or needs-review and why.
 
+## The Green Bay 2019 book (reader, review, PDF)
+
+The whole scanned playbook rebuilt as a readable, searchable document: `/playbooks/gb-2019/read`. Every one of the 477 pages, in the original order, each with its original page number and a `#page-N` anchor; a sticky contents sidebar (the book's own sections, page titles, and play names); all words as HTML or SVG text, so Ctrl+F finds them. The book's index pages link to the pages they list. Diagrams are PlayForge drawings where the rebuild matches the scan, and the cleaned scan otherwise. `/playbooks/gb-2019/review` puts every medium / low rebuild next to its scan. "Add to my library" on the reader imports every diagram as a play and the book as the **Green Bay 2019** playbook.
+
+Everything built from the scan is copyrighted source material and stays on the computer that built it (`source/` and `public/book/` are gitignored). The deployed app shows a note instead of the book.
+
+```bash
+python scripts/playbook/render300.py              # source/pages: every page at 300 DPI (the ink layers' native resolution)
+python scripts/playbook/ocr_rapid.py              # source/ocr: RapidOCR lines (pip install rapidocr_onnxruntime)
+python scripts/playbook/detect_cells.py           # source/cells: the ruled diagram cells
+python scripts/playbook/agent_inputs.py           # source/book/input: compact per-page briefs for the transcription pass
+#   transcription: Claude agents follow source/book/INSTRUCTIONS.md and write source/book/pages/p-NNN.json,
+#   every page checked against its image (titles, text, index tables, per-diagram titles, labels, ring letters, defenders)
+bash scripts/playbook/run_vectorize.sh            # source/vector: traced diagrams + scores (one process: this PC runs short of memory)
+python scripts/playbook/clean_crops.py            # public/book/gb-2019/crops + pages: cleaned, sharpened scans
+python scripts/playbook/build_book.py             # public/book/gb-2019/book.json + library.json, source/book/review.json
+PLAYFORGE_LOW_MEMORY_BUILD=1 npx next build && npm run start   # then open /playbooks/gb-2019/read (low-memory flag: see next.config.ts)
+node scripts/playbook/export_pdf.mjs              # prints the reader in chunks with Edge, then finish_pdf.py merges them:
+                                                  # source/book/Green-Bay-2019-Playbook.pdf, contents links + bookmarks (needs the app running)
+python scripts/playbook/preview.py <page> [cell]  # side-by-side scan vs rebuild PNGs, for checking the tracer
+```
+
+- Tracing (`vectorize.py`): players are closed rings / squares / the filled HB disc; ring letters are read with the OCR recogniser on the ring's inside, then the template classifier (`glyphs.py`); defenders are coloured (or, on the front pages, black) letter words matched against the page's transcribed defender list; lines are the remaining ink, thinned and traced, with dashes chained, arrowheads / dots / block T's at the ends, and lines through a player joined. Frame: OL centres are 1 yd apart, x = 0 at the centre square.
+- Transcription is the source of truth for words: ring letters, defenders and labels on a rebuilt diagram are checked against it, an unread ring takes the page's missing letter when only one fits, and a look-alike misread (Z for S, X for K) is corrected from the page.
+- Confidence: the rebuild is drawn back over the scan. recall = drawn ink the rebuild covers, precision = rebuild strokes that land on ink. high = recall >= 95%, precision >= 96%, every ring letter read, nothing big missed; medium = 88% / 92%. The transcription then has the last word: ring letters and defenders that disagree with the page lower it. Only high shows as a PlayForge drawing in the reader; medium and low show the cleaned scan, and their rebuilds are on the review list (`public/book/gb-2019/review.json`). In the library, high and medium plays carry the rebuilt drawing (medium with a note to check it), low ones keep only the players.
+
 ## Sync across devices (optional)
 
 Without setup the app is fully local, exactly as before. With a free Supabase project it keeps plays, formations, and playbooks the same on every device you sign in on. The newest edit wins per play, deletes carry over, and it keeps working offline and catches up later. Untouched built-ins never upload. Settings (look, hashes, paper) stay per device.

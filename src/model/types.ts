@@ -71,7 +71,7 @@ export type PathInsertKind = 'bars' | 'chip' | 'zigzag' | 'x';
 export type PathInsert = { kind: PathInsertKind; t: number };
 export type LineStyle = 'solid' | 'dashed' | 'dotted' | 'squiggle';
 export type PathRole = 'route' | 'block' | 'motion' | 'ball' | 'blitz' | 'zone' | 'free';
-export type PathColor = 'black' | 'red' | 'blue' | 'green' | 'orange' | 'gray' | 'purple' | 'yellow';
+export type PathColor = 'black' | 'red' | 'blue' | 'green' | 'orange' | 'gray' | 'purple' | 'yellow' | 'brown';
 export type PathWidth = 'thin' | 'normal' | 'thick';
 
 export type PathAnchor = { kind: 'player'; playerId: string } | { kind: 'free' };
@@ -105,6 +105,10 @@ export type TextAnnotation = {
   style: TextStyle;
   size?: TextSize;
   rotate?: 0 | 90 | -90;
+  /** Text colour; defaults to black (red for 'redCaps'). */
+  color?: LabelColor;
+  /** Font size in yards, overriding `size` (labels rebuilt from a scanned diagram keep their printed size). */
+  fontSize?: number;
 };
 
 export type MarkAnnotation = {
@@ -242,6 +246,18 @@ export type RouteDef = {
   note?: string | null;
 };
 
+/**
+ * Confidence of a diagram rebuilt from a scan. recall = share of the drawn ink the vector covers,
+ * precision = share of the vector that lies on drawn ink. 'traced' = measured only, 'reviewed' = checked by eye.
+ */
+export type PlayRebuild = {
+  confidence: 'high' | 'medium' | 'low';
+  recall: number;
+  precision: number;
+  issues: string[];
+  method: 'traced' | 'reviewed';
+};
+
 export type PlayDefense = { formationId?: string; front?: string; coverage?: string };
 
 export type Play = {
@@ -283,6 +299,10 @@ export type Play = {
   confidence?: PlayConfidence;
   /** Why an imported play is needs-review (one reason per line). */
   reviewNotes?: string[];
+  /** The diagram cell on `sourcePage` this play was rebuilt from (e.g. "c3"). */
+  sourceCell?: string;
+  /** A diagram rebuilt from a scanned page: how closely the vector matches the drawing. */
+  rebuild?: PlayRebuild;
   createdAt: string;
   updatedAt: string;
 };

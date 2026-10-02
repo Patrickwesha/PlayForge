@@ -2,9 +2,10 @@ import { ANNOTATION_SIZE, COLORS, SPLIT_SIZE, STROKE } from '@/model/constants';
 import type { Annotation, MarkAnnotation, TextAnnotation, ViewWindow } from '@/model/types';
 import { toSvg, yd } from '@/geometry/transform';
 import { fontFamily } from './svgText';
+import { labelColorHex } from './theme';
 
 function TextGlyph({ a }: { a: TextAnnotation }) {
-  const size = a.style === 'split' ? SPLIT_SIZE : ANNOTATION_SIZE[a.size ?? 'md'];
+  const size = a.fontSize ?? (a.style === 'split' ? SPLIT_SIZE : ANNOTATION_SIZE[a.size ?? 'md']);
   const isRed = a.style === 'redCaps';
   const bold = a.style === 'redCaps' || a.style === 'bold';
   const text = isRed ? a.text.toUpperCase() : a.text;
@@ -15,7 +16,7 @@ function TextGlyph({ a }: { a: TextAnnotation }) {
       fontFamily={fontFamily}
       fontWeight={bold ? 700 : 400}
       fontSize={yd(size)}
-      fill={isRed ? COLORS.red : COLORS.ink}
+      fill={a.color ? labelColorHex(a.color) : isRed ? COLORS.red : COLORS.ink}
       transform={a.rotate ? `rotate(${a.rotate})` : undefined}
     >
       {lines.map((l, i) => (
