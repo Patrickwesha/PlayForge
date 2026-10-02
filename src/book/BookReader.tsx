@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import { PlaySvg } from '@/render/PlaySvg';
 import { BOOK_RENDER_THEME } from '@/render/theme';
 import { ReaderChrome } from './ReaderChrome';
-import { LibraryBar, PlayLink } from './LibraryLinks';
+import { LibraryBar, LiveArt, PlayLink } from './LibraryLinks';
 import { PAGE_TYPE_LABEL, type Book, type BookBlock, type BookCell, type BookPage } from './types';
 
 type Loading = 'eager' | 'lazy';
@@ -41,7 +41,7 @@ export function BookReader({ book, base, range, print }: { book: Book; base: str
           {counts.scan > 0 && <span>{counts.scan} could not be rebuilt</span>}
         </div>
       </header>
-      <LibraryBar bookId={book.id} libraryUrl={`${base}/library.json`} />
+      <LibraryBar bookId={book.id} libraryUrl={`${base}/library.json`} built={book.built} />
       {inRange(1) && <PrintToc book={book} />}
       {book.pages
         .filter((p) => inRange(p.n))
@@ -162,12 +162,12 @@ function PageSection({ page, book, base, cellMap, loading }: { page: BookPage; b
       )}
       {page.type === 'blank' && page.blocks.length === 0 && <p className="bk-muted">This page is blank in the book.</p>}
       {page.blocks.map((b, i) => (
-        <Block key={i} block={b} page={page} cellMap={cellMap} />
+        <Block key={i} block={b} page={page} cellMap={cellMap} book={book} />
       ))}
       {gridCells.length > 0 && (
         <div className="bk-grid" style={{ ['--cols' as string]: cols, ['--rows' as string]: rows, ['--print-h' as string]: `${printGridHeight(page).toFixed(2)}in` }}>
           {gridCells.map((c) => (
-            <Cell key={c.id} cell={c} page={page} />
+            <Cell key={c.id} cell={c} page={page} built={book.built} />
           ))}
         </div>
       )}
@@ -205,7 +205,7 @@ function Restored({ children, on }: { children: ReactNode; on: boolean }) {
   );
 }
 
-function Block({ block, page, cellMap }: { block: BookBlock; page: BookPage; cellMap: Map<string, BookCell> }) {
+function Block({ block, page, cellMap, book }: { block: BookBlock; page: BookPage; cellMap: Map<string, BookCell>; book: Book }) {
   switch (block.kind) {
     case 'heading':
       return <h4 className="bk-block-head">{block.href ? <a href={block.href}>{block.text}</a> : block.text}</h4>;
@@ -251,7 +251,7 @@ function Block({ block, page, cellMap }: { block: BookBlock; page: BookPage; cel
                       if (cell)
                         return (
                           <td key={j} className="bk-td-art">
-                            <Art cell={cell} page={page} />
+                            <Art cell={cell} page={page} built={book.built} />
                             <CellFoot cell={cell} />
                           </td>
                         );
@@ -274,7 +274,7 @@ function Block({ block, page, cellMap }: { block: BookBlock; page: BookPage; cel
   }
 }
 
-function Cell({ cell, page }: { cell: BookCell; page: BookPage }) {
+function Cell({ cell, page, built }: { cell: BookCell; page: BookPage; built: string }) {
   return (
     <figure className="bk-cell" id={cell.anchor} data-cell={cell.id}>
       {cell.lines.length > 0 && (
@@ -288,22 +288,24 @@ function Cell({ cell, page }: { cell: BookCell; page: BookPage }) {
           </h4>
         </figcaption>
       )}
-      <Art cell={cell} page={page} />
+      <Art cell={cell} page={page} built={built} />
       <CellFoot cell={cell} />
     </figure>
   );
 }
 
-function Art({ cell, page }: { cell: BookCell; page: BookPage }) {
+function Art({ cell, page, built }: { cell: BookCell; page: BookPage; built: string }) {
   const v = cell.vector;
   if (v && v.diagram) {
     const vw = v.view.maxX - v.view.minX;
     const vh = v.view.maxY - v.view.minY;
-    return (
+    const art = (
       <div className="bk-art" style={{ aspectRatio: `${vw} / ${vh}` }}>
         <PlaySvg diagram={v.diagram} view={v.view} theme={BOOK_RENDER_THEME} style={{ height: 'auto' }} />
       </div>
     );
+    // your edited version from the PlayForge library replaces the built one once the library has loaded
+    return cell.playId ? <LiveArt playId={cell.playId} built={built}>{art}</LiveArt> : art;
   }
   // nothing could be rebuilt for this cell: say so, and keep its words findable
   return (

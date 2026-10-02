@@ -29,6 +29,9 @@ COMPOSITIONS = json.load(open(_COMP_PATH, encoding="utf8")) if os.path.exists(_C
 
 
 CUT = "…"
+# plays edited in PlayForge and saved back into the book (the reader's "Save edits into the book" button)
+_EDITS_PATH = os.path.join("source", "book", "edits", "gb-2019.json")
+EDITS = {p["id"]: p for p in (json.load(open(_EDITS_PATH, encoding="utf8"))["plays"] if os.path.exists(_EDITS_PATH) else [])}
 
 
 def comp_for(line):
@@ -433,6 +436,15 @@ for n in range(1, 478):
             if notes:
                 play["notes"] = notes
             play = {k: v for k, v in play.items() if v is not None}
+            if pid in EDITS:
+                # your edit wins over everything the pipeline did with this cell
+                play = EDITS[pid]
+                vector = {"diagram": play["diagram"], "view": complete.view_for(play["diagram"]), "confidence": "high", "recall": 1.0,
+                          "precision": 1.0, "issues": ["edited by you in PlayForge"], "guesses": []}
+                cell["vector"] = vector
+                cell["guesses"] = []
+                cell["edited"] = True
+                counts["edited"] += 1
             plays.append((si, play))
             # formation: one per distinct formation line (+ personnel); positions from its best drawing
             if form_label and vector and vector["confidence"] in ("high", "medium") and not guesses:

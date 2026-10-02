@@ -139,6 +139,10 @@
 .bk-art-empty { padding: 0.75rem; font-size: 0.8rem; color: var(--bk-muted); background: var(--bk-bg); }
 .bk-restored { text-decoration: underline dotted var(--bk-gold); text-underline-offset: 3px; }
 .bk-chip-guess { margin-left: 8px; font-size: 0.65rem; font-weight: 500; border-color: var(--bk-gold); color: var(--bk-gold); }
+.bk-art-live { position: relative; }
+.bk-live-tag { position: absolute; right: 0.4rem; top: 0.3rem; font-size: 0.65rem; font-weight: 800; color: #fff; background: var(--bk-accent); border-radius: 999px; padding: 0.05rem 0.5rem; }
+.bk-edit { border: 1px solid var(--bk-line); border-radius: 999px; padding: 0.02rem 0.5rem; text-decoration: none; }
+.bk-edit:hover { border-color: var(--bk-accent); color: var(--bk-accent); }
 .bk-whole { display: block; max-width: min(100%, 26rem); height: auto; margin: 0.5rem auto; border: 1px solid var(--bk-line); border-radius: 0.3rem; background: #fff; }
 .bk-uncertain { font-size: 0.75rem; color: var(--bk-gold); margin-top: 0.6rem; }
 .bk-uncertain summary { cursor: pointer; }
