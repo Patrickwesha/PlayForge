@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { connection } from 'next/server';
 import { loadReview } from '@/book/loadBook';
 import { PlaySvg } from '@/render/PlaySvg';
-import { DEFAULT_RENDER_THEME } from '@/render/theme';
+import { BOOK_RENDER_THEME } from '@/render/theme';
 import '@/book/reader.css';
 
 export const metadata = { title: 'Rebuild review - PlayForge' };
@@ -100,7 +100,7 @@ export default async function ReviewPage(props: { params: Promise<{ id: string }
                 <figure className="bk-cell">
                   <figcaption className="bk-cell-head">Rebuild</figcaption>
                   <div className="bk-art" style={{ aspectRatio: `${v.view.maxX - v.view.minX} / ${v.view.maxY - v.view.minY}` }}>
-                    <PlaySvg diagram={v.diagram} view={v.view} theme={DEFAULT_RENDER_THEME} style={{ height: 'auto' }} />
+                    <PlaySvg diagram={v.diagram} view={v.view} theme={BOOK_RENDER_THEME} style={{ height: 'auto' }} />
                   </div>
                 </figure>
               </div>

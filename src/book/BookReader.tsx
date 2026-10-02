@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { PlaySvg } from '@/render/PlaySvg';
-import { DEFAULT_RENDER_THEME } from '@/render/theme';
+import { BOOK_RENDER_THEME } from '@/render/theme';
 import { ReaderChrome } from './ReaderChrome';
 import { LibraryBar, PlayLink } from './LibraryLinks';
 import { PAGE_TYPE_LABEL, type Book, type BookBlock, type BookCell, type BookPage } from './types';
@@ -301,7 +301,7 @@ function Art({ cell, page }: { cell: BookCell; page: BookPage }) {
     const vh = v.view.maxY - v.view.minY;
     return (
       <div className="bk-art" style={{ aspectRatio: `${vw} / ${vh}` }}>
-        <PlaySvg diagram={v.diagram} view={v.view} theme={DEFAULT_RENDER_THEME} style={{ height: 'auto' }} />
+        <PlaySvg diagram={v.diagram} view={v.view} theme={BOOK_RENDER_THEME} style={{ height: 'auto' }} />
       </div>
     );
   }

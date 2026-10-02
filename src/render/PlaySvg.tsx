@@ -56,7 +56,7 @@ export function PlaySvg({
     >
       {background && <rect x={0} y={0} width="100%" height="100%" fill={COLORS.paper} data-hit="bg" />}
       <FieldLayer view={view} theme={theme} />
-      <PathLayer diagram={diagram} view={view} selectedPathId={selectedPathId} />
+      <PathLayer diagram={diagram} view={view} selectedPathId={selectedPathId} crossGaps={theme.crossGaps !== false} />
       <AnnotationLayer annotations={diagram.annotations} view={view} selectedId={selectedAnnotationId} />
       <MotionLayer players={diagram.players} view={view} />
       <PlayerLayer players={diagram.players} view={view} selectedIds={selectedPlayerIds} />

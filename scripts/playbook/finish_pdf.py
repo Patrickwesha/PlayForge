@@ -79,8 +79,14 @@ for s in book["sections"]:
             toc.append([3, c["label"], sheet_of[e["page"]] + 1])
 doc.set_toc(toc)
 doc.set_metadata({"title": "Green Bay 2019 Playbook (rebuilt)", "subject": book["source"], "creator": "PlayForge"})
-# Chromium stores the scans losslessly (a ~220 MB file): JPEG at print resolution is visually the same
-doc.rewrite_images(dpi_threshold=220, dpi_target=200, quality=82, lossy=True, lossless=True)
-doc.save(OUT, garbage=3, deflate=True)
+# the book is all vector now; a deep garbage pass (garbage=3) over 500 MB of chunks never finishes on this PC
+if any(pg.get_images() for pg in doc):
+    doc.rewrite_images(dpi_threshold=220, dpi_target=200, quality=82, lossy=True, lossless=True)
+tmp = OUT + ".new"
+doc.save(tmp, garbage=1, deflate=True)
+try:
+    os.replace(tmp, OUT)  # fails while a viewer holds the old file open: the new one is left beside it
+except PermissionError:
+    OUT = tmp
 print(json.dumps({"sheets": len(doc), "bookPagesFound": len(sheet_of), "missing": missing[:20], "linksFixed": fixed,
                   "linksDropped": dropped, "bookmarks": len(toc), "out": OUT}))

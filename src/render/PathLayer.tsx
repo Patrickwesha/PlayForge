@@ -124,7 +124,7 @@ const strokeOf = (path: Path) => yd(STROKE[path.width ?? 'normal']);
  * outlines of every line above it, which cuts a small gap where a top line crosses (FirstDown-style
  * bridges). Masks only affect the lines, so yard lines and the LOS underneath stay whole.
  */
-export function PathLayer({ diagram, view, selectedPathId }: { diagram: Diagram; view: ViewWindow; selectedPathId?: string }) {
+export function PathLayer({ diagram, view, selectedPathId, crossGaps = true }: { diagram: Diagram; view: ViewWindow; selectedPathId?: string; crossGaps?: boolean }) {
   const uid = useId().replace(/[^a-zA-Z0-9]/g, '');
   const paths = Object.values(diagram.paths).reverse();
   const builtList = paths.map((p) => ({ path: p, built: buildPath(p, diagram.players, view) }));
@@ -136,7 +136,7 @@ export function PathLayer({ diagram, view, selectedPathId }: { diagram: Diagram;
       <defs>
         {withBuilt.map((b, i) => {
           const above = withBuilt.slice(i + 1);
-          if (above.length === 0) return null;
+          if (above.length === 0 || !crossGaps) return null;
           return (
             <mask key={`m${b.path.id}`} id={`${uid}m${i}`} maskUnits="userSpaceOnUse" x={0} y={0} width={W} height={H}>
               <rect x={0} y={0} width={W} height={H} fill="#fff" />
@@ -155,7 +155,7 @@ export function PathLayer({ diagram, view, selectedPathId }: { diagram: Diagram;
           : path.line === 'dotted' ? `${(sw * 0.1).toFixed(2)} ${(sw * 2.6).toFixed(2)}`
           : undefined;
         const selected = selectedPathId === path.id;
-        const masked = i < withBuilt.length - 1;
+        const masked = crossGaps && i < withBuilt.length - 1;
         return (
           <g key={path.id} data-hit={`path:${path.id}`} style={{ cursor: 'pointer' }}>
             <path d={built.d} fill="none" stroke="transparent" strokeWidth={yd(HIT_STROKE)} />

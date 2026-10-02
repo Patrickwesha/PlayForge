@@ -5,7 +5,12 @@ export type RenderTheme = {
   theme: Theme;
   hashPreset: HashPreset;
   showLos: boolean;
+  /** Bridge gaps where lines cross (SVG masks). Off for print-to-PDF: Chromium rasterizes every masked line. */
+  crossGaps?: boolean;
 };
+
+/** The book reader / PDF: plain vector lines, no masks. */
+export const BOOK_RENDER_THEME: RenderTheme = { theme: 'plain', hashPreset: 'nfl', showLos: false, crossGaps: false };
 
 export const DEFAULT_RENDER_THEME: RenderTheme = { theme: 'plain', hashPreset: 'ncaa', showLos: false };
 export const YARDLINE_THEME: RenderTheme = { theme: 'yardlines', hashPreset: 'ncaa', showLos: true };
