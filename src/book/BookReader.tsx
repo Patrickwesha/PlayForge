@@ -2,7 +2,8 @@ import type { ReactNode } from 'react';
 import { PlaySvg } from '@/render/PlaySvg';
 import { BOOK_RENDER_THEME } from '@/render/theme';
 import { ReaderChrome } from './ReaderChrome';
-import { LibraryBar, LiveArt, PlayLink } from './LibraryLinks';
+import { ConfBadge, FormationLink, LibraryBar, LiveArt, PlayLink } from './LibraryLinks';
+import { bookFormationMatches } from './formationMatch';
 import { PAGE_TYPE_LABEL, type Book, type BookBlock, type BookCell, type BookPage } from './types';
 
 type Loading = 'eager' | 'lazy';
@@ -17,6 +18,9 @@ export function BookReader({ book, base, range, print, hasScans = true, canSaveE
   const inRange = (n: number) => !range || (n >= range[0] && n <= range[1]);
   const cellMap = new Map<string, BookCell>();
   for (const p of book.pages) for (const c of p.cells) cellMap.set(`${p.n}:${c.id}`, c);
+  // formation pages: cells that name a formation PlayForge already ships (Packers 2019 pack) draw from the library
+  const matches = bookFormationMatches(book);
+  const formationIds = [...new Set(matches.values())];
   const counts = { high: 0, medium: 0, low: 0, scan: 0, guessed: 0 };
   for (const p of book.pages)
     for (const c of p.cells) {
@@ -31,7 +35,7 @@ export function BookReader({ book, base, range, print, hasScans = true, canSaveE
       book={{ id: book.id, title: book.title, sections: book.sections, pageCount: book.pageCount }}
       counts={counts}
       hasScans={hasScans}
-      tools={<LibraryBar bookId={book.id} libraryUrl={`/api/book/${book.id}/library`} built={book.built} canSaveEdits={canSaveEdits} compact />}
+      tools={<LibraryBar bookId={book.id} libraryUrl={`/api/book/${book.id}/library`} built={book.built} formationIds={formationIds} canSaveEdits={canSaveEdits} compact />}
     >
       <header className="bk-doc-head">
         <h1>{book.title}</h1>
@@ -50,7 +54,7 @@ export function BookReader({ book, base, range, print, hasScans = true, canSaveE
       {book.pages
         .filter((p) => inRange(p.n))
         .map((p) => (
-          <PageSection key={p.n} page={p} book={book} base={base} cellMap={cellMap} loading={loading} hasScans={hasScans} />
+          <PageSection key={p.n} page={p} book={book} base={base} cellMap={cellMap} matches={matches} loading={loading} hasScans={hasScans} />
         ))}
     </ReaderChrome>
   );
@@ -114,7 +118,7 @@ function columnCount(cells: BookCell[]): number {
   return Math.min(Math.max(cols, 1), 4);
 }
 
-function PageSection({ page, book, base, cellMap, loading, hasScans }: { page: BookPage; book: Book; base: string; cellMap: Map<string, BookCell>; loading: Loading; hasScans: boolean }) {
+function PageSection({ page, book, base, cellMap, matches, loading, hasScans }: { page: BookPage; book: Book; base: string; cellMap: Map<string, BookCell>; matches: Map<string, string>; loading: Loading; hasScans: boolean }) {
   const section = book.sections[page.section];
   const startsSection = section && section.start === page.n;
   const inTable = new Set<string>();
@@ -168,12 +172,12 @@ function PageSection({ page, book, base, cellMap, loading, hasScans }: { page: B
       )}
       {page.type === 'blank' && page.blocks.length === 0 && <p className="bk-muted">This page is blank in the book.</p>}
       {page.blocks.map((b, i) => (
-        <Block key={i} block={b} page={page} cellMap={cellMap} book={book} />
+        <Block key={i} block={b} page={page} cellMap={cellMap} matches={matches} book={book} />
       ))}
       {gridCells.length > 0 && (
         <div className="bk-grid" style={{ ['--cols' as string]: cols, ['--rows' as string]: rows, ['--print-h' as string]: `${printGridHeight(page).toFixed(2)}in` }}>
           {gridCells.map((c) => (
-            <Cell key={c.id} cell={c} page={page} built={book.built} bookId={book.id} />
+            <Cell key={c.id} cell={c} page={page} built={book.built} bookId={book.id} formationId={matches.get(`${page.n}:${c.id}`)} />
           ))}
         </div>
       )}
@@ -211,7 +215,7 @@ function Restored({ children, on }: { children: ReactNode; on: boolean }) {
   );
 }
 
-function Block({ block, page, cellMap, book }: { block: BookBlock; page: BookPage; cellMap: Map<string, BookCell>; book: Book }) {
+function Block({ block, page, cellMap, matches, book }: { block: BookBlock; page: BookPage; cellMap: Map<string, BookCell>; matches: Map<string, string>; book: Book }) {
   switch (block.kind) {
     case 'heading':
       return <h4 className="bk-block-head">{block.href ? <a href={block.href}>{block.text}</a> : block.text}</h4>;
@@ -254,13 +258,15 @@ function Block({ block, page, cellMap, book }: { block: BookBlock; page: BookPag
                     {r.map((v, j) => {
                       const m = /^@(c\w+|x\w+)$/.exec(v.trim());
                       const cell = m ? cellMap.get(`${page.n}:${m[1]}`) : undefined;
-                      if (cell)
+                      if (cell) {
+                        const formationId = matches.get(`${page.n}:${cell.id}`);
                         return (
                           <td key={j} className="bk-td-art">
-                            <Art cell={cell} page={page} built={book.built} />
-                            <CellFoot cell={cell} bookId={book.id} />
+                            <Art cell={cell} page={page} built={book.built} formationId={formationId} />
+                            <CellFoot cell={cell} bookId={book.id} built={book.built} formationId={formationId} />
                           </td>
                         );
+                      }
                       const href = j === 0 ? block.hrefs?.[i] : null;
                       const text = v === '@diagram' ? '(drawing)' : v;
                       const body = href ? <a href={href}>{text}</a> : text;
@@ -280,7 +286,7 @@ function Block({ block, page, cellMap, book }: { block: BookBlock; page: BookPag
   }
 }
 
-function Cell({ cell, page, built, bookId }: { cell: BookCell; page: BookPage; built: string; bookId: string }) {
+function Cell({ cell, page, built, bookId, formationId }: { cell: BookCell; page: BookPage; built: string; bookId: string; formationId?: string }) {
   return (
     <figure className="bk-cell" id={cell.anchor} data-cell={cell.id}>
       {cell.lines.length > 0 && (
@@ -294,13 +300,13 @@ function Cell({ cell, page, built, bookId }: { cell: BookCell; page: BookPage; b
           </h4>
         </figcaption>
       )}
-      <Art cell={cell} page={page} built={built} />
-      <CellFoot cell={cell} bookId={bookId} />
+      <Art cell={cell} page={page} built={built} formationId={formationId} />
+      <CellFoot cell={cell} bookId={bookId} built={built} formationId={formationId} />
     </figure>
   );
 }
 
-function Art({ cell, page, built }: { cell: BookCell; page: BookPage; built: string }) {
+function Art({ cell, page, built, formationId }: { cell: BookCell; page: BookPage; built: string; formationId?: string }) {
   const v = cell.vector;
   if (v && v.diagram) {
     const vw = v.view.maxX - v.view.minX;
@@ -311,8 +317,17 @@ function Art({ cell, page, built }: { cell: BookCell; page: BookPage; built: str
       </div>
     );
     // your edited version from the PlayForge library replaces the built one once the library has loaded
-    return cell.playId ? <LiveArt playId={cell.playId} built={built}>{art}</LiveArt> : art;
+    return cell.playId ? <LiveArt playId={cell.playId} formationId={formationId} built={built}>{art}</LiveArt> : art;
   }
+  // a cell that could not be traced still draws the library formation it names
+  if (cell.playId && formationId)
+    return (
+      <LiveArt playId={cell.playId} formationId={formationId} built={built}>
+        <div className="bk-art bk-art-empty">
+          <p>Not rebuilt: the drawing on page {page.n} could not be traced.</p>
+        </div>
+      </LiveArt>
+    );
   // nothing could be rebuilt for this cell: say so, and keep its words findable
   return (
     <div className="bk-art bk-art-empty">
@@ -324,11 +339,10 @@ function Art({ cell, page, built }: { cell: BookCell; page: BookPage; built: str
   );
 }
 
-function CellFoot({ cell, bookId }: { cell: BookCell; bookId: string }) {
+function CellFoot({ cell, bookId, built, formationId }: { cell: BookCell; bookId: string; built: string; formationId?: string }) {
   const v = cell.vector;
   const conf = v ? v.confidence : 'none';
   const unplaced = cell.labels.filter((l) => !l.at);
-  const guessed = (cell.guesses ?? []).map((g) => g.split(':')[0].trim());
   return (
     <>
       <div className="bk-cell-foot">
@@ -338,15 +352,9 @@ function CellFoot({ cell, bookId }: { cell: BookCell; bookId: string }) {
             {b}
           </span>
         ))}
+        {formationId && <FormationLink id={formationId} />}
         {cell.playId && <PlayLink id={cell.playId} bookId={bookId} />}
-        {guessed.length > 0 && (
-          <span className="bk-conf bk-conf-medium" title={(cell.guesses ?? []).join('\n')}>
-            guessed: {guessed.join(', ')}
-          </span>
-        )}
-        <span className={`bk-conf bk-conf-${conf === 'none' ? 'low' : conf}`} title={v?.issues.join('; ') || 'Not rebuilt'} style={guessed.length ? { marginLeft: 0 } : undefined}>
-          {conf === 'high' ? 'matches the page' : conf === 'none' ? 'not rebuilt' : 'check against the page'}
-        </span>
+        <ConfBadge playId={cell.playId} formationId={formationId} built={built} conf={conf} issues={v?.issues ?? []} guesses={cell.guesses ?? []} />
       </div>
       {unplaced.length > 0 && <div className="bk-labels-note">{unplaced.map((l) => l.text).join(' · ')}</div>}
     </>
