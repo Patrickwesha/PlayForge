@@ -405,7 +405,12 @@
       "packKey": "trips-rt-11",
       "means": "Y on the line, F in the slot, Z outside. X alone away.",
       "onFilm": "Tight end attached with two receivers outside him, one receiver on the other side.",
-      "aliases": [],
+      "aliases": [
+        {
+          "term": "Trips",
+          "book": "rams-2022"
+        }
+      ],
       "sources": [
         {
           "book": "gb-2019",
@@ -426,7 +431,12 @@
       "means": "Trips with the Z in the slot and the F outside.",
       "onFilm": "Same picture as Trips. Only the names of the two receivers change.",
       "sameAs": "Trips",
-      "aliases": [],
+      "aliases": [
+        {
+          "term": "Trick",
+          "book": "rams-2022"
+        }
+      ],
       "sources": [
         {
           "book": "gb-2019",
@@ -461,7 +471,12 @@
       "packKey": "train-rt-11",
       "means": "Three detached: F inside, Y in the middle, Z outside.",
       "onFilm": "No attached tight end on the three-receiver side. The tight end is the middle man.",
-      "aliases": [],
+      "aliases": [
+        {
+          "term": "Train",
+          "book": "rams-2022"
+        }
+      ],
       "sources": [
         {
           "book": "gb-2019",
@@ -474,9 +489,14 @@
       "family": "3x1",
       "personnel": "11",
       "packKey": "trout-rt-11",
-      "means": "Three detached with the Y as the outside man.",
+      "means": "Three detached with the Y as the outside man: F inside on the ball at a 3 yard split, Z in the middle.",
       "onFilm": "Tight end split widest on the three-receiver side.",
-      "aliases": [],
+      "aliases": [
+        {
+          "term": "Trio",
+          "book": "rams-2022"
+        }
+      ],
       "sources": [
         {
           "book": "gb-2019",
@@ -491,7 +511,12 @@
       "packKey": "bunch-rt-11",
       "means": "Y inside and off, F at the point on the ball, Z outside and off.",
       "onFilm": "Three in a tight triangle just outside the tackle, tight end the inside man.",
-      "aliases": [],
+      "aliases": [
+        {
+          "term": "Bunch",
+          "book": "rams-2022"
+        }
+      ],
       "sources": [
         {
           "book": "gb-2019",
@@ -511,7 +536,12 @@
       "packKey": "bin-rt-11",
       "means": "Bunch with the Y at the point.",
       "onFilm": "Tight end is the man on the ball in the middle of the bunch.",
-      "aliases": [],
+      "aliases": [
+        {
+          "term": "Box",
+          "book": "rams-2022"
+        }
+      ],
       "sources": [
         {
           "book": "gb-2019",
@@ -526,7 +556,12 @@
       "packKey": "buddy-rt-11",
       "means": "Bunch with the Y outside.",
       "onFilm": "Tight end is the outside man of the bunch.",
-      "aliases": [],
+      "aliases": [
+        {
+          "term": "Bio",
+          "book": "rams-2022"
+        }
+      ],
       "sources": [
         {
           "book": "gb-2019",
@@ -634,7 +669,7 @@
       "onFilm": "2x2 with no attached tight end. He is flexed 5 yards or more.",
       "aliases": [
         {
-          "term": "Double Open",
+          "term": "Spread",
           "book": "rams-2022"
         }
       ],
@@ -697,7 +732,12 @@
       "packKey": "sink-rt-11",
       "means": "X on the ball at a 5 yard split, F off the ball inside him.",
       "onFilm": "Tight weak pair with the inside man off the ball.",
-      "aliases": [],
+      "aliases": [
+        {
+          "term": "North",
+          "book": "rams-2022"
+        }
+      ],
       "sources": [
         {
           "book": "gb-2019",
@@ -734,7 +774,7 @@
       "onFilm": "Tight end with nobody outside him, three receivers on the other side. The chart calls this 3x1 toward the receivers. The call goes the other way, to the Y.",
       "aliases": [
         {
-          "term": "Speed / Scoot / Sprint / Swift / Fast / Fleet",
+          "term": "Speed",
           "book": "rams-2022"
         }
       ],
@@ -758,7 +798,12 @@
       "means": "Fast with the three receivers' jobs moved around.",
       "onFilm": "Same picture as Fast.",
       "sameAs": "Fast",
-      "aliases": [],
+      "aliases": [
+        {
+          "term": "Sprint (Fit), Fast (Foot)",
+          "book": "rams-2022"
+        }
+      ],
       "sources": [
         {
           "book": "gb-2019",
@@ -775,7 +820,7 @@
       "onFilm": "Tight end one side, a three-man bunch on the other.",
       "aliases": [
         {
-          "term": "the Rams add Pack to a 1x3 word",
+          "term": "Speed Pack. Crack = Sprint Pack, Crush = Fast Pack, Cruz = Swift Pack",
           "book": "rams-2022"
         }
       ],
@@ -855,7 +900,7 @@
       "onFilm": "Receiver next to the tackle, tight end outside him and off.",
       "aliases": [
         {
-          "term": "Click",
+          "term": "Clout",
           "book": "rams-2022"
         }
       ]
@@ -868,7 +913,7 @@
       "onFilm": "Tight end standing up, flexed off the tackle.",
       "aliases": [
         {
-          "term": "Open",
+          "term": "Tout",
           "book": "rams-2022"
         }
       ]
@@ -879,7 +924,12 @@
       "who": "Y, Z",
       "means": "Y lines up as the outside receiver. Z comes into the slot.",
       "onFilm": "Tight end split widest on his side.",
-      "aliases": []
+      "aliases": [
+        {
+          "term": "Open",
+          "book": "rams-2022"
+        }
+      ]
     },
     {
       "term": "Off",
@@ -1536,6 +1586,10 @@
     {
       "title": "Closest word",
       "means": "When a picture fits no book definition the nearest word is used and the formation is flagged closest word, check it."
+    },
+    {
+      "title": "Same word, different picture",
+      "means": "Alignments are read off the Rams 2022 drawings (clean vector diagrams), named with the system word. Careful: a few words mean different pictures in the two books. Rams Open is the system's Out, Rams Tout is the system's Open, Rams Clout is the system's Click, Rams Trio is the system's Trout, Rams Trick is the system's Trio, Rams Box is the system's Bin, Rams Fast is the system's Foot. A Rams picture whose system word is already taken keeps its Rams word with (LA): Trout (LA), Buddy (LA). Rams-only words are kept as they are: Troff, Trey, Treat, Bundle, Bowl, the Jinx family (F alone away from a three-receiver side), Swift, Scoot, Fleet, King, Edge, Acer."
     }
   ],
   "workflow": {
@@ -1626,5 +1680,6 @@
       "Same words every week. If the system has a word, use it. If it does not, describe it and flag it.",
       "The chart is facts from film. The drawing is my read. Keep them apart."
     ]
-  }
+  },
+  "formationsNote": "Alignments are read off the Rams 2022 drawings (clean vector diagrams), named with the system word. Careful: a few words mean different pictures in the two books. Rams Open is the system's Out, Rams Tout is the system's Open, Rams Clout is the system's Click, Rams Trio is the system's Trout, Rams Trick is the system's Trio, Rams Box is the system's Bin, Rams Fast is the system's Foot. A Rams picture whose system word is already taken keeps its Rams word with (LA): Trout (LA), Buddy (LA). Rams-only words are kept as they are: Troff, Trey, Treat, Bundle, Bowl, the Jinx family (F alone away from a three-receiver side), Swift, Scoot, Fleet, King, Edge, Acer."
 }

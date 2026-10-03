@@ -1,0 +1,7705 @@
+{
+ "_generated": "Written by scripts/formations/rams_build.py from the Rams 2022 general section diagrams. Positions and names only.",
+ "formations": [
+  {
+   "key": "i-rt-21",
+   "name": "I Rt",
+   "personnel": "21",
+   "family": "2 Back",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 19,
+   "book": "rams-2022",
+   "ramsName": "[21] I RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.19 ([21] I RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": 0,
+     "y": -5
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "weak-rt-21",
+   "name": "Weak Rt",
+   "personnel": "21",
+   "family": "2 Back",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 19,
+   "book": "rams-2022",
+   "ramsName": "[21] WEAK RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.19 ([21] WEAK RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": -2,
+     "y": -5
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "strong-rt-21",
+   "name": "Strong Rt",
+   "personnel": "21",
+   "family": "2 Back",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 19,
+   "book": "rams-2022",
+   "ramsName": "[21] STRONG RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.19 ([21] STRONG RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": 2,
+     "y": -5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "i-rt-off-21",
+   "name": "I Rt Off",
+   "personnel": "21",
+   "family": "2 Back",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 20,
+   "book": "rams-2022",
+   "ramsName": "[21] I RT OFF",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.20 ([21] I RT OFF).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": 0,
+     "y": -5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": 0
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    }
+   ]
+  },
+  {
+   "key": "i-rt-open-21",
+   "name": "I Rt Open",
+   "personnel": "21",
+   "family": "2 Back",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 20,
+   "book": "rams-2022",
+   "ramsName": "[21] I RT TOUT (TOAST)",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.20 ([21] I RT TOUT (TOAST)).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": 0,
+     "y": -5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 7.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    }
+   ]
+  },
+  {
+   "key": "i-rt-close-21",
+   "name": "I Rt Close",
+   "personnel": "21",
+   "family": "2 Back",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 20,
+   "book": "rams-2022",
+   "ramsName": "[21] I RT CLOSE",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.20 ([21] I RT CLOSE).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": 0,
+     "y": -5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 8.0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    }
+   ]
+  },
+  {
+   "key": "i-rt-clamp-21",
+   "name": "I Rt Clamp",
+   "personnel": "21",
+   "family": "2 Back",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 20,
+   "book": "rams-2022",
+   "ramsName": "[21] I RT CLAMP (CLICK)",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.20 ([21] I RT CLAMP (CLICK)).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": 0,
+     "y": -5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 6.5,
+     "y": 0
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    }
+   ]
+  },
+  {
+   "key": "i-rt-slot-21",
+   "name": "I Rt Slot",
+   "personnel": "21",
+   "family": "2 Back",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 20,
+   "book": "rams-2022",
+   "ramsName": "[21] I RT SLOT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.20 ([21] I RT SLOT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": 0,
+     "y": -5
+    },
+    {
+     "spot": "Z",
+     "x": -11.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "i-rt-closer-21",
+   "name": "I Rt Closer",
+   "personnel": "21",
+   "family": "2 Back",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 20,
+   "book": "rams-2022",
+   "ramsName": "[21] I RT CLOSER",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.20 ([21] I RT CLOSER).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": 0,
+     "y": -5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 4.0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    }
+   ]
+  },
+  {
+   "key": "i-rt-click-21",
+   "name": "I Rt Click",
+   "personnel": "21",
+   "family": "2 Back",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 20,
+   "book": "rams-2022",
+   "ramsName": "[21] I RT CLOUT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.20 ([21] I RT CLOUT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": 0,
+     "y": -5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 7.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 8.0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    }
+   ]
+  },
+  {
+   "key": "i-rt-out-21",
+   "name": "I Rt Out",
+   "personnel": "21",
+   "family": "2 Back",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 20,
+   "book": "rams-2022",
+   "ramsName": "[21] I RT OPEN",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.20 ([21] I RT OPEN).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": 0,
+     "y": -5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 11.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 20.0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    }
+   ]
+  },
+  {
+   "key": "i-rt-tight-21",
+   "name": "I Rt Tight",
+   "personnel": "21",
+   "family": "2 Back",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 20,
+   "book": "rams-2022",
+   "ramsName": "[21] I RT TITE",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.20 ([21] I RT TITE).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": 0,
+     "y": -5
+    },
+    {
+     "spot": "X",
+     "x": -7.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "i-rt-zoom-21",
+   "name": "I Rt Zoom",
+   "personnel": "21",
+   "family": "2 Back",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 20,
+   "book": "rams-2022",
+   "ramsName": "[21] I RT ZOOM",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.20 ([21] I RT ZOOM).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": 0,
+     "y": -5
+    },
+    {
+     "spot": "X",
+     "x": -11.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "i-rt-ace-21",
+   "name": "I Rt Ace",
+   "personnel": "21",
+   "family": "2 Back",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 21,
+   "book": "rams-2022",
+   "ramsName": "[21] I RT ACE",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.21 ([21] I RT ACE).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": 0,
+     "y": -5
+    },
+    {
+     "spot": "X",
+     "x": -7.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 8.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "i-rt-tighter-21",
+   "name": "I Rt Tighter",
+   "personnel": "21",
+   "family": "2 Back",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 21,
+   "book": "rams-2022",
+   "ramsName": "[21] I RT TITER",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.21 ([21] I RT TITER).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": 0,
+     "y": -5
+    },
+    {
+     "spot": "X",
+     "x": -3.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    }
+   ]
+  },
+  {
+   "key": "i-rt-numbers-21",
+   "name": "I Rt Numbers",
+   "personnel": "21",
+   "family": "2 Back",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 21,
+   "book": "rams-2022",
+   "ramsName": "[21] I RT #\u2019s",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.21 ([21] I RT #\u2019s).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": 0,
+     "y": -5
+    },
+    {
+     "spot": "X",
+     "x": -18.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 18.0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    }
+   ]
+  },
+  {
+   "key": "i-rt-acer-21",
+   "name": "I Rt Acer",
+   "personnel": "21",
+   "family": "2 Back",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 21,
+   "book": "rams-2022",
+   "ramsName": "[21] I RT ACER",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.21 ([21] I RT ACER).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": 0,
+     "y": -5
+    },
+    {
+     "spot": "X",
+     "x": -3.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 4.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "i-rt-edge-21",
+   "name": "I Rt Edge",
+   "personnel": "21",
+   "family": "2 Back",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 21,
+   "book": "rams-2022",
+   "ramsName": "[21] I RT EDGE",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.21 ([21] I RT EDGE).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": 0,
+     "y": -5
+    },
+    {
+     "spot": "X",
+     "x": -16.5,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 16.5,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    }
+   ]
+  },
+  {
+   "key": "i-rt-king-21",
+   "name": "I Rt King",
+   "personnel": "21",
+   "family": "2 Back",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 21,
+   "book": "rams-2022",
+   "ramsName": "[21] I RT KING",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.21 ([21] I RT KING).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": 0,
+     "y": -5
+    },
+    {
+     "spot": "X",
+     "x": -14.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 14.0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    }
+   ]
+  },
+  {
+   "key": "west-rt-12",
+   "name": "West Rt",
+   "personnel": "12",
+   "family": "3x1 'T'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 22,
+   "book": "rams-2022",
+   "ramsName": "WEST RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.22 (WEST RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": 4.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "trips-rt-11",
+   "name": "Trips Rt",
+   "personnel": "11",
+   "family": "3x1 'T'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 22,
+   "book": "rams-2022",
+   "ramsName": "TRIPS RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.22 (TRIPS RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": 11.5,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "trout-la-rt-11",
+   "name": "Trout (LA) Rt",
+   "personnel": "11",
+   "family": "3x1 'T'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 22,
+   "book": "rams-2022",
+   "ramsName": "TROUT RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.22 (TROUT RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 5.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": 12.5,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "trout-rt-11",
+   "name": "Trout Rt",
+   "personnel": "11",
+   "family": "3x1 'T'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 22,
+   "book": "rams-2022",
+   "ramsName": "TRIO RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.22 (TRIO RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": 5.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 12.5,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "east-rt-12",
+   "name": "East Rt",
+   "personnel": "12",
+   "family": "3x1 'T'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 22,
+   "book": "rams-2022",
+   "ramsName": "EAST RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.22 (EAST RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": 4.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "troff-rt-11",
+   "name": "Troff Rt",
+   "personnel": "11",
+   "family": "3x1 'T'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 22,
+   "book": "rams-2022",
+   "ramsName": "TROFF RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.22 (TROFF RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": 11.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "trey-rt-11",
+   "name": "Trey Rt",
+   "personnel": "11",
+   "family": "3x1 'T'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 22,
+   "book": "rams-2022",
+   "ramsName": "TREY RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.22 (TREY RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 5.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": 12.5,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "train-rt-11",
+   "name": "Train Rt",
+   "personnel": "11",
+   "family": "3x1 'T'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 22,
+   "book": "rams-2022",
+   "ramsName": "TRAIN RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.22 (TRAIN RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": 5.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 12.5,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "trio-rt-11",
+   "name": "Trio Rt",
+   "personnel": "11",
+   "family": "3x1 'T'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 23,
+   "book": "rams-2022",
+   "ramsName": "TRICK RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.23 (TRICK RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 11.5,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "bunch-rt-11",
+   "name": "Bunch Rt",
+   "personnel": "11",
+   "family": "Bunch 'B'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 23,
+   "book": "rams-2022",
+   "ramsName": "BUNCH RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.23 (BUNCH RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": 4.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 5.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "buddy-rt-11",
+   "name": "Buddy Rt",
+   "personnel": "11",
+   "family": "Bunch 'B'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 23,
+   "book": "rams-2022",
+   "ramsName": "BIO RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.23 (BIO RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 4.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 5.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "bundle-rt-11",
+   "name": "Bundle Rt",
+   "personnel": "11",
+   "family": "Bunch 'B'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 23,
+   "book": "rams-2022",
+   "ramsName": "BUNDLE RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.23 (BUNDLE RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 4.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": 5.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "bin-rt-11",
+   "name": "Bin Rt",
+   "personnel": "11",
+   "family": "Bunch 'B'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 23,
+   "book": "rams-2022",
+   "ramsName": "BOX RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.23 (BOX RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 4.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 5.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "treat-rt-11",
+   "name": "Treat Rt",
+   "personnel": "11",
+   "family": "3x1 'T'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 23,
+   "book": "rams-2022",
+   "ramsName": "TREAT RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.23 (TREAT RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 5.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 12.5,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "bowl-rt-11",
+   "name": "Bowl Rt",
+   "personnel": "11",
+   "family": "Bunch 'B'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 23,
+   "book": "rams-2022",
+   "ramsName": "BOWL RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.23 (BOWL RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 4.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": 5.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "buddy-la-rt-11",
+   "name": "Buddy (LA) Rt",
+   "personnel": "11",
+   "family": "Bunch 'B'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 23,
+   "book": "rams-2022",
+   "ramsName": "BUDDY RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.23 (BUDDY RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": 4.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 5.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "jam-rt-11",
+   "name": "Jam Rt",
+   "personnel": "11",
+   "family": "3x1 'T'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 24,
+   "book": "rams-2022",
+   "ramsName": "JAM RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.24 (JAM RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 8.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": 14.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "jinx-rt-11",
+   "name": "Jinx Rt",
+   "personnel": "11",
+   "family": "3x1 'T'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 24,
+   "book": "rams-2022",
+   "ramsName": "JINX RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.24 (JINX RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "X",
+     "x": 8.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 14.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "jock-rt-11",
+   "name": "Jock Rt",
+   "personnel": "11",
+   "family": "3x1 'T'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 24,
+   "book": "rams-2022",
+   "ramsName": "JOCK RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.24 (JOCK RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 8.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 14.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": 20.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "jiggy-rt-11",
+   "name": "Jiggy Rt",
+   "personnel": "11",
+   "family": "3x1 'T'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 24,
+   "book": "rams-2022",
+   "ramsName": "JIGGY RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.24 (JIGGY RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "X",
+     "x": 8.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 14.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 20.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "jay-rt-11",
+   "name": "Jay Rt",
+   "personnel": "11",
+   "family": "3x1 'T'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 24,
+   "book": "rams-2022",
+   "ramsName": "JAY RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.24 (JAY RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 8.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": 14.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 20.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "jolt-rt-11",
+   "name": "Jolt Rt",
+   "personnel": "11",
+   "family": "3x1 'T'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 24,
+   "book": "rams-2022",
+   "ramsName": "JOLT RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.24 (JOLT RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 8.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 14.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": 20.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "jam-pack-rt-11",
+   "name": "Jam Pack Rt",
+   "personnel": "11",
+   "family": "Bunch 'B'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 25,
+   "book": "rams-2022",
+   "ramsName": "JAM PACK RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.25 (JAM PACK RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": 4.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 5.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "jinx-pack-rt-11",
+   "name": "Jinx Pack Rt",
+   "personnel": "11",
+   "family": "Bunch 'B'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 25,
+   "book": "rams-2022",
+   "ramsName": "JINX PACK RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.25 (JINX PACK RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "X",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 4.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 5.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "jock-pack-rt-11",
+   "name": "Jock Pack Rt",
+   "personnel": "11",
+   "family": "Bunch 'B'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 25,
+   "book": "rams-2022",
+   "ramsName": "JOCK PACK RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.25 (JOCK PACK RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 4.0,
+     "y": 0
+    },
+    {
+     "spot": "X",
+     "x": 5.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "jiggy-pack-rt-11",
+   "name": "Jiggy Pack Rt",
+   "personnel": "11",
+   "family": "Bunch 'B'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 25,
+   "book": "rams-2022",
+   "ramsName": "JIGGY PACK RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.25 (JIGGY PACK RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "X",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 4.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 5.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "jay-pack-rt-11",
+   "name": "Jay Pack Rt",
+   "personnel": "11",
+   "family": "Bunch 'B'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 25,
+   "book": "rams-2022",
+   "ramsName": "JAY PACK RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.25 (JAY PACK RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": 4.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 5.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "jolt-pack-rt-11",
+   "name": "Jolt Pack Rt",
+   "personnel": "11",
+   "family": "Bunch 'B'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 25,
+   "book": "rams-2022",
+   "ramsName": "JOLT PACK RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.25 (JOLT PACK RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 4.0,
+     "y": 0
+    },
+    {
+     "spot": "X",
+     "x": 5.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "deuce-rt-12",
+   "name": "Deuce Rt",
+   "personnel": "12",
+   "family": "2x2 'D'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 26,
+   "book": "rams-2022",
+   "ramsName": "[12/11] SOLO RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.26 ([12/11] SOLO RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -3.0,
+     "y": 0
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "dixie-rt-11",
+   "name": "Dixie Rt",
+   "personnel": "11",
+   "family": "2x2 'D'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 26,
+   "book": "rams-2022",
+   "ramsName": "DIXIE RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.26 (DIXIE RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -11.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": -20.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "south-rt-11",
+   "name": "South Rt",
+   "personnel": "11",
+   "family": "2x2 Stack 'S'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 26,
+   "book": "rams-2022",
+   "ramsName": "SOUTH RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.26 (SOUTH RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -6.5,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": -7.5,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "dyno-rt-11",
+   "name": "Dyno Rt",
+   "personnel": "11",
+   "family": "2x2 'D'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 26,
+   "book": "rams-2022",
+   "ramsName": "SPREAD RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.26 (SPREAD RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -11.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 11.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "dice-rt-11",
+   "name": "Dice Rt",
+   "personnel": "11",
+   "family": "2x2 'D'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 26,
+   "book": "rams-2022",
+   "ramsName": "DOUBLE RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.26 (DOUBLE RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -11.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "sink-rt-11",
+   "name": "Sink Rt",
+   "personnel": "11",
+   "family": "2x2 Stack 'S'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 26,
+   "book": "rams-2022",
+   "ramsName": "NORTH RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.26 (NORTH RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -5.5,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -6.5,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "stack-rt-11",
+   "name": "Stack Rt",
+   "personnel": "11",
+   "family": "2x2 Stack 'S'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 26,
+   "book": "rams-2022",
+   "ramsName": "STACK RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.26 (STACK RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -6.5,
+     "y": 0
+    },
+    {
+     "spot": "X",
+     "x": -7.5,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "snug-rt-11",
+   "name": "Snug Rt",
+   "personnel": "11",
+   "family": "2x2 Stack 'S'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 26,
+   "book": "rams-2022",
+   "ramsName": "SNUG RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.26 (SNUG RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -3.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -6.5,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 6.5,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "fast-rt-11",
+   "name": "Fast Rt",
+   "personnel": "11",
+   "family": "1x3 'F'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 27,
+   "book": "rams-2022",
+   "ramsName": "SPEED RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.27 (SPEED RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -8.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": -14.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "fit-rt-11",
+   "name": "Fit Rt",
+   "personnel": "11",
+   "family": "1x3 'F'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 27,
+   "book": "rams-2022",
+   "ramsName": "SPRINT RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.27 (SPRINT RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "Z",
+     "x": -8.0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": -14.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "crip-rt-11",
+   "name": "Crip Rt",
+   "personnel": "11",
+   "family": "1x3 Bunch 'CR'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 27,
+   "book": "rams-2022",
+   "ramsName": "SPEED PACK RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.27 (SPEED PACK RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -3.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": -4.0,
+     "y": 0
+    },
+    {
+     "spot": "X",
+     "x": -5.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "foot-rt-11",
+   "name": "Foot Rt",
+   "personnel": "11",
+   "family": "1x3 'F'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 27,
+   "book": "rams-2022",
+   "ramsName": "FAST RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.27 (FAST RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "Z",
+     "x": -8.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -14.0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "scoot-rt-open-11",
+   "name": "Scoot Rt Open",
+   "personnel": "11",
+   "family": "1x3 'F'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 27,
+   "book": "rams-2022",
+   "ramsName": "SCOOT RT TOUT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.27 (SCOOT RT TOUT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -8.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -14.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 7.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "swift-rt-11",
+   "name": "Swift Rt",
+   "personnel": "11",
+   "family": "1x3 'F'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 27,
+   "book": "rams-2022",
+   "ramsName": "SWIFT RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.27 (SWIFT RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -8.0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": -14.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "scoot-pack-rt-open-11",
+   "name": "Scoot Pack Rt Open",
+   "personnel": "11",
+   "family": "1x3 Bunch 'CR'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 27,
+   "book": "rams-2022",
+   "ramsName": "SCOOT PACK RT TOUT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.27 (SCOOT PACK RT TOUT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -3.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -4.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": -5.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 7.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "fleet-rt-out-11",
+   "name": "Fleet Rt Out",
+   "personnel": "11",
+   "family": "1x3 'F'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 27,
+   "book": "rams-2022",
+   "ramsName": "FLEET RT OPEN",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.27 (FLEET RT OPEN).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -8.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": -14.0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 20.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "crack-rt-11",
+   "name": "Crack Rt",
+   "personnel": "11",
+   "family": "1x3 Bunch 'CR'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 28,
+   "book": "rams-2022",
+   "ramsName": "SPRINT PACK RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.28 (SPRINT PACK RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "Z",
+     "x": -3.0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": -4.0,
+     "y": 0
+    },
+    {
+     "spot": "X",
+     "x": -5.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "crush-rt-11",
+   "name": "Crush Rt",
+   "personnel": "11",
+   "family": "1x3 Bunch 'CR'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 28,
+   "book": "rams-2022",
+   "ramsName": "FAST PACK RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.28 (FAST PACK RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "Z",
+     "x": -3.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -4.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": -5.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "fleet-pack-rt-extend-11",
+   "name": "Fleet Pack Rt Extend",
+   "personnel": "11",
+   "family": "1x3 Bunch 'CR'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 28,
+   "book": "rams-2022",
+   "ramsName": "FLEET PACK RT EXTEND",
+   "confidence": "needs-review",
+   "note": "Alignment from the Rams 2022 general section p.28 (FLEET PACK RT EXTEND). Stack and extend variations are drawn loosely in the book: check the stack against the numbers.",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -16.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": -17.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": -18.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "cruz-rt-11",
+   "name": "Cruz Rt",
+   "personnel": "11",
+   "family": "1x3 Bunch 'CR'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 28,
+   "book": "rams-2022",
+   "ramsName": "SWIFT PACK RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.28 (SWIFT PACK RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -3.0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": -4.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": -5.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "fleet-pack-rt-11",
+   "name": "Fleet Pack Rt",
+   "personnel": "11",
+   "family": "1x3 Bunch 'CR'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 28,
+   "book": "rams-2022",
+   "ramsName": "FLEET PACK RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.28 (FLEET PACK RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -3.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": -4.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": -5.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "dice-rt-close-11",
+   "name": "Dice Rt Close",
+   "personnel": "11",
+   "family": "2x2 'D'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 29,
+   "book": "rams-2022",
+   "ramsName": "DOUBLE RT CLOSE",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.29 (DOUBLE RT CLOSE).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": -11.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 8.0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    }
+   ]
+  },
+  {
+   "key": "dixie-rt-click-11",
+   "name": "Dixie Rt Click",
+   "personnel": "11",
+   "family": "2x2 'D'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 29,
+   "book": "rams-2022",
+   "ramsName": "DIXIE RT CLOUT (TOAST)",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.29 (DIXIE RT CLOUT (TOAST)).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -11.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": -20.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 6.5,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 7.5,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    }
+   ]
+  },
+  {
+   "key": "dice-rt-off-11",
+   "name": "Dice Rt Off",
+   "personnel": "11",
+   "family": "2x2 'D'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 29,
+   "book": "rams-2022",
+   "ramsName": "DOUBLE RT OFF",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.29 (DOUBLE RT OFF).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": -11.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": 0
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    }
+   ]
+  },
+  {
+   "key": "trout-rt-store-11",
+   "name": "Trout Rt Store",
+   "personnel": "11",
+   "family": "3x1 'T'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 29,
+   "book": "rams-2022",
+   "ramsName": "TRIO STORE RT",
+   "confidence": "needs-review",
+   "note": "Alignment from the Rams 2022 general section p.29 (TRIO STORE RT). Stack and extend variations are drawn loosely in the book: check the stack against the numbers.",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 4.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 16.5,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "dice-rt-minus-11",
+   "name": "Dice Rt (-)",
+   "personnel": "11",
+   "family": "2x2 'D'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 29,
+   "book": "rams-2022",
+   "ramsName": "DOUBLE RT (-)",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.29 (DOUBLE RT (-)).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": -2,
+     "y": -5
+    },
+    {
+     "spot": "F",
+     "x": -11.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "dice-rt-out-11",
+   "name": "Dice Rt Out",
+   "personnel": "11",
+   "family": "2x2 'D'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 29,
+   "book": "rams-2022",
+   "ramsName": "DOUBLE RT OPEN",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.29 (DOUBLE RT OPEN).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": -11.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 11.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 20.0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    }
+   ]
+  },
+  {
+   "key": "dice-rt-plus-11",
+   "name": "Dice Rt (+)",
+   "personnel": "11",
+   "family": "2x2 'D'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 29,
+   "book": "rams-2022",
+   "ramsName": "DOUBLE RT (+)",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.29 (DOUBLE RT (+)).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 2,
+     "y": -5
+    },
+    {
+     "spot": "F",
+     "x": -11.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "dixie-rt-clamp-11",
+   "name": "Dixie Rt Clamp",
+   "personnel": "11",
+   "family": "2x2 'D'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 29,
+   "book": "rams-2022",
+   "ramsName": "DIXIE RT CLAMP (CLICK)",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.29 (DIXIE RT CLAMP (CLICK)).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -11.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": -20.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 6.5,
+     "y": 0
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    }
+   ]
+  },
+  {
+   "key": "trips-rt-tight-11",
+   "name": "Trips Rt Tight",
+   "personnel": "11",
+   "family": "3x1 'T'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 29,
+   "book": "rams-2022",
+   "ramsName": "TRIPS RT TITE",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.29 (TRIPS RT TITE).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -7.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": 11.5,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "foot-rt-stan-out-11",
+   "name": "Foot Rt Stan Out",
+   "personnel": "11",
+   "family": "1x3 'F'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 29,
+   "book": "rams-2022",
+   "ramsName": "FAST STAN RT OPEN",
+   "confidence": "needs-review",
+   "note": "Alignment from the Rams 2022 general section p.29 (FAST STAN RT OPEN). Stack and extend variations are drawn loosely in the book: check the stack against the numbers.",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "Z",
+     "x": -3.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -4.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": -20.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 20.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "east-rt-hop-12",
+   "name": "East Rt Hop",
+   "personnel": "12",
+   "family": "3x1 'T'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 30,
+   "book": "rams-2022",
+   "ramsName": "EAST RT SLOPE",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.30 (EAST RT SLOPE).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "Z",
+     "x": -3.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -6.5,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": 4.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "west-rt-slot-12",
+   "name": "West Rt Slot",
+   "personnel": "12",
+   "family": "3x1 'T'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 30,
+   "book": "rams-2022",
+   "ramsName": "WEST RT SLOT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.30 (WEST RT SLOT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "Z",
+     "x": -11.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": 4.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "deuce-rt-edge-12",
+   "name": "Deuce Rt Edge",
+   "personnel": "12",
+   "family": "2x2 'D'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 30,
+   "book": "rams-2022",
+   "ramsName": "SOLO RT EDGE",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.30 (SOLO RT EDGE).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -3.0,
+     "y": 0
+    },
+    {
+     "spot": "X",
+     "x": -16.5,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 16.5,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "deuce-rt-king-12",
+   "name": "Deuce Rt King",
+   "personnel": "12",
+   "family": "2x2 'D'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 30,
+   "book": "rams-2022",
+   "ramsName": "SOLO RT KING",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.30 (SOLO RT KING).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -3.0,
+     "y": 0
+    },
+    {
+     "spot": "X",
+     "x": -14.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 14.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "east-rt-zoom-12",
+   "name": "East Rt Zoom",
+   "personnel": "12",
+   "family": "3x1 'T'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 30,
+   "book": "rams-2022",
+   "ramsName": "EAST RT ZOOM",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.30 (EAST RT ZOOM).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -11.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": -20.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": 4.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "west-rt-hip-12",
+   "name": "West Rt Hip",
+   "personnel": "12",
+   "family": "3x1 'T'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 30,
+   "book": "rams-2022",
+   "ramsName": "WEST RT SLIM",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.30 (WEST RT SLIM).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "Z",
+     "x": -6.5,
+     "y": 0
+    },
+    {
+     "spot": "X",
+     "x": -7.5,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": 4.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "deuce-rt-numbers-12",
+   "name": "Deuce Rt Numbers",
+   "personnel": "12",
+   "family": "2x2 'D'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 30,
+   "book": "rams-2022",
+   "ramsName": "SOLO RT #\u2019s",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.30 (SOLO RT #\u2019s).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -3.0,
+     "y": 0
+    },
+    {
+     "spot": "X",
+     "x": -18.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 18.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "deuce-rt-ace-12",
+   "name": "Deuce Rt Ace",
+   "personnel": "12",
+   "family": "2x2 'D'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 30,
+   "book": "rams-2022",
+   "ramsName": "SOLO RT ACE",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.30 (SOLO RT ACE).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -3.0,
+     "y": 0
+    },
+    {
+     "spot": "X",
+     "x": -8.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 8.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "weak-rt-closer-22x",
+   "name": "Weak Rt Closer",
+   "personnel": "22X",
+   "family": "Big",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 31,
+   "book": "rams-2022",
+   "ramsName": "[22X] WEAK RT CLOSER",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.31 ([22X] WEAK RT CLOSER).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": -2,
+     "y": -5
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 4.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "deuce-rt-tighter-13z",
+   "name": "Deuce Rt Tighter",
+   "personnel": "13Z",
+   "family": "Big",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 31,
+   "book": "rams-2022",
+   "ramsName": "[13Z] SOLO RT TIGHTER",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.31 ([13Z] SOLO RT TIGHTER).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": -3.0,
+     "y": 0
+    },
+    {
+     "spot": "X",
+     "x": -4.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "i-rt-20",
+   "name": "I Rt",
+   "personnel": "20",
+   "family": "2 Back",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 31,
+   "book": "rams-2022",
+   "ramsName": "[20] I RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.31 ([20] I RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": 0,
+     "y": -5
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 11.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "i-rt-tighter-22z",
+   "name": "I Rt Tighter",
+   "personnel": "22Z",
+   "family": "Big",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 31,
+   "book": "rams-2022",
+   "ramsName": "[22Z] I RT TIGHTER",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.31 ([22Z] I RT TIGHTER).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": 0,
+     "y": -5
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -3.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "west-rt-tighter-13z",
+   "name": "West Rt Tighter",
+   "personnel": "13Z",
+   "family": "Big",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 31,
+   "book": "rams-2022",
+   "ramsName": "[13Z] WEST RT TIGHTER",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.31 ([13Z] WEST RT TIGHTER).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -3.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": 4.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "strong-rt-23",
+   "name": "Strong Rt",
+   "personnel": "23",
+   "family": "Big",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 31,
+   "book": "rams-2022",
+   "ramsName": "[23] STRONG RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.31 ([23] STRONG RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": 2,
+     "y": -5
+    },
+    {
+     "spot": "X",
+     "x": -3.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 4.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "strong-rt-close-20",
+   "name": "Strong Rt Close",
+   "personnel": "20",
+   "family": "2 Back",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 31,
+   "book": "rams-2022",
+   "ramsName": "[20] STRONG RT CLOSE",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.31 ([20] STRONG RT CLOSE).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": 2,
+     "y": -5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 6.5,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 7.5,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "red-rt-tight-20",
+   "name": "Red Rt Tight",
+   "personnel": "20",
+   "family": "2 Back",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 31,
+   "book": "rams-2022",
+   "ramsName": "[20] RED RT TITE",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.31 ([20] RED RT TITE).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": -2,
+     "y": -5
+    },
+    {
+     "spot": "F",
+     "x": 2,
+     "y": -5
+    },
+    {
+     "spot": "X",
+     "x": -7.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 11.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "weak-rt-20",
+   "name": "Weak Rt",
+   "personnel": "20",
+   "family": "2 Back",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 31,
+   "book": "rams-2022",
+   "ramsName": "[20] WEAK RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.31 ([20] WEAK RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": -2,
+     "y": -5
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 11.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "west-rt-closer-13x",
+   "name": "West Rt Closer",
+   "personnel": "13X",
+   "family": "Big",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 31,
+   "book": "rams-2022",
+   "ramsName": "[13X] WEST RT CLOSER",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.31 ([13X] WEST RT CLOSER).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": 4.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 5.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "i-rt-acer-23",
+   "name": "I Rt Acer",
+   "personnel": "23",
+   "family": "Big",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 31,
+   "book": "rams-2022",
+   "ramsName": "[23] I RT ACER",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.31 ([23] I RT ACER).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": 0,
+     "y": -5
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -3.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 4.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "strong-rt-closer-22x",
+   "name": "Strong Rt Closer",
+   "personnel": "22X",
+   "family": "Big",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 31,
+   "book": "rams-2022",
+   "ramsName": "[22X] STRONG RT CLOSER",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.31 ([22X] STRONG RT CLOSER).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "F",
+     "x": 2,
+     "y": -5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 4.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "south-rt-tighter-13z",
+   "name": "South Rt Tighter",
+   "personnel": "13Z",
+   "family": "Big",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 31,
+   "book": "rams-2022",
+   "ramsName": "[13Z] SOUTH RT TIGHTER",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.31 ([13Z] SOUTH RT TIGHTER).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -3.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": -4.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "i-rt-23",
+   "name": "I Rt",
+   "personnel": "23",
+   "family": "Big",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 31,
+   "book": "rams-2022",
+   "ramsName": "[23] I RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.31 ([23] I RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": 0,
+     "y": -5
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -3.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 4.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "weak-rt-23",
+   "name": "Weak Rt",
+   "personnel": "23",
+   "family": "Big",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 31,
+   "book": "rams-2022",
+   "ramsName": "[23] WEAK RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.31 ([23] WEAK RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": -2,
+     "y": -5
+    },
+    {
+     "spot": "H",
+     "x": 0,
+     "y": -7.5
+    },
+    {
+     "spot": "X",
+     "x": -3.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 4.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "red-rt-20",
+   "name": "Red Rt",
+   "personnel": "20",
+   "family": "2 Back",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 31,
+   "book": "rams-2022",
+   "ramsName": "[20] RED RT",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.31 ([20] RED RT).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": -2,
+     "y": -5
+    },
+    {
+     "spot": "F",
+     "x": 2,
+     "y": -5
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 11.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "south-rt-clamp-d-11",
+   "name": "South Rt Clamp D",
+   "personnel": "11",
+   "family": "Empty",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 32,
+   "book": "rams-2022",
+   "ramsName": "SOUTH RT CLAMP TRES",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.32 (SOUTH RT CLAMP TRES).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": -5.5,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -6.5,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": -7.5,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 6.5,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "trips-rt-tight-g-11",
+   "name": "Trips Rt Tight G",
+   "personnel": "11",
+   "family": "Empty",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 32,
+   "book": "rams-2022",
+   "ramsName": "TRIPS RT TITE UNO",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.32 (TRIPS RT TITE UNO).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -7.0,
+     "y": 0
+    },
+    {
+     "spot": "H",
+     "x": -20.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": 11.5,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "dice-rt-close-a-11",
+   "name": "Dice Rt Close A",
+   "personnel": "11",
+   "family": "Empty",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 32,
+   "book": "rams-2022",
+   "ramsName": "DOUBLE RT CLOSE A",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.32 (DOUBLE RT CLOSE A).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": -11.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "Z",
+     "x": 8.0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "fast-rt-out-b-11",
+   "name": "Fast Rt Out B",
+   "personnel": "11",
+   "family": "Empty",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 32,
+   "book": "rams-2022",
+   "ramsName": "SPEED RT OPEN B",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.32 (SPEED RT OPEN B).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "F",
+     "x": -8.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": -14.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "H",
+     "x": 11.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 20.0,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "trips-rt-e-11",
+   "name": "Trips Rt E",
+   "personnel": "11",
+   "family": "Empty",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 32,
+   "book": "rams-2022",
+   "ramsName": "TRIPS RT DOS",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.32 (TRIPS RT DOS).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": -11.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -20.0,
+     "y": 0
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": 11.5,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  },
+  {
+   "key": "crush-rt-open-c-11",
+   "name": "Crush Rt Open C",
+   "personnel": "11",
+   "family": "Empty",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 32,
+   "book": "rams-2022",
+   "ramsName": "FAST PACK RT TOUT C",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.32 (FAST PACK RT TOUT C).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": -3.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -4.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": -5.0,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 6.5,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "south-rt-clamp-g-11",
+   "name": "South Rt Clamp G",
+   "personnel": "11",
+   "family": "Empty",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 32,
+   "book": "rams-2022",
+   "ramsName": "SOUTH RT CLAMP UNO",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.32 (SOUTH RT CLAMP UNO).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -6.5,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": -7.5,
+     "y": -1
+    },
+    {
+     "spot": "H",
+     "x": -20.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 3.0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": 6.5,
+     "y": 0
+    }
+   ]
+  },
+  {
+   "key": "crush-rt-open-a-11",
+   "name": "Crush Rt Open A",
+   "personnel": "11",
+   "family": "Empty",
+   "strength": "right",
+   "qbAlignment": "under",
+   "sourcePage": 32,
+   "book": "rams-2022",
+   "ramsName": "FAST PACK RT TOUT A",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.32 (FAST PACK RT TOUT A).",
+   "players": [
+    {
+     "spot": "LT",
+     "x": -2,
+     "y": 0
+    },
+    {
+     "spot": "LG",
+     "x": -1,
+     "y": 0
+    },
+    {
+     "spot": "C",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "spot": "RG",
+     "x": 1,
+     "y": 0
+    },
+    {
+     "spot": "RT",
+     "x": 2,
+     "y": 0
+    },
+    {
+     "spot": "QB",
+     "x": 0,
+     "y": -1
+    },
+    {
+     "spot": "Z",
+     "x": -3.0,
+     "y": -1
+    },
+    {
+     "spot": "X",
+     "x": -4.0,
+     "y": 0
+    },
+    {
+     "spot": "F",
+     "x": -5.0,
+     "y": -1
+    },
+    {
+     "spot": "Y",
+     "x": 7.0,
+     "y": 0
+    },
+    {
+     "spot": "H",
+     "x": 20.0,
+     "y": -1
+    }
+   ]
+  }
+ ]
+}

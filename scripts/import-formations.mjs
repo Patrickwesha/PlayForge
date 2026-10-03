@@ -143,6 +143,27 @@ const formations = src.formations.map((f, index) => {
   };
 });
 
+// The Eagles system pack: alignments read off the Rams 2022 vector diagrams (scripts/formations/rams_build.py),
+// under system names. A Rams formation replaces the Green Bay one with the same name and personnel (those
+// came from a cut-off scan and hand fixes); Rams-only formations are added; Green Bay-only ones stay.
+const OVERLAY = path.join(ROOT, 'data/formations/rams-2022.system.json');
+const overlay = JSON.parse(readFileSync(OVERLAY, 'utf8')).formations;
+const byKey = new Map(formations.map((f, i) => [f.key, i]));
+let replaced = 0;
+let added = 0;
+for (const o of overlay) {
+  const entry = { key: o.key, name: o.name, personnel: o.personnel, family: o.family, strength: o.strength, qbAlignment: o.qbAlignment, sourcePage: o.sourcePage, source: 'Rams 2022 (McVay), general section', confidence: o.confidence, note: o.note, players: o.players };
+  const i = byKey.get(o.key);
+  if (i === undefined) {
+    formations.push(entry);
+    added++;
+  } else {
+    formations[i] = { ...entry, family: formations[i].family };
+    replaced++;
+  }
+}
+console.log(`Rams 2022 overlay: ${replaced} replaced, ${added} added, ${formations.length - replaced - added} Green Bay only`);
+
 const constants = {
   applied: { olSpacing: OL_SPACING, guard: PF.guard, tackle: PF.tackle, teAttached: PF.te },
   declaredBySource: { guard: SRC.guard, tackle: SRC.tackle, teAttached: SRC.te },
