@@ -8,6 +8,7 @@ const LINKS: { href: string; label: string }[] = [
   { href: '/plays', label: 'Plays' },
   { href: '/formations', label: 'Formations' },
   { href: '/playbooks', label: 'Playbooks' },
+  { href: '/systems/eagles-2026', label: 'System' },
   { href: '/settings', label: 'Settings' },
 ];
 

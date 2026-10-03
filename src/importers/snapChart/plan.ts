@@ -10,6 +10,8 @@ import { TAGS } from './config';
 import type { ParsedFormationsJson } from './formationsJson';
 import { canonicalize, formationIdFor, formationName } from './signature';
 import { fallbackTemplate, templateKey, templatesFromExact, type Template } from './templates';
+import { nameFormation } from '@/systems/eagles/nameFormation';
+import { nameMotion } from '@/systems/eagles/nameMotion';
 
 export type PlanOptions = {
   team: string;
@@ -22,6 +24,12 @@ export type PlanOptions = {
   builtin?: boolean;
   /** Provenance text, e.g. "Eagles 2026 All-22 chart". */
   source?: string;
+  /**
+   * 'chart' (default) names formations the way the chart does: "11 Gun 2x2 Rt".
+   * 'system' names them in the Eagles system (systems/eagles): "Gun Dice Rt Close", keeps the chart
+   * name in `chartName`, and gives each snap's motion its system word.
+   */
+  naming?: 'chart' | 'system';
 };
 
 export type PlannedFormation = {
@@ -226,6 +234,7 @@ export function buildImportPlan(input: { chart?: ParsedChart; json?: ParsedForma
       result: d.result,
       yards: d.yards,
       motion: d.motion,
+      ...(opts.naming === 'system' && d.motion ? { motionCall: nameMotion(d.motion, d.backfield)?.call } : {}),
       set: d.set,
       notes: d.notes,
       formationId: fid,
@@ -270,9 +279,20 @@ export function buildImportPlan(input: { chart?: ParsedChart; json?: ParsedForma
     const usage: FormationUsage = { count: g.drafts.length, snapIds, weeks, hashes: Object.keys(hashes).sort(), exact: exactN, template: templateN };
     const tags = [TAGS.pack, d0.personnel, d0.formFamily, ...weeks.map((w) => `W${w}`)];
     if (exactN === 0) tags.push(TAGS.templateVerify);
+    const chartName = formationName(d0.personnel, d0.backfield, d0.formFamily, strength);
+    const sys = opts.naming === 'system' ? nameFormation({ personnel: d0.personnel, backfield: d0.backfield, formFamily: d0.formFamily, strength, players: first.players }) : undefined;
+    if (sys) {
+      tags.push(sys.base, sys.family);
+      const lines = [`System call: ${sys.name} [${d0.personnel}]${sys.confidence === 'closest' ? ' (closest word, check it)' : ''}. Charted as ${chartName}.`];
+      if (sys.back) lines.push(`Back on the ${sys.back} side of the quarterback.`);
+      if (sys.alternates.length) lines.push(`Same picture, different jobs: ${sys.alternates.join(', ')}.`);
+      lines.push(...sys.notes);
+      noteLines.unshift(...lines);
+    }
     const formation: Formation = {
       id: fid,
-      name: formationName(d0.personnel, d0.backfield, d0.formFamily, strength),
+      name: sys ? sys.name : chartName,
+      ...(sys ? { chartName, system: { id: 'eagles-2026', base: sys.base, family: sys.family, strength: sys.strength, tags: sys.tags, back: sys.back, alternates: sys.alternates, confidence: sys.confidence } } : {}),
       side: 'offense',
       personnel: d0.personnel,
       playersPerSide: 11,

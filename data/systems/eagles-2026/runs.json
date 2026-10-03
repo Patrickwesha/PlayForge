@@ -1,0 +1,4599 @@
+{
+  "numbering": {
+    "means": "Two digits. First digit is the backfield: 1 = QB under center, 3 = shotgun (same play, gun footwork). GB also has a 50s gun series tied to quick-pass tags that the pages read do not explain. Second digit is the hole and so the family: 8/9 wide zone, 6/7 mid zone (LA only), 4/5 tight or inside zone, 2/3 gap runs, 0/1 gun dive zone (LA only). Even goes right, odd goes left. Plays are printed as a pair and the order tells the side: 18-19, 14-15, 12-13, 16-17 run to the strong or closed (TE) side; 19-18, 15-14, 13-12, 17-16 run to the weak or open side. Neither book has a numbering page in the sections read, so this is worked out from the play titles and diagrams (Rt formations carry the even number).",
+    "sources": [
+      {
+        "book": "gb-2019",
+        "page": 106
+      },
+      {
+        "book": "gb-2019",
+        "page": 108
+      },
+      {
+        "book": "gb-2019",
+        "page": 118
+      },
+      {
+        "book": "gb-2019",
+        "page": 269
+      },
+      {
+        "book": "rams-2022",
+        "section": "06 Wide Zone",
+        "page": 5
+      },
+      {
+        "book": "rams-2022",
+        "section": "07 Mid Zone",
+        "page": 5
+      },
+      {
+        "book": "rams-2022",
+        "section": "09 Tight Zone",
+        "page": 5
+      },
+      {
+        "book": "rams-2022",
+        "section": "10 Gun Only Dive Zone / Zone Read",
+        "page": 5
+      },
+      {
+        "book": "rams-2022",
+        "section": "11 Gap Runs",
+        "page": 5
+      },
+      {
+        "book": "rams-2022",
+        "section": "03 OL Terminology",
+        "page": 14
+      }
+    ]
+  },
+  "families": [
+    {
+      "id": "wide-zone",
+      "name": "Wide Zone (Outside Zone)",
+      "means": "The base run. Everyone reach-blocks to the call, combos are named by who is working together, and the back reads the end man then the next defender inside. GB calls it outside zone; strong is 18 / 19, weak or open side is 19 / 18.",
+      "onFilm": "Line takes flat lateral steps to the sideline. QB opens at about 3 or 4:30 and hands off deep (or tosses), then boots away. Back opens lateral at 7.5 yards, aims outside the TE or tackle, one cut and go.",
+      "numbers": "18 / 19 (gun 38 / 39)"
+    },
+    {
+      "id": "mid-zone",
+      "name": "Mid Zone",
+      "means": "LA family that sits between wide and tight zone. Open side is 17 / 16, closed side is 16 / 17. Most plays are a Wanda (box count) or Wash (push) variation plus a motion word. GB 2019 has no separate mid zone.",
+      "onFilm": "Zone steps a little less flat than wide zone. QB opens at 4 or 8 o'clock. Back tracks the C gap, outside leg of the tackle; from gun he aims at the B gap.",
+      "numbers": "16 / 17 (gun 36 / 37)"
+    },
+    {
+      "id": "tight-zone",
+      "name": "Tight Zone (Inside Zone)",
+      "means": "Downhill zone. Strong or closed side is 14 / 15, weak is 15 / 14. Variations are about who handles the backside: a fullback lead (Weak), split flow (Split, F Sift, Wifi), or man on the backside (Man).",
+      "onFilm": "Line steps vertical with tight double teams. QB opens deep at 5 or 7 o'clock. Back opens, crosses over, squares his shoulders by the third step and presses the B gap, reading inside-out from the center.",
+      "numbers": "14 / 15 (gun 34 / 35)"
+    },
+    {
+      "id": "gun-zone-read",
+      "name": "Gun Dive Zone / Zone Read",
+      "means": "LA shotgun-only zone aimed at the backside A gap, run as a straight give (Wanda) or as a QB read of the backside end (Polar, Wanda Read).",
+      "onFilm": "Shotgun, back beside the QB. Short lead step and straight downhill; on the read versions the QB rides the mesh and can pull it.",
+      "numbers": "30 / 31"
+    },
+    {
+      "id": "gap",
+      "name": "Gap Runs",
+      "means": "Down blocks and double teams instead of zone steps. Duo family has no puller; Power, Pop and Punch pull the backside guard; Counter, Stutter and Stanley / Barkley pull the guard to kick out plus a second man who wraps.",
+      "onFilm": "Play-side linemen block down or double vertically. Look for a backside guard pulling, and whether a second player (F, Y or a receiver) follows him. Back hits tight to the A gap.",
+      "numbers": "12 / 13 (gun 32 / 33)"
+    },
+    {
+      "id": "perimeter",
+      "name": "Perimeter (Toss Crack, Pin and Pull)",
+      "means": "Runs that get outside with crack blocks and pullers rather than zone. GB calls the toss-crack group Transportation (Taxi, Truck, Cab, Uber, Trailer); LA has Delta Ferrari and the pin-and-pull Race.",
+      "onFilm": "Toss or flat gun handoff. Receivers and TEs block down inside, a tackle or guard pulls outside them, back runs for the numbers.",
+      "numbers": "18 / 19 (gun 38 / 39)"
+    },
+    {
+      "id": "sweeps-specials",
+      "name": "Sweeps and Specials",
+      "means": "Jet/fly sweeps named in airline pairs (Spirit / Alaska, Allegiant / American) and rockets (Missile / Rocket), plus reverses and run calls with a quick throw attached.",
+      "onFilm": "Receiver in fast motion gets the ball in front of the QB while the back fakes a zone run, usually the opposite way.",
+      "numbers": "named, no number"
+    },
+    {
+      "id": "draw-qb",
+      "name": "Draws and QB Calls",
+      "means": "GB install 6 draws from gun, paired with Scat passes as the can, plus the Q8 call that is paired with inside zone.",
+      "onFilm": "Line pass-sets, delayed handoff from shotgun.",
+      "numbers": "Draw Rt / Lt, Q8"
+    },
+    {
+      "id": "goal-line",
+      "name": "Goal Line / Short Yardage",
+      "means": "GB heavy package (Tank, Tankcedes) versions of the base runs: wide zone, Zorro, fullback lead and Power Load. The LA sections read do not have a separate goal-line run list.",
+      "onFilm": "Extra linemen or tight ends, I-backs, tight splits.",
+      "numbers": "18 / 19, 12 / 13"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "run.wide-zone.base",
+      "term": "18 / 19",
+      "family": "wide-zone",
+      "means": "Base strong-side wide zone, Mike declared. In 11 from 2x2 the line and TE zone the front, receivers block by 8-9 rules. Usually paired with a backside Sift or an Oscar/Can to get out of a bad look.",
+      "onFilm": "Whole line reach-steps flat to the TE side, back opens lateral and aims outside the TE, one cut. 2x2 with one TE. A backside player cutting off the end = Sift.",
+      "personnel": [
+        "11",
+        "12"
+      ],
+      "modifiers": [
+        "Toss",
+        "Sift",
+        "Can",
+        "Al Oscar",
+        "Fly / Flight"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 106
+        },
+        {
+          "book": "gb-2019",
+          "page": 116
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 18
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 20
+        }
+      ],
+      "basis": "both"
+    },
+    {
+      "id": "run.wide-zone.zap",
+      "term": "18 / 19 Zap",
+      "family": "wide-zone",
+      "means": "One-back strong wide zone behind a TE plus wing. The two tight ends combo the edge (Homer in GB, Zap in LA) and with the tackle own the end, Sam and strong safety. Play-side receiver takes the corner.",
+      "onFilm": "Two TEs stacked to the run side (wing off the TE hip). Line reaches flat, wing and TE double the end then one climbs. Back tracks wide for the D gap, QB boots away after the handoff.",
+      "personnel": [
+        "12",
+        "13",
+        "21"
+      ],
+      "modifiers": [
+        "Toss",
+        "X Now",
+        "Key",
+        "Fly / Flight",
+        "Sift",
+        "Can"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 160
+        },
+        {
+          "book": "gb-2019",
+          "page": 161
+        },
+        {
+          "book": "gb-2019",
+          "page": 261
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 5
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 10
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 12
+        }
+      ],
+      "basis": "both"
+    },
+    {
+      "id": "run.wide-zone.zorro",
+      "term": "18 / 19 Zorro",
+      "family": "wide-zone",
+      "means": "Two-back, full-flow strong wide zone. Fullback and Y work together through the end man to the support player, Mike declared, play-side receiver blocks the corner. Zap is the one-back twin (wing replaces the FB).",
+      "onFilm": "I or offset back set. Fullback leads flat to the TE side and fits off the TE block on the edge, tailback follows on the same wide track. Everyone flows one way, no cutback blocker.",
+      "personnel": [
+        "21",
+        "12"
+      ],
+      "modifiers": [
+        "Toss",
+        "Sift",
+        "X-Z Now",
+        "Cat",
+        "Can"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 107
+        },
+        {
+          "book": "gb-2019",
+          "page": 108
+        },
+        {
+          "book": "gb-2019",
+          "page": 109
+        },
+        {
+          "book": "gb-2019",
+          "page": 258
+        },
+        {
+          "book": "gb-2019",
+          "page": 259
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.wide-zone.quatro",
+      "term": "18 / 19 Quatro",
+      "family": "wide-zone",
+      "means": "Zap with the \"4\" (weak safety down) adjustment built in: targeting slides back one man, Will declared, tackle and TEs own end, Sam and Mike. Paired with LA Zap Fup because both describe the same automatic call.",
+      "onFilm": "Looks like Zap from a TE/wing surface, but the combos work one linebacker further back and the play-side receiver must dig out the strong safety. Often tossed.",
+      "personnel": [
+        "12",
+        "13"
+      ],
+      "modifiers": [
+        "Toss",
+        "Sift",
+        "Can"
+      ],
+      "aliases": [
+        {
+          "term": "18 / 19 Zap Fup",
+          "book": "rams-2022"
+        }
+      ],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 215
+        },
+        {
+          "book": "gb-2019",
+          "page": 216
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 8
+        }
+      ],
+      "basis": "both"
+    },
+    {
+      "id": "run.wide-zone.structure",
+      "term": "18 / 19 Structure",
+      "family": "wide-zone",
+      "means": "Strong wide zone where the line, TE and receivers block the shell they see (front plus coverage) instead of a fixed count. Zero declared vs one-high, TE declared vs two-high. Gun version is 38 / 39 with a bubble.",
+      "onFilm": "Wide zone from 11 with receivers stalking by leverage, slot working in on the nickel or safety. In LA it is a bounce read: back presses wide and expects to get outside.",
+      "personnel": [
+        "11",
+        "12"
+      ],
+      "modifiers": [
+        "Toss",
+        "Sift",
+        "Flow / Flock",
+        "Bubble",
+        "Docking",
+        "Can"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 120
+        },
+        {
+          "book": "gb-2019",
+          "page": 121
+        },
+        {
+          "book": "gb-2019",
+          "page": 122
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 21
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 23
+        }
+      ],
+      "basis": "both"
+    },
+    {
+      "id": "run.wide-zone.f-sift",
+      "term": "18 / 19 F Sift",
+      "family": "wide-zone",
+      "means": "Strong wide zone with split flow: the F (second TE or fullback) comes back across the formation to cut off the backside edge so the backside tackle can zone inside.",
+      "onFilm": "Line reaches one way, the F goes the other way behind the line and cuts the backside end. Back on a wide track to the TE. Sets up the keeper off the same look.",
+      "personnel": [
+        "12",
+        "21"
+      ],
+      "modifiers": [
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 212
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 14
+        }
+      ],
+      "basis": "both"
+    },
+    {
+      "id": "run.wide-zone.weak",
+      "term": "19 / 18 Weak",
+      "family": "wide-zone",
+      "means": "Two-back, full-flow wide zone to the weak side. Fullback blocks the Will, Mike declared. \"Spot\" (QB fist) vs a safety nobody can reach: line pushes one man over, FB takes the safety, receiver takes the corner.",
+      "onFilm": "I-back set, everyone flows away from the TE. Fullback leads through the weak B/C area to the Will, back aims at the outside leg of the weak tackle.",
+      "personnel": [
+        "21",
+        "12"
+      ],
+      "modifiers": [
+        "Al Spot",
+        "Can"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 110
+        },
+        {
+          "book": "gb-2019",
+          "page": 111
+        },
+        {
+          "book": "gb-2019",
+          "page": 112
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.wide-zone.mike",
+      "term": "18 / 19 Mike",
+      "family": "wide-zone",
+      "means": "Strong-side partner of 19 / 18 Weak in the two-back can package: called together and the QB keeps or flips based on unblockable support or safety rotation. Exact fullback rule is unclear from text.",
+      "onFilm": "I-back wide zone to the TE side with the fullback leading; usually seen as the play the QB checks into or out of at the line.",
+      "personnel": [
+        "21",
+        "12"
+      ],
+      "modifiers": [
+        "Can",
+        "Toss"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 111
+        },
+        {
+          "book": "gb-2019",
+          "page": 112
+        },
+        {
+          "book": "gb-2019",
+          "page": 225
+        }
+      ],
+      "basis": "gb-2019",
+      "confidence": "low"
+    },
+    {
+      "id": "run.wide-zone.wanda",
+      "term": "19 / 18 Wanda",
+      "family": "wide-zone",
+      "means": "One-back wide zone to the open side, box declared: line and TE just block the box (4 down plus 2 backers), receivers on 8-9 or slot rules. The usual \"can\" answer when the strong-side run has an unblockable defender.",
+      "onFilm": "Wide zone away from the TE from 11 or 12, no lead blocker. Back aims at the outside leg of the open-side tackle. Close cousin of the LA 17 / 16 Wanda mid zone track.",
+      "personnel": [
+        "11",
+        "12"
+      ],
+      "modifiers": [
+        "Toss",
+        "Sift",
+        "Bluff",
+        "Al Oscar",
+        "Outside",
+        "Can"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 113
+        },
+        {
+          "book": "gb-2019",
+          "page": 114
+        },
+        {
+          "book": "gb-2019",
+          "page": 115
+        },
+        {
+          "book": "gb-2019",
+          "page": 116
+        },
+        {
+          "book": "gb-2019",
+          "page": 117
+        },
+        {
+          "book": "gb-2019",
+          "page": 301
+        },
+        {
+          "book": "gb-2019",
+          "page": 302
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.wide-zone.wanda-wipe",
+      "term": "39 / 38 Wanda Wipe",
+      "family": "wide-zone",
+      "means": "Gun weak wide zone with a Wipe: the play-side guard pins the A-gap tackle and the center pulls around for the backer. Off when there is a 3 technique. Carries a bubble or docking screen, or a Z quick-game tag.",
+      "onFilm": "Shotgun, back offset. Center pulls play side around a down-blocking guard while the rest of the line reaches. Receivers showing bubble on the perimeter.",
+      "personnel": [
+        "11",
+        "12"
+      ],
+      "modifiers": [
+        "Wipe",
+        "Bubble",
+        "Docking",
+        "Z Omaha",
+        "Z Dragon",
+        "Al Strike"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 118
+        },
+        {
+          "book": "gb-2019",
+          "page": 119
+        },
+        {
+          "book": "gb-2019",
+          "page": 384
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.wide-zone.force-gb",
+      "term": "18 / 19 Force",
+      "family": "wide-zone",
+      "means": "Two-back strong wide zone where the fullback goes to the support player: inside or outside the end if Sam is on the ball, around the edge if Sam is off. TE takes a walked-up Sam. Not the same as LA 16 / 17 Force.",
+      "onFilm": "I-back wide zone to the TE side; fullback runs for the force defender (safety/corner area) instead of doubling the end with the TE.",
+      "personnel": [
+        "21"
+      ],
+      "modifiers": [
+        "Toss",
+        "Z Sift",
+        "X-Z Now"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 213
+        },
+        {
+          "book": "gb-2019",
+          "page": 214
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.wide-zone.arc",
+      "term": "18 / 19 Arc",
+      "family": "wide-zone",
+      "means": "Two-back wide zone blocked by count: play-side blockers take #1, the fullback takes #2, center targets #3. Aims at the outside leg of the tackle. Becomes Force when the Sam walks up on the line.",
+      "onFilm": "Fullback arcs outside for the second defender in from the sideline while the line reaches; back a bit tighter than Zorro (tackle, not TE).",
+      "personnel": [
+        "21"
+      ],
+      "modifiers": [
+        "Sift"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 262
+        },
+        {
+          "book": "gb-2019",
+          "page": 263
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.wide-zone.support",
+      "term": "18 / 19 Support",
+      "family": "wide-zone",
+      "means": "One-back strong wide zone from trips, TE declared: center leaves the first box backer for the TE and takes the second. Slot and F block slot rules. Cans to weak Wanda vs a box issue.",
+      "onFilm": "11 personnel trips. Wide zone to the TE/trips side with the slot blocking the nickel or safety. Compare LA Zyn, which may be the same idea (not confirmed).",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Toss",
+        "Can"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 217
+        },
+        {
+          "book": "gb-2019",
+          "page": 218
+        },
+        {
+          "book": "gb-2019",
+          "page": 302
+        },
+        {
+          "book": "gb-2019",
+          "page": 381
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.wide-zone.zyn",
+      "term": "18 / 19 Zyn",
+      "family": "wide-zone",
+      "means": "LA one-back strong wide zone from 3x1 in 11: tackle, Y and the slot receiver block the end, nickel and the third defender in from the sideline. Normally carries Pulse. May match GB Support, not confirmed.",
+      "onFilm": "Trips with a slot tight to the TE. Slot receiver blocks down or in like an extra tight end, outside receiver stalks. Back wide to the D gap.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Toss",
+        "Pulse",
+        "Fist",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 16
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.wide-zone.trinity",
+      "term": "19 / 18 Trinity",
+      "family": "wide-zone",
+      "means": "LA wide zone to the open side with a three-man combo to the nickel: slot receiver joins the tackle so line plus slot handle 4 down, 2 backers and the nickel. Run with Pulse, Fly or Flow motion.",
+      "onFilm": "Wide zone away from the TE. Slot receiver cracks in next to the tackle on the end/nickel. Jet motion either into the run (Fly) or away from it (Flow).",
+      "personnel": [
+        "11",
+        "12"
+      ],
+      "modifiers": [
+        "Pulse",
+        "Fly",
+        "Flow / Flock",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 25
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 28
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 30
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.wide-zone.wizz",
+      "term": "18 / 19 Wizz",
+      "family": "wide-zone",
+      "means": "GB 11/12 wide zone that always shows a Sift on the diagrams and is paired with weak Wanda or a pass as the can. Exact meaning of the word is unclear from text; likely Wanda blocking plus a cross sift.",
+      "onFilm": "Bunch or trips-tight look. Wide zone one way with a receiver or TE coming back across to cut off the backside edge. Gun version is 38 / 39.",
+      "personnel": [
+        "11",
+        "12"
+      ],
+      "modifiers": [
+        "Bluff",
+        "Can"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 219
+        },
+        {
+          "book": "gb-2019",
+          "page": 220
+        },
+        {
+          "book": "gb-2019",
+          "page": 221
+        },
+        {
+          "book": "gb-2019",
+          "page": 222
+        }
+      ],
+      "basis": "gb-2019",
+      "confidence": "low"
+    },
+    {
+      "id": "run.wide-zone.washy",
+      "term": "18 / 19 Washy",
+      "family": "wide-zone",
+      "means": "GB 11 wide zone drawn with structure rules to the play side and a Sift behind it; reads like Wash (push-declared) plus a Y sift. Unclear from text beyond that.",
+      "onFilm": "Bunch or 2x2, sometimes with Z fly or ghost motion. Wide zone with the Y cutting off the backside end.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Z Fly",
+        "Z Ghost",
+        "Can"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 303
+        }
+      ],
+      "basis": "gb-2019",
+      "confidence": "low"
+    },
+    {
+      "id": "run.wide-zone.wendy",
+      "term": "19 / 18 Wendy",
+      "family": "wide-zone",
+      "means": "GB 12 wide zone to the weak side that always comes with a receiver in fly motion. Blocking shows normal backside combos; what the word changes is unclear from text.",
+      "onFilm": "Two-TE West set, receiver jets across at the snap, wide zone hits away from the TE side.",
+      "personnel": [
+        "12"
+      ],
+      "modifiers": [
+        "Fly"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 267
+        }
+      ],
+      "basis": "gb-2019",
+      "confidence": "low"
+    },
+    {
+      "id": "run.wide-zone.weasel",
+      "term": "18 / 19 Weasel",
+      "family": "wide-zone",
+      "means": "GB two-back open-formation wide zone with slot rules for the receivers, paired with 19 / 18 Weak as the can. Also appears as 14 Weasel inside zone. What the tag changes is unclear from text.",
+      "onFilm": "I formation with both receivers split (no TE surface), wide zone with the slot blocking the nickel.",
+      "personnel": [
+        "21"
+      ],
+      "modifiers": [
+        "Can"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 299
+        },
+        {
+          "book": "gb-2019",
+          "page": 171
+        },
+        {
+          "book": "gb-2019",
+          "page": 260
+        }
+      ],
+      "basis": "gb-2019",
+      "confidence": "low"
+    },
+    {
+      "id": "run.wide-zone.zelda",
+      "term": "19 / 18 Zelda",
+      "family": "wide-zone",
+      "means": "GB two-back toss wide zone to the weak side from Ace sets, canned to 18 / 19 Weak vs an unblockable strong safety. Fullback rule is unclear from text.",
+      "onFilm": "I or Weak set with Y on the other side, toss weak, play-side line showing Fan and Double calls.",
+      "personnel": [
+        "21"
+      ],
+      "modifiers": [
+        "Toss",
+        "Can"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 300
+        }
+      ],
+      "basis": "gb-2019",
+      "confidence": "low"
+    },
+    {
+      "id": "run.wide-zone.sammy",
+      "term": "18 / 19 Sammy",
+      "family": "wide-zone",
+      "means": "GB two-back strong wide zone called with Toss Sideline weak as the can vs an unblockable strong safety. Name suggests the fullback handles the Sam, but that is unclear from text.",
+      "onFilm": "I formation with FB bumped. Wide zone to the TE side, or the QB checks and tosses weak.",
+      "personnel": [
+        "21"
+      ],
+      "modifiers": [
+        "Toss",
+        "Can"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 265
+        }
+      ],
+      "basis": "gb-2019",
+      "confidence": "low"
+    },
+    {
+      "id": "run.wide-zone.sideline",
+      "term": "Toss 19 / 18 Sideline",
+      "family": "wide-zone",
+      "means": "Automatic toss to the weak side. Fullback man-reaches the end man (can cut him), tackle takes the first backer off the ball. \"Spot\" pushes the line one man and sends the receiver to the corner.",
+      "onFilm": "Reverse-out toss away from the TE, back runs for width right now. Fullback sprinting flat to hook or cut the weak-side end.",
+      "personnel": [
+        "21"
+      ],
+      "modifiers": [
+        "Al Spot",
+        "Can"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 264
+        },
+        {
+          "book": "gb-2019",
+          "page": 266
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.mid-zone.wanda",
+      "term": "17 / 16 Wanda",
+      "family": "mid-zone",
+      "means": "LA mid zone to the open side by box count: line plus TE account for 4 down and 2 backers. Tiff adds a flinch by a receiver. GB has no mid zone family; its 19 / 18 Wanda is the nearest relative.",
+      "onFilm": "Line steps play side but less flat than wide zone, QB opens at 4/8 o'clock, back tracks the C gap (outside leg of the tackle) away from the TE and makes one cut.",
+      "personnel": [
+        "11",
+        "12"
+      ],
+      "modifiers": [
+        "Tiff",
+        "Insert",
+        "Fly / Flight",
+        "Slalom",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 5
+        },
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 7
+        },
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 10
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.mid-zone.wash",
+      "term": "17 / 16 Wash",
+      "family": "mid-zone",
+      "means": "Wanda Push: open-side mid zone where the line still counts the box but alerts a Push to a down safety, so the combos climb one man further play side.",
+      "onFilm": "Same picture as 17 / 16 Wanda from 3x1; the front-side combo ends up on a walked-down safety instead of a backer.",
+      "personnel": [
+        "11",
+        "12"
+      ],
+      "modifiers": [
+        "Insert",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 7
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.mid-zone.wanda-fist",
+      "term": "17 / 16 Wanda Fist",
+      "family": "mid-zone",
+      "means": "Open-side Wanda where the fly motion only happens vs single-high with the safety rotated weak: the motion man accounts for that safety. Vs two-high shell or strong rotation there is no motion.",
+      "onFilm": "3x1. If the free safety is down on the run side the receiver jets across toward the run at the snap; if not, it is plain Wanda.",
+      "personnel": [
+        "11",
+        "12"
+      ],
+      "modifiers": [
+        "Fist",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 14
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.mid-zone.waffles",
+      "term": "17 / 16 Waffles",
+      "family": "mid-zone",
+      "means": "Wanda Fly plus Skate/Slalom: fly motion to the run side and the innermost receiver slides away from it, so the defense sees 2x2 Wanda. Ski adds an insert block on the slide.",
+      "onFilm": "Jet motion toward the open-side run while another receiver or TE slides behind the line the opposite way. Mid zone track, under center or gun (37 / 36).",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Flight",
+        "Ski",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 17
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.mid-zone.flash",
+      "term": "17 / 16 Flash",
+      "family": "mid-zone",
+      "means": "Wanda Flow: open-side mid zone with jet motion away from the run. Pre-snap the QB can give the sweep (Spirit / Alaska) instead. With Sift the TE cuts off the backside and the back gets it.",
+      "onFilm": "Receiver jets away from the run, line zones to the open side. Watch whether the ball goes to the jet man or the back.",
+      "personnel": [
+        "11",
+        "12"
+      ],
+      "modifiers": [
+        "Flock",
+        "Sift",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 19
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.mid-zone.base",
+      "term": "16 / 17",
+      "family": "mid-zone",
+      "means": "LA mid zone to the closed (TE) side, Mike-based. Normally comes with a backside Sift. With Fly and Ice a receiver skis across to the open side and the backside tackle mans the end.",
+      "onFilm": "Mid zone toward the TE, back on a C-gap track. Backside TE or receiver coming across to cut off the end.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Sift",
+        "Fly / Flight",
+        "Ice",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 21
+        },
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 29
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.mid-zone.stress",
+      "term": "16 / 17 Stress",
+      "family": "mid-zone",
+      "means": "Straight Sift: closed-side mid zone blocking the structure. TE goes through or arcs to #2 from the sideline, receiver has #1, line works to #3. Sift is automatic (backside tackle sifts or combos). For nickel only.",
+      "onFilm": "TE releases off the ball to a second-level defender instead of blocking the end; line zones toward him. Seen vs nickel, not base.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Sift"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 23
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.mid-zone.sway",
+      "term": "16 / 17 Sway",
+      "family": "mid-zone",
+      "means": "Wanda with a cross sift: split-flow mid zone to the closed side off a two-man surface. Can add Fly motion to the run side, a flinch, or a bubble.",
+      "onFilm": "Line zones to the TE side while a blocker crosses the formation the other way to cut off the end. Jet motion toward the run in the Fly version.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Fly / Flight",
+        "Flinch",
+        "Bubble",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 25
+        },
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 27
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.mid-zone.force",
+      "term": "16 / 17 Force",
+      "family": "mid-zone",
+      "means": "Wash with a Y sift and Flow motion: closed-side mid zone from 3x1, line works to #2 from the sideline outside-in, receiver takes #1. Different play from GB 18 / 19 Force.",
+      "onFilm": "Jet motion away from the run before the snap, Y comes back across to cut off the backside, mid zone to the closed side.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Flock",
+        "Bolt",
+        "Balloon",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 31
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.mid-zone.sponge",
+      "term": "37 / 36 Sponge",
+      "family": "mid-zone",
+      "means": "Gun Wash plus a bubble: offset-gun mid zone to the open side, line counts 4 down and 2 backers and alerts Push to the safety, with the bubble as the built-in throw.",
+      "onFilm": "Shotgun, back offset, 3x1 or 1x3 open. Mid zone away from trips with a bubble screen showing on the trips side.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Bubble",
+        "Exchange",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "08 Gun Only Mid Zone",
+          "page": 5
+        },
+        {
+          "book": "rams-2022",
+          "section": "22 Run Alerts",
+          "page": 5
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.mid-zone.gain",
+      "term": "37 / 36 Gain",
+      "family": "mid-zone",
+      "means": "Gun Wash from 2x2 with a pre-snap motion that does not change passing strength. Same box count and Push alert as Sponge.",
+      "onFilm": "Offset gun, short motion that stays on its own side, mid zone to the open side.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "08 Gun Only Mid Zone",
+          "page": 6
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.mid-zone.gordon",
+      "term": "37 / 36 Gordon",
+      "family": "mid-zone",
+      "means": "Gun Flash with a Sift: open-side gun mid zone with a motion that does change passing strength. Line targets #2 outside-in, possible Push to the nickel.",
+      "onFilm": "Offset gun, receiver motions across the formation, backside blocker sifts the end, mid zone to the open side.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Sift",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "08 Gun Only Mid Zone",
+          "page": 7
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.mid-zone.wagyu",
+      "term": "37 / 36 Wagyu",
+      "family": "mid-zone",
+      "means": "Gun Wanda: plain box-count mid zone to the open side from offset gun, any formation, no motion required.",
+      "onFilm": "Offset gun, back crosses the QB on a B-gap track, line zones to the open side and blocks the box.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "08 Gun Only Mid Zone",
+          "page": 8
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.tight-zone.wanda",
+      "term": "15 / 14 Wanda",
+      "family": "tight-zone",
+      "means": "One-back inside (tight) zone to the weak side by box count. Receivers on 4-5 or slot rules; LA adds Maybe / Misty / Miff rules for the receiver who may insert on a down safety.",
+      "onFilm": "Line steps vertical, not flat. Back opens, crosses over and squares up at the weak B gap, reading the first lineman past the center. Gun version is 35 / 34.",
+      "personnel": [
+        "11",
+        "12",
+        "21"
+      ],
+      "modifiers": [
+        "Toss",
+        "F Sift",
+        "Maybe",
+        "Misty",
+        "Miff",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 164
+        },
+        {
+          "book": "gb-2019",
+          "page": 165
+        },
+        {
+          "book": "gb-2019",
+          "page": 167
+        },
+        {
+          "book": "rams-2022",
+          "section": "09 Tight Zone",
+          "page": 5
+        }
+      ],
+      "basis": "both"
+    },
+    {
+      "id": "run.tight-zone.base",
+      "term": "14 / 15",
+      "family": "tight-zone",
+      "means": "Base strong-side inside zone, Mike declared. GB tags it with Al Oscar and alert insert; LA runs it with Fly motion and Ice (a receiver skis across, backside tackle mans the end). Paired as the same base play.",
+      "onFilm": "Downhill zone to the TE side, back squares up at the B gap. Motion across and a backside cut-off block in the LA version.",
+      "personnel": [
+        "11",
+        "12"
+      ],
+      "modifiers": [
+        "Toss",
+        "Al Oscar",
+        "Insert",
+        "Fly / Flight",
+        "Ice",
+        "Can"
+      ],
+      "aliases": [
+        {
+          "term": "14 / 15 Fly-Flight Ice",
+          "book": "rams-2022"
+        }
+      ],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 127
+        },
+        {
+          "book": "gb-2019",
+          "page": 128
+        },
+        {
+          "book": "rams-2022",
+          "section": "09 Tight Zone",
+          "page": 13
+        }
+      ],
+      "basis": "both"
+    },
+    {
+      "id": "run.tight-zone.f-sift",
+      "term": "14 / 15 F Sift",
+      "family": "tight-zone",
+      "means": "Inside zone to the closed side with the F crossing back to cut off the backside edge (split flow). LA runs it from one- or two-back slot sets with Fly motion. Gun is 34 / 35.",
+      "onFilm": "Line zones tight to the TE side, F comes across the formation behind them and kicks or cuts the backside end. Back downhill, can cut all the way back off the sift.",
+      "personnel": [
+        "12",
+        "21",
+        "13"
+      ],
+      "modifiers": [
+        "Fly / Flight",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [
+        {
+          "term": "14 / 15 F Sift Fly-Flight",
+          "book": "rams-2022"
+        }
+      ],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 269
+        },
+        {
+          "book": "gb-2019",
+          "page": 129
+        },
+        {
+          "book": "rams-2022",
+          "section": "09 Tight Zone",
+          "page": 11
+        }
+      ],
+      "basis": "both"
+    },
+    {
+      "id": "run.tight-zone.weak",
+      "term": "15 / 14 Weak",
+      "family": "tight-zone",
+      "means": "Two-back, full-flow inside zone to the weak B gap, Mike declared. Fullback leads on the Will. \"Spot\" sends the FB to the safety and pushes the line one man. Insert keeps the backside off the strong safety.",
+      "onFilm": "I formation iso look with zone blocking: fullback straight up into the weak B gap on the Will, back right behind him.",
+      "personnel": [
+        "21"
+      ],
+      "modifiers": [
+        "Toss",
+        "Insert",
+        "Al Spot",
+        "X-Z Ghost",
+        "Can"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 123
+        },
+        {
+          "book": "gb-2019",
+          "page": 124
+        },
+        {
+          "book": "gb-2019",
+          "page": 125
+        },
+        {
+          "book": "gb-2019",
+          "page": 126
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.tight-zone.split",
+      "term": "15 / 14 Split",
+      "family": "tight-zone",
+      "means": "Split-flow inside zone, Will declared. The F blocks the first backer off the ball inside the end on the side away from the call; backside combos depend on where the Sam is.",
+      "onFilm": "Line zones one way, F goes the other way and inserts on a backside linebacker rather than the end.",
+      "personnel": [
+        "21",
+        "12"
+      ],
+      "modifiers": [
+        "Toss",
+        "Al Short",
+        "Can"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 223
+        },
+        {
+          "book": "gb-2019",
+          "page": 224
+        },
+        {
+          "book": "gb-2019",
+          "page": 225
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.tight-zone.man",
+      "term": "14 / 15 Man",
+      "family": "tight-zone",
+      "means": "Inside zone strong with zone on the call side and man blocking on the backside. Fullback takes the Will (Mike on a hip slap, the tackle if a backer shows in the A gap). Wanda Y Man is the one-back version.",
+      "onFilm": "Play side zones; backside linemen stay on their own man with no combo. Fullback or Y crosses to the backside linebacker.",
+      "personnel": [
+        "21",
+        "12",
+        "11"
+      ],
+      "modifiers": [
+        "Toss",
+        "Can"
+      ],
+      "aliases": [
+        {
+          "term": "15 / 14 Wanda (Y) Man",
+          "book": "gb-2019"
+        }
+      ],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 226
+        },
+        {
+          "book": "gb-2019",
+          "page": 227
+        },
+        {
+          "book": "gb-2019",
+          "page": 228
+        },
+        {
+          "book": "gb-2019",
+          "page": 229
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.tight-zone.wash",
+      "term": "15 / 14 Wash",
+      "family": "tight-zone",
+      "means": "Cross-action inside zone with Push declared: targets slide one man play side and can change after the snap. Receivers block structure. Under center or offset gun (35 / 34).",
+      "onFilm": "In gun the back starts opposite, runs flat through the QB's toes then squares up at the B gap; QB rides the mesh and fakes a throw.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Fly",
+        "Can"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 169
+        },
+        {
+          "book": "gb-2019",
+          "page": 170
+        },
+        {
+          "book": "gb-2019",
+          "page": 180
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.tight-zone.wizz",
+      "term": "14 / 15 Wizz",
+      "family": "tight-zone",
+      "means": "GB 11 inside zone from bunch, called in a can pair with 15 / 14 Wanda and flipped on safety rotation. Looks like the LA Wifi idea (Wanda with a cross sift) but that match is not confirmed from text.",
+      "onFilm": "Bunch set, tight zone toward the bunch, sometimes with Z ghost motion and the QB opening deep.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Z Ghost",
+        "Bluff",
+        "Can"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 167
+        },
+        {
+          "book": "gb-2019",
+          "page": 168
+        },
+        {
+          "book": "gb-2019",
+          "page": 273
+        }
+      ],
+      "basis": "gb-2019",
+      "confidence": "low"
+    },
+    {
+      "id": "run.tight-zone.wifi",
+      "term": "14 / 15 Wifi",
+      "family": "tight-zone",
+      "means": "LA Wanda with a cross sift: split-flow tight zone to the closed side off a two-man surface. Can carry a flinch, a bubble, or Fly motion. May be the same play GB calls Wizz (not confirmed).",
+      "onFilm": "Tight zone to the TE side, a blocker crossing behind the line to cut off the backside end. Gun version is 34 / 35.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Flinch",
+        "Bubble",
+        "Fly / Flight",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "09 Tight Zone",
+          "page": 7
+        },
+        {
+          "book": "rams-2022",
+          "section": "09 Tight Zone",
+          "page": 9
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.tight-zone.washy",
+      "term": "14 / 15 Washy",
+      "family": "tight-zone",
+      "means": "GB 11 inside zone drawn with structure rules play side and a Sift behind it; reads like Wash plus a Y sift. Unclear from text beyond that.",
+      "onFilm": "2x2 with the Y off the ball or in motion; tight zone with the Y cutting off the backside.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Sift"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 305
+        }
+      ],
+      "basis": "gb-2019",
+      "confidence": "low"
+    },
+    {
+      "id": "run.tight-zone.wendy-f-sift",
+      "term": "15 / 14 Wendy F Sift",
+      "family": "tight-zone",
+      "means": "GB inside zone weak with a receiver in fly motion and the F sifting the backside. What Wendy adds beyond the fly motion is unclear from text.",
+      "onFilm": "Jet motion at the snap, tight zone away from the TE, F crossing to cut off the end.",
+      "personnel": [
+        "21",
+        "12"
+      ],
+      "modifiers": [
+        "Fly",
+        "F Sift"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 304
+        }
+      ],
+      "basis": "gb-2019",
+      "confidence": "low"
+    },
+    {
+      "id": "run.tight-zone.demon",
+      "term": "14 / 15 Demon",
+      "family": "tight-zone",
+      "means": "Inside zone strong where Demon = Z ghost motion plus a crack on the first second-level defender in the box, with a Sift on the backside and the QB opening deep.",
+      "onFilm": "Z fakes the ghost/orbit behind the QB or cracks down inside on a linebacker; tight zone hits behind it.",
+      "personnel": [
+        "21",
+        "12"
+      ],
+      "modifiers": [
+        "Ghost",
+        "Crack",
+        "Sift"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 330
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.tight-zone.sideline-insert",
+      "term": "Toss 15 / 14 Sideline Insert",
+      "family": "tight-zone",
+      "means": "Tossed inside zone to the weak side from two-back sets with the Z inserting on a box defender. Spot alert available. Fullback job is unclear from text.",
+      "onFilm": "Toss action but the back hits downhill inside; short-motion Z digs out a linebacker or safety.",
+      "personnel": [
+        "21"
+      ],
+      "modifiers": [
+        "Toss",
+        "Insert",
+        "Al Spot"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 329
+        }
+      ],
+      "basis": "gb-2019",
+      "confidence": "low"
+    },
+    {
+      "id": "run.tight-zone.pile-shield",
+      "term": "54 / 55 Wanda Pile Shield",
+      "family": "tight-zone",
+      "means": "GB gun inside zone (box count) with a tagged receiver concept, Pile and Shield, attached. The 50s series number is not explained in the pages read; unclear from text.",
+      "onFilm": "Shotgun 11, inside zone with receivers running a quick two-man concept instead of blocking.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Pile",
+        "Shield"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 130
+        }
+      ],
+      "basis": "gb-2019",
+      "confidence": "low"
+    },
+    {
+      "id": "run.gun-zone-read.wanda-dive",
+      "term": "31 / 30 Wanda",
+      "family": "gun-zone-read",
+      "means": "LA gun dive zone to the weak side: back takes a lead step and tracks the backside A gap. Ski adds a slide with insert, Solid tells the backside receiver he has no insert rule.",
+      "onFilm": "Shotgun, back next to the QB hits straight downhill at the center's far hip. Tightest zone track in the system.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Ski",
+        "Solid",
+        "Alstott / Dickerson",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "10 Gun Only Dive Zone / Zone Read",
+          "page": 5
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.gun-zone-read.polar",
+      "term": "31 / 30 Polar",
+      "family": "gun-zone-read",
+      "means": "LA dive zone read to the open side from 2x2. QB reaches and rides, and can pull it. TE away from the run takes his best release to the support player: arcs vs a 6 technique, goes through vs a 9.",
+      "onFilm": "Gun, QB rides the mesh with eyes on the unblocked end to the TE side; TE releases past that end without blocking him.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "10 Gun Only Dive Zone / Zone Read",
+          "page": 7
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.gun-zone-read.wanda-read",
+      "term": "31 / 30 Wanda Read",
+      "family": "gun-zone-read",
+      "means": "LA dive zone read from open formations (no TE): both edges are open and there is nobody to release on the backside, so the QB simply reads the backside end.",
+      "onFilm": "Gun trips or 1x3 open, no tight end attached. QB rides the back and keeps if the end crashes.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "10 Gun Only Dive Zone / Zone Read",
+          "page": 9
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.gap.duo",
+      "term": "12 / 13 Duo",
+      "family": "gap",
+      "means": "Strong-side gap scheme with no puller: vertical double teams up to the backers, TEs handle the end and Sam, back reads the first play-side linebacker. Receiver has Maybe rules (find the down safety, may insert).",
+      "onFilm": "Looks like power without a pulling guard. Double teams drive straight off the ball, back presses downhill at the A/B gap with square shoulders then bounces or bangs off the Mike.",
+      "personnel": [
+        "11",
+        "12",
+        "13",
+        "21"
+      ],
+      "modifiers": [
+        "Z Maybe",
+        "Misty",
+        "Miff",
+        "Tim",
+        "Dot",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 172
+        },
+        {
+          "book": "gb-2019",
+          "page": 173
+        },
+        {
+          "book": "rams-2022",
+          "section": "11 Gap Runs",
+          "page": 5
+        },
+        {
+          "book": "rams-2022",
+          "section": "11 Gap Runs",
+          "page": 7
+        },
+        {
+          "book": "rams-2022",
+          "section": "11 Gap Runs",
+          "page": 9
+        }
+      ],
+      "basis": "both"
+    },
+    {
+      "id": "run.gap.dos",
+      "term": "12 / 13 Dos",
+      "family": "gap",
+      "means": "GB name for Duo in 11: combos work only to the two box backers (backside LB declared), F blocks the nickel from bunch. LA keeps the word Duo in 11 with a 4 down plus two backer count, so treat it as the same family.",
+      "onFilm": "Duo from 2x2 or bunch with three receivers; no puller, slot or F digging out the nickel.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Insert",
+        "Z Maybe",
+        "Can"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 174
+        },
+        {
+          "book": "gb-2019",
+          "page": 175
+        },
+        {
+          "book": "gb-2019",
+          "page": 176
+        },
+        {
+          "book": "gb-2019",
+          "page": 177
+        },
+        {
+          "book": "gb-2019",
+          "page": 178
+        },
+        {
+          "book": "gb-2019",
+          "page": 179
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.gap.doctor",
+      "term": "12 / 13 Doctor",
+      "family": "gap",
+      "means": "LA non-puller gap run where a receiver wraps to the point of attack for the most dangerous man, building a three-man surface from a 2x2 start. Jab step and over-the-top handoff, meant to bounce to the edge.",
+      "onFilm": "Back jabs away then takes the ball going wide (D to C gap). A receiver folds in around the TE block as the lead.",
+      "personnel": [
+        "11",
+        "12",
+        "13"
+      ],
+      "modifiers": [
+        "Flow / Flock",
+        "Shove",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "11 Gap Runs",
+          "page": 11
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.gap.surgeon",
+      "term": "12 / 13 Surgeon",
+      "family": "gap",
+      "means": "Same wrap-and-bounce gap run as Doctor but it can get to the final three-man surface three ways: 2x2 with a wrap, 3x1 with Flow motion away, or 1x3 with Fly motion in.",
+      "onFilm": "Jab and over-the-top handoff, receiver wrapping to the edge, usually with jet motion one way or the other.",
+      "personnel": [
+        "11",
+        "12"
+      ],
+      "modifiers": [
+        "Flow / Flock",
+        "Shove",
+        "Fly",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "11 Gap Runs",
+          "page": 13
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.gap.dentist",
+      "term": "12 / 13 Dentist",
+      "family": "gap",
+      "means": "Doctor family, but the wrap ends in a 2x2 final picture: starts 1x3 and wraps a receiver over, or starts 2x2 with Flow motion and a wrap.",
+      "onFilm": "Jab, over-the-top handoff and bounce; wrapper comes from the far side so the formation finishes balanced.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Flow / Flock",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "11 Gap Runs",
+          "page": 16
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.gap.power",
+      "term": "12 / 13 Power",
+      "family": "gap",
+      "means": "Two-back, full-flow gap scheme. F kicks out the end man, backside guard pulls around the double team for the first color, TE tracks the C gap, Will declared. Back attacks the A gap downhill.",
+      "onFilm": "Down blocks play side, fullback kick-out on the end, backside guard pulling through the hole. Back drop-steps then hits tight inside.",
+      "personnel": [
+        "21",
+        "12"
+      ],
+      "modifiers": [
+        "Al Short",
+        "Load"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 230
+        },
+        {
+          "book": "gb-2019",
+          "page": 231
+        },
+        {
+          "book": "gb-2019",
+          "page": 349
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.gap.pop",
+      "term": "12 / 13 Pop",
+      "family": "gap",
+      "means": "One-back gap scheme: backside guard pulls around the double team to the first defender in the box, TE declared, end man is blocked man-on. Gun is 32 / 33 with reach-and-ride or same-side draw footwork.",
+      "onFilm": "Power look with no fullback: guard pulls and turns up inside, nobody kicks out. Back on a delayed, draw-like downhill path.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Might",
+        "Insert",
+        "Edge",
+        "Can"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 232
+        },
+        {
+          "book": "gb-2019",
+          "page": 233
+        },
+        {
+          "book": "gb-2019",
+          "page": 234
+        },
+        {
+          "book": "gb-2019",
+          "page": 235
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.gap.punch",
+      "term": "12 / 13 Punch",
+      "family": "gap",
+      "means": "LA one-back strong gap run with gap-wrap blocking: line blocks back, backside guard pulls and attacks the end man, Y releases to the play-side backer. Guard kicks out here, so it is not paired with GB Pop.",
+      "onFilm": "Guard pulls and kicks the end, back presses the A gap and reads that block. Can add flow motion with a receiver wrap. Gun is 32 / 33.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Flow / Flock",
+        "Wrap",
+        "Fly",
+        "Two-fer",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "11 Gap Runs",
+          "page": 20
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.gap.counter",
+      "term": "12 / 13 Counter",
+      "family": "gap",
+      "means": "Strong-side counter: backside guard trap-pulls the end man, F wraps for the first backer in the box, TE tracks the C gap, Will declared. LA Load Chuck Wrap is similar but wraps a receiver, so kept separate.",
+      "onFilm": "Back takes a counter step away, then follows two pullers back: guard kicks out, F turns up inside him. Over-the-top handoff.",
+      "personnel": [
+        "21",
+        "12"
+      ],
+      "modifiers": [],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 270
+        },
+        {
+          "book": "gb-2019",
+          "page": 271
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.gap.load-chuck-wrap",
+      "term": "12 / 13 Load Chuck Wrap",
+      "family": "gap",
+      "means": "LA strong-side counter from 12/13: F and Y combo the end to the second backer (Load), backside guard pulls for the end man, a receiver wraps to the hole. Snapped off fly motion, possible ghost fake.",
+      "onFilm": "Rocker step by the back, guard pulling to kick out, receiver folding in behind him as the second puller. Two TEs doubling at the point.",
+      "personnel": [
+        "12",
+        "13"
+      ],
+      "modifiers": [
+        "Load",
+        "Wrap",
+        "Ghost",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "11 Gap Runs",
+          "page": 18
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.gap.stanley",
+      "term": "13 / 12 Stanley",
+      "family": "gap",
+      "means": "Weak-side counter in 11: backside guard trap-pulls and kicks out the end man, the Y wraps for the first backer in the box, play-side tackle works to #2. Same blocking as LA Barkley. Gun is 33 / 32.",
+      "onFilm": "Back counter-steps toward the TE then comes back weak. Guard and TE both pull across: guard kicks, TE leads up inside.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Miff",
+        "Tango",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [
+        {
+          "term": "13 / 12 Barkley",
+          "book": "rams-2022"
+        }
+      ],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 308
+        },
+        {
+          "book": "gb-2019",
+          "page": 309
+        },
+        {
+          "book": "rams-2022",
+          "section": "11 Gap Runs",
+          "page": 22
+        }
+      ],
+      "basis": "both"
+    },
+    {
+      "id": "run.gap.stutter",
+      "term": "13 / 12 Stutter",
+      "family": "gap",
+      "means": "Weak-side counter from two-back or two-TE sets: backside guard trap-pulls the end, F wraps for the first backer. Backside tackle and TE handle the Sam with Ink, Thru or Pinch calls.",
+      "onFilm": "Same as Stanley but the second puller is the fullback/F from the backfield or wing instead of the in-line Y.",
+      "personnel": [
+        "21",
+        "12"
+      ],
+      "modifiers": [
+        "Bluff"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 306
+        },
+        {
+          "book": "gb-2019",
+          "page": 307
+        },
+        {
+          "book": "gb-2019",
+          "page": 383
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.perimeter.taxi",
+      "term": "19 / 18 Taxi",
+      "family": "perimeter",
+      "means": "Toss crack off a two-man surface: inside blocker seals the end man, outside blocker walls the first defender inside him, play-side tackle pulls for the widest. Zero declared. Run either way, gun is 39 / 38.",
+      "onFilm": "Reverse-out toss, receivers and TE blocking down, tackle pulling flat around them for the corner or force. Back runs for width then gets downhill.",
+      "personnel": [
+        "11",
+        "12"
+      ],
+      "modifiers": [
+        "Wipe",
+        "Can"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 272
+        },
+        {
+          "book": "gb-2019",
+          "page": 273
+        },
+        {
+          "book": "gb-2019",
+          "page": 384
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.perimeter.truck",
+      "term": "18 / 19 Truck",
+      "family": "perimeter",
+      "means": "Toss crack off a three-man surface: middle man seals the end, outside man walls inside, inside man goes out to block force, and the pulling tackle leads the back through the alley.",
+      "onFilm": "Bunch or tight trips. Two crack blocks, one receiver kicking out to the corner, tackle pulling as a lead blocker in front of the toss.",
+      "personnel": [
+        "21",
+        "12",
+        "11"
+      ],
+      "modifiers": [],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 274
+        },
+        {
+          "book": "gb-2019",
+          "page": 275
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.perimeter.cab",
+      "term": "19 / 18 Cab",
+      "family": "perimeter",
+      "means": "Toss crack off a three-man surface where the outside man stays on the corner: inside man seals the end, middle man walls inside, tackle pulls for the alley.",
+      "onFilm": "Trips with the widest receiver stalking the corner while the two inside him crack down; tackle pulls through the alley ahead of the toss.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 332
+        },
+        {
+          "book": "gb-2019",
+          "page": 333
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.perimeter.trailer",
+      "term": "19 / 18 Trailer",
+      "family": "perimeter",
+      "means": "GB two-back Transportation run. Diagrams show the two-man rule for a pulling play-side guard and a Wipe call; the full assignment is unclear from text.",
+      "onFilm": "I formation toss to the perimeter with a play-side guard pulling for the Mike.",
+      "personnel": [
+        "21"
+      ],
+      "modifiers": [
+        "Wipe"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 331
+        },
+        {
+          "book": "gb-2019",
+          "page": 384
+        }
+      ],
+      "basis": "gb-2019",
+      "confidence": "low"
+    },
+    {
+      "id": "run.perimeter.uber",
+      "term": "19 / 18 Uber",
+      "family": "perimeter",
+      "means": "GB 11 Transportation run with fly motion, blockers assigned to the widest and second-widest defenders, canned to 15 / 14 Wash vs shell. Unclear from text whether the back or the motion man carries it.",
+      "onFilm": "Stamp/Swamp bunch look with jet motion; perimeter play with two receivers blocking the two widest defenders.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Fly",
+        "Can"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 310
+        }
+      ],
+      "basis": "gb-2019",
+      "confidence": "low"
+    },
+    {
+      "id": "run.perimeter.delta-ferrari",
+      "term": "19 / 18 Delta Ferrari",
+      "family": "perimeter",
+      "means": "LA toss crack with a fake jet sweep first: QB reverse pivots, fakes the sweep, tosses to the back, one man cracks. Same family as GB Taxi / Truck / Cab but not matched to one of them.",
+      "onFilm": "Jet motion and a sweep fake one way, then a toss to the back going wide with a single crack block on the edge.",
+      "personnel": [
+        "11",
+        "12"
+      ],
+      "modifiers": [
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "12 Perimeter Runs",
+          "page": 5
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.perimeter.bounce",
+      "term": "38 / 39 Bounce",
+      "family": "perimeter",
+      "means": "Gun pin-and-pull to the perimeter. Tag = tackle pins the 3 technique and the guard pulls; Take = TE pins the end and the tackle pulls. Paired with LA Race: same numbers, same guard/tackle pull-by-alignment rule.",
+      "onFilm": "Shotgun, back runs flat across the QB for the numbers. One or two play-side linemen pull outside while the man next to them blocks down.",
+      "personnel": [
+        "11",
+        "12"
+      ],
+      "modifiers": [
+        "Docking",
+        "Bubble",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [
+        {
+          "term": "38 / 39 Race",
+          "book": "rams-2022"
+        }
+      ],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 163
+        },
+        {
+          "book": "gb-2019",
+          "page": 385
+        },
+        {
+          "book": "rams-2022",
+          "section": "12 Perimeter Runs",
+          "page": 6
+        }
+      ],
+      "basis": "both"
+    },
+    {
+      "id": "run.sweeps-specials.spirit-alaska",
+      "term": "Spirit / Alaska",
+      "family": "sweeps-specials",
+      "means": "Fly sweep to the motion man with zone run action by the back going the other way. Two play-side blockers take the two widest. LA runs it to a closed side off 17 / 16 Wanda action and uses it as Flash's give.",
+      "onFilm": "Receiver in full-speed jet motion takes the ball in front of the QB at about 4 yards; back and line show zone the opposite way. QB still boots.",
+      "personnel": [
+        "11",
+        "12",
+        "13",
+        "21"
+      ],
+      "modifiers": [
+        "Flip",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 131
+        },
+        {
+          "book": "gb-2019",
+          "page": 180
+        },
+        {
+          "book": "gb-2019",
+          "page": 310
+        },
+        {
+          "book": "rams-2022",
+          "section": "13 Sweeps & Specials",
+          "page": 8
+        }
+      ],
+      "basis": "both"
+    },
+    {
+      "id": "run.sweeps-specials.allegiant-american",
+      "term": "Allegiant / American",
+      "family": "sweeps-specials",
+      "means": "LA jet sweep to the open side with mid zone action (16 / 17) away. Two play-side blockers from 2x2; \"One\" from 3x1 means a single blocker on the most dangerous man. Exchange is an added tag.",
+      "onFilm": "Jet motion snapped at the B gap, QB opens to the sweeper, back fakes mid zone the other way. Sweep goes away from the TE.",
+      "personnel": [
+        "11",
+        "12",
+        "13"
+      ],
+      "modifiers": [
+        "Flip",
+        "Exchange",
+        "One",
+        "Can",
+        "R/P"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "13 Sweeps & Specials",
+          "page": 5
+        },
+        {
+          "book": "rams-2022",
+          "section": "13 Sweeps & Specials",
+          "page": 7
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.sweeps-specials.missile-rocket",
+      "term": "Missile / Rocket",
+      "family": "sweeps-specials",
+      "means": "LA full-flow jet sweep to the strong side: QB opens away from the sweep, hands it at 4 yards, then carries out a tight zone (14 / 15) fake with the back.",
+      "onFilm": "Jet sweep toward the TE side with everyone flowing with it, back faking inside zone.",
+      "personnel": [
+        "11",
+        "12",
+        "13"
+      ],
+      "modifiers": [
+        "Flip"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "13 Sweeps & Specials",
+          "page": 9
+        }
+      ],
+      "basis": "rams-2022"
+    },
+    {
+      "id": "run.sweeps-specials.around",
+      "term": "FK 14 / 15 Z Around",
+      "family": "sweeps-specials",
+      "means": "GB reverse: fake inside zone (F Sift in 21, Wizz in 11) and hand it to the Z coming around the other way. Receivers block the corner.",
+      "onFilm": "Inside zone fake to the back, Z comes behind the QB against the flow and takes it wide.",
+      "personnel": [
+        "21",
+        "11"
+      ],
+      "modifiers": [],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 181
+        },
+        {
+          "book": "gb-2019",
+          "page": 182
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.sweeps-specials.structure-man-sun",
+      "term": "58 / 59 Structure Man Sun",
+      "family": "sweeps-specials",
+      "means": "GB gun wide zone structure with man blocking backside and a quick two-man throw attached (Sun, drawn as slant plus under). The 50s number is not explained in the pages read; unclear from text.",
+      "onFilm": "Shotgun 11, wide zone action with two receivers running slant and under instead of blocking.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Sun"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 162
+        }
+      ],
+      "basis": "gb-2019",
+      "confidence": "low"
+    },
+    {
+      "id": "run.draw-qb.draw",
+      "term": "Draw Rt / Lt",
+      "family": "draw-qb",
+      "means": "GB gun draw in 11, called with a Scat pass as the can vs man. Line uses pass-pro style calls, slot receiver owns the nickel only if he looks in the backfield. Draw Will is the version that cans vs middle-of-field closed.",
+      "onFilm": "Shotgun, line pass-sets and invites the rush upfield, delayed handoff. Receivers release like a pass.",
+      "personnel": [
+        "11"
+      ],
+      "modifiers": [
+        "Will",
+        "Can"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 334
+        },
+        {
+          "book": "gb-2019",
+          "page": 335
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.draw-qb.q8",
+      "term": "Q8",
+      "family": "draw-qb",
+      "means": "GB quarterback call paired with an inside zone can: stay with Q8 vs man, can to 34 Wanda or 14 Weasel vs zone. What Q8 itself is (QB run or keep) is unclear from text.",
+      "onFilm": "Gun or weak slot set. If the QB does not check, it is the Q8 call; vs zone you will see the inside zone instead.",
+      "personnel": [
+        "21",
+        "12",
+        "11"
+      ],
+      "modifiers": [
+        "Can"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 166
+        },
+        {
+          "book": "gb-2019",
+          "page": 171
+        }
+      ],
+      "basis": "gb-2019",
+      "confidence": "low"
+    },
+    {
+      "id": "run.goal-line.goal-line",
+      "term": "18 / 19 Goal Line",
+      "family": "goal-line",
+      "means": "GB heavy-personnel (Tank) wide zone to the strong side, handoff or toss, with Big A and Triple combinations. 19 / 18 Away is the same idea to the other side.",
+      "onFilm": "Jumbo set, I-backs, whole line reaching to the TE side on the goal line.",
+      "personnel": [
+        "Tank"
+      ],
+      "modifiers": [
+        "Toss",
+        "Away"
+      ],
+      "aliases": [
+        {
+          "term": "19 / 18 Away",
+          "book": "gb-2019"
+        }
+      ],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 343
+        },
+        {
+          "book": "gb-2019",
+          "page": 344
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.goal-line.g-lead",
+      "term": "19 / 18 G Lead",
+      "family": "goal-line",
+      "means": "GB Tank goal-line perimeter run. Name says the guard leads; diagrams only show Big A and D combinations, so the pull is unclear from text.",
+      "onFilm": "Jumbo I formation, run to the edge with a lineman pulling in front.",
+      "personnel": [
+        "Tank"
+      ],
+      "modifiers": [],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 345
+        }
+      ],
+      "basis": "gb-2019",
+      "confidence": "low"
+    },
+    {
+      "id": "run.goal-line.gl-zorro",
+      "term": "19 / 18 Goal Line Zorro",
+      "family": "goal-line",
+      "means": "Goal-line Zorro: fullback and TE work through the end man to the support player while the line zones wide.",
+      "onFilm": "Jumbo I, fullback and TE doubling the edge defender then one coming off to the safety.",
+      "personnel": [
+        "Tank"
+      ],
+      "modifiers": [],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 346
+        }
+      ],
+      "basis": "gb-2019"
+    },
+    {
+      "id": "run.goal-line.lead",
+      "term": "12 / 13 Lead",
+      "family": "goal-line",
+      "means": "GB Tank downhill run with a fullback lead and Slam / Single combinations, QB opening deep. Lead Switch changes who the lead and a lineman take; details unclear from text.",
+      "onFilm": "Jumbo I, fullback straight into the A/B gap ahead of the back.",
+      "personnel": [
+        "Tank"
+      ],
+      "modifiers": [
+        "Switch"
+      ],
+      "aliases": [
+        {
+          "term": "12 / 13 Lead Switch",
+          "book": "gb-2019"
+        }
+      ],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 347
+        },
+        {
+          "book": "gb-2019",
+          "page": 348
+        }
+      ],
+      "basis": "gb-2019",
+      "confidence": "low"
+    },
+    {
+      "id": "run.goal-line.power-load",
+      "term": "12 / 13 Power Load",
+      "family": "goal-line",
+      "means": "Goal-line Power with Load: TE and wing combo on the edge (D combination) or track the D gap, backside hinges, a cut block on the backside.",
+      "onFilm": "Jumbo I, guard pulling, extra TE doubling at the point of attack.",
+      "personnel": [
+        "Tank"
+      ],
+      "modifiers": [
+        "Load"
+      ],
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 349
+        },
+        {
+          "book": "gb-2019",
+          "page": 382
+        }
+      ],
+      "basis": "gb-2019"
+    }
+  ],
+  "modifiers": [
+    {
+      "term": "Toss",
+      "means": "Same blocking, different exchange: QB reverses out and tosses, back takes a lateral crossover path with a slight downhill lean. Written in front of the number, e.g. Toss 18 Zorro.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 107
+        },
+        {
+          "book": "gb-2019",
+          "page": 114
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 8
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 16
+        }
+      ]
+    },
+    {
+      "term": "Sift",
+      "means": "Backside cut-off by a TE, F or receiver: he takes the first defender outside the backside tackle and lets nobody cross his face. Lets the back cut all the way back. Also a line word for the backside tackle protecting the B gap.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 107
+        },
+        {
+          "book": "gb-2019",
+          "page": 120
+        },
+        {
+          "book": "gb-2019",
+          "page": 379
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 18
+        },
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 19
+        }
+      ]
+    },
+    {
+      "term": "F Sift / Y Sift / Z Sift",
+      "means": "Names who the sifter is. F Sift makes the play split flow because the F comes back across the formation.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 164
+        },
+        {
+          "book": "gb-2019",
+          "page": 213
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 14
+        },
+        {
+          "book": "rams-2022",
+          "section": "09 Tight Zone",
+          "page": 11
+        }
+      ]
+    },
+    {
+      "term": "Can",
+      "means": "Two plays are called. QB runs the first unless he sees the stated look, then says \"can\" and goes to the second. GB prints the trigger on the page: Unblockable, Box Issue, Rotation, Shell, 2 DBs, Man/Zone.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 111
+        },
+        {
+          "book": "gb-2019",
+          "page": 114
+        },
+        {
+          "book": "gb-2019",
+          "page": 116
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 8
+        }
+      ]
+    },
+    {
+      "term": "R/P",
+      "means": "LA note on the call sheet that the \"can\" partner may be a run or a pass.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 3
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 8
+        }
+      ]
+    },
+    {
+      "term": "Al (Alert)",
+      "means": "GB prefix for a built-in adjustment the QB may trigger, e.g. Al Oscar, Al Spot, Al Z Insert, Al Short. LA writes ALERT the same way on its diagrams.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 106
+        },
+        {
+          "book": "gb-2019",
+          "page": 110
+        },
+        {
+          "book": "gb-2019",
+          "page": 127
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 30
+        }
+      ]
+    },
+    {
+      "term": "Oscar",
+      "means": "QB flips the run to the other side. Rule: vs one-high run away from the down safety; vs two-high run away from (or to, as tagged) the bounce read. Line re-declares on the call.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 106
+        },
+        {
+          "book": "gb-2019",
+          "page": 127
+        },
+        {
+          "book": "gb-2019",
+          "page": 128
+        },
+        {
+          "book": "gb-2019",
+          "page": 301
+        }
+      ]
+    },
+    {
+      "term": "Spot",
+      "means": "GB answer to unblockable support on Weak and Sideline runs. QB shows a fist: line pushes its targets one man play side, fullback takes the safety, play-side receiver takes the corner.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 110
+        },
+        {
+          "book": "gb-2019",
+          "page": 123
+        },
+        {
+          "book": "gb-2019",
+          "page": 264
+        }
+      ]
+    },
+    {
+      "term": "4 Call",
+      "means": "GB adjustment vs weak rotation on Zorro/Zap: guard slaps the fullback's hip to send him to the Mike, TE blocks his man alone. Quatro makes it automatic. LA tag Fup (free safety down weak) does the same job on Zap Fup.",
+      "aliases": [
+        {
+          "term": "Fup",
+          "book": "rams-2022"
+        }
+      ],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 107
+        },
+        {
+          "book": "gb-2019",
+          "page": 215
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 8
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 10
+        }
+      ]
+    },
+    {
+      "term": "Key",
+      "means": "LA tag on Zap from one-back slot: tells the line there are no Fup calls (exceptions noted for corners over). TEs and tackle take end, Sam and corner.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 10
+        }
+      ]
+    },
+    {
+      "term": "Pulse",
+      "means": "LA tag: vs any single-high look pull the targeting back one spot and block the defense as spots. GB line call for the same shift is Pull.",
+      "aliases": [
+        {
+          "term": "Pull",
+          "book": "gb-2019"
+        }
+      ],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 16
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 25
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 23
+        },
+        {
+          "book": "gb-2019",
+          "page": 377
+        }
+      ]
+    },
+    {
+      "term": "Shove",
+      "means": "LA tag, opposite of Pulse: vs single-high push the targeting forward one spot. GB line call for the same shift is Push.",
+      "aliases": [
+        {
+          "term": "Push",
+          "book": "gb-2019"
+        }
+      ],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 23
+        },
+        {
+          "book": "rams-2022",
+          "section": "11 Gap Runs",
+          "page": 11
+        },
+        {
+          "book": "gb-2019",
+          "page": 377
+        }
+      ]
+    },
+    {
+      "term": "Wanda",
+      "means": "Box-count blocking: line plus TE take the 4 down linemen and 2 box backers, receivers handle the rest by 8-9, 4-5 or slot rules. GB wording is box declared, block the box.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 113
+        },
+        {
+          "book": "gb-2019",
+          "page": 164
+        },
+        {
+          "book": "gb-2019",
+          "page": 381
+        },
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 5
+        },
+        {
+          "book": "rams-2022",
+          "section": "08 Gun Only Mid Zone",
+          "page": 8
+        }
+      ]
+    },
+    {
+      "term": "Wash",
+      "means": "Wanda Push. Box count with the targets pushed one man to the play side, typically to a down safety. GB wording is push declared.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 169
+        },
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 7
+        },
+        {
+          "book": "rams-2022",
+          "section": "08 Gun Only Mid Zone",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "term": "Structure",
+      "means": "Blockers, including receivers, block the front and coverage shell as it lines up rather than a fixed count.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 120
+        },
+        {
+          "book": "gb-2019",
+          "page": 381
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 21
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 23
+        }
+      ]
+    },
+    {
+      "term": "Fly / Flight",
+      "means": "Jet motion toward the point of attack. Flight is the same motion with a late snap point. GB writes it in the formation (Z Fly, X Fly, F Fly).",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 23
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 12
+        },
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 10
+        },
+        {
+          "book": "gb-2019",
+          "page": 131
+        },
+        {
+          "book": "gb-2019",
+          "page": 267
+        }
+      ]
+    },
+    {
+      "term": "Flow / Flock",
+      "means": "Jet motion away from the point of attack. Flock is Flow with a late snap point.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 23
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 23
+        },
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 19
+        }
+      ]
+    },
+    {
+      "term": "Fist",
+      "means": "LA tag: the jet motion only happens vs single-high weak rotation, where the motion man accounts for the rotated safety. Do not confuse with the GB fist hand signal for Spot.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 14
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 16
+        }
+      ]
+    },
+    {
+      "term": "Insert",
+      "means": "Backside receiver comes inside to block a box defender, usually the down safety. In GB it also tells the backside tackle and TE to work only to the Sam.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 123
+        },
+        {
+          "book": "gb-2019",
+          "page": 174
+        },
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 5
+        },
+        {
+          "book": "rams-2022",
+          "section": "22 Run Alerts",
+          "page": 7
+        }
+      ]
+    },
+    {
+      "term": "Maybe / Misty / Miff / Tim",
+      "means": "Receiver rules on tight zone and Duo. Maybe: find the down safety, might insert. Misty: Maybe with possible insert. Miff: Maybe rules, fly vs a down weak safety. Tim: backside tackle mans the end, slot takes best path to nickel.",
+      "aliases": [
+        {
+          "term": "Z Maybe",
+          "book": "gb-2019"
+        },
+        {
+          "term": "Might",
+          "book": "gb-2019"
+        }
+      ],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 172
+        },
+        {
+          "book": "gb-2019",
+          "page": 174
+        },
+        {
+          "book": "rams-2022",
+          "section": "09 Tight Zone",
+          "page": 5
+        },
+        {
+          "book": "rams-2022",
+          "section": "11 Gap Runs",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "term": "Tiff / Flinch",
+      "means": "Tiff = Wanda with a flinch. The flinch itself (a short pre-snap movement by a receiver) is not described; unclear from text.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 5
+        },
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 27
+        },
+        {
+          "book": "rams-2022",
+          "section": "09 Tight Zone",
+          "page": 7
+        }
+      ],
+      "confidence": "low"
+    },
+    {
+      "term": "Skate / Slalom / Ski",
+      "means": "A slide by the innermost receiver away from the point of attack. Ski = Skate with an insert block.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 17
+        },
+        {
+          "book": "rams-2022",
+          "section": "10 Gun Only Dive Zone / Zone Read",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "term": "Ice",
+      "means": "Ski to the open side with the backside tackle manning (Money) the end. Needs an open backside B gap.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 29
+        },
+        {
+          "book": "rams-2022",
+          "section": "09 Tight Zone",
+          "page": 13
+        }
+      ]
+    },
+    {
+      "term": "Solid",
+      "means": "Backside receiver has no insert rule on this call.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "10 Gun Only Dive Zone / Zone Read",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "term": "Bubble / Docking",
+      "means": "Receiver screen attached to a gun run. GB lists Docking as a tag or a signal. LA uses Bubble as the three-man-side answer.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 118
+        },
+        {
+          "book": "gb-2019",
+          "page": 163
+        },
+        {
+          "book": "gb-2019",
+          "page": 197
+        },
+        {
+          "book": "rams-2022",
+          "section": "08 Gun Only Mid Zone",
+          "page": 5
+        },
+        {
+          "book": "rams-2022",
+          "section": "22 Run Alerts",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "term": "Now",
+      "means": "Quick throw to the tagged single receiver (X Now, Z Now) off run action when his defender is off or the count is bad.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 108
+        },
+        {
+          "book": "gb-2019",
+          "page": 160
+        },
+        {
+          "book": "rams-2022",
+          "section": "22 Run Alerts",
+          "page": 7
+        },
+        {
+          "book": "rams-2022",
+          "section": "22 Run Alerts",
+          "page": 8
+        }
+      ]
+    },
+    {
+      "term": "Ghost",
+      "means": "Receiver fakes an orbit/ghost path behind the QB; QB opens deep. GB tags X or Z Ghost, and Demon means Z Ghost.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 125
+        },
+        {
+          "book": "gb-2019",
+          "page": 168
+        },
+        {
+          "book": "gb-2019",
+          "page": 330
+        },
+        {
+          "book": "rams-2022",
+          "section": "11 Gap Runs",
+          "page": 18
+        }
+      ]
+    },
+    {
+      "term": "Bluff",
+      "means": "GB tag that shows up next to Sift on the diagrams (Wizz Bluff, Wanda Bluff, Stutter Bluff). Likely the sifter bypassing the end, but unclear from text.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 222
+        },
+        {
+          "book": "gb-2019",
+          "page": 301
+        },
+        {
+          "book": "gb-2019",
+          "page": 307
+        }
+      ],
+      "confidence": "low"
+    },
+    {
+      "term": "Cat",
+      "means": "On Zorro Cat the play-side receiver blocks the safety with a push-crack technique instead of the corner.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 258
+        }
+      ]
+    },
+    {
+      "term": "Wipe",
+      "means": "Guard and center trade jobs: play-side guard pins the A-gap tackle, center pulls for the linebacker. Not used vs a 3 technique.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 118
+        },
+        {
+          "book": "gb-2019",
+          "page": 384
+        }
+      ]
+    },
+    {
+      "term": "Wrap",
+      "means": "LA gap-run tag: a receiver (or the Y on Barkley) folds inside to the point of attack as the extra blocker.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "11 Gap Runs",
+          "page": 11
+        },
+        {
+          "book": "rams-2022",
+          "section": "11 Gap Runs",
+          "page": 18
+        },
+        {
+          "book": "rams-2022",
+          "section": "11 Gap Runs",
+          "page": 20
+        }
+      ]
+    },
+    {
+      "term": "Load",
+      "means": "TE plus wing work together on the end up to the play-side backer.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 22
+        },
+        {
+          "book": "rams-2022",
+          "section": "11 Gap Runs",
+          "page": 18
+        },
+        {
+          "book": "gb-2019",
+          "page": 349
+        },
+        {
+          "book": "gb-2019",
+          "page": 382
+        }
+      ]
+    },
+    {
+      "term": "Sideline",
+      "means": "GB word that makes the play an automatic toss.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 264
+        },
+        {
+          "book": "gb-2019",
+          "page": 329
+        }
+      ]
+    },
+    {
+      "term": "One / Exchange / Flip",
+      "means": "Sweep tags in LA. One: 3x1 version, a single play-side blocker on the most dangerous man. Exchange and Flip are listed but not described; unclear from text.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "13 Sweeps & Specials",
+          "page": 3
+        },
+        {
+          "book": "rams-2022",
+          "section": "13 Sweeps & Specials",
+          "page": 7
+        },
+        {
+          "book": "rams-2022",
+          "section": "22 Run Alerts",
+          "page": 5
+        }
+      ],
+      "confidence": "low"
+    },
+    {
+      "term": "Dot / Two-fer / Alstott / Dickerson",
+      "means": "Tags printed on LA Duo, Punch and 31 / 30 Wanda with no description on the pages read; unclear from text.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "11 Gap Runs",
+          "page": 9
+        },
+        {
+          "book": "rams-2022",
+          "section": "11 Gap Runs",
+          "page": 20
+        },
+        {
+          "book": "rams-2022",
+          "section": "10 Gun Only Dive Zone / Zone Read",
+          "page": 5
+        }
+      ],
+      "confidence": "low"
+    },
+    {
+      "term": "Gain / Gordon",
+      "means": "LA gun words that tell the line a motion is coming. Gain: motion that does not change passing strength. Gordon: motion that does.",
+      "aliases": [],
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "08 Gun Only Mid Zone",
+          "page": 6
+        },
+        {
+          "book": "rams-2022",
+          "section": "08 Gun Only Mid Zone",
+          "page": 7
+        }
+      ]
+    }
+  ],
+  "blocking": [
+    {
+      "term": "Single",
+      "means": "Play-side zone combo, center and play-side guard on the tackle up to the declared backer.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 374
+        },
+        {
+          "book": "gb-2019",
+          "page": 375
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 14
+        }
+      ]
+    },
+    {
+      "term": "Double",
+      "means": "Play-side zone combo, guard and tackle on the DT or end up to the declared backer.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 374
+        },
+        {
+          "book": "gb-2019",
+          "page": 376
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 15
+        }
+      ]
+    },
+    {
+      "term": "Triple",
+      "means": "Play-side zone combo, tackle and TE on the end up to the declared backer or DB. Tackle makes the call.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 374
+        },
+        {
+          "book": "gb-2019",
+          "page": 376
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 15
+        }
+      ]
+    },
+    {
+      "term": "Homer",
+      "means": "Play-side zone combo, TE and wing on a 9 technique up to the backer or DB. LA calls this TE/wing combo Zap.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 374
+        },
+        {
+          "book": "gb-2019",
+          "page": 376
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 15
+        }
+      ],
+      "aliases": [
+        {
+          "term": "Zap",
+          "book": "rams-2022"
+        }
+      ]
+    },
+    {
+      "term": "A",
+      "means": "Backside zone combo, center and backside guard on the nose to the declared backer. In GB gap schemes A/B/C/D name the play-side double teams instead.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 378
+        },
+        {
+          "book": "gb-2019",
+          "page": 382
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 16
+        }
+      ]
+    },
+    {
+      "term": "B",
+      "means": "Backside zone combo, backside guard and tackle on the DT to the declared backer.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 378
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 16
+        }
+      ]
+    },
+    {
+      "term": "C",
+      "means": "Backside zone combo, backside tackle and TE on the end to the Sam or Mike. C Sup works it to a down strong safety.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 378
+        },
+        {
+          "book": "gb-2019",
+          "page": 379
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 16
+        }
+      ]
+    },
+    {
+      "term": "D",
+      "means": "Backside zone combo, TE and wing on the D-gap defender to the safety or outside backer.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 379
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 16
+        }
+      ]
+    },
+    {
+      "term": "E",
+      "means": "LA 13-personnel backside combo between the two wing TEs for the outside backer and force.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 16
+        }
+      ]
+    },
+    {
+      "term": "Rico / Tite / Cut",
+      "means": "GB technique words on a combo. Cut: automatic on outside zone backside. Tite: backer is behind the lineman, stay on the double longer. Rico: backer is stacked or play side, lead man comes off fast.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 375
+        },
+        {
+          "book": "gb-2019",
+          "page": 378
+        },
+        {
+          "book": "gb-2019",
+          "page": 382
+        }
+      ]
+    },
+    {
+      "term": "Chip",
+      "means": "Combo vs a shade with the target backer aligned inside or backside. LA also uses Chip Double and Chip Triple on wide zone: stab and slam the down lineman to keep width before climbing.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 375
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 14
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 15
+        }
+      ]
+    },
+    {
+      "term": "Single Back",
+      "means": "GB: Single vs a 2 technique when the backer is backside.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 375
+        }
+      ]
+    },
+    {
+      "term": "Double Hand / Double Slam",
+      "means": "GB Double variations when the tackle is uncovered and the backer sits inside the 3 technique: Hand on outside zone, Slam on inside zone.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 376
+        }
+      ]
+    },
+    {
+      "term": "Money",
+      "means": "Man block on the defender lined up over you, play side or backside.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 18
+        }
+      ],
+      "aliases": [
+        {
+          "term": "Man",
+          "book": "gb-2019"
+        }
+      ]
+    },
+    {
+      "term": "Man",
+      "means": "GB backside call: guard and tackle each block their own down lineman, no combo.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 379
+        }
+      ]
+    },
+    {
+      "term": "Money Thru",
+      "means": "LA mid/wide zone call when the center is uncovered: he goes straight through to the backer and the guard reaches alone.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 14
+        }
+      ]
+    },
+    {
+      "term": "Middle",
+      "means": "GB center call that he is manned on the nose or a backer, so the guards have no help from him.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 380
+        }
+      ]
+    },
+    {
+      "term": "Fan",
+      "means": "Play-side guard and tackle work out to the end and the overhang (GB), or guard tells tackle to take the widest defender in a look (LA).",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 377
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 19
+        }
+      ]
+    },
+    {
+      "term": "Out / T.O.",
+      "means": "Tackle and TE each block the man outside or over them, one on one. LA version is T.O. (turn out): TE tells the tackle to block out on the man over the TE.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 377
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 19
+        }
+      ],
+      "aliases": [
+        {
+          "term": "T.O.",
+          "book": "rams-2022"
+        }
+      ]
+    },
+    {
+      "term": "Mingo",
+      "means": "GB backside call: tackle and TE take the end and a Sam on the line vs a 5 and 9 technique (guard can join vs 3, 5 and 9).",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 377
+        }
+      ]
+    },
+    {
+      "term": "Push",
+      "means": "Slide the second-level targets one man to the play side, used when the combo is working to a safety or DB.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 377
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 15
+        }
+      ]
+    },
+    {
+      "term": "Pull",
+      "means": "GB: slide the second-level targets one man to the backside. LA play tag for it is Pulse.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 377
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 23
+        }
+      ],
+      "aliases": [
+        {
+          "term": "Pulse",
+          "book": "rams-2022"
+        }
+      ]
+    },
+    {
+      "term": "Take 2",
+      "means": "Backside TE sifts from the line to the next rotating defender (second or third level).",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 379
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 18
+        }
+      ]
+    },
+    {
+      "term": "Sift (tackle)",
+      "means": "Backside tackle protects his inside gap first, then takes the most dangerous man from first to second level.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 379
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 18
+        }
+      ],
+      "aliases": [
+        {
+          "term": "Sift MDM",
+          "book": "rams-2022"
+        }
+      ]
+    },
+    {
+      "term": "Big",
+      "means": "GB call by a solo blocker to build a 3, 4 or 5 man zone with him as the lead, usually vs an expected slant.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 380
+        }
+      ]
+    },
+    {
+      "term": "Swoop",
+      "means": "Pressure answer on zone: everyone behind the call gains a man and a gap and blocks on tracks.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 380
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 17
+        }
+      ]
+    },
+    {
+      "term": "Scoop",
+      "means": "LA three-man call (center, play-side guard and tackle) on open-side zone when line movement is expected.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 17
+        }
+      ]
+    },
+    {
+      "term": "Gang / Gang Trio",
+      "means": "LA backside call on mid and wide zone vs Under, Jam or Bear: center, guard and tackle (Trio adds the TE) work together and the backside guard has no help.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 17
+        }
+      ]
+    },
+    {
+      "term": "Mob",
+      "means": "LA tight zone version of Gang vs Under, Jam or Bear fronts.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 17
+        }
+      ]
+    },
+    {
+      "term": "Storm Triple",
+      "means": "LA three-man wide zone combo (guard, tackle, TE) called by the TE when Sam and strong safety are both up on the line.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 15
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 10
+        }
+      ]
+    },
+    {
+      "term": "Alert Zebra",
+      "means": "LA mid/wide zone alert for a zone pressure coming from away from the run: shut off the backside and create the cut.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 14
+        }
+      ]
+    },
+    {
+      "term": "Reach",
+      "means": "Individual play-side zone block at the point of attack; landmark changes with tight, mid or wide zone.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 18
+        }
+      ]
+    },
+    {
+      "term": "Plug / Drive",
+      "means": "LA tight zone calls. Plug: tackle and guard vs a stacked backer inside the 3 technique (needs a 9 technique). Drive: center and guard vs a shaded nose.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 18
+        }
+      ]
+    },
+    {
+      "term": "Drive Cutoff",
+      "means": "Backside tackle or TE drives to cut off a down lineman's pursuit on tight zone.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 19
+        }
+      ]
+    },
+    {
+      "term": "Base Drive / Hog",
+      "means": "Covered play-side lineman blocks for vertical movement. Hog is the play-side tackle doing it on gap runs vs a look on the open side.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 19
+        }
+      ]
+    },
+    {
+      "term": "Tag / Take",
+      "means": "GB pin-and-pull calls. Tag: tackle pins the 3 technique, guard pulls outside, TE blocks the end. Take: TE pins the end, tackle pulls outside.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 385
+        },
+        {
+          "book": "gb-2019",
+          "page": 163
+        }
+      ]
+    },
+    {
+      "term": "Strait",
+      "means": "GB call for line and TE to step to their gap and get vertical as a three-man zone vs movement (example given on Dos).",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 385
+        }
+      ]
+    },
+    {
+      "term": "Jump Hook",
+      "means": "Technique for pinning a play-side defensive lineman on perimeter or Transportation runs.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 384
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 19
+        }
+      ]
+    },
+    {
+      "term": "Two Man Rule",
+      "means": "GB: vs two defenders outside the tackle, the pulling guard checks the end on his way to the Mike and pins him if he comes free.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 384
+        }
+      ]
+    },
+    {
+      "term": "Ace",
+      "means": "LA gap double, center and play-side guard on the nose to the Will or Jack backer.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 20
+        }
+      ]
+    },
+    {
+      "term": "Deuce",
+      "means": "LA gap double, play-side guard and tackle on the DT to the Will.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 20
+        }
+      ]
+    },
+    {
+      "term": "Doom",
+      "means": "LA vertical gap double, play-side guard and tackle on the DT to the Mike. Doom Center adds the center vs Jam or Bear.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 20
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 21
+        }
+      ]
+    },
+    {
+      "term": "Tram",
+      "means": "LA gap double, play-side tackle and TE to the Mike point. Doom @ Tram starts as Doom and converts.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 21
+        }
+      ]
+    },
+    {
+      "term": "Trey",
+      "means": "LA gap double, play-side tackle and TE on the end to the Will or Jack.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 21
+        }
+      ]
+    },
+    {
+      "term": "Feed",
+      "means": "LA alert added to Ace, Doom or Tram when the down lineman is a two-gapper.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 20
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 21
+        }
+      ]
+    },
+    {
+      "term": "Gaucho",
+      "means": "GB backside gap combo, center and backside guard on the nose to the declared backer (Duo). LA names it by direction: Rake to the right, Lawn to the left.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 384
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 21
+        }
+      ],
+      "aliases": [
+        {
+          "term": "Rake / Lawn",
+          "book": "rams-2022"
+        }
+      ]
+    },
+    {
+      "term": "Back",
+      "means": "Center blocks back on the backside A to B gap. In LA the Back call also sends the play-side guard down on the nose.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 382
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 20
+        }
+      ],
+      "aliases": [
+        {
+          "term": "Choke",
+          "book": "rams-2022"
+        }
+      ]
+    },
+    {
+      "term": "Hinge",
+      "means": "Backside tackle (or TE) secures the B gap then hinges out to the C gap.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 382
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 21
+        }
+      ],
+      "aliases": [
+        {
+          "term": "Post Hinge",
+          "book": "rams-2022"
+        }
+      ]
+    },
+    {
+      "term": "Post Cutoff",
+      "means": "LA technique for a backside guard or tackle covered on his outside gap on gap runs.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 21
+        }
+      ]
+    },
+    {
+      "term": "Down",
+      "means": "Block down on the defender in the inside gap. GB center call to gap everything down vs backside fire or Jam fronts; LA all-down version vs Bear is Dallas.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 383
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 19
+        },
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 21
+        }
+      ],
+      "aliases": [
+        {
+          "term": "Dallas",
+          "book": "rams-2022"
+        }
+      ]
+    },
+    {
+      "term": "Stack",
+      "means": "GB play-side tackle call to man the play side of a gap scheme; alerts the pulling guard.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 383
+        }
+      ]
+    },
+    {
+      "term": "Dos Rule",
+      "means": "GB: two defenders outside the play-side tackle, so the tackle blocks the end.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 383
+        }
+      ]
+    },
+    {
+      "term": "Ink / Thru / Pinch",
+      "means": "GB backside calls for who gets the Sam on counter. Ink: TE releases inside the end. Thru: tackle climbs, TE cuts off the end. Pinch: center chips and climbs, tackle cuts off the DT, TE hinges.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 383
+        }
+      ]
+    },
+    {
+      "term": "Me / You",
+      "means": "LA trap-play calls between play-side guard and tackle for who takes the designated backer.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 22
+        }
+      ]
+    },
+    {
+      "term": "Club",
+      "means": "LA backside call on draws (or backside Duo): tackle takes the Will while the guard blocks out on the end.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 22
+        }
+      ]
+    },
+    {
+      "term": "Tango",
+      "means": "LA game-plan call on Barkley when there is no B-gap defender to double: tells the backside guard to pull for the first defender off the ball instead.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "03 OL Terminology",
+          "page": 22
+        },
+        {
+          "book": "rams-2022",
+          "section": "11 Gap Runs",
+          "page": 22
+        }
+      ]
+    },
+    {
+      "term": "Declared (Mike / Will / Zero / TE / Box / Count)",
+      "means": "GB way of saying who the center targets: the Mike, the Will, the first backer head-up to play side, the second box backer (first left for the TE), the first second-level box defender, or #3 in the count.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 381
+        },
+        {
+          "book": "gb-2019",
+          "page": 262
+        }
+      ]
+    },
+    {
+      "term": "8-9 / 4-5 / Slot rules",
+      "means": "Receiver blocking rules named for the hole: 8-9 on wide zone, 4-5 on inside zone and gap runs, slot rules for an inside receiver. Structure rules replace them on Structure calls.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 113
+        },
+        {
+          "book": "gb-2019",
+          "page": 123
+        },
+        {
+          "book": "gb-2019",
+          "page": 120
+        }
+      ]
+    }
+  ],
+  "alerts": [
+    {
+      "term": "Run Alerts / Solutions",
+      "means": "LA section of quick answers attached to a run, sorted by how many receivers are on that side (3-man, 2-man, 1-man). The pages are diagrams with labels only, so each answer below is read from the labels.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "22 Run Alerts",
+          "page": 3
+        },
+        {
+          "book": "rams-2022",
+          "section": "22 Run Alerts",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "term": "Bubble (3-man side)",
+      "means": "Trips side runs a bubble with the other two blocking #1, #2 or the most dangerous man. Shown on 37 Sponge.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "22 Run Alerts",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "term": "Bolt (3-man side)",
+      "means": "Motion man (Z Bolt) gets a quick throw behind two blockers, shown on 36 Gain. Route detail unclear from text.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "22 Run Alerts",
+          "page": 5
+        }
+      ],
+      "confidence": "low"
+    },
+    {
+      "term": "Exchange",
+      "means": "Shown on 36 Sponge Exchange from Speed Tout: blockers swap who takes #1 and #2. Unclear from text beyond the label.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "22 Run Alerts",
+          "page": 5
+        }
+      ],
+      "confidence": "low"
+    },
+    {
+      "term": "Stork",
+      "means": "Tag for the single or outside receiver (X Stork) on Wanda and Zap vs a man-on corner. The route itself is unclear from text.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "22 Run Alerts",
+          "page": 6
+        },
+        {
+          "book": "rams-2022",
+          "section": "22 Run Alerts",
+          "page": 8
+        }
+      ],
+      "confidence": "low"
+    },
+    {
+      "term": "Sight Adjust Hitch vs Cat",
+      "means": "On 16 Sift and 17 Wash the receiver converts to a hitch if the corner blitzes.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "22 Run Alerts",
+          "page": 6
+        },
+        {
+          "book": "rams-2022",
+          "section": "22 Run Alerts",
+          "page": 8
+        }
+      ]
+    },
+    {
+      "term": "Now / Nows",
+      "means": "Quick throw right now to the receiver when the defender is off or the box is loaded. Shown as Duo Nows (both receivers) and Zap X Now.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "22 Run Alerts",
+          "page": 7
+        },
+        {
+          "book": "rams-2022",
+          "section": "22 Run Alerts",
+          "page": 8
+        },
+        {
+          "book": "gb-2019",
+          "page": 108
+        }
+      ]
+    },
+    {
+      "term": "Insert Shield",
+      "means": "On 15 Wanda from a stack: one receiver inserts on the box safety while the other runs Shield. What Shield is, is unclear from text.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "22 Run Alerts",
+          "page": 7
+        },
+        {
+          "book": "gb-2019",
+          "page": 130
+        }
+      ],
+      "confidence": "low"
+    },
+    {
+      "term": "Fade (#2 Now)",
+      "means": "Outside receiver runs a fade vs press, with #2 on a Now. On the one-man side it is X Fade alone.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "22 Run Alerts",
+          "page": 7
+        },
+        {
+          "book": "rams-2022",
+          "section": "22 Run Alerts",
+          "page": 9
+        }
+      ]
+    },
+    {
+      "term": "Unblockable",
+      "means": "Can or Oscar trigger: a support defender (usually a down safety) on the run side that nobody is assigned to. LA wording is unblockable support.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 106
+        },
+        {
+          "book": "gb-2019",
+          "page": 111
+        },
+        {
+          "book": "gb-2019",
+          "page": 114
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 8
+        },
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 21
+        }
+      ]
+    },
+    {
+      "term": "Box Issue",
+      "means": "GB can trigger: one more defender in the box than the scheme counts. LA calls it 4 count on Wash and Sponge.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 116
+        },
+        {
+          "book": "gb-2019",
+          "page": 176
+        },
+        {
+          "book": "gb-2019",
+          "page": 218
+        },
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 7
+        },
+        {
+          "book": "rams-2022",
+          "section": "08 Gun Only Mid Zone",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "term": "Rotation",
+      "means": "GB can trigger: safety rotates down to the run side after the call (weak rotation or strong rotation named on the diagram).",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 112
+        },
+        {
+          "book": "gb-2019",
+          "page": 167
+        },
+        {
+          "book": "gb-2019",
+          "page": 212
+        }
+      ]
+    },
+    {
+      "term": "Shell",
+      "means": "Can trigger: two-high look. GB cans runs to a pass vs shell on Weak, Split, Man and Dos; LA lists Shell as the criteria on Sway.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 126
+        },
+        {
+          "book": "gb-2019",
+          "page": 178
+        },
+        {
+          "book": "gb-2019",
+          "page": 224
+        },
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 27
+        }
+      ]
+    },
+    {
+      "term": "2 DBs",
+      "means": "Can trigger on Zap/Zorro: two defensive backs to the run side that the TE surface cannot reach.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 161
+        },
+        {
+          "book": "gb-2019",
+          "page": 259
+        },
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 10
+        }
+      ]
+    },
+    {
+      "term": "Man / Zone",
+      "means": "GB can trigger read from coverage: keep the first call vs man, can vs zone (Q8, Pop, Draw).",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 166
+        },
+        {
+          "book": "gb-2019",
+          "page": 234
+        },
+        {
+          "book": "gb-2019",
+          "page": 334
+        }
+      ]
+    },
+    {
+      "term": "Playside External Pressure / Slot Pressure",
+      "means": "LA QB criteria on most mid, tight and gap runs: check out when a slot or edge defender outside the box is coming to the run side. GB writes the same trigger as slot pressure.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 10
+        },
+        {
+          "book": "rams-2022",
+          "section": "09 Tight Zone",
+          "page": 5
+        },
+        {
+          "book": "rams-2022",
+          "section": "11 Gap Runs",
+          "page": 11
+        },
+        {
+          "book": "gb-2019",
+          "page": 116
+        }
+      ]
+    },
+    {
+      "term": "Call It and Run It",
+      "means": "No check: the run is on regardless of look. LA uses it on Zap and Stress; GB prints it on the Transportation tosses.",
+      "sources": [
+        {
+          "book": "rams-2022",
+          "section": "06 Wide Zone",
+          "page": 5
+        },
+        {
+          "book": "rams-2022",
+          "section": "07 Mid Zone",
+          "page": 23
+        },
+        {
+          "book": "gb-2019",
+          "page": 272
+        }
+      ]
+    },
+    {
+      "term": "Dirty Edge (9 Tech)",
+      "means": "GB can trigger on Spirit / Alaska: a wide 9 technique on the sweep side, so check to 15 / 14 Wash.",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 180
+        }
+      ]
+    },
+    {
+      "term": "Hip Slap",
+      "means": "GB physical signal: a guard or tackle slaps the fullback's hip to change his assignment (to the Mike on a 4 call or a Fan).",
+      "sources": [
+        {
+          "book": "gb-2019",
+          "page": 107
+        },
+        {
+          "book": "gb-2019",
+          "page": 123
+        },
+        {
+          "book": "gb-2019",
+          "page": 226
+        }
+      ]
+    }
+  ]
+}

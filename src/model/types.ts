@@ -163,8 +163,30 @@ export type Formation = {
   signature?: string;
   /** How often this formation was charted; recomputed from the snaps table on every import. */
   usage?: FormationUsage;
+  /** The chart's own name ("11 Gun 2x2 Rt") when `name` is a system call. */
+  chartName?: string;
+  /** The system call the name was built from (systems/eagles/nameFormation). */
+  system?: FormationSystemCall;
   createdAt: string;
   updatedAt: string;
+};
+
+export type FormationSystemCall = {
+  /** Which system, e.g. "eagles-2026". */
+  id: string;
+  /** The formation word alone: "Trips". */
+  base: string;
+  /** The system's family: "3x1 'T'". */
+  family: string;
+  strength: SnapStrength;
+  /** Variation words: Close, Tight, Open ... */
+  tags: string[];
+  /** Gun: which side of the quarterback the back is on, relative to the call strength. */
+  back?: 'strong' | 'weak';
+  /** Same picture, different jobs. */
+  alternates: string[];
+  /** 'closest' = no book picture matched; nearest word used. */
+  confidence: 'rule' | 'closest';
 };
 
 export type FormationUsage = {
@@ -215,6 +237,8 @@ export type Snap = {
   result?: string;
   yards?: number;
   motion?: string;
+  /** The motion in system words, e.g. "WR Fly", "Y Lt", "H Rat" (systems/eagles/nameMotion). */
+  motionCall?: string;
   /** The "Set:" text from the chart notes: what was actually seen on film. */
   set?: string;
   notes?: string;

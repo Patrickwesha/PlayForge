@@ -100,6 +100,19 @@ export const formationSchema = z.object({
       template: z.number().int().nonnegative(),
     })
     .optional(),
+  chartName: z.string().optional(),
+  system: z
+    .object({
+      id: z.string(),
+      base: z.string(),
+      family: z.string(),
+      strength: z.enum(['Rt', 'Lt']),
+      tags: z.array(z.string()),
+      back: z.enum(['strong', 'weak']).optional(),
+      alternates: z.array(z.string()),
+      confidence: z.enum(['rule', 'closest']),
+    })
+    .optional(),
   createdAt: z.string(),
   updatedAt: z.string(),
 });
@@ -126,6 +139,7 @@ export const snapSchema = z.object({
   result: z.string().optional(),
   yards: z.number().optional(),
   motion: z.string().optional(),
+  motionCall: z.string().optional(),
   set: z.string().optional(),
   notes: z.string().optional(),
   formationId: z.string().min(1),

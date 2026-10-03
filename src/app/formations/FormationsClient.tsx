@@ -40,7 +40,7 @@ export function FormationsClient() {
         (!family || f.family === family) &&
         (!reviewOnly || f.confidence === 'needs-review') &&
         matchesPlaybook(book, f.id, memberOf) &&
-        `${f.name} ${f.personnel ?? ''} ${f.tags.join(' ')} ${f.family ?? ''} ${f.confidence ?? ''} ${f.note ?? ''} ${f.usage?.snapIds.join(' ') ?? ''}`.toLowerCase().includes(q.toLowerCase()),
+        `${f.name} ${f.chartName ?? ''} ${f.personnel ?? ''} ${f.tags.join(' ')} ${f.family ?? ''} ${f.confidence ?? ''} ${f.note ?? ''} ${f.usage?.snapIds.join(' ') ?? ''}`.toLowerCase().includes(q.toLowerCase()),
     );
     if (sort === 'usage') rows.sort((a, b) => usageOf(b) - usageOf(a) || a.name.localeCompare(b.name));
     return rows;

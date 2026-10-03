@@ -1,0 +1,187 @@
+{
+  "id": "eagles-2026",
+  "name": "Eagles 2026 system",
+  "coordinator": "Sean Mannion",
+  "summary": "A charting and diagramming language for the 2026 Eagles offense, rebuilt from the two playbooks closest to Sean Mannion: Green Bay 2019 (LaFleur, where he coached in 2024 and 2025) and the Rams 2022 (McVay, the offense he played in from 2017 to 2018). When the two books use different words for the same thing, the Green Bay word is the main one and the Rams word is listed as an alias.",
+  "honesty": "Nobody outside the building knows the real Eagles words. This is the family language, used the same way every week so the film charts and the drawings line up. Where film cannot show which receiver has which job, the system says so instead of guessing.",
+  "books": {
+    "gb-2019": { "title": "Green Bay 2019 (LaFleur)", "note": "Page = page of the PDF. Open it in the reader.", "reader": "/playbooks/gb-2019/read" },
+    "rams-2022": { "title": "Rams 2022 (McVay)", "note": "Page = page inside that section's PDF." }
+  },
+  "lineage": [
+    { "years": "2015 to 2018", "team": "Rams", "role": "Quarterback", "system": "Fisher staff, then McVay from 2017 with LaFleur as coordinator", "why": "The 2017 Rams language is what LaFleur carried to Green Bay, so the Green Bay 2019 book is close to what he played in." },
+    { "years": "2019 to 2023", "team": "Vikings, Seahawks", "role": "Quarterback", "system": "Kubiak and Stefanski wide zone in Minnesota, then O'Connell (McVay tree). Waldron (McVay tree) in Seattle", "why": "Same family the whole way: wide zone, play pass off it, keepers." },
+    { "years": "2024 to 2025", "team": "Packers", "role": "Offensive assistant, then quarterbacks coach", "system": "LaFleur", "why": "His only coaching stop before Philadelphia. This is why the Green Bay word wins a tie." },
+    { "years": "2026", "team": "Eagles", "role": "Offensive coordinator", "system": "His own", "why": "What the weekly film chart is recording." }
+  ],
+  "principles": [
+    { "title": "Motion and shifts on most snaps", "means": "Motion at the snap, fly motion, and shifts from empty back to a normal set, so the defense cannot key run or pass from the picture.", "chart": "Always fill in the Motion note: who, from where, which way, moving or set at the snap." },
+    { "title": "Under center and wide zone", "means": "The run game starts with wide zone from under center, with mid zone, tight zone and gap runs built off the same looks.", "chart": "Record under center, gun or pistol on every snap. It is part of the call." },
+    { "title": "Play pass that looks like the run", "means": "Play action and keepers are tied to a run number, so the first two steps of the line and the back look like the run.", "chart": "Name the run the fake copies (for example Pass 18) before naming the routes." },
+    { "title": "Pure progression reads", "means": "The quarterback reads one, two, three in order instead of picking a side from the coverage.", "chart": "When drawing a pass, number the progression." }
+  ],
+  "callOrder": {
+    "means": "A call is said in a fixed order. Chart and name plays in the same order so every week reads the same.",
+    "parts": [
+      { "n": 1, "part": "Shift", "example": "Lab to" },
+      { "n": 2, "part": "Backfield word", "example": "Gun" },
+      { "n": 3, "part": "Formation and strength", "example": "Trips Rt" },
+      { "n": 4, "part": "Variation", "example": "Close" },
+      { "n": 5, "part": "Motion", "example": "F Fly" },
+      { "n": 6, "part": "Run number, or protection", "example": "18, or 2 Jet" },
+      { "n": 7, "part": "Run tag, or pass concept", "example": "Zorro, or Y Stick" },
+      { "n": 8, "part": "Can, alert", "example": "can 19 Wanda" }
+    ],
+    "sources": [{ "book": "gb-2019", "page": 3 }, { "book": "rams-2022", "section": "01 General", "page": 5 }]
+  },
+  "positions": [
+    { "term": "Y", "means": "Tight end. The formation strength is his side: Rt and Lt in a call mean where the Y goes." },
+    { "term": "Z", "means": "Mostly the strong-side receiver. Off the ball when a tight end is on his side." },
+    { "term": "X", "means": "Mostly the weak-side receiver, on the ball." },
+    { "term": "F", "means": "The adjuster: the formation word talks to him. Fullback in 21, second tight end in 12, third receiver in 11." },
+    { "term": "H", "means": "Halfback." }
+  ],
+  "personnel": [
+    { "term": "11", "means": "1 back, 1 tight end, 3 receivers. F is the third receiver." },
+    { "term": "12", "means": "1 back, 2 tight ends, 2 receivers. F is the second tight end." },
+    { "term": "13", "means": "1 back, 3 tight ends, 1 receiver. The receiver is tagged X or Z: 13X, 13Z." },
+    { "term": "21", "means": "2 backs, 1 tight end, 2 receivers. F is the fullback." },
+    { "term": "22", "means": "2 backs, 2 tight ends, 1 receiver, tagged 22X or 22Z." },
+    { "term": "20", "means": "2 backs, 3 receivers. The third receiver plays the Y spot." },
+    { "term": "10", "means": "1 back, 4 receivers. The fourth receiver plays the Y spot." },
+    { "term": "01 / 02", "means": "No back. 01 = 1 tight end and 4 receivers, 02 = 2 tight ends and 3 receivers." },
+    { "term": "J", "means": "Jumbo: an extra lineman plays a tight end spot (Rams word)." }
+  ],
+  "personnelSources": [{ "book": "gb-2019", "page": 10 }, { "book": "rams-2022", "section": "01 General", "page": 13 }],
+  "alignment": {
+    "means": "Base splits, so a drawing looks the same every time.",
+    "rules": [
+      "Outside receiver: 2 yards outside the numbers to the field, 4 yards outside the numbers into the boundary. Ball in the middle: use the field split.",
+      "Slot: halfway between the outside receiver and the end man on the line.",
+      "Three detached to one side: outside man 3 outside the numbers, inside man 1 outside the hash, middle man splits them.",
+      "A -5- on a diagram is a 5 yard split from the end man on the line. A -3- is the bunch split.",
+      "Under center: halfback's toes at 7.5 yards, fullback's heels at 5.",
+      "Gun: quarterback's heels at 5, back beside him in the B gap. Pistol: quarterback at 4, back at 7."
+    ],
+    "sources": [{ "book": "gb-2019", "page": 11 }]
+  },
+  "backfield": [
+    { "term": "(nothing)", "means": "Under center is the default. No word is said.", "chart": "Under Center" },
+    { "term": "Gun", "means": "Quarterback in the shotgun, back beside him. Said before the formation: Gun Trips Rt.", "chart": "Gun, RB L or Gun, RB R" },
+    { "term": "Pistol", "means": "Quarterback at 4 yards, back straight behind him.", "chart": "Pistol" },
+    { "term": "back strong / back weak", "means": "Neither book has a word for which side of the quarterback the gun back stands on. The play tells him. The chart still records it, so PlayForge keeps it as a note on the formation: strong = the Y's side.", "chart": "RB L / RB R", "own": true }
+  ],
+  "families": [
+    { "id": "2back", "name": "2 Back", "means": "Two backs behind the quarterback. The word says where the F (the second back) stands." },
+    { "id": "3x1", "name": "3x1 'T'", "means": "One back. Three receivers to the Y's side counting the Y, one away. Words start with T." },
+    { "id": "bunch", "name": "Bunch 'B'", "means": "3x1 with the three squeezed into a bunch near the tackle. Words start with B." },
+    { "id": "2x2", "name": "2x2 'D'", "means": "One back. Y and one receiver strong, two receivers weak. Words start with D." },
+    { "id": "stack", "name": "2x2 Stack 'S'", "means": "2x2 with the two weak receivers tight together at a 5 yard split. Words start with S." },
+    { "id": "1x3", "name": "1x3 'F'", "means": "One back. The Y alone on his side, three receivers away from him. Words start with F." },
+    { "id": "1x3bunch", "name": "1x3 Bunch 'CR'", "means": "1x3 with the three weak receivers in a bunch. Words start with CR." },
+    { "id": "big", "name": "Big", "means": "22, 13 and 23 personnel. Same words as the 2 back and 3x1 sets, with the personnel in front." },
+    { "id": "empty", "name": "Empty", "means": "No back behind the quarterback. Call the one-back formation the other four make, then a letter for where the back lined up." }
+  ],
+  "formations": [
+    { "term": "I", "family": "2back", "personnel": "21", "packKey": "i-rt-21", "means": "F straight behind the quarterback, H behind him.", "onFilm": "Two backs stacked behind the quarterback.", "aliases": [], "sources": [{ "book": "gb-2019", "page": 13 }, { "book": "rams-2022", "section": "01 General", "page": 19 }] },
+    { "term": "Strong", "family": "2back", "personnel": "21", "packKey": "strong-rt-21", "means": "F offset to the Y's side, behind the tackle's inside leg.", "onFilm": "Fullback cheated toward the tight end.", "aliases": [], "sources": [{ "book": "gb-2019", "page": 13 }, { "book": "gb-2019", "page": 28 }] },
+    { "term": "Weak", "family": "2back", "personnel": "21", "packKey": "weak-rt-21", "means": "F offset away from the Y.", "onFilm": "Fullback cheated away from the tight end.", "aliases": [], "sources": [{ "book": "gb-2019", "page": 13 }, { "book": "gb-2019", "page": 28 }] },
+    { "term": "Red", "family": "2back", "personnel": "21", "packKey": "red-rt-21", "means": "Split backs at 5 yards, F on the Y's side. Change is the same picture with the backs swapped.", "onFilm": "A back on each side of the quarterback. In the gun this is the two-back look.", "aliases": [], "sources": [{ "book": "gb-2019", "page": 13 }] },
+    { "term": "West", "family": "3x1", "personnel": "12 / 21", "packKey": "west-rt-21", "means": "F off the ball just outside the Y. One back.", "onFilm": "Two tight ends on the same side, the outside one a step off the ball (a wing).", "aliases": [], "sources": [{ "book": "gb-2019", "page": 13 }, { "book": "gb-2019", "page": 28 }, { "book": "rams-2022", "section": "01 General", "page": 22 }] },
+    { "term": "East", "family": "3x1", "personnel": "12 / 21", "packKey": "east-rt-21", "means": "F off the ball just inside the Y.", "onFilm": "A wing tucked between the tackle and the tight end.", "aliases": [], "sources": [{ "book": "gb-2019", "page": 13 }, { "book": "gb-2019", "page": 28 }] },
+    { "term": "Trips", "family": "3x1", "personnel": "11", "packKey": "trips-rt-11", "means": "Y on the line, F in the slot, Z outside. X alone away.", "onFilm": "Tight end attached with two receivers outside him, one receiver on the other side.", "aliases": [], "sources": [{ "book": "gb-2019", "page": 16 }, { "book": "rams-2022", "section": "01 General", "page": 22 }] },
+    { "term": "Trio", "family": "3x1", "personnel": "11", "packKey": "trio-rt-11", "means": "Trips with the Z in the slot and the F outside.", "onFilm": "Same picture as Trips. Only the names of the two receivers change.", "sameAs": "Trips", "aliases": [], "sources": [{ "book": "gb-2019", "page": 16 }] },
+    { "term": "Trax", "family": "3x1", "personnel": "11", "packKey": "trax-rt-11", "means": "Trips with the X as the outside receiver on the strong side and the F alone away.", "onFilm": "Same picture as Trips.", "sameAs": "Trips", "aliases": [], "sources": [{ "book": "gb-2019", "page": 16 }, { "book": "gb-2019", "page": 26 }] },
+    { "term": "Train", "family": "3x1", "personnel": "11", "packKey": "train-rt-11", "means": "Three detached: F inside, Y in the middle, Z outside.", "onFilm": "No attached tight end on the three-receiver side. The tight end is the middle man.", "aliases": [], "sources": [{ "book": "gb-2019", "page": 16 }] },
+    { "term": "Trout", "family": "3x1", "personnel": "11", "packKey": "trout-rt-11", "means": "Three detached with the Y as the outside man.", "onFilm": "Tight end split widest on the three-receiver side.", "aliases": [], "sources": [{ "book": "gb-2019", "page": 16 }] },
+    { "term": "Bunch", "family": "bunch", "personnel": "11", "packKey": "bunch-rt-11", "means": "Y inside and off, F at the point on the ball, Z outside and off.", "onFilm": "Three in a tight triangle just outside the tackle, tight end the inside man.", "aliases": [], "sources": [{ "book": "gb-2019", "page": 16 }, { "book": "rams-2022", "section": "01 General", "page": 23 }] },
+    { "term": "Bin", "family": "bunch", "personnel": "11", "packKey": "bin-rt-11", "means": "Bunch with the Y at the point.", "onFilm": "Tight end is the man on the ball in the middle of the bunch.", "aliases": [], "sources": [{ "book": "gb-2019", "page": 16 }] },
+    { "term": "Buddy", "family": "bunch", "personnel": "11", "packKey": "buddy-rt-11", "means": "Bunch with the Y outside.", "onFilm": "Tight end is the outside man of the bunch.", "aliases": [], "sources": [{ "book": "gb-2019", "page": 16 }] },
+    { "term": "Box", "family": "bunch", "personnel": "11", "packKey": "box-rt-11", "means": "Bunch with the X as the outside man and the F alone away.", "onFilm": "Same picture as Bunch.", "sameAs": "Bunch", "aliases": [], "sources": [{ "book": "gb-2019", "page": 16 }, { "book": "gb-2019", "page": 26 }] },
+    { "term": "Deuce", "family": "2x2", "personnel": "12", "packKey": "deuce-rt-12", "means": "A tight end on the line each side, a receiver outside each.", "onFilm": "Balanced: tight end and receiver both sides.", "aliases": [{ "term": "Solo", "book": "rams-2022" }], "sources": [{ "book": "gb-2019", "page": 17 }, { "book": "rams-2022", "section": "01 General", "page": 26 }] },
+    { "term": "Dice", "family": "2x2", "personnel": "11", "packKey": "dice-rt-11", "means": "Y and Z strong. X outside and F in the slot weak.", "onFilm": "Tight end attached with one receiver, two receivers away.", "aliases": [{ "term": "Double", "book": "rams-2022" }], "sources": [{ "book": "gb-2019", "page": 17 }, { "book": "rams-2022", "section": "01 General", "page": 26 }] },
+    { "term": "Dixie", "family": "2x2", "personnel": "11", "packKey": "dixie-rt-11", "means": "Dice with the F outside and the X in the slot.", "onFilm": "Same picture as Dice.", "sameAs": "Dice", "aliases": [{ "term": "Dixie", "book": "rams-2022" }], "sources": [{ "book": "gb-2019", "page": 17 }] },
+    { "term": "Dyno", "family": "2x2", "personnel": "11", "packKey": "dyno-rt-11", "means": "Dice with Open: the Y leaves the tackle and stands in the slot, the Z takes the ball.", "onFilm": "2x2 with no attached tight end. He is flexed 5 yards or more.", "aliases": [{ "term": "Double Open", "book": "rams-2022" }], "sources": [{ "book": "gb-2019", "page": 17 }] },
+    { "term": "Stack", "family": "stack", "personnel": "11", "packKey": "stack-rt-11", "means": "Weak side: F on the ball at a 5 yard split, X off the ball on his outside hip.", "onFilm": "Two receivers tight together a few yards outside the weak tackle.", "aliases": [{ "term": "Stack", "book": "rams-2022" }], "sources": [{ "book": "gb-2019", "page": 17 }, { "book": "gb-2019", "page": 28 }] },
+    { "term": "South", "family": "stack", "personnel": "11", "packKey": "south-rt-11", "means": "Stack with the jobs swapped: X on the ball, F on his outside hip.", "onFilm": "Same picture as Stack.", "sameAs": "Stack", "aliases": [{ "term": "South", "book": "rams-2022" }], "sources": [{ "book": "gb-2019", "page": 17 }] },
+    { "term": "Sink", "family": "stack", "personnel": "11", "packKey": "sink-rt-11", "means": "X on the ball at a 5 yard split, F off the ball inside him.", "onFilm": "Tight weak pair with the inside man off the ball.", "aliases": [], "sources": [{ "book": "gb-2019", "page": 17 }] },
+    { "term": "Stamp / Swamp / Snug", "family": "stack", "personnel": "11", "packKey": "snug-rt-11", "means": "Stack, South and Sink with Clamp on the strong side: Y off the ball, Z at 5 yards on the ball. Everybody is condensed.", "onFilm": "Four receivers all within about 5 yards of the tackles.", "aliases": [{ "term": "Snug", "book": "rams-2022" }], "sources": [{ "book": "gb-2019", "page": 17 }] },
+    { "term": "Fast", "family": "1x3", "personnel": "11", "packKey": "fast-rt-11", "means": "Y alone on his side. X, Z and F spread out away from him.", "onFilm": "Tight end with nobody outside him, three receivers on the other side. The chart calls this 3x1 toward the receivers. The call goes the other way, to the Y.", "aliases": [{ "term": "Speed / Scoot / Sprint / Swift / Fast / Fleet", "book": "rams-2022" }], "sources": [{ "book": "gb-2019", "page": 18 }, { "book": "rams-2022", "section": "01 General", "page": 27 }] },
+    { "term": "Fit / Foot", "family": "1x3", "personnel": "11", "packKey": "fit-rt-11", "means": "Fast with the three receivers' jobs moved around.", "onFilm": "Same picture as Fast.", "sameAs": "Fast", "aliases": [], "sources": [{ "book": "gb-2019", "page": 18 }] },
+    { "term": "Crip", "family": "1x3bunch", "personnel": "11", "packKey": "crip-rt-11", "means": "Y alone on his side, three receivers bunched away from him. Crack, Crush and Cruz move the jobs inside the bunch.", "onFilm": "Tight end one side, a three-man bunch on the other.", "aliases": [{ "term": "the Rams add Pack to a 1x3 word", "book": "rams-2022" }], "sources": [{ "book": "gb-2019", "page": 18 }, { "book": "rams-2022", "section": "01 General", "page": 28 }] },
+    { "term": "Wax", "family": "big", "personnel": "13Z", "packKey": "wax-rt-13z", "means": "13 personnel: Y strong with the Z in the slot, the other two tight ends together on the weak side.", "onFilm": "Two tight ends away from the receiver.", "aliases": [], "sources": [{ "book": "gb-2019", "page": 22 }] }
+  ],
+  "variations": [
+    { "term": "Close", "side": "strong", "who": "Z", "means": "Z cuts his split to 5 yards from the end man, off the ball.", "onFilm": "Strong receiver tucked in near the tight end.", "aliases": [{ "term": "Close", "book": "rams-2022" }] },
+    { "term": "Closer", "side": "strong", "who": "Z", "means": "Z lines up on the Y's hip, like a wing. Usually a tight end body.", "onFilm": "A second attached body outside the tight end.", "aliases": [{ "term": "Closer", "book": "rams-2022" }] },
+    { "term": "Clamp", "side": "strong", "who": "Z, Y", "means": "Z at 5 yards ON the ball. The Y backs off the ball next to the tackle.", "onFilm": "Tight end off the ball, receiver on the ball just outside him.", "aliases": [{ "term": "Clamp", "book": "rams-2022" }] },
+    { "term": "Click", "side": "strong", "who": "Z, Y", "means": "Z on the ball inside. The Y takes the 5 yard split off the ball outside him.", "onFilm": "Receiver next to the tackle, tight end outside him and off.", "aliases": [{ "term": "Click", "book": "rams-2022" }] },
+    { "term": "Open", "side": "strong", "who": "Y", "means": "Y takes a 5 yard split from the tackle.", "onFilm": "Tight end standing up, flexed off the tackle.", "aliases": [{ "term": "Open", "book": "rams-2022" }] },
+    { "term": "Out", "side": "strong", "who": "Y, Z", "means": "Y lines up as the outside receiver. Z comes into the slot.", "onFilm": "Tight end split widest on his side.", "aliases": [] },
+    { "term": "Off", "side": "strong", "who": "Y", "means": "Y off the ball next to the tackle.", "onFilm": "Tight end attached but a step back.", "aliases": [{ "term": "Off", "book": "rams-2022" }] },
+    { "term": "Tight", "side": "weak", "who": "X", "means": "X cuts his split to 5 yards from the tackle.", "onFilm": "Weak receiver reduced.", "aliases": [{ "term": "Tite", "book": "rams-2022" }] },
+    { "term": "Tighter", "side": "weak", "who": "X", "means": "X in a three point stance next to the weak tackle. Usually a tight end body.", "onFilm": "An attached body on the weak side.", "aliases": [{ "term": "Titer", "book": "rams-2022" }] },
+    { "term": "Slot", "side": "weak", "who": "Z", "means": "Z leaves the Y's side and lines up in the weak slot, inside the X.", "onFilm": "Both receivers away from the tight end.", "aliases": [{ "term": "Slot", "book": "rams-2022" }] },
+    { "term": "Zoom", "side": "weak", "who": "Z, X", "means": "Slot with the jobs swapped: Z outside on the weak side, X in the slot.", "onFilm": "Same picture as Slot.", "aliases": [{ "term": "Zoom", "book": "rams-2022" }] },
+    { "term": "Hip", "side": "weak", "who": "Z", "means": "Z weak at a 5 yard split from the tackle, ON the ball. The inside man is on.", "onFilm": "Two receivers weak, the inside one reduced and on the line.", "aliases": [{ "term": "Slim", "book": "rams-2022" }] },
+    { "term": "Hop", "side": "weak", "who": "Z", "means": "Hip with the Z OFF the ball. The outside man is on.", "onFilm": "Two receivers weak, the inside one reduced and off the line.", "aliases": [{ "term": "Slope", "book": "rams-2022" }] },
+    { "term": "Ace", "side": "both", "who": "Z, X", "means": "Close and Tight together: both outside receivers at 5 yards.", "onFilm": "Everybody condensed, nobody outside 5 yards.", "aliases": [{ "term": "Ace", "book": "rams-2022" }] },
+    { "term": "Numbers", "side": "both", "who": "Z, X", "means": "Both outside receivers on the numbers.", "onFilm": "Splits pulled in to the numbers.", "aliases": [{ "term": "#'s", "book": "rams-2022" }] },
+    { "term": "Book", "side": "both", "who": "Z, X", "means": "Inside the numbers: 2 yards inside to the field, 1 yard inside to the boundary.", "onFilm": "Receivers a little inside the numbers.", "aliases": [{ "term": "Edge (likely the same split)", "book": "rams-2022" }] },
+    { "term": "(+) / (-)", "side": "weak", "who": "single receiver", "means": "Plus widens the single receiver's split, minus cuts it down.", "onFilm": "Lone receiver wider or tighter than normal.", "aliases": [{ "term": "(+) / (-)", "book": "rams-2022" }] }
+  ],
+  "variationSources": [{ "book": "gb-2019", "page": 14 }, { "book": "gb-2019", "page": 20 }, { "book": "gb-2019", "page": 25 }, { "book": "gb-2019", "page": 26 }, { "book": "gb-2019", "page": 27 }, { "book": "rams-2022", "section": "01 General", "page": 20 }, { "book": "rams-2022", "section": "01 General", "page": 29 }],
+  "empty": {
+    "means": "In an empty set the call is the one-back formation the other four make, then a letter for the back. Letters run across the field from the strong side.",
+    "letters": [
+      { "term": "A", "means": "Widest man on the strong side." },
+      { "term": "B", "means": "Strong slot." },
+      { "term": "C", "means": "Tight to the strong side, off the ball near the end man." },
+      { "term": "D", "means": "Tight to the weak side, off the ball near the end man." },
+      { "term": "E", "means": "Weak slot." },
+      { "term": "G", "means": "Widest man on the weak side." }
+    ],
+    "aliases": [{ "term": "Uno / Dos / Tres and A / B / C", "book": "rams-2022" }],
+    "sources": [{ "book": "gb-2019", "page": 24 }, { "book": "rams-2022", "section": "01 General", "page": 32 }]
+  },
+  "motions": [
+    { "term": "Rt / Lt", "who": "any tagged player", "means": "Lines up in the formation and goes across to the side called.", "onFilm": "A man crosses the formation and is still moving or resets inside the far receiver.", "aliases": [{ "term": "Zac (Z), Fax (F), Yuck (Y), Sock (X)", "book": "rams-2022" }], "sources": [{ "book": "gb-2019", "page": 33 }, { "book": "rams-2022", "section": "01 General", "page": 37 }] },
+    { "term": "Righty / Lefty", "who": "any tagged player", "means": "Across the formation all the way to an outside alignment.", "onFilm": "Crosses and ends up as the widest or slot man on the far side.", "aliases": [{ "term": "Zac-O, Fax-O, Yuck-O, Sock-O", "book": "rams-2022" }], "sources": [{ "book": "gb-2019", "page": 33 }] },
+    { "term": "Short", "who": "receiver off the ball", "means": "Short motion in toward the core without crossing the ball.", "onFilm": "A receiver slides a few yards toward the tackle before the snap, often to block.", "aliases": [{ "term": "Short", "book": "rams-2022" }], "sources": [{ "book": "gb-2019", "page": 33 }] },
+    { "term": "Shorty", "who": "receiver off the ball", "means": "Short motion that keeps going until he is inside the next receiver.", "onFilm": "Outside receiver ends up inside the slot.", "aliases": [], "sources": [{ "book": "gb-2019", "page": 33 }] },
+    { "term": "Counter", "who": "any tagged player", "means": "Starts across, gets to about the guard, turns and goes back where he came from.", "onFilm": "Motion that reverses.", "aliases": [{ "term": "Counter", "book": "rams-2022" }], "sources": [{ "book": "gb-2019", "page": 33 }] },
+    { "term": "Mo", "who": "any tagged player", "means": "Starts on the wrong side and motions INTO the formation that was called. The call names the finish.", "onFilm": "The picture at the snap is the formation. The start is a different look.", "aliases": [{ "term": "Mo", "book": "rams-2022" }], "sources": [{ "book": "gb-2019", "page": 33 }] },
+    { "term": "Fly", "who": "receiver off the ball", "means": "Full speed jet motion: in front of the quarterback in the gun, behind him at about 3 yards under center.", "onFilm": "Receiver at a sprint across the ball as it is snapped.", "aliases": [{ "term": "Fly (toward the play) / Flow (away from it)", "book": "rams-2022" }], "sources": [{ "book": "gb-2019", "page": 34 }, { "book": "rams-2022", "section": "01 General", "page": 41 }] },
+    { "term": "Behind", "who": "any tagged player", "means": "Motion across that goes behind the quarterback.", "onFilm": "In the gun, a receiver runs behind the quarterback and back.", "aliases": [{ "term": "Bolt", "book": "rams-2022" }], "sources": [{ "book": "gb-2019", "page": 34 }] },
+    { "term": "Bump", "who": "F in 21 and 12, H in 11", "means": "The back changes sides on his own. No tag needed.", "onFilm": "Fullback slides strong to weak, or the gun back hops to the other side of the quarterback.", "aliases": [{ "term": "Fuzz (fullback), Hop (gun back)", "book": "rams-2022" }], "sources": [{ "book": "gb-2019", "page": 31 }, { "book": "rams-2022", "section": "01 General", "page": 35 }] },
+    { "term": "Hay / Hax", "who": "H", "means": "Halfback motions out of the backfield past the widest receiver: Hay to the Y's side, Hax to the X's side. Foy and Fox are the same for the fullback.", "onFilm": "Back leaves the backfield and the set becomes empty.", "aliases": [{ "term": "Ty / Tex", "book": "rams-2022" }], "sources": [{ "book": "gb-2019", "page": 32 }, { "book": "rams-2022", "section": "01 General", "page": 36 }] },
+    { "term": "Home", "who": "any tagged player", "means": "Motions into the backfield to the I spot.", "onFilm": "A receiver or tight end ends up as a second back.", "aliases": [{ "term": "F In", "book": "rams-2022" }], "sources": [{ "book": "gb-2019", "page": 32 }] },
+    { "term": "Flow", "who": "receiver off the ball", "means": "Fly motion that goes AWAY from where the ball is going.", "onFilm": "Jet motion one way, run or throw the other way.", "from": "rams-2022", "aliases": [], "sources": [{ "book": "rams-2022", "section": "01 General", "page": 41 }] },
+    { "term": "Float", "who": "receiver off the ball", "means": "A fake fly motion.", "onFilm": "Starts like a jet, pulls up.", "from": "rams-2022", "aliases": [], "sources": [{ "book": "rams-2022", "section": "01 General", "page": 41 }] },
+    { "term": "Flutter", "who": "receiver off the ball", "means": "Fly motion across, then back to where he started.", "onFilm": "Jet out and return before the snap.", "from": "rams-2022", "aliases": [], "sources": [{ "book": "rams-2022", "section": "01 General", "page": 41 }] },
+    { "term": "Orbit", "who": "any tagged player", "means": "Across the ball, settles in an offset spot, then goes behind the quarterback in the gun.", "onFilm": "Receiver loops behind the quarterback at the snap.", "from": "rams-2022", "aliases": [], "sources": [{ "book": "rams-2022", "section": "01 General", "page": 41 }] },
+    { "term": "Soar / Counter Fly / Flight", "who": "receiver off the ball", "means": "Soar: two fly motions in a row. Counter Fly: across, then fly back. Flight: fly with a late snap.", "onFilm": "A jet motion with an extra piece before it or a late snap.", "from": "rams-2022", "aliases": [], "sources": [{ "book": "rams-2022", "section": "01 General", "page": 41 }] },
+    { "term": "Jump / Skip / Hover", "who": "H", "means": "Jump: back starts in the pistol and steps to the gun spot. Skip: back in the offset gun moves on his own side. Hover: full speed behind the quarterback in the gun.", "onFilm": "The back moves just before the snap without leaving the backfield.", "from": "rams-2022", "aliases": [], "sources": [{ "book": "rams-2022", "section": "01 General", "page": 35 }] },
+    { "term": "Dot / Oz", "who": "Z or F (Dot), Y (Oz)", "means": "Dot: starts in the pistol spot behind the quarterback and motions out to the formation. Oz: Y starts outside the widest receiver away from the call and motions across into it.", "onFilm": "A receiver or tight end starts somewhere odd and ends in the called formation.", "from": "rams-2022", "aliases": [], "sources": [{ "book": "rams-2022", "section": "01 General", "page": 37 }, { "book": "rams-2022", "section": "01 General", "page": 39 }] },
+    { "term": "Maybe / Insert", "who": "receiver", "means": "Run-game motion rules for blocking the force safety. Insert: short motion and fit inside. Maybe: he decides between inserting, crossing to the slot, or staying.", "onFilm": "A receiver motions tight and blocks a safety.", "from": "rams-2022", "aliases": [], "sources": [{ "book": "rams-2022", "section": "01 General", "page": 42 }] }
+  ],
+  "shifts": [
+    { "term": "Lab / Rat", "means": "The halfback starts as the widest receiver in an empty look, Lab on the left and Rat on the right, then shifts back into the backfield. Call it Lab to (formation).", "onFilm": "Opens in empty, back trots in, everybody resets.", "aliases": [{ "term": "Lab / Rat. Rope and Lasso add the Y coming across to a bunch", "book": "rams-2022" }], "sources": [{ "book": "gb-2019", "page": 36 }, { "book": "rams-2022", "section": "01 General", "page": 47 }] },
+    { "term": "Trixie", "means": "Starts in I Rt Ace. The Y shifts across, then the X motions across to finish in I Lt Hip.", "onFilm": "Tight end trades sides, then a receiver follows.", "aliases": [], "sources": [{ "book": "gb-2019", "page": 37 }] }
+  ],
+  "lineWords": [
+    { "term": "Easy, Easy", "means": "Audible: the quarterback is changing the play. The new run or protection follows. Always on Turbo." },
+    { "term": "Oscar", "means": "Flip the play to the other side out of a balanced formation. Alerted in the huddle: 18 alert Oscar becomes 19." },
+    { "term": "Can", "means": "Two plays called in the huddle. Run the first unless the quarterback says Can, then run the second." },
+    { "term": "Reload", "means": "Cancels a Can or an Oscar: back to the first play." },
+    { "term": "Turbo", "means": "The no-huddle package, and the fast cadence that goes with it." }
+  ],
+  "lineSources": [{ "book": "gb-2019", "page": 5 }, { "book": "gb-2019", "page": 6 }, { "book": "rams-2022", "section": "01 General", "page": 9 }],
+  "chartRules": [
+    { "title": "Strength is the Y", "means": "The chart's Str column is the passing strength on 3x1. A call goes to the tight end. A tight end alone left with three receivers right is charted 3x1 Rt and called Fast Lt. PlayForge keeps both." },
+    { "title": "Name the picture, list the twins", "means": "Trips, Trio and Trax are one picture on film. So are Dice and Dixie, Stack and South, Bunch and Box. PlayForge names the first and lists the rest as same picture, different jobs. When I know who the F is that week, I can pick the exact word." },
+    { "title": "A flexed tight end changes the word", "means": "Tight end standing up 2 to 5 yards off the tackle is Open. In 2x2 that is Dyno, in 3x1 it is Trips Open, in 1x3 it is Fast Open." },
+    { "title": "Empty", "means": "Find the back among the five receivers, name the other four, add his letter." },
+    { "title": "Closest word", "means": "When a picture fits no book definition the nearest word is used and the formation is flagged closest word, check it." }
+  ]
+}

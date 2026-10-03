@@ -4,11 +4,24 @@
  "team": "PHI",
  "season": 2026,
  "mirror": false,
- "revision": "80f38c37e9e0",
+ "revision": "74757b8b1783",
  "formations": [
   {
    "id": "snapform-7fca6681fa468fbf",
-   "name": "11 Gun 2x2 Rt",
+   "name": "Gun Dice Rt",
+   "chartName": "11 Gun 2x2 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dice",
+    "family": "2x2 'D'",
+    "strength": "Rt",
+    "tags": [],
+    "back": "strong",
+    "alternates": [
+     "Dixie"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -118,13 +131,15 @@
     "11",
     "2x2 'D'",
     "W1",
-    "W2"
+    "W2",
+    "Dice",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-003: Gun, RB offset R; L: two WRs (inner on line in the slot, outer on the numbers off the ball); R: Goedert inline, WR on the numbers. Snapped as set\nW1-003 Set: 1 WR wide R + Goedert off-ball wing R, 2 WR L. No motion. Hash from Sideline only (Endzone clip missing).\nDrawn on the Right hash (seen: Right 8, Left 6, Middle 1).",
+   "note": "System call: Gun Dice Rt [11]. Charted as 11 Gun 2x2 Rt.\nBack on the strong side of the quarterback.\nSame picture, different jobs: Dixie.\nW2-003: Gun, RB offset R; L: two WRs (inner on line in the slot, outer on the numbers off the ball); R: Goedert inline, WR on the numbers. Snapped as set\nW1-003 Set: 1 WR wide R + Goedert off-ball wing R, 2 WR L. No motion. Hash from Sideline only (Endzone clip missing).\nDrawn on the Right hash (seen: Right 8, Left 6, Middle 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Gun|B:RB:R:gun_offset,Q:gun,R:L1:WR:slot:on,R:L2:WR:numbers:off,R:R1:TE:inline:on,R:R2:WR:numbers:on",
@@ -164,7 +179,23 @@
   },
   {
    "id": "snapform-9b2d6c8502a679ff",
-   "name": "11 Gun 3x1 Lt",
+   "name": "Gun Trips Lt Open",
+   "chartName": "11 Gun 3x1 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Trips",
+    "family": "3x1 'T'",
+    "strength": "Lt",
+    "tags": [
+     "Open"
+    ],
+    "back": "weak",
+    "alternates": [
+     "Trio",
+     "Trax"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -274,13 +305,15 @@
     "11",
     "3x1 'T'",
     "W1",
-    "W2"
+    "W2",
+    "Trips",
+    "3x1 'T'"
    ],
    "family": "3x1 'T'",
    "strength": "left",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-032: Gun, Shipley offset R; L: three receivers (Jenkins tight/slot, two WRs outside); R: one WR wide. Snapped as set\nW2-074: Gun, Shipley offset R; L: three receivers stretched outside the LT (slot off the ball, two farther out); R: one WR wide on the line. Snapped as set\nDrawn on the Right hash (seen: Right 8, Left 2).",
+   "note": "System call: Gun Trips Lt Open [11]. Charted as 11 Gun 3x1 Lt.\nBack on the weak side of the quarterback.\nSame picture, different jobs: Trio, Trax.\nW2-032: Gun, Shipley offset R; L: three receivers (Jenkins tight/slot, two WRs outside); R: one WR wide. Snapped as set\nW2-074: Gun, Shipley offset R; L: three receivers stretched outside the LT (slot off the ball, two farther out); R: one WR wide on the line. Snapped as set\nDrawn on the Right hash (seen: Right 8, Left 2).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|3x1 'T'|Gun|B:RB:R:gun_offset,Q:gun,R:L1:TE:slot:off,R:L2:WR:numbers:off,R:L3:WR:wide:on,R:R1:WR:wide:on",
@@ -315,7 +348,21 @@
   },
   {
    "id": "snapform-35d44e8be24720b9",
-   "name": "11 Gun 3x1 Rt",
+   "name": "Gun Fast Lt",
+   "chartName": "11 Gun 3x1 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Fast",
+    "family": "1x3 'F'",
+    "strength": "Lt",
+    "tags": [],
+    "back": "strong",
+    "alternates": [
+     "Fit",
+     "Foot"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -425,13 +472,15 @@
     "11",
     "3x1 'T'",
     "W1",
-    "W2"
+    "W2",
+    "Fast",
+    "1x3 'F'"
    ],
    "family": "3x1 'T'",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-011: Gun, RB offset L; Goedert inline L alone; trips R (slot, slot, wide). Snapped as set\nW2-012: Gun, RB offset L; Goedert inline L alone; trips R (two slots off the ball, one wide). Same look as W2-011, snapped as set\nW1-009 Set: Goedert inline R, Wicks slot R, Lemon outside Wicks, Smith wide L.\nDrawn on the Left hash (seen: Right 2, Left 7).",
+   "note": "System call: Gun Fast Lt [11]. Charted as 11 Gun 3x1 Rt.\nBack on the strong side of the quarterback.\nSame picture, different jobs: Fit, Foot.\nCharted strength Rt is the passing strength. The call goes to the Y: Lt.\nW2-011: Gun, RB offset L; Goedert inline L alone; trips R (slot, slot, wide). Snapped as set\nW2-012: Gun, RB offset L; Goedert inline L alone; trips R (two slots off the ball, one wide). Same look as W2-011, snapped as set\nW1-009 Set: Goedert inline R, Wicks slot R, Lemon outside Wicks, Smith wide L.\nDrawn on the Left hash (seen: Right 2, Left 7).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|3x1 'T'|Gun|B:RB:L:gun_offset,Q:gun,R:L1:TE:inline:on,R:R1:WR:slot:off,R:R2:WR:slot:off,R:R3:WR:wide:on",
@@ -464,7 +513,17 @@
   },
   {
    "id": "snapform-acb8396469719d7a",
-   "name": "12 UC 3x1 Rt",
+   "name": "West Rt",
+   "chartName": "12 UC 3x1 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "West",
+    "family": "3x1 'T'",
+    "strength": "Rt",
+    "tags": [],
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "12",
    "playersPerSide": 11,
@@ -574,13 +633,15 @@
     "12",
     "3x1 'T'",
     "W1",
-    "W2"
+    "W2",
+    "West",
+    "3x1 'T'"
    ],
    "family": "3x1 'T'",
    "strength": "right",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-034: Under center, Shipley deep I-back; R: TE inline, Mundt off the ball outside him, Wicks wide; L: Cooper wide. Snapped as set\nW1-001 Set: Wicks wide R, Smith slot R, Goedert inline R, Mundt inline L.\nW1-002 Set: Mundt inline R, Wicks flexed R, Goedert split wide R, Smith wide L.\nW1-004 Set: Goedert inline R, Cooper just outside, Smith tight outside Cooper, Mundt inline L.\nW1-007 Set: Mundt inline R, Goedert wing R, Wicks wide R, Smith wide L.\nDrawn on the Left hash (seen: Left 6).",
+   "note": "System call: West Rt [12]. Charted as 12 UC 3x1 Rt.\nW2-034: Under center, Shipley deep I-back; R: TE inline, Mundt off the ball outside him, Wicks wide; L: Cooper wide. Snapped as set\nW1-001 Set: Wicks wide R, Smith slot R, Goedert inline R, Mundt inline L.\nW1-002 Set: Mundt inline R, Wicks flexed R, Goedert split wide R, Smith wide L.\nW1-004 Set: Goedert inline R, Cooper just outside, Smith tight outside Cooper, Mundt inline L.\nW1-007 Set: Mundt inline R, Goedert wing R, Wicks wide R, Smith wide L.\nDrawn on the Left hash (seen: Left 6).",
    "confidence": "derived",
    "builtin": true,
    "signature": "12|3x1 'T'|Under Center|B:RB:C:deep,Q:under_center,R:L1:WR:wide:on,R:R1:TE:inline:on,R:R2:TE:wing:off,R:R3:WR:wide:on",
@@ -610,7 +671,20 @@
   },
   {
    "id": "snapform-fc6e4c6aec9930f4",
-   "name": "11 Gun 2x2 Lt",
+   "name": "Gun Dice Lt",
+   "chartName": "11 Gun 2x2 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dice",
+    "family": "2x2 'D'",
+    "strength": "Lt",
+    "tags": [],
+    "back": "weak",
+    "alternates": [
+     "Dixie"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -720,13 +794,15 @@
     "11",
     "2x2 'D'",
     "W1",
-    "W2"
+    "W2",
+    "Dice",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "left",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-006: Gun, RB offset R; L: Goedert inline, Lemon detached; R: two WRs. As snapped: Lemon in motion across the backfield, tight behind the QB at the snap\nDrawn on the Left hash (seen: Left 5).",
+   "note": "System call: Gun Dice Lt [11]. Charted as 11 Gun 2x2 Lt.\nBack on the weak side of the quarterback.\nSame picture, different jobs: Dixie.\nW2-006: Gun, RB offset R; L: Goedert inline, Lemon detached; R: two WRs. As snapped: Lemon in motion across the backfield, tight behind the QB at the snap\nDrawn on the Left hash (seen: Left 5).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Gun|B:RB:R:gun_offset,Q:gun,R:L1:TE:inline:on,R:L2:WR:slot:off,R:R1:WR:slot:off,R:R2:WR:wide:on",
@@ -754,7 +830,19 @@
   },
   {
    "id": "snapform-7f3bd03fe72acbe1",
-   "name": "11 UC 2x2 Rt",
+   "name": "Dice Rt",
+   "chartName": "11 UC 2x2 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dice",
+    "family": "2x2 'D'",
+    "strength": "Rt",
+    "tags": [],
+    "alternates": [
+     "Dixie"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -864,13 +952,15 @@
     "11",
     "2x2 'D'",
     "W1",
-    "W2"
+    "W2",
+    "Dice",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "right",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-004: Under center, Shipley deep behind QB; L: M.Brown tight off the ball, WR on the numbers; R: Goedert inline, WR in the slot. Snapped as set\nDrawn on the Right hash (seen: Right 3, Middle 1).",
+   "note": "System call: Dice Rt [11]. Charted as 11 UC 2x2 Rt.\nSame picture, different jobs: Dixie.\nW2-004: Under center, Shipley deep behind QB; L: M.Brown tight off the ball, WR on the numbers; R: Goedert inline, WR in the slot. Snapped as set\nDrawn on the Right hash (seen: Right 3, Middle 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Under Center|B:RB:C:deep,Q:under_center,R:L1:WR:tight:off,R:L2:WR:numbers:on,R:R1:TE:inline:on,R:R2:WR:slot:on",
@@ -898,7 +988,17 @@
   },
   {
    "id": "snapform-17c62df9f1ba8cbb",
-   "name": "12 UC 2x2 Rt",
+   "name": "Deuce Rt",
+   "chartName": "12 UC 2x2 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Deuce",
+    "family": "2x2 'D'",
+    "strength": "Rt",
+    "tags": [],
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "12",
    "playersPerSide": 11,
@@ -1008,13 +1108,15 @@
     "12",
     "2x2 'D'",
     "W1",
-    "W2"
+    "W2",
+    "Deuce",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "right",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-001: I-formation, Mundt inline L, Goedert inline R, one WR each side in a reduced split; snapped as set\nDrawn on the Right hash (seen: Right 3).",
+   "note": "System call: Deuce Rt [12]. Charted as 12 UC 2x2 Rt.\nW2-001: I-formation, Mundt inline L, Goedert inline R, one WR each side in a reduced split; snapped as set\nDrawn on the Right hash (seen: Right 3).",
    "confidence": "derived",
    "builtin": true,
    "signature": "12|2x2 'D'|Under Center|B:RB:C:deep,Q:under_center,R:L1:TE:inline:on,R:L2:WR:slot:on,R:R1:TE:inline:on,R:R2:WR:slot:on",
@@ -1041,7 +1143,19 @@
   },
   {
    "id": "snapform-26cced3f579b7531",
-   "name": "12 UC 2x2 Lt",
+   "name": "West Lt Slot",
+   "chartName": "12 UC 2x2 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "West",
+    "family": "3x1 'T'",
+    "strength": "Lt",
+    "tags": [
+     "Slot"
+    ],
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "12",
    "playersPerSide": 11,
@@ -1151,13 +1265,15 @@
     "12",
     "2x2 'D'",
     "W1",
-    "W2"
+    "W2",
+    "West",
+    "3x1 'T'"
    ],
    "family": "2x2 'D'",
    "strength": "left",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-029: Under center, Bigsby deep I-back; L: TE inline, TE wing off his hip; R: two WRs off the ball (slot and numbers). Snapped as set\nDrawn on the Left hash (seen: Left 2, Right 1).",
+   "note": "System call: West Lt Slot [12]. Charted as 12 UC 2x2 Lt.\nW2-029: Under center, Bigsby deep I-back; L: TE inline, TE wing off his hip; R: two WRs off the ball (slot and numbers). Snapped as set\nDrawn on the Left hash (seen: Left 2, Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "12|2x2 'D'|Under Center|B:RB:C:deep,Q:under_center,R:L1:TE:inline:on,R:L2:TE:wing:off,R:R1:WR:slot:off,R:R2:WR:numbers:on",
@@ -1184,7 +1300,17 @@
   },
   {
    "id": "snapform-da971b21e73b2cfb",
-   "name": "12 UC 3x1 Lt",
+   "name": "West Lt",
+   "chartName": "12 UC 3x1 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "West",
+    "family": "3x1 'T'",
+    "strength": "Lt",
+    "tags": [],
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "12",
    "playersPerSide": 11,
@@ -1294,13 +1420,15 @@
     "12",
     "3x1 'T'",
     "W1",
-    "W2"
+    "W2",
+    "West",
+    "3x1 'T'"
    ],
    "family": "3x1 'T'",
    "strength": "left",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-017: Under center, Bigsby deep I-back; L: Jenkins inline, Mundt wing off his hip, WR outside; R: one WR wide, no TE. Snapped as set\nDrawn on the Right hash (seen: Right 3).",
+   "note": "System call: West Lt [12]. Charted as 12 UC 3x1 Lt.\nW2-017: Under center, Bigsby deep I-back; L: Jenkins inline, Mundt wing off his hip, WR outside; R: one WR wide, no TE. Snapped as set\nDrawn on the Right hash (seen: Right 3).",
    "confidence": "derived",
    "builtin": true,
    "signature": "12|3x1 'T'|Under Center|B:RB:C:deep,Q:under_center,R:L1:TE:inline:on,R:L2:TE:wing:off,R:L3:WR:slot:on,R:R1:WR:wide:on",
@@ -1326,7 +1454,22 @@
   },
   {
    "id": "snapform-6fb9057055debdb2",
-   "name": "11 Gun Bunch Rt",
+   "name": "Gun Bunch Rt",
+   "chartName": "11 Gun Bunch Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Bunch",
+    "family": "Bunch 'B'",
+    "strength": "Rt",
+    "tags": [],
+    "back": "weak",
+    "alternates": [
+     "Bin",
+     "Buddy",
+     "Box"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -1435,13 +1578,15 @@
     "eagles-2026",
     "11",
     "Bunch 'B'",
-    "W2"
+    "W2",
+    "Bunch",
+    "Bunch 'B'"
    ],
    "family": "Bunch 'B'",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-016: Gun, RB offset L; one WR wide L; three-man bunch R (Goedert in the bunch, inferred), outside the tackle box. Snapped as set\nW2-076: Gun, Shipley offset L; R: three-man bunch outside the RT (Smith #6 read; Mundt inferred in the bunch); L: one WR wide. Snapped as set\nDrawn on the Left hash (seen: Left 2).",
+   "note": "System call: Gun Bunch Rt [11]. Charted as 11 Gun Bunch Rt.\nBack on the weak side of the quarterback.\nSame picture, different jobs: Bin, Buddy, Box.\nW2-016: Gun, RB offset L; one WR wide L; three-man bunch R (Goedert in the bunch, inferred), outside the tackle box. Snapped as set\nW2-076: Gun, Shipley offset L; R: three-man bunch outside the RT (Smith #6 read; Mundt inferred in the bunch); L: one WR wide. Snapped as set\nDrawn on the Left hash (seen: Left 2).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|Bunch 'B'|Gun|B:RB:L:gun_offset,Q:gun,R:L1:WR:wide:on,R:R1:TE:slot:on,R:R2:WR:slot:off,R:R3:WR:slot:off",
@@ -1465,7 +1610,22 @@
   },
   {
    "id": "snapform-c5d75b36313a5554",
-   "name": "11 Gun Bunch Lt",
+   "name": "Gun Bunch Lt",
+   "chartName": "11 Gun Bunch Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Bunch",
+    "family": "Bunch 'B'",
+    "strength": "Lt",
+    "tags": [],
+    "back": "weak",
+    "alternates": [
+     "Bin",
+     "Buddy",
+     "Box"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -1574,13 +1734,15 @@
     "eagles-2026",
     "11",
     "Bunch 'B'",
-    "W2"
+    "W2",
+    "Bunch",
+    "Bunch 'B'"
    ],
    "family": "Bunch 'B'",
    "strength": "left",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-053: Gun, Shipley offset R; L: three-man bunch (Mundt and two WRs) outside the LT; R: one WR wide. Snapped as set\nW2-073: Gun, Shipley offset R; L: three-man bunch just outside the LT (Jenkins inferred in the bunch); R: one WR wide. Snapped as set\nDrawn on the Right hash (seen: Right 2).",
+   "note": "System call: Gun Bunch Lt [11]. Charted as 11 Gun Bunch Lt.\nBack on the weak side of the quarterback.\nSame picture, different jobs: Bin, Buddy, Box.\nW2-053: Gun, Shipley offset R; L: three-man bunch (Mundt and two WRs) outside the LT; R: one WR wide. Snapped as set\nW2-073: Gun, Shipley offset R; L: three-man bunch just outside the LT (Jenkins inferred in the bunch); R: one WR wide. Snapped as set\nDrawn on the Right hash (seen: Right 2).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|Bunch 'B'|Gun|B:RB:R:gun_offset,Q:gun,R:L1:TE:tight:on,R:L2:WR:slot:off,R:L3:WR:slot:off,R:R1:WR:wide:on",
@@ -1604,7 +1766,22 @@
   },
   {
    "id": "snapform-20105b37aca1775d",
-   "name": "11 Gun Empty Lt",
+   "name": "Gun Trips Lt G",
+   "chartName": "11 Gun Empty Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Trips",
+    "family": "Empty",
+    "strength": "Lt",
+    "tags": [
+     "G"
+    ],
+    "alternates": [
+     "Trio",
+     "Trax"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -1714,13 +1891,15 @@
     "11",
     "Empty",
     "W1",
-    "W2"
+    "W2",
+    "Trips",
+    "Empty"
    ],
    "family": "Empty",
    "strength": "left",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-013: Empty gun 3x2: L Mundt inline, Lemon off the ball behind the LT (wing), one receiver on the numbers; R two receivers close together outside the numbers. Snapped as set\nDrawn on the Middle hash (seen: Right 1, Middle 1).",
+   "note": "System call: Gun Trips Lt G [11]. Charted as 11 Gun Empty Lt.\nSame picture, different jobs: Trio, Trax.\nW2-013: Empty gun 3x2: L Mundt inline, Lemon off the ball behind the LT (wing), one receiver on the numbers; R two receivers close together outside the numbers. Snapped as set\nDrawn on the Middle hash (seen: Right 1, Middle 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|Empty|Gun|Q:gun,R:L1:TE:inline:on,R:L2:WR:wing:off,R:L3:WR:numbers:on,R:R1:WR:wide:off,R:R2:RB:wide:on",
@@ -1746,7 +1925,17 @@
   },
   {
    "id": "snapform-d2da00c26dd94820",
-   "name": "11 UC 2 Back Rt",
+   "name": "I Rt",
+   "chartName": "11 UC 2 Back Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "I",
+    "family": "2 Back",
+    "strength": "Rt",
+    "tags": [],
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -1856,13 +2045,15 @@
     "11",
     "2 Back",
     "W1",
-    "template, verify"
+    "template, verify",
+    "I",
+    "2 Back"
    ],
    "family": "2 Back",
    "strength": "right",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "Template: default shape for 11 2 Back Under Center Rt (no W2 snap with this personnel, family, backfield and strength)\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: I Rt [11]. Charted as 11 UC 2 Back Rt.\nTemplate: default shape for 11 2 Back Under Center Rt (no W2 snap with this personnel, family, backfield and strength)\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "needs-review",
    "builtin": true,
    "signature": "11|2 Back|Under Center|B:RB:C:deep,B:WR:C:fb,Q:under_center,R:L1:WR:wide:on,R:R1:TE:inline:on,R:R2:WR:wide:on",
@@ -1885,7 +2076,18 @@
   },
   {
    "id": "snapform-9f2e3301748cdb77",
-   "name": "11 Gun 2x2 Lt #2",
+   "name": "Gun Dyno Lt",
+   "chartName": "11 Gun 2x2 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dyno",
+    "family": "2x2 'D'",
+    "strength": "Lt",
+    "tags": [],
+    "back": "strong",
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -1994,13 +2196,15 @@
     "eagles-2026",
     "11",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dyno",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "left",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-056: Gun, Barkley offset L; L: two receivers close together off the ball near the numbers; R: one on the line, one off the ball wide. No inline TE (Mundt detached). Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Gun Dyno Lt [11]. Charted as 11 Gun 2x2 Lt.\nBack on the strong side of the quarterback.\nW2-056: Gun, Barkley offset L; L: two receivers close together off the ball near the numbers; R: one on the line, one off the ball wide. No inline TE (Mundt detached). Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Gun|B:RB:L:gun_offset,Q:gun,R:L1:TE:numbers:on,R:L2:WR:numbers:off,R:R1:WR:slot:on,R:R2:WR:wide:off",
@@ -2023,7 +2227,18 @@
   },
   {
    "id": "snapform-d383d43558bc3b23",
-   "name": "11 Gun 2x2 Lt #3",
+   "name": "Gun Dyno Lt #2",
+   "chartName": "11 Gun 2x2 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dyno",
+    "family": "2x2 'D'",
+    "strength": "Lt",
+    "tags": [],
+    "back": "strong",
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -2132,13 +2347,15 @@
     "eagles-2026",
     "11",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dyno",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "left",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-068: Gun, Shipley offset L; R: two receivers near the numbers (one on, one off the ball); L: two receivers, slot off the ball and WR wide. No inline TE. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Gun Dyno Lt [11]. Charted as 11 Gun 2x2 Lt.\nBack on the strong side of the quarterback.\nW2-068: Gun, Shipley offset L; R: two receivers near the numbers (one on, one off the ball); L: two receivers, slot off the ball and WR wide. No inline TE. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Gun|B:RB:L:gun_offset,Q:gun,R:L1:TE:slot:off,R:L2:WR:wide:on,R:R1:WR:numbers:off,R:R2:WR:numbers:on",
@@ -2161,7 +2378,18 @@
   },
   {
    "id": "snapform-7bca4649f1c11237",
-   "name": "11 Gun 2x2 Rt #2",
+   "name": "Gun Dyno Rt",
+   "chartName": "11 Gun 2x2 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dyno",
+    "family": "2x2 'D'",
+    "strength": "Rt",
+    "tags": [],
+    "back": "weak",
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -2270,13 +2498,15 @@
     "eagles-2026",
     "11",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dyno",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-039: Gun, Shipley offset L; R: Mundt on the line a few yds outside the RT + WR outside; L: two WRs off the ball close together (near-stack). Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Gun Dyno Rt [11]. Charted as 11 Gun 2x2 Rt.\nBack on the weak side of the quarterback.\nW2-039: Gun, Shipley offset L; R: Mundt on the line a few yds outside the RT + WR outside; L: two WRs off the ball close together (near-stack). Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Gun|B:RB:L:gun_offset,Q:gun,R:L1:WR:numbers:off,R:L2:WR:wide:on,R:R1:TE:tight:on,R:R2:WR:numbers:off",
@@ -2299,7 +2529,18 @@
   },
   {
    "id": "snapform-7fa8dbafc642c009",
-   "name": "11 Gun 2x2 Rt #3",
+   "name": "Gun Dyno Rt #2",
+   "chartName": "11 Gun 2x2 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dyno",
+    "family": "2x2 'D'",
+    "strength": "Rt",
+    "tags": [],
+    "back": "weak",
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -2408,13 +2649,15 @@
     "eagles-2026",
     "11",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dyno",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-023: Gun, Shipley offset L; L: two WRs wide; R: Goedert on the line ~2 yds outside RT, D.Smith just outside him. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Gun Dyno Rt [11]. Charted as 11 Gun 2x2 Rt.\nBack on the weak side of the quarterback.\nW2-023: Gun, Shipley offset L; L: two WRs wide; R: Goedert on the line ~2 yds outside RT, D.Smith just outside him. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Gun|B:RB:L:gun_offset,Q:gun,R:L1:WR:numbers:off,R:L2:WR:wide:on,R:R1:TE:tight:on,R:R2:WR:slot:off",
@@ -2437,7 +2680,18 @@
   },
   {
    "id": "snapform-6bc2d18cc38891a2",
-   "name": "11 Gun 2x2 Rt #4",
+   "name": "Gun Dyno Rt #3",
+   "chartName": "11 Gun 2x2 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dyno",
+    "family": "2x2 'D'",
+    "strength": "Rt",
+    "tags": [],
+    "back": "weak",
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -2546,13 +2800,15 @@
     "eagles-2026",
     "11",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dyno",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-042: Gun, Bigsby offset L; R: Jenkins on the line a few yds outside RT, WR wide off the ball; L: two WRs close together outside the numbers. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Gun Dyno Rt [11]. Charted as 11 Gun 2x2 Rt.\nBack on the weak side of the quarterback.\nW2-042: Gun, Bigsby offset L; R: Jenkins on the line a few yds outside RT, WR wide off the ball; L: two WRs close together outside the numbers. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Gun|B:RB:L:gun_offset,Q:gun,R:L1:WR:numbers:off,R:L2:WR:wide:on,R:R1:TE:tight:on,R:R2:WR:wide:off",
@@ -2575,7 +2831,22 @@
   },
   {
    "id": "snapform-84db209daa882ef7",
-   "name": "11 Gun 2x2 Rt #5",
+   "name": "Gun Dice Rt Off",
+   "chartName": "11 Gun 2x2 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dice",
+    "family": "2x2 'D'",
+    "strength": "Rt",
+    "tags": [
+     "Off"
+    ],
+    "back": "weak",
+    "alternates": [
+     "Dixie"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -2684,13 +2955,15 @@
     "eagles-2026",
     "11",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dice",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-049: Gun, Barkley offset L; L: two WRs (numbers + wide, off the ball); R: Mundt off the ball just outside the RT (wing), WR wide. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Gun Dice Rt Off [11]. Charted as 11 Gun 2x2 Rt.\nBack on the weak side of the quarterback.\nSame picture, different jobs: Dixie.\nW2-049: Gun, Barkley offset L; L: two WRs (numbers + wide, off the ball); R: Mundt off the ball just outside the RT (wing), WR wide. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Gun|B:RB:L:gun_offset,Q:gun,R:L1:WR:numbers:off,R:L2:WR:wide:on,R:R1:TE:wing:off,R:R2:WR:wide:on",
@@ -2713,7 +2986,18 @@
   },
   {
    "id": "snapform-21e77dc1af8ac74f",
-   "name": "11 Gun 2x2 Rt #6",
+   "name": "Gun Dyno Rt #4",
+   "chartName": "11 Gun 2x2 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dyno",
+    "family": "2x2 'D'",
+    "strength": "Rt",
+    "tags": [],
+    "back": "weak",
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -2822,13 +3106,15 @@
     "eagles-2026",
     "11",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dyno",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-071: Gun, Shipley offset L; R: end man standing just outside the RT (inferred Mundt) plus a WR off the ball outside; L: two WRs (slot off the ball, wide). Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Gun Dyno Rt [11]. Charted as 11 Gun 2x2 Rt.\nBack on the weak side of the quarterback.\nW2-071: Gun, Shipley offset L; R: end man standing just outside the RT (inferred Mundt) plus a WR off the ball outside; L: two WRs (slot off the ball, wide). Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Gun|B:RB:L:gun_offset,Q:gun,R:L1:WR:slot:off,R:L2:WR:wide:on,R:R1:TE:tight:on,R:R2:WR:slot:off",
@@ -2851,7 +3137,18 @@
   },
   {
    "id": "snapform-932c5b25fd1bb54b",
-   "name": "11 Gun 2x2 Rt #7",
+   "name": "Gun Dyno Rt #5",
+   "chartName": "11 Gun 2x2 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dyno",
+    "family": "2x2 'D'",
+    "strength": "Rt",
+    "tags": [],
+    "back": "weak",
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -2960,13 +3257,15 @@
     "eagles-2026",
     "11",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dyno",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-072: Gun, Shipley offset L; R: end man standing just outside the RT (inferred Mundt) plus a receiver outside on the line; L: two WRs (slot off the ball, wide). Same look as W2-071. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Gun Dyno Rt [11]. Charted as 11 Gun 2x2 Rt.\nBack on the weak side of the quarterback.\nW2-072: Gun, Shipley offset L; R: end man standing just outside the RT (inferred Mundt) plus a receiver outside on the line; L: two WRs (slot off the ball, wide). Same look as W2-071. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Gun|B:RB:L:gun_offset,Q:gun,R:L1:WR:slot:off,R:L2:WR:wide:on,R:R1:TE:tight:on,R:R2:WR:slot:on",
@@ -2989,7 +3288,18 @@
   },
   {
    "id": "snapform-5d76834eae0ac14c",
-   "name": "11 Gun 2x2 Lt #4",
+   "name": "Gun Dyno Lt #3",
+   "chartName": "11 Gun 2x2 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dyno",
+    "family": "2x2 'D'",
+    "strength": "Lt",
+    "tags": [],
+    "back": "weak",
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -3098,13 +3408,15 @@
     "eagles-2026",
     "11",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dyno",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "left",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-038: Gun, Shipley offset R; R: WR wide + receiver in the slot off the ball; L: slot + WR wide. No inline TE (Mundt detached). Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Gun Dyno Lt [11]. Charted as 11 Gun 2x2 Lt.\nBack on the weak side of the quarterback.\nW2-038: Gun, Shipley offset R; R: WR wide + receiver in the slot off the ball; L: slot + WR wide. No inline TE (Mundt detached). Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Gun|B:RB:R:gun_offset,Q:gun,R:L1:TE:slot:off,R:L2:WR:wide:on,R:R1:WR:slot:off,R:R2:WR:wide:on",
@@ -3127,7 +3439,18 @@
   },
   {
    "id": "snapform-1b0f03bcc3e32846",
-   "name": "11 Gun 2x2 Lt #5",
+   "name": "Gun Dyno Lt #4",
+   "chartName": "11 Gun 2x2 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dyno",
+    "family": "2x2 'D'",
+    "strength": "Lt",
+    "tags": [],
+    "back": "weak",
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -3236,13 +3559,15 @@
     "eagles-2026",
     "11",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dyno",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "left",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-020: Gun, Bigsby offset R; L: Goedert on the line just outside the LT, WR off the ball outside him; R: two WRs (one on the line, one off). Snapped as set\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Gun Dyno Lt [11]. Charted as 11 Gun 2x2 Lt.\nBack on the weak side of the quarterback.\nW2-020: Gun, Bigsby offset R; L: Goedert on the line just outside the LT, WR off the ball outside him; R: two WRs (one on the line, one off). Snapped as set\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Gun|B:RB:R:gun_offset,Q:gun,R:L1:TE:tight:on,R:L2:WR:slot:off,R:R1:WR:slot:on,R:R2:WR:numbers:off",
@@ -3265,7 +3590,22 @@
   },
   {
    "id": "snapform-44552a41e18be2a3",
-   "name": "11 Gun 2x2 Lt #6",
+   "name": "Gun Dice Lt Off",
+   "chartName": "11 Gun 2x2 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dice",
+    "family": "2x2 'D'",
+    "strength": "Lt",
+    "tags": [
+     "Off"
+    ],
+    "back": "weak",
+    "alternates": [
+     "Dixie"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -3374,13 +3714,15 @@
     "eagles-2026",
     "11",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dice",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "left",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-065: Gun, Bigsby offset R; L: Mundt standing a step off the end of the line (wing), WR outside on the line; R: two WRs close together near the numbers. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Gun Dice Lt Off [11]. Charted as 11 Gun 2x2 Lt.\nBack on the weak side of the quarterback.\nSame picture, different jobs: Dixie.\nW2-065: Gun, Bigsby offset R; L: Mundt standing a step off the end of the line (wing), WR outside on the line; R: two WRs close together near the numbers. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Gun|B:RB:R:gun_offset,Q:gun,R:L1:TE:wing:off,R:L2:WR:slot:on,R:R1:WR:numbers:off,R:R2:WR:numbers:on",
@@ -3403,7 +3745,22 @@
   },
   {
    "id": "snapform-67b216da3cd6d788",
-   "name": "11 Gun 2x2 Lt #7",
+   "name": "Gun Dice Lt Off #2",
+   "chartName": "11 Gun 2x2 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dice",
+    "family": "2x2 'D'",
+    "strength": "Lt",
+    "tags": [
+     "Off"
+    ],
+    "back": "weak",
+    "alternates": [
+     "Dixie"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -3512,13 +3869,15 @@
     "eagles-2026",
     "11",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dice",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "left",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-075: Gun, Shipley offset R; L: Jenkins standing as a wing just outside the LT, WR wide; R: two WRs off the ball near the numbers. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Gun Dice Lt Off [11]. Charted as 11 Gun 2x2 Lt.\nBack on the weak side of the quarterback.\nSame picture, different jobs: Dixie.\nW2-075: Gun, Shipley offset R; L: Jenkins standing as a wing just outside the LT, WR wide; R: two WRs off the ball near the numbers. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Gun|B:RB:R:gun_offset,Q:gun,R:L1:TE:wing:off,R:L2:WR:wide:on,R:R1:WR:numbers:off,R:R2:WR:numbers:on",
@@ -3541,7 +3900,18 @@
   },
   {
    "id": "snapform-519b1a977aa1182d",
-   "name": "11 Gun 2x2 Rt #8",
+   "name": "Gun Dyno Rt #6",
+   "chartName": "11 Gun 2x2 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dyno",
+    "family": "2x2 'D'",
+    "strength": "Rt",
+    "tags": [],
+    "back": "strong",
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -3650,13 +4020,15 @@
     "eagles-2026",
     "11",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dyno",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-050: Gun, Barkley offset R; L: two WRs off the ball (slot + numbers); R: Mundt standing on the line ~2 yds outside the RT, Wicks wide. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Gun Dyno Rt [11]. Charted as 11 Gun 2x2 Rt.\nBack on the strong side of the quarterback.\nW2-050: Gun, Barkley offset R; L: two WRs off the ball (slot + numbers); R: Mundt standing on the line ~2 yds outside the RT, Wicks wide. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Gun|B:RB:R:gun_offset,Q:gun,R:L1:WR:slot:off,R:L2:WR:numbers:on,R:R1:TE:tight:on,R:R2:WR:wide:on",
@@ -3679,7 +4051,18 @@
   },
   {
    "id": "snapform-aa18f9bd915fcbdb",
-   "name": "11 Gun 2x2 Rt #9",
+   "name": "Gun Dyno Rt #7",
+   "chartName": "11 Gun 2x2 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dyno",
+    "family": "2x2 'D'",
+    "strength": "Rt",
+    "tags": [],
+    "back": "strong",
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -3788,13 +4171,15 @@
     "eagles-2026",
     "11",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dyno",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-064: Gun, Bigsby offset R; R: two receivers, one off the ball inside and one on the line outside (near-stack); L: two receivers, slot and wide. No inline TE. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Gun Dyno Rt [11]. Charted as 11 Gun 2x2 Rt.\nBack on the strong side of the quarterback.\nW2-064: Gun, Bigsby offset R; R: two receivers, one off the ball inside and one on the line outside (near-stack); L: two receivers, slot and wide. No inline TE. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Gun|B:RB:R:gun_offset,Q:gun,R:L1:WR:slot:off,R:L2:WR:wide:on,R:R1:TE:slot:off,R:R2:WR:numbers:on",
@@ -3817,7 +4202,17 @@
   },
   {
    "id": "snapform-4bb51d0a4d381738",
-   "name": "11 Pistol 2x2 Lt",
+   "name": "Pistol Dyno Lt",
+   "chartName": "11 Pistol 2x2 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dyno",
+    "family": "2x2 'D'",
+    "strength": "Lt",
+    "tags": [],
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -3926,13 +4321,15 @@
     "eagles-2026",
     "11",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dyno",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "left",
    "qbAlignment": "pistol",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-024: Pistol, Shipley behind Hurts; L: slot off the ball + WR wide; R: slot + WR wide. No inline TE. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Pistol Dyno Lt [11]. Charted as 11 Pistol 2x2 Lt.\nW2-024: Pistol, Shipley behind Hurts; L: slot off the ball + WR wide; R: slot + WR wide. No inline TE. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Pistol|B:RB:C:pistol_back,Q:pistol,R:L1:TE:slot:off,R:L2:WR:wide:on,R:R1:WR:slot:off,R:R2:WR:wide:on",
@@ -3955,7 +4352,17 @@
   },
   {
    "id": "snapform-95bc07b271fabef4",
-   "name": "11 Pistol 2x2 Lt #2",
+   "name": "Pistol Dyno Lt #2",
+   "chartName": "11 Pistol 2x2 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dyno",
+    "family": "2x2 'D'",
+    "strength": "Lt",
+    "tags": [],
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -4064,13 +4471,15 @@
     "eagles-2026",
     "11",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dyno",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "left",
    "qbAlignment": "pistol",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-058: Pistol (QB at gun depth, Bigsby directly behind); R: Lemon on the line just outside the RT, WR wide; L: end man split ~2 yds from the LT (inferred Mundt), WR wide. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Pistol Dyno Lt [11]. Charted as 11 Pistol 2x2 Lt.\nW2-058: Pistol (QB at gun depth, Bigsby directly behind); R: Lemon on the line just outside the RT, WR wide; L: end man split ~2 yds from the LT (inferred Mundt), WR wide. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Pistol|B:RB:C:pistol_back,Q:pistol,R:L1:TE:tight:on,R:L2:WR:numbers:on,R:R1:WR:tight:on,R:R2:WR:slot:on",
@@ -4093,7 +4502,21 @@
   },
   {
    "id": "snapform-f432ccd1b4abbcc3",
-   "name": "11 UC 2x2 Lt",
+   "name": "Dice Lt Close",
+   "chartName": "11 UC 2x2 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dice",
+    "family": "2x2 'D'",
+    "strength": "Lt",
+    "tags": [
+     "Close"
+    ],
+    "alternates": [
+     "Dixie"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -4202,13 +4625,15 @@
     "eagles-2026",
     "11",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dice",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "left",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-043: Under center, Barkley deep I-back; L: Mundt inline, WR tight on the line just outside; R: M.Brown off the ball, WR on the line outside. As snapped: R inside receiver moving at the snap\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Dice Lt Close [11]. Charted as 11 UC 2x2 Lt.\nSame picture, different jobs: Dixie.\nW2-043: Under center, Barkley deep I-back; L: Mundt inline, WR tight on the line just outside; R: M.Brown off the ball, WR on the line outside. As snapped: R inside receiver moving at the snap\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Under Center|B:RB:C:deep,Q:under_center,R:L1:TE:inline:on,R:L2:WR:tight:on,R:R1:WR:slot:off,R:R2:WR:numbers:on",
@@ -4231,7 +4656,17 @@
   },
   {
    "id": "snapform-017e342871a4083e",
-   "name": "11 UC 2x2 Lt #2",
+   "name": "Dyno Lt",
+   "chartName": "11 UC 2x2 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dyno",
+    "family": "2x2 'D'",
+    "strength": "Lt",
+    "tags": [],
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -4340,13 +4775,15 @@
     "eagles-2026",
     "11",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dyno",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "left",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-051: Under center, Barkley deep I-back; L: Mundt standing on the line just outside the LT, WR wide off the ball; R: Lemon on the line just outside the RT, WR wide. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Dyno Lt [11]. Charted as 11 UC 2x2 Lt.\nW2-051: Under center, Barkley deep I-back; L: Mundt standing on the line just outside the LT, WR wide off the ball; R: Lemon on the line just outside the RT, WR wide. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Under Center|B:RB:C:deep,Q:under_center,R:L1:TE:tight:on,R:L2:WR:wide:off,R:R1:WR:tight:on,R:R2:WR:wide:on",
@@ -4369,7 +4806,17 @@
   },
   {
    "id": "snapform-a995a02ab0f483f0",
-   "name": "11 UC 2x2 Lt #3",
+   "name": "Dyno Lt #2",
+   "chartName": "11 UC 2x2 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dyno",
+    "family": "2x2 'D'",
+    "strength": "Lt",
+    "tags": [],
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -4478,13 +4925,15 @@
     "eagles-2026",
     "11",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dyno",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "left",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-040: Under center, Shipley deep I-back; L: Mundt on the line ~2 yds outside the LT, WR wide; R: WR in the slot off the ball, WR wide. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Dyno Lt [11]. Charted as 11 UC 2x2 Lt.\nW2-040: Under center, Shipley deep I-back; L: Mundt on the line ~2 yds outside the LT, WR wide; R: WR in the slot off the ball, WR wide. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Under Center|B:RB:C:deep,Q:under_center,R:L1:TE:tight:on,R:L2:WR:wide:on,R:R1:WR:slot:off,R:R2:WR:wide:on",
@@ -4507,7 +4956,17 @@
   },
   {
    "id": "snapform-19b2c16bbcbefadd",
-   "name": "11 UC 2x2 Lt #4",
+   "name": "Dyno Lt #3",
+   "chartName": "11 UC 2x2 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dyno",
+    "family": "2x2 'D'",
+    "strength": "Lt",
+    "tags": [],
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -4616,13 +5075,15 @@
     "eagles-2026",
     "11",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dyno",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "left",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-055: Under center, Barkley deep I-back; L: Mundt tight at the end of the line, WR wide; R: Lemon on the line ~3 yds outside the RT, WR off the ball outside him. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Dyno Lt [11]. Charted as 11 UC 2x2 Lt.\nW2-055: Under center, Barkley deep I-back; L: Mundt tight at the end of the line, WR wide; R: Lemon on the line ~3 yds outside the RT, WR off the ball outside him. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Under Center|B:RB:C:deep,Q:under_center,R:L1:TE:tight:on,R:L2:WR:wide:on,R:R1:WR:tight:on,R:R2:WR:slot:off",
@@ -4645,7 +5106,19 @@
   },
   {
    "id": "snapform-e9f9ba1947c94e93",
-   "name": "11 UC 2x2 Rt #2",
+   "name": "Dice Rt #2",
+   "chartName": "11 UC 2x2 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dice",
+    "family": "2x2 'D'",
+    "strength": "Rt",
+    "tags": [],
+    "alternates": [
+     "Dixie"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -4754,13 +5227,15 @@
     "eagles-2026",
     "11",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dice",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "right",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-052: Under center, Barkley deep I-back; R: Jenkins inline, WR wide; L: Lemon on the numbers, WR wide off the ball. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Dice Rt [11]. Charted as 11 UC 2x2 Rt.\nSame picture, different jobs: Dixie.\nW2-052: Under center, Barkley deep I-back; R: Jenkins inline, WR wide; L: Lemon on the numbers, WR wide off the ball. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Under Center|B:RB:C:deep,Q:under_center,R:L1:WR:numbers:on,R:L2:WR:wide:off,R:R1:TE:inline:on,R:R2:WR:wide:on",
@@ -4783,7 +5258,19 @@
   },
   {
    "id": "snapform-003a6dcafe692380",
-   "name": "11 UC 2x2 Rt #3",
+   "name": "Dice Rt #3",
+   "chartName": "11 UC 2x2 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dice",
+    "family": "2x2 'D'",
+    "strength": "Rt",
+    "tags": [],
+    "alternates": [
+     "Dixie"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -4892,13 +5379,15 @@
     "eagles-2026",
     "11",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dice",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "right",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-037: Under center, Shipley deep I-back; R: Jenkins inline, WR off the ball near the numbers; L: two WRs (slot off the ball, wide). Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Dice Rt [11]. Charted as 11 UC 2x2 Rt.\nSame picture, different jobs: Dixie.\nW2-037: Under center, Shipley deep I-back; R: Jenkins inline, WR off the ball near the numbers; L: two WRs (slot off the ball, wide). Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Under Center|B:RB:C:deep,Q:under_center,R:L1:WR:slot:off,R:L2:WR:wide:on,R:R1:TE:inline:on,R:R2:WR:numbers:off",
@@ -4921,7 +5410,19 @@
   },
   {
    "id": "snapform-e4c91145f6a059f3",
-   "name": "11 UC 2x2 Rt #4",
+   "name": "Dice Rt #4",
+   "chartName": "11 UC 2x2 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dice",
+    "family": "2x2 'D'",
+    "strength": "Rt",
+    "tags": [],
+    "alternates": [
+     "Dixie"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -5030,13 +5531,15 @@
     "eagles-2026",
     "11",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dice",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "right",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-028: Under center, Bigsby deep I-back; R: Mundt inline, M.Brown wide; L: two WRs off the ball (slot + wide). As snapped: Brown in jet motion across toward the ball\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Dice Rt [11]. Charted as 11 UC 2x2 Rt.\nSame picture, different jobs: Dixie.\nW2-028: Under center, Bigsby deep I-back; R: Mundt inline, M.Brown wide; L: two WRs off the ball (slot + wide). As snapped: Brown in jet motion across toward the ball\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Under Center|B:RB:C:deep,Q:under_center,R:L1:WR:slot:off,R:L2:WR:wide:on,R:R1:TE:inline:on,R:R2:WR:wide:on",
@@ -5059,7 +5562,19 @@
   },
   {
    "id": "snapform-e695a2e584a1ffdf",
-   "name": "11 UC 2x2 Rt #5",
+   "name": "Dice Rt #5",
+   "chartName": "11 UC 2x2 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dice",
+    "family": "2x2 'D'",
+    "strength": "Rt",
+    "tags": [],
+    "alternates": [
+     "Dixie"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -5168,13 +5683,15 @@
     "eagles-2026",
     "11",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dice",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "right",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-019: Under center, Bigsby deep I-back; L: two WRs wide, close together outside the numbers; R: Goedert inline, WR on the numbers. Snapped as set\nDrawn on the Middle hash (seen: Middle 1).",
+   "note": "System call: Dice Rt [11]. Charted as 11 UC 2x2 Rt.\nSame picture, different jobs: Dixie.\nW2-019: Under center, Bigsby deep I-back; L: two WRs wide, close together outside the numbers; R: Goedert inline, WR on the numbers. Snapped as set\nDrawn on the Middle hash (seen: Middle 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Under Center|B:RB:C:deep,Q:under_center,R:L1:WR:wide:off,R:L2:WR:wide:on,R:R1:TE:inline:on,R:R2:WR:numbers:on",
@@ -5197,7 +5714,21 @@
   },
   {
    "id": "snapform-33e2a99436361436",
-   "name": "11 Gun 3x1 Lt #2",
+   "name": "Gun Trips Lt",
+   "chartName": "11 Gun 3x1 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Trips",
+    "family": "3x1 'T'",
+    "strength": "Lt",
+    "tags": [],
+    "back": "strong",
+    "alternates": [
+     "Trio",
+     "Trax"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -5306,13 +5837,15 @@
     "eagles-2026",
     "11",
     "3x1 'T'",
-    "W2"
+    "W2",
+    "Trips",
+    "3x1 'T'"
    ],
    "family": "3x1 'T'",
    "strength": "left",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-015: Gun, RB offset L; L: Goedert inline, two WRs outside (slot off the ball, wide on the line); R: one WR wide. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Gun Trips Lt [11]. Charted as 11 Gun 3x1 Lt.\nBack on the strong side of the quarterback.\nSame picture, different jobs: Trio, Trax.\nW2-015: Gun, RB offset L; L: Goedert inline, two WRs outside (slot off the ball, wide on the line); R: one WR wide. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|3x1 'T'|Gun|B:RB:L:gun_offset,Q:gun,R:L1:TE:inline:on,R:L2:WR:slot:off,R:L3:WR:wide:on,R:R1:WR:wide:on",
@@ -5335,7 +5868,23 @@
   },
   {
    "id": "snapform-9508d05066d025be",
-   "name": "11 Gun 3x1 Rt #2",
+   "name": "Gun Fast Lt Open",
+   "chartName": "11 Gun 3x1 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Fast",
+    "family": "1x3 'F'",
+    "strength": "Lt",
+    "tags": [
+     "Open"
+    ],
+    "back": "strong",
+    "alternates": [
+     "Fit",
+     "Foot"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -5444,13 +5993,15 @@
     "eagles-2026",
     "11",
     "3x1 'T'",
-    "W2"
+    "W2",
+    "Fast",
+    "1x3 'F'"
    ],
    "family": "3x1 'T'",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-014: Gun, RB offset L; Mundt alone L, standing on the line just outside the LT; trips R (slot, slot, wide). Snapped as set\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Gun Fast Lt Open [11]. Charted as 11 Gun 3x1 Rt.\nBack on the strong side of the quarterback.\nSame picture, different jobs: Fit, Foot.\nCharted strength Rt is the passing strength. The call goes to the Y: Lt.\nW2-014: Gun, RB offset L; Mundt alone L, standing on the line just outside the LT; trips R (slot, slot, wide). Snapped as set\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|3x1 'T'|Gun|B:RB:L:gun_offset,Q:gun,R:L1:TE:tight:on,R:R1:WR:slot:off,R:R2:WR:slot:off,R:R3:WR:wide:on",
@@ -5473,7 +6024,21 @@
   },
   {
    "id": "snapform-7ab89008827b2cea",
-   "name": "11 Gun 3x1 Rt #3",
+   "name": "Gun Trips Rt",
+   "chartName": "11 Gun 3x1 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Trips",
+    "family": "3x1 'T'",
+    "strength": "Rt",
+    "tags": [],
+    "back": "weak",
+    "alternates": [
+     "Trio",
+     "Trax"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -5582,13 +6147,15 @@
     "eagles-2026",
     "11",
     "3x1 'T'",
-    "W2"
+    "W2",
+    "Trips",
+    "3x1 'T'"
    ],
    "family": "3x1 'T'",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-047: Gun, Shipley offset L; R: Mundt at the end of the line plus two WRs outside (one off the ball); L: one WR on the line. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Gun Trips Rt [11]. Charted as 11 Gun 3x1 Rt.\nBack on the weak side of the quarterback.\nSame picture, different jobs: Trio, Trax.\nW2-047: Gun, Shipley offset L; R: Mundt at the end of the line plus two WRs outside (one off the ball); L: one WR on the line. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|3x1 'T'|Gun|B:RB:L:gun_offset,Q:gun,R:L1:WR:numbers:on,R:R1:TE:inline:on,R:R2:WR:slot:off,R:R3:WR:numbers:on",
@@ -5611,7 +6178,21 @@
   },
   {
    "id": "snapform-a797a6fdbc060bff",
-   "name": "11 Gun 3x1 Rt #4",
+   "name": "Gun Trips Rt #2",
+   "chartName": "11 Gun 3x1 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Trips",
+    "family": "3x1 'T'",
+    "strength": "Rt",
+    "tags": [],
+    "back": "weak",
+    "alternates": [
+     "Trio",
+     "Trax"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -5720,13 +6301,15 @@
     "eagles-2026",
     "11",
     "3x1 'T'",
-    "W2"
+    "W2",
+    "Trips",
+    "3x1 'T'"
    ],
    "family": "3x1 'T'",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-008: Gun, RB offset L; R: Goedert inline, two WRs; L: one WR on the numbers. As snapped: Goedert motions across to the L side, look becomes 2x2\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Gun Trips Rt [11]. Charted as 11 Gun 3x1 Rt.\nBack on the weak side of the quarterback.\nSame picture, different jobs: Trio, Trax.\nW2-008: Gun, RB offset L; R: Goedert inline, two WRs; L: one WR on the numbers. As snapped: Goedert motions across to the L side, look becomes 2x2\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|3x1 'T'|Gun|B:RB:L:gun_offset,Q:gun,R:L1:WR:numbers:on,R:R1:TE:inline:on,R:R2:WR:slot:off,R:R3:WR:wide:on",
@@ -5749,7 +6332,21 @@
   },
   {
    "id": "snapform-d94e4a9289442b9c",
-   "name": "11 Gun 3x1 Lt #3",
+   "name": "Gun Fast Rt",
+   "chartName": "11 Gun 3x1 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Fast",
+    "family": "1x3 'F'",
+    "strength": "Rt",
+    "tags": [],
+    "back": "weak",
+    "alternates": [
+     "Fit",
+     "Foot"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -5858,13 +6455,15 @@
     "eagles-2026",
     "11",
     "3x1 'T'",
-    "W2"
+    "W2",
+    "Fast",
+    "1x3 'F'"
    ],
    "family": "3x1 'T'",
    "strength": "left",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-066: Gun, Bigsby offset L; L: three receivers (Lemon off the ball inside, two WRs outside, one off and one on); R: Mundt inline alone. As snapped: Lemon in jet motion from the L slot across toward R and back on the end-around\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Gun Fast Rt [11]. Charted as 11 Gun 3x1 Lt.\nBack on the weak side of the quarterback.\nSame picture, different jobs: Fit, Foot.\nCharted strength Lt is the passing strength. The call goes to the Y: Rt.\nW2-066: Gun, Bigsby offset L; L: three receivers (Lemon off the ball inside, two WRs outside, one off and one on); R: Mundt inline alone. As snapped: Lemon in jet motion from the L slot across toward R and back on the end-around\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|3x1 'T'|Gun|B:RB:L:gun_offset,Q:gun,R:L1:WR:slot:off,R:L2:WR:numbers:on,R:L3:WR:numbers:off,R:R1:TE:inline:on",
@@ -5887,7 +6486,23 @@
   },
   {
    "id": "snapform-b76dd08b1e1d3c45",
-   "name": "11 Gun 3x1 Rt #5",
+   "name": "Gun Trips Rt Open",
+   "chartName": "11 Gun 3x1 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Trips",
+    "family": "3x1 'T'",
+    "strength": "Rt",
+    "tags": [
+     "Open"
+    ],
+    "back": "weak",
+    "alternates": [
+     "Trio",
+     "Trax"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -5996,13 +6611,15 @@
     "eagles-2026",
     "11",
     "3x1 'T'",
-    "W2"
+    "W2",
+    "Trips",
+    "3x1 'T'"
    ],
    "family": "3x1 'T'",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-045: Gun, Barkley offset L; R: Jenkins on the line outside the RT, two WRs outside (one off the ball); L: one WR wide off the ball. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Gun Trips Rt Open [11]. Charted as 11 Gun 3x1 Rt.\nBack on the weak side of the quarterback.\nSame picture, different jobs: Trio, Trax.\nW2-045: Gun, Barkley offset L; R: Jenkins on the line outside the RT, two WRs outside (one off the ball); L: one WR wide off the ball. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|3x1 'T'|Gun|B:RB:L:gun_offset,Q:gun,R:L1:WR:wide:off,R:R1:TE:tight:on,R:R2:WR:slot:off,R:R3:WR:wide:on",
@@ -6025,7 +6642,21 @@
   },
   {
    "id": "snapform-d3b20873edee9519",
-   "name": "11 Gun 3x1 Rt #6",
+   "name": "Gun Trips Rt #3",
+   "chartName": "11 Gun 3x1 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Trips",
+    "family": "3x1 'T'",
+    "strength": "Rt",
+    "tags": [],
+    "back": "weak",
+    "alternates": [
+     "Trio",
+     "Trax"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -6134,13 +6765,15 @@
     "eagles-2026",
     "11",
     "3x1 'T'",
-    "W2"
+    "W2",
+    "Trips",
+    "3x1 'T'"
    ],
    "family": "3x1 'T'",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-070: Gun, Shipley offset L; R: Mundt at the end of the line, a WR tight off his hip, and a third receiver wide outside the camera frame (inferred); L: one WR wide. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Gun Trips Rt [11]. Charted as 11 Gun 3x1 Rt.\nBack on the weak side of the quarterback.\nSame picture, different jobs: Trio, Trax.\nW2-070: Gun, Shipley offset L; R: Mundt at the end of the line, a WR tight off his hip, and a third receiver wide outside the camera frame (inferred); L: one WR wide. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|3x1 'T'|Gun|B:RB:L:gun_offset,Q:gun,R:L1:WR:wide:on,R:R1:TE:inline:on,R:R2:WR:wing:off,R:R3:WR:wide:on",
@@ -6163,7 +6796,18 @@
   },
   {
    "id": "snapform-450090f76b8a256d",
-   "name": "11 Gun 3x1 Rt #7",
+   "name": "Gun Train Rt",
+   "chartName": "11 Gun 3x1 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Train",
+    "family": "3x1 'T'",
+    "strength": "Rt",
+    "tags": [],
+    "back": "weak",
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -6272,13 +6916,15 @@
     "eagles-2026",
     "11",
     "3x1 'T'",
-    "W2"
+    "W2",
+    "Train",
+    "3x1 'T'"
    ],
    "family": "3x1 'T'",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-033: Gun, Shipley offset L; R: trips (two outside on/near the numbers, Wicks inside off the ball); L: one WR wide. As snapped: Wicks motions from the R slot in toward the QB\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Gun Train Rt [11]. Charted as 11 Gun 3x1 Rt.\nBack on the weak side of the quarterback.\nW2-033: Gun, Shipley offset L; R: trips (two outside on/near the numbers, Wicks inside off the ball); L: one WR wide. As snapped: Wicks motions from the R slot in toward the QB\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|3x1 'T'|Gun|B:RB:L:gun_offset,Q:gun,R:L1:WR:wide:on,R:R1:WR:slot:off,R:R2:TE:numbers:on,R:R3:WR:wide:off",
@@ -6301,7 +6947,21 @@
   },
   {
    "id": "snapform-5aabfda7527ca7ed",
-   "name": "11 Gun 3x1 Rt #8",
+   "name": "Gun Fast Lt #2",
+   "chartName": "11 Gun 3x1 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Fast",
+    "family": "1x3 'F'",
+    "strength": "Lt",
+    "tags": [],
+    "back": "weak",
+    "alternates": [
+     "Fit",
+     "Foot"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -6410,13 +7070,15 @@
     "eagles-2026",
     "11",
     "3x1 'T'",
-    "W2"
+    "W2",
+    "Fast",
+    "1x3 'F'"
    ],
    "family": "3x1 'T'",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-057: Gun, Barkley offset R; R: Lemon as a wing off the hip of the RT, two WRs outside; L: Mundt inline alone. As snapped: Lemon motions across the backfield toward L\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Gun Fast Lt [11]. Charted as 11 Gun 3x1 Rt.\nBack on the weak side of the quarterback.\nSame picture, different jobs: Fit, Foot.\nCharted strength Rt is the passing strength. The call goes to the Y: Lt.\nW2-057: Gun, Barkley offset R; R: Lemon as a wing off the hip of the RT, two WRs outside; L: Mundt inline alone. As snapped: Lemon motions across the backfield toward L\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|3x1 'T'|Gun|B:RB:R:gun_offset,Q:gun,R:L1:TE:inline:on,R:R1:WR:wing:off,R:R2:WR:slot:off,R:R3:WR:numbers:on",
@@ -6439,7 +7101,23 @@
   },
   {
    "id": "snapform-9ae738b3072c5a79",
-   "name": "11 Gun 3x1 Lt #4",
+   "name": "Gun Trips Lt Open #2",
+   "chartName": "11 Gun 3x1 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Trips",
+    "family": "3x1 'T'",
+    "strength": "Lt",
+    "tags": [
+     "Open"
+    ],
+    "back": "weak",
+    "alternates": [
+     "Trio",
+     "Trax"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -6548,13 +7226,15 @@
     "eagles-2026",
     "11",
     "3x1 'T'",
-    "W2"
+    "W2",
+    "Trips",
+    "3x1 'T'"
    ],
    "family": "3x1 'T'",
    "strength": "left",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-062: Gun, Shipley offset R; L: Mundt standing on the line just outside the LT, slot off the ball, WR wide; R: one WR wide off the ball. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Gun Trips Lt Open [11]. Charted as 11 Gun 3x1 Lt.\nBack on the weak side of the quarterback.\nSame picture, different jobs: Trio, Trax.\nW2-062: Gun, Shipley offset R; L: Mundt standing on the line just outside the LT, slot off the ball, WR wide; R: one WR wide off the ball. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|3x1 'T'|Gun|B:RB:R:gun_offset,Q:gun,R:L1:TE:tight:on,R:L2:WR:slot:off,R:L3:WR:wide:on,R:R1:WR:wide:off",
@@ -6577,7 +7257,21 @@
   },
   {
    "id": "snapform-c74ac66cc1ca16ea",
-   "name": "11 Gun 3x1 Rt #9",
+   "name": "Gun Trips Rt #4",
+   "chartName": "11 Gun 3x1 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Trips",
+    "family": "3x1 'T'",
+    "strength": "Rt",
+    "tags": [],
+    "back": "strong",
+    "alternates": [
+     "Trio",
+     "Trax"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -6686,13 +7380,15 @@
     "eagles-2026",
     "11",
     "3x1 'T'",
-    "W2"
+    "W2",
+    "Trips",
+    "3x1 'T'"
    ],
    "family": "3x1 'T'",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-009: Gun, RB offset R; R: Goedert inline, WR on the line, M.Brown off the ball outside; L: one WR on the numbers. As snapped: Brown in motion across behind the line to the L side\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Gun Trips Rt [11]. Charted as 11 Gun 3x1 Rt.\nBack on the strong side of the quarterback.\nSame picture, different jobs: Trio, Trax.\nW2-009: Gun, RB offset R; R: Goedert inline, WR on the line, M.Brown off the ball outside; L: one WR on the numbers. As snapped: Brown in motion across behind the line to the L side\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|3x1 'T'|Gun|B:RB:R:gun_offset,Q:gun,R:L1:WR:numbers:on,R:R1:TE:inline:on,R:R2:WR:slot:on,R:R3:WR:numbers:off",
@@ -6715,7 +7411,23 @@
   },
   {
    "id": "snapform-9e3fc250c58be466",
-   "name": "11 Gun 3x1 Lt #5",
+   "name": "Gun Fast Rt Open",
+   "chartName": "11 Gun 3x1 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Fast",
+    "family": "1x3 'F'",
+    "strength": "Rt",
+    "tags": [
+     "Open"
+    ],
+    "back": "strong",
+    "alternates": [
+     "Fit",
+     "Foot"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -6824,13 +7536,15 @@
     "eagles-2026",
     "11",
     "3x1 'T'",
-    "W2"
+    "W2",
+    "Fast",
+    "1x3 'F'"
    ],
    "family": "3x1 'T'",
    "strength": "left",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-069: Gun, Shipley offset R; L: three WRs (Smith in the slot off the ball, two outside); R: Mundt detached ~4 yds outside the RT alone. As snapped: Smith motions from the L slot across behind the QB toward R\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Gun Fast Rt Open [11]. Charted as 11 Gun 3x1 Lt.\nBack on the strong side of the quarterback.\nSame picture, different jobs: Fit, Foot.\nCharted strength Lt is the passing strength. The call goes to the Y: Rt.\nW2-069: Gun, Shipley offset R; L: three WRs (Smith in the slot off the ball, two outside); R: Mundt detached ~4 yds outside the RT alone. As snapped: Smith motions from the L slot across behind the QB toward R\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|3x1 'T'|Gun|B:RB:R:gun_offset,Q:gun,R:L1:WR:slot:off,R:L2:WR:numbers:on,R:L3:WR:wide:off,R:R1:TE:tight:off",
@@ -6853,7 +7567,20 @@
   },
   {
    "id": "snapform-ef091e3747f77789",
-   "name": "11 Pistol 3x1 Lt",
+   "name": "Pistol Trips Lt",
+   "chartName": "11 Pistol 3x1 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Trips",
+    "family": "3x1 'T'",
+    "strength": "Lt",
+    "tags": [],
+    "alternates": [
+     "Trio",
+     "Trax"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -6962,13 +7689,15 @@
     "eagles-2026",
     "11",
     "3x1 'T'",
-    "W2"
+    "W2",
+    "Trips",
+    "3x1 'T'"
    ],
    "family": "3x1 'T'",
    "strength": "left",
    "qbAlignment": "pistol",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-018: Pistol, Bigsby behind QB; L: Goedert inline, Lemon on the line just outside, a WR off the ball behind/outside Lemon; R: one WR wide. Snapped as set\nDrawn on the Middle hash (seen: Middle 1).",
+   "note": "System call: Pistol Trips Lt [11]. Charted as 11 Pistol 3x1 Lt.\nSame picture, different jobs: Trio, Trax.\nW2-018: Pistol, Bigsby behind QB; L: Goedert inline, Lemon on the line just outside, a WR off the ball behind/outside Lemon; R: one WR wide. Snapped as set\nDrawn on the Middle hash (seen: Middle 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|3x1 'T'|Pistol|B:RB:C:pistol_back,Q:pistol,R:L1:TE:inline:on,R:L2:WR:tight:on,R:L3:WR:slot:off,R:R1:WR:wide:on",
@@ -6991,7 +7720,20 @@
   },
   {
    "id": "snapform-d40fb6c2bab494ec",
-   "name": "11 UC 3x1 Lt",
+   "name": "Trips Lt",
+   "chartName": "11 UC 3x1 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Trips",
+    "family": "3x1 'T'",
+    "strength": "Lt",
+    "tags": [],
+    "alternates": [
+     "Trio",
+     "Trax"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -7100,13 +7842,15 @@
     "eagles-2026",
     "11",
     "3x1 'T'",
-    "W2"
+    "W2",
+    "Trips",
+    "3x1 'T'"
    ],
    "family": "3x1 'T'",
    "strength": "left",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-063: Under center, Bigsby deep I-back; L: Mundt standing at the end of the line, a receiver off the ball just outside him, WR wide; R: one WR off the ball. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Trips Lt [11]. Charted as 11 UC 3x1 Lt.\nSame picture, different jobs: Trio, Trax.\nW2-063: Under center, Bigsby deep I-back; L: Mundt standing at the end of the line, a receiver off the ball just outside him, WR wide; R: one WR off the ball. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|3x1 'T'|Under Center|B:RB:C:deep,Q:under_center,R:L1:TE:inline:on,R:L2:WR:tight:off,R:L3:WR:slot:on,R:R1:WR:numbers:off",
@@ -7129,7 +7873,20 @@
   },
   {
    "id": "snapform-4e0e2aa51b78ce3b",
-   "name": "11 UC 3x1 Rt",
+   "name": "Trips Rt",
+   "chartName": "11 UC 3x1 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Trips",
+    "family": "3x1 'T'",
+    "strength": "Rt",
+    "tags": [],
+    "alternates": [
+     "Trio",
+     "Trax"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -7238,13 +7995,15 @@
     "eagles-2026",
     "11",
     "3x1 'T'",
-    "W2"
+    "W2",
+    "Trips",
+    "3x1 'T'"
    ],
    "family": "3x1 'T'",
    "strength": "right",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-048: Under center, Barkley deep I-back; R: Mundt inline, Lemon on the line outside, a third receiver off the ball; L: one WR wide. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Trips Rt [11]. Charted as 11 UC 3x1 Rt.\nSame picture, different jobs: Trio, Trax.\nW2-048: Under center, Barkley deep I-back; R: Mundt inline, Lemon on the line outside, a third receiver off the ball; L: one WR wide. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|3x1 'T'|Under Center|B:RB:C:deep,Q:under_center,R:L1:WR:wide:on,R:R1:TE:inline:on,R:R2:WR:slot:off,R:R3:WR:numbers:on",
@@ -7267,7 +8026,20 @@
   },
   {
    "id": "snapform-fc7ba3329a0f2170",
-   "name": "11 UC 3x1 Rt #2",
+   "name": "Trips Rt #2",
+   "chartName": "11 UC 3x1 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Trips",
+    "family": "3x1 'T'",
+    "strength": "Rt",
+    "tags": [],
+    "alternates": [
+     "Trio",
+     "Trax"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -7376,13 +8148,15 @@
     "eagles-2026",
     "11",
     "3x1 'T'",
-    "W2"
+    "W2",
+    "Trips",
+    "3x1 'T'"
    ],
    "family": "3x1 'T'",
    "strength": "right",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-054: Under center, Barkley deep I-back; R: Mundt inline, WR off the ball, WR wide; L: Lemon wide. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Trips Rt [11]. Charted as 11 UC 3x1 Rt.\nSame picture, different jobs: Trio, Trax.\nW2-054: Under center, Barkley deep I-back; R: Mundt inline, WR off the ball, WR wide; L: Lemon wide. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|3x1 'T'|Under Center|B:RB:C:deep,Q:under_center,R:L1:WR:wide:on,R:R1:TE:inline:on,R:R2:WR:slot:off,R:R3:WR:wide:on",
@@ -7405,7 +8179,22 @@
   },
   {
    "id": "snapform-ed264aea8129aeb8",
-   "name": "11 Gun Bunch Rt #2",
+   "name": "Gun Crip Lt",
+   "chartName": "11 Gun Bunch Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Crip",
+    "family": "1x3 Bunch 'CR'",
+    "strength": "Lt",
+    "tags": [],
+    "back": "strong",
+    "alternates": [
+     "Crack",
+     "Crush",
+     "Cruz"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -7514,13 +8303,15 @@
     "eagles-2026",
     "11",
     "Bunch 'B'",
-    "W2"
+    "W2",
+    "Crip",
+    "1x3 Bunch 'CR'"
    ],
    "family": "Bunch 'B'",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-005: Gun, RB offset L; Mundt inline L alone; three WRs bunched R (point man on the line, one inside and one outside off the ball). Snapped as set\nDrawn on the Middle hash (seen: Middle 1).",
+   "note": "System call: Gun Crip Lt [11]. Charted as 11 Gun Bunch Rt.\nBack on the strong side of the quarterback.\nSame picture, different jobs: Crack, Crush, Cruz.\nCharted strength Rt is the passing strength. The call goes to the Y: Lt.\nW2-005: Gun, RB offset L; Mundt inline L alone; three WRs bunched R (point man on the line, one inside and one outside off the ball). Snapped as set\nDrawn on the Middle hash (seen: Middle 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|Bunch 'B'|Gun|B:RB:L:gun_offset,Q:gun,R:L1:TE:inline:on,R:R1:WR:slot:off,R:R2:WR:slot:on,R:R3:WR:slot:off",
@@ -7543,7 +8334,23 @@
   },
   {
    "id": "snapform-5f5d6c7bea61abb5",
-   "name": "11 Gun Empty Rt",
+   "name": "Gun Trips Rt Open E",
+   "chartName": "11 Gun Empty Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Trips",
+    "family": "Empty",
+    "strength": "Rt",
+    "tags": [
+     "Open",
+     "E"
+    ],
+    "alternates": [
+     "Trio",
+     "Trax"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -7652,13 +8459,15 @@
     "eagles-2026",
     "11",
     "Empty",
-    "W2"
+    "W2",
+    "Trips",
+    "Empty"
    ],
    "family": "Empty",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-067: Empty gun 3x2: R Mundt detached ~3 yds outside the RT, a slot, a WR wide; L two receivers (slot and wide). Snapped as set\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Gun Trips Rt Open E [11]. Charted as 11 Gun Empty Rt.\nSame picture, different jobs: Trio, Trax.\nW2-067: Empty gun 3x2: R Mundt detached ~3 yds outside the RT, a slot, a WR wide; L two receivers (slot and wide). Snapped as set\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|Empty|Gun|Q:gun,R:L1:RB:slot:off,R:L2:WR:wide:on,R:R1:TE:tight:off,R:R2:WR:slot:off,R:R3:WR:wide:on",
@@ -7681,7 +8490,23 @@
   },
   {
    "id": "snapform-f4e610232a0208d5",
-   "name": "11 Gun Empty Rt #2",
+   "name": "Gun Trips Rt Open D",
+   "chartName": "11 Gun Empty Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Trips",
+    "family": "Empty",
+    "strength": "Rt",
+    "tags": [
+     "Open",
+     "D"
+    ],
+    "alternates": [
+     "Trio",
+     "Trax"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -7790,13 +8615,15 @@
     "eagles-2026",
     "11",
     "Empty",
-    "W2"
+    "W2",
+    "Trips",
+    "Empty"
    ],
    "family": "Empty",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-044: Empty gun 3x2: R trips (Mundt and two WRs, outside the tackle box); L Shipley standing just outside the LT, WR on the numbers. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Gun Trips Rt Open D [11]. Charted as 11 Gun Empty Rt.\nSame picture, different jobs: Trio, Trax.\nW2-044: Empty gun 3x2: R trips (Mundt and two WRs, outside the tackle box); L Shipley standing just outside the LT, WR on the numbers. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|Empty|Gun|Q:gun,R:L1:RB:tight:off,R:L2:WR:numbers:on,R:R1:TE:slot:off,R:R2:WR:slot:off,R:R3:WR:numbers:on",
@@ -7819,7 +8646,19 @@
   },
   {
    "id": "snapform-6a8f314b7cd03bc1",
-   "name": "11 Gun Empty Lt #2",
+   "name": "Gun Dyno Rt D",
+   "chartName": "11 Gun Empty Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dyno",
+    "family": "Empty",
+    "strength": "Rt",
+    "tags": [
+     "D"
+    ],
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -7928,13 +8767,15 @@
     "eagles-2026",
     "11",
     "Empty",
-    "W2"
+    "W2",
+    "Dyno",
+    "Empty"
    ],
    "family": "Empty",
    "strength": "left",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-061: Empty gun, compressed: R Jenkins off the ball plus a receiver on the line, both tight to the RT; L receivers tight to the LT with one slightly wider; no back beside Hurts. Snapped as set after a pre-snap reshuffle\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Gun Dyno Rt D [11]. Charted as 11 Gun Empty Lt.\nCharted strength Lt is the passing strength. The call goes to the Y: Rt.\nW2-061: Empty gun, compressed: R Jenkins off the ball plus a receiver on the line, both tight to the RT; L receivers tight to the LT with one slightly wider; no back beside Hurts. Snapped as set after a pre-snap reshuffle\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|Empty|Gun|Q:gun,R:L1:RB:tight:off,R:L2:WR:tight:on,R:L3:WR:slot:off,R:R1:TE:tight:off,R:R2:WR:tight:on",
@@ -7957,7 +8798,19 @@
   },
   {
    "id": "snapform-db5644a232378e38",
-   "name": "11 Gun Empty Lt #3",
+   "name": "Gun Dyno Lt B",
+   "chartName": "11 Gun Empty Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dyno",
+    "family": "Empty",
+    "strength": "Lt",
+    "tags": [
+     "B"
+    ],
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -8066,13 +8919,15 @@
     "eagles-2026",
     "11",
     "Empty",
-    "W2"
+    "W2",
+    "Dyno",
+    "Empty"
    ],
    "family": "Empty",
    "strength": "left",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-046: Empty gun 3x2: L Jenkins standing tight outside the LT plus two receivers outside (Shipley among them); R two WRs (slot + wide). Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Gun Dyno Lt B [11]. Charted as 11 Gun Empty Lt.\nW2-046: Empty gun 3x2: L Jenkins standing tight outside the LT plus two receivers outside (Shipley among them); R two WRs (slot + wide). Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|Empty|Gun|Q:gun,R:L1:TE:tight:on,R:L2:RB:slot:off,R:L3:WR:numbers:on,R:R1:WR:slot:off,R:R2:WR:wide:on",
@@ -8095,7 +8950,19 @@
   },
   {
    "id": "snapform-eac59d15f6f193d3",
-   "name": "11 Gun Empty Lt #4",
+   "name": "Gun Dyno Lt B #2",
+   "chartName": "11 Gun Empty Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dyno",
+    "family": "Empty",
+    "strength": "Lt",
+    "tags": [
+     "B"
+    ],
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -8204,13 +9071,15 @@
     "eagles-2026",
     "11",
     "Empty",
-    "W2"
+    "W2",
+    "Dyno",
+    "Empty"
    ],
    "family": "Empty",
    "strength": "left",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-031: Empty gun 3x2: L three receivers (TE tight to the formation, two outside); R two WRs (slot + wide). Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Gun Dyno Lt B [11]. Charted as 11 Gun Empty Lt.\nW2-031: Empty gun 3x2: L three receivers (TE tight to the formation, two outside); R two WRs (slot + wide). Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|Empty|Gun|Q:gun,R:L1:TE:tight:on,R:L2:RB:slot:off,R:L3:WR:wide:on,R:R1:WR:slot:off,R:R2:WR:wide:on",
@@ -8233,7 +9102,19 @@
   },
   {
    "id": "snapform-6b0c07cb76cc1f01",
-   "name": "11 Gun Empty Rt #3",
+   "name": "Gun Dyno Rt B",
+   "chartName": "11 Gun Empty Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dyno",
+    "family": "Empty",
+    "strength": "Rt",
+    "tags": [
+     "B"
+    ],
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -8342,13 +9223,15 @@
     "eagles-2026",
     "11",
     "Empty",
-    "W2"
+    "W2",
+    "Dyno",
+    "Empty"
    ],
    "family": "Empty",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-010: Empty gun 3x2: L two WRs (numbers, wide); R Goedert on the line ~4 yds outside RT, a slot, a wide WR. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Gun Dyno Rt B [11]. Charted as 11 Gun Empty Rt.\nW2-010: Empty gun 3x2: L two WRs (numbers, wide); R Goedert on the line ~4 yds outside RT, a slot, a wide WR. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|Empty|Gun|Q:gun,R:L1:WR:numbers:off,R:L2:WR:wide:on,R:R1:TE:tight:on,R:R2:RB:slot:off,R:R3:WR:wide:on",
@@ -8371,7 +9254,23 @@
   },
   {
    "id": "snapform-bb4b1a9c4562eac6",
-   "name": "11 Gun Empty Lt #5",
+   "name": "Gun Fast Rt Open A",
+   "chartName": "11 Gun Empty Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Fast",
+    "family": "Empty",
+    "strength": "Rt",
+    "tags": [
+     "Open",
+     "A"
+    ],
+    "alternates": [
+     "Fit",
+     "Foot"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "11",
    "playersPerSide": 11,
@@ -8480,13 +9379,15 @@
     "eagles-2026",
     "11",
     "Empty",
-    "W2"
+    "W2",
+    "Fast",
+    "Empty"
    ],
    "family": "Empty",
    "strength": "left",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-041: Empty gun 3x2: L three receivers grouped near the numbers; R Mundt standing tight at the end of the line, Bigsby off the ball wide R. As snapped: Bigsby motions back into the backfield and takes the handoff\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Gun Fast Rt Open A [11]. Charted as 11 Gun Empty Lt.\nSame picture, different jobs: Fit, Foot.\nCharted strength Lt is the passing strength. The call goes to the Y: Rt.\nW2-041: Empty gun 3x2: L three receivers grouped near the numbers; R Mundt standing tight at the end of the line, Bigsby off the ball wide R. As snapped: Bigsby motions back into the backfield and takes the handoff\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|Empty|Gun|Q:gun,R:L1:WR:slot:off,R:L2:WR:numbers:on,R:L3:WR:numbers:off,R:R1:TE:tight:on,R:R2:RB:wide:off",
@@ -8509,7 +9410,17 @@
   },
   {
    "id": "snapform-68cadf51cb67fcc3",
-   "name": "12 Gun 2 Back Lt",
+   "name": "Gun Strong Lt",
+   "chartName": "12 Gun 2 Back Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Strong",
+    "family": "2 Back",
+    "strength": "Lt",
+    "tags": [],
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "12",
    "playersPerSide": 11,
@@ -8618,13 +9529,15 @@
     "eagles-2026",
     "12",
     "2 Back",
-    "W2"
+    "W2",
+    "Strong",
+    "2 Back"
    ],
    "family": "2 Back",
    "strength": "left",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-036: Gun with two backs: Shipley and a TE as an H-back beside/behind Hurts; L: TE inline, WR wide; R: one WR wide. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Gun Strong Lt [12]. Charted as 12 Gun 2 Back Lt.\nSecond back is an H-back off the strong tackle's hip: called Strong.\nW2-036: Gun with two backs: Shipley and a TE as an H-back beside/behind Hurts; L: TE inline, WR wide; R: one WR wide. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "12|2 Back|Gun|B:RB:R:gun_offset,B:TE:L:wing_back,Q:gun,R:L1:TE:inline:on,R:L2:WR:wide:on,R:R1:WR:wide:on",
@@ -8647,7 +9560,18 @@
   },
   {
    "id": "snapform-4814acdb33994391",
-   "name": "12 Gun 2x2 Rt",
+   "name": "Gun Deuce Rt",
+   "chartName": "12 Gun 2x2 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Deuce",
+    "family": "2x2 'D'",
+    "strength": "Rt",
+    "tags": [],
+    "back": "weak",
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "12",
    "playersPerSide": 11,
@@ -8757,13 +9681,15 @@
     "12",
     "2x2 'D'",
     "W1",
-    "template, verify"
+    "template, verify",
+    "Deuce",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "Template: default shape for 12 2x2 'D' Gun Rt (no W2 snap with this personnel, family, backfield and strength)\nDrawn on the Middle hash (seen: Middle 1).",
+   "note": "System call: Gun Deuce Rt [12]. Charted as 12 Gun 2x2 Rt.\nBack on the weak side of the quarterback.\nTemplate: default shape for 12 2x2 'D' Gun Rt (no W2 snap with this personnel, family, backfield and strength)\nDrawn on the Middle hash (seen: Middle 1).",
    "confidence": "needs-review",
    "builtin": true,
    "signature": "12|2x2 'D'|Gun|B:RB:L:gun_offset,Q:gun,R:L1:TE:inline:on,R:L2:WR:wide:on,R:R1:TE:inline:on,R:R2:WR:wide:on",
@@ -8786,7 +9712,19 @@
   },
   {
    "id": "snapform-1b20f6e3882cc9d5",
-   "name": "12 UC 2x2 Rt #2",
+   "name": "Dice Lt",
+   "chartName": "12 UC 2x2 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dice",
+    "family": "2x2 'D'",
+    "strength": "Lt",
+    "tags": [],
+    "alternates": [
+     "Dixie"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "12",
    "playersPerSide": 11,
@@ -8895,13 +9833,15 @@
     "eagles-2026",
     "12",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Dice",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "right",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-060: Under center, Bigsby deep I-back; R: Mundt standing tight outside the RT, WR wide; L: Jenkins at the end of the line, WR off the ball outside. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Dice Lt [12]. Charted as 12 UC 2x2 Rt.\nSame picture, different jobs: Dixie.\nCharted strength Rt is the passing strength. The call goes to the Y: Lt.\nW2-060: Under center, Bigsby deep I-back; R: Mundt standing tight outside the RT, WR wide; L: Jenkins at the end of the line, WR off the ball outside. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "12|2x2 'D'|Under Center|B:RB:C:deep,Q:under_center,R:L1:TE:inline:on,R:L2:WR:numbers:off,R:R1:TE:tight:on,R:R2:WR:wide:on",
@@ -8924,7 +9864,17 @@
   },
   {
    "id": "snapform-382e40e74769f775",
-   "name": "12 UC 2x2 Lt #2",
+   "name": "Deuce Lt",
+   "chartName": "12 UC 2x2 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Deuce",
+    "family": "2x2 'D'",
+    "strength": "Lt",
+    "tags": [],
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "12",
    "playersPerSide": 11,
@@ -9033,13 +9983,15 @@
     "eagles-2026",
     "12",
     "2x2 'D'",
-    "W2"
+    "W2",
+    "Deuce",
+    "2x2 'D'"
    ],
    "family": "2x2 'D'",
    "strength": "left",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-030: Under center, Bigsby deep I-back; TE inline each side; one WR off the ball each side (R near the numbers, L slot). Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Deuce Lt [12]. Charted as 12 UC 2x2 Lt.\nW2-030: Under center, Bigsby deep I-back; TE inline each side; one WR off the ball each side (R near the numbers, L slot). Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "12|2x2 'D'|Under Center|B:RB:C:deep,Q:under_center,R:L1:TE:inline:on,R:L2:WR:slot:off,R:R1:TE:inline:on,R:R2:WR:numbers:off",
@@ -9062,7 +10014,23 @@
   },
   {
    "id": "snapform-4695a91dda6051d7",
-   "name": "12 Gun 3x1 Rt",
+   "name": "Gun Trips Rt Off",
+   "chartName": "12 Gun 3x1 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Trips",
+    "family": "3x1 'T'",
+    "strength": "Rt",
+    "tags": [
+     "Off"
+    ],
+    "back": "strong",
+    "alternates": [
+     "Trio",
+     "Trax"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "12",
    "playersPerSide": 11,
@@ -9171,13 +10139,15 @@
     "eagles-2026",
     "12",
     "3x1 'T'",
-    "W2"
+    "W2",
+    "Trips",
+    "3x1 'T'"
    ],
    "family": "3x1 'T'",
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-002: Gun, RB offset R; R side: TE off the ball behind the RT (wing), Goedert on the line ~2 yds outside the RT, WR on the line outside him; one WR on the numbers L. Snapped as set\nDrawn on the Middle hash (seen: Middle 1).",
+   "note": "System call: Gun Trips Rt Off [12]. Charted as 12 Gun 3x1 Rt.\nBack on the strong side of the quarterback.\nSame picture, different jobs: Trio, Trax.\nW2-002: Gun, RB offset R; R side: TE off the ball behind the RT (wing), Goedert on the line ~2 yds outside the RT, WR on the line outside him; one WR on the numbers L. Snapped as set\nDrawn on the Middle hash (seen: Middle 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "12|3x1 'T'|Gun|B:RB:R:gun_offset,Q:gun,R:L1:WR:numbers:on,R:R1:TE:wing:off,R:R2:TE:tight:on,R:R3:WR:slot:on",
@@ -9200,7 +10170,17 @@
   },
   {
    "id": "snapform-2f9918f258119fb8",
-   "name": "12 Pistol 3x1 Rt",
+   "name": "Pistol West Rt",
+   "chartName": "12 Pistol 3x1 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "West",
+    "family": "3x1 'T'",
+    "strength": "Rt",
+    "tags": [],
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "12",
    "playersPerSide": 11,
@@ -9309,13 +10289,15 @@
     "eagles-2026",
     "12",
     "3x1 'T'",
-    "W2"
+    "W2",
+    "West",
+    "3x1 'T'"
    ],
    "family": "3x1 'T'",
    "strength": "right",
    "qbAlignment": "pistol",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-021: Pistol, Bigsby behind QB; R: Mundt inline, Goedert wing off the ball outside him, WR wide; L: one WR wide. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Pistol West Rt [12]. Charted as 12 Pistol 3x1 Rt.\nW2-021: Pistol, Bigsby behind QB; R: Mundt inline, Goedert wing off the ball outside him, WR wide; L: one WR wide. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "12|3x1 'T'|Pistol|B:RB:C:pistol_back,Q:pistol,R:L1:WR:wide:on,R:R1:TE:inline:on,R:R2:TE:wing:off,R:R3:WR:wide:on",
@@ -9338,7 +10320,20 @@
   },
   {
    "id": "snapform-fe8a305c72621aa6",
-   "name": "12 UC 3x1 Lt #2",
+   "name": "Trips Lt #2",
+   "chartName": "12 UC 3x1 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Trips",
+    "family": "3x1 'T'",
+    "strength": "Lt",
+    "tags": [],
+    "alternates": [
+     "Trio",
+     "Trax"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "12",
    "playersPerSide": 11,
@@ -9447,13 +10442,15 @@
     "eagles-2026",
     "12",
     "3x1 'T'",
-    "W2"
+    "W2",
+    "Trips",
+    "3x1 'T'"
    ],
    "family": "3x1 'T'",
    "strength": "left",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-022: Under center, Bigsby deep I-back; L: Jenkins inline, Mundt on the line outside him, WR on the numbers; R: one WR wide. Snapped as set\nDrawn on the Middle hash (seen: Middle 1).",
+   "note": "System call: Trips Lt [12]. Charted as 12 UC 3x1 Lt.\nSame picture, different jobs: Trio, Trax.\nW2-022: Under center, Bigsby deep I-back; L: Jenkins inline, Mundt on the line outside him, WR on the numbers; R: one WR wide. Snapped as set\nDrawn on the Middle hash (seen: Middle 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "12|3x1 'T'|Under Center|B:RB:C:deep,Q:under_center,R:L1:TE:inline:on,R:L2:TE:tight:on,R:L3:WR:numbers:off,R:R1:WR:wide:on",
@@ -9476,7 +10473,20 @@
   },
   {
    "id": "snapform-1893836f779a9d69",
-   "name": "12 UC 3x1 Lt #3",
+   "name": "Trips Lt #3",
+   "chartName": "12 UC 3x1 Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Trips",
+    "family": "3x1 'T'",
+    "strength": "Lt",
+    "tags": [],
+    "alternates": [
+     "Trio",
+     "Trax"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "12",
    "playersPerSide": 11,
@@ -9585,13 +10595,15 @@
     "eagles-2026",
     "12",
     "3x1 'T'",
-    "W2"
+    "W2",
+    "Trips",
+    "3x1 'T'"
    ],
    "family": "3x1 'T'",
    "strength": "left",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-026: Under center, Bigsby deep I-back; L: TE inline, TE tight beside him on the line, Wicks wide off the ball; R: Smith wide. As snapped: Wicks motions across the backfield to the R side, look becomes 2x2\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Trips Lt [12]. Charted as 12 UC 3x1 Lt.\nSame picture, different jobs: Trio, Trax.\nW2-026: Under center, Bigsby deep I-back; L: TE inline, TE tight beside him on the line, Wicks wide off the ball; R: Smith wide. As snapped: Wicks motions across the backfield to the R side, look becomes 2x2\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "12|3x1 'T'|Under Center|B:RB:C:deep,Q:under_center,R:L1:TE:inline:on,R:L2:TE:tight:on,R:L3:WR:wide:off,R:R1:WR:wide:on",
@@ -9614,7 +10626,17 @@
   },
   {
    "id": "snapform-58ff4dc8b1f851d6",
-   "name": "12 UC Big Lt",
+   "name": "West Lt #2",
+   "chartName": "12 UC Big Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "West",
+    "family": "3x1 'T'",
+    "strength": "Lt",
+    "tags": [],
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "12",
    "playersPerSide": 11,
@@ -9723,13 +10745,15 @@
     "eagles-2026",
     "12",
     "Big",
-    "W2"
+    "W2",
+    "West",
+    "3x1 'T'"
    ],
    "family": "Big",
    "strength": "left",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-027: Under center, Bigsby deep I-back; L: TE inline, TE wing off his hip, WR off the ball just outside; R: one WR off the ball near the numbers. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: West Lt [12]. Charted as 12 UC Big Lt.\nW2-027: Under center, Bigsby deep I-back; L: TE inline, TE wing off his hip, WR off the ball just outside; R: one WR off the ball near the numbers. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "12|Big|Under Center|B:RB:C:deep,Q:under_center,R:L1:TE:inline:on,R:L2:TE:wing:off,R:L3:WR:tight:off,R:R1:WR:numbers:on",
@@ -9752,7 +10776,23 @@
   },
   {
    "id": "snapform-40a6f898c7e2b2f2",
-   "name": "12 UC Big Rt",
+   "name": "Bunch Rt Tighter",
+   "chartName": "12 UC Big Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Bunch",
+    "family": "Bunch 'B'",
+    "strength": "Rt",
+    "tags": [
+     "Tighter"
+    ],
+    "alternates": [
+     "Bin",
+     "Buddy",
+     "Box"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "12",
    "playersPerSide": 11,
@@ -9861,13 +10901,15 @@
     "eagles-2026",
     "12",
     "Big",
-    "W2"
+    "W2",
+    "Bunch",
+    "Bunch 'B'"
    ],
    "family": "Big",
    "strength": "right",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-059: Under center, Bigsby deep I-back; compact short-yardage set. R: Mundt off the ball behind the RT (wing), Smith on the line ~2 yds outside, Wicks off the ball beside him; L: Jenkins inline. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Bunch Rt Tighter [12]. Charted as 12 UC Big Rt.\nSame picture, different jobs: Bin, Buddy, Box.\nW2-059: Under center, Bigsby deep I-back; compact short-yardage set. R: Mundt off the ball behind the RT (wing), Smith on the line ~2 yds outside, Wicks off the ball beside him; L: Jenkins inline. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "12|Big|Under Center|B:RB:C:deep,Q:under_center,R:L1:TE:inline:on,R:R1:TE:wing:off,R:R2:WR:tight:off,R:R3:WR:tight:on",
@@ -9890,7 +10932,17 @@
   },
   {
    "id": "snapform-3b2ab081508d5f47",
-   "name": "12 UC Big Rt #2",
+   "name": "West Rt #2",
+   "chartName": "12 UC Big Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "West",
+    "family": "3x1 'T'",
+    "strength": "Rt",
+    "tags": [],
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "12",
    "playersPerSide": 11,
@@ -9999,13 +11051,15 @@
     "eagles-2026",
     "12",
     "Big",
-    "W2"
+    "W2",
+    "West",
+    "3x1 'T'"
    ],
    "family": "Big",
    "strength": "right",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-035: Under center, Bigsby deep I-back; R: TE inline, TE wing, WR tight outside them; L: one WR wide. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: West Rt [12]. Charted as 12 UC Big Rt.\nW2-035: Under center, Bigsby deep I-back; R: TE inline, TE wing, WR tight outside them; L: one WR wide. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "12|Big|Under Center|B:RB:C:deep,Q:under_center,R:L1:WR:wide:on,R:R1:TE:inline:on,R:R2:TE:wing:off,R:R3:WR:tight:on",
@@ -10028,7 +11082,21 @@
   },
   {
    "id": "snapform-aa13e7162b701c00",
-   "name": "13 UC Big",
+   "name": "Dice Lt Close #2",
+   "chartName": "13 UC Big",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Dice",
+    "family": "2x2 'D'",
+    "strength": "Lt",
+    "tags": [
+     "Close"
+    ],
+    "alternates": [
+     "Dixie"
+    ],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "13",
    "playersPerSide": 11,
@@ -10137,12 +11205,14 @@
     "eagles-2026",
     "13",
     "Big",
-    "W2"
+    "W2",
+    "Dice",
+    "2x2 'D'"
    ],
    "family": "Big",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-025: Under center, Shipley deep I-back; L: two TEs on the line (inline + next to him); R: no attached TE, two players off the ball split wide (stacked/near the numbers: a TE and Cooper). Snapped as set\nDrawn on the Middle hash (seen: Middle 1).",
+   "note": "System call: Dice Lt Close [13]. Charted as 13 UC Big.\nSame picture, different jobs: Dixie.\nW2-025: Under center, Shipley deep I-back; L: two TEs on the line (inline + next to him); R: no attached TE, two players off the ball split wide (stacked/near the numbers: a TE and Cooper). Snapped as set\nDrawn on the Middle hash (seen: Middle 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "13|Big|Under Center|B:RB:C:deep,Q:under_center,R:L1:TE:inline:on,R:L2:TE:tight:on,R:R1:TE:numbers:off,R:R2:WR:wide:off",
@@ -10165,7 +11235,20 @@
   },
   {
    "id": "snapform-e9df24720773c754",
-   "name": "13 UC Big Lt",
+   "name": "West Lt Slot Tighter",
+   "chartName": "13 UC Big Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "West",
+    "family": "3x1 'T'",
+    "strength": "Lt",
+    "tags": [
+     "Slot",
+     "Tighter"
+    ],
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "13",
    "playersPerSide": 11,
@@ -10275,13 +11358,15 @@
     "13",
     "Big",
     "W1",
-    "template, verify"
+    "template, verify",
+    "West",
+    "3x1 'T'"
    ],
    "family": "Big",
    "strength": "left",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "Template: default shape for 13 Big Under Center Lt (no W2 snap with this personnel, family, backfield and strength)\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: West Lt Slot Tighter [13]. Charted as 13 UC Big Lt.\nTemplate: default shape for 13 Big Under Center Lt (no W2 snap with this personnel, family, backfield and strength)\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "needs-review",
    "builtin": true,
    "signature": "13|Big|Under Center|B:RB:C:deep,Q:under_center,R:L1:TE:inline:on,R:L2:TE:wing:off,R:R1:TE:inline:on,R:R2:WR:wide:on",
@@ -10304,7 +11389,20 @@
   },
   {
    "id": "snapform-c691ec8d843bbcfb",
-   "name": "22 UC Big Rt",
+   "name": "Weak Rt Close Tighter",
+   "chartName": "22 UC Big Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Weak",
+    "family": "2 Back",
+    "strength": "Rt",
+    "tags": [
+     "Close",
+     "Tighter"
+    ],
+    "alternates": [],
+    "confidence": "rule"
+   },
    "side": "offense",
    "personnel": "22",
    "playersPerSide": 11,
@@ -10413,13 +11511,15 @@
     "eagles-2026",
     "22",
     "Big",
-    "W2"
+    "W2",
+    "Weak",
+    "2 Back"
    ],
    "family": "Big",
    "strength": "right",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W2_PHI-TEN_playforge.json)",
-   "note": "W2-007: Under center, two backs tight behind the guards (Shipley L, Bigsby R); TE inline L, Mundt inline R, Wicks on the line ~2 yds outside Mundt. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Weak Rt Close Tighter [22]. Charted as 22 UC Big Rt.\nW2-007: Under center, two backs tight behind the guards (Shipley L, Bigsby R); TE inline L, Mundt inline R, Wicks on the line ~2 yds outside Mundt. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "22|Big|Under Center|B:RB:L:offset,B:RB:R:offset,Q:under_center,R:L1:TE:inline:on,R:R1:TE:inline:on,R:R2:WR:tight:on",
@@ -10463,6 +11563,7 @@
    "result": "Incomplete",
    "yards": 0,
    "motion": "Smith / slot R / across to L / at snap (2x2 as snapped).",
+   "motionCall": "WR Lt",
    "set": "Wicks wide R, Smith slot R, Goedert inline R, Mundt inline L.",
    "notes": "PHI 35. J.Hurts pass incomplete short right to S.Barkley. | Set: Wicks wide R, Smith slot R, Goedert inline R, Mundt inline L. Motion: Smith / slot R / across to L / at snap (2x2 as snapped).",
    "formationId": "snapform-acb8396469719d7a",
@@ -10493,6 +11594,7 @@
    "result": "Run - Gain",
    "yards": 5,
    "motion": "Goedert / wide R / in toward formation / at snap.",
+   "motionCall": "Y Short",
    "set": "Mundt inline R, Wicks flexed R, Goedert split wide R, Smith wide L.",
    "notes": "PHI 35. S.Barkley right guard to PHI 40 for 5 yards. | Set: Mundt inline R, Wicks flexed R, Goedert split wide R, Smith wide L. Motion: Goedert / wide R / in toward formation / at snap.",
    "formationId": "snapform-acb8396469719d7a",
@@ -10552,6 +11654,7 @@
    "result": "Run - Loss",
    "yards": -1,
    "motion": "Smith / tight R / behind LOS to tight L / at snap (2x2 tight as snapped).",
+   "motionCall": "WR Lt",
    "set": "Goedert inline R, Cooper just outside, Smith tight outside Cooper, Mundt inline L.",
    "notes": "PHI 46. S.Barkley left end to PHI 45 for -1 yards. | Set: Goedert inline R, Cooper just outside, Smith tight outside Cooper, Mundt inline L. Motion: Smith / tight R / behind LOS to tight L / at snap (2x2 tight as snapped).",
    "formationId": "snapform-acb8396469719d7a",
@@ -10635,6 +11738,7 @@
    "target": "S.Barkley",
    "result": "Penalty",
    "motion": "Goedert / wing R / across backfield to L / at snap (2-back look as snapped).",
+   "motionCall": "Y Lt",
    "set": "Mundt inline R, Goedert wing R, Wicks wide R, Smith wide L.",
    "notes": "PHI 39. S.Barkley left end for 5, wiped by holding on C.Jurgens (10 yds, enforced at PHI 40). Down replayed. | Set: Mundt inline R, Goedert wing R, Wicks wide R, Smith wide L. Motion: Goedert / wing R / across backfield to L / at snap (2-back look as snapped).",
    "formationId": "snapform-acb8396469719d7a",
@@ -10663,6 +11767,7 @@
    "result": "Complete",
    "yards": -5,
    "motion": "Lemon / L slot / across backfield to R / at snap.",
+   "motionCall": "WR Behind",
    "notes": "PHI 30. (Shotgun) J.Hurts pass short right to M.Lemon to PHI 25 for -5 yards. | Str unknown: Goedert not found. Motion: Lemon / L slot / across backfield to R / at snap.",
    "formationId": "snapform-7fca6681fa468fbf",
    "mirrored": false,
@@ -10691,6 +11796,7 @@
    "result": "Complete",
    "yards": 12,
    "motion": "Lemon / outside R / across to slot L / at snap (2x2 as snapped).",
+   "motionCall": "WR Lefty",
    "set": "Goedert inline R, Wicks slot R, Lemon outside Wicks, Smith wide L.",
    "notes": "PHI 25. (Shotgun) J.Hurts pass short middle to D.Smith to PHI 37 for 12 yards. | Set: Goedert inline R, Wicks slot R, Lemon outside Wicks, Smith wide L. Motion: Lemon / outside R / across to slot L / at snap (2x2 as snapped).",
    "formationId": "snapform-35d44e8be24720b9",
@@ -10747,6 +11853,7 @@
    "result": "Run - Gain",
    "yards": 6,
    "motion": "Smith / wide L / across toward R / at snap.",
+   "motionCall": "WR Rt",
    "notes": "PHI 24. S.Barkley right end to PHI 30 for 6 yards. | Str by Y tiebreak (Goedert side). Motion: Smith / wide L / across toward R / at snap.",
    "formationId": "snapform-26cced3f579b7531",
    "mirrored": false,
@@ -10802,6 +11909,7 @@
    "target": "S.Barkley",
    "result": "Penalty",
    "motion": "Wicks / wide L / in tight to LT / at snap.",
+   "motionCall": "WR Short",
    "notes": "WAS 6. S.Barkley left tackle for 4, no play: holding on C.Jurgens. | Str by Y tiebreak (Goedert side). Motion: Wicks / wide L / in tight to LT / at snap.",
    "formationId": "snapform-17c62df9f1ba8cbb",
    "mirrored": false,
@@ -10914,6 +12022,7 @@
    "result": "Run - Gain",
    "yards": 4,
    "motion": "receiver / behind QB / out to wing R / at snap.",
+   "motionCall": "WR Rt",
    "notes": "PHI 27. S.Barkley left tackle to PHI 31 for 4 yards. | Str by Y tiebreak (Goedert side). Motion: receiver / behind QB / out to wing R / at snap.",
    "formationId": "snapform-d2da00c26dd94820",
    "mirrored": false,
@@ -10995,6 +12104,7 @@
    "result": "Incomplete",
    "yards": 0,
    "motion": "WR / wide R / in toward formation / at snap.",
+   "motionCall": "WR Short",
    "notes": "PHI 38. J.Hurts pass incomplete short right, no target listed. | Motion: WR / wide R / in toward formation / at snap.",
    "formationId": "snapform-7f3bd03fe72acbe1",
    "mirrored": false,
@@ -11135,6 +12245,7 @@
    "result": "Scramble",
    "yards": 5,
    "motion": "WR / wide L / across to R / at snap.",
+   "motionCall": "WR Rt",
    "notes": "PHI 29. (Shotgun) J.Hurts scrambles right end to PHI 34 for 5 yards. 2-min drill. | Motion: WR / wide L / across to R / at snap.",
    "formationId": "snapform-9b2d6c8502a679ff",
    "mirrored": false,
@@ -11217,6 +12328,7 @@
    "result": "Incomplete",
    "yards": 0,
    "motion": "R slot / in toward box / at snap.",
+   "motionCall": "WR Short",
    "notes": "PHI 47. (Shotgun) J.Hurts pass incomplete deep left to D.Smith. | Mundt is the TE. Motion: R slot / in toward box / at snap.",
    "formationId": "snapform-35d44e8be24720b9",
    "mirrored": false,
@@ -11245,6 +12357,7 @@
    "result": "Incomplete",
    "yards": 0,
    "motion": "WR / wide L / across to R next to Mundt / at snap.",
+   "motionCall": "WR Rt",
    "notes": "PHI 47. (Shotgun) J.Hurts pass incomplete short middle to D.Smith (C.Omenihu). | Mundt is the TE. Motion: WR / wide L / across to R next to Mundt / at snap.",
    "formationId": "snapform-9b2d6c8502a679ff",
    "mirrored": false,
@@ -12090,6 +13203,7 @@
    "result": "Run - Gain",
    "yards": 5,
    "motion": "M.Lemon / detached L / across backfield toward R / at snap",
+   "motionCall": "WR Behind",
    "set": "Gun, RB offset R; L: Goedert inline, Lemon detached; R: two WRs. As snapped: Lemon in motion across the backfield, tight behind the QB at the snap",
    "notes": "TEN 43. (Shotgun) W.Shipley left tackle to TEN 38 for 5 yards (J.Simmons; A.Hill). | Set: Gun, RB offset R; L: Goedert inline, Lemon detached; R: two WRs. As snapped: Lemon in motion across the backfield, tight behind the QB at the snap | Motion: M.Lemon / detached L / across backfield toward R / at snap | Conf H/M/H, Both",
    "formationId": "snapform-fc6e4c6aec9930f4",
@@ -12148,6 +13262,7 @@
    "result": "Run - Gain",
    "yards": 1,
    "motion": "D.Goedert / inline R / across the formation to L (behind LT-LG) / at snap",
+   "motionCall": "Y Lt",
    "set": "Gun, RB offset L; R: Goedert inline, two WRs; L: one WR on the numbers. As snapped: Goedert motions across to the L side, look becomes 2x2",
    "notes": "TEN 33. (Shotgun) T.Bigsby up the middle to TEN 32 for 1 yard (J.Simmons; J.Johnson). | Set: Gun, RB offset L; R: Goedert inline, two WRs; L: one WR on the numbers. As snapped: Goedert motions across to the L side, look becomes 2x2 | Motion: D.Goedert / inline R / across the formation to L (behind LT-LG) / at snap | Conf H/H/H, Both",
    "formationId": "snapform-a797a6fdbc060bff",
@@ -12177,6 +13292,7 @@
    "result": "Complete",
    "yards": 4,
    "motion": "M.Brown / off the ball R / across behind the line to L / at snap",
+   "motionCall": "WR Lt",
    "set": "Gun, RB offset R; R: Goedert inline, WR on the line, M.Brown off the ball outside; L: one WR on the numbers. As snapped: Brown in motion across behind the line to the L side",
    "notes": "TEN 32. (Shotgun) J.Hurts pass short left to D.Goedert to TEN 28 for 4 yards (C.Barton). | Set: Gun, RB offset R; R: Goedert inline, WR on the line, M.Brown off the ball outside; L: one WR on the numbers. As snapped: Brown in motion across behind the line to the L side | Motion: M.Brown / off the ball R / across behind the line to L / at snap | Conf H/M/H, Both",
    "formationId": "snapform-c74ac66cc1ca16ea",
@@ -12662,6 +13778,7 @@
    "result": "Run - Gain",
    "yards": 9,
    "motion": "D.Wicks / wide L / across backfield to R / at snap",
+   "motionCall": "WR Rt",
    "set": "Under center, Bigsby deep I-back; L: TE inline, TE tight beside him on the line, Wicks wide off the ball; R: Smith wide. As snapped: Wicks motions across the backfield to the R side, look becomes 2x2",
    "notes": "TEN 11. T.Bigsby up the middle to TEN 2 for 9 yards (C.Barton; C.Gray). | Set: Under center, Bigsby deep I-back; L: TE inline, TE tight beside him on the line, Wicks wide off the ball; R: Smith wide. As snapped: Wicks motions across the backfield to the R side, look becomes 2x2 | Motion: D.Wicks / wide L / across backfield to R / at snap | Conf H/M/H, Both",
    "formationId": "snapform-1893836f779a9d69",
@@ -12721,6 +13838,7 @@
    "result": "Run - Gain",
    "yards": 9,
    "motion": "M.Brown / wide R / jet across the formation toward L / at snap",
+   "motionCall": "WR Fly",
    "set": "Under center, Bigsby deep I-back; R: Mundt inline, M.Brown wide; L: two WRs off the ball (slot + wide). As snapped: Brown in jet motion across toward the ball",
    "notes": "PHI 19. M.Brown left end to PHI 28 for 9 yards (E.Hallett; M.Robinson). | Set: Under center, Bigsby deep I-back; R: Mundt inline, M.Brown wide; L: two WRs off the ball (slot + wide). As snapped: Brown in jet motion across toward the ball | Motion: M.Brown / wide R / jet across the formation toward L / at snap | Conf H/M/H, Both",
    "formationId": "snapform-e4c91145f6a059f3",
@@ -12863,6 +13981,7 @@
    "result": "Complete",
    "yards": 5,
    "motion": "D.Wicks / slot R / in toward the backfield beside QB / at snap",
+   "motionCall": "WR Short",
    "set": "Gun, Shipley offset L; R: trips (two outside on/near the numbers, Wicks inside off the ball); L: one WR wide. As snapped: Wicks motions from the R slot in toward the QB",
    "notes": "TEN 46. (Shotgun) J.Hurts pass short left to D.Wicks to TEN 41 for 5 yards (M.Robinson). | Set: Gun, Shipley offset L; R: trips (two outside on/near the numbers, Wicks inside off the ball); L: one WR wide. As snapped: Wicks motions from the R slot in toward the QB | Motion: D.Wicks / slot R / in toward the backfield beside QB / at snap | Conf H/M/H, Both",
    "formationId": "snapform-450090f76b8a256d",
@@ -13093,6 +14212,7 @@
    "target": "T.Bigsby",
    "result": "Penalty",
    "motion": "T.Bigsby / off the ball wide R / into the backfield beside QB / at snap",
+   "motionCall": "H Rat",
    "set": "Empty gun 3x2: L three receivers grouped near the numbers; R Mundt standing tight at the end of the line, Bigsby off the ball wide R. As snapped: Bigsby motions back into the backfield and takes the handoff",
    "notes": "TEN 12. (Shotgun) T.Bigsby right guard to TEN 10 for 2 yards (A.Hooker; O.Oladejo). PENALTY on PHI-C.Jurgens, Offensive Holding, 10 yards, enforced at TEN 12 - No Play. | Set: Empty gun 3x2: L three receivers grouped near the numbers; R Mundt standing tight at the end of the line, Bigsby off the ball wide R. As snapped: Bigsby motions back into the backfield and takes the handoff | Motion: T.Bigsby / off the ball wide R / into the backfield beside QB / at snap | Conf H/M/H, Both",
    "formationId": "snapform-bb4b1a9c4562eac6",
@@ -13150,6 +14270,7 @@
    "target": "S.Barkley",
    "result": "Penalty",
    "motion": "WR (inferred Brown) / R slot / short move toward the ball / at snap",
+   "motionCall": "WR Short",
    "set": "Under center, Barkley deep I-back; L: Mundt inline, WR tight on the line just outside; R: M.Brown off the ball, WR on the line outside. As snapped: R inside receiver moving at the snap",
    "notes": "PHI 40. S.Barkley right end pushed ob at PHI 41 for 1 yard (M.Robinson). ** Injury Update: PHI-S.Barkley has returned to the game. PENALTY on PHI-T.Steen, Offensive Holding, 10 yards, enforced at PHI 40 - No Play. | Set: Under center, Barkley deep I-back; L: Mundt inline, WR tight on the line just outside; R: M.Brown off the ball, WR on the line outside. As snapped: R inside receiver moving at the snap | Motion: WR (inferred Brown) / R slot / short move toward the ball / at snap | Conf H/M/H, Both",
    "formationId": "snapform-f432ccd1b4abbcc3",
@@ -13544,6 +14665,7 @@
    "result": "Run - Gain",
    "yards": 4,
    "motion": "M.Lemon / wing R / across backfield toward L / at snap",
+   "motionCall": "WR Behind",
    "set": "Gun, Barkley offset R; R: Lemon as a wing off the hip of the RT, two WRs outside; L: Mundt inline alone. As snapped: Lemon motions across the backfield toward L",
    "notes": "PHI 20. (Shotgun) S.Barkley up the middle to PHI 24 for 4 yards (A.Hill). | Set: Gun, Barkley offset R; R: Lemon as a wing off the hip of the RT, two WRs outside; L: Mundt inline alone. As snapped: Lemon motions across the backfield toward L | Motion: M.Lemon / wing R / across backfield toward L / at snap | Conf H/M/M, Both",
    "formationId": "snapform-5aabfda7527ca7ed",
@@ -13801,6 +14923,7 @@
    "result": "Run - Loss",
    "yards": -5,
    "motion": "M.Lemon / slot L / across the formation toward R / at snap",
+   "motionCall": "WR Rt",
    "set": "Gun, Bigsby offset L; L: three receivers (Lemon off the ball inside, two WRs outside, one off and one on); R: Mundt inline alone. As snapped: Lemon in jet motion from the L slot across toward R and back on the end-around",
    "notes": "TEN 39. (Shotgun) M.Lemon left end to TEN 44 for -5 yards (M.Harris). | Set: Gun, Bigsby offset L; L: three receivers (Lemon off the ball inside, two WRs outside, one off and one on); R: Mundt inline alone. As snapped: Lemon in jet motion from the L slot across toward R and back on the end-around | Motion: M.Lemon / slot L / across the formation toward R / at snap | Conf H/M/H, Both",
    "formationId": "snapform-d94e4a9289442b9c",
@@ -13886,6 +15009,7 @@
    "result": "Complete",
    "yards": 4,
    "motion": "D.Smith / slot L / across behind the QB toward R / at snap",
+   "motionCall": "WR Behind",
    "set": "Gun, Shipley offset R; L: three WRs (Smith in the slot off the ball, two outside); R: Mundt detached ~4 yds outside the RT alone. As snapped: Smith motions from the L slot across behind the QB toward R",
    "notes": "PHI 35. (Shotgun) J.Hurts pass short right to D.Smith ran ob at PHI 39 for 4 yards. | Set: Gun, Shipley offset R; L: three WRs (Smith in the slot off the ball, two outside); R: Mundt detached ~4 yds outside the RT alone. As snapped: Smith motions from the L slot across behind the QB toward R | Motion: D.Smith / slot L / across behind the QB toward R / at snap | Conf H/M/H, Both",
    "formationId": "snapform-9e3fc250c58be466",

@@ -42,7 +42,7 @@ const chart = parseChartXlsx(new Uint8Array(readFileSync(XLSX)));
 const json = parseFormationsJson(readFileSync(JSON_FILE, 'utf8'));
 const team = json.game.team ?? 'PHI';
 const season = json.game.season ?? 2026;
-const plan = buildImportPlan({ chart, json }, { team, season, mirror, now: SEED_TIME, builtin: true, source: `${team} ${season} All-22 chart (${path.basename(XLSX)}, ${path.basename(JSON_FILE)})` });
+const plan = buildImportPlan({ chart, json }, { team, season, mirror, now: SEED_TIME, builtin: true, naming: 'system', source: `${team} ${season} All-22 chart (${path.basename(XLSX)}, ${path.basename(JSON_FILE)})` });
 
 const formations = plan.formations.map((p) => p.formation);
 const snaps = plan.snaps;

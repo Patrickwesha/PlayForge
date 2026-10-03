@@ -65,7 +65,7 @@ export function ImportClient() {
     if (!chart && !json) return { plan: null, error: null };
     try {
       const teamCode = team.trim() || 'TEAM';
-      return { plan: buildImportPlan({ chart: chart?.data, json: json?.data }, { team: teamCode, season: seasonNum, mirror, now: nowIso(), source: `${teamCode} ${seasonNum} All-22 chart (${[chart?.name, json?.name].filter(Boolean).join(', ')})` }), error: null };
+      return { plan: buildImportPlan({ chart: chart?.data, json: json?.data }, { team: teamCode, season: seasonNum, mirror, now: nowIso(), naming: teamCode === 'PHI' ? 'system' : 'chart', source: `${teamCode} ${seasonNum} All-22 chart (${[chart?.name, json?.name].filter(Boolean).join(', ')})` }), error: null };
     } catch (e) {
       return { plan: null, error: e instanceof Error ? e.message : String(e) };
     }

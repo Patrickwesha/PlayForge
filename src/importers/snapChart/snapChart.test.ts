@@ -387,7 +387,10 @@ describe('the whole plan on the real files', () => {
 
   it('matches the checked-in seed data (run `npm run import:snaps` after changing the inputs or the engine)', () => {
     const seed = JSON.parse(readFileSync(path.resolve(__dirname, '../../seeds/data/eagles2026.json'), 'utf8')) as { formations: Formation[]; snaps: { id: string; formationId: string }[] };
-    expect(seed.formations.map((f) => [f.id, f.name, f.usage?.count])).toEqual(plan.formations.map((p) => [p.formation.id, p.formation.name, p.count]));
+    // the seed is written with the Eagles system names; ids and counts do not depend on the naming
+    const named = buildImportPlan({ chart: parseChartXlsx(xlsx()), json: parseFormationsJson(jsonText()) }, { ...OPTS, naming: 'system' });
+    expect(seed.formations.map((f) => [f.id, f.name, f.chartName, f.usage?.count])).toEqual(named.formations.map((p) => [p.formation.id, p.formation.name, p.formation.chartName, p.count]));
+    expect(new Set(named.formations.map((p) => p.formation.id))).toEqual(new Set(plan.formations.map((p) => p.formation.id)));
     expect(seed.snaps.map((s) => [s.id, s.formationId])).toEqual(plan.snaps.map((s) => [s.id, s.formationId]));
   });
 });

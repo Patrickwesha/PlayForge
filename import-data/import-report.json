@@ -12,7 +12,7 @@
   "formations": [
     {
       "id": "snapform-7fca6681fa468fbf",
-      "name": "11 Gun 2x2 Rt",
+      "name": "Gun Dice Rt",
       "count": 15,
       "exact": 1,
       "template": 14,
@@ -48,12 +48,14 @@
         "11",
         "2x2 'D'",
         "W1",
-        "W2"
+        "W2",
+        "Dice",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-9b2d6c8502a679ff",
-      "name": "11 Gun 3x1 Lt",
+      "name": "Gun Trips Lt Open",
       "count": 11,
       "exact": 2,
       "template": 9,
@@ -84,12 +86,14 @@
         "11",
         "3x1 'T'",
         "W1",
-        "W2"
+        "W2",
+        "Trips",
+        "3x1 'T'"
       ]
     },
     {
       "id": "snapform-35d44e8be24720b9",
-      "name": "11 Gun 3x1 Rt",
+      "name": "Gun Fast Lt",
       "count": 9,
       "exact": 2,
       "template": 7,
@@ -118,12 +122,14 @@
         "11",
         "3x1 'T'",
         "W1",
-        "W2"
+        "W2",
+        "Fast",
+        "1x3 'F'"
       ]
     },
     {
       "id": "snapform-acb8396469719d7a",
-      "name": "12 UC 3x1 Rt",
+      "name": "West Rt",
       "count": 7,
       "exact": 1,
       "template": 6,
@@ -149,12 +155,14 @@
         "12",
         "3x1 'T'",
         "W1",
-        "W2"
+        "W2",
+        "West",
+        "3x1 'T'"
       ]
     },
     {
       "id": "snapform-fc6e4c6aec9930f4",
-      "name": "11 Gun 2x2 Lt",
+      "name": "Gun Dice Lt",
       "count": 5,
       "exact": 1,
       "template": 4,
@@ -178,12 +186,14 @@
         "11",
         "2x2 'D'",
         "W1",
-        "W2"
+        "W2",
+        "Dice",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-7f3bd03fe72acbe1",
-      "name": "11 UC 2x2 Rt",
+      "name": "Dice Rt",
       "count": 4,
       "exact": 1,
       "template": 3,
@@ -207,12 +217,14 @@
         "11",
         "2x2 'D'",
         "W1",
-        "W2"
+        "W2",
+        "Dice",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-17c62df9f1ba8cbb",
-      "name": "12 UC 2x2 Rt",
+      "name": "Deuce Rt",
       "count": 4,
       "exact": 1,
       "template": 3,
@@ -235,12 +247,14 @@
         "12",
         "2x2 'D'",
         "W1",
-        "W2"
+        "W2",
+        "Deuce",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-26cced3f579b7531",
-      "name": "12 UC 2x2 Lt",
+      "name": "West Lt Slot",
       "count": 3,
       "exact": 1,
       "template": 2,
@@ -263,12 +277,14 @@
         "12",
         "2x2 'D'",
         "W1",
-        "W2"
+        "W2",
+        "West",
+        "3x1 'T'"
       ]
     },
     {
       "id": "snapform-da971b21e73b2cfb",
-      "name": "12 UC 3x1 Lt",
+      "name": "West Lt",
       "count": 3,
       "exact": 1,
       "template": 2,
@@ -290,12 +306,14 @@
         "12",
         "3x1 'T'",
         "W1",
-        "W2"
+        "W2",
+        "West",
+        "3x1 'T'"
       ]
     },
     {
       "id": "snapform-6fb9057055debdb2",
-      "name": "11 Gun Bunch Rt",
+      "name": "Gun Bunch Rt",
       "count": 2,
       "exact": 2,
       "template": 0,
@@ -314,12 +332,14 @@
         "eagles-2026",
         "11",
         "Bunch 'B'",
-        "W2"
+        "W2",
+        "Bunch",
+        "Bunch 'B'"
       ]
     },
     {
       "id": "snapform-c5d75b36313a5554",
-      "name": "11 Gun Bunch Lt",
+      "name": "Gun Bunch Lt",
       "count": 2,
       "exact": 2,
       "template": 0,
@@ -338,12 +358,14 @@
         "eagles-2026",
         "11",
         "Bunch 'B'",
-        "W2"
+        "W2",
+        "Bunch",
+        "Bunch 'B'"
       ]
     },
     {
       "id": "snapform-20105b37aca1775d",
-      "name": "11 Gun Empty Lt",
+      "name": "Gun Trips Lt G",
       "count": 2,
       "exact": 1,
       "template": 1,
@@ -365,12 +387,14 @@
         "11",
         "Empty",
         "W1",
-        "W2"
+        "W2",
+        "Trips",
+        "Empty"
       ]
     },
     {
       "id": "snapform-d2da00c26dd94820",
-      "name": "11 UC 2 Back Rt",
+      "name": "I Rt",
       "count": 1,
       "exact": 0,
       "template": 1,
@@ -389,12 +413,14 @@
         "11",
         "2 Back",
         "W1",
-        "template, verify"
+        "template, verify",
+        "I",
+        "2 Back"
       ]
     },
     {
       "id": "snapform-9f2e3301748cdb77",
-      "name": "11 Gun 2x2 Lt #2",
+      "name": "Gun Dyno Lt",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -412,12 +438,14 @@
         "eagles-2026",
         "11",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dyno",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-d383d43558bc3b23",
-      "name": "11 Gun 2x2 Lt #3",
+      "name": "Gun Dyno Lt #2",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -435,12 +463,14 @@
         "eagles-2026",
         "11",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dyno",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-7bca4649f1c11237",
-      "name": "11 Gun 2x2 Rt #2",
+      "name": "Gun Dyno Rt",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -458,12 +488,14 @@
         "eagles-2026",
         "11",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dyno",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-7fa8dbafc642c009",
-      "name": "11 Gun 2x2 Rt #3",
+      "name": "Gun Dyno Rt #2",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -481,12 +513,14 @@
         "eagles-2026",
         "11",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dyno",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-6bc2d18cc38891a2",
-      "name": "11 Gun 2x2 Rt #4",
+      "name": "Gun Dyno Rt #3",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -504,12 +538,14 @@
         "eagles-2026",
         "11",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dyno",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-84db209daa882ef7",
-      "name": "11 Gun 2x2 Rt #5",
+      "name": "Gun Dice Rt Off",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -527,12 +563,14 @@
         "eagles-2026",
         "11",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dice",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-21e77dc1af8ac74f",
-      "name": "11 Gun 2x2 Rt #6",
+      "name": "Gun Dyno Rt #4",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -550,12 +588,14 @@
         "eagles-2026",
         "11",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dyno",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-932c5b25fd1bb54b",
-      "name": "11 Gun 2x2 Rt #7",
+      "name": "Gun Dyno Rt #5",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -573,12 +613,14 @@
         "eagles-2026",
         "11",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dyno",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-5d76834eae0ac14c",
-      "name": "11 Gun 2x2 Lt #4",
+      "name": "Gun Dyno Lt #3",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -596,12 +638,14 @@
         "eagles-2026",
         "11",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dyno",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-1b0f03bcc3e32846",
-      "name": "11 Gun 2x2 Lt #5",
+      "name": "Gun Dyno Lt #4",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -619,12 +663,14 @@
         "eagles-2026",
         "11",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dyno",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-44552a41e18be2a3",
-      "name": "11 Gun 2x2 Lt #6",
+      "name": "Gun Dice Lt Off",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -642,12 +688,14 @@
         "eagles-2026",
         "11",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dice",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-67b216da3cd6d788",
-      "name": "11 Gun 2x2 Lt #7",
+      "name": "Gun Dice Lt Off #2",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -665,12 +713,14 @@
         "eagles-2026",
         "11",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dice",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-519b1a977aa1182d",
-      "name": "11 Gun 2x2 Rt #8",
+      "name": "Gun Dyno Rt #6",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -688,12 +738,14 @@
         "eagles-2026",
         "11",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dyno",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-aa18f9bd915fcbdb",
-      "name": "11 Gun 2x2 Rt #9",
+      "name": "Gun Dyno Rt #7",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -711,12 +763,14 @@
         "eagles-2026",
         "11",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dyno",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-4bb51d0a4d381738",
-      "name": "11 Pistol 2x2 Lt",
+      "name": "Pistol Dyno Lt",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -734,12 +788,14 @@
         "eagles-2026",
         "11",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dyno",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-95bc07b271fabef4",
-      "name": "11 Pistol 2x2 Lt #2",
+      "name": "Pistol Dyno Lt #2",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -757,12 +813,14 @@
         "eagles-2026",
         "11",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dyno",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-f432ccd1b4abbcc3",
-      "name": "11 UC 2x2 Lt",
+      "name": "Dice Lt Close",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -780,12 +838,14 @@
         "eagles-2026",
         "11",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dice",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-017e342871a4083e",
-      "name": "11 UC 2x2 Lt #2",
+      "name": "Dyno Lt",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -803,12 +863,14 @@
         "eagles-2026",
         "11",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dyno",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-a995a02ab0f483f0",
-      "name": "11 UC 2x2 Lt #3",
+      "name": "Dyno Lt #2",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -826,12 +888,14 @@
         "eagles-2026",
         "11",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dyno",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-19b2c16bbcbefadd",
-      "name": "11 UC 2x2 Lt #4",
+      "name": "Dyno Lt #3",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -849,12 +913,14 @@
         "eagles-2026",
         "11",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dyno",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-e9f9ba1947c94e93",
-      "name": "11 UC 2x2 Rt #2",
+      "name": "Dice Rt #2",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -872,12 +938,14 @@
         "eagles-2026",
         "11",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dice",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-003a6dcafe692380",
-      "name": "11 UC 2x2 Rt #3",
+      "name": "Dice Rt #3",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -895,12 +963,14 @@
         "eagles-2026",
         "11",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dice",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-e4c91145f6a059f3",
-      "name": "11 UC 2x2 Rt #4",
+      "name": "Dice Rt #4",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -918,12 +988,14 @@
         "eagles-2026",
         "11",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dice",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-e695a2e584a1ffdf",
-      "name": "11 UC 2x2 Rt #5",
+      "name": "Dice Rt #5",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -941,12 +1013,14 @@
         "eagles-2026",
         "11",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dice",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-33e2a99436361436",
-      "name": "11 Gun 3x1 Lt #2",
+      "name": "Gun Trips Lt",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -964,12 +1038,14 @@
         "eagles-2026",
         "11",
         "3x1 'T'",
-        "W2"
+        "W2",
+        "Trips",
+        "3x1 'T'"
       ]
     },
     {
       "id": "snapform-9508d05066d025be",
-      "name": "11 Gun 3x1 Rt #2",
+      "name": "Gun Fast Lt Open",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -987,12 +1063,14 @@
         "eagles-2026",
         "11",
         "3x1 'T'",
-        "W2"
+        "W2",
+        "Fast",
+        "1x3 'F'"
       ]
     },
     {
       "id": "snapform-7ab89008827b2cea",
-      "name": "11 Gun 3x1 Rt #3",
+      "name": "Gun Trips Rt",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1010,12 +1088,14 @@
         "eagles-2026",
         "11",
         "3x1 'T'",
-        "W2"
+        "W2",
+        "Trips",
+        "3x1 'T'"
       ]
     },
     {
       "id": "snapform-a797a6fdbc060bff",
-      "name": "11 Gun 3x1 Rt #4",
+      "name": "Gun Trips Rt #2",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1033,12 +1113,14 @@
         "eagles-2026",
         "11",
         "3x1 'T'",
-        "W2"
+        "W2",
+        "Trips",
+        "3x1 'T'"
       ]
     },
     {
       "id": "snapform-d94e4a9289442b9c",
-      "name": "11 Gun 3x1 Lt #3",
+      "name": "Gun Fast Rt",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1056,12 +1138,14 @@
         "eagles-2026",
         "11",
         "3x1 'T'",
-        "W2"
+        "W2",
+        "Fast",
+        "1x3 'F'"
       ]
     },
     {
       "id": "snapform-b76dd08b1e1d3c45",
-      "name": "11 Gun 3x1 Rt #5",
+      "name": "Gun Trips Rt Open",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1079,12 +1163,14 @@
         "eagles-2026",
         "11",
         "3x1 'T'",
-        "W2"
+        "W2",
+        "Trips",
+        "3x1 'T'"
       ]
     },
     {
       "id": "snapform-d3b20873edee9519",
-      "name": "11 Gun 3x1 Rt #6",
+      "name": "Gun Trips Rt #3",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1102,12 +1188,14 @@
         "eagles-2026",
         "11",
         "3x1 'T'",
-        "W2"
+        "W2",
+        "Trips",
+        "3x1 'T'"
       ]
     },
     {
       "id": "snapform-450090f76b8a256d",
-      "name": "11 Gun 3x1 Rt #7",
+      "name": "Gun Train Rt",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1125,12 +1213,14 @@
         "eagles-2026",
         "11",
         "3x1 'T'",
-        "W2"
+        "W2",
+        "Train",
+        "3x1 'T'"
       ]
     },
     {
       "id": "snapform-5aabfda7527ca7ed",
-      "name": "11 Gun 3x1 Rt #8",
+      "name": "Gun Fast Lt #2",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1148,12 +1238,14 @@
         "eagles-2026",
         "11",
         "3x1 'T'",
-        "W2"
+        "W2",
+        "Fast",
+        "1x3 'F'"
       ]
     },
     {
       "id": "snapform-9ae738b3072c5a79",
-      "name": "11 Gun 3x1 Lt #4",
+      "name": "Gun Trips Lt Open #2",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1171,12 +1263,14 @@
         "eagles-2026",
         "11",
         "3x1 'T'",
-        "W2"
+        "W2",
+        "Trips",
+        "3x1 'T'"
       ]
     },
     {
       "id": "snapform-c74ac66cc1ca16ea",
-      "name": "11 Gun 3x1 Rt #9",
+      "name": "Gun Trips Rt #4",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1194,12 +1288,14 @@
         "eagles-2026",
         "11",
         "3x1 'T'",
-        "W2"
+        "W2",
+        "Trips",
+        "3x1 'T'"
       ]
     },
     {
       "id": "snapform-9e3fc250c58be466",
-      "name": "11 Gun 3x1 Lt #5",
+      "name": "Gun Fast Rt Open",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1217,12 +1313,14 @@
         "eagles-2026",
         "11",
         "3x1 'T'",
-        "W2"
+        "W2",
+        "Fast",
+        "1x3 'F'"
       ]
     },
     {
       "id": "snapform-ef091e3747f77789",
-      "name": "11 Pistol 3x1 Lt",
+      "name": "Pistol Trips Lt",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1240,12 +1338,14 @@
         "eagles-2026",
         "11",
         "3x1 'T'",
-        "W2"
+        "W2",
+        "Trips",
+        "3x1 'T'"
       ]
     },
     {
       "id": "snapform-d40fb6c2bab494ec",
-      "name": "11 UC 3x1 Lt",
+      "name": "Trips Lt",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1263,12 +1363,14 @@
         "eagles-2026",
         "11",
         "3x1 'T'",
-        "W2"
+        "W2",
+        "Trips",
+        "3x1 'T'"
       ]
     },
     {
       "id": "snapform-4e0e2aa51b78ce3b",
-      "name": "11 UC 3x1 Rt",
+      "name": "Trips Rt",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1286,12 +1388,14 @@
         "eagles-2026",
         "11",
         "3x1 'T'",
-        "W2"
+        "W2",
+        "Trips",
+        "3x1 'T'"
       ]
     },
     {
       "id": "snapform-fc7ba3329a0f2170",
-      "name": "11 UC 3x1 Rt #2",
+      "name": "Trips Rt #2",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1309,12 +1413,14 @@
         "eagles-2026",
         "11",
         "3x1 'T'",
-        "W2"
+        "W2",
+        "Trips",
+        "3x1 'T'"
       ]
     },
     {
       "id": "snapform-ed264aea8129aeb8",
-      "name": "11 Gun Bunch Rt #2",
+      "name": "Gun Crip Lt",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1332,12 +1438,14 @@
         "eagles-2026",
         "11",
         "Bunch 'B'",
-        "W2"
+        "W2",
+        "Crip",
+        "1x3 Bunch 'CR'"
       ]
     },
     {
       "id": "snapform-5f5d6c7bea61abb5",
-      "name": "11 Gun Empty Rt",
+      "name": "Gun Trips Rt Open E",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1355,12 +1463,14 @@
         "eagles-2026",
         "11",
         "Empty",
-        "W2"
+        "W2",
+        "Trips",
+        "Empty"
       ]
     },
     {
       "id": "snapform-f4e610232a0208d5",
-      "name": "11 Gun Empty Rt #2",
+      "name": "Gun Trips Rt Open D",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1378,12 +1488,14 @@
         "eagles-2026",
         "11",
         "Empty",
-        "W2"
+        "W2",
+        "Trips",
+        "Empty"
       ]
     },
     {
       "id": "snapform-6a8f314b7cd03bc1",
-      "name": "11 Gun Empty Lt #2",
+      "name": "Gun Dyno Rt D",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1401,12 +1513,14 @@
         "eagles-2026",
         "11",
         "Empty",
-        "W2"
+        "W2",
+        "Dyno",
+        "Empty"
       ]
     },
     {
       "id": "snapform-db5644a232378e38",
-      "name": "11 Gun Empty Lt #3",
+      "name": "Gun Dyno Lt B",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1424,12 +1538,14 @@
         "eagles-2026",
         "11",
         "Empty",
-        "W2"
+        "W2",
+        "Dyno",
+        "Empty"
       ]
     },
     {
       "id": "snapform-eac59d15f6f193d3",
-      "name": "11 Gun Empty Lt #4",
+      "name": "Gun Dyno Lt B #2",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1447,12 +1563,14 @@
         "eagles-2026",
         "11",
         "Empty",
-        "W2"
+        "W2",
+        "Dyno",
+        "Empty"
       ]
     },
     {
       "id": "snapform-6b0c07cb76cc1f01",
-      "name": "11 Gun Empty Rt #3",
+      "name": "Gun Dyno Rt B",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1470,12 +1588,14 @@
         "eagles-2026",
         "11",
         "Empty",
-        "W2"
+        "W2",
+        "Dyno",
+        "Empty"
       ]
     },
     {
       "id": "snapform-bb4b1a9c4562eac6",
-      "name": "11 Gun Empty Lt #5",
+      "name": "Gun Fast Rt Open A",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1493,12 +1613,14 @@
         "eagles-2026",
         "11",
         "Empty",
-        "W2"
+        "W2",
+        "Fast",
+        "Empty"
       ]
     },
     {
       "id": "snapform-68cadf51cb67fcc3",
-      "name": "12 Gun 2 Back Lt",
+      "name": "Gun Strong Lt",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1516,12 +1638,14 @@
         "eagles-2026",
         "12",
         "2 Back",
-        "W2"
+        "W2",
+        "Strong",
+        "2 Back"
       ]
     },
     {
       "id": "snapform-4814acdb33994391",
-      "name": "12 Gun 2x2 Rt",
+      "name": "Gun Deuce Rt",
       "count": 1,
       "exact": 0,
       "template": 1,
@@ -1540,12 +1664,14 @@
         "12",
         "2x2 'D'",
         "W1",
-        "template, verify"
+        "template, verify",
+        "Deuce",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-1b20f6e3882cc9d5",
-      "name": "12 UC 2x2 Rt #2",
+      "name": "Dice Lt",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1563,12 +1689,14 @@
         "eagles-2026",
         "12",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Dice",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-382e40e74769f775",
-      "name": "12 UC 2x2 Lt #2",
+      "name": "Deuce Lt",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1586,12 +1714,14 @@
         "eagles-2026",
         "12",
         "2x2 'D'",
-        "W2"
+        "W2",
+        "Deuce",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-4695a91dda6051d7",
-      "name": "12 Gun 3x1 Rt",
+      "name": "Gun Trips Rt Off",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1609,12 +1739,14 @@
         "eagles-2026",
         "12",
         "3x1 'T'",
-        "W2"
+        "W2",
+        "Trips",
+        "3x1 'T'"
       ]
     },
     {
       "id": "snapform-2f9918f258119fb8",
-      "name": "12 Pistol 3x1 Rt",
+      "name": "Pistol West Rt",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1632,12 +1764,14 @@
         "eagles-2026",
         "12",
         "3x1 'T'",
-        "W2"
+        "W2",
+        "West",
+        "3x1 'T'"
       ]
     },
     {
       "id": "snapform-fe8a305c72621aa6",
-      "name": "12 UC 3x1 Lt #2",
+      "name": "Trips Lt #2",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1655,12 +1789,14 @@
         "eagles-2026",
         "12",
         "3x1 'T'",
-        "W2"
+        "W2",
+        "Trips",
+        "3x1 'T'"
       ]
     },
     {
       "id": "snapform-1893836f779a9d69",
-      "name": "12 UC 3x1 Lt #3",
+      "name": "Trips Lt #3",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1678,12 +1814,14 @@
         "eagles-2026",
         "12",
         "3x1 'T'",
-        "W2"
+        "W2",
+        "Trips",
+        "3x1 'T'"
       ]
     },
     {
       "id": "snapform-58ff4dc8b1f851d6",
-      "name": "12 UC Big Lt",
+      "name": "West Lt #2",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1701,12 +1839,14 @@
         "eagles-2026",
         "12",
         "Big",
-        "W2"
+        "W2",
+        "West",
+        "3x1 'T'"
       ]
     },
     {
       "id": "snapform-40a6f898c7e2b2f2",
-      "name": "12 UC Big Rt",
+      "name": "Bunch Rt Tighter",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1724,12 +1864,14 @@
         "eagles-2026",
         "12",
         "Big",
-        "W2"
+        "W2",
+        "Bunch",
+        "Bunch 'B'"
       ]
     },
     {
       "id": "snapform-3b2ab081508d5f47",
-      "name": "12 UC Big Rt #2",
+      "name": "West Rt #2",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1747,12 +1889,14 @@
         "eagles-2026",
         "12",
         "Big",
-        "W2"
+        "W2",
+        "West",
+        "3x1 'T'"
       ]
     },
     {
       "id": "snapform-aa13e7162b701c00",
-      "name": "13 UC Big",
+      "name": "Dice Lt Close #2",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1770,12 +1914,14 @@
         "eagles-2026",
         "13",
         "Big",
-        "W2"
+        "W2",
+        "Dice",
+        "2x2 'D'"
       ]
     },
     {
       "id": "snapform-e9df24720773c754",
-      "name": "13 UC Big Lt",
+      "name": "West Lt Slot Tighter",
       "count": 1,
       "exact": 0,
       "template": 1,
@@ -1794,12 +1940,14 @@
         "13",
         "Big",
         "W1",
-        "template, verify"
+        "template, verify",
+        "West",
+        "3x1 'T'"
       ]
     },
     {
       "id": "snapform-c691ec8d843bbcfb",
-      "name": "22 UC Big Rt",
+      "name": "Weak Rt Close Tighter",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1817,7 +1965,9 @@
         "eagles-2026",
         "22",
         "Big",
-        "W2"
+        "W2",
+        "Weak",
+        "2 Back"
       ]
     }
   ],
