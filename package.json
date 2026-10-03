@@ -11,12 +11,14 @@
     "import:formations": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/import-formations.mjs",
     "render:formations": "vitest run --config vitest.render.config.mts scripts/render-formations.render.tsx",
     "import:plays": "python scripts/playbook/build_plays.py && vitest run src/seeds/packers2019Plays.test.ts",
-    "render:plays": "vitest run --config vitest.render.config.mts scripts/render-plays.render.tsx"
+    "render:plays": "vitest run --config vitest.render.config.mts scripts/render-plays.render.tsx",
+    "import:snaps": "tsx scripts/import-snaps.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.116.0",
     "dexie": "^4.4.6",
     "dexie-react-hooks": "^4.4.0",
+    "fflate": "^0.8.3",
     "immer": "^11.1.18",
     "nanoid": "^6.0.1",
     "next": "16.3.5",
@@ -33,7 +35,9 @@
     "@vitejs/plugin-react": "^6.1.1",
     "eslint": "^9",
     "eslint-config-next": "16.3.5",
+    "fake-indexeddb": "^6.2.5",
     "tailwindcss": "^4",
+    "tsx": "^4.23.15",
     "typescript": "^5",
     "vitest": "^5.0.1"
   }
