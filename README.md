@@ -34,6 +34,15 @@ npm run render:formations                     # SVG + PNG + an index.html contac
 
 Entries are keyed on name + personnel, so re-running never duplicates. Alignment constants come from `src/model/constants.ts`; a source authored with a different line spacing is remapped. Open browsers pick up regenerated data on the next load, and a formation you edited in the app is never overwritten. Filter the library to `Needs review` to work through the entries whose positions are only a starting shape.
 
+## Snap charts: formations and snaps from film (Eagles 2026)
+
+**Formations > Import** turns an All-22 charting workbook into a formation library with usage counts, and keeps every charted snap (week, quarter, down and distance, field zone, hash, play type, target, result, yards, motion, notes) linked to its formation in a `snaps` table, so formations can later be filtered by down, distance or run/pass rate. Upload the chart (`.xlsx`, sheet "Chart", header on row 4), the per-player alignment JSON (`playforge-formations/v1`), or both; the preview shows every unique formation's diagram, usage count, snap ids and source (W2 exact vs W1 template); tick what you want and import. Re-importing the same files merges and never duplicates: formations are keyed on an alignment signature, snaps on their id, and usage is recomputed from the snaps table. Rows the import could not use are listed with the reason.
+
+- The workbook is the snap record for every week. The JSON adds exact per-player alignment (pos, side, align, on_line, order, stack_behind) for the snaps it covers, joined on Play ID. Snaps without per-player data are drawn from a **template** keyed on personnel + form family + backfield + strength: the most common alignment seen on film for that key, else a default shape for the family. Every formation whose snaps are all template-built is tagged `template, verify` and shows as *needs review*; its note lists the charted "Set:" text of each snap so it can be checked against film.
+- Alignment labels become yards in `src/importers/snapChart/config.ts` (every constant is there): the hash sets where the numbers are (NFL hashes 23.6 yd from the sideline, numbers 12 yd; left hash = near numbers 11.6 yd, far 17.7), inline = 1 yd outside the end man, wing = 1 outside and 1 off, tight = 3 outside, slot = halfway from the tackle to the numbers, numbers, wide = 3 outside the numbers, off the ball = 1 yd back, stack = 2 yd behind; QB 1 / 4 / 5 yd (under center / pistol / gun); backs deep 7, offset 7 and 1.5 over, gun offset level with the QB, fullback 4.5. A standard five-man line is always drawn; a player with an unknown name is drawn and labelled by position.
+- Dedupe: a formation is personnel + family + backfield + every skill player's side / align / on_line / order (labels, not coordinates, so the hash never splits one). Names read `11 Gun 2x2 Rt`; a second alignment with the same name gets `#2`, `#3` by usage. **Merge Rt and Lt mirrors** folds a Lt snap into the Rt formation (the snap is stored `mirrored`).
+- The first import (Eagles 2026 weeks 1 and 2: 54 W1 snaps from the chart, 76 W2 snaps with exact alignment) is checked in as seeds. Inputs live in `import-data/`; `npm run import:snaps` rebuilds `src/seeds/data/eagles2026.json` and `import-data/import-report.json` with the same engine the Import page uses, so importing the same files in the app merges into the seeded rows. Snaps stay on the device (they are not synced); formations sync like any other.
+
 ## Play and route packs
 
 The 2019 Packers route library (159 routes, pages 70-103) and the Install #1 plays are checked in as seeds next to the formation pack. Nothing is traced from the scanned diagrams: route geometry is derived from the depths and breaks the book states in words, and a play is an imported formation + a protection + a route word per receiver (or a run family), drawn with `src/geometry/routeLibrary.ts` and the block presets.
@@ -111,7 +120,8 @@ Good to know: the free tier sends only a few emails per hour, and it pauses a pr
 - `src/sync` cloud sync: pure newest-wins merge, engine, Supabase adapter, sign-in, status store
 - `src/print` sheets, cells, cover, call sheet, PNG export
 - `src/io` backup and PlayForge-Lite import
-- `src/seeds` built-in formations, fronts, demo plays, and the Packers 2019 pack
+- `src/importers/snapChart` snap-chart import: xlsx reader, chart and JSON parsers, alignment labels to yards (config.ts), signatures, templates, the import plan
+- `src/seeds` built-in formations, fronts, demo plays, the Packers 2019 pack, and the Eagles 2026 snap chart
 
 Coordinates: x = 0 at the ball (positive right), y = 0 at the line of scrimmage (positive downfield). Route points are stored relative to their player, so moving a player moves its routes.
 

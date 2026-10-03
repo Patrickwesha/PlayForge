@@ -4,13 +4,14 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useMemo, useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
-import type { Formation, Side } from '@/model/types';
+import type { Formation, Side, Snap } from '@/model/types';
 import { repo } from '@/store/repo';
 import { duplicateFormation, newFormation } from '@/model/factories';
 import { flipFormationPlayers, flipName } from '@/geometry/flip';
 import { FORMATION_FIT } from '@/geometry/bounds';
 import { PlayThumb } from '@/render/PlayThumb';
 import { buildPlayers, ol } from '@/seeds/builders';
+import { PlaybookChip, PlaybookFilter, matchesPlaybook, usePlaybookMembership, type PlaybookFilterValue } from '@/components/PlaybookFilter';
 
 const btn = 'text-xs px-2 py-1 rounded border border-neutral-300 bg-white hover:border-black';
 
@@ -20,19 +21,32 @@ export function FormationsClient() {
   const [q, setQ] = useState('');
   const [family, setFamily] = useState('');
   const [reviewOnly, setReviewOnly] = useState(false);
+  const [sort, setSort] = useState<'name' | 'usage'>('name');
+  const [book, setBook] = useState<PlaybookFilterValue>('');
   const formations = useLiveQuery(() => repo.listFormations(side), [side]);
+  const { playbooks, memberOf } = usePlaybookMembership('formations');
+  const snaps = useLiveQuery(() => repo.listSnaps(), []);
+  const snapsByFormation = useMemo(() => {
+    const m = new Map<string, Snap[]>();
+    for (const s of snaps ?? []) m.set(s.formationId, [...(m.get(s.formationId) ?? []), s]);
+    return m;
+  }, [snaps]);
+  const usageOf = (f: Formation) => snapsByFormation.get(f.id)?.length ?? f.usage?.count ?? 0;
   const families = useMemo(() => [...new Set((formations ?? []).map((f) => f.family).filter((x): x is string => !!x))].sort(), [formations]);
   const reviewCount = useMemo(() => (formations ?? []).filter((f) => f.confidence === 'needs-review').length, [formations]);
-  const list = useMemo(
-    () =>
-      (formations ?? []).filter(
-        (f) =>
-          (!family || f.family === family) &&
-          (!reviewOnly || f.confidence === 'needs-review') &&
-          `${f.name} ${f.personnel ?? ''} ${f.tags.join(' ')} ${f.family ?? ''} ${f.confidence ?? ''} ${f.note ?? ''}`.toLowerCase().includes(q.toLowerCase()),
-      ),
-    [formations, q, family, reviewOnly],
-  );
+  const list = useMemo(() => {
+    const rows = (formations ?? []).filter(
+      (f) =>
+        (!family || f.family === family) &&
+        (!reviewOnly || f.confidence === 'needs-review') &&
+        matchesPlaybook(book, f.id, memberOf) &&
+        `${f.name} ${f.personnel ?? ''} ${f.tags.join(' ')} ${f.family ?? ''} ${f.confidence ?? ''} ${f.note ?? ''} ${f.usage?.snapIds.join(' ') ?? ''}`.toLowerCase().includes(q.toLowerCase()),
+    );
+    if (sort === 'usage') rows.sort((a, b) => usageOf(b) - usageOf(a) || a.name.localeCompare(b.name));
+    return rows;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [formations, q, family, reviewOnly, sort, snapsByFormation, book, memberOf]);
+  const hasUsage = (formations ?? []).some((f) => usageOf(f) > 0);
 
   const create = async () => {
     const f = newFormation({
@@ -68,7 +82,13 @@ export function FormationsClient() {
             </button>
           ))}
         </div>
-        <input className="border border-neutral-300 rounded px-2 py-1 text-sm w-56" placeholder="Search name, personnel, family, tag" value={q} onChange={(e) => setQ(e.target.value)} />
+        <input className="border border-neutral-300 rounded px-2 py-1 text-sm w-56" placeholder="Search name, personnel, family, tag, snap id" value={q} onChange={(e) => setQ(e.target.value)} />
+        {hasUsage && (
+          <select className="border border-neutral-300 rounded px-2 py-1 text-sm bg-white" value={sort} onChange={(e) => setSort(e.target.value as 'name' | 'usage')} aria-label="Sort">
+            <option value="name">Sort: name</option>
+            <option value="usage">Sort: most used</option>
+          </select>
+        )}
         {families.length > 0 && (
           <select className="border border-neutral-300 rounded px-2 py-1 text-sm bg-white" value={family} onChange={(e) => setFamily(e.target.value)} aria-label="Family">
             <option value="">All families</option>
@@ -77,6 +97,7 @@ export function FormationsClient() {
             ))}
           </select>
         )}
+        <PlaybookFilter className="border border-neutral-300 rounded px-2 py-1 text-sm bg-white" value={book} onChange={setBook} playbooks={playbooks} kind="formations" itemIds={(formations ?? []).map((f) => f.id)} memberOf={memberOf} />
         {reviewCount > 0 && (
           <label className="flex items-center gap-1.5 text-sm select-none">
             <input type="checkbox" checked={reviewOnly} onChange={(e) => setReviewOnly(e.target.checked)} />
@@ -87,6 +108,11 @@ export function FormationsClient() {
           <Link href={`/print?formations=${list.map((f) => f.id).join(',')}&layout=9up&title=${encodeURIComponent(side.toUpperCase() + ' FORMATIONS')}`} className={btn}>
             Print sheet
           </Link>
+          {side === 'offense' && (
+            <Link href="/formations/import" className={btn}>
+              Import
+            </Link>
+          )}
           <button className="text-sm px-3 py-1 rounded bg-black text-white" onClick={() => void create()}>
             + New {side === 'offense' ? 'formation' : 'front'}
           </button>
@@ -102,10 +128,16 @@ export function FormationsClient() {
                 {f.name}
                 {f.playersPerSide !== 11 && <span className="ml-1 text-neutral-400">({f.playersPerSide})</span>}
               </div>
-              {(f.family || f.confidence === 'needs-review') && (
+              {(f.family || f.confidence === 'needs-review' || usageOf(f) > 0 || memberOf.has(f.id)) && (
                 <div className="flex items-center gap-1.5 px-2 py-0.5 border-b text-[11px] text-neutral-600">
                   <span className="truncate">{f.family}</span>
+                  <PlaybookChip books={memberOf.get(f.id)} />
                   {f.sourcePage && <span className="text-neutral-400">p.{f.sourcePage}</span>}
+                  {usageOf(f) > 0 && (
+                    <span className="shrink-0 rounded bg-black text-white px-1 font-semibold" title={`${usageOf(f)} charted snaps: ${(snapsByFormation.get(f.id)?.map((s) => s.playId) ?? f.usage?.snapIds ?? []).join(', ')}`}>
+                      {usageOf(f)} snap{usageOf(f) === 1 ? '' : 's'}
+                    </span>
+                  )}
                   {f.confidence === 'needs-review' && <span className="ml-auto shrink-0 rounded bg-amber-100 text-amber-900 px-1 font-semibold">needs review</span>}
                 </div>
               )}
@@ -113,6 +145,7 @@ export function FormationsClient() {
                 <PlayThumb diagram={{ players: f.players, paths: {}, annotations: {} }} aspect={1.5} fit={FORMATION_FIT} />
               </div>
             </Link>
+            {(snapsByFormation.get(f.id)?.length ?? 0) > 0 && <SnapList snaps={snapsByFormation.get(f.id)!} />}
             <div className="flex gap-1 p-1.5 border-t border-neutral-200 text-xs">
               <button className={btn} onClick={() => void dup(f)}>Duplicate</button>
               <button className={btn} onClick={() => void flip(f)}>Flip copy</button>
@@ -122,5 +155,35 @@ export function FormationsClient() {
         ))}
       </div>
     </main>
+  );
+}
+
+const ordinal = (d: number) => `${d}${d === 1 ? 'st' : d === 2 ? 'nd' : d === 3 ? 'rd' : 'th'}`;
+
+/** The charted snaps behind a formation: week, down and distance, call, result. */
+function SnapList({ snaps }: { snaps: Snap[] }) {
+  const runs = snaps.filter((s) => s.callType === 'run').length;
+  const passes = snaps.filter((s) => s.callType === 'pass').length;
+  const template = snaps.filter((s) => s.source === 'template').length;
+  return (
+    <details className="border-t border-neutral-200 text-[11px]">
+      <summary className="px-2 py-1 cursor-pointer select-none text-neutral-700">
+        {snaps.length} snap{snaps.length === 1 ? '' : 's'}: {runs} run, {passes} pass{template ? `, ${template} from template` : ''}
+      </summary>
+      <ul className="px-2 pb-1.5 max-h-40 overflow-auto space-y-0.5">
+        {[...snaps]
+          .sort((a, b) => a.week - b.week || a.playId.localeCompare(b.playId))
+          .map((s) => (
+            <li key={s.id} className="flex gap-1.5 whitespace-nowrap" title={[s.set && `Set: ${s.set}`, s.motion && `Motion: ${s.motion}`, s.notes].filter(Boolean).join('\n')}>
+              <span className="font-mono">{s.playId}</span>
+              <span className="text-neutral-500">{s.down ? `${ordinal(s.down)}&${s.distance ?? '?'}` : ''}</span>
+              <span className="text-neutral-500">{s.hash ? s.hash[0] : ''}</span>
+              <span className="truncate">{s.result ?? s.playType ?? ''}{s.yards !== undefined ? ` ${s.yards > 0 ? '+' : ''}${s.yards}` : ''}</span>
+              {s.mirrored && <span className="text-neutral-400">mirror</span>}
+              {s.source === 'template' && <span className="text-amber-800">template</span>}
+            </li>
+          ))}
+      </ul>
+    </details>
   );
 }
