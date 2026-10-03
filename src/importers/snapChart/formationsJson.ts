@@ -146,3 +146,13 @@ export function weekFromId(id: string): number | undefined {
   const m = id.match(/^W(\d+)-/i);
   return m ? Number(m[1]) : undefined;
 }
+
+/**
+ * Several per-game files as one: every game's snaps in one list, the week taken from each snap id
+ * (W1-001), so one import covers the whole season. The first file's season and team are kept.
+ */
+export function mergeFormationsJson(texts: string[]): unknown {
+  const docs = texts.map((t) => JSON.parse(t) as { schema?: string; game?: { season?: number; team?: string }; snaps?: unknown[] });
+  const first = docs[0];
+  return { schema: first?.schema ?? FORMATIONS_JSON_SCHEMA, game: { season: first?.game?.season, team: first?.game?.team }, snaps: docs.flatMap((d) => d.snaps ?? []) };
+}

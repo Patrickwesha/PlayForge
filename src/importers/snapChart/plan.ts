@@ -30,6 +30,12 @@ export type PlanOptions = {
    * name in `chartName`, and gives each snap's motion its system word.
    */
   naming?: 'chart' | 'system';
+  /**
+   * Weeks where the per-player file is the better record (charted later, frame by frame, with the set
+   * taken before any motion): its family, strength and backfield replace the workbook's. Other weeks
+   * keep the rule that the workbook wins.
+   */
+  filmWinsWeeks?: number[];
 };
 
 export type PlannedFormation = {
@@ -116,7 +122,11 @@ export function buildImportPlan(input: { chart?: ParsedChart; json?: ParsedForma
   for (const r of input.chart?.rows ?? []) {
     const j = jsonById.get(r.playId);
     seen.add(r.playId);
-    if (j) {
+    const film = !!j && !!opts.filmWinsWeeks?.includes(r.week);
+    if (j && film) {
+      for (const [what, c, f] of [['form family', r.formFamily, j.formFamily], ['strength', r.strength, j.strength], ['backfield', r.backfield, j.backfield]] as const)
+        if (c !== f && f) warnings.push(`${r.playId}: ${what} differs (chart ${c ?? 'blank'}, film ${f}); the film chart wins this week`);
+    } else if (j) {
       if (j.personnel !== r.personnel) warnings.push(`${r.playId}: personnel differs (chart ${r.personnel}, JSON ${j.personnel}); the chart wins`);
       if (j.formFamily !== r.formFamily) warnings.push(`${r.playId}: form family differs (chart ${r.formFamily}, JSON ${j.formFamily}); the chart wins`);
       if (j.backfield !== r.backfield) warnings.push(`${r.playId}: backfield differs (chart ${r.backfieldDetail}, JSON ${j.backfieldDetail}); the chart wins`);
@@ -132,16 +142,16 @@ export function buildImportPlan(input: { chart?: ParsedChart; json?: ParsedForma
       fieldZone: r.fieldZone,
       hash: r.hash ?? j?.hash,
       personnel: r.personnel,
-      formFamily: r.formFamily,
-      strength: r.strength ?? j?.strength,
-      backfield: r.backfield,
-      backfieldDetail: r.backfieldDetail ?? j?.backfieldDetail,
+      formFamily: film ? j!.formFamily : r.formFamily,
+      strength: film ? (j!.strength ?? r.strength) : (r.strength ?? j?.strength),
+      backfield: film ? j!.backfield : r.backfield,
+      backfieldDetail: film ? (j!.backfieldDetail ?? r.backfieldDetail) : (r.backfieldDetail ?? j?.backfieldDetail),
       playType: r.playType,
       callType: r.callType,
       target: r.target,
       result: r.result,
       yards: r.yards,
-      motion: r.motion ?? j?.motion,
+      motion: film ? (j!.motion ?? undefined) : (r.motion ?? j?.motion),
       set: r.set ?? j?.formation,
       notes: r.notes,
       players: j?.players ?? [],

@@ -1539,44 +1539,44 @@
     }
   ],
   "workflow": {
-    "means": "The day-after routine. Five passes over the All-22, each one answering a single question, so I never chart and diagram at the same time. About 2 to 2.5 hours for a 65 snap game.",
+    "means": "The day-after routine. Claude does the pre-snap charting from the downloaded All-22 while I do something else, then I check its work and spend my own time on what the play was. About 20 minutes of waiting, then 90 minutes of my time for a 55 to 75 snap game.",
     "passes": [
       {
         "n": 0,
         "title": "Set up",
         "time": "10 min",
-        "question": "Is everything open?",
+        "question": "Is everything ready for Claude?",
         "steps": [
-          "Download the All-22 from NFL Pro and open it in Film Lab. It splits into plays (sideline, then end zone).",
-          "Open this page next to it. Open last week's chart so the Play IDs carry on (W3-001 ...).",
-          "Note the inactives and who is playing Y, the second tight end, and the backs. Add new names to the roster list if a tight end or back is new."
+          "Download the All-22 from NFL Pro (Game Center, both angles in one file). Save it with the footage.",
+          "Run the all22-film-charting skill in Chrome for the TEXT pass only: Play ID, quarter, down and distance, yard line, play text, and personnel from the On Field Players list. Personnel from the list is the one thing video cannot give reliably.",
+          "Paste those rows into the workbook so the week has its Play IDs (W3-001 ...).",
+          "Tell Claude: chart week N from this file. Give it the video path."
         ]
       },
       {
         "n": 1,
-        "title": "Pre-snap pass: chart every snap",
-        "time": "45 to 60 min",
+        "title": "Pre-snap pass: Claude charts every snap",
+        "time": "about 20 min, hands off",
         "question": "What did they line up in?",
         "steps": [
-          "Pause on the last frame before the snap. Do not watch the play yet.",
-          "Fill in: personnel, family (2x2, 3x1, Bunch, Empty, 2 Back, Big), strength, backfield (Under Center / Gun, RB L or R / Pistol), hash.",
-          "Per player: side, alignment (inline, wing, tight, slot, numbers, wide), on or off the ball, order from the ball out.",
-          "Motion note, always in the same shape: who / from / path / moving or set at the snap. Example: Lemon / slot L / across behind the QB to R / at snap.",
-          "A shift (everybody resets) gets its own line: Shift: ... Chart the set they snapped from.",
-          "Unsure of a name or a spot: write it as unknown. Do not guess."
+          "Claude splits the video into plays, matches each Eagles snap to its workbook row by yard line and order, and pulls the set frame from both angles.",
+          "It charts family, strength, backfield, hash, every eligible's alignment, and the motion note, with the set taken BEFORE any motion and AFTER any shift.",
+          "It compares its read with the workbook row and lists every disagreement with the reason.",
+          "Each snap gets a confidence for personnel / formation / hash. Names it cannot read stay unknown."
         ]
       },
       {
         "n": 2,
-        "title": "Import and name",
-        "time": "10 min",
-        "question": "What do I call it?",
+        "title": "Check and import",
+        "time": "15 min",
+        "question": "Do I trust it?",
         "steps": [
-          "Copy to Excel from Film Lab, save the workbook, then PlayForge > Formations > Import (team PHI).",
-          "Every formation comes in with its system call: Gun Dice Rt, West Lt Slot, Gun Trips Lt G.",
-          "Check the ones flagged closest word and anything marked template, verify against the film.",
-          "Twins (Trips / Trio / Trax, Dice / Dixie, Stack / South): leave the first word unless I know who the F was. If I know, rename it.",
-          "New pictures this week are the story. Write down which formations are new and which got the most snaps."
+          "Read Claude's disagreement list first. Open those snaps in Film Lab and decide. Most are set-versus-motion calls: the system charts the set.",
+          "Spot check five other snaps at random, plus every snap rated M on formation.",
+          "Things video reads badly: on or off the ball, stack versus a tight pair, bunch versus tight trips, and receiver names. Fix what matters.",
+          "Claude runs the import. Every formation comes in with its system call: Gun Dice Rt, West Lt Slot, Gun Trips Lt G.",
+          "Twins (Trips / Trio / Trax, Dice / Dixie, Stack / South): leave the first word unless I know who the F was.",
+          "Write down which formations are new this week and which got the most snaps."
         ]
       },
       {

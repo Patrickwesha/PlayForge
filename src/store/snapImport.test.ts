@@ -1,15 +1,15 @@
 import 'fake-indexeddb/auto';
-import { readFileSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { beforeAll, describe, expect, it } from 'vitest';
-import { buildImportPlan, parseChartXlsx, parseFormationsJson, type ImportPlan } from '@/importers/snapChart';
+import { buildImportPlan, mergeFormationsJson, parseChartXlsx, parseFormationsJson, type ImportPlan } from '@/importers/snapChart';
 import { EAGLES_2026_FORMATIONS, EAGLES_2026_SNAPS } from '@/seeds';
 import { getDb } from './db';
 import { repo, usageFromSnaps } from './repo';
 
 const DATA = path.resolve(__dirname, '../../import-data');
 const load = (mirror = false): ImportPlan =>
-  buildImportPlan({ chart: parseChartXlsx(new Uint8Array(readFileSync(path.join(DATA, 'eagles-all22-chart.xlsx')))), json: parseFormationsJson(readFileSync(path.join(DATA, 'W2_PHI-TEN_playforge.json'), 'utf8')) }, { team: 'PHI', season: 2026, mirror, now: new Date().toISOString() });
+  buildImportPlan({ chart: parseChartXlsx(new Uint8Array(readFileSync(path.join(DATA, 'eagles-all22-chart.xlsx')))), json: parseFormationsJson(mergeFormationsJson(readdirSync(DATA).filter((f) => /^W[0-9]+_.*_playforge[.]json$/.test(f)).sort().map((f) => readFileSync(path.join(DATA, f), 'utf8')))) }, { team: 'PHI', season: 2026, mirror, now: new Date().toISOString(), filmWinsWeeks: [1] });
 
 describe('snap import into the library (Dexie on fake-indexeddb)', () => {
   beforeAll(async () => {
@@ -67,8 +67,7 @@ describe('snap import into the library (Dexie on fake-indexeddb)', () => {
     expect(after.name).toBe('MY GUN DOUBLES');
     expect(after.players[qb.id].y).toBe(-4.5);
     expect(after.usage?.count).toBe(plan.formations[0].count);
-    expect(after.tags).toContain('W1');
-    expect(after.tags).toContain('W2');
+    for (const w of plan.formations[0].weeks) expect(after.tags).toContain(`W${w}`);
   });
 
   it('new snaps for an existing formation raise its usage; a mirror-merge import lands as its own formations', async () => {

@@ -1,0 +1,3275 @@
+{
+ "schema": "playforge-formations/v1",
+ "game": {
+  "season": 2026,
+  "week": 1,
+  "team": "PHI",
+  "opponent": "WAS",
+  "home": true
+ },
+ "snaps": [
+  {
+   "id": "W1-001",
+   "personnel": "12",
+   "form_family": "2x2 'D'",
+   "formation": "Set (about 3.0 to 4.5 s): Mundt inline L with Smith off the ball just outside him; Goedert wing R off the RT's hip, Wicks on the line in a reduced slot R about 2 yards outside the right hash. Barkley deep behind Hurts. Smith then runs across to the right, turns around outside Wicks and comes back, so he is behind Mundt on the left again as the ball is snapped.",
+   "backfield": "Under Center",
+   "strength": "Rt",
+   "hash": "Left",
+   "motion": "Smith / tight L off the ball / across behind the QB to outside Wicks R, turns (about 1 s pause near 10 s) and returns across to L / at snap (moving, behind Mundt)",
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "Supplied setT 13.0 is mid-motion (Smith already crossing back). Pulled alt frames 3.0-14.0. Smith #6 is still on the LEFT at 3.0 and 4.5 with the line down and Hurts under center, so I charted that as the set (2x2, strength Rt by Goedert tiebreak). The earlier chart's 3x1 Rt (Smith slot R) is the look at about 9.5-10.5 s when Smith is briefly outside Wicks on the right: he turns around there with at most a 1 s pause, and I could not confirm a full reset, hence formation M. If that pause counts as a shift-and-set, the chart's 3x1 'T' Rt is the right call. #6, #83, #88, #26, #1 read; Wicks by elimination (only other WR in 12 personnel, same neon gloves as #13 on W1-002). Hash: ball on the near (bottom) NFL hash on sideline = offense left; end zone agrees. The field also carries wider college hash marks.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "under_center"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "C",
+     "align": "deep"
+    },
+    {
+     "pos": "TE",
+     "name": "K.Mundt",
+     "side": "L",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Smith",
+     "side": "L",
+     "align": "tight",
+     "on_line": false,
+     "order": 2
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "wing",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "R",
+     "align": "slot",
+     "on_line": true,
+     "order": 2
+    }
+   ]
+  },
+  {
+   "id": "W1-002",
+   "personnel": "12",
+   "form_family": "3x1 'T'",
+   "formation": "Set (2.0 to 3.5 s): Mundt inline R, Goedert attached just outside Mundt, Wicks on the line in a reduced slot R near the right college hash; Smith alone L at the top of the numbers. Barkley deep. Goedert then walks out to outside Wicks, pauses about 1 s (the 6.0 s frame) and comes back in at the snap.",
+   "backfield": "Under Center",
+   "strength": "Rt",
+   "hash": "Left",
+   "motion": "Goedert / wing R outside Mundt / out to outside Wicks R, brief pause, then back in toward the formation / at snap (moving in)",
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "Supplied setT 6.0 shows Goedert outside Wicks, off the ball: that is the chart's 'Goedert split wide R'. Alt frames 0.5-3.5 show he started attached next to Mundt (double tight right) and walked out at about 4.5, so the first set is the tighter look. Either way it is 3x1 Rt. Even at 6.0 Goedert is only a yard or two outside the right college hash, not wide. Goedert on or off the ball at 3.5 is not clear (looks level with Mundt): charted as wing/off. Wicks looks on the line on both angles, which would cover Mundt: unsure. #83, #88 (4.5 s frame), #13, #26 read; Smith by elimination (number not read).",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "under_center"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "C",
+     "align": "deep"
+    },
+    {
+     "pos": "TE",
+     "name": "K.Mundt",
+     "side": "R",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "wing",
+     "on_line": false,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "R",
+     "align": "slot",
+     "on_line": true,
+     "order": 3
+    },
+    {
+     "pos": "WR",
+     "name": "D.Smith",
+     "side": "L",
+     "align": "numbers",
+     "on_line": true,
+     "order": 1
+    }
+   ]
+  },
+  {
+   "id": "W1-003",
+   "personnel": "11",
+   "form_family": "3x1 'T'",
+   "formation": "Set (1.0 to 4.0 s): Goedert wing L off the LT's hip, two receivers in the slot L (inside one on the line just outside the left hash, outside one off the ball about 1.5 yards wider); one receiver alone R on the outer edge of the numbers. Hurts in gun, Barkley beside him to the right. Goedert then crosses behind the line to wing R and is there as the ball is snapped (2x2 as snapped).",
+   "backfield": "Gun",
+   "strength": "Lt",
+   "hash": "Right",
+   "motion": "Goedert / wing L / across behind the line, in front of the QB, to wing R / at snap (arrives about 6.5 s, snap about 6.8 s)",
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "Disagree with the earlier chart (2x2 Rt, no motion). Both angles at 1.0, 2.5 and 4.0 s show #88 on the LEFT wing with two receivers left: trips left. Supplied setT 5.0 is mid-motion (end zone shows #88 running behind the LT). The chart recorded where he ended up; it had no end zone clip. He reaches wing R at about 6.5 and the ball is snapped right after: I could not see a full one-second reset, so I treat it as motion and chart the starting set. If it is ruled a shift, the chart's 2x2 Rt stands. Trips left is compressed but not close enough to touch: not Bunch. Hash: ball on the far (top) NFL hash on sideline = offense right; end zone has the center just inside the right hash. Receiver numbers not readable.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "R",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "L",
+     "align": "wing",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "slot",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "slot",
+     "on_line": false,
+     "order": 3
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "R",
+     "align": "numbers",
+     "on_line": true,
+     "order": 1
+    }
+   ]
+  },
+  {
+   "id": "W1-004",
+   "personnel": "12",
+   "form_family": "2x2 'D'",
+   "formation": "Set (3.0 to 4.5 s): Mundt inline L with Smith off the ball just outside him; Goedert wing R off the RT's hip, Cooper on the line tight outside Goedert. Barkley deep. Smith runs across to outside Cooper on the right, turns around and comes back, and is behind Mundt on the left again at the snap.",
+   "backfield": "Under Center",
+   "strength": "Rt",
+   "hash": "Left",
+   "motion": "Smith / tight L off the ball / across behind the QB to outside Cooper R, turns (about 9.0-10.0 s) and returns across to L / at snap (moving, behind Mundt)",
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "Same picture as W1-001. Supplied setT 12.0 is mid-motion (Smith behind the QB heading left). Smith #6 is still on the LEFT at 3.0 and 4.5 with the offense down, so the first set is 2x2. The chart's 3x1 Rt (Cooper outside Goedert, Smith outside Cooper) is the look at about 9 s, when Smith is turning around on the right without a clear reset. If that turn counts as a set, 3x1 'T' Rt is right. Cooper is #80 (read on end zone). #83, #88, #6, #26 read. Hash: ball on the near NFL hash on sideline, center on the left hash on end zone.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "under_center"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "C",
+     "align": "deep"
+    },
+    {
+     "pos": "TE",
+     "name": "K.Mundt",
+     "side": "L",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Smith",
+     "side": "L",
+     "align": "tight",
+     "on_line": false,
+     "order": 2
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "wing",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "Cooper",
+     "side": "R",
+     "align": "tight",
+     "on_line": true,
+     "order": 2
+    }
+   ]
+  },
+  {
+   "id": "W1-005",
+   "personnel": "11",
+   "form_family": "2x2 'D'",
+   "formation": "Goedert inline R (hand down), one receiver in a reduced slot R just outside the right college hash; Lemon tight L off the ball about 2 yards outside the LT, one receiver L on the line at the inside edge of the numbers. Hurts in gun, Bigsby beside him to the right. No motion.",
+   "backfield": "Gun",
+   "strength": "Rt",
+   "hash": "Left",
+   "motion": null,
+   "confidence": "H/H/H",
+   "angles": "Both",
+   "notes": "Back is #8 with BIGSBY on the nameplate (end zone): that confirms Bigsby's number. #9 Lemon and #88 read on end zone. The slot R receiver has the same neon gloves as #13 Wicks but the number is not readable: left null, as is the outside L receiver. Slot R looks about 1.5 yards off the ball on sideline. Strength by Goedert tiebreak. Hash: near NFL hash on sideline, left hash on end zone.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "T.Bigsby",
+     "side": "R",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "R",
+     "align": "slot",
+     "on_line": false,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": "M.Lemon",
+     "side": "L",
+     "align": "tight",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "numbers",
+     "on_line": true,
+     "order": 2
+    }
+   ]
+  },
+  {
+   "id": "W1-006",
+   "personnel": "11",
+   "form_family": "2x2 'D'",
+   "formation": "After the shift: Goedert inline R (two-point), one receiver R just inside the numbers; two receivers L, one in the slot just inside the numbers and one wide outside the numbers. Hurts in gun, Shipley beside him to the right. Before the shift it was 3x1 Rt with two receivers paired at the numbers R.",
+   "backfield": "Gun",
+   "strength": "Rt",
+   "hash": "Left",
+   "motion": "WR (not identified) / paired with the outside receiver at the numbers R / behind the line across to slot L / stop-and-set (moves about 6-9 s, set from 10.5, snap about 14.5)",
+   "confidence": "H/H/H",
+   "angles": "Both",
+   "notes": "Agrees with the earlier chart. 4.5 s frame shows the 3x1 Rt start, 7.5 the receiver crossing, 10.5-13.5 everyone still. Back is #28 Shipley (read on end zone), #88 read. No receiver number readable. On or off the ball for the receivers is a best read from sideline: slot L and the R receiver look off, wide L on.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "W.Shipley",
+     "side": "R",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "R",
+     "align": "numbers",
+     "on_line": false,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "slot",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "wide",
+     "on_line": true,
+     "order": 2
+    }
+   ]
+  },
+  {
+   "id": "W1-007",
+   "personnel": "12",
+   "form_family": "3x1 'T'",
+   "formation": "Mundt inline R, Goedert wing R off Mundt's outside hip, Wicks on the line in a reduced slot R on the right college hash; Smith alone L on the numbers. Barkley deep. Goedert goes in motion across the backfield to the left at the snap.",
+   "backfield": "Under Center",
+   "strength": "Rt",
+   "hash": "Left",
+   "motion": "Goedert / wing R outside Mundt / across the backfield behind the QB to L / at snap",
+   "confidence": "H/H/H",
+   "angles": "Both",
+   "notes": "Supplied setT 4.5 already has Goedert moving (end zone shows him running between Mundt and Wicks), so charted from 3.7 where everyone is still (same at 0.5, 2.0, 3.0). Only difference from the chart notes: Wicks is not wide, he is on the college hash about 4 yards outside the tight ends. #83, #13, #26 read on end zone; Goedert by elimination (second TE, number partly visible); Smith by elimination (number not read).",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "under_center"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "C",
+     "align": "deep"
+    },
+    {
+     "pos": "TE",
+     "name": "K.Mundt",
+     "side": "R",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "wing",
+     "on_line": false,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "R",
+     "align": "slot",
+     "on_line": true,
+     "order": 3
+    },
+    {
+     "pos": "WR",
+     "name": "D.Smith",
+     "side": "L",
+     "align": "numbers",
+     "on_line": true,
+     "order": 1
+    }
+   ]
+  },
+  {
+   "id": "W1-008",
+   "personnel": "11",
+   "form_family": "2x2 Stack 'S'",
+   "formation": "No attached tight end. R: Goedert split wide outside the numbers (off the ball), Wicks in the slot on the line. L: two receivers stacked just inside the numbers, one on the line and Lemon about 2 yards behind him, a shade outside. Hurts in gun, Barkley beside him to the right. Lemon goes in motion toward the backfield at the snap.",
+   "backfield": "Gun",
+   "strength": "Rt",
+   "hash": "Left",
+   "motion": "Lemon / back man of the stack L, just inside the numbers / in behind the QB across toward R / at snap",
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "Supplied setT 4.5 has Lemon already turning to start the motion: charted from 3.8 (same at 1.5 and 3.0). Two differences from the earlier chart. (1) It could not find Goedert: the man split wide right has a tight end build and his number reads 88 at 4x zoom on sideline (not crisp), so strength = Rt by Y tiebreak (chart had none). (2) The left pair is a stack, not a slot and a wideout: Lemon #9 is behind the front receiver and less than a yard outside him. It is a staggered stack, so if you want a true one-behind-the-other for 'S', call it 2x2 'D'. #13, #9, #26 read; front L receiver not readable. The end zone angle crops the stack, so the stack read is sideline only. I did not track where Lemon is at the snap beyond the 5.3 s frame (heading in toward the QB).",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "R",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "R",
+     "align": "slot",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "wide",
+     "on_line": false,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "slot",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "M.Lemon",
+     "side": "L",
+     "align": "slot",
+     "on_line": false,
+     "order": 2,
+     "stack_behind": true
+    }
+   ]
+  },
+  {
+   "id": "W1-009",
+   "personnel": "11",
+   "form_family": "3x1 'T'",
+   "formation": "Goedert inline R (two-point), Wicks on the line just inside the numbers R, Lemon off the ball at Wicks' outside hip on the inside edge of the numbers; Smith alone L, about halfway between the left hash and the numbers (wide side of the field). Hurts in gun, Barkley beside him to the right. Lemon goes in motion inside at the snap.",
+   "backfield": "Gun",
+   "strength": "Rt",
+   "hash": "Right",
+   "motion": "Lemon / outside Wicks R, off the ball / in behind Goedert and across the formation between the line and the QB toward L / at snap",
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "Supplied setT 4.5 has Lemon leaning into his motion; 2.5 and 3.5 are the clean set. Agrees with the earlier chart. Formation M because Wicks and Lemon are a close pair (about a yard apart, Lemon a yard back): I read it as side by side, not a stack, but it is near enough that someone could call it one. Smith is charted slot by landmark even though he is the only receiver on that side. Wicks looks on the line on end zone, which would cover Goedert: unsure. #13, #9, #88, #26 read on end zone; Smith by elimination (number not read). Hash: center on the right hash on end zone.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "R",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "R",
+     "align": "slot",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": "M.Lemon",
+     "side": "R",
+     "align": "numbers",
+     "on_line": false,
+     "order": 3
+    },
+    {
+     "pos": "WR",
+     "name": "D.Smith",
+     "side": "L",
+     "align": "slot",
+     "on_line": true,
+     "order": 1
+    }
+   ]
+  },
+  {
+   "id": "W1-010",
+   "personnel": "11",
+   "form_family": "2x2 'D'",
+   "formation": "After the shift: Goedert wing R off the RT's hip, one receiver R on the outer edge of the numbers; two receivers in the slot L (inside one on the line near the left college hash, outside one off the ball a couple of yards wider). Hurts in gun, Barkley beside him to the LEFT. Before the shift Goedert was attached on the left (3x1 Lt).",
+   "backfield": "Gun",
+   "strength": "Rt",
+   "hash": "Right",
+   "motion": "Goedert / attached L next to the LT / across behind the line to wing R / stop-and-set (moves about 6-8 s, set from 9.0, snap about 14.5)",
+   "confidence": "H/H/H",
+   "angles": "Both",
+   "notes": "Agrees with the earlier chart. 4.5 s frame shows Goedert left, 7.5 crossing, 9.0 through 13.5 set on the right. #88, #26 read on end zone. Receiver numbers not readable. Hash: center on the right hash on end zone, ball on the far NFL hash on sideline.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "L",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "wing",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "R",
+     "align": "numbers",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "slot",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "slot",
+     "on_line": false,
+     "order": 2
+    }
+   ]
+  },
+  {
+   "id": "W1-011",
+   "personnel": "12",
+   "form_family": "2x2 'D'",
+   "formation": "Goedert inline L (hand down), Smith L off the ball at the inside edge of the numbers; Mundt inline R, Wicks on the line tight outside Mundt. Barkley deep. Smith goes in motion across the formation behind the line at the snap.",
+   "backfield": "Under Center",
+   "strength": "Lt",
+   "hash": "Left",
+   "motion": "Smith / L at the numbers, off the ball / in and across behind the line toward R / at snap (behind the right side as the ball is snapped)",
+   "confidence": "H/H/H",
+   "angles": "Both",
+   "notes": "Supplied setT 6.0 has Smith already running behind the LG: charted from 4.5 (same at 1.5 and 3.0). Agrees with the earlier chart. Strength Lt by Goedert tiebreak. #88, #83, #13, #26 read on end zone, #6 read on sideline. Wicks looks on the line, which would cover Mundt: unsure. Hash: center on the left hash on end zone, ball on the near NFL hash on sideline.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "under_center"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "C",
+     "align": "deep"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "L",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Smith",
+     "side": "L",
+     "align": "numbers",
+     "on_line": false,
+     "order": 2
+    },
+    {
+     "pos": "TE",
+     "name": "K.Mundt",
+     "side": "R",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "R",
+     "align": "tight",
+     "on_line": true,
+     "order": 2
+    }
+   ]
+  },
+  {
+   "id": "W1-012",
+   "personnel": "13",
+   "form_family": "Big",
+   "formation": "Under center, Barkley deep behind Hurts. Left: Jenkins attached next to the LT, Mundt outside him a half step off the ball. Right: Goedert attached next to the RT (a half step off), Wicks alone wide right outside the numbers, on the line. No motion.",
+   "backfield": "Under Center",
+   "strength": "Rt",
+   "hash": "Right",
+   "motion": null,
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "End zone (camera behind offense): 83 - 84 - 68 - 69 - C - 56 - 65 - 88 read left to right, 26 deep. Sideline (top = offense right): lone receiver at the top outside the numbers. Wicks named by elimination: 13 personnel leaves one wideout and the play text has the pass to Wicks deep right. Strength: two eligibles each side (Jenkins + Mundt left, Goedert + Wicks right), so balanced and it goes to Goedert's side = Rt. Earlier chart said Lt, which is the two-tight-end side. If strength should follow the heavier tight end surface, it is Lt. On/off the ball for Mundt and Goedert is a half-step read on both angles: M.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "under_center"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "C",
+     "align": "deep"
+    },
+    {
+     "pos": "TE",
+     "name": "C.Jenkins",
+     "side": "L",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "TE",
+     "name": "K.Mundt",
+     "side": "L",
+     "align": "wing",
+     "on_line": false,
+     "order": 2
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "wing",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "R",
+     "align": "wide",
+     "on_line": true,
+     "order": 2
+    }
+   ]
+  },
+  {
+   "id": "W1-013",
+   "personnel": "12",
+   "form_family": "2x2 'D'",
+   "formation": "Under center, Barkley deep. Left: Mundt attached next to the LT (a half step off), Wicks tight outside him on the line. Right: Goedert inline, Smith off the ball on the right numbers. As snapped: Smith is running in behind the line and is behind the QB area at about 6.3 s.",
+   "backfield": "Under Center",
+   "strength": "Rt",
+   "hash": "Right",
+   "motion": "D.Smith / numbers R, off the ball / in flat behind the line toward the QB / at snap",
+   "confidence": "H/M/M",
+   "angles": "Both",
+   "notes": "Charted from 3.5 s (alt/W1-013-t3.5-*): the 5.0 s set frame already has Smith moving. End zone: 83, 88, 6 and 26 read. Sideline: 13 read tight left. Motion disagreement with the earlier chart: it has Wicks motioning from wide L in to the LT at the snap. I see Wicks walking in to the tight left spot at 0.5 s and standing still from 2.0 s on (a shift, stop-and-set), and the man moving at the snap is #6 Smith from the right (alt/W1-013-mont.jpg, frames 5.7 and 6.3). Hash: ball just inside the right hash column on the end zone angle, goal-line area, so M.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "under_center"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "C",
+     "align": "deep"
+    },
+    {
+     "pos": "TE",
+     "name": "K.Mundt",
+     "side": "L",
+     "align": "wing",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "L",
+     "align": "tight",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Smith",
+     "side": "R",
+     "align": "numbers",
+     "on_line": false,
+     "order": 2
+    }
+   ]
+  },
+  {
+   "id": "W1-014",
+   "personnel": "11",
+   "form_family": "3x1 'T'",
+   "formation": "Gun, Barkley offset left of Hurts. Right: Goedert attached next to the RT in a two-point stance (a half step off), Lemon about 3 yards outside him on the line, Wicks a yard outside and a yard behind Lemon. Left: Smith alone on the left numbers, on the line. No motion.",
+   "backfield": "Gun",
+   "strength": "Rt",
+   "hash": "Left",
+   "motion": null,
+   "confidence": "H/H/H",
+   "angles": "Both",
+   "notes": "End zone (behind offense): 26, 1, 88, 9, 13 read. Sideline zoom: 6 read on the single receiver left (alt/W1-014-zoom-sl-x.jpg). Lemon and Wicks are a tight pair but Goedert is about 3 yards inside them, so not a bunch, and Wicks is offset outside Lemon rather than directly behind, so not a stack. Ball on the left hash column on the end zone angle.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "L",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "WR",
+     "name": "D.Smith",
+     "side": "L",
+     "align": "numbers",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "wing",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "M.Lemon",
+     "side": "R",
+     "align": "tight",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "R",
+     "align": "slot",
+     "on_line": false,
+     "order": 3
+    }
+   ]
+  },
+  {
+   "id": "W1-015",
+   "personnel": "11",
+   "form_family": "2x2 'D'",
+   "formation": "Gun, Barkley offset left of Hurts. Left: Goedert attached next to the LT in a two-point stance (a half step off), Wicks wide outside the left numbers on the line. Right: Lemon in the slot off the ball, Smith on the right numbers on the line. No motion.",
+   "backfield": "Gun",
+   "strength": "Lt",
+   "hash": "Left",
+   "motion": null,
+   "confidence": "H/H/H",
+   "angles": "Both",
+   "notes": "Disagree with the earlier chart (3x1 Str Rt). End zone here faces the offense (Hurts' chest number visible), so screen right = offense left: 88 is the end man on screen right next to 68 and 69, three bodies on that side of the center (alt/W1-015-zoom-ez.jpg). Sideline (Q2, top = offense left): 88 at the top end of the line next to 68 (alt/W1-015-zoom-line.jpg), 13 wide at the top, slot and 6 at the bottom (alt/W1-015-zoom-wr.jpg). Both angles put Goedert left, which makes it two and two, and the Y tiebreak makes strength Lt. Slot receiver: long hair and a number that looks like 9, same look as the clean #9 reads on W1-016 and W1-018, so Lemon, M on that name.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "L",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "L",
+     "align": "wing",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "L",
+     "align": "wide",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": "M.Lemon",
+     "side": "R",
+     "align": "slot",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Smith",
+     "side": "R",
+     "align": "numbers",
+     "on_line": true,
+     "order": 2
+    }
+   ]
+  },
+  {
+   "id": "W1-016",
+   "personnel": "11",
+   "form_family": "2x2 'D'",
+   "formation": "Gun, Barkley offset right of Hurts. Right: Goedert flexed about 3 yards off the RT, standing, on the line. Smith on the right numbers, off the ball. Left: Lemon in the slot off the ball, Wicks wide outside the left numbers on the line. No motion.",
+   "backfield": "Gun",
+   "strength": "Rt",
+   "hash": "Right",
+   "motion": null,
+   "confidence": "H/H/H",
+   "angles": "Both",
+   "notes": "Numbers read on zooms (alt/W1-016-zoom.jpg): 13 wide left, 9 slot left, 6 right numbers, 88 flexed right on both angles. End zone faces the offense: Goedert on screen left = offense right, 26 on the same side of Hurts. Balanced, strength to Goedert. On/off the ball for Smith is a close call (about a yard behind Goedert's depth): M on that one detail.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "R",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "WR",
+     "name": "M.Lemon",
+     "side": "L",
+     "align": "slot",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "L",
+     "align": "wide",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "tight",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Smith",
+     "side": "R",
+     "align": "numbers",
+     "on_line": false,
+     "order": 2
+    }
+   ]
+  },
+  {
+   "id": "W1-017",
+   "personnel": "11",
+   "form_family": "2x2 'D'",
+   "formation": "Under center, Barkley deep. Set (9 to 11 s): Goedert inline right, Wicks off the ball on the right numbers. Left: Lemon standing 2 to 3 yards outside the LT on the left hash, off the ball, and a third receiver in the slot outside him on the line. As snapped: Wicks has come in to a wing spot behind Goedert's inside hip.",
+   "backfield": "Under Center",
+   "strength": "Rt",
+   "hash": "Right",
+   "motion": "D.Wicks / numbers R, off the ball / in to a wing behind Goedert / at snap. Before that Lemon shifted from outside in to the tight left spot (stop-and-set by about 9 s)",
+   "confidence": "H/M/M",
+   "angles": "Both",
+   "notes": "Charted from 11.0 s (alt/W1-017-t11.0-*), the 14.5 s set frame is mid-motion. Disagree with the earlier chart on family (2 Back) and on the motion. Only Barkley is ever in the backfield with Hurts on either angle from 6 s to the snap. Line read on the end zone zoom (alt/W1-017-zoom-ez11.jpg): 88 - 65 - 56 - 51 - 69 - 68, then #9 standing outside 68. Wicks (13 read at 11 s on the sideline) starts on the right numbers, jogs in at 12.5 s, is outside Goedert at 13.5 s and behind him at 14.5 s, snap about 15.5 s (alt/W1-017-montB.jpg). Nobody passes behind the QB. Outer left receiver: number not readable (side on), not in the end zone frame. Probably Smith (same three wideouts on the next two snaps) but left null. Hash from the end zone angle (ball on the screen-left column, camera facing the offense = offense right), the sideline rows are hard to separate, so M.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "under_center"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "C",
+     "align": "deep"
+    },
+    {
+     "pos": "WR",
+     "name": "M.Lemon",
+     "side": "L",
+     "align": "tight",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "slot",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "R",
+     "align": "numbers",
+     "on_line": false,
+     "order": 2
+    }
+   ]
+  },
+  {
+   "id": "W1-018",
+   "personnel": "11",
+   "form_family": "2x2 'D'",
+   "formation": "Gun, Barkley offset left of Hurts. Right: Goedert inline next to the RT, Wicks tight outside him, about 3 yards, off the ball. Left: Lemon about 3 yards outside the LT off the ball, a third receiver on the left numbers on the line. No motion.",
+   "backfield": "Gun",
+   "strength": "Rt",
+   "hash": "Left",
+   "motion": null,
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "Zooms (alt/W1-018-zoom.jpg): 88 next to 65 on the end zone angle, attached and not flexed as the earlier chart note has it. 9 read on the inner left receiver, 13 on the right receiver, 26 in the backfield. Outer left receiver unread (single digit, white cleats, probably Smith), left null. Wicks is not in the end zone frame, so his depth is sideline only and on/off the ball there is not certain: that is the M.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "L",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "WR",
+     "name": "M.Lemon",
+     "side": "L",
+     "align": "tight",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "numbers",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "R",
+     "align": "tight",
+     "on_line": false,
+     "order": 2
+    }
+   ]
+  },
+  {
+   "id": "W1-019",
+   "personnel": "11",
+   "form_family": "Bunch 'B'",
+   "formation": "Gun, Barkley offset left of Hurts. Left: Goedert alone, standing just outside the LT on the line. Right: three receivers in a bunch about 3 yards outside the RT. Wicks is the point on the line, Lemon inside and behind him, the third receiver outside and behind him. No motion.",
+   "backfield": "Gun",
+   "strength": "Rt",
+   "hash": "Left",
+   "motion": null,
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "Same three right, one left as the earlier chart, but the three are an arm's length apart in a triangle on the sideline zoom (alt/W1-019-zoom.jpg, zoom2), which is a bunch by the definition, and Bunch outranks 3x1. If the earlier pass meant a tight trips, that is the only difference. They hold still from 10.5 s to 14.3 s. 9 read on both angles, 13 on the sideline, 88 and 26 on the end zone. Outer bunch receiver: single digit that looks like a 6, white cleats, probably Smith, left null. Only Lemon of the bunch is inside the end zone frame.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "L",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "L",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "M.Lemon",
+     "side": "R",
+     "align": "tight",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "R",
+     "align": "tight",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "R",
+     "align": "tight",
+     "on_line": false,
+     "order": 3
+    }
+   ]
+  },
+  {
+   "id": "W1-020",
+   "personnel": "11",
+   "form_family": "2x2 'D'",
+   "formation": "Under center, Barkley deep. Set (1 to 4 s): Mundt inline right with a hand down, Wicks tight outside him off the ball. Left: Lemon in a close slot about 4 yards off the LT, off the ball, a third receiver outside him just inside the left numbers on the line. As snapped: Wicks has crossed behind the QB to the left and is next to the two left receivers, three left and Mundt alone right.",
+   "backfield": "Under Center",
+   "strength": "Rt",
+   "hash": "Right",
+   "motion": "D.Wicks / tight R, off the ball / across the formation behind the QB to the left, out to the two receivers / at snap",
+   "confidence": "H/H/H",
+   "angles": "Both",
+   "notes": "Charted from 2.5 s (alt/W1-020-t2.5-*), the 6.0 s set frame is mid-motion. The tight end is #83 Mundt, not Goedert: 83 read twice on the end zone angle next to 65 (alt/W1-020-zoom.jpg). Strength goes to the only tight end = Rt. 9 and 26 read on the end zone, 13 on the sideline. Outer left receiver unread, left null. Motion: the earlier chart has a receiver from wide R coming in toward the formation. I see Wicks start tight right, turn at 5 s, pass behind the RT at 6 s, behind the LT at 7 s and reach the left receivers at 7.7 s with the ball still not snapped (alt/W1-020-montB.jpg, alt/W1-020-m7.7.jpg). I did not catch the exact snap frame, so he may have settled for a beat before the snap.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "under_center"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "C",
+     "align": "deep"
+    },
+    {
+     "pos": "WR",
+     "name": "M.Lemon",
+     "side": "L",
+     "align": "slot",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "slot",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "TE",
+     "name": "K.Mundt",
+     "side": "R",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "R",
+     "align": "tight",
+     "on_line": false,
+     "order": 2
+    }
+   ]
+  },
+  {
+   "id": "W1-021",
+   "personnel": "11",
+   "form_family": "Bunch 'B'",
+   "formation": "Gun, Barkley offset right of Hurts. No tight end attached: five linemen only. Left: three in a bunch out on the left numbers, one point man on the line and two behind him, inside and outside. Right: one receiver alone on the right numbers. No motion.",
+   "backfield": "Gun",
+   "strength": "Lt",
+   "hash": "Right",
+   "motion": null,
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "The end zone clip exists for this snap (the earlier chart had it missing). It shows five linemen, Hurts and the back only, back on screen left with the camera facing the offense = offense right, ball on the right hash column. The sideline shows the three left a yard or two apart in a triangle (alt/W1-021-zoom-L.jpg), unchanged from 0.5 s to 5.0 s, so Bunch rather than plain 3x1. None of the four jersey numbers out wide could be read (bunch is outside the end zone frame, side on to the sideline camera), so the tight end and the three wideouts are not told apart: all four null, and which bunch man is the TE is unknown. pos on those rows is a placeholder that keeps the 1 TE / 3 WR count. Barkley from the play text. The right receiver's depth is a close call: on_line true is M.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "R",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "numbers",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "numbers",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "numbers",
+     "on_line": false,
+     "order": 3
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "R",
+     "align": "numbers",
+     "on_line": true,
+     "order": 1
+    }
+   ]
+  },
+  {
+   "id": "W1-022",
+   "personnel": "11",
+   "form_family": "3x1 'T'",
+   "formation": "Gun, Barkley offset left of Hurts. Left: Goedert inline with a hand down, alone. Right: three receivers spread: Lemon about 3 yards outside the RT off the ball, Wicks in the slot off the ball, a third receiver on the right numbers on the line. No motion.",
+   "backfield": "Gun",
+   "strength": "Rt",
+   "hash": "Left",
+   "motion": null,
+   "confidence": "H/H/H",
+   "angles": "Both",
+   "notes": "The end zone clip exists for this snap too. 88 read there at the left end of the line behind defender 98 (camera facing the offense, screen right = offense left), ball on the left hash column. Receivers are outside the end zone frame. Sideline zoom (alt/W1-022-zoom.jpg): inner man has Lemon's long hair and a partial 9, middle man a two-digit number starting with 1 and dark cleats = Wicks, both M on the name. Outer man single digit, white cleats, probably Smith, left null. Barkley from the play text.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "L",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "L",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "M.Lemon",
+     "side": "R",
+     "align": "tight",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "R",
+     "align": "slot",
+     "on_line": false,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "R",
+     "align": "numbers",
+     "on_line": true,
+     "order": 3
+    }
+   ]
+  },
+  {
+   "id": "W1-023",
+   "personnel": "12",
+   "form_family": "3x1 'T'",
+   "formation": "Under center, single back deep. Double tight left: Mundt next to the left tackle, Goedert outside him, both on the ball. Wicks off the ball a few yards outside Goedert. Smith alone right, on the line at the inside edge of the numbers. Snapped as set.",
+   "backfield": "Under Center",
+   "strength": "Lt",
+   "hash": "Right",
+   "motion": null,
+   "confidence": "H/H/H",
+   "angles": "Both",
+   "notes": "End zone (camera faces the offense, so screen right = offense left): read 83 and 88 on the left end of the line, 83 inside, both at line depth. Sideline: read 13 off the ball left and 6 on the line right. Two wide receivers are detached, so not Big. Back wears a single digit that looks like 8: named Bigsby from the play text, number not confirmed. Ball on the offense-right NFL hash on both angles (the field also has wider college hash ticks: ignore those).",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "under_center"
+    },
+    {
+     "pos": "RB",
+     "name": "T.Bigsby",
+     "side": "C",
+     "align": "deep"
+    },
+    {
+     "pos": "TE",
+     "name": "J.Mundt",
+     "side": "L",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "L",
+     "align": "inline",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "L",
+     "align": "slot",
+     "on_line": false,
+     "order": 3
+    },
+    {
+     "pos": "WR",
+     "name": "D.Smith",
+     "side": "R",
+     "align": "numbers",
+     "on_line": true,
+     "order": 1
+    }
+   ]
+  },
+  {
+   "id": "W1-024",
+   "personnel": "12",
+   "form_family": "2x2 'D'",
+   "formation": "Gun, back offset to the quarterback's left. Both tight ends right: Goedert on the line split about two yards from the right tackle, Mundt off the ball in the gap between the tackle and Goedert. Two receivers left, close together at the numbers: Smith on the line, Wicks just outside him and off the ball. Snapped as set.",
+   "backfield": "Gun",
+   "strength": "Rt",
+   "hash": "Middle",
+   "motion": null,
+   "confidence": "H/H/M",
+   "angles": "Both",
+   "notes": "End zone: read 88 widest right on the line and 83 a step off the ball inside him. Sideline: read 13 and 6 on the left at the painted 10. Wicks is behind and outside Smith, not directly behind, so not a stack. Balanced 2x2: strength to Goedert's side. Ball is between the hashes, a bit toward the offense's right (end zone angle only, so M). Back: single digit, same look as the back on W1-023, not readable here so left null.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "J.Mundt",
+     "side": "R",
+     "align": "wing",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "tight",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": "D.Smith",
+     "side": "L",
+     "align": "numbers",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "L",
+     "align": "numbers",
+     "on_line": false,
+     "order": 2
+    }
+   ]
+  },
+  {
+   "id": "W1-025",
+   "personnel": "11",
+   "form_family": "3x1 'T'",
+   "formation": "Gun, Shipley offset to the quarterback's right. Goedert inline left. Two receivers left at the numbers: Wicks on the line, Lemon off the ball just behind and outside him. One receiver right in the slot, off the ball. As snapped: Lemon is running across behind the quarterback toward the right.",
+   "backfield": "Gun",
+   "strength": "Lt",
+   "hash": "Left",
+   "motion": "Lemon / off the ball outside Wicks at the numbers L / across the formation behind the QB to R / at snap",
+   "confidence": "H/H/H",
+   "angles": "Both",
+   "notes": "The supplied set frame (13.5) is mid-motion, so charted from 11.0 where all eleven are still. End zone: 88 inline on the offense's left, 28 to the right of the quarterback. Sideline: read 13 on the line left, read 9 on the motion man as he passed the tackle (12.5). Right receiver is a single digit (6 or 0), not readable: null. Lemon is close behind Wicks (near stack), but it is 3x1 either way. Ball on the left NFL hash on both angles.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "W.Shipley",
+     "side": "R",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "L",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "L",
+     "align": "numbers",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": "M.Lemon",
+     "side": "L",
+     "align": "numbers",
+     "on_line": false,
+     "order": 3
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "R",
+     "align": "slot",
+     "on_line": false,
+     "order": 1
+    }
+   ]
+  },
+  {
+   "id": "W1-026",
+   "personnel": "11",
+   "form_family": "2x2 'D'",
+   "formation": "Gun, Shipley offset to the quarterback's left. Goedert right, standing, a short split off the right tackle and a touch off the ball. Smith in the right slot on the line. Two receivers left, close together just inside the numbers: the inside man on the line, Wicks outside him off the ball. Snapped as set.",
+   "backfield": "Gun",
+   "strength": "Rt",
+   "hash": "Right",
+   "motion": null,
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "End zone: read 88 right, 28 left of the quarterback, and 6 at the frame edge outside Goedert. Sideline: read 13 on the outside left man. Inside left receiver has long hair and white cleats like the #9 read on W1-025 (same no-huddle drive), probably Lemon, but the number is not readable: null. On/off the ball for Goedert and the left pair is judged from depth against the tackles and is the weak part (M). Balanced: strength to Goedert. Ball on the right NFL hash on both angles.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "W.Shipley",
+     "side": "L",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "wing",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Smith",
+     "side": "R",
+     "align": "slot",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "slot",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "L",
+     "align": "numbers",
+     "on_line": false,
+     "order": 2
+    }
+   ]
+  },
+  {
+   "id": "W1-027",
+   "personnel": "11",
+   "form_family": "2x2 'D'",
+   "formation": "Gun, Shipley offset to the quarterback's right. Goedert right, standing, on the line about two yards off the right tackle. One receiver right on the numbers, off the ball. Left: one receiver at the outer edge of the numbers on the line, one in the slot off the ball. Snapped as set.",
+   "backfield": "Gun",
+   "strength": "Rt",
+   "hash": "Right",
+   "motion": null,
+   "confidence": "H/H/H",
+   "angles": "Both",
+   "notes": "End zone: read 88 right and 28 right of the quarterback. No receiver number is readable on either angle, so all three are null. Likely the same three as W1-026 (no huddle): wide left has dark cleats like Wicks, left slot has long hair like Lemon, right has a single digit like Smith. Balanced: strength to Goedert. Ball on the right NFL hash on both angles.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "W.Shipley",
+     "side": "R",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "tight",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "R",
+     "align": "numbers",
+     "on_line": false,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "slot",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "numbers",
+     "on_line": true,
+     "order": 2
+    }
+   ]
+  },
+  {
+   "id": "W1-028",
+   "personnel": "11",
+   "form_family": "Bunch 'B'",
+   "formation": "Gun, Shipley offset to the quarterback's right. Three-man bunch tight to the right tackle: Mundt off the ball about a yard and a half outside the tackle, Wicks on the line just outside him (the point), Lemon off the ball outside and behind Wicks. Smith alone left on the line just inside the numbers. As snapped: Lemon has come back inside behind Mundt toward the box.",
+   "backfield": "Gun",
+   "strength": "Rt",
+   "hash": "Right",
+   "motion": "Lemon / outside man of the bunch R / in behind Mundt toward the box / at snap",
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "The supplied set frame (6.0) is mid-motion, so charted from 4.5 where everyone is still. Sideline: read 83, 13 and 9 in the cluster. End zone: 83 right, 28 right of the quarterback. Earlier chart says 3x1: I see the three right-side men within a yard or two of each other (point man on, two off), which is a bunch by the definition, and Bunch outranks 3x1. If the spacing is judged too loose for a bunch it is 3x1 Rt, hence M. Left receiver's number is not readable: named Smith because 13 and 9 are read on the right, he is the only receiver left in 11 personnel, and the play text has Smith as the deep-left target. Ball on the right NFL hash on both angles.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "W.Shipley",
+     "side": "R",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "J.Mundt",
+     "side": "R",
+     "align": "wing",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "R",
+     "align": "tight",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": "M.Lemon",
+     "side": "R",
+     "align": "tight",
+     "on_line": false,
+     "order": 3
+    },
+    {
+     "pos": "WR",
+     "name": "D.Smith",
+     "side": "L",
+     "align": "numbers",
+     "on_line": true,
+     "order": 1
+    }
+   ]
+  },
+  {
+   "id": "W1-029",
+   "personnel": "11",
+   "form_family": "Bunch 'B'",
+   "formation": "Gun, Shipley offset to the quarterback's left. Goedert inline right. Three-receiver bunch left, between the hash and the numbers: one receiver on the line at the point, Smith off the ball inside him, Wicks off the ball outside him. As snapped: Smith is running across behind the line toward the right.",
+   "backfield": "Gun",
+   "strength": "Lt",
+   "hash": "Right",
+   "motion": "Smith / inside man of the bunch L / across behind the line to R / at snap",
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "The supplied set frame (10.5) is mid-motion, so charted from 8.0 (same picture at 6.0). Earlier chart says 3x1 and that Mundt is the tight end: the end zone frame reads 88 (Goedert) inline right, and the three left receivers are close enough to touch, so Bunch (outranks 3x1). M because bunch vs tight trips is a spacing judgment. Read 6 on the motion man (10.5 sideline) and 13 on the outside man. Point man has long hair and white cleats, probably Lemon (the #9 read on W1-028), but the number is not readable: null. Ball on the right NFL hash on both angles.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "W.Shipley",
+     "side": "L",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Smith",
+     "side": "L",
+     "align": "slot",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "slot",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "L",
+     "align": "slot",
+     "on_line": false,
+     "order": 3
+    }
+   ]
+  },
+  {
+   "id": "W1-030",
+   "personnel": "12",
+   "form_family": "2x2 'D'",
+   "formation": "Under center, Barkley deep. Goedert inline left, Mundt inline right. Wicks left on the line just inside the numbers. One receiver right on the numbers, off the ball. Snapped as set.",
+   "backfield": "Under Center",
+   "strength": "Lt",
+   "hash": "Right",
+   "motion": null,
+   "confidence": "H/H/H",
+   "angles": "Both",
+   "notes": "End zone: read 88 left end, 83 right end, 26 deep. Sideline: left receiver shows a two-digit number starting with 1 and dark cleats: Wicks. Right receiver is a single digit (6 or 0), white cleats, probably Smith (he and Wicks are the 12-personnel pair read on W1-033), but not readable: null. Balanced: strength to Goedert. Ball on the right NFL hash on both angles.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "under_center"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "C",
+     "align": "deep"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "L",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "L",
+     "align": "numbers",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "TE",
+     "name": "J.Mundt",
+     "side": "R",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "R",
+     "align": "numbers",
+     "on_line": false,
+     "order": 2
+    }
+   ]
+  },
+  {
+   "id": "W1-031",
+   "personnel": "11",
+   "form_family": "2x2 Stack 'S'",
+   "formation": "Gun, Barkley offset to the quarterback's left. No tight end attached. Left: the tight end split wide outside the numbers, Wicks in the slot just inside the numbers. Right: one receiver on the line at the inside edge of the numbers with Lemon stacked right behind him. As snapped: Lemon is running back across behind the quarterback to the left.",
+   "backfield": "Gun",
+   "strength": "Lt",
+   "hash": "Right",
+   "motion": "Lemon / stacked behind the R receiver at the numbers / across behind the QB to L / at snap",
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "Sideline: read 9 on the back man of the right pair, and a two-digit number starting with 1 on the left slot (Wicks). The wide-left man is the tight end by elimination (the other three are 13, 9 and a single digit) and his shoulder numerals look like 88: Goedert, medium confidence. Earlier chart has 2x2 with strength unknown: I get Lt by the Y tiebreak (Goedert is the wide-left man), and Stack because Lemon sits directly behind the right receiver, within about half a yard laterally (M: if that offset is read as a twin, it is plain 2x2). Which of the two left men is on the line could not be told from depth: put the wide man on because the slot man is in a deeper crouch (inferred). Right front receiver is a single digit (0 or 6): null. End zone: five linemen only, 26 left of the quarterback, ball on the right NFL hash.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "L",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "L",
+     "align": "slot",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "L",
+     "align": "wide",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "R",
+     "align": "numbers",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "M.Lemon",
+     "side": "R",
+     "align": "numbers",
+     "on_line": false,
+     "order": 2,
+     "stack_behind": true
+    }
+   ]
+  },
+  {
+   "id": "W1-032",
+   "personnel": "11",
+   "form_family": "3x1 'T'",
+   "formation": "Gun, Shipley offset to the quarterback's right. Goedert inline left. Two receivers left at the numbers: Wicks on the line, Lemon off the ball right behind and just outside him. One receiver right in the slot, off the ball. As snapped: Lemon is running in behind the line toward the backfield and the right.",
+   "backfield": "Gun",
+   "strength": "Lt",
+   "hash": "Left",
+   "motion": "Lemon / off the ball behind Wicks at the numbers L / in behind the line across to R / at snap",
+   "confidence": "H/H/H",
+   "angles": "Both",
+   "notes": "The supplied set frame (6.0) is mid-motion, so charted from 4.5 (same picture at 1.5 and 3.0). Earlier chart (sideline only) has 2x2 strength right. There is an end zone clip: it reads 88 on the line left and 13 outside him, 28 right of the quarterback. Both angles show Goedert plus two receivers left and one receiver right before the motion, so 3x1 Lt. The earlier 2x2 looks like the picture after Lemon's motion. Read 9 on the motion man (6.0 end zone and sideline). Right receiver is a single digit (0 or 6): null. Ball on the left NFL hash on both angles.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "W.Shipley",
+     "side": "R",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "L",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "L",
+     "align": "numbers",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": "M.Lemon",
+     "side": "L",
+     "align": "numbers",
+     "on_line": false,
+     "order": 3
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "R",
+     "align": "slot",
+     "on_line": false,
+     "order": 1
+    }
+   ]
+  },
+  {
+   "id": "W1-033",
+   "personnel": "12",
+   "form_family": "3x1 'T'",
+   "formation": "First set (4.0): double tight left (Mundt inline, Goedert outside him), Wicks on the line right at the inside edge of the numbers with Smith stacked behind him. Smith then shifts all the way across behind the formation and resets off the ball just outside Goedert. As snapped: under center, Barkley deep, Mundt, Goedert and Smith left, Wicks alone right.",
+   "backfield": "Under Center",
+   "strength": "Lt",
+   "hash": "Right",
+   "motion": "Smith / off the ball behind Wicks at the numbers R / across behind the formation to just outside Goedert L / stop-and-set",
+   "confidence": "H/H/H",
+   "angles": "Both",
+   "notes": "Smith is still at 9.7, 10.2 and 10.6 and the ball is snapped about 10.8, so this is a shift and the formation is charted after it. Earlier chart has strength right and hash unknown (it says sideline only). There is an end zone clip: it reads 83 and 88 on the offense's left end of the line and 26 deep, and puts the ball on the right NFL hash. Sideline (4.0) reads 13 and 6 on the right pair. Three left, one right after the shift, so Lt. Before the shift it was 2x2 with a stack right. Two receivers detached, so not Big.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "under_center"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "C",
+     "align": "deep"
+    },
+    {
+     "pos": "TE",
+     "name": "J.Mundt",
+     "side": "L",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "L",
+     "align": "inline",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": "D.Smith",
+     "side": "L",
+     "align": "tight",
+     "on_line": false,
+     "order": 3
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "R",
+     "align": "numbers",
+     "on_line": true,
+     "order": 1
+    }
+   ]
+  },
+  {
+   "id": "W1-034",
+   "personnel": "11",
+   "form_family": "2x2 'D'",
+   "formation": "Gun, Barkley offset right of Hurts. Left: Goedert in a two-point wing just outside the left tackle, off the ball, one WR wide outside the numbers. Right: two WRs in a tight staggered pair in the slot between the hash and the numbers (front man up, second man a step behind and outside). No motion.",
+   "backfield": "Gun",
+   "strength": "Lt",
+   "hash": "Middle",
+   "motion": null,
+   "confidence": "H/M/M",
+   "angles": "Both",
+   "notes": "End zone (camera faces the offense, #68 at left tackle confirms sides): #88 off the ball outside LT, #26 on Hurts' right. Sideline: 11 Eagles counted, only one receiver above the line (offense left) plus Goedert, two below (right). That is two each side, so 2x2, not the chart's 3x1 Rt. Balanced, so strength goes to Goedert's side = Lt. The right pair is staggered, not one directly behind the other, so not called a stack. Hash: end zone shows the ball between the hashes, a bit left of center, not on the left hash: Middle (chart said Left). WR numbers not readable. On/off the ball for the WRs is a read from the sideline angle only.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "R",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "L",
+     "align": "wing",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "side": "L",
+     "align": "wide",
+     "on_line": true,
+     "order": 2,
+     "id_unknown": true
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "side": "R",
+     "align": "slot",
+     "on_line": true,
+     "order": 1,
+     "id_unknown": true
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "side": "R",
+     "align": "slot",
+     "on_line": false,
+     "order": 2,
+     "id_unknown": true
+    }
+   ]
+  },
+  {
+   "id": "W1-035",
+   "personnel": "11",
+   "form_family": "2x2 'D'",
+   "formation": "Gun, Barkley offset left of Hurts. Left: Goedert in a two-point wing just outside the left tackle, off the ball, one WR wide outside the numbers. Right: two WRs in a tight staggered pair in the slot between the hash and the numbers. No motion.",
+   "backfield": "Gun",
+   "strength": "Lt",
+   "hash": "Left",
+   "motion": null,
+   "confidence": "H/H/H",
+   "angles": "Both",
+   "notes": "End zone faces the offense: #88 outside #68 (offense left), #26 on Hurts' left, ball on the left hash column. Sideline: one WR top (left), two bottom (right). Balanced 2x2, strength to Goedert = Lt. Right pair is staggered (second man behind and outside, alt/W1-035-zoom-096-1.jpg), not a true stack. WR numbers not readable.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "L",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "L",
+     "align": "wing",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "side": "L",
+     "align": "wide",
+     "on_line": true,
+     "order": 2,
+     "id_unknown": true
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "side": "R",
+     "align": "slot",
+     "on_line": true,
+     "order": 1,
+     "id_unknown": true
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "side": "R",
+     "align": "slot",
+     "on_line": false,
+     "order": 2,
+     "id_unknown": true
+    }
+   ]
+  },
+  {
+   "id": "W1-036",
+   "personnel": "12",
+   "form_family": "2x2 'D'",
+   "formation": "Under center, Barkley deep behind Hurts. Right: Mundt next to the right tackle, Goedert attached outside Mundt at the end of the line. Left: Wicks tight to the left tackle off the ball, one WR out on the top edge of the numbers. No motion.",
+   "backfield": "Under Center",
+   "strength": "Rt",
+   "hash": "Middle",
+   "motion": null,
+   "confidence": "H/H/H",
+   "angles": "Both",
+   "notes": "Chart had strength and hash unknown: both readable here. End zone (faces offense): #83 then #88 outside #65 on the offense right, #13 standing just outside #68 on the left. Balanced 2x2, Goedert is on the right, so Rt. Ball sits between the hashes on both angles: Middle. Two receivers detached (Wicks tight, WR wide), so not Big. Mundt's feet are a touch deeper than Goedert's on both angles, so Mundt off / Goedert on is my read, medium sure. Wide WR number not readable.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "under_center"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "C",
+     "align": "deep"
+    },
+    {
+     "pos": "TE",
+     "name": "G.Mundt",
+     "side": "R",
+     "align": "inline",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "inline",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "L",
+     "align": "tight",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "side": "L",
+     "align": "numbers",
+     "on_line": true,
+     "order": 2,
+     "id_unknown": true
+    }
+   ]
+  },
+  {
+   "id": "W1-037",
+   "personnel": "12",
+   "form_family": "2x2 'D'",
+   "formation": "Set: under center, Barkley deep. Left: Goedert inline, Mundt in a wing outside him. Right: Wicks tight to the right tackle, second WR just outside and behind him. As snapped: Mundt has crossed to the right, three right and Goedert alone left.",
+   "backfield": "Under Center",
+   "strength": "Lt",
+   "hash": "Right",
+   "motion": "Mundt / wing L outside Goedert / across behind the line to R / at snap (behind the right tackle when the ball is snapped)",
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "The 6.0 s set frame is mid-motion, so I charted from 4.5 s (alt/W1-037-set-108-*-t4.5.jpg), where everyone is still. Set formation is 2 TE left, 2 WR right = 2x2, strength to Goedert = Lt. Chart says 3x1: it only becomes 3x1 after Mundt's motion, and then the three are on the RIGHT, not the left. Ball on the right hash on both angles. Outer right WR is cut off on the end zone angle, number not readable.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "under_center"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "C",
+     "align": "deep"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "L",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "TE",
+     "name": "G.Mundt",
+     "side": "L",
+     "align": "wing",
+     "on_line": false,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "R",
+     "align": "tight",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "side": "R",
+     "align": "tight",
+     "on_line": false,
+     "order": 2,
+     "id_unknown": true
+    }
+   ]
+  },
+  {
+   "id": "W1-038",
+   "personnel": "11",
+   "form_family": "2x2 Stack 'S'",
+   "formation": "Gun, Barkley offset left of Hurts. Right: Goedert in a two-point wing just outside the right tackle, one WR in the slot between the hash and the numbers. Left: two WRs stacked in the slot, second man right behind the first. No motion.",
+   "backfield": "Gun",
+   "strength": "Rt",
+   "hash": "Right",
+   "motion": null,
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "End zone (faces offense): #88 outside #65 on the offense right, #26 on Hurts' left, ball on the right hash column (chart had hash unknown, guessed Right: confirmed). Sideline: two WRs top (left), Goedert plus one WR bottom (right), 11 Eagles counted. So two each side, not the chart's 3x1 Lt. The left pair is one behind the other at the same width (alt/W1-038-zoom-109-1.jpg), which I call a stack: medium sure, a half step of stagger would make it plain 2x2. Balanced, strength to Goedert = Rt. WR numbers not readable.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "L",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "wing",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "side": "R",
+     "align": "slot",
+     "on_line": true,
+     "order": 2,
+     "id_unknown": true
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "side": "L",
+     "align": "slot",
+     "on_line": true,
+     "order": 1,
+     "id_unknown": true
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "side": "L",
+     "align": "slot",
+     "on_line": false,
+     "order": 1,
+     "id_unknown": true,
+     "stack_behind": true
+    }
+   ]
+  },
+  {
+   "id": "W1-039",
+   "personnel": "12",
+   "form_family": "3x1 'T'",
+   "formation": "Set: under center, Barkley deep. Right: Mundt inline next to the right tackle, Goedert in a wing outside Mundt, Wicks tight outside Goedert off the ball. Left: one WR at the top edge of the numbers. As snapped: Wicks has crossed to the left, two each side.",
+   "backfield": "Under Center",
+   "strength": "Rt",
+   "hash": "Left",
+   "motion": "Wicks / tight R outside Goedert / across behind the line to L / at snap (clearing the left tackle when the ball is snapped)",
+   "confidence": "H/H/H",
+   "angles": "Both",
+   "notes": "The 6.0 s set frame has Wicks already running behind the right tackle, so I charted from 3.5 s (alt/W1-039-set-117-*-t3.5.jpg). End zone faces the offense: #83, #88, #13 all on the offense right. Wicks is about 3 yards off Goedert, not touching, so no bunch. Two receivers detached, so not Big. Left WR number not readable.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "under_center"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "C",
+     "align": "deep"
+    },
+    {
+     "pos": "TE",
+     "name": "G.Mundt",
+     "side": "R",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "wing",
+     "on_line": false,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "R",
+     "align": "tight",
+     "on_line": false,
+     "order": 3
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "side": "L",
+     "align": "numbers",
+     "on_line": true,
+     "order": 1,
+     "id_unknown": true
+    }
+   ]
+  },
+  {
+   "id": "W1-040",
+   "personnel": "11",
+   "form_family": "3x1 'T'",
+   "formation": "Gun, Barkley offset left of Hurts. Left: Goedert in a two-point stance tight to the left tackle, two WRs close together standing on the painted numbers (second man behind and a bit outside the first). Right: one WR alone in the slot between the hash and the numbers. No motion.",
+   "backfield": "Gun",
+   "strength": "Lt",
+   "hash": "Left",
+   "motion": null,
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "End zone faces the offense: #88 outside #68 on the offense left, #26 on Hurts' left, ball on the left hash column. Sideline: three up top (left), one below (right). The two left WRs are a near stack: the back man is behind and slightly outside, so I left it 3x1 rather than Stack (alt/W1-040-zoom-118-1.jpg). On/off the ball on the left is not clean from either angle. WR numbers not readable.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "L",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "L",
+     "align": "tight",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "side": "L",
+     "align": "numbers",
+     "on_line": true,
+     "order": 2,
+     "id_unknown": true
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "side": "L",
+     "align": "numbers",
+     "on_line": false,
+     "order": 3,
+     "id_unknown": true
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "side": "R",
+     "align": "slot",
+     "on_line": false,
+     "order": 1,
+     "id_unknown": true
+    }
+   ]
+  },
+  {
+   "id": "W1-041",
+   "personnel": "11",
+   "form_family": "3x1 'T'",
+   "formation": "Gun, Barkley offset right of Hurts. Right: Goedert inline, hand down, alone. Left: three WRs spread out: Lemon in the slot a few yards off the left tackle, second WR on the numbers, third wide outside the numbers. No motion.",
+   "backfield": "Gun",
+   "strength": "Lt",
+   "hash": "Right",
+   "motion": null,
+   "confidence": "H/H/H",
+   "angles": "Both",
+   "notes": "End zone faces the offense: #88 attached outside #65 (offense right), #9 off the ball outside #68 (left), ball on the right hash column. Sideline: three WRs staggered up the top (left), nobody below but Goedert. Outer WR is the one up on the line. Outer two WR numbers not readable.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "R",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "M.Lemon",
+     "side": "L",
+     "align": "slot",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "side": "L",
+     "align": "numbers",
+     "on_line": false,
+     "order": 2,
+     "id_unknown": true
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "side": "L",
+     "align": "wide",
+     "on_line": true,
+     "order": 3,
+     "id_unknown": true
+    }
+   ]
+  },
+  {
+   "id": "W1-042",
+   "personnel": "11",
+   "form_family": "Bunch 'B'",
+   "formation": "Set: gun, Barkley offset left of Hurts. Left: three WRs bunched in a tight triangle in the slot just inside the numbers, Smith the inside/back man. Right: Goedert alone, two-point, tight to the right tackle. As snapped: Smith has crossed to the right and is outside Goedert, two each side.",
+   "backfield": "Gun",
+   "strength": "Lt",
+   "hash": "Right",
+   "motion": "Smith / inside man of the bunch L / across behind the line to R / at snap (outside Goedert when the ball is snapped)",
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "The 7.5 s set frame has #6 already behind the right side, so I charted from 5.0 s (alt/W1-042-set-120-*-t5.0.jpg, zoom alt/W1-042-zoom-120-1.jpg). Chart's 3x1 Lt is the same count: I call it Bunch because the three are within arm's reach of each other, and Bunch outranks 3x1. Medium sure: Smith may be just starting to move at 5.0 s. #6 read on the sideline angle at 7.5 s. Other two WR numbers not readable. Ball on the right hash on both angles.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "L",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "tight",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Smith",
+     "side": "L",
+     "align": "slot",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "side": "L",
+     "align": "slot",
+     "on_line": true,
+     "order": 2,
+     "id_unknown": true
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "side": "L",
+     "align": "slot",
+     "on_line": false,
+     "order": 3,
+     "id_unknown": true
+    }
+   ]
+  },
+  {
+   "id": "W1-043",
+   "personnel": "11",
+   "form_family": "2x2 'D'",
+   "formation": "Under center, Barkley deep behind Hurts. Both sides compressed. Right: Goedert standing a few yards off the right tackle off the ball, Smith just outside him on the line. Left: Lemon a few yards off the left tackle off the ball, Wicks just outside him on the line. No motion.",
+   "backfield": "Under Center",
+   "strength": "Rt",
+   "hash": "Right",
+   "motion": null,
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "No huddle, quick snap: at 3.5 s the umpire is still walking off and Goedert is still settling, so I charted from 4.1 s (alt/W1-043-set-121-*-t4.1.jpg), right before the snap. Goedert may not be fully still even there, hence medium. Numbers #13, #9, #88, #6 read on the sideline zoom (alt/W1-043-zoom-121-1.jpg). Balanced, strength to Goedert = Rt. Ball on the right hash on both angles.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "under_center"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "C",
+     "align": "deep"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "tight",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Smith",
+     "side": "R",
+     "align": "slot",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": "M.Lemon",
+     "side": "L",
+     "align": "tight",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "L",
+     "align": "slot",
+     "on_line": true,
+     "order": 2
+    }
+   ]
+  },
+  {
+   "id": "W1-044",
+   "personnel": "12",
+   "form_family": "2x2 'D'",
+   "formation": "Under center, Barkley deep behind Hurts. Left: Goedert inline outside the left tackle, one WR in the slot between the hash and the numbers. Right: Mundt inline outside the right tackle, Wicks a few yards outside him on the line. No motion.",
+   "backfield": "Under Center",
+   "strength": "Lt",
+   "hash": "Right",
+   "motion": null,
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "Chart had strength unknown because the Y was not readable: end zone angle (faces offense) shows #88 outside #68 on the offense left and #83 outside #65 on the right, so balanced 2x2 with Goedert left = Lt. #13 read on the sideline angle. Two receivers detached, so not Big. On/off the ball is the soft part: Mundt looks a half step off with Wicks up on the line, Goedert vs the left WR I could not separate (called Goedert on, WR off). Left WR number not readable.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "under_center"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "C",
+     "align": "deep"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "L",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "side": "L",
+     "align": "slot",
+     "on_line": false,
+     "order": 2,
+     "id_unknown": true
+    },
+    {
+     "pos": "TE",
+     "name": "G.Mundt",
+     "side": "R",
+     "align": "inline",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Wicks",
+     "side": "R",
+     "align": "tight",
+     "on_line": true,
+     "order": 2
+    }
+   ]
+  },
+  {
+   "id": "W1-045",
+   "personnel": "11",
+   "form_family": "3x1 'T'",
+   "formation": "Gun, Barkley offset right of Hurts. Trips left: Goedert detached just outside the left tackle in a two-point stance, a receiver on the left numbers, a receiver wide left outside the numbers. Single receiver right on the right numbers. Snapped as set.",
+   "backfield": "Gun",
+   "strength": "Lt",
+   "hash": "Right",
+   "motion": null,
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "End zone camera FACES the offense on this snap (screen left = offense right): 88 read on screen right = offense left, 26 read beside Hurts on the offense's right; sideline (Q3, top = offense left) agrees: three up top, one at the bottom. Ball on the right hash on both angles. Single receiver right reads as 6 on the sideline (D.Smith, medium). The two left receivers were not readable. On/off the ball for the three left receivers is NOT certain: all three look about level on the sideline; charted the numbers man on, Goedert and the wide man off. Goedert's split is about 3 yards from the tackle (tight/slot borderline). No motion seen on the strip.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "R",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "L",
+     "align": "tight",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "numbers",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "wide",
+     "on_line": false,
+     "order": 3
+    },
+    {
+     "pos": "WR",
+     "name": "D.Smith",
+     "side": "R",
+     "align": "numbers",
+     "on_line": true,
+     "order": 1
+    }
+   ]
+  },
+  {
+   "id": "W1-046",
+   "personnel": "11",
+   "form_family": "3x1 'T'",
+   "formation": "Gun, Barkley offset left of Hurts. Condensed trips left: Goedert off the left tackle's hip, Cooper on the ball about on the left hash, Wicks off the ball a few yards outside Cooper. Single receiver wide right outside the numbers, on the ball. Snapped as set.",
+   "backfield": "Gun",
+   "strength": "Lt",
+   "hash": "Right",
+   "motion": null,
+   "confidence": "H/H/H",
+   "angles": "Both",
+   "notes": "End zone camera behind the offense: 13 Wicks, 80 Cooper, 88 Goedert all read on screen left, 26 Barkley left of Hurts, center on the right hash. Sideline (Q4, bottom = offense left) shows the same three at the bottom and one receiver alone up top outside the numbers. The trips is tight but not touching-close, so 3x1 not Bunch. Right receiver number not readable. No motion on the strip.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "L",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "L",
+     "align": "wing",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "Cooper",
+     "side": "L",
+     "align": "tight",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": "Wicks",
+     "side": "L",
+     "align": "slot",
+     "on_line": false,
+     "order": 3
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "R",
+     "align": "wide",
+     "on_line": true,
+     "order": 1
+    }
+   ]
+  },
+  {
+   "id": "W1-047",
+   "personnel": "11",
+   "form_family": "3x1 'T'",
+   "formation": "Gun, Barkley offset left of Hurts. Set: trips right: Goedert attached to the right tackle, Cooper on the ball a couple of yards outside him, third receiver off the ball outside Cooper at the numbers. Single receiver left, a few yards outside the left hash. As snapped: the outside right receiver has come in motion behind the line and is in the backfield behind the right guard, leaving Goedert + Cooper right and one receiver left.",
+   "backfield": "Gun",
+   "strength": "Rt",
+   "hash": "Right",
+   "motion": "WR (not identified) / outside R at the numbers, off the ball / in behind the line toward the left / at snap behind the right guard, still moving",
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "The map setT (6.0) frame is mid-motion: a blurred receiver is running behind the line. Pulled 0.5 s and 3.0 s (alt/W1-047-t*.jpg): both show three to the right (top of the sideline frame in Q4) and one to the left, everybody still at 3.0. The earlier chart's 2x2 looks like it counted the motion man as already gone; the set formation is 3x1 right. End zone at 3.0: 88 and 80 read on the right, 26 left of Hurts, center on the right hash. The motion receiver and the left receiver were not readable (the third receiver is out of the end zone frame). The exact snap moment was not pinned down: the motion man is behind the right guard at 6.0 and the snap is at or just after that.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "L",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "Cooper",
+     "side": "R",
+     "align": "tight",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "R",
+     "align": "numbers",
+     "on_line": false,
+     "order": 3
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "slot",
+     "on_line": true,
+     "order": 1
+    }
+   ]
+  },
+  {
+   "id": "W1-048",
+   "personnel": "11",
+   "form_family": "Empty",
+   "formation": "Empty gun. Bunch left a few yards outside the left hash: Goedert at the point on the ball, Barkley off the ball just inside and behind him, a receiver off the ball outside and behind him. Two receivers right: one on the right numbers off the ball, one wide outside the numbers on the ball. Snapped as set.",
+   "backfield": "Gun",
+   "strength": "Lt",
+   "hash": "Right",
+   "motion": null,
+   "confidence": "H/H/H",
+   "angles": "Both",
+   "notes": "Sideline zoom (alt/W1-048-zoom-1.jpg): 88 at the point, 26 behind/inside him, third man not readable. The bunch and both right receivers are outside the end zone frame, which shows only Hurts alone in the gun and the center on the right hash; sideline agrees on the hash. Three left are touching-close (a bunch), but Empty wins by precedence. Barkley and Goedert are at nearly the same width: order 1/2 between them is a close call. Right receivers not readable.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "L",
+     "align": "slot",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "L",
+     "align": "slot",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "slot",
+     "on_line": false,
+     "order": 3
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "R",
+     "align": "numbers",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "R",
+     "align": "wide",
+     "on_line": true,
+     "order": 2
+    }
+   ]
+  },
+  {
+   "id": "W1-049",
+   "personnel": "11",
+   "form_family": "2x2 'D'",
+   "formation": "Gun, Bigsby offset right of Hurts. Condensed 2x2: left: Mundt off the left tackle's hip, a receiver on the ball just outside him. Right: two receivers close together between the right hash and the numbers, front man on the ball, the other a yard behind and a yard outside him. No play (false start).",
+   "backfield": "Gun",
+   "strength": "Lt",
+   "hash": "Left",
+   "motion": null,
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "False start clip: charted the last still frame. End zone (behind the offense): 83 Mundt read on the left, 8 Bigsby (name bar read) right of Hurts, center on the left hash; sideline agrees. Strength: balanced, so the side of the only tight end = left. The right pair is close to a stack but the back man is offset outside, so charted 2x2 (alt/W1-049-zoom-1.jpg). Front right receiver may be 9 (Lemon) but the number is not clean: left null. Receivers not readable.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "Bigsby",
+     "side": "R",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "Mundt",
+     "side": "L",
+     "align": "wing",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "tight",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "R",
+     "align": "slot",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "R",
+     "align": "slot",
+     "on_line": false,
+     "order": 2
+    }
+   ]
+  },
+  {
+   "id": "W1-050",
+   "personnel": "11",
+   "form_family": "3x1 'T'",
+   "formation": "Gun, Bigsby offset left of Hurts. Set: condensed trips left: Mundt off the left tackle's hip, a receiver on the ball just outside him, Lemon off the ball just outside and behind that receiver. Single receiver right on the numbers, on the ball. As snapped: Lemon has run across behind the line and is out to the right, so it is 2 left / 2 right at the snap.",
+   "backfield": "Gun",
+   "strength": "Lt",
+   "hash": "Left",
+   "motion": "Lemon / tight L, outside receiver of the trips, off the ball / across the formation behind the line to R / at snap out to the right near the right numbers, still moving",
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "The map setT (15.0) frame is mid-motion: 9 Lemon (name and number read on the end zone angle) is running behind the right tackle. Pulled 12.0, 13.5 and 16.0 (alt/W1-050-t*.jpg): at 12.0 everybody is set with three left and one right; 13.5 Lemon is moving behind Mundt; 16.0 is the snap with Lemon out right. The earlier chart's 2x2 is the as-snapped picture; the set formation is 3x1 left. The left three span about 3 to 4 yards, not quite touching-close, so 3x1 rather than Bunch: that call is the uncertain part. 83 Mundt and 8 Bigsby read on the end zone angle, center on the left hash on both angles. Other two receivers not readable.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "Bigsby",
+     "side": "L",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "Mundt",
+     "side": "L",
+     "align": "wing",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "tight",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": "M.Lemon",
+     "side": "L",
+     "align": "tight",
+     "on_line": false,
+     "order": 3
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "R",
+     "align": "numbers",
+     "on_line": true,
+     "order": 1
+    }
+   ]
+  },
+  {
+   "id": "W1-051",
+   "personnel": "11",
+   "form_family": "3x1 'T'",
+   "formation": "Gun, Shipley offset left of Hurts. Trips right: Goedert off the ball outside the right tackle, Lemon on the ball in the slot, third receiver off the ball just inside the right numbers. Single receiver left, on the ball between the left hash and the numbers. Snapped as set.",
+   "backfield": "Gun",
+   "strength": "Rt",
+   "hash": "Left",
+   "motion": null,
+   "confidence": "H/H/H",
+   "angles": "Both",
+   "notes": "Sideline (Q4, top = offense right) shows three Eagles to the top side (wing, slot on the ball, outside man off the ball) and one at the bottom; the earlier chart had 2x2. The end zone frame (behind the offense) cuts off the outside right receiver and the left receiver, which is probably how one got missed: it shows 88 and 9 on the right, 28 Shipley left of Hurts, center on the left hash. Both angles agree on sides and hash. The outside right and the left receiver were not readable. No motion on the strip.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "W.Shipley",
+     "side": "L",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "wing",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "M.Lemon",
+     "side": "R",
+     "align": "slot",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "R",
+     "align": "numbers",
+     "on_line": false,
+     "order": 3
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "slot",
+     "on_line": true,
+     "order": 1
+    }
+   ]
+  },
+  {
+   "id": "W1-052",
+   "personnel": "11",
+   "form_family": "2x2 'D'",
+   "formation": "Under center, Shipley deep directly behind Hurts. Right: Goedert attached to the right tackle, Wicks a couple of yards outside him just inside the numbers. Left: Lemon tight to the left tackle like a wing, another receiver on the ball just outside the left hash. Snapped as set.",
+   "backfield": "Under Center",
+   "strength": "Rt",
+   "hash": "Right",
+   "motion": null,
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "End zone (behind the offense): 9 Lemon read next to the left tackle, 88 and 13 read on the right, 28 deep behind Hurts, center on the right hash. Sideline agrees on sides and hash. The fourth receiver (left slot) is outside the end zone frame; on a later sideline frame (alt/W1-052-pair2.jpg) he reads as 6, and he is the third receiver in 11 personnel, so D.Smith (medium). On/off the ball is not clean for Lemon and Wicks: both stand about level with the tackles; charted them off because the man next to each is on the ball.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "under_center"
+    },
+    {
+     "pos": "RB",
+     "name": "W.Shipley",
+     "side": "C",
+     "align": "deep"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "Wicks",
+     "side": "R",
+     "align": "tight",
+     "on_line": false,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": "M.Lemon",
+     "side": "L",
+     "align": "wing",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Smith",
+     "side": "L",
+     "align": "slot",
+     "on_line": true,
+     "order": 2
+    }
+   ]
+  },
+  {
+   "id": "W1-053",
+   "personnel": "11",
+   "form_family": "2x2 'D'",
+   "formation": "Gun, Shipley offset right of Hurts. Right: Goedert just outside the right tackle in a two-point stance, a receiver wide right outside the numbers. Left: a receiver in the slot off the ball, a receiver on the left numbers on the ball. Snapped as set.",
+   "backfield": "Gun",
+   "strength": "Rt",
+   "hash": "Right",
+   "motion": null,
+   "confidence": "H/H/H",
+   "angles": "Both",
+   "notes": "End zone (behind the offense): 88 read right, 28 right of Hurts, center on the right hash. Sideline (top = offense right) shows one wide up top plus Goedert, two at the bottom. Strength: balanced, so Goedert's side. Goedert is level with the tackle with a slightly wide split: charted wing/off the ball but he could be called inline. Receivers not readable. No motion on the strip.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "W.Shipley",
+     "side": "R",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "R",
+     "align": "wing",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "R",
+     "align": "wide",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "slot",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "numbers",
+     "on_line": true,
+     "order": 2
+    }
+   ]
+  },
+  {
+   "id": "W1-054",
+   "personnel": "11",
+   "form_family": "2x2 Stack 'S'",
+   "formation": "Gun, Barkley offset left of Hurts. Left: Goedert attached to the left tackle in a two-point stance, a receiver wide left outside the numbers. Right: two receivers stacked a couple of yards inside the right numbers, front man on the ball, Lemon directly behind him. Snapped as set.",
+   "backfield": "Gun",
+   "strength": "Lt",
+   "hash": "Left",
+   "motion": null,
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "Sideline zoom (alt/W1-054-zoom-1.jpg): the two right receivers are at the same width, one straight behind the other, so Stack beats plain 2x2 by precedence: that is the only disagreement with the earlier chart. The back man reads 9 (Lemon, medium); front man not readable. End zone (behind the offense): 88 Goedert read on the LEFT next to the left tackle (this confirms the earlier chart's assumption), 26 left of Hurts, center on the left hash; the stack and the wide receiver are outside that frame. Strength: balanced, so Goedert's side. The wide left receiver looks a little off the ball, which would put Goedert on it: medium. Same picture from 9 s to the snap on the strip, no motion.",
+   "players": [
+    {
+     "pos": "QB",
+     "name": "J.Hurts",
+     "side": "C",
+     "align": "gun"
+    },
+    {
+     "pos": "RB",
+     "name": "S.Barkley",
+     "side": "L",
+     "align": "gun_offset"
+    },
+    {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "L",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "L",
+     "align": "wide",
+     "on_line": false,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
+     "side": "R",
+     "align": "slot",
+     "on_line": true,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "M.Lemon",
+     "side": "R",
+     "align": "slot",
+     "on_line": false,
+     "order": 2,
+     "stack_behind": true
+    }
+   ]
+  }
+ ]
+}

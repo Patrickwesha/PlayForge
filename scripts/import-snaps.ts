@@ -3,6 +3,8 @@
  *
  *   npm run import:snaps                                   re-run from import-data/
  *   npm run import:snaps -- --xlsx a.xlsx --json b.json    other files (copied into import-data/ first)
+ *
+ * Every import-data/W<week>_*_playforge.json is read, so a new game is one more file.
  *   npm run import:snaps -- --mirror                       merge Rt and Lt into one formation that flips
  *
  * Same engine as the Formations > Import page (src/importers/snapChart), run with the seed timestamp
@@ -10,16 +12,19 @@
  * instead of duplicating them. Same input, same bytes out.
  */
 import { createHash } from 'node:crypto';
-import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { copyFileSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SEED_TIME } from '../src/model/seedRules';
-import { buildImportPlan, parseChartXlsx, parseFormationsJson } from '../src/importers/snapChart';
+import { buildImportPlan, mergeFormationsJson, parseChartXlsx, parseFormationsJson } from '../src/importers/snapChart';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = path.join(ROOT, 'import-data');
 const XLSX = path.join(DATA, 'eagles-all22-chart.xlsx');
-const JSON_FILE = path.join(DATA, 'W2_PHI-TEN_playforge.json');
+/** Every game's per-player alignment file: import-data/W<week>_<teams>_playforge.json. */
+const jsonFiles = () => readdirSync(DATA).filter((f) => /^W[0-9]+_.*_playforge[.]json$/.test(f)).sort();
+/** Weeks charted frame by frame from the downloaded All-22 (scripts/film): that file beats the workbook's formation columns. */
+const FILM_WINS_WEEKS = [1];
 const OUT = path.join(ROOT, 'src/seeds/data/eagles2026.json');
 const REPORT = path.join(DATA, 'import-report.json');
 
@@ -29,8 +34,9 @@ const flag = (name: string) => {
   return i >= 0 ? args[i + 1] : undefined;
 };
 const mirror = args.includes('--mirror');
-for (const [opt, target] of [['--xlsx', XLSX], ['--json', JSON_FILE]] as const) {
+for (const opt of ['--xlsx', '--json'] as const) {
   const src = flag(opt);
+  const target = opt === '--xlsx' ? XLSX : path.join(DATA, path.basename(src ?? ''));
   if (src) {
     mkdirSync(DATA, { recursive: true });
     copyFileSync(path.resolve(src), target);
@@ -39,10 +45,11 @@ for (const [opt, target] of [['--xlsx', XLSX], ['--json', JSON_FILE]] as const) 
 }
 
 const chart = parseChartXlsx(new Uint8Array(readFileSync(XLSX)));
-const json = parseFormationsJson(readFileSync(JSON_FILE, 'utf8'));
+const files = jsonFiles();
+const json = parseFormationsJson(mergeFormationsJson(files.map((f) => readFileSync(path.join(DATA, f), 'utf8'))));
 const team = json.game.team ?? 'PHI';
 const season = json.game.season ?? 2026;
-const plan = buildImportPlan({ chart, json }, { team, season, mirror, now: SEED_TIME, builtin: true, naming: 'system', source: `${team} ${season} All-22 chart (${path.basename(XLSX)}, ${path.basename(JSON_FILE)})` });
+const plan = buildImportPlan({ chart, json }, { team, season, mirror, now: SEED_TIME, builtin: true, naming: 'system', filmWinsWeeks: FILM_WINS_WEEKS, source: `${team} ${season} All-22 chart (${path.basename(XLSX)}, ${files.join(', ')})` });
 
 const formations = plan.formations.map((p) => p.formation);
 const snaps = plan.snaps;
