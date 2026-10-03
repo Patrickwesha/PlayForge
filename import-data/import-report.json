@@ -1,0 +1,1832 @@
+{
+  "summary": {
+    "snaps": 130,
+    "exact": 76,
+    "template": 54,
+    "formations": 75,
+    "weeks": {
+      "W1": 54,
+      "W2": 76
+    }
+  },
+  "formations": [
+    {
+      "id": "snapform-7fca6681fa468fbf",
+      "name": "11 Gun 2x2 Rt",
+      "count": 15,
+      "exact": 1,
+      "template": 14,
+      "weeks": [
+        1,
+        2
+      ],
+      "hashes": {
+        "Right": 8,
+        "Left": 6,
+        "Middle": 1
+      },
+      "source": "mixed",
+      "snapIds": [
+        "W1-003",
+        "W1-005",
+        "W1-006",
+        "W1-008",
+        "W1-010",
+        "W1-016",
+        "W1-018",
+        "W1-026",
+        "W1-027",
+        "W1-031",
+        "W1-032",
+        "W1-047",
+        "W1-051",
+        "W1-053",
+        "W2-003"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W1",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-9b2d6c8502a679ff",
+      "name": "11 Gun 3x1 Lt",
+      "count": 11,
+      "exact": 2,
+      "template": 9,
+      "weeks": [
+        1,
+        2
+      ],
+      "hashes": {
+        "Right": 8,
+        "Left": 2
+      },
+      "source": "mixed",
+      "snapIds": [
+        "W1-021",
+        "W1-025",
+        "W1-029",
+        "W1-038",
+        "W1-040",
+        "W1-041",
+        "W1-042",
+        "W1-045",
+        "W1-046",
+        "W2-032",
+        "W2-074"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "3x1 'T'",
+        "W1",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-35d44e8be24720b9",
+      "name": "11 Gun 3x1 Rt",
+      "count": 9,
+      "exact": 2,
+      "template": 7,
+      "weeks": [
+        1,
+        2
+      ],
+      "hashes": {
+        "Right": 2,
+        "Left": 7
+      },
+      "source": "mixed",
+      "snapIds": [
+        "W1-009",
+        "W1-014",
+        "W1-015",
+        "W1-019",
+        "W1-022",
+        "W1-028",
+        "W1-034",
+        "W2-011",
+        "W2-012"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "3x1 'T'",
+        "W1",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-acb8396469719d7a",
+      "name": "12 UC 3x1 Rt",
+      "count": 7,
+      "exact": 1,
+      "template": 6,
+      "weeks": [
+        1,
+        2
+      ],
+      "hashes": {
+        "Left": 6
+      },
+      "source": "mixed",
+      "snapIds": [
+        "W1-001",
+        "W1-002",
+        "W1-004",
+        "W1-007",
+        "W1-033",
+        "W1-039",
+        "W2-034"
+      ],
+      "tags": [
+        "eagles-2026",
+        "12",
+        "3x1 'T'",
+        "W1",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-fc6e4c6aec9930f4",
+      "name": "11 Gun 2x2 Lt",
+      "count": 5,
+      "exact": 1,
+      "template": 4,
+      "weeks": [
+        1,
+        2
+      ],
+      "hashes": {
+        "Left": 5
+      },
+      "source": "mixed",
+      "snapIds": [
+        "W1-035",
+        "W1-049",
+        "W1-050",
+        "W1-054",
+        "W2-006"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W1",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-7f3bd03fe72acbe1",
+      "name": "11 UC 2x2 Rt",
+      "count": 4,
+      "exact": 1,
+      "template": 3,
+      "weeks": [
+        1,
+        2
+      ],
+      "hashes": {
+        "Right": 3,
+        "Middle": 1
+      },
+      "source": "mixed",
+      "snapIds": [
+        "W1-020",
+        "W1-043",
+        "W1-052",
+        "W2-004"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W1",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-17c62df9f1ba8cbb",
+      "name": "12 UC 2x2 Rt",
+      "count": 4,
+      "exact": 1,
+      "template": 3,
+      "weeks": [
+        1,
+        2
+      ],
+      "hashes": {
+        "Right": 3
+      },
+      "source": "mixed",
+      "snapIds": [
+        "W1-013",
+        "W1-036",
+        "W1-044",
+        "W2-001"
+      ],
+      "tags": [
+        "eagles-2026",
+        "12",
+        "2x2 'D'",
+        "W1",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-26cced3f579b7531",
+      "name": "12 UC 2x2 Lt",
+      "count": 3,
+      "exact": 1,
+      "template": 2,
+      "weeks": [
+        1,
+        2
+      ],
+      "hashes": {
+        "Left": 2,
+        "Right": 1
+      },
+      "source": "mixed",
+      "snapIds": [
+        "W1-011",
+        "W1-030",
+        "W2-029"
+      ],
+      "tags": [
+        "eagles-2026",
+        "12",
+        "2x2 'D'",
+        "W1",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-da971b21e73b2cfb",
+      "name": "12 UC 3x1 Lt",
+      "count": 3,
+      "exact": 1,
+      "template": 2,
+      "weeks": [
+        1,
+        2
+      ],
+      "hashes": {
+        "Right": 3
+      },
+      "source": "mixed",
+      "snapIds": [
+        "W1-023",
+        "W1-037",
+        "W2-017"
+      ],
+      "tags": [
+        "eagles-2026",
+        "12",
+        "3x1 'T'",
+        "W1",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-6fb9057055debdb2",
+      "name": "11 Gun Bunch Rt",
+      "count": 2,
+      "exact": 2,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 2
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-016",
+        "W2-076"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "Bunch 'B'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-c5d75b36313a5554",
+      "name": "11 Gun Bunch Lt",
+      "count": 2,
+      "exact": 2,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 2
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-053",
+        "W2-073"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "Bunch 'B'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-20105b37aca1775d",
+      "name": "11 Gun Empty Lt",
+      "count": 2,
+      "exact": 1,
+      "template": 1,
+      "weeks": [
+        1,
+        2
+      ],
+      "hashes": {
+        "Right": 1,
+        "Middle": 1
+      },
+      "source": "mixed",
+      "snapIds": [
+        "W1-048",
+        "W2-013"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "Empty",
+        "W1",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-d2da00c26dd94820",
+      "name": "11 UC 2 Back Rt",
+      "count": 1,
+      "exact": 0,
+      "template": 1,
+      "weeks": [
+        1
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "template",
+      "snapIds": [
+        "W1-017"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2 Back",
+        "W1",
+        "template, verify"
+      ]
+    },
+    {
+      "id": "snapform-9f2e3301748cdb77",
+      "name": "11 Gun 2x2 Lt #2",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-056"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-d383d43558bc3b23",
+      "name": "11 Gun 2x2 Lt #3",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-068"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-7bca4649f1c11237",
+      "name": "11 Gun 2x2 Rt #2",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-039"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-7fa8dbafc642c009",
+      "name": "11 Gun 2x2 Rt #3",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-023"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-6bc2d18cc38891a2",
+      "name": "11 Gun 2x2 Rt #4",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-042"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-84db209daa882ef7",
+      "name": "11 Gun 2x2 Rt #5",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-049"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-21e77dc1af8ac74f",
+      "name": "11 Gun 2x2 Rt #6",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-071"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-932c5b25fd1bb54b",
+      "name": "11 Gun 2x2 Rt #7",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-072"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-5d76834eae0ac14c",
+      "name": "11 Gun 2x2 Lt #4",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-038"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-1b0f03bcc3e32846",
+      "name": "11 Gun 2x2 Lt #5",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-020"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-44552a41e18be2a3",
+      "name": "11 Gun 2x2 Lt #6",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-065"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-67b216da3cd6d788",
+      "name": "11 Gun 2x2 Lt #7",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-075"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-519b1a977aa1182d",
+      "name": "11 Gun 2x2 Rt #8",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-050"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-aa18f9bd915fcbdb",
+      "name": "11 Gun 2x2 Rt #9",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-064"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-4bb51d0a4d381738",
+      "name": "11 Pistol 2x2 Lt",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-024"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-95bc07b271fabef4",
+      "name": "11 Pistol 2x2 Lt #2",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-058"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-f432ccd1b4abbcc3",
+      "name": "11 UC 2x2 Lt",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-043"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-017e342871a4083e",
+      "name": "11 UC 2x2 Lt #2",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-051"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-a995a02ab0f483f0",
+      "name": "11 UC 2x2 Lt #3",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-040"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-19b2c16bbcbefadd",
+      "name": "11 UC 2x2 Lt #4",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-055"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-e9f9ba1947c94e93",
+      "name": "11 UC 2x2 Rt #2",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-052"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-003a6dcafe692380",
+      "name": "11 UC 2x2 Rt #3",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-037"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-e4c91145f6a059f3",
+      "name": "11 UC 2x2 Rt #4",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-028"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-e695a2e584a1ffdf",
+      "name": "11 UC 2x2 Rt #5",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Middle": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-019"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-33e2a99436361436",
+      "name": "11 Gun 3x1 Lt #2",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-015"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "3x1 'T'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-9508d05066d025be",
+      "name": "11 Gun 3x1 Rt #2",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-014"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "3x1 'T'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-7ab89008827b2cea",
+      "name": "11 Gun 3x1 Rt #3",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-047"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "3x1 'T'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-a797a6fdbc060bff",
+      "name": "11 Gun 3x1 Rt #4",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-008"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "3x1 'T'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-d94e4a9289442b9c",
+      "name": "11 Gun 3x1 Lt #3",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-066"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "3x1 'T'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-b76dd08b1e1d3c45",
+      "name": "11 Gun 3x1 Rt #5",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-045"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "3x1 'T'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-d3b20873edee9519",
+      "name": "11 Gun 3x1 Rt #6",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-070"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "3x1 'T'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-450090f76b8a256d",
+      "name": "11 Gun 3x1 Rt #7",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-033"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "3x1 'T'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-5aabfda7527ca7ed",
+      "name": "11 Gun 3x1 Rt #8",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-057"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "3x1 'T'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-9ae738b3072c5a79",
+      "name": "11 Gun 3x1 Lt #4",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-062"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "3x1 'T'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-c74ac66cc1ca16ea",
+      "name": "11 Gun 3x1 Rt #9",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-009"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "3x1 'T'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-9e3fc250c58be466",
+      "name": "11 Gun 3x1 Lt #5",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-069"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "3x1 'T'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-ef091e3747f77789",
+      "name": "11 Pistol 3x1 Lt",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Middle": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-018"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "3x1 'T'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-d40fb6c2bab494ec",
+      "name": "11 UC 3x1 Lt",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-063"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "3x1 'T'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-4e0e2aa51b78ce3b",
+      "name": "11 UC 3x1 Rt",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-048"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "3x1 'T'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-fc7ba3329a0f2170",
+      "name": "11 UC 3x1 Rt #2",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-054"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "3x1 'T'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-ed264aea8129aeb8",
+      "name": "11 Gun Bunch Rt #2",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Middle": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-005"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "Bunch 'B'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-5f5d6c7bea61abb5",
+      "name": "11 Gun Empty Rt",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-067"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "Empty",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-f4e610232a0208d5",
+      "name": "11 Gun Empty Rt #2",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-044"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "Empty",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-6a8f314b7cd03bc1",
+      "name": "11 Gun Empty Lt #2",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-061"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "Empty",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-db5644a232378e38",
+      "name": "11 Gun Empty Lt #3",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-046"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "Empty",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-eac59d15f6f193d3",
+      "name": "11 Gun Empty Lt #4",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-031"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "Empty",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-6b0c07cb76cc1f01",
+      "name": "11 Gun Empty Rt #3",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-010"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "Empty",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-bb4b1a9c4562eac6",
+      "name": "11 Gun Empty Lt #5",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-041"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "Empty",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-68cadf51cb67fcc3",
+      "name": "12 Gun 2 Back Lt",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-036"
+      ],
+      "tags": [
+        "eagles-2026",
+        "12",
+        "2 Back",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-4814acdb33994391",
+      "name": "12 Gun 2x2 Rt",
+      "count": 1,
+      "exact": 0,
+      "template": 1,
+      "weeks": [
+        1
+      ],
+      "hashes": {
+        "Middle": 1
+      },
+      "source": "template",
+      "snapIds": [
+        "W1-024"
+      ],
+      "tags": [
+        "eagles-2026",
+        "12",
+        "2x2 'D'",
+        "W1",
+        "template, verify"
+      ]
+    },
+    {
+      "id": "snapform-1b20f6e3882cc9d5",
+      "name": "12 UC 2x2 Rt #2",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-060"
+      ],
+      "tags": [
+        "eagles-2026",
+        "12",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-382e40e74769f775",
+      "name": "12 UC 2x2 Lt #2",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-030"
+      ],
+      "tags": [
+        "eagles-2026",
+        "12",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-4695a91dda6051d7",
+      "name": "12 Gun 3x1 Rt",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Middle": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-002"
+      ],
+      "tags": [
+        "eagles-2026",
+        "12",
+        "3x1 'T'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-2f9918f258119fb8",
+      "name": "12 Pistol 3x1 Rt",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-021"
+      ],
+      "tags": [
+        "eagles-2026",
+        "12",
+        "3x1 'T'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-fe8a305c72621aa6",
+      "name": "12 UC 3x1 Lt #2",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Middle": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-022"
+      ],
+      "tags": [
+        "eagles-2026",
+        "12",
+        "3x1 'T'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-1893836f779a9d69",
+      "name": "12 UC 3x1 Lt #3",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-026"
+      ],
+      "tags": [
+        "eagles-2026",
+        "12",
+        "3x1 'T'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-58ff4dc8b1f851d6",
+      "name": "12 UC Big Lt",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-027"
+      ],
+      "tags": [
+        "eagles-2026",
+        "12",
+        "Big",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-40a6f898c7e2b2f2",
+      "name": "12 UC Big Rt",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-059"
+      ],
+      "tags": [
+        "eagles-2026",
+        "12",
+        "Big",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-3b2ab081508d5f47",
+      "name": "12 UC Big Rt #2",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-035"
+      ],
+      "tags": [
+        "eagles-2026",
+        "12",
+        "Big",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-aa13e7162b701c00",
+      "name": "13 UC Big",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Middle": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-025"
+      ],
+      "tags": [
+        "eagles-2026",
+        "13",
+        "Big",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-e9df24720773c754",
+      "name": "13 UC Big Lt",
+      "count": 1,
+      "exact": 0,
+      "template": 1,
+      "weeks": [
+        1
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "template",
+      "snapIds": [
+        "W1-012"
+      ],
+      "tags": [
+        "eagles-2026",
+        "13",
+        "Big",
+        "W1",
+        "template, verify"
+      ]
+    },
+    {
+      "id": "snapform-c691ec8d843bbcfb",
+      "name": "22 UC Big Rt",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-007"
+      ],
+      "tags": [
+        "eagles-2026",
+        "22",
+        "Big",
+        "W2"
+      ]
+    }
+  ],
+  "skipped": [],
+  "warnings": [
+    "W2-027: form family differs (chart Big, JSON 3x1 'T'); the chart wins",
+    "W2-035: form family differs (chart Big, JSON 3x1 'T'); the chart wins",
+    "No film template: default shape for 13 Big Under Center Lt (no W2 snap with this personnel, family, backfield and strength); used by W1-012",
+    "No film template: default shape for 11 2 Back Under Center Rt (no W2 snap with this personnel, family, backfield and strength); used by W1-017",
+    "No film template: default shape for 12 2x2 'D' Gun Rt (no W2 snap with this personnel, family, backfield and strength); used by W1-024"
+  ]
+}

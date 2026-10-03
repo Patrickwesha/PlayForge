@@ -159,6 +159,69 @@ export type Formation = {
   note?: string;
   confidence?: FormationConfidence;
   builtin?: boolean;
+  /** Formations deduped from charted snaps: the alignment signature they were keyed on (importers/snapChart). */
+  signature?: string;
+  /** How often this formation was charted; recomputed from the snaps table on every import. */
+  usage?: FormationUsage;
+  createdAt: string;
+  updatedAt: string;
+};
+
+export type FormationUsage = {
+  count: number;
+  snapIds: string[];
+  weeks: number[];
+  /** Distinct hashes the formation was snapped from (Left, Middle, Right). */
+  hashes: string[];
+  /** Snaps drawn from exact per-player alignment vs. from a template. */
+  exact: number;
+  template: number;
+};
+
+/** 'exact' = per-player alignment came from the film chart; 'template' = built from a formation template keyed on personnel + family + backfield + strength. */
+export type SnapSource = 'exact' | 'template';
+export type SnapHash = 'Left' | 'Middle' | 'Right';
+export type SnapStrength = 'Rt' | 'Lt';
+export type SnapBackfield = 'Under Center' | 'Gun' | 'Pistol';
+export type SnapCallType = 'run' | 'pass' | 'other';
+
+/**
+ * One charted offensive snap: the game situation and result, linked to the formation it was run from.
+ * Kept apart from Play on purpose: a snap is a fact from film, a play is a drawing.
+ */
+export type Snap = {
+  /** `${team}-${season}-${playId}`, e.g. "PHI-2026-W1-001". */
+  id: string;
+  /** The chart's own id, e.g. "W1-001". */
+  playId: string;
+  team: string;
+  season: number;
+  week: number;
+  quarter?: number;
+  down?: number;
+  distance?: number;
+  fieldZone?: string;
+  /** Undefined when the chart left it blank (drawn as Middle). */
+  hash?: SnapHash;
+  personnel: string;
+  formFamily: string;
+  strength?: SnapStrength;
+  backfield: SnapBackfield;
+  /** Backfield exactly as charted, e.g. "Gun, RB L". */
+  backfieldDetail?: string;
+  playType?: string;
+  callType: SnapCallType;
+  target?: string;
+  result?: string;
+  yards?: number;
+  motion?: string;
+  /** The "Set:" text from the chart notes: what was actually seen on film. */
+  set?: string;
+  notes?: string;
+  formationId: string;
+  /** True when the snap is the mirror image of its formation (mirror toggle merged Rt and Lt). */
+  mirrored: boolean;
+  source: SnapSource;
   createdAt: string;
   updatedAt: string;
 };
@@ -365,6 +428,8 @@ export type BackupV2 = {
   plays: Play[];
   playbooks: Playbook[];
   settings: Settings;
+  /** Charted snaps (absent in backups made before the snap import existed). */
+  snaps?: Snap[];
 };
 
 export const DEFAULT_SETTINGS: Settings = {

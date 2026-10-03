@@ -1,8 +1,9 @@
 import type { Table } from 'dexie';
-import type { BackupV2, Formation, Play, Playbook, Settings, Side } from '@/model/types';
+import type { BackupV2, Formation, FormationUsage, Play, Playbook, Settings, Side, Snap } from '@/model/types';
+import type { ImportPlan } from '@/importers/snapChart/plan';
 import { DEFAULT_SETTINGS } from '@/model/types';
 import { nowIso } from '@/model/ids';
-import { ITEM_KINDS, isUntouchedSeed, itemKey, type ItemKind } from '@/model/seedRules';
+import { ITEM_KINDS, SEED_TIME, isUntouchedSeed, itemKey, type ItemKind } from '@/model/seedRules';
 import { planPull } from '@/sync/merge';
 import { EMPTY_SYNC_STATE, type AppliedChange, type Entity, type OutboxRow, type RemoteRow, type SyncState, type TombstoneRow } from '@/sync/types';
 import { getDb, seedDatabase, type PlayForgeDB } from './db';
@@ -11,6 +12,33 @@ const tableFor = (db: PlayForgeDB, kind: ItemKind) =>
   (kind === 'formation' ? db.formations : kind === 'play' ? db.plays : db.playbooks) as unknown as Table<Entity, string>;
 
 const syncTables = (db: PlayForgeDB) => [db.formations, db.plays, db.playbooks, db.settings, db.outbox, db.tombstones];
+
+/** What a snap import wrote. */
+export type SnapImportReport = {
+  formationsAdded: number;
+  /** Formations that already existed: usage and tags refreshed, positions kept when the user had edited them. */
+  formationsMerged: number;
+  snapsAdded: number;
+  snapsUpdated: number;
+  /** Snaps whose formation was not selected. */
+  snapsSkipped: number;
+};
+
+/** Usage recomputed from the snaps table, so re-imports never double count. */
+export function usageFromSnaps(snaps: Snap[]): FormationUsage {
+  const ids = [...new Set(snaps.map((s) => s.playId))].sort();
+  return {
+    count: snaps.length,
+    snapIds: ids,
+    weeks: [...new Set(snaps.map((s) => s.week))].sort((a, b) => a - b),
+    hashes: [...new Set(snaps.map((s) => s.hash).filter((h): h is NonNullable<typeof h> => !!h))].sort(),
+    exact: snaps.filter((s) => s.source === 'exact').length,
+    template: snaps.filter((s) => s.source === 'template').length,
+  };
+}
+
+const TEMPLATE_VERIFY_TAG = 'template, verify';
+const WEEK_TAG = /^W\d+$/;
 
 /** Listeners told after any local save or delete, so sync can schedule a push. */
 const localChangeListeners = new Set<() => void>();
@@ -48,7 +76,7 @@ async function readSyncState(db: PlayForgeDB): Promise<SyncState> {
 }
 
 async function clearLibrary(db: PlayForgeDB) {
-  await Promise.all([db.formations.clear(), db.plays.clear(), db.playbooks.clear(), db.outbox.clear(), db.tombstones.clear(), db.settings.delete('sync')]);
+  await Promise.all([db.formations.clear(), db.plays.clear(), db.playbooks.clear(), db.snaps.clear(), db.outbox.clear(), db.tombstones.clear(), db.settings.delete('sync')]);
 }
 
 /** The only module that talks to Dexie. */
@@ -75,6 +103,61 @@ export const repo = {
   },
   deleteFormation(id: string) {
     return deleteTracked('formation', id);
+  },
+
+  // ---- snaps (charted snaps linked to formations; local only) ----
+  async listSnaps(): Promise<Snap[]> {
+    const rows = await getDb().snaps.toArray();
+    return rows.sort((a, b) => a.week - b.week || a.playId.localeCompare(b.playId));
+  },
+  snapsForFormation(formationId: string): Promise<Snap[]> {
+    return getDb().snaps.where('formationId').equals(formationId).toArray();
+  },
+  getSnap(id: string) {
+    return getDb().snaps.get(id);
+  },
+  /**
+   * Write an import plan (Formations > Import). Idempotent: formations are keyed on their alignment
+   * signature, snaps on their id, and usage is recomputed from the snaps table, so the same files twice
+   * change nothing. A formation the user edited keeps its players, name and note; only usage and tags move.
+   */
+  async applySnapImport(plan: ImportPlan, selectedFormationIds?: Iterable<string>): Promise<SnapImportReport> {
+    const db = getDb();
+    const selected = selectedFormationIds ? new Set(selectedFormationIds) : new Set(plan.formations.map((p) => p.formation.id));
+    const now = nowIso();
+    const report: SnapImportReport = { formationsAdded: 0, formationsMerged: 0, snapsAdded: 0, snapsUpdated: 0, snapsSkipped: 0 };
+    await db.transaction('rw', db.formations, db.snaps, db.outbox, db.tombstones, async () => {
+      for (const s of plan.snaps) {
+        if (!selected.has(s.formationId)) {
+          report.snapsSkipped += 1;
+          continue;
+        }
+        const existing = await db.snaps.get(s.id);
+        await db.snaps.put({ ...s, createdAt: existing?.createdAt ?? now, updatedAt: now });
+        if (existing) report.snapsUpdated += 1;
+        else report.snapsAdded += 1;
+      }
+      for (const p of plan.formations) {
+        if (!selected.has(p.formation.id)) continue;
+        const key = itemKey('formation', p.formation.id);
+        const existing = await db.formations.get(p.formation.id);
+        const usage = usageFromSnaps(await db.snaps.where('formationId').equals(p.formation.id).toArray());
+        const weekTags = usage.weeks.map((w) => `W${w}`);
+        const keepTags = (tags: string[]) => tags.filter((t) => t !== TEMPLATE_VERIFY_TAG && !WEEK_TAG.test(t));
+        const tags = [...new Set([...keepTags(existing?.tags ?? []), ...keepTags(p.formation.tags), ...weekTags, ...(usage.exact === 0 ? [TEMPLATE_VERIFY_TAG] : [])])];
+        const edited = existing && !existing.builtin && existing.updatedAt !== SEED_TIME;
+        const row: Formation = edited
+          ? { ...existing, tags, usage, signature: existing.signature ?? p.signature, updatedAt: now }
+          : { ...p.formation, tags, usage, confidence: usage.exact > 0 ? 'derived' : 'needs-review', builtin: false, createdAt: existing?.createdAt ?? now, updatedAt: now };
+        await db.formations.put(row);
+        await db.outbox.put({ key, kind: 'formation', id: row.id, op: 'put', at: row.updatedAt });
+        await db.tombstones.delete(key);
+        if (existing) report.formationsMerged += 1;
+        else report.formationsAdded += 1;
+      }
+    });
+    notifyLocalChange();
+    return report;
   },
 
   // ---- plays ----
@@ -123,13 +206,13 @@ export const repo = {
   // ---- backup ----
   async exportAll(): Promise<BackupV2> {
     const db = getDb();
-    const [formations, plays, playbooks, settings] = await Promise.all([db.formations.toArray(), db.plays.toArray(), db.playbooks.toArray(), repo.getSettings()]);
-    return { app: 'playforge', version: 2, exportedAt: nowIso(), formations, plays, playbooks, settings };
+    const [formations, plays, playbooks, snaps, settings] = await Promise.all([db.formations.toArray(), db.plays.toArray(), db.playbooks.toArray(), db.snaps.toArray(), repo.getSettings()]);
+    return { app: 'playforge', version: 2, exportedAt: nowIso(), formations, plays, playbooks, settings, snaps };
   },
   /** Replace starts this device over, so the UI only allows it while signed out of sync. */
-  async importAll(data: Pick<BackupV2, 'formations' | 'plays' | 'playbooks'> & { settings?: Settings }, mode: 'merge' | 'replace') {
+  async importAll(data: Pick<BackupV2, 'formations' | 'plays' | 'playbooks'> & { settings?: Settings; snaps?: Snap[] }, mode: 'merge' | 'replace') {
     const db = getDb();
-    await db.transaction('rw', syncTables(db), async () => {
+    await db.transaction('rw', [...syncTables(db), db.snaps], async () => {
       if (mode === 'replace') await clearLibrary(db);
       const now = nowIso();
       const groups: [ItemKind, Entity[]][] = [
@@ -149,6 +232,7 @@ export const repo = {
         }
       }
       if (data.settings) await db.settings.put({ key: 'settings', value: data.settings });
+      if (data.snaps?.length) await db.snaps.bulkPut(data.snaps);
     });
     notifyLocalChange();
   },
@@ -162,8 +246,8 @@ export const repo = {
   },
   async counts() {
     const db = getDb();
-    const [formations, plays, playbooks] = await Promise.all([db.formations.count(), db.plays.count(), db.playbooks.count()]);
-    return { formations, plays, playbooks };
+    const [formations, plays, playbooks, snaps] = await Promise.all([db.formations.count(), db.plays.count(), db.playbooks.count(), db.snaps.count()]);
+    return { formations, plays, playbooks, snaps };
   },
 
   // ---- cloud sync bookkeeping: the engine in src/sync reaches the library only through this ----
