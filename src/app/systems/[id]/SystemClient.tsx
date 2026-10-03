@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import { useMemo, useState, type ReactNode } from 'react';
+import { useLiveQuery } from 'dexie-react-hooks';
+import { repo } from '@/store/repo';
 import { FORMATION_FIT } from '@/geometry/bounds';
 import { PlayThumb } from '@/render/PlayThumb';
 import { EAGLES_2026_FORMATIONS, EAGLES_2026_SNAPS } from '@/seeds/eagles2026';
@@ -76,24 +78,30 @@ function TermCard({ t }: { t: Term }) {
 
 /** This season's charted snaps, counted by formation word. */
 function useSeason() {
+  // the library on this device once it has loaded (so a new week's import shows up), the seeds until then
+  const live = useLiveQuery(async () => ({ formations: await repo.listFormations('offense'), snaps: await repo.listSnaps() }), []);
   return useMemo(() => {
+    const formations = live ? live.formations.filter((f) => f.system) : EAGLES_2026_FORMATIONS;
+    const snaps = live ? live.snaps : EAGLES_2026_SNAPS;
+    const used = new Map<string, number>();
+    for (const s of snaps) used.set(s.formationId, (used.get(s.formationId) ?? 0) + 1);
     const byWord = new Map<string, { snaps: number; names: Set<string> }>();
-    for (const f of EAGLES_2026_FORMATIONS) {
+    for (const f of formations) {
       const word = f.system?.base ?? 'Unnamed';
       const row = byWord.get(word) ?? { snaps: 0, names: new Set<string>() };
-      row.snaps += f.usage?.count ?? 0;
-      row.names.add(f.name.replace(/ #\d+$/, ''));
+      row.snaps += used.get(f.id) ?? f.usage?.count ?? 0;
+      row.names.add(f.name.replace(/ #[0-9]+$/, ''));
       byWord.set(word, row);
     }
     const motions = new Map<string, number>();
-    for (const s of EAGLES_2026_SNAPS) if (s.motionCall) motions.set(s.motionCall, (motions.get(s.motionCall) ?? 0) + 1);
+    for (const s of snaps) if (s.motionCall) motions.set(s.motionCall, (motions.get(s.motionCall) ?? 0) + 1);
     return {
       words: [...byWord].sort((a, b) => b[1].snaps - a[1].snaps),
       motions: [...motions].sort((a, b) => b[1] - a[1]),
-      snaps: EAGLES_2026_SNAPS.length,
-      weeks: [...new Set(EAGLES_2026_SNAPS.map((s) => s.week))].sort((a, b) => a - b),
+      snaps: snaps.length,
+      weeks: [...new Set(snaps.map((s) => s.week))].sort((a, b) => a - b),
     };
-  }, []);
+  }, [live]);
 }
 
 function buildSections(): Section[] {
@@ -193,7 +201,7 @@ const hit = (t: Term, q: string) => `${t.term} ${t.means} ${t.onFilm ?? ''} ${t.
 export function SystemClient() {
   const [q, setQ] = useState('');
   const season = useSeason();
-  const sections = useMemo(buildSections, []);
+  const sections = useMemo(() => buildSections(), []);
   const needle = q.trim().toLowerCase();
   const shown = useMemo(
     () =>
@@ -215,6 +223,13 @@ export function SystemClient() {
               <li>
                 <a className="hover:underline" href="#overview">
                   Overview
+                </a>
+              </li>
+            )}
+            {!needle && (
+              <li>
+                <a className="hover:underline font-semibold" href="#flow">
+                  Day-after film flow
                 </a>
               </li>
             )}
@@ -263,6 +278,39 @@ export function SystemClient() {
                       <span className="font-semibold">When charting: </span>
                       {p.chart}
                     </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {!needle && (
+            <section id="flow" className="space-y-3 scroll-mt-4">
+              <h2 className="text-xl font-bold border-b border-neutral-400 pb-1">Day-after film flow</h2>
+              <p className="text-sm">{core.workflow.means}</p>
+              <ul className="text-sm list-disc pl-5">
+                {core.workflow.rules.map((r) => (
+                  <li key={r}>{r}</li>
+                ))}
+              </ul>
+              <div className="space-y-2">
+                {core.workflow.passes.map((p) => (
+                  <div key={p.n} className="border border-neutral-300 bg-white rounded p-3 break-inside-avoid">
+                    <div className="flex flex-wrap items-baseline gap-x-3">
+                      <span className="font-bold">
+                        {p.n}. {p.title}
+                      </span>
+                      <span className="text-xs text-neutral-500">{p.time}</span>
+                      <span className="text-sm italic">{p.question}</span>
+                    </div>
+                    <ul className="mt-1.5 space-y-1 text-sm">
+                      {p.steps.map((st) => (
+                        <li key={st} className="flex gap-2">
+                          <span className="mt-1 h-3 w-3 shrink-0 border border-neutral-500 rounded-sm" aria-hidden />
+                          <span>{st}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 ))}
               </div>
