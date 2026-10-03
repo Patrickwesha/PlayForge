@@ -100,6 +100,7 @@ export const formationSchema = z.object({
       template: z.number().int().nonnegative(),
     })
     .optional(),
+  alias: z.string().optional(),
   chartName: z.string().optional(),
   system: z
     .object({

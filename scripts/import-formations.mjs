@@ -152,7 +152,7 @@ const byKey = new Map(formations.map((f, i) => [f.key, i]));
 let replaced = 0;
 let added = 0;
 for (const o of overlay) {
-  const entry = { key: o.key, name: o.name, personnel: o.personnel, family: o.family, strength: o.strength, qbAlignment: o.qbAlignment, sourcePage: o.sourcePage, source: 'Rams 2022 (McVay), general section', confidence: o.confidence, note: o.note, players: o.players };
+  const entry = { key: o.key, name: o.name, personnel: o.personnel, family: o.family, strength: o.strength, qbAlignment: o.qbAlignment, sourcePage: o.sourcePage, source: 'Rams 2022 (McVay), general section', confidence: o.confidence, note: o.note, alias: o.ramsName.replace(/\[[^\]]*\]\s*/g, '').trim(), players: o.players };
   const i = byKey.get(o.key);
   if (i === undefined) {
     formations.push(entry);
@@ -162,6 +162,7 @@ for (const o of overlay) {
     replaced++;
   }
 }
+for (const f of formations) if (!f.source) f.only = 'Green Bay only';
 console.log(`Rams 2022 overlay: ${replaced} replaced, ${added} added, ${formations.length - replaced - added} Green Bay only`);
 
 const constants = {

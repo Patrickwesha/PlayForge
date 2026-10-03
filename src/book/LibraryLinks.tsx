@@ -22,6 +22,11 @@ type LibState = {
 };
 
 const isBookPlay = (p: Play) => p.id.startsWith('gb19-');
+/**
+ * Formations cut out of the scanned book (not the PlayForge pack). Many were completed by guess where
+ * the scan was cut off, so they are no longer added to the library; plays carry their own players.
+ */
+const isBookFormation = (f: Formation) => f.id.startsWith('gb19-f-');
 
 /** The book's plays in this device's PlayForge library (one read for the whole page, refreshed after a sync). */
 const useLib = create<LibState>((set) => ({
@@ -43,7 +48,7 @@ const editedAfter = (p: Play | undefined, built: string) => !!p && p.updatedAt >
  * newer build (keeping every play you edited), and save your edits back into the book for the next build / PDF.
  */
 export function LibraryBar({ bookId, libraryUrl, built, canSaveEdits = true, compact = false }: { bookId: string; libraryUrl: string; built: string; canSaveEdits?: boolean; compact?: boolean }) {
-  const { loaded, hasPlaybook, plays, refresh } = useLib();
+  const { loaded, hasPlaybook, plays, formations, refresh } = useLib();
   const [busy, setBusy] = useState<string | null>(null);
   const [msg, setMsg] = useState<string | null>(null);
   useEffect(() => {
@@ -52,6 +57,8 @@ export function LibraryBar({ bookId, libraryUrl, built, canSaveEdits = true, com
   }, [bookId, refresh]);
 
   const edited = [...plays.values()].filter((p) => editedAfter(p, built));
+  // book formations still in the library that were never edited (an edit moves updatedAt past the build)
+  const staleFormations = [...formations.values()].filter((f) => isBookFormation(f) && !(f.updatedAt > built));
 
   const add = async () => {
     setBusy('add');
@@ -64,13 +71,28 @@ export function LibraryBar({ bookId, libraryUrl, built, canSaveEdits = true, com
       const newerPlay = new Map(myPlays.map((p) => [p.id, p.updatedAt]));
       const newerForm = new Map(myFormations.map((f) => [f.id, f.updatedAt]));
       const keepPlays = parsed.data.plays.filter((p) => !((newerPlay.get(p.id) ?? '') > p.updatedAt));
-      const keepForms = parsed.data.formations.filter((f) => !((newerForm.get(f.id) ?? '') > f.updatedAt));
+      const keepForms = parsed.data.formations.filter((f) => !isBookFormation(f) && !((newerForm.get(f.id) ?? '') > f.updatedAt));
       await repo.importAll({ ...parsed.data, plays: keepPlays, formations: keepForms }, 'merge');
       await refresh(bookId);
-      const kept = parsed.data.plays.length - keepPlays.length + (parsed.data.formations.length - keepForms.length);
+      const kept = parsed.data.plays.length - keepPlays.length + parsed.data.formations.filter((f) => !isBookFormation(f)).length - keepForms.length;
       setMsg(`Added ${keepPlays.length} plays and ${keepForms.length} formations${kept ? `; kept ${kept} you had edited` : ''}.`);
     } catch (e) {
       setMsg(`Could not add the playbook: ${(e as Error).message}`);
+    } finally {
+      setBusy(null);
+    }
+  };
+
+  const removeBookFormations = async () => {
+    if (!confirm(`Remove ${staleFormations.length} formations that came from the scanned book and that you have not edited? Plays keep their own players. Formations you edited stay. This syncs to your other devices.`)) return;
+    setBusy('remove');
+    setMsg(null);
+    try {
+      for (const f of staleFormations) await repo.deleteFormation(f.id);
+      await refresh(bookId);
+      setMsg(`Removed ${staleFormations.length} book formations.`);
+    } catch (e) {
+      setMsg(`Could not remove them: ${(e as Error).message}`);
     } finally {
       setBusy(null);
     }
@@ -119,6 +141,11 @@ export function LibraryBar({ bookId, libraryUrl, built, canSaveEdits = true, com
           </button>
         </>
       )}
+      {staleFormations.length > 0 && (
+        <button type="button" className="bk-btn" onClick={removeBookFormations} disabled={!!busy} title="Formations cut from the scanned book, many completed by guess. Plays keep their own players; formations you edited stay.">
+          {busy === 'remove' ? 'Removing…' : `Remove ${staleFormations.length} book formations I have not edited`}
+        </button>
+      )}
       {msg && <span style={{ color: 'var(--bk-muted)' }}>{msg}</span>}
     </div>
   );
@@ -153,7 +180,7 @@ export function PlayLink({ id, bookId, formationId }: { id: string; bookId: stri
       const res = await fetch(`/api/book/${bookId}/play/${id}`, { cache: 'no-store' });
       if (!res.ok) throw new Error(res.status === 401 ? 'locked' : res.statusText);
       const { play, formation } = (await res.json()) as { play: Play; formation: Formation | null };
-      await repo.importAll({ plays: [play], formations: formation ? [formation] : [], playbooks: [] }, 'merge');
+      await repo.importAll({ plays: [play], formations: formation && !isBookFormation(formation) ? [formation] : [], playbooks: [] }, 'merge');
       await refresh(bookId);
       router.push(`/plays/${id}`);
     } catch (e) {

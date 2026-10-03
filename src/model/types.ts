@@ -163,6 +163,8 @@ export type Formation = {
   signature?: string;
   /** How often this formation was charted; recomputed from the snaps table on every import. */
   usage?: FormationUsage;
+  /** Another book's word for the same picture (the Rams 2022 name). Searchable, not shown as the name. */
+  alias?: string;
   /** The chart's own name ("11 Gun 2x2 Rt") when `name` is a system call. */
   chartName?: string;
   /** The system call the name was built from (systems/eagles/nameFormation). */

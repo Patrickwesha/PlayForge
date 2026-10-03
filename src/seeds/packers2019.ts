@@ -19,6 +19,10 @@ type PackEntry = {
   sourcePage: number;
   /** Set when the alignment is not from the Green Bay book (the Rams 2022 diagrams). */
   source?: string;
+  /** The Rams 2022 word for the same picture. Searchable, never shown as the name. */
+  alias?: string;
+  /** "Green Bay only": the Rams book has no drawing for it. */
+  only?: string;
   confidence: FormationConfidence;
   note?: string;
   players: { spot: Spot; x: number; y: number }[];
@@ -61,7 +65,8 @@ function toFormation(e: PackEntry): Formation {
     personnel: e.personnel,
     playersPerSide: 11,
     players,
-    tags: [PACKERS_2019_TAG, e.personnel],
+    tags: [PACKERS_2019_TAG, e.personnel, ...(e.only ? [e.only] : [])],
+    ...(e.alias ? { alias: e.alias } : {}),
     family: e.family,
     strength: e.strength,
     qbAlignment: e.qbAlignment,

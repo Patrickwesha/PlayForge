@@ -14,7 +14,7 @@ The diagrams are not to scale, so positions are read as PICTURES, not measured:
   - backs: I (0, -5 and -7.5), offset behind a tackle (2, -5), halfback deep at 7.5
 Names: the Rams word is replaced by the system word when the picture is the same (Double -> Dice,
 Solo -> Deuce, Tout -> Open, Open -> Out, Clout -> Click ...). A Rams word whose system word already
-means a different picture keeps its Rams name with "(LA)".
+means a different picture (Rams Trout, Rams Buddy) is left out: on film it is the same picture as Trips Open and Buddy.
 """
 import json
 import re
@@ -26,21 +26,22 @@ BASE = {
     "SPEED": "Fast", "SPRINT": "Fit", "FAST": "Foot",
     "SPEED PACK": "Crip", "SPRINT PACK": "Crack", "FAST PACK": "Crush", "SWIFT PACK": "Cruz",
     "TRIO": "Trout", "TRICK": "Trio", "BOX": "Bin", "BIO": "Buddy",
-    "TROUT": "Trout (LA)", "BUDDY": "Buddy (LA)",
 }
 VAR = {"TITE": "Tight", "TITER": "Tighter", "TIGHTER": "Tighter", "SLIM": "Hip", "SLOPE": "Hop", "TOUT": "Open", "OPEN": "Out", "CLOUT": "Click",
        "UNO": "G", "DOS": "E", "TRES": "D", "RIGHT": "Rt"}
 FAMILY = {
     "I": "2 Back", "Strong": "2 Back", "Weak": "2 Back", "Red": "2 Back",
-    "West": "3x1 'T'", "East": "3x1 'T'", "Trips": "3x1 'T'", "Troff": "3x1 'T'", "Trout": "3x1 'T'", "Trout (LA)": "3x1 'T'", "Train": "3x1 'T'", "Trio": "3x1 'T'", "Trey": "3x1 'T'", "Treat": "3x1 'T'",
+    "West": "3x1 'T'", "East": "3x1 'T'", "Trips": "3x1 'T'", "Troff": "3x1 'T'", "Trout": "3x1 'T'", "Train": "3x1 'T'", "Trio": "3x1 'T'", "Trey": "3x1 'T'", "Treat": "3x1 'T'",
     "Jinx": "3x1 'T'", "Jiggy": "3x1 'T'", "Jam": "3x1 'T'", "Jay": "3x1 'T'", "Jock": "3x1 'T'", "Jolt": "3x1 'T'",
-    "Bunch": "Bunch 'B'", "Bin": "Bunch 'B'", "Buddy": "Bunch 'B'", "Buddy (LA)": "Bunch 'B'", "Bundle": "Bunch 'B'", "Bowl": "Bunch 'B'",
+    "Bunch": "Bunch 'B'", "Bin": "Bunch 'B'", "Buddy": "Bunch 'B'", "Bundle": "Bunch 'B'", "Bowl": "Bunch 'B'",
     "Deuce": "2x2 'D'", "Dice": "2x2 'D'", "Dixie": "2x2 'D'", "Dyno": "2x2 'D'",
     "Stack": "2x2 Stack 'S'", "South": "2x2 Stack 'S'", "Sink": "2x2 Stack 'S'", "Snug": "2x2 Stack 'S'",
     "Fast": "1x3 'F'", "Fit": "1x3 'F'", "Foot": "1x3 'F'", "Swift": "1x3 'F'", "Scoot": "1x3 'F'", "Fleet": "1x3 'F'",
     "Crip": "1x3 Bunch 'CR'", "Crack": "1x3 Bunch 'CR'", "Crush": "1x3 Bunch 'CR'", "Cruz": "1x3 Bunch 'CR'",
 }
 TWELVE = {"West", "East", "Deuce"}
+# Rams words whose system word already names a different picture; same picture on film as the note says
+LEFT_OUT = {"TROUT": "Trips Open", "BUDDY": "Buddy"}
 TOUCH = 1.12  # line splits: closer than this = touching the next man
 ATTACHED = 3.35  # first man this close to the center is attached to the tackle
 
@@ -68,6 +69,8 @@ def parse_title(title, page):
     while len(base_words) > 1 and base_words[-1] not in ("PACK",):
         extra.insert(0, base_words.pop())
     rams_base = " ".join(base_words)
+    if rams_base in LEFT_OUT:
+        return {"leftOut": f"Rams {title_case(rams_base)} is left out: its system word is taken, and on film it is the same picture as {LEFT_OUT[rams_base]}"}
     base = BASE.get(rams_base, " ".join(title_case(w) for w in base_words))
     mods = [VAR.get(w, "Numbers" if w.startswith("#") else title_case(w)) for w in extra + mods]
     if "Pack" in base and base not in FAMILY:  # Jinx Pack, Scoot Pack ...
@@ -154,6 +157,8 @@ def build(cell):
     info = parse_title(cell["title"], cell["page"])
     if not info:
         return None, "no formation name"
+    if "leftOut" in info:
+        return None, info["leftOut"]
     seen, dup = {}, False
     for p in cell["players"]:
         if p["spot"] in ("Q",):
