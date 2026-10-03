@@ -11,6 +11,7 @@ import { flipFormationPlayers, flipName } from '@/geometry/flip';
 import { FORMATION_FIT } from '@/geometry/bounds';
 import { PlayThumb } from '@/render/PlayThumb';
 import { buildPlayers, ol } from '@/seeds/builders';
+import { PlaybookChip, PlaybookFilter, matchesPlaybook, usePlaybookMembership, type PlaybookFilterValue } from '@/components/PlaybookFilter';
 
 const btn = 'text-xs px-2 py-1 rounded border border-neutral-300 bg-white hover:border-black';
 
@@ -21,7 +22,9 @@ export function FormationsClient() {
   const [family, setFamily] = useState('');
   const [reviewOnly, setReviewOnly] = useState(false);
   const [sort, setSort] = useState<'name' | 'usage'>('name');
+  const [book, setBook] = useState<PlaybookFilterValue>('');
   const formations = useLiveQuery(() => repo.listFormations(side), [side]);
+  const { playbooks, memberOf } = usePlaybookMembership('formations');
   const snaps = useLiveQuery(() => repo.listSnaps(), []);
   const snapsByFormation = useMemo(() => {
     const m = new Map<string, Snap[]>();
@@ -36,12 +39,13 @@ export function FormationsClient() {
       (f) =>
         (!family || f.family === family) &&
         (!reviewOnly || f.confidence === 'needs-review') &&
+        matchesPlaybook(book, f.id, memberOf) &&
         `${f.name} ${f.personnel ?? ''} ${f.tags.join(' ')} ${f.family ?? ''} ${f.confidence ?? ''} ${f.note ?? ''} ${f.usage?.snapIds.join(' ') ?? ''}`.toLowerCase().includes(q.toLowerCase()),
     );
     if (sort === 'usage') rows.sort((a, b) => usageOf(b) - usageOf(a) || a.name.localeCompare(b.name));
     return rows;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [formations, q, family, reviewOnly, sort, snapsByFormation]);
+  }, [formations, q, family, reviewOnly, sort, snapsByFormation, book, memberOf]);
   const hasUsage = (formations ?? []).some((f) => usageOf(f) > 0);
 
   const create = async () => {
@@ -93,6 +97,7 @@ export function FormationsClient() {
             ))}
           </select>
         )}
+        <PlaybookFilter className="border border-neutral-300 rounded px-2 py-1 text-sm bg-white" value={book} onChange={setBook} playbooks={playbooks} kind="formations" itemIds={(formations ?? []).map((f) => f.id)} memberOf={memberOf} />
         {reviewCount > 0 && (
           <label className="flex items-center gap-1.5 text-sm select-none">
             <input type="checkbox" checked={reviewOnly} onChange={(e) => setReviewOnly(e.target.checked)} />
@@ -123,9 +128,10 @@ export function FormationsClient() {
                 {f.name}
                 {f.playersPerSide !== 11 && <span className="ml-1 text-neutral-400">({f.playersPerSide})</span>}
               </div>
-              {(f.family || f.confidence === 'needs-review' || usageOf(f) > 0) && (
+              {(f.family || f.confidence === 'needs-review' || usageOf(f) > 0 || memberOf.has(f.id)) && (
                 <div className="flex items-center gap-1.5 px-2 py-0.5 border-b text-[11px] text-neutral-600">
                   <span className="truncate">{f.family}</span>
+                  <PlaybookChip books={memberOf.get(f.id)} />
                   {f.sourcePage && <span className="text-neutral-400">p.{f.sourcePage}</span>}
                   {usageOf(f) > 0 && (
                     <span className="shrink-0 rounded bg-black text-white px-1 font-semibold" title={`${usageOf(f)} charted snaps: ${(snapsByFormation.get(f.id)?.map((s) => s.playId) ?? f.usage?.snapIds ?? []).join(', ')}`}>

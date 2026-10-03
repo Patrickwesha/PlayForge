@@ -11,6 +11,7 @@ import { flipDiagram, flipName } from '@/geometry/flip';
 import { CanBadge } from '@/components/CanBadge';
 import { PlayThumb } from '@/render/PlayThumb';
 import { FormationPicker } from '@/editor/FormationPicker';
+import { PlaybookChip, PlaybookFilter, matchesPlaybook, usePlaybookMembership, type PlaybookFilterValue } from '@/components/PlaybookFilter';
 
 const btn = 'text-xs px-2 py-1 rounded border border-neutral-300 bg-white hover:border-black';
 const CATS: (PlayCategory | 'All')[] = ['All', 'Run', 'Pass', 'PA', 'Screen', 'Special'];
@@ -21,13 +22,18 @@ export function PlaysClient() {
   const [cat, setCat] = useState<PlayCategory | 'All'>('All');
   const [picker, setPicker] = useState<null | 'offense' | 'defense'>(null);
   const [pendingOffense, setPendingOffense] = useState<Formation | null>(null);
+  const [book, setBook] = useState<PlaybookFilterValue>('');
   const plays = useLiveQuery(() => repo.listPlays(), []);
+  const { playbooks, memberOf } = usePlaybookMembership('plays');
   const list = useMemo(
     () =>
       (plays ?? []).filter(
-        (p) => (cat === 'All' || p.category === cat) && `${p.name} ${p.formationLabel ?? ''} ${p.personnel ?? ''} ${p.tags.join(' ')} ${playDefenseLabel(p)}`.toLowerCase().includes(q.toLowerCase()),
+        (p) =>
+          (cat === 'All' || p.category === cat) &&
+          matchesPlaybook(book, p.id, memberOf) &&
+          `${p.name} ${p.formationLabel ?? ''} ${p.personnel ?? ''} ${p.tags.join(' ')} ${playDefenseLabel(p)}`.toLowerCase().includes(q.toLowerCase()),
       ),
-    [plays, q, cat],
+    [plays, q, cat, book, memberOf],
   );
 
   const createWith = async (offense: Formation | null, defense: Formation | null) => {
@@ -61,6 +67,7 @@ export function PlaysClient() {
           ))}
         </div>
         <input className="border border-neutral-300 rounded px-2 py-1 text-sm w-56" placeholder="Search" value={q} onChange={(e) => setQ(e.target.value)} />
+        <PlaybookFilter className="border border-neutral-300 rounded px-2 py-1 text-sm bg-white" value={book} onChange={setBook} playbooks={playbooks} kind="plays" itemIds={(plays ?? []).filter((p) => cat === 'All' || p.category === cat).map((p) => p.id)} memberOf={memberOf} />
         <div className="ml-auto flex gap-2">
           <Link href={`/print?plays=${list.map((p) => p.id).join(',')}&layout=6up&title=${encodeURIComponent(cat === 'All' ? 'PLAYS' : cat.toUpperCase() + ' PLAYS')}`} className={btn}>
             Print these ({list.length})
@@ -86,6 +93,7 @@ export function PlaysClient() {
             </Link>
             <div className="flex items-center gap-1 p-1.5 border-t border-neutral-200 text-xs">
               <span className="px-1.5 py-0.5 rounded bg-neutral-100">{p.category}</span>
+              <PlaybookChip books={memberOf.get(p.id)} />
               <span className="text-neutral-500 truncate">{playDefenseLabel(p)}</span>
               <span className="ml-auto" />
               <button className={btn} onClick={() => void dup(p)}>Dup</button>
