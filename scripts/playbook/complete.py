@@ -199,6 +199,10 @@ class Completion:
                     sgn = -self.strong_side() if not (self.cut_left or self.cut_right) else side
                 spot = (abs(dx) * sgn if letter in ("X", "Z") else dx * sgn, dy + row, "default spot for the letter (cut off / not visible in the drawing)")
             x, y, why = spot
+            # the drawing compresses the field: a guessed man stands no wider than the widest man drawn
+            widest = max([abs(p["x"]) for p in self.players("offense") if abs(p["x"]) > 4] + [0])
+            if widest and abs(x) > widest + 1.5:
+                x = (widest + 1.5) * (1 if x > 0 else -1)
             # a ring the tracer found but could not read, near where he belongs, IS him
             near = sorted(self.unexplained(), key=lambda p: math.hypot(p["x"] - x, p["y"] - y))
             if near and math.hypot(near[0]["x"] - x, near[0]["y"] - y) < 5.0:
@@ -268,6 +272,16 @@ class Completion:
                 x += 1.5 * (1 if x >= 0 else -1)
             self.add("defense", letter if letter != "NW" else "Nw", x, y, symbol="letter", why=why, color=colour[0][0] if colour else None)
 
+    def drop_stubs(self):
+        """Unattached line bits with no marker and little length: leftovers of a cut ring's arc or a letter."""
+        for pid, q in list(self.d["paths"].items()):
+            if q["anchor"]["kind"] != "free" or q.get("end") not in (None, "none"):
+                continue
+            pts = q["points"]
+            L = sum(math.hypot(b["x"] - a["x"], b["y"] - a["y"]) for a, b in zip(pts, pts[1:]))
+            if L < 2.2:
+                del self.d["paths"][pid]
+
     def run(self):
         rings = [norm_ring(r) for r in self.t.get("rings") or []]
         skill = [r for r in rings if r and r not in OL_LABELS and r not in QB_LABELS]
@@ -275,6 +289,7 @@ class Completion:
         expected = len(skill) + max(len(qb), 1) + 5  # the quarterback's ring is drawn even when it carries no letter
         if self.page_type not in FORMATION_PAGES:
             return self.d, self.guesses
+        self.drop_stubs()
         self.complete_offense()
         self.prune_strays(expected)
         self.complete_line()

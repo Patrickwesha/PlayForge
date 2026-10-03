@@ -38,7 +38,10 @@ export function ReaderChrome({
   counts,
   children,
   hasScans = true,
+  tools,
 }: {
+  /** Rendered in the sidebar under the find box (the library bar). */
+  tools?: ReactNode;
   book: { id: string; title: string; sections: BookSection[]; pageCount: number };
   hasScans?: boolean;
   counts: { high: number; medium: number; low: number; scan: number };
@@ -134,6 +137,7 @@ export function ReaderChrome({
               </button>
             </div>
             <BookFind main={mainRef} />
+            {tools}
           </div>
           <nav className="bk-toc">
             {book.sections.map((s) => (

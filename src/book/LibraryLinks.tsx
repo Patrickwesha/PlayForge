@@ -2,10 +2,11 @@
 
 import { useEffect, useState, type ReactNode } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { create } from 'zustand';
 import { parseBackup } from '@/io/backup';
 import { repo } from '@/store/repo';
-import type { Diagram, Play, ViewWindow } from '@/model/types';
+import type { Diagram, Formation, Play, ViewWindow } from '@/model/types';
 import { PlaySvg } from '@/render/PlaySvg';
 import { BOOK_RENDER_THEME } from '@/render/theme';
 import { onApplied } from '@/sync/events';
@@ -38,7 +39,7 @@ const editedAfter = (p: Play | undefined, built: string) => !!p && p.updatedAt >
  * Banner: add the book's formations, plays and the "Green Bay 2019" playbook to the library, update them from a
  * newer build (keeping every play you edited), and save your edits back into the book for the next build / PDF.
  */
-export function LibraryBar({ bookId, libraryUrl, built, canSaveEdits = true }: { bookId: string; libraryUrl: string; built: string; canSaveEdits?: boolean }) {
+export function LibraryBar({ bookId, libraryUrl, built, canSaveEdits = true, compact = false }: { bookId: string; libraryUrl: string; built: string; canSaveEdits?: boolean; compact?: boolean }) {
   const { loaded, hasPlaybook, plays, refresh } = useLib();
   const [busy, setBusy] = useState<string | null>(null);
   const [msg, setMsg] = useState<string | null>(null);
@@ -89,12 +90,11 @@ export function LibraryBar({ bookId, libraryUrl, built, canSaveEdits = true }: {
 
   if (!loaded) return null;
   return (
-    <div className="no-print" style={{ maxWidth: '62rem', margin: '0 auto 1rem', display: 'flex', gap: '0.6rem', alignItems: 'center', flexWrap: 'wrap', fontSize: '0.85rem' }}>
+    <div className="no-print bk-libbar" style={compact ? { marginTop: '0.6rem', display: 'flex', gap: '0.4rem', flexWrap: 'wrap', fontSize: '0.78rem' } : { maxWidth: '62rem', margin: '0 auto 1rem', display: 'flex', gap: '0.6rem', alignItems: 'center', flexWrap: 'wrap', fontSize: '0.85rem' }}>
       {hasPlaybook ? (
         <>
-          <span>
-            In your library: {plays.size} plays in the <strong>Green Bay 2019</strong> playbook{edited.length ? `, ${edited.length} edited by you` : ''}. Every diagram
-            below has an Edit link.
+          <span style={{ width: '100%' }}>
+            {plays.size} of the book&apos;s plays in your library{edited.length ? `, ${edited.length} edited by you` : ''}. Edit on any diagram opens it in the editor.
           </span>
           <Link className="bk-btn" href={`/playbooks/${bookId}`}>
             Open the playbook
@@ -110,9 +110,9 @@ export function LibraryBar({ bookId, libraryUrl, built, canSaveEdits = true }: {
         </>
       ) : (
         <>
-          <span>Add every diagram as a PlayForge play (editable), and the book as the Green Bay 2019 playbook.</span>
+          <span style={{ width: '100%' }}>Edit on any diagram opens it in the editor. Or add all 2,030 at once as the Green Bay 2019 playbook:</span>
           <button type="button" className="bk-btn" onClick={add} disabled={!!busy}>
-            {busy === 'add' ? 'Adding…' : 'Add to my library'}
+            {busy === 'add' ? 'Adding…' : 'Add the whole playbook'}
           </button>
         </>
       )}
@@ -121,14 +121,40 @@ export function LibraryBar({ bookId, libraryUrl, built, canSaveEdits = true }: {
   );
 }
 
-/** "Edit" link to the play editor, shown once the play is in the library. */
-export function PlayLink({ id }: { id: string }) {
+/**
+ * "Edit" on every cell. A play already in the library opens in the editor; one that is not yet is pulled in
+ * from the book first (that play and its formation only), then opened.
+ */
+export function PlayLink({ id, bookId }: { id: string; bookId: string }) {
+  const router = useRouter();
   const has = useLib((s) => s.plays.has(id));
-  if (!has) return null;
+  const refresh = useLib((s) => s.refresh);
+  const [busy, setBusy] = useState(false);
+  const style = { color: 'inherit', fontSize: '0.7rem', fontWeight: 700 } as const;
+  if (has)
+    return (
+      <Link className="no-print bk-edit" href={`/plays/${id}`} style={style} title="Open in the play editor">
+        Edit
+      </Link>
+    );
+  const pull = async () => {
+    setBusy(true);
+    try {
+      const res = await fetch(`/api/book/${bookId}/play/${id}`, { cache: 'no-store' });
+      if (!res.ok) throw new Error(res.status === 401 ? 'locked' : res.statusText);
+      const { play, formation } = (await res.json()) as { play: Play; formation: Formation | null };
+      await repo.importAll({ plays: [play], formations: formation ? [formation] : [], playbooks: [] }, 'merge');
+      await refresh(bookId);
+      router.push(`/plays/${id}`);
+    } catch (e) {
+      alert(`Could not open this play for editing: ${(e as Error).message}`);
+      setBusy(false);
+    }
+  };
   return (
-    <Link className="no-print bk-edit" href={`/plays/${id}`} style={{ color: 'inherit', fontSize: '0.7rem', fontWeight: 700 }} title="Open in the play editor">
-      Edit
-    </Link>
+    <button type="button" className="no-print bk-edit" style={{ ...style, background: 'none', cursor: 'pointer' }} onClick={pull} disabled={busy} title="Add this play to your library and open it in the editor">
+      {busy ? 'Opening…' : 'Edit'}
+    </button>
   );
 }
 

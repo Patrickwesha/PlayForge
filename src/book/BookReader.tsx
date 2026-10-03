@@ -27,7 +27,12 @@ export function BookReader({ book, base, range, print, hasScans = true, canSaveE
     }
 
   return (
-    <ReaderChrome book={{ id: book.id, title: book.title, sections: book.sections, pageCount: book.pageCount }} counts={counts} hasScans={hasScans}>
+    <ReaderChrome
+      book={{ id: book.id, title: book.title, sections: book.sections, pageCount: book.pageCount }}
+      counts={counts}
+      hasScans={hasScans}
+      tools={<LibraryBar bookId={book.id} libraryUrl={`/api/book/${book.id}/library`} built={book.built} canSaveEdits={canSaveEdits} compact />}
+    >
       <header className="bk-doc-head">
         <h1>{book.title}</h1>
         <p>
@@ -41,7 +46,6 @@ export function BookReader({ book, base, range, print, hasScans = true, canSaveE
           {counts.scan > 0 && <span>{counts.scan} could not be rebuilt</span>}
         </div>
       </header>
-      <LibraryBar bookId={book.id} libraryUrl={`/api/book/${book.id}/library`} built={book.built} canSaveEdits={canSaveEdits} />
       {inRange(1) && <PrintToc book={book} />}
       {book.pages
         .filter((p) => inRange(p.n))
@@ -169,7 +173,7 @@ function PageSection({ page, book, base, cellMap, loading, hasScans }: { page: B
       {gridCells.length > 0 && (
         <div className="bk-grid" style={{ ['--cols' as string]: cols, ['--rows' as string]: rows, ['--print-h' as string]: `${printGridHeight(page).toFixed(2)}in` }}>
           {gridCells.map((c) => (
-            <Cell key={c.id} cell={c} page={page} built={book.built} />
+            <Cell key={c.id} cell={c} page={page} built={book.built} bookId={book.id} />
           ))}
         </div>
       )}
@@ -254,7 +258,7 @@ function Block({ block, page, cellMap, book }: { block: BookBlock; page: BookPag
                         return (
                           <td key={j} className="bk-td-art">
                             <Art cell={cell} page={page} built={book.built} />
-                            <CellFoot cell={cell} />
+                            <CellFoot cell={cell} bookId={book.id} />
                           </td>
                         );
                       const href = j === 0 ? block.hrefs?.[i] : null;
@@ -276,7 +280,7 @@ function Block({ block, page, cellMap, book }: { block: BookBlock; page: BookPag
   }
 }
 
-function Cell({ cell, page, built }: { cell: BookCell; page: BookPage; built: string }) {
+function Cell({ cell, page, built, bookId }: { cell: BookCell; page: BookPage; built: string; bookId: string }) {
   return (
     <figure className="bk-cell" id={cell.anchor} data-cell={cell.id}>
       {cell.lines.length > 0 && (
@@ -291,7 +295,7 @@ function Cell({ cell, page, built }: { cell: BookCell; page: BookPage; built: st
         </figcaption>
       )}
       <Art cell={cell} page={page} built={built} />
-      <CellFoot cell={cell} />
+      <CellFoot cell={cell} bookId={bookId} />
     </figure>
   );
 }
@@ -320,7 +324,7 @@ function Art({ cell, page, built }: { cell: BookCell; page: BookPage; built: str
   );
 }
 
-function CellFoot({ cell }: { cell: BookCell }) {
+function CellFoot({ cell, bookId }: { cell: BookCell; bookId: string }) {
   const v = cell.vector;
   const conf = v ? v.confidence : 'none';
   const unplaced = cell.labels.filter((l) => !l.at);
@@ -334,7 +338,7 @@ function CellFoot({ cell }: { cell: BookCell }) {
             {b}
           </span>
         ))}
-        {cell.playId && <PlayLink id={cell.playId} />}
+        {cell.playId && <PlayLink id={cell.playId} bookId={bookId} />}
         {guessed.length > 0 && (
           <span className="bk-conf bk-conf-medium" title={(cell.guesses ?? []).join('\n')}>
             guessed: {guessed.join(', ')}
