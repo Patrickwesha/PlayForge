@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import { PlaySvg } from '@/render/PlaySvg';
 import { BOOK_RENDER_THEME } from '@/render/theme';
 import { ReaderChrome } from './ReaderChrome';
-import { LibraryBar, LiveArt, PlayLink } from './LibraryLinks';
+import { CellStatus, LibraryBar, LiveArt, PlayLink } from './LibraryLinks';
 import { PAGE_TYPE_LABEL, type Book, type BookBlock, type BookCell, type BookPage } from './types';
 
 type Loading = 'eager' | 'lazy';
@@ -258,7 +258,7 @@ function Block({ block, page, cellMap, book }: { block: BookBlock; page: BookPag
                         return (
                           <td key={j} className="bk-td-art">
                             <Art cell={cell} page={page} built={book.built} />
-                            <CellFoot cell={cell} bookId={book.id} />
+                            <CellFoot cell={cell} bookId={book.id} built={book.built} />
                           </td>
                         );
                       const href = j === 0 ? block.hrefs?.[i] : null;
@@ -295,7 +295,7 @@ function Cell({ cell, page, built, bookId }: { cell: BookCell; page: BookPage; b
         </figcaption>
       )}
       <Art cell={cell} page={page} built={built} />
-      <CellFoot cell={cell} bookId={bookId} />
+      <CellFoot cell={cell} bookId={bookId} built={built} />
     </figure>
   );
 }
@@ -311,7 +311,13 @@ function Art({ cell, page, built }: { cell: BookCell; page: BookPage; built: str
       </div>
     );
     // your edited version from the PlayForge library replaces the built one once the library has loaded
-    return cell.playId ? <LiveArt playId={cell.playId} built={built}>{art}</LiveArt> : art;
+    return cell.playId ? (
+      <LiveArt playId={cell.playId} built={built} formationId={v.formationId} annotations={v.diagram.annotations}>
+        {art}
+      </LiveArt>
+    ) : (
+      art
+    );
   }
   // nothing could be rebuilt for this cell: say so, and keep its words findable
   return (
@@ -324,7 +330,7 @@ function Art({ cell, page, built }: { cell: BookCell; page: BookPage; built: str
   );
 }
 
-function CellFoot({ cell, bookId }: { cell: BookCell; bookId: string }) {
+function CellFoot({ cell, bookId, built }: { cell: BookCell; bookId: string; built: string }) {
   const v = cell.vector;
   const conf = v ? v.confidence : 'none';
   const unplaced = cell.labels.filter((l) => !l.at);
@@ -338,15 +344,17 @@ function CellFoot({ cell, bookId }: { cell: BookCell; bookId: string }) {
             {b}
           </span>
         ))}
-        {cell.playId && <PlayLink id={cell.playId} bookId={bookId} />}
-        {guessed.length > 0 && (
-          <span className="bk-conf bk-conf-medium" title={(cell.guesses ?? []).join('\n')}>
-            guessed: {guessed.join(', ')}
+        {cell.playId && <PlayLink id={cell.playId} bookId={bookId} formationId={v?.formationId} />}
+        <CellStatus playId={cell.playId} built={built} formationId={v?.formationId}>
+          {guessed.length > 0 && (
+            <span className="bk-conf bk-conf-medium" title={(cell.guesses ?? []).join('; ')}>
+              guessed: {guessed.join(', ')}
+            </span>
+          )}
+          <span className={`bk-conf bk-conf-${conf === 'none' ? 'low' : conf}`} title={v?.issues.join('; ') || 'Not rebuilt'} style={guessed.length ? { marginLeft: 0 } : undefined}>
+            {v?.formationId ? 'PlayForge formation' : conf === 'high' ? 'matches the page' : conf === 'none' ? 'not rebuilt' : 'check against the page'}
           </span>
-        )}
-        <span className={`bk-conf bk-conf-${conf === 'none' ? 'low' : conf}`} title={v?.issues.join('; ') || 'Not rebuilt'} style={guessed.length ? { marginLeft: 0 } : undefined}>
-          {conf === 'high' ? 'matches the page' : conf === 'none' ? 'not rebuilt' : 'check against the page'}
-        </span>
+        </CellStatus>
       </div>
       {unplaced.length > 0 && <div className="bk-labels-note">{unplaced.map((l) => l.text).join(' · ')}</div>}
     </>

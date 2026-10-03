@@ -26,6 +26,9 @@ export type BookVector = {
   issues: string[];
   /** Players placed by educated guess (cut off or hidden in the scan), one line each. */
   guesses?: string[];
+  /** The PlayForge formation this cell draws (a seed id), when the page shows one of the pack's formations as is. */
+  formationId?: string | null;
+  formationKey?: string;
 };
 
 export type BookCell = {

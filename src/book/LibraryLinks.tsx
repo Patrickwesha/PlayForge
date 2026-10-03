@@ -15,6 +15,8 @@ type LibState = {
   loaded: boolean;
   /** The book's plays as they are in this device's library (edits included), by id. */
   plays: Map<string, Play>;
+  /** PlayForge's own formations (the pack, with every correction made in the editor), by id. */
+  formations: Map<string, Formation>;
   hasPlaybook: boolean;
   refresh: (bookId: string) => Promise<void>;
 };
@@ -25,10 +27,11 @@ const isBookPlay = (p: Play) => p.id.startsWith('gb19-');
 const useLib = create<LibState>((set) => ({
   loaded: false,
   plays: new Map(),
+  formations: new Map(),
   hasPlaybook: false,
   refresh: async (bookId) => {
-    const [plays, pb] = await Promise.all([repo.listPlays(), repo.getPlaybook(bookId)]);
-    set({ loaded: true, plays: new Map(plays.filter(isBookPlay).map((p) => [p.id, p])), hasPlaybook: !!pb });
+    const [plays, formations, pb] = await Promise.all([repo.listPlays(), repo.listFormations(), repo.getPlaybook(bookId)]);
+    set({ loaded: true, plays: new Map(plays.filter(isBookPlay).map((p) => [p.id, p])), formations: new Map(formations.map((f) => [f.id, f])), hasPlaybook: !!pb });
   },
 }));
 
@@ -125,12 +128,19 @@ export function LibraryBar({ bookId, libraryUrl, built, canSaveEdits = true, com
  * "Edit" on every cell. A play already in the library opens in the editor; one that is not yet is pulled in
  * from the book first (that play and its formation only), then opened.
  */
-export function PlayLink({ id, bookId }: { id: string; bookId: string }) {
+export function PlayLink({ id, bookId, formationId }: { id: string; bookId: string; formationId?: string | null }) {
   const router = useRouter();
   const has = useLib((s) => s.plays.has(id));
+  const hasFormation = useLib((s) => !!formationId && s.formations.has(formationId));
   const refresh = useLib((s) => s.refresh);
   const [busy, setBusy] = useState(false);
   const style = { color: 'inherit', fontSize: '0.7rem', fontWeight: 700 } as const;
+  if (hasFormation)
+    return (
+      <Link className="no-print bk-edit" href={`/formations/${formationId}`} style={style} title="This is one of your PlayForge formations: edit it in the formation editor">
+        Edit formation
+      </Link>
+    );
   if (has)
     return (
       <Link className="no-print bk-edit" href={`/plays/${id}`} style={style} title="Open in the play editor">
@@ -212,14 +222,32 @@ function fitView(d: Diagram): ViewWindow {
  * The diagram as you edited it in PlayForge, when you did: the server-rendered drawing is shown until the library
  * loads, then a play saved after the book was built takes its place. Nothing changes for a play you have not touched.
  */
-export function LiveArt({ playId, built, children }: { playId: string; built: string; children: ReactNode }) {
+export function LiveArt({ playId, built, formationId, annotations, children }: { playId: string; built: string; formationId?: string | null; annotations?: Diagram['annotations']; children: ReactNode }) {
   const play = useLib((s) => s.plays.get(playId));
-  if (!editedAfter(play, built)) return <>{children}</>;
-  const view = fitView(play!.diagram);
+  const formation = useLib((s) => (formationId ? s.formations.get(formationId) : undefined));
+  let diagram: Diagram | null = null;
+  let tag = '';
+  if (editedAfter(play, built)) {
+    diagram = play!.diagram;
+    tag = 'your edit';
+  } else if (formation) {
+    diagram = { players: formation.players, paths: {}, annotations: annotations ?? {} };
+    tag = 'your formation';
+  }
+  if (!diagram) return <>{children}</>;
+  const view = fitView(diagram);
   return (
-    <div className="bk-art bk-art-live" style={{ aspectRatio: `${view.maxX - view.minX} / ${view.maxY - view.minY}` }} title="Your edit, from your PlayForge library">
-      <PlaySvg diagram={play!.diagram} view={view} theme={BOOK_RENDER_THEME} style={{ height: 'auto' }} />
-      <span className="bk-live-tag">your edit</span>
+    <div className="bk-art bk-art-live" style={{ aspectRatio: `${view.maxX - view.minX} / ${view.maxY - view.minY}` }} title={tag === 'your edit' ? 'Your edit, from your PlayForge library' : 'Drawn from the formation in your PlayForge library'}>
+      <PlaySvg diagram={diagram} view={view} theme={BOOK_RENDER_THEME} style={{ height: 'auto' }} />
+      <span className="bk-live-tag">{tag}</span>
     </div>
   );
+}
+
+/** The cell's confidence badges, hidden once the drawing shown is yours (an edited play or your own formation). */
+export function CellStatus({ playId, built, formationId, children }: { playId?: string; built: string; formationId?: string | null; children: ReactNode }) {
+  const edited = useLib((s) => (playId ? editedAfter(s.plays.get(playId), built) : false));
+  const own = useLib((s) => !!formationId && s.formations.has(formationId));
+  if (edited || own) return null;
+  return <>{children}</>;
 }

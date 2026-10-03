@@ -298,6 +298,7 @@ def section_of(n):
 
 
 pages, toc, review = [], [], []
+pack_formation_ids = []  # PlayForge's own formations the formation pages draw, in page order
 formations, plays = {}, []
 form_best = {}
 counts = Counter()
@@ -382,7 +383,34 @@ for n in range(1, 478):
                         conf = "medium"
                 if diag is None and comp:
                     diag, guesses = complete.from_composition(comp, tc, gun)
-            if diag is not None:
+            seed_formation = None
+            if page["type"] == "formation" and comp and tc and tc.get("kind") == "diagram":
+                # the formation pages: the drawing IS one of PlayForge's own formations (his corrected pack),
+                # so draw that instead of the trace; keep the page's labels
+                direct = not comp.get("tagged") and comp.get("direction") == "RT"
+                base = diag or {"players": {}, "paths": {}, "annotations": {}}
+                players = {}
+                for k, cp in enumerate(comp["players"], start=1):
+                    pid = f"f{k}"
+                    q = {"id": pid, "side": "offense", "symbol": cp.get("symbol", "circle"), "label": cp.get("label", ""), "x": cp["x"], "y": cp["y"]}
+                    if cp.get("outline"):
+                        q["outline"] = cp["outline"]
+                    if cp.get("motion"):
+                        q["motion"] = {"from": cp["motion"]["from"], "tag": cp["motion"].get("tag", ""), "kind": "motion"}
+                    players[pid] = q
+                diag = {"players": players, "paths": {}, "annotations": base.get("annotations", {})}
+                conf = "high"
+                issues = [f"PlayForge formation {comp['formationKey']}" + ("" if direct else " with the call's tags")]
+                guesses = []
+                if direct:
+                    seed_formation = f"seed-gb19-{comp['formationKey']}"
+                vector = {"diagram": diag, "view": complete.view_for(diag, base_view), "confidence": conf, "recall": recall,
+                          "precision": precision, "issues": issues, "guesses": [], "formationId": seed_formation,
+                          "formationKey": comp["formationKey"]}
+                counts["formation-cells-from-pack"] += 1
+                if seed_formation:
+                    counts["formation-cells-direct"] += 1
+            elif diag is not None:
                 diag, more = complete.Completion(diag, tc, page["type"], comp, cell["cutLeft"], cell["cutRight"], gun).run()
                 guesses += more
                 if guesses:
@@ -431,6 +459,10 @@ for n in range(1, 478):
             if vector:
                 play["rebuild"] = {"confidence": vector["confidence"], "recall": vector["recall"], "precision": vector["precision"],
                                    "issues": (vector["issues"] + guesses)[:20], "method": "traced"}
+            if vector and vector.get("formationId"):
+                play["formationId"] = vector["formationId"]
+                if vector["formationId"] not in pack_formation_ids:
+                    pack_formation_ids.append(vector["formationId"])
             if cell["footer"]:
                 play["defense"] = {"front": cell["footer"]}
             if notes:
@@ -476,7 +508,7 @@ for (name, pers), (score, fid, players, n, cid) in form_best.items():
     formations[fid] = {k: v for k, v in formations[fid].items() if v is not None}
 # plays pointing at a formation that did not make it (no good drawing) lose the link
 for _, p in plays:
-    if p.get("formationId") and p["formationId"] not in formations:
+    if p.get("formationId") and p["formationId"] not in formations and not p["formationId"].startswith("seed-gb19-"):
         del p["formationId"]
 
 # ------------------------------------------------------------------ text the scan cut off
@@ -642,8 +674,9 @@ with open(os.path.join(OUT, "review.json"), "w", encoding="utf8") as f:
 playbook = {
     "id": BOOK_ID, "name": "Green Bay 2019", "subtitle": "LaFleur offense",
     "cover": {"title": "Green Bay 2019", "subtitle": "2019 Training Camp Offensive Playbook", "team": "Green Bay Packers", "season": "2019", "showCover": True},
-    "sections": [{"id": f"gb19-s{i + 1}", "title": sections[i]["title"], "kind": "plays",
-                  "itemIds": [p["id"] for si, p in plays if si == i]} for i in range(len(SECTIONS)) if any(si == i for si, _ in plays)],
+    "sections": ([{"id": "gb19-formations", "title": "Formations (PlayForge)", "kind": "formations", "itemIds": pack_formation_ids}] if pack_formation_ids else [])
+    + [{"id": f"gb19-s{i + 1}", "title": sections[i]["title"], "kind": "plays",
+        "itemIds": [p["id"] for si, p in plays if si == i]} for i in range(len(SECTIONS)) if any(si == i for si, _ in plays)],
     "defaultLayout": "4up", "paper": "letter", "createdAt": STAMP, "updatedAt": STAMP,
 }
 library = {"app": "playforge", "version": 2, "exportedAt": STAMP, "formations": list(formations.values()),

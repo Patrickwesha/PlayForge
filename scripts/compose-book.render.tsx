@@ -41,6 +41,9 @@ it('composes every formation line and every route for the book', () => {
       const tagged = applyCallTags(base, { pre: q.preTag, post: q.postTags, direction: q.direction, personnel: q.personnel, formationWords: FORMATION_WORDS });
       const players = tagged.players.map((p) => (q.direction === 'LT' ? flipPlayer(p) : p)).map((p) => ({ ...p, x: r2(p.x), y: r2(p.y) }));
       formations[q.key] = {
+        formationKey: q.formationKey,
+        direction: q.direction,
+        tagged: q.postTags.length > 0 || !!q.preTag,
         players: players.map((p) => ({ label: p.label, x: p.x, y: p.y, symbol: p.symbol, role: p.role, outline: p.outline, motion: p.motion ? { from: { x: r2(p.motion.from.x), y: r2(p.motion.from.y) }, tag: p.motion.tag } : undefined })),
         review: tagged.review,
       };
