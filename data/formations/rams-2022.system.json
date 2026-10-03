@@ -1101,7 +1101,7 @@
     },
     {
      "spot": "X",
-     "x": -18.0,
+     "x": -15.67,
      "y": 0
     },
     {
@@ -1111,7 +1111,7 @@
     },
     {
      "spot": "Z",
-     "x": 18.0,
+     "x": 15.67,
      "y": -1
     },
     {
@@ -1241,7 +1241,7 @@
     },
     {
      "spot": "X",
-     "x": -16.5,
+     "x": -14.17,
      "y": 0
     },
     {
@@ -1251,7 +1251,7 @@
     },
     {
      "spot": "Z",
-     "x": 16.5,
+     "x": 14.17,
      "y": -1
     },
     {
@@ -1311,7 +1311,7 @@
     },
     {
      "spot": "X",
-     "x": -14.0,
+     "x": -12.67,
      "y": 0
     },
     {
@@ -1321,7 +1321,7 @@
     },
     {
      "spot": "Z",
-     "x": 14.0,
+     "x": 12.67,
      "y": -1
     },
     {
@@ -4421,8 +4421,8 @@
    "sourcePage": 28,
    "book": "rams-2022",
    "ramsName": "FLEET PACK RT EXTEND",
-   "confidence": "needs-review",
-   "note": "Alignment from the Rams 2022 general section p.28 (FLEET PACK RT EXTEND). Stack and extend variations are drawn loosely in the book: check the stack against the numbers.",
+   "confidence": "derived",
+   "note": "Alignment from the Rams 2022 general section p.28 (FLEET PACK RT EXTEND).",
    "players": [
     {
      "spot": "LT",
@@ -4461,17 +4461,17 @@
     },
     {
      "spot": "X",
-     "x": -16.0,
+     "x": -14.67,
      "y": -1
     },
     {
      "spot": "Z",
-     "x": -17.0,
+     "x": -15.67,
      "y": 0
     },
     {
      "spot": "F",
-     "x": -18.0,
+     "x": -16.67,
      "y": -1
     },
     {
@@ -4842,7 +4842,7 @@
    "book": "rams-2022",
    "ramsName": "TRIO STORE RT",
    "confidence": "needs-review",
-   "note": "Alignment from the Rams 2022 general section p.29 (TRIO STORE RT). Stack and extend variations are drawn loosely in the book: check the stack against the numbers.",
+   "note": "Alignment from the Rams 2022 general section p.29 (TRIO STORE RT). Stack variations are drawn loosely in the book: check the stack against the numbers.",
    "players": [
     {
      "spot": "LT",
@@ -4896,7 +4896,7 @@
     },
     {
      "spot": "Y",
-     "x": 16.5,
+     "x": 14.17,
      "y": -1
     }
    ]
@@ -5262,7 +5262,7 @@
    "book": "rams-2022",
    "ramsName": "FAST STAN RT OPEN",
    "confidence": "needs-review",
-   "note": "Alignment from the Rams 2022 general section p.29 (FAST STAN RT OPEN). Stack and extend variations are drawn loosely in the book: check the stack against the numbers.",
+   "note": "Alignment from the Rams 2022 general section p.29 (FAST STAN RT OPEN). Stack variations are drawn loosely in the book: check the stack against the numbers.",
    "players": [
     {
      "spot": "LT",
@@ -5516,7 +5516,7 @@
     },
     {
      "spot": "X",
-     "x": -16.5,
+     "x": -14.17,
      "y": -1
     },
     {
@@ -5526,7 +5526,7 @@
     },
     {
      "spot": "Z",
-     "x": 16.5,
+     "x": 14.17,
      "y": -1
     }
    ]
@@ -5586,7 +5586,7 @@
     },
     {
      "spot": "X",
-     "x": -14.0,
+     "x": -12.67,
      "y": -1
     },
     {
@@ -5596,7 +5596,7 @@
     },
     {
      "spot": "Z",
-     "x": 14.0,
+     "x": 12.67,
      "y": -1
     }
    ]
@@ -5796,7 +5796,7 @@
     },
     {
      "spot": "X",
-     "x": -18.0,
+     "x": -15.67,
      "y": -1
     },
     {
@@ -5806,7 +5806,7 @@
     },
     {
      "spot": "Z",
-     "x": 18.0,
+     "x": 15.67,
      "y": -1
     }
    ]

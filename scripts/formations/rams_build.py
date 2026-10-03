@@ -43,6 +43,8 @@ TWELVE = {"West", "East", "Deuce"}
 # Rams words whose system word already names a different picture; same picture on film as the note says
 LEFT_OUT = {"TROUT": "Trips Open", "BUDDY": "Buddy"}
 TOUCH = 1.12  # line splits: closer than this = touching the next man
+# The painted numbers on an NFL field, in yards from a ball in the middle (PlayForge landmarks: Top #s, Mid #s, Bottom #s)
+NUM_TOP, NUM_MID, NUM_BOTTOM = 14.67, 15.67, 16.67
 ATTACHED = 3.35  # first man this close to the center is attached to the tackle
 
 
@@ -143,11 +145,15 @@ def place_side(rcv, marks, notes):
         c = detached[-1]
         outer = c[-1]
         x = 20.0
+        anchor = len(c) - 1
         if hashes:
             h = min(hashes, key=lambda v: abs(v - outer["a"]))
             d = h - outer["a"]
-            x = 18.0 if abs(d) < 0.25 else 16.5 if 0 < d < 1.0 else 14.0 if d >= 1.0 else 20.0
-        anchor = len(c) - 1
+            # on the numbers / just inside them (Edge) / well inside (King)
+            x = NUM_MID if abs(d) < 0.25 else NUM_MID - 1.5 if 0 < d < 1.0 else NUM_MID - 3.0 if d >= 1.0 else 20.0
+            if abs(d) < 0.25 and len(c) == 3:
+                # a pack extended to the numbers sits ON them: inside man on Top #s, point man in the middle, outside man on Bottom #s
+                x, anchor = NUM_MID, 1
         for i, p in enumerate(c):
             out[p["spot"]] = (x + (i - anchor), 0 if p["on"] else -1)
     return out
@@ -194,9 +200,9 @@ def build(cell):
         players["Y"] = (zx + 1, -1)  # Click: the Y takes the split off the ball just outside the Z
     on_line = sum(1 for s, (x, y) in players.items() if y == 0 and s not in ("QB",))
     confidence = "derived"
-    if any(m in ("Store", "Stan", "Extend") for m in info["mods"]):
+    if any(m in ("Store", "Stan") for m in info["mods"]):
         confidence = "needs-review"
-        notes.append("Stack and extend variations are drawn loosely in the book: check the stack against the numbers.")
+        notes.append("Stack variations are drawn loosely in the book: check the stack against the numbers.")
     if on_line != 7:
         confidence = "needs-review"
         notes.append(f"{on_line} men drawn on the line in the book's picture, not 7: check who is on and off the ball.")
