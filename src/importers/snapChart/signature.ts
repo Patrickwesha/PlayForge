@@ -12,7 +12,7 @@ export type SignatureInput = { personnel: string; formFamily: string; backfield:
 const MIRROR: Record<AlignedSide, AlignedSide> = { L: 'R', R: 'L', C: 'C' };
 
 export function mirrorPlayers(players: AlignedPlayer[]): AlignedPlayer[] {
-  return players.map((p) => ({ ...p, side: MIRROR[p.side] }));
+  return players.map((p) => ({ ...p, side: MIRROR[p.side], ...(p.at ? { at: { x: -p.at.x + 0, y: p.at.y } } : {}) }));
 }
 
 export function signatureOf(s: SignatureInput): string {
@@ -20,7 +20,9 @@ export function signatureOf(s: SignatureInput): string {
     if (p.pos === 'QB') return `Q:${p.align}`;
     if (isBackfieldPlayer(p)) return `B:${p.pos}:${p.side}:${p.align}`;
     const stack = p.stack_behind ? `:s${typeof p.stack_behind === 'number' ? p.stack_behind : ''}` : '';
-    return `R:${p.side}${p.order ?? '?'}:${p.pos}:${p.align}:${isOnLine(p) ? 'on' : 'off'}${stack}`;
+    // a hand-drawn spot is part of the identity, so two drawings with the same labels stay two formations
+    const at = p.at ? `@${p.at.x},${p.at.y}${p.label ? `=${p.label}` : ''}` : '';
+    return `R:${p.side}${p.order ?? '?'}:${p.pos}:${p.align}:${isOnLine(p) ? 'on' : 'off'}${stack}${at}`;
   });
   entries.sort();
   return `${s.personnel}|${s.formFamily}|${s.backfield}|${entries.join(',')}`;

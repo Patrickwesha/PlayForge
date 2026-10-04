@@ -110,6 +110,7 @@ function oneBack(S: Rcv[], W: Rcv[], input: NameInput, notes: string[]): Core {
       // two tight ends together: the second one is the F
       const fInside = S[0].zone === 'wing' && S[1].zone === 'in';
       if (!fInside && S[1].zone === 'in') notes.push('Second tight end charted ON the line outside the Y, which covers the Y: called West, check who is off the ball.');
+      if (S[2].zone === 't5') tags.unshift('Close');
       return { base: fInside ? 'East' : 'West', family: "3x1 'T'", tags, alternates: [] };
     }
     if (yi === 1) return { base: 'Train', family: "3x1 'T'", tags, alternates: [] };
@@ -186,7 +187,7 @@ function oneBack(S: Rcv[], W: Rcv[], input: NameInput, notes: string[]): Core {
       alternates = [];
     } else tags.push('Open');
 
-    if (!stack && base !== 'Deuce') {
+    if (!stack) {
       if (wOut.zone === 't5') tags.push('Tight');
       else if (attached(wOut)) tags.push('Tighter');
     }

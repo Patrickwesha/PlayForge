@@ -1,0 +1,96 @@
+{
+  "_about": "Alignments taken spot for spot from plays drawn by hand in PlayForge. For these snaps they replace the players charted from film. `at` is yards from the ball (x + right, y negative behind the line); `align` and `on_line` are the labels the system namer reads.",
+  "snaps": {
+    "W1-001": {
+      "from": "play P14 Z CURL X LOW CROSS",
+      "form_family": "2x2 'D'",
+      "strength": "Rt",
+      "players": [
+        { "pos": "QB", "side": "C", "align": "under_center" },
+        { "pos": "RB", "side": "C", "align": "deep" },
+        { "pos": "TE", "side": "R", "align": "wing", "on_line": false, "order": 1, "at": { "x": 3, "y": -1 }, "label": "Y" },
+        { "pos": "WR", "side": "R", "align": "tight", "on_line": true, "order": 2, "at": { "x": 8.083, "y": 0 }, "label": "Z" },
+        { "pos": "TE", "side": "L", "align": "inline", "on_line": true, "order": 1, "at": { "x": -3, "y": 0 }, "label": "F" },
+        { "pos": "WR", "side": "L", "align": "tight", "on_line": false, "order": 2, "at": { "x": -7.083, "y": -1 }, "label": "X" }
+      ]
+    },
+    "W1-002": {
+      "from": "play 14 WANDA Y SIFT",
+      "form_family": "Bunch 'B'",
+      "strength": "Rt",
+      "players": [
+        { "pos": "QB", "side": "C", "align": "under_center" },
+        { "pos": "RB", "side": "C", "align": "deep" },
+        { "pos": "TE", "side": "R", "align": "wing", "on_line": false, "order": 1, "at": { "x": 3, "y": -1 }, "label": "F" },
+        { "pos": "TE", "side": "R", "align": "wing", "on_line": false, "order": 2, "at": { "x": 4.083, "y": -1 }, "label": "Y" },
+        { "pos": "WR", "side": "R", "align": "tight", "on_line": true, "order": 3, "at": { "x": 6.083, "y": 0 }, "label": "Z" },
+        { "pos": "WR", "side": "L", "align": "numbers", "on_line": true, "order": 1, "at": { "x": -14.667, "y": 0 }, "label": "X" }
+      ]
+    },
+    "W1-003": {
+      "from": "play 2 JET F SHALLOW CROSS Z LOW CROSS, the set before the Y moves",
+      "form_family": "Bunch 'B'",
+      "strength": "Lt",
+      "players": [
+        { "pos": "QB", "side": "C", "align": "gun" },
+        { "pos": "RB", "side": "R", "align": "gun_offset" },
+        { "pos": "TE", "side": "L", "align": "wing", "on_line": false, "order": 1, "at": { "x": -3.083, "y": -1 }, "label": "Y" },
+        { "pos": "WR", "side": "L", "align": "tight", "on_line": true, "order": 2, "at": { "x": -6.083, "y": 0 }, "label": "F" },
+        { "pos": "WR", "side": "L", "align": "tight", "on_line": false, "order": 3, "at": { "x": -8.083, "y": -1 }, "label": "Z" },
+        { "pos": "WR", "side": "R", "align": "numbers", "on_line": true, "order": 1, "at": { "x": 14.667, "y": 0 }, "label": "X" }
+      ]
+    },
+    "W1-004": {
+      "from": "play COUNTER LT",
+      "form_family": "Bunch 'B'",
+      "strength": "Rt",
+      "players": [
+        { "pos": "QB", "side": "C", "align": "under_center" },
+        { "pos": "RB", "side": "C", "align": "deep" },
+        { "pos": "TE", "side": "R", "align": "wing", "on_line": false, "order": 1, "at": { "x": 3.083, "y": -1 }, "label": "Y" },
+        { "pos": "TE", "side": "R", "align": "tight", "on_line": true, "order": 2, "at": { "x": 4.083, "y": 0 }, "label": "F" },
+        { "pos": "WR", "side": "R", "align": "tight", "on_line": false, "order": 3, "at": { "x": 5.083, "y": -1 }, "label": "Z" },
+        { "pos": "WR", "side": "L", "align": "numbers", "on_line": true, "order": 1, "at": { "x": -14.667, "y": 0 }, "label": "X" }
+      ]
+    },
+    "W1-005": {
+      "from": "play 200 JET X STICK",
+      "form_family": "2x2 Stack 'S'",
+      "strength": "Rt",
+      "players": [
+        { "pos": "QB", "side": "C", "align": "gun" },
+        { "pos": "RB", "side": "R", "align": "gun_offset" },
+        { "pos": "TE", "side": "R", "align": "inline", "on_line": true, "order": 1, "at": { "x": 3, "y": 0 }, "label": "Y" },
+        { "pos": "WR", "side": "R", "align": "tight", "on_line": false, "order": 2, "at": { "x": 8.083, "y": -1 }, "label": "Z" },
+        { "pos": "WR", "side": "L", "align": "tight", "on_line": false, "order": 1, "at": { "x": -5.083, "y": -1 }, "label": "F" },
+        { "pos": "WR", "side": "L", "align": "tight", "on_line": true, "order": 2, "at": { "x": -8.083, "y": 0 }, "label": "X" }
+      ]
+    },
+    "W1-006": {
+      "from": "play 2 JET DBL GO F HITCH",
+      "form_family": "2x2 'D'",
+      "strength": "Rt",
+      "players": [
+        { "pos": "QB", "side": "C", "align": "gun" },
+        { "pos": "RB", "side": "R", "align": "gun_offset" },
+        { "pos": "TE", "side": "R", "align": "wing", "on_line": false, "order": 1, "at": { "x": 3.083, "y": -1 }, "label": "Y" },
+        { "pos": "WR", "side": "R", "align": "numbers", "on_line": true, "order": 2, "at": { "x": 14.667, "y": 0 }, "label": "Z" },
+        { "pos": "WR", "side": "L", "align": "tight", "on_line": false, "order": 1, "at": { "x": -8.083, "y": -1 }, "label": "F" },
+        { "pos": "WR", "side": "L", "align": "numbers", "on_line": true, "order": 2, "at": { "x": -14.667, "y": 0 }, "label": "X" }
+      ]
+    },
+    "W1-007": {
+      "from": "play 15 WANDA F SIFT",
+      "form_family": "3x1 'T'",
+      "strength": "Rt",
+      "players": [
+        { "pos": "QB", "side": "C", "align": "under_center" },
+        { "pos": "RB", "side": "C", "align": "deep" },
+        { "pos": "TE", "side": "R", "align": "inline", "on_line": true, "order": 1, "at": { "x": 3.083, "y": 0 }, "label": "Y" },
+        { "pos": "TE", "side": "R", "align": "wing", "on_line": false, "order": 2, "at": { "x": 4.083, "y": -1 }, "label": "F" },
+        { "pos": "WR", "side": "R", "align": "tight", "on_line": false, "order": 3, "at": { "x": 8.083, "y": -1 }, "label": "Z" },
+        { "pos": "WR", "side": "L", "align": "numbers", "on_line": true, "order": 1, "at": { "x": -14.667, "y": 0 }, "label": "X" }
+      ]
+    }
+  }
+}

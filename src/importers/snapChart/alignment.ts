@@ -18,6 +18,10 @@ export type AlignedPlayer = {
   order?: number | null;
   stack_behind?: number | boolean | null;
   id_unknown?: boolean | null;
+  /** Exact spot (yards from the ball): overrides the label placement. */
+  at?: { x: number; y: number } | null;
+  /** Job letter to draw instead of the importer's pick. */
+  label?: string | null;
 };
 
 const r2 = (n: number) => Math.round(n * 100) / 100 + 0;
@@ -231,7 +235,19 @@ export function placePlayers(charted: AlignedPlayer[], opts: PlaceOptions): { pl
     warnings.push(`${label}: ${centre.length} receiver(s) with side C placed on the right`);
     placed.push(...placeSide(centre, numbers.R, warnings, label));
   }
+  // a hand-drawn alignment wins over the label placement
+  for (const q of placed) {
+    if (q.p.at) {
+      q.x = q.p.at.x;
+      q.y = q.p.at.y;
+    }
+  }
   const labels = assignLabels(placed, opts.strength);
+  const forced = new Set(placed.map((q) => q.p.label).filter((l): l is string => !!l));
+  for (const q of placed) {
+    if (q.p.label) labels.set(q, q.p.label);
+    else if (forced.has(labels.get(q) ?? '')) labels.set(q, `${labels.get(q)}2`);
+  }
 
   const players: Record<string, Player> = {};
   const line: [string, number][] = [

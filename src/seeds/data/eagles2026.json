@@ -4,7 +4,7 @@
  "team": "PHI",
  "season": 2026,
  "mirror": false,
- "revision": "cdfb1731ec94",
+ "revision": "63b674185262",
  "formations": [
   {
    "id": "snapform-35d44e8be24720b9",
@@ -778,157 +778,6 @@
     ],
     "hashes": [
      "Right"
-    ],
-    "exact": 2,
-    "template": 0
-   },
-   "createdAt": "2026-01-01T00:00:00.000Z",
-   "updatedAt": "2026-01-01T00:00:00.000Z"
-  },
-  {
-   "id": "snapform-a985f006383eecc0",
-   "name": "West Rt",
-   "chartName": "12 UC 3x1 Rt",
-   "system": {
-    "id": "eagles-2026",
-    "base": "West",
-    "family": "3x1 'T'",
-    "strength": "Rt",
-    "tags": [],
-    "alternates": [],
-    "confidence": "rule"
-   },
-   "side": "offense",
-   "personnel": "12",
-   "playersPerSide": 11,
-   "players": {
-    "snapform-a985f006383eecc0-lt": {
-     "id": "snapform-a985f006383eecc0-lt",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "",
-     "x": -2,
-     "y": 0,
-     "role": "OL"
-    },
-    "snapform-a985f006383eecc0-lg": {
-     "id": "snapform-a985f006383eecc0-lg",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "",
-     "x": -1,
-     "y": 0,
-     "role": "OL"
-    },
-    "snapform-a985f006383eecc0-c": {
-     "id": "snapform-a985f006383eecc0-c",
-     "side": "offense",
-     "symbol": "square",
-     "label": "",
-     "x": 0,
-     "y": 0,
-     "role": "C"
-    },
-    "snapform-a985f006383eecc0-rg": {
-     "id": "snapform-a985f006383eecc0-rg",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "",
-     "x": 1,
-     "y": 0,
-     "role": "OL"
-    },
-    "snapform-a985f006383eecc0-rt": {
-     "id": "snapform-a985f006383eecc0-rt",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "",
-     "x": 2,
-     "y": 0,
-     "role": "OL"
-    },
-    "snapform-a985f006383eecc0-q": {
-     "id": "snapform-a985f006383eecc0-q",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "Q",
-     "x": 0,
-     "y": -1,
-     "role": "QB"
-    },
-    "snapform-a985f006383eecc0-h": {
-     "id": "snapform-a985f006383eecc0-h",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "H",
-     "x": 0,
-     "y": -7,
-     "role": "RB"
-    },
-    "snapform-a985f006383eecc0-y": {
-     "id": "snapform-a985f006383eecc0-y",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "Y",
-     "x": 3,
-     "y": 0,
-     "role": "TE"
-    },
-    "snapform-a985f006383eecc0-u": {
-     "id": "snapform-a985f006383eecc0-u",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "U",
-     "x": 4,
-     "y": -1,
-     "role": "TE"
-    },
-    "snapform-a985f006383eecc0-z": {
-     "id": "snapform-a985f006383eecc0-z",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "Z",
-     "x": 9.87,
-     "y": 0,
-     "role": "WR"
-    },
-    "snapform-a985f006383eecc0-x": {
-     "id": "snapform-a985f006383eecc0-x",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "X",
-     "x": -12.6,
-     "y": 0,
-     "role": "WR"
-    }
-   },
-   "tags": [
-    "eagles-2026",
-    "12",
-    "3x1 'T'",
-    "W1",
-    "West",
-    "3x1 'T'"
-   ],
-   "family": "3x1 'T'",
-   "strength": "right",
-   "qbAlignment": "under",
-   "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W1_WAS-PHI_playforge.json, W2_PHI-TEN_playforge.json)",
-   "note": "System call: West Rt [12]. Charted as 12 UC 3x1 Rt.\nW1-002: Set (2.0 to 3.5 s): Mundt inline R, Goedert attached just outside Mundt, Wicks on the line in a reduced slot R near the right college hash; Smith alone L at the top of the numbers. Barkley deep. Goedert then walks out to outside Wicks, pauses about 1 s (the 6.0 s frame) and comes back in at the snap.\nW1-007: Mundt inline R, Goedert wing R off Mundt's outside hip, Wicks on the line in a reduced slot R on the right college hash; Smith alone L on the numbers. Barkley deep. Goedert goes in motion across the backfield to the left at the snap.\nDrawn on the Left hash (seen: Left 2).",
-   "confidence": "derived",
-   "builtin": true,
-   "signature": "12|3x1 'T'|Under Center|B:RB:C:deep,Q:under_center,R:L1:WR:numbers:on,R:R1:TE:inline:on,R:R2:TE:wing:off,R:R3:WR:slot:on",
-   "usage": {
-    "count": 2,
-    "snapIds": [
-     "W1-002",
-     "W1-007"
-    ],
-    "weeks": [
-     1
-    ],
-    "hashes": [
-     "Left"
     ],
     "exact": 2,
     "template": 0
@@ -4456,159 +4305,6 @@
    "updatedAt": "2026-01-01T00:00:00.000Z"
   },
   {
-   "id": "snapform-62798102e6ac2898",
-   "name": "Gun Dice Rt",
-   "chartName": "11 Gun 2x2 Rt",
-   "system": {
-    "id": "eagles-2026",
-    "base": "Dice",
-    "family": "2x2 'D'",
-    "strength": "Rt",
-    "tags": [],
-    "back": "strong",
-    "alternates": [
-     "Dixie"
-    ],
-    "confidence": "rule"
-   },
-   "side": "offense",
-   "personnel": "11",
-   "playersPerSide": 11,
-   "players": {
-    "snapform-62798102e6ac2898-lt": {
-     "id": "snapform-62798102e6ac2898-lt",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "",
-     "x": -2,
-     "y": 0,
-     "role": "OL"
-    },
-    "snapform-62798102e6ac2898-lg": {
-     "id": "snapform-62798102e6ac2898-lg",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "",
-     "x": -1,
-     "y": 0,
-     "role": "OL"
-    },
-    "snapform-62798102e6ac2898-c": {
-     "id": "snapform-62798102e6ac2898-c",
-     "side": "offense",
-     "symbol": "square",
-     "label": "",
-     "x": 0,
-     "y": 0,
-     "role": "C"
-    },
-    "snapform-62798102e6ac2898-rg": {
-     "id": "snapform-62798102e6ac2898-rg",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "",
-     "x": 1,
-     "y": 0,
-     "role": "OL"
-    },
-    "snapform-62798102e6ac2898-rt": {
-     "id": "snapform-62798102e6ac2898-rt",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "",
-     "x": 2,
-     "y": 0,
-     "role": "OL"
-    },
-    "snapform-62798102e6ac2898-q": {
-     "id": "snapform-62798102e6ac2898-q",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "Q",
-     "x": 0,
-     "y": -5,
-     "role": "QB"
-    },
-    "snapform-62798102e6ac2898-h": {
-     "id": "snapform-62798102e6ac2898-h",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "H",
-     "x": 1.5,
-     "y": -5,
-     "role": "RB"
-    },
-    "snapform-62798102e6ac2898-y": {
-     "id": "snapform-62798102e6ac2898-y",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "Y",
-     "x": 3,
-     "y": 0,
-     "role": "TE"
-    },
-    "snapform-62798102e6ac2898-z": {
-     "id": "snapform-62798102e6ac2898-z",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "Z",
-     "x": 18.73,
-     "y": -1,
-     "role": "WR"
-    },
-    "snapform-62798102e6ac2898-f": {
-     "id": "snapform-62798102e6ac2898-f",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "F",
-     "x": -6.8,
-     "y": -1,
-     "role": "WR"
-    },
-    "snapform-62798102e6ac2898-x": {
-     "id": "snapform-62798102e6ac2898-x",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "X",
-     "x": -15.6,
-     "y": 0,
-     "role": "WR"
-    }
-   },
-   "tags": [
-    "eagles-2026",
-    "11",
-    "2x2 'D'",
-    "W1",
-    "Dice",
-    "2x2 'D'"
-   ],
-   "family": "2x2 'D'",
-   "strength": "right",
-   "qbAlignment": "gun",
-   "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W1_WAS-PHI_playforge.json, W2_PHI-TEN_playforge.json)",
-   "note": "System call: Gun Dice Rt [11]. Charted as 11 Gun 2x2 Rt.\nBack on the strong side of the quarterback.\nSame picture, different jobs: Dixie.\nW1-006: After the shift: Goedert inline R (two-point), one receiver R just inside the numbers; two receivers L, one in the slot just inside the numbers and one wide outside the numbers. Hurts in gun, Shipley beside him to the right. Before the shift it was 3x1 Rt with two receivers paired at the numbers R.\nDrawn on the Left hash (seen: Left 1).",
-   "confidence": "derived",
-   "builtin": true,
-   "signature": "11|2x2 'D'|Gun|B:RB:R:gun_offset,Q:gun,R:L1:WR:slot:off,R:L2:WR:wide:on,R:R1:TE:inline:on,R:R2:WR:numbers:off",
-   "usage": {
-    "count": 1,
-    "snapIds": [
-     "W1-006"
-    ],
-    "weeks": [
-     1
-    ],
-    "hashes": [
-     "Left"
-    ],
-    "exact": 1,
-    "template": 0
-   },
-   "createdAt": "2026-01-01T00:00:00.000Z",
-   "updatedAt": "2026-01-01T00:00:00.000Z"
-  },
-  {
    "id": "snapform-aa18f9bd915fcbdb",
    "name": "Gun Dyno Rt #8",
    "chartName": "11 Gun 2x2 Rt",
@@ -4912,7 +4608,7 @@
   },
   {
    "id": "snapform-7fca6681fa468fbf",
-   "name": "Gun Dice Rt #2",
+   "name": "Gun Dice Rt",
    "chartName": "11 Gun 2x2 Rt",
    "system": {
     "id": "eagles-2026",
@@ -5064,15 +4760,17 @@
    "updatedAt": "2026-01-01T00:00:00.000Z"
   },
   {
-   "id": "snapform-e359603b4cbd9af5",
-   "name": "Gun Dice Rt #3",
+   "id": "snapform-1ad5299de4e31ffb",
+   "name": "Gun Dice Rt Off #5",
    "chartName": "11 Gun 2x2 Rt",
    "system": {
     "id": "eagles-2026",
     "base": "Dice",
     "family": "2x2 'D'",
     "strength": "Rt",
-    "tags": [],
+    "tags": [
+     "Off"
+    ],
     "back": "strong",
     "alternates": [
      "Dixie"
@@ -5083,8 +4781,8 @@
    "personnel": "11",
    "playersPerSide": 11,
    "players": {
-    "snapform-e359603b4cbd9af5-lt": {
-     "id": "snapform-e359603b4cbd9af5-lt",
+    "snapform-1ad5299de4e31ffb-lt": {
+     "id": "snapform-1ad5299de4e31ffb-lt",
      "side": "offense",
      "symbol": "circle",
      "label": "",
@@ -5092,8 +4790,8 @@
      "y": 0,
      "role": "OL"
     },
-    "snapform-e359603b4cbd9af5-lg": {
-     "id": "snapform-e359603b4cbd9af5-lg",
+    "snapform-1ad5299de4e31ffb-lg": {
+     "id": "snapform-1ad5299de4e31ffb-lg",
      "side": "offense",
      "symbol": "circle",
      "label": "",
@@ -5101,8 +4799,8 @@
      "y": 0,
      "role": "OL"
     },
-    "snapform-e359603b4cbd9af5-c": {
-     "id": "snapform-e359603b4cbd9af5-c",
+    "snapform-1ad5299de4e31ffb-c": {
+     "id": "snapform-1ad5299de4e31ffb-c",
      "side": "offense",
      "symbol": "square",
      "label": "",
@@ -5110,8 +4808,8 @@
      "y": 0,
      "role": "C"
     },
-    "snapform-e359603b4cbd9af5-rg": {
-     "id": "snapform-e359603b4cbd9af5-rg",
+    "snapform-1ad5299de4e31ffb-rg": {
+     "id": "snapform-1ad5299de4e31ffb-rg",
      "side": "offense",
      "symbol": "circle",
      "label": "",
@@ -5119,8 +4817,8 @@
      "y": 0,
      "role": "OL"
     },
-    "snapform-e359603b4cbd9af5-rt": {
-     "id": "snapform-e359603b4cbd9af5-rt",
+    "snapform-1ad5299de4e31ffb-rt": {
+     "id": "snapform-1ad5299de4e31ffb-rt",
      "side": "offense",
      "symbol": "circle",
      "label": "",
@@ -5128,8 +4826,8 @@
      "y": 0,
      "role": "OL"
     },
-    "snapform-e359603b4cbd9af5-q": {
-     "id": "snapform-e359603b4cbd9af5-q",
+    "snapform-1ad5299de4e31ffb-q": {
+     "id": "snapform-1ad5299de4e31ffb-q",
      "side": "offense",
      "symbol": "circle",
      "label": "Q",
@@ -5137,8 +4835,8 @@
      "y": -5,
      "role": "QB"
     },
-    "snapform-e359603b4cbd9af5-h": {
-     "id": "snapform-e359603b4cbd9af5-h",
+    "snapform-1ad5299de4e31ffb-h": {
+     "id": "snapform-1ad5299de4e31ffb-h",
      "side": "offense",
      "symbol": "circle",
      "label": "H",
@@ -5146,39 +4844,39 @@
      "y": -5,
      "role": "RB"
     },
-    "snapform-e359603b4cbd9af5-y": {
-     "id": "snapform-e359603b4cbd9af5-y",
+    "snapform-1ad5299de4e31ffb-y": {
+     "id": "snapform-1ad5299de4e31ffb-y",
      "side": "offense",
      "symbol": "circle",
      "label": "Y",
-     "x": 3,
-     "y": 0,
+     "x": 3.08,
+     "y": -1,
      "role": "TE"
     },
-    "snapform-e359603b4cbd9af5-z": {
-     "id": "snapform-e359603b4cbd9af5-z",
+    "snapform-1ad5299de4e31ffb-z": {
+     "id": "snapform-1ad5299de4e31ffb-z",
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 9.87,
-     "y": -1,
+     "x": 14.67,
+     "y": 0,
      "role": "WR"
     },
-    "snapform-e359603b4cbd9af5-f": {
-     "id": "snapform-e359603b4cbd9af5-f",
+    "snapform-1ad5299de4e31ffb-f": {
+     "id": "snapform-1ad5299de4e31ffb-f",
      "side": "offense",
      "symbol": "circle",
      "label": "F",
-     "x": -5,
+     "x": -8.08,
      "y": -1,
      "role": "WR"
     },
-    "snapform-e359603b4cbd9af5-x": {
-     "id": "snapform-e359603b4cbd9af5-x",
+    "snapform-1ad5299de4e31ffb-x": {
+     "id": "snapform-1ad5299de4e31ffb-x",
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -12.6,
+     "x": -14.67,
      "y": 0,
      "role": "WR"
     }
@@ -5195,14 +4893,14 @@
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W1_WAS-PHI_playforge.json, W2_PHI-TEN_playforge.json)",
-   "note": "System call: Gun Dice Rt [11]. Charted as 11 Gun 2x2 Rt.\nBack on the strong side of the quarterback.\nSame picture, different jobs: Dixie.\nW1-005: Goedert inline R (hand down), one receiver in a reduced slot R just outside the right college hash; Lemon tight L off the ball about 2 yards outside the LT, one receiver L on the line at the inside edge of the numbers. Hurts in gun, Bigsby beside him to the right. No motion.\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Gun Dice Rt Off [11]. Charted as 11 Gun 2x2 Rt.\nBack on the strong side of the quarterback.\nSame picture, different jobs: Dixie.\nW1-006: After the shift: Goedert inline R (two-point), one receiver R just inside the numbers; two receivers L, one in the slot just inside the numbers and one wide outside the numbers. Hurts in gun, Shipley beside him to the right. Before the shift it was 3x1 Rt with two receivers paired at the numbers R.\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
-   "signature": "11|2x2 'D'|Gun|B:RB:R:gun_offset,Q:gun,R:L1:WR:tight:off,R:L2:WR:numbers:on,R:R1:TE:inline:on,R:R2:WR:slot:off",
+   "signature": "11|2x2 'D'|Gun|B:RB:R:gun_offset,Q:gun,R:L1:WR:tight:off@-8.083,-1=F,R:L2:WR:numbers:on@-14.667,0=X,R:R1:TE:wing:off@3.083,-1=Y,R:R2:WR:numbers:on@14.667,0=Z",
    "usage": {
     "count": 1,
     "snapIds": [
-     "W1-005"
+     "W1-006"
     ],
     "weeks": [
      1
@@ -8109,6 +7807,159 @@
    "updatedAt": "2026-01-01T00:00:00.000Z"
   },
   {
+   "id": "snapform-ce45e9cab6a1a3b4",
+   "name": "Gun Sink Rt Close",
+   "chartName": "11 Gun Stack Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Sink",
+    "family": "2x2 Stack 'S'",
+    "strength": "Rt",
+    "tags": [
+     "Close"
+    ],
+    "back": "strong",
+    "alternates": [],
+    "confidence": "rule"
+   },
+   "side": "offense",
+   "personnel": "11",
+   "playersPerSide": 11,
+   "players": {
+    "snapform-ce45e9cab6a1a3b4-lt": {
+     "id": "snapform-ce45e9cab6a1a3b4-lt",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "",
+     "x": -2,
+     "y": 0,
+     "role": "OL"
+    },
+    "snapform-ce45e9cab6a1a3b4-lg": {
+     "id": "snapform-ce45e9cab6a1a3b4-lg",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "",
+     "x": -1,
+     "y": 0,
+     "role": "OL"
+    },
+    "snapform-ce45e9cab6a1a3b4-c": {
+     "id": "snapform-ce45e9cab6a1a3b4-c",
+     "side": "offense",
+     "symbol": "square",
+     "label": "",
+     "x": 0,
+     "y": 0,
+     "role": "C"
+    },
+    "snapform-ce45e9cab6a1a3b4-rg": {
+     "id": "snapform-ce45e9cab6a1a3b4-rg",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "",
+     "x": 1,
+     "y": 0,
+     "role": "OL"
+    },
+    "snapform-ce45e9cab6a1a3b4-rt": {
+     "id": "snapform-ce45e9cab6a1a3b4-rt",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "",
+     "x": 2,
+     "y": 0,
+     "role": "OL"
+    },
+    "snapform-ce45e9cab6a1a3b4-q": {
+     "id": "snapform-ce45e9cab6a1a3b4-q",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "Q",
+     "x": 0,
+     "y": -5,
+     "role": "QB"
+    },
+    "snapform-ce45e9cab6a1a3b4-h": {
+     "id": "snapform-ce45e9cab6a1a3b4-h",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "H",
+     "x": 1.5,
+     "y": -5,
+     "role": "RB"
+    },
+    "snapform-ce45e9cab6a1a3b4-y": {
+     "id": "snapform-ce45e9cab6a1a3b4-y",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "Y",
+     "x": 3,
+     "y": 0,
+     "role": "TE"
+    },
+    "snapform-ce45e9cab6a1a3b4-z": {
+     "id": "snapform-ce45e9cab6a1a3b4-z",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "Z",
+     "x": 8.08,
+     "y": -1,
+     "role": "WR"
+    },
+    "snapform-ce45e9cab6a1a3b4-f": {
+     "id": "snapform-ce45e9cab6a1a3b4-f",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "F",
+     "x": -5.08,
+     "y": -1,
+     "role": "WR"
+    },
+    "snapform-ce45e9cab6a1a3b4-x": {
+     "id": "snapform-ce45e9cab6a1a3b4-x",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "X",
+     "x": -8.08,
+     "y": 0,
+     "role": "WR"
+    }
+   },
+   "tags": [
+    "eagles-2026",
+    "11",
+    "2x2 Stack 'S'",
+    "W1",
+    "Sink",
+    "2x2 Stack 'S'"
+   ],
+   "family": "2x2 Stack 'S'",
+   "strength": "right",
+   "qbAlignment": "gun",
+   "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W1_WAS-PHI_playforge.json, W2_PHI-TEN_playforge.json)",
+   "note": "System call: Gun Sink Rt Close [11]. Charted as 11 Gun Stack Rt.\nBack on the strong side of the quarterback.\nW1-005: Goedert inline R (hand down), one receiver in a reduced slot R just outside the right college hash; Lemon tight L off the ball about 2 yards outside the LT, one receiver L on the line at the inside edge of the numbers. Hurts in gun, Bigsby beside him to the right. No motion.\nDrawn on the Left hash (seen: Left 1).",
+   "confidence": "derived",
+   "builtin": true,
+   "signature": "11|2x2 Stack 'S'|Gun|B:RB:R:gun_offset,Q:gun,R:L1:WR:tight:off@-5.083,-1=F,R:L2:WR:tight:on@-8.083,0=X,R:R1:TE:inline:on@3,0=Y,R:R2:WR:tight:off@8.083,-1=Z",
+   "usage": {
+    "count": 1,
+    "snapIds": [
+     "W1-005"
+    ],
+    "weeks": [
+     1
+    ],
+    "hashes": [
+     "Left"
+    ],
+    "exact": 1,
+    "template": 0
+   },
+   "createdAt": "2026-01-01T00:00:00.000Z",
+   "updatedAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
    "id": "snapform-33e2a99436361436",
    "name": "Gun Trips Lt #2",
    "chartName": "11 Gun 3x1 Lt",
@@ -10895,162 +10746,6 @@
    "updatedAt": "2026-01-01T00:00:00.000Z"
   },
   {
-   "id": "snapform-f17f2454f5c38032",
-   "name": "Gun Trips Lt Off #2",
-   "chartName": "11 Gun 3x1 Lt",
-   "system": {
-    "id": "eagles-2026",
-    "base": "Trips",
-    "family": "3x1 'T'",
-    "strength": "Lt",
-    "tags": [
-     "Off"
-    ],
-    "back": "weak",
-    "alternates": [
-     "Trio",
-     "Trax"
-    ],
-    "confidence": "rule"
-   },
-   "side": "offense",
-   "personnel": "11",
-   "playersPerSide": 11,
-   "players": {
-    "snapform-f17f2454f5c38032-lt": {
-     "id": "snapform-f17f2454f5c38032-lt",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "",
-     "x": -2,
-     "y": 0,
-     "role": "OL"
-    },
-    "snapform-f17f2454f5c38032-lg": {
-     "id": "snapform-f17f2454f5c38032-lg",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "",
-     "x": -1,
-     "y": 0,
-     "role": "OL"
-    },
-    "snapform-f17f2454f5c38032-c": {
-     "id": "snapform-f17f2454f5c38032-c",
-     "side": "offense",
-     "symbol": "square",
-     "label": "",
-     "x": 0,
-     "y": 0,
-     "role": "C"
-    },
-    "snapform-f17f2454f5c38032-rg": {
-     "id": "snapform-f17f2454f5c38032-rg",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "",
-     "x": 1,
-     "y": 0,
-     "role": "OL"
-    },
-    "snapform-f17f2454f5c38032-rt": {
-     "id": "snapform-f17f2454f5c38032-rt",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "",
-     "x": 2,
-     "y": 0,
-     "role": "OL"
-    },
-    "snapform-f17f2454f5c38032-q": {
-     "id": "snapform-f17f2454f5c38032-q",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "Q",
-     "x": 0,
-     "y": -5,
-     "role": "QB"
-    },
-    "snapform-f17f2454f5c38032-h": {
-     "id": "snapform-f17f2454f5c38032-h",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "H",
-     "x": 1.5,
-     "y": -5,
-     "role": "RB"
-    },
-    "snapform-f17f2454f5c38032-x": {
-     "id": "snapform-f17f2454f5c38032-x",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "X",
-     "x": 12.6,
-     "y": 0,
-     "role": "WR"
-    },
-    "snapform-f17f2454f5c38032-y": {
-     "id": "snapform-f17f2454f5c38032-y",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "Y",
-     "x": -3,
-     "y": -1,
-     "role": "TE"
-    },
-    "snapform-f17f2454f5c38032-f": {
-     "id": "snapform-f17f2454f5c38032-f",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "F",
-     "x": -9.86,
-     "y": 0,
-     "role": "WR"
-    },
-    "snapform-f17f2454f5c38032-z": {
-     "id": "snapform-f17f2454f5c38032-z",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "Z",
-     "x": -11.36,
-     "y": -1,
-     "role": "WR"
-    }
-   },
-   "tags": [
-    "eagles-2026",
-    "11",
-    "3x1 'T'",
-    "W1",
-    "Trips",
-    "3x1 'T'"
-   ],
-   "family": "3x1 'T'",
-   "strength": "left",
-   "qbAlignment": "gun",
-   "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W1_WAS-PHI_playforge.json, W2_PHI-TEN_playforge.json)",
-   "note": "System call: Gun Trips Lt Off [11]. Charted as 11 Gun 3x1 Lt.\nBack on the weak side of the quarterback.\nSame picture, different jobs: Trio, Trax.\nW1-003: Set (1.0 to 4.0 s): Goedert wing L off the LT's hip, two receivers in the slot L (inside one on the line just outside the left hash, outside one off the ball about 1.5 yards wider); one receiver alone R on the outer edge of the numbers. Hurts in gun, Barkley beside him to the right. Goedert then crosses behind the line to wing R and is there as the ball is snapped (2x2 as snapped).\nDrawn on the Right hash (seen: Right 1).",
-   "confidence": "derived",
-   "builtin": true,
-   "signature": "11|3x1 'T'|Gun|B:RB:R:gun_offset,Q:gun,R:L1:TE:wing:off,R:L2:WR:slot:on,R:L3:WR:slot:off,R:R1:WR:numbers:on",
-   "usage": {
-    "count": 1,
-    "snapIds": [
-     "W1-003"
-    ],
-    "weeks": [
-     1
-    ],
-    "hashes": [
-     "Right"
-    ],
-    "exact": 1,
-    "template": 0
-   },
-   "createdAt": "2026-01-01T00:00:00.000Z",
-   "updatedAt": "2026-01-01T00:00:00.000Z"
-  },
-  {
    "id": "snapform-c74ac66cc1ca16ea",
    "name": "Gun Trips Rt #5",
    "chartName": "11 Gun 3x1 Rt",
@@ -13044,6 +12739,161 @@
     "count": 1,
     "snapIds": [
      "W1-021"
+    ],
+    "weeks": [
+     1
+    ],
+    "hashes": [
+     "Right"
+    ],
+    "exact": 1,
+    "template": 0
+   },
+   "createdAt": "2026-01-01T00:00:00.000Z",
+   "updatedAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+   "id": "snapform-5e0d73ae0a02e6f8",
+   "name": "Gun Bunch Lt #4",
+   "chartName": "11 Gun Bunch Lt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Bunch",
+    "family": "Bunch 'B'",
+    "strength": "Lt",
+    "tags": [],
+    "back": "weak",
+    "alternates": [
+     "Bin",
+     "Buddy",
+     "Box"
+    ],
+    "confidence": "rule"
+   },
+   "side": "offense",
+   "personnel": "11",
+   "playersPerSide": 11,
+   "players": {
+    "snapform-5e0d73ae0a02e6f8-lt": {
+     "id": "snapform-5e0d73ae0a02e6f8-lt",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "",
+     "x": -2,
+     "y": 0,
+     "role": "OL"
+    },
+    "snapform-5e0d73ae0a02e6f8-lg": {
+     "id": "snapform-5e0d73ae0a02e6f8-lg",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "",
+     "x": -1,
+     "y": 0,
+     "role": "OL"
+    },
+    "snapform-5e0d73ae0a02e6f8-c": {
+     "id": "snapform-5e0d73ae0a02e6f8-c",
+     "side": "offense",
+     "symbol": "square",
+     "label": "",
+     "x": 0,
+     "y": 0,
+     "role": "C"
+    },
+    "snapform-5e0d73ae0a02e6f8-rg": {
+     "id": "snapform-5e0d73ae0a02e6f8-rg",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "",
+     "x": 1,
+     "y": 0,
+     "role": "OL"
+    },
+    "snapform-5e0d73ae0a02e6f8-rt": {
+     "id": "snapform-5e0d73ae0a02e6f8-rt",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "",
+     "x": 2,
+     "y": 0,
+     "role": "OL"
+    },
+    "snapform-5e0d73ae0a02e6f8-q": {
+     "id": "snapform-5e0d73ae0a02e6f8-q",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "Q",
+     "x": 0,
+     "y": -5,
+     "role": "QB"
+    },
+    "snapform-5e0d73ae0a02e6f8-h": {
+     "id": "snapform-5e0d73ae0a02e6f8-h",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "H",
+     "x": 1.5,
+     "y": -5,
+     "role": "RB"
+    },
+    "snapform-5e0d73ae0a02e6f8-x": {
+     "id": "snapform-5e0d73ae0a02e6f8-x",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "X",
+     "x": 14.67,
+     "y": 0,
+     "role": "WR"
+    },
+    "snapform-5e0d73ae0a02e6f8-y": {
+     "id": "snapform-5e0d73ae0a02e6f8-y",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "Y",
+     "x": -3.08,
+     "y": -1,
+     "role": "TE"
+    },
+    "snapform-5e0d73ae0a02e6f8-f": {
+     "id": "snapform-5e0d73ae0a02e6f8-f",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "F",
+     "x": -6.08,
+     "y": 0,
+     "role": "WR"
+    },
+    "snapform-5e0d73ae0a02e6f8-z": {
+     "id": "snapform-5e0d73ae0a02e6f8-z",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "Z",
+     "x": -8.08,
+     "y": -1,
+     "role": "WR"
+    }
+   },
+   "tags": [
+    "eagles-2026",
+    "11",
+    "Bunch 'B'",
+    "W1",
+    "Bunch",
+    "Bunch 'B'"
+   ],
+   "family": "Bunch 'B'",
+   "strength": "left",
+   "qbAlignment": "gun",
+   "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W1_WAS-PHI_playforge.json, W2_PHI-TEN_playforge.json)",
+   "note": "System call: Gun Bunch Lt [11]. Charted as 11 Gun Bunch Lt.\nBack on the weak side of the quarterback.\nSame picture, different jobs: Bin, Buddy, Box.\nW1-003: Set (1.0 to 4.0 s): Goedert wing L off the LT's hip, two receivers in the slot L (inside one on the line just outside the left hash, outside one off the ball about 1.5 yards wider); one receiver alone R on the outer edge of the numbers. Hurts in gun, Barkley beside him to the right. Goedert then crosses behind the line to wing R and is there as the ball is snapped (2x2 as snapped).\nDrawn on the Right hash (seen: Right 1).",
+   "confidence": "derived",
+   "builtin": true,
+   "signature": "11|Bunch 'B'|Gun|B:RB:R:gun_offset,Q:gun,R:L1:TE:wing:off@-3.083,-1=Y,R:L2:WR:tight:on@-6.083,0=F,R:L3:WR:tight:off@-8.083,-1=Z,R:R1:WR:numbers:on@14.667,0=X",
+   "usage": {
+    "count": 1,
+    "snapIds": [
+     "W1-003"
     ],
     "weeks": [
      1
@@ -15206,14 +15056,16 @@
   },
   {
    "id": "snapform-ddce3cf32d3e8d69",
-   "name": "Deuce Lt",
+   "name": "Deuce Lt Tight",
    "chartName": "12 UC 2x2 Lt",
    "system": {
     "id": "eagles-2026",
     "base": "Deuce",
     "family": "2x2 'D'",
     "strength": "Lt",
-    "tags": [],
+    "tags": [
+     "Tight"
+    ],
     "alternates": [],
     "confidence": "rule"
    },
@@ -15333,7 +15185,7 @@
    "strength": "left",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W1_WAS-PHI_playforge.json, W2_PHI-TEN_playforge.json)",
-   "note": "System call: Deuce Lt [12]. Charted as 12 UC 2x2 Lt.\nW1-011: Goedert inline L (hand down), Smith L off the ball at the inside edge of the numbers; Mundt inline R, Wicks on the line tight outside Mundt. Barkley deep. Smith goes in motion across the formation behind the line at the snap.\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Deuce Lt Tight [12]. Charted as 12 UC 2x2 Lt.\nW1-011: Goedert inline L (hand down), Smith L off the ball at the inside edge of the numbers; Mundt inline R, Wicks on the line tight outside Mundt. Barkley deep. Smith goes in motion across the formation behind the line at the snap.\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "12|2x2 'D'|Under Center|B:RB:C:deep,Q:under_center,R:L1:TE:inline:on,R:L2:WR:numbers:off,R:R1:TE:inline:on,R:R2:WR:tight:on",
@@ -15508,7 +15360,7 @@
   },
   {
    "id": "snapform-c0e9d355dec3ed9f",
-   "name": "Deuce Lt #2",
+   "name": "Deuce Lt",
    "chartName": "12 UC 2x2 Lt",
    "system": {
     "id": "eagles-2026",
@@ -15658,7 +15510,7 @@
   },
   {
    "id": "snapform-31d6eae9919232fb",
-   "name": "Deuce Lt #3",
+   "name": "Deuce Lt #2",
    "chartName": "12 UC 2x2 Lt",
    "system": {
     "id": "eagles-2026",
@@ -15808,7 +15660,7 @@
   },
   {
    "id": "snapform-382e40e74769f775",
-   "name": "Deuce Lt #4",
+   "name": "Deuce Lt #3",
    "chartName": "12 UC 2x2 Lt",
    "system": {
     "id": "eagles-2026",
@@ -16107,8 +15959,8 @@
    "updatedAt": "2026-01-01T00:00:00.000Z"
   },
   {
-   "id": "snapform-cf5c6a63ce9c6ce9",
-   "name": "Deuce Rt Off",
+   "id": "snapform-227d536de48afa97",
+   "name": "Deuce Rt Clamp Tight",
    "chartName": "12 UC 2x2 Rt",
    "system": {
     "id": "eagles-2026",
@@ -16116,7 +15968,8 @@
     "family": "2x2 'D'",
     "strength": "Rt",
     "tags": [
-     "Off"
+     "Clamp",
+     "Tight"
     ],
     "alternates": [],
     "confidence": "rule"
@@ -16125,8 +15978,8 @@
    "personnel": "12",
    "playersPerSide": 11,
    "players": {
-    "snapform-cf5c6a63ce9c6ce9-lt": {
-     "id": "snapform-cf5c6a63ce9c6ce9-lt",
+    "snapform-227d536de48afa97-lt": {
+     "id": "snapform-227d536de48afa97-lt",
      "side": "offense",
      "symbol": "circle",
      "label": "",
@@ -16134,8 +15987,8 @@
      "y": 0,
      "role": "OL"
     },
-    "snapform-cf5c6a63ce9c6ce9-lg": {
-     "id": "snapform-cf5c6a63ce9c6ce9-lg",
+    "snapform-227d536de48afa97-lg": {
+     "id": "snapform-227d536de48afa97-lg",
      "side": "offense",
      "symbol": "circle",
      "label": "",
@@ -16143,8 +15996,8 @@
      "y": 0,
      "role": "OL"
     },
-    "snapform-cf5c6a63ce9c6ce9-c": {
-     "id": "snapform-cf5c6a63ce9c6ce9-c",
+    "snapform-227d536de48afa97-c": {
+     "id": "snapform-227d536de48afa97-c",
      "side": "offense",
      "symbol": "square",
      "label": "",
@@ -16152,8 +16005,8 @@
      "y": 0,
      "role": "C"
     },
-    "snapform-cf5c6a63ce9c6ce9-rg": {
-     "id": "snapform-cf5c6a63ce9c6ce9-rg",
+    "snapform-227d536de48afa97-rg": {
+     "id": "snapform-227d536de48afa97-rg",
      "side": "offense",
      "symbol": "circle",
      "label": "",
@@ -16161,8 +16014,8 @@
      "y": 0,
      "role": "OL"
     },
-    "snapform-cf5c6a63ce9c6ce9-rt": {
-     "id": "snapform-cf5c6a63ce9c6ce9-rt",
+    "snapform-227d536de48afa97-rt": {
+     "id": "snapform-227d536de48afa97-rt",
      "side": "offense",
      "symbol": "circle",
      "label": "",
@@ -16170,8 +16023,8 @@
      "y": 0,
      "role": "OL"
     },
-    "snapform-cf5c6a63ce9c6ce9-q": {
-     "id": "snapform-cf5c6a63ce9c6ce9-q",
+    "snapform-227d536de48afa97-q": {
+     "id": "snapform-227d536de48afa97-q",
      "side": "offense",
      "symbol": "circle",
      "label": "Q",
@@ -16179,8 +16032,8 @@
      "y": -1,
      "role": "QB"
     },
-    "snapform-cf5c6a63ce9c6ce9-h": {
-     "id": "snapform-cf5c6a63ce9c6ce9-h",
+    "snapform-227d536de48afa97-h": {
+     "id": "snapform-227d536de48afa97-h",
      "side": "offense",
      "symbol": "circle",
      "label": "H",
@@ -16188,8 +16041,8 @@
      "y": -7,
      "role": "RB"
     },
-    "snapform-cf5c6a63ce9c6ce9-y": {
-     "id": "snapform-cf5c6a63ce9c6ce9-y",
+    "snapform-227d536de48afa97-y": {
+     "id": "snapform-227d536de48afa97-y",
      "side": "offense",
      "symbol": "circle",
      "label": "Y",
@@ -16197,30 +16050,30 @@
      "y": -1,
      "role": "TE"
     },
-    "snapform-cf5c6a63ce9c6ce9-z": {
-     "id": "snapform-cf5c6a63ce9c6ce9-z",
+    "snapform-227d536de48afa97-z": {
+     "id": "snapform-227d536de48afa97-z",
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 9.87,
+     "x": 8.08,
      "y": 0,
      "role": "WR"
     },
-    "snapform-cf5c6a63ce9c6ce9-u": {
-     "id": "snapform-cf5c6a63ce9c6ce9-u",
+    "snapform-227d536de48afa97-f": {
+     "id": "snapform-227d536de48afa97-f",
      "side": "offense",
      "symbol": "circle",
-     "label": "U",
+     "label": "F",
      "x": -3,
      "y": 0,
      "role": "TE"
     },
-    "snapform-cf5c6a63ce9c6ce9-x": {
-     "id": "snapform-cf5c6a63ce9c6ce9-x",
+    "snapform-227d536de48afa97-x": {
+     "id": "snapform-227d536de48afa97-x",
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -6,
+     "x": -7.08,
      "y": -1,
      "role": "WR"
     }
@@ -16237,166 +16090,14 @@
    "strength": "right",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W1_WAS-PHI_playforge.json, W2_PHI-TEN_playforge.json)",
-   "note": "System call: Deuce Rt Off [12]. Charted as 12 UC 2x2 Rt.\nW1-001: Set (about 3.0 to 4.5 s): Mundt inline L with Smith off the ball just outside him; Goedert wing R off the RT's hip, Wicks on the line in a reduced slot R about 2 yards outside the right hash. Barkley deep behind Hurts. Smith then runs across to the right, turns around outside Wicks and comes back, so he is behind Mundt on the left again as the ball is snapped.\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Deuce Rt Clamp Tight [12]. Charted as 12 UC 2x2 Rt.\nW1-001: Set (about 3.0 to 4.5 s): Mundt inline L with Smith off the ball just outside him; Goedert wing R off the RT's hip, Wicks on the line in a reduced slot R about 2 yards outside the right hash. Barkley deep behind Hurts. Smith then runs across to the right, turns around outside Wicks and comes back, so he is behind Mundt on the left again as the ball is snapped.\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
-   "signature": "12|2x2 'D'|Under Center|B:RB:C:deep,Q:under_center,R:L1:TE:inline:on,R:L2:WR:tight:off,R:R1:TE:wing:off,R:R2:WR:slot:on",
+   "signature": "12|2x2 'D'|Under Center|B:RB:C:deep,Q:under_center,R:L1:TE:inline:on@-3,0=F,R:L2:WR:tight:off@-7.083,-1=X,R:R1:TE:wing:off@3,-1=Y,R:R2:WR:tight:on@8.083,0=Z",
    "usage": {
     "count": 1,
     "snapIds": [
      "W1-001"
-    ],
-    "weeks": [
-     1
-    ],
-    "hashes": [
-     "Left"
-    ],
-    "exact": 1,
-    "template": 0
-   },
-   "createdAt": "2026-01-01T00:00:00.000Z",
-   "updatedAt": "2026-01-01T00:00:00.000Z"
-  },
-  {
-   "id": "snapform-230085134c8669d9",
-   "name": "Deuce Rt Clamp",
-   "chartName": "12 UC 2x2 Rt",
-   "system": {
-    "id": "eagles-2026",
-    "base": "Deuce",
-    "family": "2x2 'D'",
-    "strength": "Rt",
-    "tags": [
-     "Clamp"
-    ],
-    "alternates": [],
-    "confidence": "rule"
-   },
-   "side": "offense",
-   "personnel": "12",
-   "playersPerSide": 11,
-   "players": {
-    "snapform-230085134c8669d9-lt": {
-     "id": "snapform-230085134c8669d9-lt",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "",
-     "x": -2,
-     "y": 0,
-     "role": "OL"
-    },
-    "snapform-230085134c8669d9-lg": {
-     "id": "snapform-230085134c8669d9-lg",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "",
-     "x": -1,
-     "y": 0,
-     "role": "OL"
-    },
-    "snapform-230085134c8669d9-c": {
-     "id": "snapform-230085134c8669d9-c",
-     "side": "offense",
-     "symbol": "square",
-     "label": "",
-     "x": 0,
-     "y": 0,
-     "role": "C"
-    },
-    "snapform-230085134c8669d9-rg": {
-     "id": "snapform-230085134c8669d9-rg",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "",
-     "x": 1,
-     "y": 0,
-     "role": "OL"
-    },
-    "snapform-230085134c8669d9-rt": {
-     "id": "snapform-230085134c8669d9-rt",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "",
-     "x": 2,
-     "y": 0,
-     "role": "OL"
-    },
-    "snapform-230085134c8669d9-q": {
-     "id": "snapform-230085134c8669d9-q",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "Q",
-     "x": 0,
-     "y": -1,
-     "role": "QB"
-    },
-    "snapform-230085134c8669d9-h": {
-     "id": "snapform-230085134c8669d9-h",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "H",
-     "x": 0,
-     "y": -7,
-     "role": "RB"
-    },
-    "snapform-230085134c8669d9-y": {
-     "id": "snapform-230085134c8669d9-y",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "Y",
-     "x": 3,
-     "y": -1,
-     "role": "TE"
-    },
-    "snapform-230085134c8669d9-z": {
-     "id": "snapform-230085134c8669d9-z",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "Z",
-     "x": 5,
-     "y": 0,
-     "role": "WR"
-    },
-    "snapform-230085134c8669d9-u": {
-     "id": "snapform-230085134c8669d9-u",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "U",
-     "x": -3,
-     "y": 0,
-     "role": "TE"
-    },
-    "snapform-230085134c8669d9-x": {
-     "id": "snapform-230085134c8669d9-x",
-     "side": "offense",
-     "symbol": "circle",
-     "label": "X",
-     "x": -6,
-     "y": -1,
-     "role": "WR"
-    }
-   },
-   "tags": [
-    "eagles-2026",
-    "12",
-    "2x2 'D'",
-    "W1",
-    "Deuce",
-    "2x2 'D'"
-   ],
-   "family": "2x2 'D'",
-   "strength": "right",
-   "qbAlignment": "under",
-   "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W1_WAS-PHI_playforge.json, W2_PHI-TEN_playforge.json)",
-   "note": "System call: Deuce Rt Clamp [12]. Charted as 12 UC 2x2 Rt.\nW1-004: Set (3.0 to 4.5 s): Mundt inline L with Smith off the ball just outside him; Goedert wing R off the RT's hip, Cooper on the line tight outside Goedert. Barkley deep. Smith runs across to outside Cooper on the right, turns around and comes back, and is behind Mundt on the left again at the snap.\nDrawn on the Left hash (seen: Left 1).",
-   "confidence": "derived",
-   "builtin": true,
-   "signature": "12|2x2 'D'|Under Center|B:RB:C:deep,Q:under_center,R:L1:TE:inline:on,R:L2:WR:tight:off,R:R1:TE:wing:off,R:R2:WR:tight:on",
-   "usage": {
-    "count": 1,
-    "snapIds": [
-     "W1-004"
     ],
     "weeks": [
      1
@@ -17170,14 +16871,16 @@
   },
   {
    "id": "snapform-fee2d658a2f4d9ee",
-   "name": "West Lt #2",
+   "name": "West Lt Close",
    "chartName": "12 UC 3x1 Lt",
    "system": {
     "id": "eagles-2026",
     "base": "West",
     "family": "3x1 'T'",
     "strength": "Lt",
-    "tags": [],
+    "tags": [
+     "Close"
+    ],
     "alternates": [],
     "confidence": "rule"
    },
@@ -17297,7 +17000,7 @@
    "strength": "left",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W1_WAS-PHI_playforge.json, W2_PHI-TEN_playforge.json)",
-   "note": "System call: West Lt [12]. Charted as 12 UC 3x1 Lt.\nSecond tight end charted ON the line outside the Y, which covers the Y: called West, check who is off the ball.\nW1-033: First set (4.0): double tight left (Mundt inline, Goedert outside him), Wicks on the line right at the inside edge of the numbers with Smith stacked behind him. Smith then shifts all the way across behind the formation and resets off the ball just outside Goedert. As snapped: under center, Barkley deep, Mundt, Goedert and Smith left, Wicks alone right.\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: West Lt Close [12]. Charted as 12 UC 3x1 Lt.\nSecond tight end charted ON the line outside the Y, which covers the Y: called West, check who is off the ball.\nW1-033: First set (4.0): double tight left (Mundt inline, Goedert outside him), Wicks on the line right at the inside edge of the numbers with Smith stacked behind him. Smith then shifts all the way across behind the formation and resets off the ball just outside Goedert. As snapped: under center, Barkley deep, Mundt, Goedert and Smith left, Wicks alone right.\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "12|3x1 'T'|Under Center|B:RB:C:deep,Q:under_center,R:L1:TE:inline:on,R:L2:TE:inline:on,R:L3:WR:tight:off,R:R1:WR:numbers:on",
@@ -17626,7 +17329,7 @@
   },
   {
    "id": "snapform-da971b21e73b2cfb",
-   "name": "West Lt #3",
+   "name": "West Lt #2",
    "chartName": "12 UC 3x1 Lt",
    "system": {
     "id": "eagles-2026",
@@ -17776,14 +17479,16 @@
   },
   {
    "id": "snapform-7d4f58c6f1a6d810",
-   "name": "West Rt #2",
+   "name": "West Rt Close",
    "chartName": "12 UC 3x1 Rt",
    "system": {
     "id": "eagles-2026",
     "base": "West",
     "family": "3x1 'T'",
     "strength": "Rt",
-    "tags": [],
+    "tags": [
+     "Close"
+    ],
     "alternates": [],
     "confidence": "rule"
    },
@@ -17903,7 +17608,7 @@
    "strength": "right",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W1_WAS-PHI_playforge.json, W2_PHI-TEN_playforge.json)",
-   "note": "System call: West Rt [12]. Charted as 12 UC 3x1 Rt.\nW1-039: Set: under center, Barkley deep. Right: Mundt inline next to the right tackle, Goedert in a wing outside Mundt, Wicks tight outside Goedert off the ball. Left: one WR at the top edge of the numbers. As snapped: Wicks has crossed to the left, two each side.\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: West Rt Close [12]. Charted as 12 UC 3x1 Rt.\nW1-039: Set: under center, Barkley deep. Right: Mundt inline next to the right tackle, Goedert in a wing outside Mundt, Wicks tight outside Goedert off the ball. Left: one WR at the top edge of the numbers. As snapped: Wicks has crossed to the left, two each side.\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "12|3x1 'T'|Under Center|B:RB:C:deep,Q:under_center,R:L1:WR:numbers:on,R:R1:TE:inline:on,R:R2:TE:wing:off,R:R3:WR:tight:off",
@@ -17925,8 +17630,160 @@
    "updatedAt": "2026-01-01T00:00:00.000Z"
   },
   {
+   "id": "snapform-b17223c06b6f0b76",
+   "name": "West Rt Close #2",
+   "chartName": "12 UC 3x1 Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "West",
+    "family": "3x1 'T'",
+    "strength": "Rt",
+    "tags": [
+     "Close"
+    ],
+    "alternates": [],
+    "confidence": "rule"
+   },
+   "side": "offense",
+   "personnel": "12",
+   "playersPerSide": 11,
+   "players": {
+    "snapform-b17223c06b6f0b76-lt": {
+     "id": "snapform-b17223c06b6f0b76-lt",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "",
+     "x": -2,
+     "y": 0,
+     "role": "OL"
+    },
+    "snapform-b17223c06b6f0b76-lg": {
+     "id": "snapform-b17223c06b6f0b76-lg",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "",
+     "x": -1,
+     "y": 0,
+     "role": "OL"
+    },
+    "snapform-b17223c06b6f0b76-c": {
+     "id": "snapform-b17223c06b6f0b76-c",
+     "side": "offense",
+     "symbol": "square",
+     "label": "",
+     "x": 0,
+     "y": 0,
+     "role": "C"
+    },
+    "snapform-b17223c06b6f0b76-rg": {
+     "id": "snapform-b17223c06b6f0b76-rg",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "",
+     "x": 1,
+     "y": 0,
+     "role": "OL"
+    },
+    "snapform-b17223c06b6f0b76-rt": {
+     "id": "snapform-b17223c06b6f0b76-rt",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "",
+     "x": 2,
+     "y": 0,
+     "role": "OL"
+    },
+    "snapform-b17223c06b6f0b76-q": {
+     "id": "snapform-b17223c06b6f0b76-q",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "Q",
+     "x": 0,
+     "y": -1,
+     "role": "QB"
+    },
+    "snapform-b17223c06b6f0b76-h": {
+     "id": "snapform-b17223c06b6f0b76-h",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "H",
+     "x": 0,
+     "y": -7,
+     "role": "RB"
+    },
+    "snapform-b17223c06b6f0b76-y": {
+     "id": "snapform-b17223c06b6f0b76-y",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "Y",
+     "x": 3.08,
+     "y": 0,
+     "role": "TE"
+    },
+    "snapform-b17223c06b6f0b76-f": {
+     "id": "snapform-b17223c06b6f0b76-f",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "F",
+     "x": 4.08,
+     "y": -1,
+     "role": "TE"
+    },
+    "snapform-b17223c06b6f0b76-z": {
+     "id": "snapform-b17223c06b6f0b76-z",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "Z",
+     "x": 8.08,
+     "y": -1,
+     "role": "WR"
+    },
+    "snapform-b17223c06b6f0b76-x": {
+     "id": "snapform-b17223c06b6f0b76-x",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "X",
+     "x": -14.67,
+     "y": 0,
+     "role": "WR"
+    }
+   },
+   "tags": [
+    "eagles-2026",
+    "12",
+    "3x1 'T'",
+    "W1",
+    "West",
+    "3x1 'T'"
+   ],
+   "family": "3x1 'T'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W1_WAS-PHI_playforge.json, W2_PHI-TEN_playforge.json)",
+   "note": "System call: West Rt Close [12]. Charted as 12 UC 3x1 Rt.\nW1-007: Mundt inline R, Goedert wing R off Mundt's outside hip, Wicks on the line in a reduced slot R on the right college hash; Smith alone L on the numbers. Barkley deep. Goedert goes in motion across the backfield to the left at the snap.\nDrawn on the Left hash (seen: Left 1).",
+   "confidence": "derived",
+   "builtin": true,
+   "signature": "12|3x1 'T'|Under Center|B:RB:C:deep,Q:under_center,R:L1:WR:numbers:on@-14.667,0=X,R:R1:TE:inline:on@3.083,0=Y,R:R2:TE:wing:off@4.083,-1=F,R:R3:WR:tight:off@8.083,-1=Z",
+   "usage": {
+    "count": 1,
+    "snapIds": [
+     "W1-007"
+    ],
+    "weeks": [
+     1
+    ],
+    "hashes": [
+     "Left"
+    ],
+    "exact": 1,
+    "template": 0
+   },
+   "createdAt": "2026-01-01T00:00:00.000Z",
+   "updatedAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
    "id": "snapform-acb8396469719d7a",
-   "name": "West Rt #3",
+   "name": "West Rt",
    "chartName": "12 UC 3x1 Rt",
    "system": {
     "id": "eagles-2026",
@@ -18076,14 +17933,16 @@
   },
   {
    "id": "snapform-58ff4dc8b1f851d6",
-   "name": "West Lt #4",
+   "name": "West Lt Close #2",
    "chartName": "12 UC Big Lt",
    "system": {
     "id": "eagles-2026",
     "base": "West",
     "family": "3x1 'T'",
     "strength": "Lt",
-    "tags": [],
+    "tags": [
+     "Close"
+    ],
     "alternates": [],
     "confidence": "rule"
    },
@@ -18203,7 +18062,7 @@
    "strength": "left",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W1_WAS-PHI_playforge.json, W2_PHI-TEN_playforge.json)",
-   "note": "System call: West Lt [12]. Charted as 12 UC Big Lt.\nW2-027: Under center, Bigsby deep I-back; L: TE inline, TE wing off his hip, WR off the ball just outside; R: one WR off the ball near the numbers. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: West Lt Close [12]. Charted as 12 UC Big Lt.\nW2-027: Under center, Bigsby deep I-back; L: TE inline, TE wing off his hip, WR off the ball just outside; R: one WR off the ball near the numbers. Snapped as set\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "12|Big|Under Center|B:RB:C:deep,Q:under_center,R:L1:TE:inline:on,R:L2:TE:wing:off,R:L3:WR:tight:off,R:R1:WR:numbers:on",
@@ -18382,14 +18241,16 @@
   },
   {
    "id": "snapform-3b2ab081508d5f47",
-   "name": "West Rt #4",
+   "name": "West Rt Close #3",
    "chartName": "12 UC Big Rt",
    "system": {
     "id": "eagles-2026",
     "base": "West",
     "family": "3x1 'T'",
     "strength": "Rt",
-    "tags": [],
+    "tags": [
+     "Close"
+    ],
     "alternates": [],
     "confidence": "rule"
    },
@@ -18509,7 +18370,7 @@
    "strength": "right",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W1_WAS-PHI_playforge.json, W2_PHI-TEN_playforge.json)",
-   "note": "System call: West Rt [12]. Charted as 12 UC Big Rt.\nW2-035: Under center, Bigsby deep I-back; R: TE inline, TE wing, WR tight outside them; L: one WR wide. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: West Rt Close [12]. Charted as 12 UC Big Rt.\nW2-035: Under center, Bigsby deep I-back; R: TE inline, TE wing, WR tight outside them; L: one WR wide. Snapped as set\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "12|Big|Under Center|B:RB:C:deep,Q:under_center,R:L1:WR:wide:on,R:R1:TE:inline:on,R:R2:TE:wing:off,R:R3:WR:tight:on",
@@ -18520,6 +18381,314 @@
     ],
     "weeks": [
      2
+    ],
+    "hashes": [
+     "Left"
+    ],
+    "exact": 1,
+    "template": 0
+   },
+   "createdAt": "2026-01-01T00:00:00.000Z",
+   "updatedAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+   "id": "snapform-b722a79bc77392f5",
+   "name": "Bunch Rt",
+   "chartName": "12 UC Bunch Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Bunch",
+    "family": "Bunch 'B'",
+    "strength": "Rt",
+    "tags": [],
+    "alternates": [
+     "Bin",
+     "Buddy",
+     "Box"
+    ],
+    "confidence": "rule"
+   },
+   "side": "offense",
+   "personnel": "12",
+   "playersPerSide": 11,
+   "players": {
+    "snapform-b722a79bc77392f5-lt": {
+     "id": "snapform-b722a79bc77392f5-lt",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "",
+     "x": -2,
+     "y": 0,
+     "role": "OL"
+    },
+    "snapform-b722a79bc77392f5-lg": {
+     "id": "snapform-b722a79bc77392f5-lg",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "",
+     "x": -1,
+     "y": 0,
+     "role": "OL"
+    },
+    "snapform-b722a79bc77392f5-c": {
+     "id": "snapform-b722a79bc77392f5-c",
+     "side": "offense",
+     "symbol": "square",
+     "label": "",
+     "x": 0,
+     "y": 0,
+     "role": "C"
+    },
+    "snapform-b722a79bc77392f5-rg": {
+     "id": "snapform-b722a79bc77392f5-rg",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "",
+     "x": 1,
+     "y": 0,
+     "role": "OL"
+    },
+    "snapform-b722a79bc77392f5-rt": {
+     "id": "snapform-b722a79bc77392f5-rt",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "",
+     "x": 2,
+     "y": 0,
+     "role": "OL"
+    },
+    "snapform-b722a79bc77392f5-q": {
+     "id": "snapform-b722a79bc77392f5-q",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "Q",
+     "x": 0,
+     "y": -1,
+     "role": "QB"
+    },
+    "snapform-b722a79bc77392f5-h": {
+     "id": "snapform-b722a79bc77392f5-h",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "H",
+     "x": 0,
+     "y": -7,
+     "role": "RB"
+    },
+    "snapform-b722a79bc77392f5-f": {
+     "id": "snapform-b722a79bc77392f5-f",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "F",
+     "x": 3,
+     "y": -1,
+     "role": "TE"
+    },
+    "snapform-b722a79bc77392f5-y": {
+     "id": "snapform-b722a79bc77392f5-y",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "Y",
+     "x": 4.08,
+     "y": -1,
+     "role": "TE"
+    },
+    "snapform-b722a79bc77392f5-z": {
+     "id": "snapform-b722a79bc77392f5-z",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "Z",
+     "x": 6.08,
+     "y": 0,
+     "role": "WR"
+    },
+    "snapform-b722a79bc77392f5-x": {
+     "id": "snapform-b722a79bc77392f5-x",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "X",
+     "x": -14.67,
+     "y": 0,
+     "role": "WR"
+    }
+   },
+   "tags": [
+    "eagles-2026",
+    "12",
+    "Bunch 'B'",
+    "W1",
+    "Bunch",
+    "Bunch 'B'"
+   ],
+   "family": "Bunch 'B'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W1_WAS-PHI_playforge.json, W2_PHI-TEN_playforge.json)",
+   "note": "System call: Bunch Rt [12]. Charted as 12 UC Bunch Rt.\nSame picture, different jobs: Bin, Buddy, Box.\nW1-002: Set (2.0 to 3.5 s): Mundt inline R, Goedert attached just outside Mundt, Wicks on the line in a reduced slot R near the right college hash; Smith alone L at the top of the numbers. Barkley deep. Goedert then walks out to outside Wicks, pauses about 1 s (the 6.0 s frame) and comes back in at the snap.\nDrawn on the Left hash (seen: Left 1).",
+   "confidence": "derived",
+   "builtin": true,
+   "signature": "12|Bunch 'B'|Under Center|B:RB:C:deep,Q:under_center,R:L1:WR:numbers:on@-14.667,0=X,R:R1:TE:wing:off@3,-1=F,R:R2:TE:wing:off@4.083,-1=Y,R:R3:WR:tight:on@6.083,0=Z",
+   "usage": {
+    "count": 1,
+    "snapIds": [
+     "W1-002"
+    ],
+    "weeks": [
+     1
+    ],
+    "hashes": [
+     "Left"
+    ],
+    "exact": 1,
+    "template": 0
+   },
+   "createdAt": "2026-01-01T00:00:00.000Z",
+   "updatedAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+   "id": "snapform-697dd88a83b9e49c",
+   "name": "Bunch Rt #2",
+   "chartName": "12 UC Bunch Rt",
+   "system": {
+    "id": "eagles-2026",
+    "base": "Bunch",
+    "family": "Bunch 'B'",
+    "strength": "Rt",
+    "tags": [],
+    "alternates": [
+     "Bin",
+     "Buddy",
+     "Box"
+    ],
+    "confidence": "rule"
+   },
+   "side": "offense",
+   "personnel": "12",
+   "playersPerSide": 11,
+   "players": {
+    "snapform-697dd88a83b9e49c-lt": {
+     "id": "snapform-697dd88a83b9e49c-lt",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "",
+     "x": -2,
+     "y": 0,
+     "role": "OL"
+    },
+    "snapform-697dd88a83b9e49c-lg": {
+     "id": "snapform-697dd88a83b9e49c-lg",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "",
+     "x": -1,
+     "y": 0,
+     "role": "OL"
+    },
+    "snapform-697dd88a83b9e49c-c": {
+     "id": "snapform-697dd88a83b9e49c-c",
+     "side": "offense",
+     "symbol": "square",
+     "label": "",
+     "x": 0,
+     "y": 0,
+     "role": "C"
+    },
+    "snapform-697dd88a83b9e49c-rg": {
+     "id": "snapform-697dd88a83b9e49c-rg",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "",
+     "x": 1,
+     "y": 0,
+     "role": "OL"
+    },
+    "snapform-697dd88a83b9e49c-rt": {
+     "id": "snapform-697dd88a83b9e49c-rt",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "",
+     "x": 2,
+     "y": 0,
+     "role": "OL"
+    },
+    "snapform-697dd88a83b9e49c-q": {
+     "id": "snapform-697dd88a83b9e49c-q",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "Q",
+     "x": 0,
+     "y": -1,
+     "role": "QB"
+    },
+    "snapform-697dd88a83b9e49c-h": {
+     "id": "snapform-697dd88a83b9e49c-h",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "H",
+     "x": 0,
+     "y": -7,
+     "role": "RB"
+    },
+    "snapform-697dd88a83b9e49c-y": {
+     "id": "snapform-697dd88a83b9e49c-y",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "Y",
+     "x": 3.08,
+     "y": -1,
+     "role": "TE"
+    },
+    "snapform-697dd88a83b9e49c-f": {
+     "id": "snapform-697dd88a83b9e49c-f",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "F",
+     "x": 4.08,
+     "y": 0,
+     "role": "TE"
+    },
+    "snapform-697dd88a83b9e49c-z": {
+     "id": "snapform-697dd88a83b9e49c-z",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "Z",
+     "x": 5.08,
+     "y": -1,
+     "role": "WR"
+    },
+    "snapform-697dd88a83b9e49c-x": {
+     "id": "snapform-697dd88a83b9e49c-x",
+     "side": "offense",
+     "symbol": "circle",
+     "label": "X",
+     "x": -14.67,
+     "y": 0,
+     "role": "WR"
+    }
+   },
+   "tags": [
+    "eagles-2026",
+    "12",
+    "Bunch 'B'",
+    "W1",
+    "Bunch",
+    "Bunch 'B'"
+   ],
+   "family": "Bunch 'B'",
+   "strength": "right",
+   "qbAlignment": "under",
+   "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W1_WAS-PHI_playforge.json, W2_PHI-TEN_playforge.json)",
+   "note": "System call: Bunch Rt [12]. Charted as 12 UC Bunch Rt.\nSame picture, different jobs: Bin, Buddy, Box.\nW1-004: Set (3.0 to 4.5 s): Mundt inline L with Smith off the ball just outside him; Goedert wing R off the RT's hip, Cooper on the line tight outside Goedert. Barkley deep. Smith runs across to outside Cooper on the right, turns around and comes back, and is behind Mundt on the left again at the snap.\nDrawn on the Left hash (seen: Left 1).",
+   "confidence": "derived",
+   "builtin": true,
+   "signature": "12|Bunch 'B'|Under Center|B:RB:C:deep,Q:under_center,R:L1:WR:numbers:on@-14.667,0=X,R:R1:TE:wing:off@3.083,-1=Y,R:R2:TE:tight:on@4.083,0=F,R:R3:WR:tight:off@5.083,-1=Z",
+   "usage": {
+    "count": 1,
+    "snapIds": [
+     "W1-004"
+    ],
+    "weeks": [
+     1
     ],
     "hashes": [
      "Left"
@@ -19015,7 +19184,7 @@
    "motionCall": "WR Righty",
    "set": "Wicks wide R, Smith slot R, Goedert inline R, Mundt inline L.",
    "notes": "PHI 35. J.Hurts pass incomplete short right to S.Barkley. | Set: Wicks wide R, Smith slot R, Goedert inline R, Mundt inline L. Motion: Smith / slot R / across to L / at snap (2x2 as snapped).",
-   "formationId": "snapform-cf5c6a63ce9c6ce9",
+   "formationId": "snapform-227d536de48afa97",
    "mirrored": false,
    "source": "exact",
    "createdAt": "2026-01-01T00:00:00.000Z",
@@ -19033,7 +19202,7 @@
    "fieldZone": "Own 21-40",
    "hash": "Left",
    "personnel": "12",
-   "formFamily": "3x1 'T'",
+   "formFamily": "Bunch 'B'",
    "strength": "Rt",
    "backfield": "Under Center",
    "backfieldDetail": "Under Center",
@@ -19046,7 +19215,7 @@
    "motionCall": "Y Short",
    "set": "Mundt inline R, Wicks flexed R, Goedert split wide R, Smith wide L.",
    "notes": "PHI 35. S.Barkley right guard to PHI 40 for 5 yards. | Set: Mundt inline R, Wicks flexed R, Goedert split wide R, Smith wide L. Motion: Goedert / wide R / in toward formation / at snap.",
-   "formationId": "snapform-a985f006383eecc0",
+   "formationId": "snapform-b722a79bc77392f5",
    "mirrored": false,
    "source": "exact",
    "createdAt": "2026-01-01T00:00:00.000Z",
@@ -19064,7 +19233,7 @@
    "fieldZone": "Own 21-40",
    "hash": "Right",
    "personnel": "11",
-   "formFamily": "3x1 'T'",
+   "formFamily": "Bunch 'B'",
    "strength": "Lt",
    "backfield": "Gun",
    "backfieldDetail": "Gun",
@@ -19077,7 +19246,7 @@
    "motionCall": "Y Rt",
    "set": "1 WR wide R + Goedert off-ball wing R, 2 WR L. No motion. Hash from Sideline only (Endzone clip missing).",
    "notes": "PHI 40. (Shotgun) J.Hurts scrambles left tackle, ran ob at PHI 46 for 6 yards. | Set: 1 WR wide R + Goedert off-ball wing R, 2 WR L. No motion. Hash from Sideline only (Endzone clip missing).",
-   "formationId": "snapform-f17f2454f5c38032",
+   "formationId": "snapform-5e0d73ae0a02e6f8",
    "mirrored": false,
    "source": "exact",
    "createdAt": "2026-01-01T00:00:00.000Z",
@@ -19095,7 +19264,7 @@
    "fieldZone": "Own 41 to Mid",
    "hash": "Left",
    "personnel": "12",
-   "formFamily": "2x2 'D'",
+   "formFamily": "Bunch 'B'",
    "strength": "Rt",
    "backfield": "Under Center",
    "backfieldDetail": "Under Center",
@@ -19108,7 +19277,7 @@
    "motionCall": "WR Righty",
    "set": "Goedert inline R, Cooper just outside, Smith tight outside Cooper, Mundt inline L.",
    "notes": "PHI 46. S.Barkley left end to PHI 45 for -1 yards. | Set: Goedert inline R, Cooper just outside, Smith tight outside Cooper, Mundt inline L. Motion: Smith / tight R / behind LOS to tight L / at snap (2x2 tight as snapped).",
-   "formationId": "snapform-230085134c8669d9",
+   "formationId": "snapform-697dd88a83b9e49c",
    "mirrored": false,
    "source": "exact",
    "createdAt": "2026-01-01T00:00:00.000Z",
@@ -19126,7 +19295,7 @@
    "fieldZone": "Own 41 to Mid",
    "hash": "Left",
    "personnel": "11",
-   "formFamily": "2x2 'D'",
+   "formFamily": "2x2 Stack 'S'",
    "strength": "Rt",
    "backfield": "Gun",
    "backfieldDetail": "Gun",
@@ -19136,7 +19305,7 @@
    "yards": 3,
    "set": "Goedert inline R (hand down), one receiver in a reduced slot R just outside the right college hash; Lemon tight L off the ball about 2 yards outside the LT, one receiver L on the line at the inside edge of the numbers. Hurts in gun, Bigsby beside him to the right. No motion.",
    "notes": "PHI 45. (Shotgun) J.Hurts pass short left to M.Lemon, pushed ob at PHI 48 for 3 yards. | No motion.",
-   "formationId": "snapform-e359603b4cbd9af5",
+   "formationId": "snapform-ce45e9cab6a1a3b4",
    "mirrored": false,
    "source": "exact",
    "createdAt": "2026-01-01T00:00:00.000Z",
@@ -19166,7 +19335,7 @@
    "motionCall": "WR Lefty",
    "set": "After the shift: Goedert inline R (two-point), one receiver R just inside the numbers; two receivers L, one in the slot just inside the numbers and one wide outside the numbers. Hurts in gun, Shipley beside him to the right. Before the shift it was 3x1 Rt with two receivers paired at the numbers R.",
    "notes": "PHI 48. (Shotgun) J.Hurts pass incomplete short left to D.Wicks. | Shift: slot R / behind QB to slot L / stop-and-set (3x1 Rt before shift).",
-   "formationId": "snapform-62798102e6ac2898",
+   "formationId": "snapform-1ad5299de4e31ffb",
    "mirrored": false,
    "source": "exact",
    "createdAt": "2026-01-01T00:00:00.000Z",
@@ -19196,7 +19365,7 @@
    "motionCall": "Y Lt",
    "set": "Mundt inline R, Goedert wing R, Wicks wide R, Smith wide L.",
    "notes": "PHI 39. S.Barkley left end for 5, wiped by holding on C.Jurgens (10 yds, enforced at PHI 40). Down replayed. | Set: Mundt inline R, Goedert wing R, Wicks wide R, Smith wide L. Motion: Goedert / wing R / across backfield to L / at snap (2-back look as snapped).",
-   "formationId": "snapform-a985f006383eecc0",
+   "formationId": "snapform-b17223c06b6f0b76",
    "mirrored": false,
    "source": "exact",
    "createdAt": "2026-01-01T00:00:00.000Z",

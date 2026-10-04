@@ -17,6 +17,10 @@ const playerSchema = z.object({
   /** Order of the player (same side) this one stacks behind, or true for the previous one. */
   stack_behind: z.union([z.number().int().positive(), z.boolean()]).nullish(),
   id_unknown: z.boolean().nullish(),
+  /** Exact spot in yards from the ball (x + right, y negative behind the line): a hand-drawn alignment that replaces the label placement. */
+  at: z.object({ x: z.number(), y: z.number() }).nullish(),
+  /** The job letter to draw (Y, F, Z, X ...) instead of the one the importer would pick. */
+  label: z.string().nullish(),
 });
 
 const snapSchema = z.object({

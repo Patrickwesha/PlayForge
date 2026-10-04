@@ -3,7 +3,7 @@
     "snaps": 130,
     "exact": 130,
     "template": 0,
-    "formations": 124,
+    "formations": 125,
     "weeks": {
       "W1": 54,
       "W2": 76
@@ -138,32 +138,6 @@
         "W2",
         "Bunch",
         "Bunch 'B'"
-      ]
-    },
-    {
-      "id": "snapform-a985f006383eecc0",
-      "name": "West Rt",
-      "count": 2,
-      "exact": 2,
-      "template": 0,
-      "weeks": [
-        1
-      ],
-      "hashes": {
-        "Left": 2
-      },
-      "source": "exact",
-      "snapIds": [
-        "W1-002",
-        "W1-007"
-      ],
-      "tags": [
-        "eagles-2026",
-        "12",
-        "3x1 'T'",
-        "W1",
-        "West",
-        "3x1 'T'"
       ]
     },
     {
@@ -742,31 +716,6 @@
       ]
     },
     {
-      "id": "snapform-62798102e6ac2898",
-      "name": "Gun Dice Rt",
-      "count": 1,
-      "exact": 1,
-      "template": 0,
-      "weeks": [
-        1
-      ],
-      "hashes": {
-        "Left": 1
-      },
-      "source": "exact",
-      "snapIds": [
-        "W1-006"
-      ],
-      "tags": [
-        "eagles-2026",
-        "11",
-        "2x2 'D'",
-        "W1",
-        "Dice",
-        "2x2 'D'"
-      ]
-    },
-    {
       "id": "snapform-aa18f9bd915fcbdb",
       "name": "Gun Dyno Rt #8",
       "count": 1,
@@ -818,7 +767,7 @@
     },
     {
       "id": "snapform-7fca6681fa468fbf",
-      "name": "Gun Dice Rt #2",
+      "name": "Gun Dice Rt",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -842,8 +791,8 @@
       ]
     },
     {
-      "id": "snapform-e359603b4cbd9af5",
-      "name": "Gun Dice Rt #3",
+      "id": "snapform-1ad5299de4e31ffb",
+      "name": "Gun Dice Rt Off #5",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -855,7 +804,7 @@
       },
       "source": "exact",
       "snapIds": [
-        "W1-005"
+        "W1-006"
       ],
       "tags": [
         "eagles-2026",
@@ -1342,6 +1291,31 @@
       ]
     },
     {
+      "id": "snapform-ce45e9cab6a1a3b4",
+      "name": "Gun Sink Rt Close",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        1
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W1-005"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 Stack 'S'",
+        "W1",
+        "Sink",
+        "2x2 Stack 'S'"
+      ]
+    },
+    {
       "id": "snapform-33e2a99436361436",
       "name": "Gun Trips Lt #2",
       "count": 1,
@@ -1792,31 +1766,6 @@
       ]
     },
     {
-      "id": "snapform-f17f2454f5c38032",
-      "name": "Gun Trips Lt Off #2",
-      "count": 1,
-      "exact": 1,
-      "template": 0,
-      "weeks": [
-        1
-      ],
-      "hashes": {
-        "Right": 1
-      },
-      "source": "exact",
-      "snapIds": [
-        "W1-003"
-      ],
-      "tags": [
-        "eagles-2026",
-        "11",
-        "3x1 'T'",
-        "W1",
-        "Trips",
-        "3x1 'T'"
-      ]
-    },
-    {
       "id": "snapform-c74ac66cc1ca16ea",
       "name": "Gun Trips Rt #5",
       "count": 1,
@@ -2131,6 +2080,31 @@
       "source": "exact",
       "snapIds": [
         "W1-021"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "Bunch 'B'",
+        "W1",
+        "Bunch",
+        "Bunch 'B'"
+      ]
+    },
+    {
+      "id": "snapform-5e0d73ae0a02e6f8",
+      "name": "Gun Bunch Lt #4",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        1
+      ],
+      "hashes": {
+        "Right": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W1-003"
       ],
       "tags": [
         "eagles-2026",
@@ -2493,7 +2467,7 @@
     },
     {
       "id": "snapform-ddce3cf32d3e8d69",
-      "name": "Deuce Lt",
+      "name": "Deuce Lt Tight",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -2543,7 +2517,7 @@
     },
     {
       "id": "snapform-c0e9d355dec3ed9f",
-      "name": "Deuce Lt #2",
+      "name": "Deuce Lt",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -2568,7 +2542,7 @@
     },
     {
       "id": "snapform-31d6eae9919232fb",
-      "name": "Deuce Lt #3",
+      "name": "Deuce Lt #2",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -2593,7 +2567,7 @@
     },
     {
       "id": "snapform-382e40e74769f775",
-      "name": "Deuce Lt #4",
+      "name": "Deuce Lt #3",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -2642,8 +2616,8 @@
       ]
     },
     {
-      "id": "snapform-cf5c6a63ce9c6ce9",
-      "name": "Deuce Rt Off",
+      "id": "snapform-227d536de48afa97",
+      "name": "Deuce Rt Clamp Tight",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -2656,31 +2630,6 @@
       "source": "exact",
       "snapIds": [
         "W1-001"
-      ],
-      "tags": [
-        "eagles-2026",
-        "12",
-        "2x2 'D'",
-        "W1",
-        "Deuce",
-        "2x2 'D'"
-      ]
-    },
-    {
-      "id": "snapform-230085134c8669d9",
-      "name": "Deuce Rt Clamp",
-      "count": 1,
-      "exact": 1,
-      "template": 0,
-      "weeks": [
-        1
-      ],
-      "hashes": {
-        "Left": 1
-      },
-      "source": "exact",
-      "snapIds": [
-        "W1-004"
       ],
       "tags": [
         "eagles-2026",
@@ -2818,7 +2767,7 @@
     },
     {
       "id": "snapform-fee2d658a2f4d9ee",
-      "name": "West Lt #2",
+      "name": "West Lt Close",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -2893,7 +2842,7 @@
     },
     {
       "id": "snapform-da971b21e73b2cfb",
-      "name": "West Lt #3",
+      "name": "West Lt #2",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -2918,7 +2867,7 @@
     },
     {
       "id": "snapform-7d4f58c6f1a6d810",
-      "name": "West Rt #2",
+      "name": "West Rt Close",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -2942,8 +2891,33 @@
       ]
     },
     {
+      "id": "snapform-b17223c06b6f0b76",
+      "name": "West Rt Close #2",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        1
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W1-007"
+      ],
+      "tags": [
+        "eagles-2026",
+        "12",
+        "3x1 'T'",
+        "W1",
+        "West",
+        "3x1 'T'"
+      ]
+    },
+    {
       "id": "snapform-acb8396469719d7a",
-      "name": "West Rt #3",
+      "name": "West Rt",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -2968,7 +2942,7 @@
     },
     {
       "id": "snapform-58ff4dc8b1f851d6",
-      "name": "West Lt #4",
+      "name": "West Lt Close #2",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -3018,7 +2992,7 @@
     },
     {
       "id": "snapform-3b2ab081508d5f47",
-      "name": "West Rt #4",
+      "name": "West Rt Close #3",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -3039,6 +3013,56 @@
         "W2",
         "West",
         "3x1 'T'"
+      ]
+    },
+    {
+      "id": "snapform-b722a79bc77392f5",
+      "name": "Bunch Rt",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        1
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W1-002"
+      ],
+      "tags": [
+        "eagles-2026",
+        "12",
+        "Bunch 'B'",
+        "W1",
+        "Bunch",
+        "Bunch 'B'"
+      ]
+    },
+    {
+      "id": "snapform-697dd88a83b9e49c",
+      "name": "Bunch Rt #2",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        1
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W1-004"
+      ],
+      "tags": [
+        "eagles-2026",
+        "12",
+        "Bunch 'B'",
+        "W1",
+        "Bunch",
+        "Bunch 'B'"
       ]
     },
     {
@@ -3120,9 +3144,11 @@
   "skipped": [],
   "warnings": [
     "W1-001: form family differs (chart 3x1 'T', film 2x2 'D'); the film chart wins this week",
-    "W1-003: form family differs (chart 2x2 'D', film 3x1 'T'); the film chart wins this week",
+    "W1-002: form family differs (chart 3x1 'T', film Bunch 'B'); the film chart wins this week",
+    "W1-003: form family differs (chart 2x2 'D', film Bunch 'B'); the film chart wins this week",
     "W1-003: strength differs (chart Rt, film Lt); the film chart wins this week",
-    "W1-004: form family differs (chart 3x1 'T', film 2x2 'D'); the film chart wins this week",
+    "W1-004: form family differs (chart 3x1 'T', film Bunch 'B'); the film chart wins this week",
+    "W1-005: form family differs (chart 2x2 'D', film 2x2 Stack 'S'); the film chart wins this week",
     "W1-008: form family differs (chart 2x2 'D', film 2x2 Stack 'S'); the film chart wins this week",
     "W1-008: strength differs (chart blank, film Rt); the film chart wins this week",
     "W1-012: strength differs (chart Lt, film Rt); the film chart wins this week",
