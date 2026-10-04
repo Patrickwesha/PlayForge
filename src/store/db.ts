@@ -39,7 +39,13 @@ export class PlayForgeDB extends Dexie {
 
 export const DEMO_PLAYBOOK_ID = 'seed-playbook-beast';
 /** Bump when built-in formations or demo plays change; untouched seed rows are refreshed on open. */
-export const SEED_VERSION = 4;
+export const SEED_VERSION = 5;
+/**
+ * 2026-10-03: the charted Eagles formations were rebuilt (frame-by-frame Week 1, system names, landmark
+ * alignment) and the copies made by earlier chart imports were retired at the owner's request. A chart
+ * formation last touched before this moment follows the data file again; one edited after it is kept.
+ */
+const CHART_RESET = '2026-10-04T03:00:00.000Z';
 /** What the database records as seeded. The pack revision is a content hash, so re-running the formation import refreshes open databases without a manual bump. */
 export const SEED_STAMP = `${SEED_VERSION}:${PACKERS_2019_REVISION}:${PACKERS_2019_PLAYS_REVISION}:${EAGLES_2026_REVISION}`;
 const SEED_FORMATIONS = [...OFFENSE_FORMATIONS, ...DEFENSE_FORMATIONS, ...PACKERS_2019_FORMATIONS, ...EAGLES_2026_FORMATIONS];
@@ -59,7 +65,8 @@ export async function ensureSeeds(database: PlayForgeDB) {
     for (const f of SEED_FORMATIONS) {
       if (gone.has(itemKey('formation', f.id))) continue;
       const existing = await database.formations.get(f.id);
-      if (!existing || existing.builtin) await database.formations.put(f);
+      const retired = !!existing && f.id.startsWith(EAGLES_2026_FORMATION_ID_PREFIX) && existing.updatedAt < CHART_RESET;
+      if (!existing || existing.builtin || retired) await database.formations.put(f);
     }
     // Pack entries that were renamed or removed upstream: drop the untouched copies so a re-import never doubles up.
     const packIds = new Set(PACKERS_2019_FORMATIONS.map((f) => f.id));
@@ -67,7 +74,7 @@ export async function ensureSeeds(database: PlayForgeDB) {
     await database.formations.bulkDelete(stale);
     // Eagles chart formations and snaps: the untouched copies follow the data file; a snap imported in the app (updatedAt is real) stays.
     const eaglesIds = new Set(EAGLES_2026_FORMATIONS.map((f) => f.id));
-    const staleEagles = await database.formations.filter((f) => f.id.startsWith(EAGLES_2026_FORMATION_ID_PREFIX) && f.builtin === true && !eaglesIds.has(f.id)).primaryKeys();
+    const staleEagles = await database.formations.filter((f) => f.id.startsWith(EAGLES_2026_FORMATION_ID_PREFIX) && (f.builtin === true || f.updatedAt < CHART_RESET) && !eaglesIds.has(f.id)).primaryKeys();
     await database.formations.bulkDelete(staleEagles);
     const snapIds = new Set(EAGLES_2026_SNAPS.map((s) => s.id));
     const staleSnaps = await database.snaps.filter((s) => s.id.startsWith(EAGLES_2026_SNAP_ID_PREFIX) && s.updatedAt === SEED_TIME && !snapIds.has(s.id)).primaryKeys();
