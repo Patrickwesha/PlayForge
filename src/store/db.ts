@@ -39,11 +39,16 @@ export class PlayForgeDB extends Dexie {
 
 export const DEMO_PLAYBOOK_ID = 'seed-playbook-beast';
 /** Bump when built-in formations or demo plays change; untouched seed rows are refreshed on open. */
-export const SEED_VERSION = 3;
+export const SEED_VERSION = 4;
 /** What the database records as seeded. The pack revision is a content hash, so re-running the formation import refreshes open databases without a manual bump. */
 export const SEED_STAMP = `${SEED_VERSION}:${PACKERS_2019_REVISION}:${PACKERS_2019_PLAYS_REVISION}:${EAGLES_2026_REVISION}`;
 const SEED_FORMATIONS = [...OFFENSE_FORMATIONS, ...DEFENSE_FORMATIONS, ...PACKERS_2019_FORMATIONS, ...EAGLES_2026_FORMATIONS];
-const SEED_PLAYS = [...DEMO_PLAYS, ...PACKERS_2019_PLAYS];
+/**
+ * No built-in plays: the library holds only plays made in the editor or imported on request. The demo
+ * plays and the Green Bay install plays that older versions seeded are removed below when untouched.
+ */
+const SEED_PLAYS: typeof DEMO_PLAYS = [];
+const OLD_SEED_PLAY_IDS = new Set(DEMO_PLAYS.map((p) => p.id));
 
 export async function ensureSeeds(database: PlayForgeDB) {
   const row = await database.settings.get('seedVersion');
@@ -77,8 +82,7 @@ export async function ensureSeeds(database: PlayForgeDB) {
       if (!existing || existing.updatedAt === SEED_TIME) await database.plays.put(p);
     }
     // Pack plays that were renamed or dropped by a re-import: remove the untouched copies.
-    const playIds = new Set(PACKERS_2019_PLAYS.map((p) => p.id));
-    const stalePlays = await database.plays.filter((p) => p.id.startsWith(PACKERS_2019_PLAY_ID_PREFIX) && p.updatedAt === SEED_TIME && !playIds.has(p.id)).primaryKeys();
+    const stalePlays = await database.plays.filter((p) => (p.id.startsWith(PACKERS_2019_PLAY_ID_PREFIX) || OLD_SEED_PLAY_IDS.has(p.id)) && p.updatedAt === SEED_TIME).primaryKeys();
     await database.plays.bulkDelete(stalePlays);
     await database.settings.put({ key: 'seedVersion', value: SEED_STAMP });
   });
@@ -95,8 +99,6 @@ export async function seedDatabase(database: PlayForgeDB) {
     subtitle: 'Demo playbook',
     cover: { title: 'Beast Offense', subtitle: 'Demo playbook', team: 'PlayForge', season: '2026', showCover: true },
     sections: [
-      { id: 'seed-sec-run', title: 'Run game', kind: 'plays', itemIds: DEMO_PLAYS.filter((p) => p.category === 'Run').map((p) => p.id) },
-      { id: 'seed-sec-pass', title: 'Pass game', kind: 'plays', itemIds: DEMO_PLAYS.filter((p) => p.category !== 'Run').map((p) => p.id) },
       { id: 'seed-sec-form', title: 'Formations', kind: 'formations', itemIds: OFFENSE_FORMATIONS.filter((f) => f.tags.includes('beast')).map((f) => f.id) },
     ],
     defaultLayout: '6up',

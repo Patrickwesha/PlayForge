@@ -232,7 +232,7 @@ describe('packers 2019 plays', () => {
     expect(Object.values(omaha.routeTags ?? {}).sort()).toEqual(['hb-check-thru', 'wr-coin', 'wr-coin', 'wr-omaha', 'wr-omaha']);
     const pa = byCall('I RT BOOK / P15 WEAK Z STRIKE X BLAZE OUT');
     expect(pa).toMatchObject({ category: 'PA', confidence: 'derived', appliedTags: ['BOOK'] });
-    expect(label(pa, 'Z').x).toBe(16); // Book: field receiver 2 inside the numbers
+    expect(label(pa, 'Z').x).toBe(12.67); // Book: field receiver 2 inside the numbers
     const oz = byCall('DEUCE RT / 18 STRUCTURE SIFT');
     expect(oz.tags).toContain('outside-zone');
     expect(Object.values(oz.diagram.paths).filter((q) => q.role === 'ball')).toHaveLength(1);

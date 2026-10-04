@@ -162,7 +162,28 @@ for (const o of overlay) {
     replaced++;
   }
 }
-for (const f of formations) if (!f.source) f.only = 'Green Bay only';
+// Green Bay-only formations were drawn on the old pack spots (wide 20, numbers 18, slot 12.55, a -5- split at 6.5).
+// Move them onto the landmarks the Rams formations use, so every formation in the pack snaps the same way.
+const LANDMARK_X = [
+  [5.2, 5.8, 7.08], // inside partner of a -5- split
+  [6.2, 7.2, 8.08], // -5- split: Hash +5
+  [7.3, 7.7, 9.08], // outside partner of a -5- split
+  [7.8, 8.2, 8.08], // 5 from an inline tight end: Hash +5
+  [10.5, 12.8, 10.84], // slot: halfway to the normal outside split
+  [13, 14, 13.11],
+  [15.5, 17.5, 14.67], // inside the numbers (Book): Top #s
+  [17.6, 18.4, 15.67], // on the numbers: Mid #s
+  [19.5, 23, 18.67], // normal outside split: #s +2
+];
+for (const f of formations) {
+  if (f.source) continue;
+  f.only = 'Green Bay only';
+  f.players = f.players.map((p) => {
+    const a = Math.abs(p.x);
+    const hit = LANDMARK_X.find(([lo, hi]) => a >= lo && a <= hi);
+    return hit ? { ...p, x: Math.sign(p.x) * hit[2] } : p;
+  });
+}
 console.log(`Rams 2022 overlay: ${replaced} replaced, ${added} added, ${formations.length - replaced - added} Green Bay only`);
 
 const constants = {

@@ -29,11 +29,10 @@ export type CallTags = {
 
 const LETTERS = ['X', 'Y', 'Z', 'F', 'H'];
 /**
- * The book's "-5-" marker: a 5 yard split from the end man on the line. The hand-corrected pack draws
- * that at 4.5 yards between centres (Stack, Sink, Snug, Red Rt Ace all put the man at 6.5 off a tackle at 2),
- * so the engine uses the same number and a tagged formation lands exactly on its pack twin.
+ * The book's "-5-" marker is the Hash +5 landmark (8.08 yards from a ball in the middle), the same spot
+ * the formation pack and the editor's snap use, so a tagged formation lands exactly on its pack twin.
  */
-const SPLIT = 4.5;
+const SPLIT_X = 8.08;
 
 /**
  * Build rules printed on p-017: a family member is another member plus a tag. The engine has to
@@ -45,9 +44,10 @@ export const FORMATION_BUILD_RULES: { base: string; tag: string; result: string;
   { base: 'Sink', tag: 'CLAMP', result: 'Snug', page: 17 },
   { base: 'Dice', tag: 'OPEN', result: 'Dyno', page: 17 },
 ];
-const NUMBERS = 18;
-const SLOT = 12.55; // the formation pack's slot constant
-const WIDE = 20;
+const NUMBERS = 15.67; // Mid #s
+const NUMBERS_TOP = 14.67; // Top #s: the inside edge of the painted numbers
+const SLOT = 10.84; // halfway between an inline tight end and the normal outside split
+const WIDE = 18.67; // #s +2, the normal outside split
 const OFF_BALL = -1;
 const GUN = { qb: { x: 0, y: -5 }, back: { x: -1.5, y: -6 } }; // from the hand-corrected Trio Rt (gun)
 
@@ -129,7 +129,7 @@ const ALIGNMENT: Record<string, Align> = {
   CLOSE: (b) => {
     const r = b.outside(1);
     if (!r) return null;
-    r.x = b.emol(1, r) + SPLIT;
+    r.x = SPLIT_X;
     return { basis: 'words', page: 14, effect: `${r.label} takes a 5 yard split from the end man on the strong side` };
   },
   CLOSER: (b) => {
@@ -153,7 +153,7 @@ const ALIGNMENT: Record<string, Align> = {
     const r = b.outside(1);
     if (!te || !r) return null;
     te.y = OFF_BALL;
-    r.x = b.tackle(1) + SPLIT;
+    r.x = SPLIT_X;
     r.y = 0;
     b.rebalance('CLAMP', 1, [te, r]);
     return { basis: 'words', page: 14, effect: `${r.label} on the ball at a 5 yard split from the tackle, ${te.label} off the ball inside him` };
@@ -162,7 +162,7 @@ const ALIGNMENT: Record<string, Align> = {
     const te = b.attachedTe(1);
     const r = b.outside(1);
     if (!te || !r) return null;
-    r.x = b.tackle(1) + SPLIT;
+    r.x = SPLIT_X;
     r.y = 0;
     te.x = r.x + 1;
     te.y = OFF_BALL;
@@ -183,7 +183,7 @@ const ALIGNMENT: Record<string, Align> = {
       return { basis: 'words', page: 17, effect: `${te.label} flexes off the ball into the strong slot and ${wide.label} steps onto the line (Dice with Open = Dyno)` };
     }
     // p-024 (Crack Rt Open): alone on his side, he takes the 5 yard split and stays on the ball
-    te.x = b.tackle(1) + SPLIT;
+    te.x = SPLIT_X;
     return { basis: 'words', page: 24, effect: `${te.label} flexes to a 5 yard split from the tackle, staying on the ball because no one else is on his side` };
   },
   OUT: (b) => {
@@ -201,7 +201,7 @@ const ALIGNMENT: Record<string, Align> = {
   TIGHT: (b) => {
     const r = b.outside(-1);
     if (!r) return null;
-    r.x = -(b.emol(-1, r) + SPLIT);
+    r.x = -SPLIT_X;
     return { basis: 'words', page: 14, effect: `${r.label} takes a 5 yard split from the end man on the weak side` };
   },
   TIGHTER: (b) => {
@@ -242,8 +242,8 @@ const ALIGNMENT: Record<string, Align> = {
     const s = b.outside(1);
     const w = b.outside(-1);
     if (!s || !w) return null;
-    s.x = NUMBERS - 2;
-    w.x = -(NUMBERS - 1);
+    s.x = NUMBERS_TOP - 2; // the "#s -2" landmark
+    w.x = -(NUMBERS_TOP - 1); // the "#s -1" landmark
     return { basis: 'words', page: 15, effect: `field receiver ${s.label} 2 yards inside the numbers, boundary receiver ${w.label} 1 yard inside (strength assumed to the field)` };
   },
   NUMBERS: (b) => {
@@ -272,7 +272,7 @@ function twoWeak(b: Board, tag: 'HIP' | 'HOP'): ReturnType<Align> {
   const z = b.get('Z') ?? b.outside(1);
   const x = b.outside(-1);
   if (!z || !x || z === x) return null;
-  const at = b.tackle(-1) + SPLIT;
+  const at = SPLIT_X;
   if (tag === 'HIP') {
     Object.assign(z, { x: -at, y: 0 });
     Object.assign(x, { x: -(at + 1), y: OFF_BALL });

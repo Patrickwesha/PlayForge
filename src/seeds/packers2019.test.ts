@@ -70,12 +70,12 @@ describe('packers 2019 pack', () => {
     expect(hb.y).toBeLessThan(fb.y);
   });
 
-  it('I Rt Ace: Z and X both take a 5 yard split from the end man, Z off the ball and X on it', () => {
+  it('I Rt Ace: Z and X both stand on Hash +5, Z off the ball and X on it', () => {
     const f = find('I Rt Ace', '21');
     expect(spot(f, 'Y').x).toBe(3 * OL_SPACING);
-    expect(spot(f, 'Z').x - spot(f, 'Y').x).toBe(5);
+    expect(spot(f, 'Z').x).toBe(8.08);
     expect(spot(f, 'Z').y).toBe(-1);
-    expect(spot(f, 'LT').x - spot(f, 'X').x).toBe(5);
+    expect(spot(f, 'X').x).toBe(-8.08);
     expect(spot(f, 'X').y).toBe(0);
   });
 });

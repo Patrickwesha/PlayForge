@@ -50,6 +50,18 @@ export function PlaysClient() {
     if (copy.formationLabel) copy.formationLabel = flipName(copy.formationLabel);
     await repo.savePlay(copy);
   };
+  // plays that were not made in the editor: the scanned Green Bay book (gb19-), old built-ins (seed-, demo-)
+  const imported = useMemo(() => (plays ?? []).filter((p) => /^(gb19-|seed-|demo-)/.test(p.id)), [plays]);
+  const [removing, setRemoving] = useState(false);
+  const removeImported = async () => {
+    if (!confirm(`Remove ${imported.length} imported plays (the Green Bay book and the old built-in plays)? Plays you created stay. This syncs to your other devices and cannot be undone.`)) return;
+    setRemoving(true);
+    try {
+      for (const p of imported) await repo.deletePlay(p.id);
+    } finally {
+      setRemoving(false);
+    }
+  };
   const del = async (p: Play) => {
     if (!confirm(`Delete "${p.name}"?`)) return;
     await repo.deletePlay(p.id);
@@ -69,6 +81,11 @@ export function PlaysClient() {
         <input className="border border-neutral-300 rounded px-2 py-1 text-sm w-56" placeholder="Search" value={q} onChange={(e) => setQ(e.target.value)} />
         <PlaybookFilter className="border border-neutral-300 rounded px-2 py-1 text-sm bg-white" value={book} onChange={setBook} playbooks={playbooks} kind="plays" itemIds={(plays ?? []).filter((p) => cat === 'All' || p.category === cat).map((p) => p.id)} memberOf={memberOf} />
         <div className="ml-auto flex gap-2">
+          {imported.length > 0 && (
+            <button className={btn} onClick={() => void removeImported()} disabled={removing} title="Delete every play that came from the Green Bay book import or the old built-in plays. Plays you created stay.">
+              {removing ? 'Removing…' : `Remove ${imported.length} imported plays`}
+            </button>
+          )}
           <Link href={`/print?plays=${list.map((p) => p.id).join(',')}&layout=6up&title=${encodeURIComponent(cat === 'All' ? 'PLAYS' : cat.toUpperCase() + ' PLAYS')}`} className={btn}>
             Print these ({list.length})
           </Link>

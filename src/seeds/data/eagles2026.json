@@ -4,7 +4,7 @@
  "team": "PHI",
  "season": 2026,
  "mirror": false,
- "revision": "c81b604086fe",
+ "revision": "cdfb1731ec94",
  "formations": [
   {
    "id": "snapform-35d44e8be24720b9",
@@ -113,7 +113,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 20.73,
+     "x": 21.73,
      "y": 0,
      "role": "WR"
     },
@@ -268,7 +268,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "F",
-     "x": -11.6,
+     "x": -12.6,
      "y": 0,
      "role": "WR"
     },
@@ -277,7 +277,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -13.1,
+     "x": -14.1,
      "y": -1,
      "role": "WR"
     }
@@ -407,7 +407,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 14.6,
+     "x": 15.6,
      "y": 0,
      "role": "WR"
     },
@@ -425,7 +425,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "F",
-     "x": -17.73,
+     "x": -18.73,
      "y": -1,
      "role": "WR"
     },
@@ -434,7 +434,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -20.73,
+     "x": -21.73,
      "y": 0,
      "role": "WR"
     }
@@ -590,7 +590,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -14.6,
+     "x": -15.6,
      "y": 0,
      "role": "WR"
     }
@@ -719,7 +719,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 14.6,
+     "x": 15.6,
      "y": 0,
      "role": "WR"
     },
@@ -897,7 +897,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -11.6,
+     "x": -12.6,
      "y": 0,
      "role": "WR"
     }
@@ -1031,7 +1031,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 14.6,
+     "x": 15.6,
      "y": -1,
      "role": "WR"
     },
@@ -1040,7 +1040,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Y",
-     "x": -17.73,
+     "x": -18.73,
      "y": 0,
      "role": "TE"
     },
@@ -1049,7 +1049,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -19.23,
+     "x": -20.23,
      "y": -1,
      "role": "WR"
     }
@@ -1173,7 +1173,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "F",
-     "x": 11.6,
+     "x": 12.6,
      "y": -1,
      "role": "WR"
     },
@@ -1182,7 +1182,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 13.1,
+     "x": 14.1,
      "y": 0,
      "role": "WR"
     },
@@ -1200,7 +1200,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -20.73,
+     "x": -21.73,
      "y": 0,
      "role": "WR"
     }
@@ -1337,7 +1337,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 17.73,
+     "x": 18.73,
      "y": 0,
      "role": "WR"
     },
@@ -1355,7 +1355,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -14.6,
+     "x": -15.6,
      "y": 0,
      "role": "WR"
     }
@@ -1510,7 +1510,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -14.6,
+     "x": -15.6,
      "y": 0,
      "role": "WR"
     }
@@ -1643,7 +1643,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 11.6,
+     "x": 12.6,
      "y": -1,
      "role": "WR"
     },
@@ -1652,7 +1652,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "F",
-     "x": -17.73,
+     "x": -18.73,
      "y": -1,
      "role": "WR"
     },
@@ -1661,7 +1661,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -20.73,
+     "x": -21.73,
      "y": 0,
      "role": "WR"
     }
@@ -1803,7 +1803,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "F",
-     "x": -17.73,
+     "x": -18.73,
      "y": -1,
      "role": "WR"
     },
@@ -1812,7 +1812,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -20.73,
+     "x": -21.73,
      "y": 0,
      "role": "WR"
     }
@@ -1945,7 +1945,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 14.6,
+     "x": 15.6,
      "y": -1,
      "role": "WR"
     },
@@ -1954,7 +1954,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "F",
-     "x": -17.73,
+     "x": -18.73,
      "y": -1,
      "role": "WR"
     },
@@ -1963,7 +1963,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -20.73,
+     "x": -21.73,
      "y": 0,
      "role": "WR"
     }
@@ -2100,7 +2100,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 14.6,
+     "x": 15.6,
      "y": 0,
      "role": "WR"
     },
@@ -2109,7 +2109,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "F",
-     "x": -17.73,
+     "x": -18.73,
      "y": -1,
      "role": "WR"
     },
@@ -2118,7 +2118,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -20.73,
+     "x": -21.73,
      "y": 0,
      "role": "WR"
     }
@@ -2269,7 +2269,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -20.73,
+     "x": -21.73,
      "y": 0,
      "role": "WR"
     }
@@ -2420,7 +2420,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -20.73,
+     "x": -21.73,
      "y": 0,
      "role": "WR"
     }
@@ -2575,7 +2575,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -17.73,
+     "x": -18.73,
      "y": -1,
      "role": "WR"
     }
@@ -2712,7 +2712,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 11.6,
+     "x": 12.6,
      "y": 0,
      "role": "WR"
     },
@@ -2885,7 +2885,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -11.6,
+     "x": -12.6,
      "y": 0,
      "role": "WR"
     }
@@ -3020,7 +3020,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 20.73,
+     "x": 21.73,
      "y": 0,
      "role": "WR"
     },
@@ -3171,7 +3171,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 14.6,
+     "x": 15.6,
      "y": 0,
      "role": "WR"
     },
@@ -3189,7 +3189,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -20.73,
+     "x": -21.73,
      "y": 0,
      "role": "WR"
     }
@@ -3322,7 +3322,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 17.73,
+     "x": 18.73,
      "y": -1,
      "role": "WR"
     },
@@ -3468,7 +3468,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "F",
-     "x": 17.73,
+     "x": 18.73,
      "y": -1,
      "role": "WR"
     },
@@ -3477,7 +3477,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 19.23,
+     "x": 20.23,
      "y": 0,
      "role": "WR"
     },
@@ -3778,7 +3778,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "F",
-     "x": 17.73,
+     "x": 18.73,
      "y": -1,
      "role": "WR"
     },
@@ -3787,7 +3787,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 19.23,
+     "x": 20.23,
      "y": 0,
      "role": "WR"
     },
@@ -3805,7 +3805,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -14.6,
+     "x": -15.6,
      "y": 0,
      "role": "WR"
     }
@@ -3960,7 +3960,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -14.6,
+     "x": -15.6,
      "y": 0,
      "role": "WR"
     }
@@ -4093,7 +4093,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 11.6,
+     "x": 12.6,
      "y": -1,
      "role": "WR"
     },
@@ -4111,7 +4111,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -17.73,
+     "x": -18.73,
      "y": 0,
      "role": "WR"
     }
@@ -4244,7 +4244,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 14.6,
+     "x": 15.6,
      "y": 0,
      "role": "WR"
     },
@@ -4262,7 +4262,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -17.73,
+     "x": -18.73,
      "y": 0,
      "role": "WR"
     }
@@ -4399,7 +4399,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 14.6,
+     "x": 15.6,
      "y": 0,
      "role": "WR"
     },
@@ -4417,7 +4417,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -17.73,
+     "x": -18.73,
      "y": 0,
      "role": "WR"
     }
@@ -4552,7 +4552,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 17.73,
+     "x": 18.73,
      "y": -1,
      "role": "WR"
     },
@@ -4570,7 +4570,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -14.6,
+     "x": -15.6,
      "y": 0,
      "role": "WR"
     }
@@ -4703,7 +4703,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 17.73,
+     "x": 18.73,
      "y": 0,
      "role": "WR"
     },
@@ -4721,7 +4721,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -14.6,
+     "x": -15.6,
      "y": 0,
      "role": "WR"
     }
@@ -4854,7 +4854,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 11.6,
+     "x": 12.6,
      "y": -1,
      "role": "WR"
     },
@@ -4872,7 +4872,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -20.73,
+     "x": -21.73,
      "y": 0,
      "role": "WR"
     }
@@ -5007,7 +5007,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 14.67,
+     "x": 15.67,
      "y": 0,
      "role": "WR"
     },
@@ -5025,7 +5025,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -14.67,
+     "x": -15.67,
      "y": -1,
      "role": "WR"
     }
@@ -5178,7 +5178,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -11.6,
+     "x": -12.6,
      "y": 0,
      "role": "WR"
     }
@@ -5310,7 +5310,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 14.6,
+     "x": 15.6,
      "y": 0,
      "role": "WR"
     },
@@ -5328,7 +5328,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -20.73,
+     "x": -21.73,
      "y": 0,
      "role": "WR"
     }
@@ -5478,7 +5478,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -11.6,
+     "x": -12.6,
      "y": 0,
      "role": "WR"
     }
@@ -5614,7 +5614,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 17.73,
+     "x": 18.73,
      "y": 0,
      "role": "WR"
     },
@@ -5764,7 +5764,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 14.6,
+     "x": 15.6,
      "y": 0,
      "role": "WR"
     },
@@ -5782,7 +5782,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -20.73,
+     "x": -21.73,
      "y": -1,
      "role": "WR"
     }
@@ -5914,7 +5914,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 14.6,
+     "x": 15.6,
      "y": 0,
      "role": "WR"
     },
@@ -5932,7 +5932,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -20.73,
+     "x": -21.73,
      "y": 0,
      "role": "WR"
     }
@@ -6082,7 +6082,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -20.73,
+     "x": -21.73,
      "y": 0,
      "role": "WR"
     }
@@ -6216,7 +6216,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 14.6,
+     "x": 15.6,
      "y": 0,
      "role": "WR"
     },
@@ -6225,7 +6225,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "F",
-     "x": -17.73,
+     "x": -18.73,
      "y": 0,
      "role": "WR"
     },
@@ -6234,7 +6234,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -20.73,
+     "x": -21.73,
      "y": -1,
      "role": "WR"
     }
@@ -6522,7 +6522,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 11.6,
+     "x": 12.6,
      "y": -1,
      "role": "WR"
     },
@@ -6540,7 +6540,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -20.73,
+     "x": -21.73,
      "y": 0,
      "role": "WR"
     }
@@ -6674,7 +6674,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 14.6,
+     "x": 15.6,
      "y": 0,
      "role": "WR"
     },
@@ -6692,7 +6692,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -20.73,
+     "x": -21.73,
      "y": 0,
      "role": "WR"
     }
@@ -6844,7 +6844,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -14.67,
+     "x": -15.67,
      "y": 0,
      "role": "WR"
     }
@@ -6978,7 +6978,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 11.6,
+     "x": 12.6,
      "y": -1,
      "role": "WR"
     },
@@ -7280,7 +7280,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 14.67,
+     "x": 15.67,
      "y": 0,
      "role": "WR"
     },
@@ -7289,7 +7289,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "F",
-     "x": -17.67,
+     "x": -18.67,
      "y": -1,
      "role": "WR"
     },
@@ -7298,7 +7298,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -19.17,
+     "x": -20.17,
      "y": 0,
      "role": "WR"
     }
@@ -7605,7 +7605,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -14.6,
+     "x": -15.6,
      "y": -1,
      "role": "WR"
     }
@@ -7733,7 +7733,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 11.6,
+     "x": 12.6,
      "y": 0,
      "role": "WR"
     },
@@ -7742,7 +7742,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "F",
-     "x": 11.6,
+     "x": 12.6,
      "y": -2,
      "role": "WR"
     },
@@ -7760,7 +7760,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Y",
-     "x": -20.73,
+     "x": -21.73,
      "y": 0,
      "role": "TE"
     }
@@ -8052,7 +8052,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Y",
-     "x": 20.73,
+     "x": 21.73,
      "y": -1,
      "role": "TE"
     },
@@ -8197,7 +8197,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 20.73,
+     "x": 21.73,
      "y": 0,
      "role": "WR"
     },
@@ -8224,7 +8224,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -14.6,
+     "x": -15.6,
      "y": 0,
      "role": "WR"
     }
@@ -8369,7 +8369,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 17.73,
+     "x": 18.73,
      "y": 0,
      "role": "WR"
     },
@@ -8525,7 +8525,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "F",
-     "x": -11.6,
+     "x": -12.6,
      "y": 0,
      "role": "WR"
     },
@@ -8534,7 +8534,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -13.1,
+     "x": -14.1,
      "y": -1,
      "role": "WR"
     }
@@ -8681,7 +8681,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 20.73,
+     "x": 21.73,
      "y": 0,
      "role": "WR"
     },
@@ -8819,7 +8819,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 14.6,
+     "x": 15.6,
      "y": 0,
      "role": "WR"
     },
@@ -8974,7 +8974,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 17.73,
+     "x": 18.73,
      "y": 0,
      "role": "WR"
     },
@@ -9146,7 +9146,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 17.73,
+     "x": 18.73,
      "y": 0,
      "role": "WR"
     },
@@ -9155,7 +9155,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -11.6,
+     "x": -12.6,
      "y": 0,
      "role": "WR"
     }
@@ -9300,7 +9300,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 20.73,
+     "x": 21.73,
      "y": 0,
      "role": "WR"
     },
@@ -9309,7 +9309,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -11.6,
+     "x": -12.6,
      "y": 0,
      "role": "WR"
     }
@@ -9465,7 +9465,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -11.6,
+     "x": -12.6,
      "y": 0,
      "role": "WR"
     }
@@ -9610,7 +9610,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "W",
-     "x": -17.73,
+     "x": -18.73,
      "y": 0,
      "role": "WR"
     },
@@ -9619,7 +9619,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -19.23,
+     "x": -20.23,
      "y": -1,
      "role": "WR"
     }
@@ -9764,7 +9764,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 11.6,
+     "x": 12.6,
      "y": -1,
      "role": "WR"
     },
@@ -9920,7 +9920,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 17.73,
+     "x": 18.73,
      "y": -1,
      "role": "WR"
     },
@@ -10076,7 +10076,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 14.6,
+     "x": 15.6,
      "y": 0,
      "role": "WR"
     },
@@ -10085,7 +10085,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -20.73,
+     "x": -21.73,
      "y": -1,
      "role": "WR"
     }
@@ -10230,7 +10230,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 14.6,
+     "x": 15.6,
      "y": 0,
      "role": "WR"
     },
@@ -10239,7 +10239,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -20.73,
+     "x": -21.73,
      "y": 0,
      "role": "WR"
     }
@@ -10372,7 +10372,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Y",
-     "x": 11.6,
+     "x": 12.6,
      "y": 0,
      "role": "TE"
     },
@@ -10381,7 +10381,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 14.6,
+     "x": 15.6,
      "y": -1,
      "role": "WR"
     },
@@ -10390,7 +10390,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -20.73,
+     "x": -21.73,
      "y": 0,
      "role": "WR"
     }
@@ -10535,7 +10535,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 17.73,
+     "x": 18.73,
      "y": 0,
      "role": "WR"
     },
@@ -10673,7 +10673,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 11.6,
+     "x": 12.6,
      "y": 0,
      "role": "WR"
     },
@@ -10691,7 +10691,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "F",
-     "x": -17.73,
+     "x": -18.73,
      "y": 0,
      "role": "WR"
     },
@@ -10700,7 +10700,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -20.73,
+     "x": -21.73,
      "y": -1,
      "role": "WR"
     }
@@ -10829,7 +10829,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 14.6,
+     "x": 15.6,
      "y": -1,
      "role": "WR"
     },
@@ -10856,7 +10856,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -20.73,
+     "x": -21.73,
      "y": 0,
      "role": "WR"
     }
@@ -10985,7 +10985,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 11.6,
+     "x": 12.6,
      "y": 0,
      "role": "WR"
     },
@@ -11157,7 +11157,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 17.73,
+     "x": 18.73,
      "y": -1,
      "role": "WR"
     },
@@ -11166,7 +11166,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -11.6,
+     "x": -12.6,
      "y": 0,
      "role": "WR"
     }
@@ -11311,7 +11311,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "W",
-     "x": -17.73,
+     "x": -18.73,
      "y": -1,
      "role": "WR"
     },
@@ -11320,7 +11320,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -20.73,
+     "x": -21.73,
      "y": 0,
      "role": "WR"
     }
@@ -11467,7 +11467,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "W",
-     "x": -17.73,
+     "x": -18.73,
      "y": 0,
      "role": "WR"
     },
@@ -11476,7 +11476,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -20.73,
+     "x": -21.73,
      "y": -1,
      "role": "WR"
     }
@@ -11621,7 +11621,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 11.6,
+     "x": 12.6,
      "y": -1,
      "role": "WR"
     },
@@ -11756,7 +11756,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 17.67,
+     "x": 18.67,
      "y": 0,
      "role": "WR"
     },
@@ -11909,7 +11909,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 11.6,
+     "x": 12.6,
      "y": -1,
      "role": "WR"
     },
@@ -12080,7 +12080,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 11.6,
+     "x": 12.6,
      "y": 0,
      "role": "WR"
     },
@@ -12089,7 +12089,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -20.73,
+     "x": -21.73,
      "y": 0,
      "role": "WR"
     }
@@ -12233,7 +12233,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 14.6,
+     "x": 15.6,
      "y": 0,
      "role": "WR"
     },
@@ -12242,7 +12242,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -20.73,
+     "x": -21.73,
      "y": 0,
      "role": "WR"
     }
@@ -12992,7 +12992,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 11.6,
+     "x": 12.6,
      "y": 0,
      "role": "WR"
     },
@@ -13001,7 +13001,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Y",
-     "x": -17.73,
+     "x": -18.73,
      "y": -1,
      "role": "TE"
     },
@@ -13010,7 +13010,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "F",
-     "x": -19.23,
+     "x": -20.23,
      "y": 0,
      "role": "WR"
     },
@@ -13019,7 +13019,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -20.73,
+     "x": -21.73,
      "y": -1,
      "role": "WR"
     }
@@ -13174,7 +13174,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -17.73,
+     "x": -18.73,
      "y": 0,
      "role": "WR"
     }
@@ -13290,7 +13290,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "F",
-     "x": 11.6,
+     "x": 12.6,
      "y": -1,
      "role": "WR"
     },
@@ -13299,7 +13299,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 14.6,
+     "x": 15.6,
      "y": 0,
      "role": "WR"
     },
@@ -13464,7 +13464,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 20.73,
+     "x": 21.73,
      "y": 0,
      "role": "WR"
     },
@@ -13482,7 +13482,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -14.6,
+     "x": -15.6,
      "y": 0,
      "role": "WR"
     }
@@ -13620,7 +13620,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 17.73,
+     "x": 18.73,
      "y": 0,
      "role": "WR"
     },
@@ -13638,7 +13638,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -11.6,
+     "x": -12.6,
      "y": 0,
      "role": "WR"
     }
@@ -13909,7 +13909,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 17.67,
+     "x": 18.67,
      "y": -1,
      "role": "WR"
     },
@@ -13918,7 +13918,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "H",
-     "x": 19.17,
+     "x": 20.17,
      "y": 0,
      "role": "RB"
     },
@@ -13945,7 +13945,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -14.67,
+     "x": -15.67,
      "y": 0,
      "role": "WR"
     }
@@ -14070,7 +14070,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 14.6,
+     "x": 15.6,
      "y": 0,
      "role": "WR"
     },
@@ -14097,7 +14097,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -17.73,
+     "x": -18.73,
      "y": 0,
      "role": "WR"
     }
@@ -14222,7 +14222,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 14.6,
+     "x": 15.6,
      "y": 0,
      "role": "WR"
     },
@@ -14249,7 +14249,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -20.73,
+     "x": -21.73,
      "y": 0,
      "role": "WR"
     }
@@ -14383,7 +14383,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 20.73,
+     "x": 21.73,
      "y": 0,
      "role": "WR"
     },
@@ -14392,7 +14392,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "F",
-     "x": -11.6,
+     "x": -12.6,
      "y": -1,
      "role": "WR"
     },
@@ -14401,7 +14401,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -14.6,
+     "x": -15.6,
      "y": 0,
      "role": "WR"
     }
@@ -14530,7 +14530,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "H",
-     "x": 14.6,
+     "x": 15.6,
      "y": -1,
      "role": "RB"
     },
@@ -14548,7 +14548,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "W",
-     "x": -17.73,
+     "x": -18.73,
      "y": 0,
      "role": "WR"
     },
@@ -14557,7 +14557,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -19.23,
+     "x": -20.23,
      "y": -1,
      "role": "WR"
     }
@@ -14689,7 +14689,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 14.6,
+     "x": 15.6,
      "y": 0,
      "role": "WR"
     },
@@ -14707,7 +14707,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -20.73,
+     "x": -21.73,
      "y": 0,
      "role": "WR"
     }
@@ -14853,7 +14853,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "F",
-     "x": -14.67,
+     "x": -15.67,
      "y": 0,
      "role": "WR"
     },
@@ -14862,7 +14862,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -16.17,
+     "x": -17.17,
      "y": -1,
      "role": "WR"
     }
@@ -14996,7 +14996,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 17.73,
+     "x": 18.73,
      "y": 0,
      "role": "WR"
     },
@@ -15316,7 +15316,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -11.6,
+     "x": -12.6,
      "y": -1,
      "role": "WR"
     }
@@ -15450,7 +15450,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 20.73,
+     "x": 21.73,
      "y": 0,
      "role": "WR"
     },
@@ -15468,7 +15468,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -11.6,
+     "x": -12.6,
      "y": -1,
      "role": "WR"
     }
@@ -15600,7 +15600,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 11.6,
+     "x": 12.6,
      "y": -1,
      "role": "WR"
     },
@@ -15618,7 +15618,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -17.73,
+     "x": -18.73,
      "y": 0,
      "role": "WR"
     }
@@ -15900,7 +15900,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 11.6,
+     "x": 12.6,
      "y": -1,
      "role": "WR"
     },
@@ -16504,7 +16504,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 11.6,
+     "x": 12.6,
      "y": -1,
      "role": "WR"
     },
@@ -16674,7 +16674,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -14.67,
+     "x": -15.67,
      "y": 0,
      "role": "WR"
     }
@@ -16830,7 +16830,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -14.67,
+     "x": -15.67,
      "y": 0,
      "role": "WR"
     }
@@ -16971,7 +16971,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 20.73,
+     "x": 21.73,
      "y": 0,
      "role": "WR"
     },
@@ -16980,7 +16980,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -14.6,
+     "x": -15.6,
      "y": 0,
      "role": "WR"
     }
@@ -17103,7 +17103,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 11.6,
+     "x": 12.6,
      "y": 0,
      "role": "WR"
     },
@@ -17253,7 +17253,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 11.6,
+     "x": 12.6,
      "y": 0,
      "role": "WR"
     },
@@ -17406,7 +17406,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 17.67,
+     "x": 18.67,
      "y": 0,
      "role": "WR"
     },
@@ -17433,7 +17433,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -14.67,
+     "x": -15.67,
      "y": -1,
      "role": "WR"
     }
@@ -17559,7 +17559,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 14.6,
+     "x": 15.6,
      "y": 0,
      "role": "WR"
     },
@@ -17586,7 +17586,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": -20.73,
+     "x": -21.73,
      "y": -1,
      "role": "WR"
     }
@@ -17709,7 +17709,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 14.6,
+     "x": 15.6,
      "y": 0,
      "role": "WR"
     },
@@ -17886,7 +17886,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -11.6,
+     "x": -12.6,
      "y": 0,
      "role": "WR"
     }
@@ -18027,7 +18027,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 20.73,
+     "x": 21.73,
      "y": 0,
      "role": "WR"
     },
@@ -18036,7 +18036,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -14.6,
+     "x": -15.6,
      "y": 0,
      "role": "WR"
     }
@@ -18159,7 +18159,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": 11.6,
+     "x": 12.6,
      "y": 0,
      "role": "WR"
     },
@@ -18492,7 +18492,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "X",
-     "x": -14.6,
+     "x": -15.6,
      "y": 0,
      "role": "WR"
     }
@@ -18619,7 +18619,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Y",
-     "x": 14.67,
+     "x": 15.67,
      "y": -1,
      "role": "TE"
     },
@@ -18628,7 +18628,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 17.67,
+     "x": 18.67,
      "y": -1,
      "role": "WR"
     },
@@ -18780,7 +18780,7 @@
      "side": "offense",
      "symbol": "circle",
      "label": "Z",
-     "x": 14.6,
+     "x": 15.6,
      "y": 0,
      "role": "WR"
     },

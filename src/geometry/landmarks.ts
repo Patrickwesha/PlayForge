@@ -20,6 +20,8 @@ export type LandmarkDef = {
   yardsFromHash?: number;
   yardsFromSideline?: number;
   numbers?: 'top' | 'mid' | 'bottom';
+  /** Yards from the painted numbers: negative = inside the top edge (toward the ball), positive = outside the bottom edge (toward the sideline). The playbooks' "-1 / -2 from the numbers" and "+2 / +4 outside the numbers". */
+  yardsFromNumbers?: number;
 };
 
 export const LANDMARK_DEFS: LandmarkDef[] = [
@@ -32,9 +34,13 @@ export const LANDMARK_DEFS: LandmarkDef[] = [
   { id: 'hash+3', label: 'Hash +3', side: 'both', yardsFromHash: 3 },
   { id: 'hash+4', label: 'Hash +4', side: 'both', yardsFromHash: 4 },
   { id: 'hash+5', label: 'Hash +5', side: 'both', yardsFromHash: 5 },
+  { id: 'numbers-in-2', label: '#s -2', side: 'both', yardsFromNumbers: -2 },
+  { id: 'numbers-in-1', label: '#s -1', side: 'both', yardsFromNumbers: -1 },
   { id: 'numbers-top', label: 'Top #s', side: 'both', numbers: 'top' },
   { id: 'numbers-mid', label: 'Mid #s', side: 'both', numbers: 'mid' },
   { id: 'numbers-bottom', label: 'Bottom #s', side: 'both', numbers: 'bottom' },
+  { id: 'numbers-out-2', label: '#s +2', side: 'both', yardsFromNumbers: 2 },
+  { id: 'numbers-out-4', label: '#s +4', side: 'both', yardsFromNumbers: 4 },
   { id: 'sideline-4', label: '4 from SL', side: 'both', yardsFromSideline: 4 },
   { id: 'sideline-2', label: '2 from SL', side: 'both', yardsFromSideline: 2 },
 ];
@@ -60,6 +66,10 @@ function distanceFromMiddle(def: LandmarkDef, preset: HashPreset): number {
   if (def.side === 'center') return 0;
   if (def.yardsFromHash !== undefined) return HASH_PRESETS[preset] + def.yardsFromHash;
   if (def.yardsFromSideline !== undefined) return HALF_FIELD_YD - def.yardsFromSideline;
+  if (def.yardsFromNumbers !== undefined) {
+    const top = HALF_FIELD_YD - field.numbersTopYd;
+    return def.yardsFromNumbers < 0 ? top + def.yardsFromNumbers : top + field.numbersHeightYd + def.yardsFromNumbers;
+  }
   if (def.numbers) {
     const fromTop = def.numbers === 'top' ? 0 : def.numbers === 'mid' ? field.numbersHeightYd / 2 : field.numbersHeightYd;
     return HALF_FIELD_YD - (field.numbersTopYd - fromTop);

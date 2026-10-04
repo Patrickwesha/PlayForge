@@ -29,8 +29,10 @@ export const RECEIVER = {
   tightOutsideEndMan: 3,
   /** slot = halfway between the tackle and the numbers (a fraction of that gap, 0.5 = halfway) */
   slotFractionTackleToNumbers: 0.5,
-  /** wide = this far outside the numbers */
-  wideOutsideNumbers: 3,
+  /** numbers = the middle of the painted numbers (Mid #s): this far outside their top edge */
+  numbersMidFromTop: 1,
+  /** wide = the normal outside split, #s +2: this far outside the TOP edge of the numbers (2 yards of paint + 2) */
+  wideOutsideNumbers: 4,
   /** on_line false */
   offBallDepth: 1,
   /** stack_behind = this far directly behind the player in front */

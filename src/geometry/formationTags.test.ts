@@ -31,29 +31,29 @@ describe('call grammar', () => {
 describe('alignment tags (pp. 13-24)', () => {
   it('Close + Tight = Ace: both outside receivers at 5 yard splits (p-021 item 20)', () => {
     const ace = tag(base('I Rt', '21'), ['ACE']).players;
-    expect(at(ace, 'Z')).toMatchObject({ x: 7.5, y: -1 }); // the "-5-" split off the attached Y at 3 (4.5 between centres, the corrected pack's convention)
-    expect(at(ace, 'X')).toMatchObject({ x: -6.5, y: 0 }); // off the weak tackle at 2, same spot as Red Rt Ace and Sink in the pack
+    expect(at(ace, 'Z')).toMatchObject({ x: 8.08, y: -1 }); // the "-5-" split is the Hash +5 landmark
+    expect(at(ace, 'X')).toMatchObject({ x: -8.08, y: 0 }); // Hash +5 on the weak side, same spot as Sink in the pack
     const two = tag(base('I Rt', '21'), ['CLOSE', 'TIGHT']).players;
     expect(two.map((p) => [p.label, p.x, p.y])).toEqual(ace.map((p) => [p.label, p.x, p.y]));
     const deuce = tag(base('Deuce Rt', '12'), ['ACE']).players;
-    expect(at(deuce, 'X').x).toBe(-7.5); // Deuce has a tight end (F) on the weak side too
+    expect(at(deuce, 'X').x).toBe(-8.08); // a landmark, so the weak-side tight end does not move it
   });
 
   it('Book: field receiver at numbers minus 2, boundary receiver at numbers minus 1 (p-021 item 19)', () => {
     const r = tag(base('I Rt', '21'), ['BOOK']);
-    expect(at(r.players, 'Z').x).toBe(16);
-    expect(at(r.players, 'X').x).toBe(-17);
+    expect(at(r.players, 'Z').x).toBe(12.67); // #s -2
+    expect(at(r.players, 'X').x).toBe(-13.67); // #s -1
     expect(r.applied[0]).toMatchObject({ tag: 'BOOK', basis: 'words' });
     expect(r.review).toEqual([]);
   });
 
   it('Hip = inside receiver on the line, Hop = outside receiver on the line (p-021 items 15-17)', () => {
     const hip = tag(base('I Rt', '21'), ['HIP']).players;
-    expect(at(hip, 'Z')).toMatchObject({ x: -6.5, y: 0 });
-    expect(at(hip, 'X')).toMatchObject({ x: -7.5, y: -1 });
+    expect(at(hip, 'Z')).toMatchObject({ x: -8.08, y: 0 });
+    expect(at(hip, 'X')).toMatchObject({ x: -9.08, y: -1 });
     const hop = tag(base('I Rt', '21'), ['HOP']).players;
-    expect(at(hop, 'X')).toMatchObject({ x: -6.5, y: 0 });
-    expect(at(hop, 'Z')).toMatchObject({ x: -5.5, y: -1 });
+    expect(at(hop, 'X')).toMatchObject({ x: -8.08, y: 0 });
+    expect(at(hop, 'Z')).toMatchObject({ x: -7.08, y: -1 });
     for (const p of [hip, hop]) expect(menOnLine(p)).toHaveLength(7);
   });
 
@@ -63,17 +63,17 @@ describe('alignment tags (pp. 13-24)', () => {
     expect(at(before, 'Z').y).toBe(-1);
     const r = tag(before, ['OFF']);
     expect(at(r.players, 'Y')).toMatchObject({ x: 3, y: -1 });
-    expect(at(r.players, 'Z')).toMatchObject({ x: 20, y: 0 });
+    expect(at(r.players, 'Z')).toMatchObject({ x: 18.67, y: 0 });
     expect(menOnLine(r.players)).toHaveLength(7);
   });
 
   it('Clamp and Click put the Z on the ball at a 5 yard split with the Y off it, inside or outside', () => {
     const clamp = tag(base('I Rt', '21'), ['CLAMP']).players;
-    expect(at(clamp, 'Z')).toMatchObject({ x: 6.5, y: 0 });
+    expect(at(clamp, 'Z')).toMatchObject({ x: 8.08, y: 0 });
     expect(at(clamp, 'Y')).toMatchObject({ x: 3, y: -1 });
     const click = tag(base('I Rt', '21'), ['CLICK']).players;
-    expect(at(click, 'Z')).toMatchObject({ x: 6.5, y: 0 });
-    expect(at(click, 'Y')).toMatchObject({ x: 7.5, y: -1 });
+    expect(at(click, 'Z')).toMatchObject({ x: 8.08, y: 0 });
+    expect(at(click, 'Y')).toMatchObject({ x: 9.08, y: -1 });
   });
 
   it('flags a tag the book only draws, and leaves unknown words alone', () => {

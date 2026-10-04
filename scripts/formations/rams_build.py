@@ -4,12 +4,14 @@ named in the Eagles system.
 
     python scripts/formations/rams_build.py source/rams-2022/formations.raw.json data/formations/rams-2022.system.json
 
-The diagrams are not to scale, so positions are read as PICTURES, not measured:
-  - a man within one line split of the end man is attached (TE at 3, the next at 4, ...)
-  - a man after a -5- mark is at a 5 yard split (6.5 from a tackle at 2, 8 outside an inline TE);
-    after a -3- mark, 3 yards; men touching him sit a yard either side
-  - the outermost detached man is wide (20), or on / just inside the numbers when a # mark is drawn
-  - other detached men are slots, spread evenly between the tackle and the wide man
+The diagrams are not to scale, so positions are read as PICTURES and put on PlayForge's landmarks
+(src/geometry/landmarks.ts), the same spots the editor snaps to:
+  - a man within one line split of the end man is attached, a yard apart (TE at 3, the next at 4, ...)
+  - a man after a -5- mark stands on Hash +5; after a -3- mark, on Hash +3; men touching him sit a yard either side
+  - a # mark is the painted numbers: a man drawn on it is on Mid #s, inside it on Top #s (well inside: #s -2),
+    outside it on Bottom #s; a pack extended to the numbers covers Top / Mid / Bottom
+  - with no # mark the outermost detached man takes the normal split, #s +2
+  - other detached men are slots, spread evenly between the end man and the wide man
   - a letter drawn level with the line is ON the ball, lower is OFF (1 yard)
   - backs: I (0, -5 and -7.5), offset behind a tackle (2, -5), halfback deep at 7.5
 Names: the Rams word is replaced by the system word when the picture is the same (Double -> Dice,
@@ -45,6 +47,9 @@ LEFT_OUT = {"TROUT": "Trips Open", "BUDDY": "Buddy"}
 TOUCH = 1.12  # line splits: closer than this = touching the next man
 # The painted numbers on an NFL field, in yards from a ball in the middle (PlayForge landmarks: Top #s, Mid #s, Bottom #s)
 NUM_TOP, NUM_MID, NUM_BOTTOM = 14.67, 15.67, 16.67
+NUM_IN_2, NUM_OUT_2 = 12.67, 18.67  # "#s -2" and "#s +2" (the normal outside split)
+HASH = 3.08  # NFL hash from a ball in the middle
+HASH_5, HASH_3 = round(HASH + 5, 2), round(HASH + 3, 2)
 ATTACHED = 3.35  # first man this close to the center is attached to the tackle
 
 
@@ -117,9 +122,8 @@ def place_side(rcv, marks, notes):
             continue
         if mark:
             mark["used"] = True
-            gap = 3.0 if mark["mark"] == "-3-" else (5.0 if prev_te or (len(c) == 1 and ci == 0) else 4.5)  # 5 from an inline TE, or for a lone man off a bare tackle; 4.5 (6.5 from the ball) beside a wing or for a stacked pair, as in the corrected Green Bay pack
             anchor = next((i for i, p in enumerate(c) if p["on"]), 0)
-            ax = prev_x + gap
+            ax = HASH_3 if mark["mark"] == "-3-" else HASH_5  # the split marks are landmarks: Hash +3, Hash +5
             for k, p in enumerate(c):
                 out[p["spot"]] = (ax + (k - anchor), 0 if p["on"] else -1)
             prev_x, prev_a, prev_te = ax + len(c) - 1 - anchor, c[-1]["a"], False
@@ -127,7 +131,7 @@ def place_side(rcv, marks, notes):
         if len(c) >= 2 and c[0]["a"] < 4.9:
             # a touching pair or trio just off the tackle with no mark drawn: the family's 5 yard split
             anchor = next((i for i, p in enumerate(c) if p["on"]), 0)
-            ax = prev_x + 4.5
+            ax = HASH_5
             for k, p in enumerate(c):
                 out[p["spot"]] = (ax + (k - anchor), 0 if p["on"] else -1)
             prev_x, prev_a, prev_te = ax + len(c) - 1 - anchor, c[-1]["a"], False
@@ -137,20 +141,20 @@ def place_side(rcv, marks, notes):
     # detached clusters: the last is the wide man, the others are slots
     inner = detached[:-1] if detached else []
     for k, c in enumerate(inner, start=1):
-        x = round((prev_x + (20 - prev_x) * k / (len(inner) + 1)) * 2) / 2
+        x = round(prev_x + (NUM_OUT_2 - prev_x) * k / (len(inner) + 1), 2)
         anchor = next((i for i, p in enumerate(c) if p["on"]), len(c) - 1)
         for i, p in enumerate(c):
             out[p["spot"]] = (x + (i - anchor), 0 if p["on"] else -1)
     if detached:
         c = detached[-1]
         outer = c[-1]
-        x = 20.0
+        x = NUM_OUT_2
         anchor = len(c) - 1
         if hashes:
             h = min(hashes, key=lambda v: abs(v - outer["a"]))
             d = h - outer["a"]
             # on the numbers / just inside them (Edge) / well inside (King)
-            x = NUM_MID if abs(d) < 0.25 else NUM_MID - 1.5 if 0 < d < 1.0 else NUM_MID - 3.0 if d >= 1.0 else 20.0
+            x = NUM_MID if abs(d) < 0.25 else NUM_TOP if 0 < d < 1.0 else NUM_IN_2 if d >= 1.0 else NUM_BOTTOM
             if abs(d) < 0.25 and len(c) == 3:
                 # a pack extended to the numbers sits ON them: inside man on Top #s, point man in the middle, outside man on Bottom #s
                 x, anchor = NUM_MID, 1

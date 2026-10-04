@@ -195,19 +195,29 @@
     }
   ],
   "alignment": {
-    "means": "Base splits, so a drawing looks the same every time.",
+    "means": "Every player in a formation stands on one of the editor's snap spots, so an imported formation and one I draw by hand line up the same way. These are the rules an import follows.",
     "rules": [
-      "Outside receiver: 2 yards outside the numbers to the field, 4 yards outside the numbers into the boundary. Ball in the middle: use the field split.",
-      "Slot: halfway between the outside receiver and the end man on the line.",
-      "Three detached to one side: outside man 3 outside the numbers, inside man 1 outside the hash, middle man splits them.",
-      "A -5- on a diagram is a 5 yard split from the end man on the line. A -3- is the bunch split.",
-      "Under center: halfback's toes at 7.5 yards, fullback's heels at 5.",
-      "Gun: quarterback's heels at 5, back beside him in the B gap. Pistol: quarterback at 4, back at 7."
+      "On the ball next to the tackle: one yard outside him, on the row spacing the editor shows in orange. The next man is one more yard out.",
+      "A -5- on a playbook diagram is the Hash +5 landmark. A -3- is Hash +3. Hash +1 to +5 are the reduced splits. A stacked or bunched partner sits one yard either side of the man on the landmark.",
+      "Receiver or tight end drawn INSIDE the numbers: Top #s (the inside edge of the paint). Well inside: #s -1 or #s -2.",
+      "Drawn ON the numbers: Mid #s.",
+      "Drawn OUTSIDE the numbers: Bottom #s (the outside edge of the paint).",
+      "Normal outside split with nothing marked: #s +2 (the books' 2 yards outside the numbers to the field). Into the boundary: #s +4.",
+      "Very wide: 4 from the sideline or 2 from the sideline.",
+      "Slot with no mark: halfway between the end man and the outside receiver (the editor's middle snap).",
+      "A pack pushed out to the numbers covers them: inside man Top #s, point man Mid #s on the ball, outside man Bottom #s.",
+      "If a playbook shows a spot none of these cover, add a new landmark for it instead of eyeballing it.",
+      "Depths: under center the halfback's toes are at 7.5 yards and the fullback's heels at 5. Gun: quarterback's heels at 5, back beside him. Pistol: quarterback at 4, back at 7."
     ],
     "sources": [
       {
         "book": "gb-2019",
         "page": 11
+      },
+      {
+        "book": "rams-2022",
+        "section": "01 General",
+        "page": 29
       }
     ]
   },

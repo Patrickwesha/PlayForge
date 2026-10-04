@@ -135,10 +135,7 @@ export function LibraryBar({ bookId, libraryUrl, built, canSaveEdits = true, com
         </>
       ) : (
         <>
-          <span style={{ width: '100%' }}>Edit on any diagram opens it in the editor. Or add all 2,030 at once as the Green Bay 2019 playbook:</span>
-          <button type="button" className="bk-btn" onClick={add} disabled={!!busy}>
-            {busy === 'add' ? 'Adding…' : 'Add the whole playbook'}
-          </button>
+          <span style={{ width: '100%' }}>Edit on any diagram adds that one play to your library and opens it in the editor.</span>
         </>
       )}
       {staleFormations.length > 0 && (

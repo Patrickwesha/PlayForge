@@ -161,9 +161,9 @@ describe('alignment labels to yards', () => {
     expect(byLabel(players, 'H')).toMatchObject({ x: 0, y: -BACK_SPOT.deep.depth });
     expect(byLabel(players, 'Y')).toMatchObject({ x: 3, y: 0 }); // 1 outside the tackle
     expect(byLabel(players, 'U')).toMatchObject({ x: 4, y: -1 }); // wing: 1 outside the end man (Y), 1 off
-    expect(byLabel(players, 'Z')).toMatchObject({ x: 20.73, y: 0 }); // far numbers (17.73) + RECEIVER.wideOutsideNumbers (3)
+    expect(byLabel(players, 'Z')).toMatchObject({ x: 21.73, y: 0 }); // far numbers' top edge (17.73) + RECEIVER.wideOutsideNumbers (4) = #s +2
     expect(byLabel(players, 'F')).toMatchObject({ x: -(2 + 11.6) / 2, y: -1 }); // halfway tackle to near numbers, off
-    expect(byLabel(players, 'X')).toMatchObject({ x: -11.6, y: 0 });
+    expect(byLabel(players, 'X')).toMatchObject({ x: -12.6, y: 0 }); // near numbers: top edge 11.6 + 1 = Mid #s
   });
 
   it('tight is 3 outside the end man and moves the end man; a bunch steps outside the previous slot', () => {
@@ -196,8 +196,8 @@ describe('alignment labels to yards', () => {
     expect(byLabel(players, 'Q').y).toBe(-QB_DEPTH.pistol);
     expect(byLabel(players, 'H').y).toBe(-BACK_SPOT.pistol_back.depth);
     const [front, back] = Object.values(players).filter((p) => p.role === 'WR').sort((a, b) => b.y - a.y);
-    expect(front).toMatchObject({ x: 17.67, y: 0 });
-    expect(back).toMatchObject({ x: 17.67, y: -RECEIVER.stackBehindDepth });
+    expect(front).toMatchObject({ x: 18.67, y: 0 }); // wide = #s +2 with the ball in the middle
+    expect(back).toMatchObject({ x: 18.67, y: -RECEIVER.stackBehindDepth });
   });
 
   it('a snap with no QB charted still draws one from the backfield; unknown labels warn and still draw', () => {

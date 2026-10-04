@@ -99,7 +99,7 @@ function placeSide(receivers: AlignedPlayer[], numbersX: number, warnings: strin
         fieldSpot = true;
         break;
       case 'numbers':
-        x = numbersX;
+        x = numbersX + RECEIVER.numbersMidFromTop;
         fieldSpot = true;
         break;
       case 'wide':
