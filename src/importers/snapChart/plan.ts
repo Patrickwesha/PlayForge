@@ -331,7 +331,11 @@ export function buildImportPlan(input: { chart?: ParsedChart; json?: ParsedForma
     list.push(p);
     byName.set(p.formation.name, list);
   }
-  for (const list of byName.values()) list.forEach((p, i) => i > 0 && (p.formation.name = `${p.formation.name} #${i + 1}`));
+  // a hand-drawn alignment keeps the plain name; the charted look-alikes take the numbers
+  for (const list of byName.values()) {
+    list.sort((a, b) => Number(b.signature.includes('@')) - Number(a.signature.includes('@')));
+    list.forEach((p, i) => i > 0 && (p.formation.name = `${p.formation.name} #${i + 1}`));
+  }
 
   return {
     formations: planned,

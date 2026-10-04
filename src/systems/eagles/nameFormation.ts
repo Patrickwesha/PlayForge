@@ -46,7 +46,7 @@ export type NameInput = {
 };
 
 type Zone = 'in' | 'wing' | 't5' | 'slot' | 'out';
-type Rcv = { p: AlignedPlayer; zone: Zone; on: boolean; te: boolean; rb: boolean; stacked: boolean };
+type Rcv = { p: AlignedPlayer; zone: Zone; on: boolean; te: boolean; rb: boolean; stacked: boolean; job?: string };
 
 const ZONE: Record<string, Zone> = { inline: 'in', wing: 'wing', tight: 't5', slot: 'slot', numbers: 'out', wide: 'out' };
 const other = (s: AlignedSide): AlignedSide => (s === 'R' ? 'L' : 'R');
@@ -57,7 +57,7 @@ function toRcv(p: AlignedPlayer): Rcv {
   const on = isOnLine(p);
   let zone = ZONE[p.align] ?? 'slot';
   if (zone === 'in' && !on) zone = 'wing';
-  return { p, zone, on, te: p.pos === 'TE', rb: p.pos === 'RB', stacked: !!p.stack_behind };
+  return { p, zone, on, te: p.pos === 'TE', rb: p.pos === 'RB', stacked: !!p.stack_behind, job: p.label ? p.label.toUpperCase() : undefined };
 }
 
 function sideOf(rcvs: Rcv[], side: AlignedSide): Rcv[] {
@@ -86,6 +86,16 @@ function callSide(rcvs: Rcv[], chart: SnapStrength | undefined, notes: string[])
   return 'R';
 }
 
+/**
+ * When the job letters are known (a hand-drawn alignment carries them) the exact word can be picked: the
+ * books name these pictures by which job stands where, inside to outside.
+ */
+const jobs = (list: Rcv[]) => (list.every((r) => r.job) ? list.map((r) => r.job).join('') : null);
+const BUNCH_BY_JOBS: Record<string, string> = { YFZ: 'Bunch', FYZ: 'Bin', FZY: 'Buddy', YZX: 'Box', YZF: 'Bundle', ZYF: 'Bowl' };
+const TRIPS_BY_JOBS: Record<string, string> = { YFZ: 'Trips', YZF: 'Trio', YZX: 'Trax' };
+const FAST_BY_JOBS: Record<string, string> = { FZX: 'Fast', ZFX: 'Fit', ZXF: 'Foot' };
+const CRIP_BY_JOBS: Record<string, string> = { FZX: 'Crip', ZFX: 'Crack', ZXF: 'Crush', XFZ: 'Cruz' };
+
 type Core = { base: string; family: string; tags: string[]; alternates: string[]; closest?: boolean };
 
 /** One back, four receivers. `S` and `W` are inside-out. */
@@ -101,6 +111,8 @@ function oneBack(S: Rcv[], W: Rcv[], input: NameInput, notes: string[]): Core {
     else if (attached(x)) tags.push('Tighter');
     const cluster = /bunch/i.test(hint) || S.every(reduced);
     if (cluster) {
+      const known = BUNCH_BY_JOBS[jobs(S) ?? ''];
+      if (known) return { base: known, family: "Bunch 'B'", tags, alternates: [] };
       if (yi < 0) notes.push('No tight end read in the bunch: called Bunch (Y inside). Bin = Y at the point, Buddy = Y outside.');
       const base = yi === 1 ? 'Bin' : yi === 2 ? 'Buddy' : 'Bunch';
       return { base, family: "Bunch 'B'", tags, alternates: ['Bunch', 'Bin', 'Buddy', 'Box'].filter((b) => b !== base) };
@@ -119,6 +131,8 @@ function oneBack(S: Rcv[], W: Rcv[], input: NameInput, notes: string[]): Core {
     if (S[0].zone === 'wing') tags.unshift('Off');
     else if (S[0].zone !== 'in') tags.unshift('Open');
     if (S[2].zone === 't5' && S[0].zone === 'in') tags.unshift('Close');
+    const trips = TRIPS_BY_JOBS[jobs(S) ?? ''];
+    if (trips) return { base: trips, family: "3x1 'T'", tags, alternates: [] };
     return { base: 'Trips', family: "3x1 'T'", tags, alternates: ['Trio', 'Trax'], closest: yi < 0 };
   }
 
@@ -126,8 +140,9 @@ function oneBack(S: Rcv[], W: Rcv[], input: NameInput, notes: string[]): Core {
     if (S[0].zone === 'wing') tags.push('Off');
     else if (S[0].zone !== 'in') tags.push('Open');
     const cluster = /bunch/i.test(hint) || W.every(reduced);
-    if (cluster) return { base: 'Crip', family: "1x3 Bunch 'CR'", tags, alternates: ['Crack', 'Crush', 'Cruz'] };
-    return { base: 'Fast', family: "1x3 'F'", tags, alternates: ['Fit', 'Foot'] };
+    const weakJobs = jobs(W) ?? '';
+    if (cluster) return CRIP_BY_JOBS[weakJobs] ? { base: CRIP_BY_JOBS[weakJobs], family: "1x3 Bunch 'CR'", tags, alternates: [] } : { base: 'Crip', family: "1x3 Bunch 'CR'", tags, alternates: ['Crack', 'Crush', 'Cruz'] };
+    return FAST_BY_JOBS[weakJobs] ? { base: FAST_BY_JOBS[weakJobs], family: "1x3 'F'", tags, alternates: [] } : { base: 'Fast', family: "1x3 'F'", tags, alternates: ['Fit', 'Foot'] };
   }
 
   if (S.length === 2 && W.length === 2) {
@@ -137,6 +152,9 @@ function oneBack(S: Rcv[], W: Rcv[], input: NameInput, notes: string[]): Core {
     let base = 'Dice';
     let family = "2x2 'D'";
     let alternates = ['Dixie'];
+    const weakJobs = jobs(W);
+    if (weakJobs === 'XF') base = 'Dixie'; // X in the slot, F outside
+    if (weakJobs) alternates = [];
     const stack = /stack/i.test(hint) || W.some((r) => r.stacked) || W.every(reduced);
 
     if (S.every((r) => r.te && attached(r))) {
@@ -158,8 +176,10 @@ function oneBack(S: Rcv[], W: Rcv[], input: NameInput, notes: string[]): Core {
         base = 'Sink';
         alternates = [];
       } else {
-        base = 'Stack';
-        alternates = ['South'];
+        // Stack = F on the ball with the X behind him; South = X on the ball with the F behind him
+        const front = W.find((r) => r.on);
+        base = front?.job === 'X' ? 'South' : 'Stack';
+        alternates = front?.job ? [] : ['South'];
       }
     }
 

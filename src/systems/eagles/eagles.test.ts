@@ -45,6 +45,19 @@ describe('nameFormation', () => {
     expect(call([qb(), back(), ...b(3), x]).base).toBe('Buddy');
   });
 
+  it('with job letters known, the word follows who stands where: Bunch, Bin, Buddy, Trio, Dixie', () => {
+    const x = { ...r('WR', 'L', 1, 'wide'), label: 'X' };
+    const bunch = (order: [string, 'TE' | 'WR'][]) => order.map(([label, pos], i) => ({ ...r(pos, 'R', i + 1, 'tight', i === 1), label }));
+    const c1 = call([qb(), back(), ...bunch([['Y', 'TE'], ['F', 'WR'], ['Z', 'WR']]), x]);
+    expect([c1.base, c1.alternates]).toEqual(['Bunch', []]);
+    expect(call([qb(), back(), ...bunch([['F', 'TE'], ['Y', 'TE'], ['Z', 'WR']]), x], 'Under Center', { personnel: '12' }).base).toBe('Bin');
+    expect(call([qb(), back(), ...bunch([['F', 'WR'], ['Z', 'WR'], ['Y', 'TE']]), x]).base).toBe('Buddy');
+    const y = { ...r('TE', 'R', 1, 'inline'), label: 'Y' };
+    expect(call([qb(), back(), y, { ...r('WR', 'R', 2, 'slot', false), label: 'Z' }, { ...r('WR', 'R', 3, 'wide', false), label: 'F' }, x]).base).toBe('Trio');
+    const z = { ...r('WR', 'R', 2, 'wide', false), label: 'Z' };
+    expect(call([qb(), back(), y, z, { ...r('WR', 'L', 1, 'slot', false), label: 'X' }, { ...r('WR', 'L', 2, 'wide'), label: 'F' }]).base).toBe('Dixie');
+  });
+
   it('empty: the other four are named and the back gets his letter (A widest strong ... G widest weak)', () => {
     const c = call([qb('gun'), r('TE', 'L', 1, 'inline'), r('WR', 'L', 2, 'slot', false), r('WR', 'L', 3, 'wide'), r('WR', 'R', 1, 'slot', false), r('RB', 'R', 2, 'wide')], 'Gun');
     expect(c.name).toBe('Gun Trips Lt G');

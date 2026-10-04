@@ -4,7 +4,7 @@
  "team": "PHI",
  "season": 2026,
  "mirror": false,
- "revision": "63b674185262",
+ "revision": "f8bc7f559f8a",
  "formations": [
   {
    "id": "snapform-35d44e8be24720b9",
@@ -631,7 +631,7 @@
   },
   {
    "id": "snapform-c5d75b36313a5554",
-   "name": "Gun Bunch Lt",
+   "name": "Gun Bunch Lt #2",
    "chartName": "11 Gun Bunch Lt",
    "system": {
     "id": "eagles-2026",
@@ -1852,7 +1852,7 @@
   },
   {
    "id": "snapform-84db209daa882ef7",
-   "name": "Gun Dice Rt Off",
+   "name": "Gun Dice Rt Off #2",
    "chartName": "11 Gun 2x2 Rt",
    "system": {
     "id": "eagles-2026",
@@ -2309,7 +2309,7 @@
   },
   {
    "id": "snapform-af726c9be139a465",
-   "name": "Gun Dice Rt Off #2",
+   "name": "Gun Dice Rt Off #3",
    "chartName": "11 Gun 2x2 Rt",
    "system": {
     "id": "eagles-2026",
@@ -2464,7 +2464,7 @@
   },
   {
    "id": "snapform-5631fa5304a3f1cd",
-   "name": "Gun Dice Rt Off #3",
+   "name": "Gun Dice Rt Off #4",
    "chartName": "11 Gun 2x2 Rt",
    "system": {
     "id": "eagles-2026",
@@ -4151,7 +4151,7 @@
   },
   {
    "id": "snapform-8d5731acee303ef6",
-   "name": "Gun Dice Rt Off #4",
+   "name": "Gun Dice Rt Off #5",
    "chartName": "11 Gun 2x2 Rt",
    "system": {
     "id": "eagles-2026",
@@ -4761,7 +4761,7 @@
   },
   {
    "id": "snapform-1ad5299de4e31ffb",
-   "name": "Gun Dice Rt Off #5",
+   "name": "Gun Dice Rt Off",
    "chartName": "11 Gun 2x2 Rt",
    "system": {
     "id": "eagles-2026",
@@ -4772,9 +4772,7 @@
      "Off"
     ],
     "back": "strong",
-    "alternates": [
-     "Dixie"
-    ],
+    "alternates": [],
     "confidence": "rule"
    },
    "side": "offense",
@@ -4893,7 +4891,7 @@
    "strength": "right",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W1_WAS-PHI_playforge.json, W2_PHI-TEN_playforge.json)",
-   "note": "System call: Gun Dice Rt Off [11]. Charted as 11 Gun 2x2 Rt.\nBack on the strong side of the quarterback.\nSame picture, different jobs: Dixie.\nW1-006: After the shift: Goedert inline R (two-point), one receiver R just inside the numbers; two receivers L, one in the slot just inside the numbers and one wide outside the numbers. Hurts in gun, Shipley beside him to the right. Before the shift it was 3x1 Rt with two receivers paired at the numbers R.\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Gun Dice Rt Off [11]. Charted as 11 Gun 2x2 Rt.\nBack on the strong side of the quarterback.\nW1-006: After the shift: Goedert inline R (two-point), one receiver R just inside the numbers; two receivers L, one in the slot just inside the numbers and one wide outside the numbers. Hurts in gun, Shipley beside him to the right. Before the shift it was 3x1 Rt with two receivers paired at the numbers R.\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|2x2 'D'|Gun|B:RB:R:gun_offset,Q:gun,R:L1:WR:tight:off@-8.083,-1=F,R:L2:WR:numbers:on@-14.667,0=X,R:R1:TE:wing:off@3.083,-1=Y,R:R2:WR:numbers:on@14.667,0=Z",
@@ -8737,7 +8735,7 @@
   },
   {
    "id": "snapform-86c81b10ece839fa",
-   "name": "Gun Bunch Lt #2",
+   "name": "Gun Bunch Lt #3",
    "chartName": "11 Gun 3x1 Lt",
    "system": {
     "id": "eagles-2026",
@@ -12599,7 +12597,7 @@
   },
   {
    "id": "snapform-7c5f8d09ac4c51bb",
-   "name": "Gun Bunch Lt #3",
+   "name": "Gun Bunch Lt #4",
    "chartName": "11 Gun Bunch Lt",
    "system": {
     "id": "eagles-2026",
@@ -12754,7 +12752,7 @@
   },
   {
    "id": "snapform-5e0d73ae0a02e6f8",
-   "name": "Gun Bunch Lt #4",
+   "name": "Gun Bunch Lt",
    "chartName": "11 Gun Bunch Lt",
    "system": {
     "id": "eagles-2026",
@@ -12763,11 +12761,7 @@
     "strength": "Lt",
     "tags": [],
     "back": "weak",
-    "alternates": [
-     "Bin",
-     "Buddy",
-     "Box"
-    ],
+    "alternates": [],
     "confidence": "rule"
    },
    "side": "offense",
@@ -12886,7 +12880,7 @@
    "strength": "left",
    "qbAlignment": "gun",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W1_WAS-PHI_playforge.json, W2_PHI-TEN_playforge.json)",
-   "note": "System call: Gun Bunch Lt [11]. Charted as 11 Gun Bunch Lt.\nBack on the weak side of the quarterback.\nSame picture, different jobs: Bin, Buddy, Box.\nW1-003: Set (1.0 to 4.0 s): Goedert wing L off the LT's hip, two receivers in the slot L (inside one on the line just outside the left hash, outside one off the ball about 1.5 yards wider); one receiver alone R on the outer edge of the numbers. Hurts in gun, Barkley beside him to the right. Goedert then crosses behind the line to wing R and is there as the ball is snapped (2x2 as snapped).\nDrawn on the Right hash (seen: Right 1).",
+   "note": "System call: Gun Bunch Lt [11]. Charted as 11 Gun Bunch Lt.\nBack on the weak side of the quarterback.\nW1-003: Set (1.0 to 4.0 s): Goedert wing L off the LT's hip, two receivers in the slot L (inside one on the line just outside the left hash, outside one off the ball about 1.5 yards wider); one receiver alone R on the outer edge of the numbers. Hurts in gun, Barkley beside him to the right. Goedert then crosses behind the line to wing R and is there as the ball is snapped (2x2 as snapped).\nDrawn on the Right hash (seen: Right 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "11|Bunch 'B'|Gun|B:RB:R:gun_offset,Q:gun,R:L1:TE:wing:off@-3.083,-1=Y,R:L2:WR:tight:on@-6.083,0=F,R:L3:WR:tight:off@-8.083,-1=Z,R:R1:WR:numbers:on@14.667,0=X",
@@ -17479,7 +17473,7 @@
   },
   {
    "id": "snapform-7d4f58c6f1a6d810",
-   "name": "West Rt Close",
+   "name": "West Rt Close #2",
    "chartName": "12 UC 3x1 Rt",
    "system": {
     "id": "eagles-2026",
@@ -17631,7 +17625,7 @@
   },
   {
    "id": "snapform-b17223c06b6f0b76",
-   "name": "West Rt Close #2",
+   "name": "West Rt Close",
    "chartName": "12 UC 3x1 Rt",
    "system": {
     "id": "eagles-2026",
@@ -18393,19 +18387,15 @@
   },
   {
    "id": "snapform-b722a79bc77392f5",
-   "name": "Bunch Rt",
+   "name": "Bin Rt",
    "chartName": "12 UC Bunch Rt",
    "system": {
     "id": "eagles-2026",
-    "base": "Bunch",
+    "base": "Bin",
     "family": "Bunch 'B'",
     "strength": "Rt",
     "tags": [],
-    "alternates": [
-     "Bin",
-     "Buddy",
-     "Box"
-    ],
+    "alternates": [],
     "confidence": "rule"
    },
    "side": "offense",
@@ -18517,14 +18507,14 @@
     "12",
     "Bunch 'B'",
     "W1",
-    "Bunch",
+    "Bin",
     "Bunch 'B'"
    ],
    "family": "Bunch 'B'",
    "strength": "right",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W1_WAS-PHI_playforge.json, W2_PHI-TEN_playforge.json)",
-   "note": "System call: Bunch Rt [12]. Charted as 12 UC Bunch Rt.\nSame picture, different jobs: Bin, Buddy, Box.\nW1-002: Set (2.0 to 3.5 s): Mundt inline R, Goedert attached just outside Mundt, Wicks on the line in a reduced slot R near the right college hash; Smith alone L at the top of the numbers. Barkley deep. Goedert then walks out to outside Wicks, pauses about 1 s (the 6.0 s frame) and comes back in at the snap.\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Bin Rt [12]. Charted as 12 UC Bunch Rt.\nW1-002: Set (2.0 to 3.5 s): Mundt inline R, Goedert attached just outside Mundt, Wicks on the line in a reduced slot R near the right college hash; Smith alone L at the top of the numbers. Barkley deep. Goedert then walks out to outside Wicks, pauses about 1 s (the 6.0 s frame) and comes back in at the snap.\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "12|Bunch 'B'|Under Center|B:RB:C:deep,Q:under_center,R:L1:WR:numbers:on@-14.667,0=X,R:R1:TE:wing:off@3,-1=F,R:R2:TE:wing:off@4.083,-1=Y,R:R3:WR:tight:on@6.083,0=Z",
@@ -18547,7 +18537,7 @@
   },
   {
    "id": "snapform-697dd88a83b9e49c",
-   "name": "Bunch Rt #2",
+   "name": "Bunch Rt",
    "chartName": "12 UC Bunch Rt",
    "system": {
     "id": "eagles-2026",
@@ -18555,11 +18545,7 @@
     "family": "Bunch 'B'",
     "strength": "Rt",
     "tags": [],
-    "alternates": [
-     "Bin",
-     "Buddy",
-     "Box"
-    ],
+    "alternates": [],
     "confidence": "rule"
    },
    "side": "offense",
@@ -18678,7 +18664,7 @@
    "strength": "right",
    "qbAlignment": "under",
    "source": "PHI 2026 All-22 chart (eagles-all22-chart.xlsx, W1_WAS-PHI_playforge.json, W2_PHI-TEN_playforge.json)",
-   "note": "System call: Bunch Rt [12]. Charted as 12 UC Bunch Rt.\nSame picture, different jobs: Bin, Buddy, Box.\nW1-004: Set (3.0 to 4.5 s): Mundt inline L with Smith off the ball just outside him; Goedert wing R off the RT's hip, Cooper on the line tight outside Goedert. Barkley deep. Smith runs across to outside Cooper on the right, turns around and comes back, and is behind Mundt on the left again at the snap.\nDrawn on the Left hash (seen: Left 1).",
+   "note": "System call: Bunch Rt [12]. Charted as 12 UC Bunch Rt.\nW1-004: Set (3.0 to 4.5 s): Mundt inline L with Smith off the ball just outside him; Goedert wing R off the RT's hip, Cooper on the line tight outside Goedert. Barkley deep. Smith runs across to outside Cooper on the right, turns around and comes back, and is behind Mundt on the left again at the snap.\nDrawn on the Left hash (seen: Left 1).",
    "confidence": "derived",
    "builtin": true,
    "signature": "12|Bunch 'B'|Under Center|B:RB:C:deep,Q:under_center,R:L1:WR:numbers:on@-14.667,0=X,R:R1:TE:wing:off@3.083,-1=Y,R:R2:TE:tight:on@4.083,0=F,R:R3:WR:tight:off@5.083,-1=Z",
