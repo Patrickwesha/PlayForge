@@ -116,8 +116,9 @@ describe('formations JSON parse', () => {
     expect(s2).toMatchObject({ week: 2, backfield: 'Gun', backfieldDetail: 'Gun, RB R', strength: 'Lt', hash: 'Middle', personnel: '12', formFamily: "2x2 'D'" });
     expect(s2.players.length).toBe(6);
     const s25 = j.snaps.find((s) => s.id === 'W2-025')!;
-    expect(s25.strength).toBeUndefined();
-    expect(s25.players.filter((p) => p.id_unknown).length).toBe(3);
+    // re-charted from the frames: the Y tiebreak puts strength on Goedert's side, and every number was read
+    expect(s25.strength).toBe('Lt');
+    expect(s25.players.filter((p) => p.id_unknown).length).toBe(0);
   });
 
   it('rejects other files with a reason', () => {
@@ -333,20 +334,20 @@ describe('the whole plan on the real files', () => {
     expect(plan.formations[0].count).toBeGreaterThanOrEqual(plan.formations[1].count);
   });
 
-  it('W2 formations draw from the exact alignment: W2-001 is an I with both TEs inline and reduced splits', () => {
+  it('W2 formations draw from the exact alignment: W2-001 is an I with both TEs as wings off the ball and reduced splits', () => {
     const snap = plan.snaps.find((s) => s.playId === 'W2-001')!;
     const f = plan.formations.find((p) => p.formation.id === snap.formationId)!.formation;
     const by = (label: string) => Object.values(f.players).find((q) => q.label === label)!;
     expect(f.name).toBe('12 UC 2x2 Rt');
-    expect(by('Y')).toMatchObject({ x: 3, y: 0, role: 'TE' });
-    expect(by('U')).toMatchObject({ x: -3, y: 0, role: 'TE' });
+    expect(by('Y')).toMatchObject({ x: 3, y: -1, role: 'TE' });
+    expect(by('U')).toMatchObject({ x: -3, y: -1, role: 'TE' });
     expect(by('H')).toMatchObject({ x: 0, y: -7 });
     expect(by('Q')).toMatchObject({ x: 0, y: -1 });
     // right hash: near (right) numbers 11.6 -> slot 6.8; far (left) numbers 17.73 -> slot 9.87
     expect(by('Z')).toMatchObject({ x: 6.8, y: 0 });
     expect(by('X').y).toBe(0);
     expect(by('X').x).toBeCloseTo(-(2 + 17.73) / 2, 1);
-    expect(f.note).toMatch(/^W2-001: I-formation/);
+    expect(f.note).toMatch(/^W2-001: Under center, Barkley deep/);
   });
 
   it('W1 snaps use the most common W2 alignment for their key, else a default shape, and the Set text lands in the note', () => {
