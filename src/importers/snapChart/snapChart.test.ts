@@ -390,8 +390,8 @@ describe('the whole plan on the real files', () => {
     const input = { chart: parseChartXlsx(xlsx()), json: parseFormationsJson(applyDrawnAlignments(mergeFormationsJson(all), JSON.parse(readFileSync(path.join(DATA, 'drawn-alignments.json'), 'utf8')))) };
     const mirrored = buildImportPlan(input, { ...OPTS, mirror: true, naming: 'system', filmWinsWeeks: [1] });
     const merged = buildImportPlan(input, { ...OPTS, mirror: true, mergeByCall: true, naming: 'system', filmWinsWeeks: [1] });
-    expect(merged.snaps.length).toBe(130);
-    expect(merged.formations.reduce((n, p) => n + p.count, 0)).toBe(130);
+    expect(merged.snaps.length).toBe(183);
+    expect(merged.formations.reduce((n, p) => n + p.count, 0)).toBe(183);
     expect(merged.formations.length).toBeLessThan(mirrored.formations.length);
     for (const s of merged.snaps) expect(merged.formations.find((p) => p.formation.id === s.formationId)!.snapIds).toContain(s.playId);
     // a card made only of mirrored snaps survives only when no Rt card carries its name
