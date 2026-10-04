@@ -12,7 +12,7 @@
   "formations": [
     {
       "id": "snapform-35d44e8be24720b9",
-      "name": "Gun Fast Lt",
+      "name": "Gun Dice Lt Slot",
       "count": 2,
       "exact": 2,
       "template": 0,
@@ -32,8 +32,8 @@
         "11",
         "3x1 'T'",
         "W2",
-        "Fast",
-        "1x3 'F'"
+        "Dice",
+        "2x2 'D'"
       ]
     },
     {
@@ -467,7 +467,7 @@
     },
     {
       "id": "snapform-fc6e4c6aec9930f4",
-      "name": "Gun Dice Lt",
+      "name": "Gun Trips Lt Slot",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -486,8 +486,8 @@
         "11",
         "2x2 'D'",
         "W2",
-        "Dice",
-        "2x2 'D'"
+        "Trips",
+        "3x1 'T'"
       ]
     },
     {
@@ -1092,7 +1092,7 @@
     },
     {
       "id": "snapform-49937c3b0bcc41f5",
-      "name": "Dice Rt #5",
+      "name": "Dixie Rt Tight",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1111,7 +1111,7 @@
         "11",
         "2x2 'D'",
         "W1",
-        "Dice",
+        "Dixie",
         "2x2 'D'"
       ]
     },
@@ -1142,7 +1142,7 @@
     },
     {
       "id": "snapform-e695a2e584a1ffdf",
-      "name": "Dice Rt #6",
+      "name": "Dice Rt #5",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1342,7 +1342,7 @@
     },
     {
       "id": "snapform-7a3dddf6f97397dc",
-      "name": "Gun Fast Lt #2",
+      "name": "Gun Fast Lt",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1417,7 +1417,7 @@
     },
     {
       "id": "snapform-65ae2595ce1a65d7",
-      "name": "Gun Trips Lt Off",
+      "name": "Gun Trips Lt Clamp",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1517,7 +1517,7 @@
     },
     {
       "id": "snapform-8960636ca4432d76",
-      "name": "Gun Trips Rt Off",
+      "name": "Gun Trips Rt Clamp",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1592,7 +1592,7 @@
     },
     {
       "id": "snapform-55aa20369b56e5d0",
-      "name": "Gun Trips Rt Off #2",
+      "name": "Gun Trips Rt Off",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1692,7 +1692,7 @@
     },
     {
       "id": "snapform-5aabfda7527ca7ed",
-      "name": "Gun Fast Lt #3",
+      "name": "Gun Snug Lt Zoom",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1711,8 +1711,8 @@
         "11",
         "3x1 'T'",
         "W2",
-        "Fast",
-        "1x3 'F'"
+        "Snug",
+        "2x2 Stack 'S'"
       ]
     },
     {
@@ -1992,7 +1992,7 @@
     },
     {
       "id": "snapform-8491d480c67f3166",
-      "name": "Gun Crip Lt #2",
+      "name": "Gun Stack Lt Hip",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -2011,8 +2011,8 @@
         "11",
         "Bunch 'B'",
         "W1",
-        "Crip",
-        "1x3 Bunch 'CR'"
+        "Stack",
+        "2x2 Stack 'S'"
       ]
     },
     {
@@ -2437,12 +2437,12 @@
         "2x2 'D'",
         "W2",
         "West",
-        "3x1 'T'"
+        "2 Back"
       ]
     },
     {
       "id": "snapform-41f4e271605197f7",
-      "name": "West Lt Slot #2",
+      "name": "West Lt Hip",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -2462,7 +2462,7 @@
         "2x2 'D'",
         "W1",
         "West",
-        "3x1 'T'"
+        "2 Back"
       ]
     },
     {
@@ -2567,7 +2567,7 @@
     },
     {
       "id": "snapform-382e40e74769f775",
-      "name": "Deuce Lt #3",
+      "name": "Dixie Rt Tighter",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -2586,7 +2586,7 @@
         "12",
         "2x2 'D'",
         "W2",
-        "Deuce",
+        "Dixie",
         "2x2 'D'"
       ]
     },
@@ -2642,7 +2642,7 @@
     },
     {
       "id": "snapform-fd263ffddc240d77",
-      "name": "Deuce Rt #2",
+      "name": "Deuce Lt Clamp",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -2667,7 +2667,7 @@
     },
     {
       "id": "snapform-3fe415ef0b765c2d",
-      "name": "East Rt Slot",
+      "name": "East Rt Hop",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -2687,12 +2687,12 @@
         "2x2 'D'",
         "W1",
         "East",
-        "3x1 'T'"
+        "2 Back"
       ]
     },
     {
       "id": "snapform-4695a91dda6051d7",
-      "name": "Gun Trips Rt Off #3",
+      "name": "Gun Trips Rt Off #2",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -2887,7 +2887,7 @@
         "3x1 'T'",
         "W1",
         "West",
-        "3x1 'T'"
+        "2 Back"
       ]
     },
     {
@@ -2912,7 +2912,7 @@
         "3x1 'T'",
         "W1",
         "West",
-        "3x1 'T'"
+        "2 Back"
       ]
     },
     {
@@ -2962,12 +2962,12 @@
         "Big",
         "W2",
         "West",
-        "3x1 'T'"
+        "2 Back"
       ]
     },
     {
       "id": "snapform-40a6f898c7e2b2f2",
-      "name": "Bunch Rt Tighter",
+      "name": "Deuce Lt Hop",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -2986,8 +2986,8 @@
         "12",
         "Big",
         "W2",
-        "Bunch",
-        "Bunch 'B'"
+        "Deuce",
+        "2x2 'D'"
       ]
     },
     {
@@ -3017,7 +3017,7 @@
     },
     {
       "id": "snapform-b722a79bc77392f5",
-      "name": "Bin Rt",
+      "name": "West Rt Clamp",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -3036,8 +3036,8 @@
         "12",
         "Bunch 'B'",
         "W1",
-        "Bin",
-        "Bunch 'B'"
+        "West",
+        "2 Back"
       ]
     },
     {
