@@ -11,6 +11,7 @@ import type { ParsedFormationsJson } from './formationsJson';
 import { canonicalize, formationIdFor, formationName } from './signature';
 import { fallbackTemplate, templateKey, templatesFromExact, type Template } from './templates';
 import { nameFormation } from '@/systems/eagles/nameFormation';
+import { matchFormation } from '@/systems/eagles/matchFormation';
 import { nameMotion } from '@/systems/eagles/nameMotion';
 
 export type PlanOptions = {
@@ -290,7 +291,10 @@ export function buildImportPlan(input: { chart?: ParsedChart; json?: ParsedForma
     const tags = [TAGS.pack, d0.personnel, d0.formFamily, ...weeks.map((w) => `W${w}`)];
     if (exactN === 0) tags.push(TAGS.templateVerify);
     const chartName = formationName(d0.personnel, d0.backfield, d0.formFamily, strength);
-    const sys = opts.naming === 'system' ? nameFormation({ personnel: d0.personnel, backfield: d0.backfield, formFamily: d0.formFamily, strength, players: first.players }) : undefined;
+    // system name: the formation + tags whose picture is this picture; the rule namer when nothing in the system draws it
+    const rule = opts.naming === 'system' ? nameFormation({ personnel: d0.personnel, backfield: d0.backfield, formFamily: d0.formFamily, strength, players: first.players }) : undefined;
+    const built = rule ? matchFormation({ personnel: d0.personnel, backfield: d0.backfield, strength, placed: placed.placed }) : undefined;
+    const sys = rule && built ? { ...rule, ...built, confidence: 'rule' as const, back: rule.back } : rule ? { ...rule, notes: [...rule.notes, 'No formation plus tags in the system draws this exact picture: named from the picture by rule.'] } : undefined;
     if (sys) {
       tags.push(sys.base, sys.family);
       const lines = [`System call: ${sys.name} [${d0.personnel}]${sys.confidence === 'closest' ? ' (closest word, check it)' : ''}. Charted as ${chartName}.`];

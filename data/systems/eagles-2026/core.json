@@ -1582,6 +1582,10 @@
       "means": "The chart's Str column is the passing strength on 3x1. A call goes to the tight end. A tight end alone left with three receivers right is charted 3x1 Rt and called Fast Lt. PlayForge keeps both."
     },
     {
+      "title": "A tag explains every difference",
+      "means": "A formation word puts every job in a spot. When film shows something else, a tag says why: Off (the Y backs off the ball and the Z steps on), Clamp (Y off, Z down to 5 yards on the ball), Click (Z on the ball inside, Y outside and off), Close and Closer (the Z comes in), Open and Out (the Y flexes), Tight and Tighter (the X comes in), Slot, Zoom, Hip, Hop. On import PlayForge builds every formation with every tag and keeps the call whose picture is the one on film. If nothing builds it, the formation is named from the picture and its note says so."
+    },
+    {
       "title": "Name the picture, list the twins",
       "means": "Trips, Trio and Trax are one picture on film. So are Dice and Dixie, Stack and South, Bunch and Box. PlayForge names the first and lists the rest as same picture, different jobs. When I know who the F is that week, I can pick the exact word."
     },
