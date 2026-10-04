@@ -9,7 +9,7 @@ import { repo, usageFromSnaps } from './repo';
 
 const DATA = path.resolve(__dirname, '../../import-data');
 const load = (merge = true): ImportPlan =>
-  buildImportPlan({ chart: parseChartXlsx(new Uint8Array(readFileSync(path.join(DATA, 'eagles-all22-chart.xlsx')))), json: parseFormationsJson(applyDrawnAlignments(mergeFormationsJson(readdirSync(DATA).filter((f) => /^W[0-9]+_.*_playforge[.]json$/.test(f)).sort().map((f) => readFileSync(path.join(DATA, f), 'utf8'))), JSON.parse(readFileSync(path.join(DATA, 'drawn-alignments.json'), 'utf8')))) }, { team: 'PHI', season: 2026, mirror: merge, mergeByCall: merge, naming: 'system', now: new Date().toISOString(), filmWinsWeeks: [1] });
+  buildImportPlan({ chart: parseChartXlsx(new Uint8Array(readFileSync(path.join(DATA, 'eagles-all22-chart.xlsx')))), json: parseFormationsJson(applyDrawnAlignments(mergeFormationsJson(readdirSync(DATA).filter((f) => /^W[0-9]+_.*_playforge[.]json$/.test(f)).sort().map((f) => readFileSync(path.join(DATA, f), 'utf8'))), JSON.parse(readFileSync(path.join(DATA, 'drawn-alignments.json'), 'utf8')))) }, { team: 'PHI', season: 2026, mirror: merge, mergeByCall: merge, naming: 'system', now: new Date().toISOString(), filmWinsWeeks: [1, 2] });
 
 describe('snap import into the library (Dexie on fake-indexeddb)', () => {
   beforeAll(async () => {

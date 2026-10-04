@@ -27,7 +27,7 @@ const XLSX = path.join(DATA, 'eagles-all22-chart.xlsx');
 /** Every game's per-player alignment file: import-data/W<week>_<teams>_playforge.json. */
 const jsonFiles = () => readdirSync(DATA).filter((f) => /^W[0-9]+_.*_playforge[.]json$/.test(f)).sort();
 /** Weeks charted frame by frame from the downloaded All-22 (scripts/film): that file beats the workbook's formation columns. */
-const FILM_WINS_WEEKS = [1];
+const FILM_WINS_WEEKS = [1, 2];
 const OUT = path.join(ROOT, 'src/seeds/data/eagles2026.json');
 const REPORT = path.join(DATA, 'import-report.json');
 

@@ -389,8 +389,8 @@ describe('the whole plan on the real files', () => {
   it('one card per call: every Lt-only look joins the Rt card of the same name, drawn mirrored; drawn snaps keep their own card', () => {
     const all = readdirSync(DATA).filter((f) => /^W[0-9]+_.*_playforge[.]json$/.test(f)).sort().map((f) => readFileSync(path.join(DATA, f), 'utf8'));
     const input = { chart: parseChartXlsx(xlsx()), json: parseFormationsJson(applyDrawnAlignments(mergeFormationsJson(all), JSON.parse(readFileSync(path.join(DATA, 'drawn-alignments.json'), 'utf8')))) };
-    const mirrored = buildImportPlan(input, { ...OPTS, mirror: true, naming: 'system', filmWinsWeeks: [1] });
-    const merged = buildImportPlan(input, { ...OPTS, mirror: true, mergeByCall: true, naming: 'system', filmWinsWeeks: [1] });
+    const mirrored = buildImportPlan(input, { ...OPTS, mirror: true, naming: 'system', filmWinsWeeks: [1, 2] });
+    const merged = buildImportPlan(input, { ...OPTS, mirror: true, mergeByCall: true, naming: 'system', filmWinsWeeks: [1, 2] });
     expect(merged.snaps.length).toBe(183);
     expect(merged.formations.reduce((n, p) => n + p.count, 0)).toBe(183);
     expect(merged.formations.length).toBeLessThan(mirrored.formations.length);
@@ -413,7 +413,7 @@ describe('the whole plan on the real files', () => {
     const seed = JSON.parse(readFileSync(path.resolve(__dirname, '../../seeds/data/eagles2026.json'), 'utf8')) as { formations: Formation[]; snaps: { id: string; formationId: string }[] };
     // the seed is written with the Eagles system names; ids and counts do not depend on the naming
     const all = readdirSync(DATA).filter((f) => /^W[0-9]+_.*_playforge[.]json$/.test(f)).sort().map((f) => readFileSync(path.join(DATA, f), 'utf8'));
-    const named = buildImportPlan({ chart: parseChartXlsx(xlsx()), json: parseFormationsJson(applyDrawnAlignments(mergeFormationsJson(all), JSON.parse(readFileSync(path.join(DATA, 'drawn-alignments.json'), 'utf8')))) }, { ...OPTS, mirror: true, mergeByCall: true, naming: 'system', filmWinsWeeks: [1] });
+    const named = buildImportPlan({ chart: parseChartXlsx(xlsx()), json: parseFormationsJson(applyDrawnAlignments(mergeFormationsJson(all), JSON.parse(readFileSync(path.join(DATA, 'drawn-alignments.json'), 'utf8')))) }, { ...OPTS, mirror: true, mergeByCall: true, naming: 'system', filmWinsWeeks: [1, 2] });
     expect(seed.formations.map((f) => [f.id, f.name, f.chartName, f.usage?.count])).toEqual(named.formations.map((p) => [p.formation.id, p.formation.name, p.formation.chartName, p.count]));
     expect(seed.snaps.map((s) => [s.id, s.formationId])).toEqual(named.snaps.map((s) => [s.id, s.formationId]));
   });

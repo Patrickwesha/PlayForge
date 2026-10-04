@@ -23,9 +23,9 @@
    "strength": "Lt",
    "hash": "Right",
    "motion": "Wicks / slot L outside Lemon / in toward the formation / just outside and behind Mundt, still moving at the snap",
-   "confidence": "M/H/M",
+   "confidence": "H/H/M",
    "angles": "Both",
-   "notes": "Set charted at 2.5 s (map setT 5.5 is during the motion; snap about 7 s). End zone camera faces the offense (Bears numbers and nameplates show backs; #65 at screen left = right tackle), so screen left = offense right; sideline faces screen-left, top = offense right, and both agree. Numbers read: 1, 26, 83, 9, 13 on the sideline and end zone. The receiver alone on the right is a white jersey I could not read; with 26, 83 and two WRs read, 11 personnel is the body count (1 back, 1 TE at 83, 3 WR). Barkley is nearly directly behind Hurts (pistol-like depth) but the QB is at gun depth, so I wrote gun_offset R. Hash: sideline shows the ball on the top (offense right) hash; the end zone shows it slightly inside that hash. Mundt is off the ball (about a yard behind the tackle line) on both angles.",
+   "notes": "Set charted at 2.5 s (map setT 5.5 is during the motion; snap about 7 s). End zone camera faces the offense (Bears numbers and nameplates show backs; #65 at screen left = right tackle), so screen left = offense right; sideline faces screen-left, top = offense right, and both agree. Numbers read: 1, 26, 83, 9, 13 on the sideline and end zone. The receiver alone on the right is a white jersey I could not read; with 26, 83 and two WRs read, 11 personnel is the body count (1 back, 1 TE at 83, 3 WR). Barkley is nearly directly behind Hurts (pistol-like depth) but the QB is at gun depth, so I wrote gun_offset R. Hash: sideline shows the ball on the top (offense right) hash; the end zone shows it slightly inside that hash. Mundt is off the ball (about a yard behind the tackle line) on both angles. Personnel confirmed by the NFL Pro on-field list: Hurts, Barkley, D.Smith, M.Lemon, D.Wicks, J.Mundt (11).",
    "players": [
     {
      "pos": "QB",
@@ -65,8 +65,7 @@
     },
     {
      "pos": "WR",
-     "name": null,
-     "id_unknown": true,
+     "name": "D.Smith",
      "side": "R",
      "align": "numbers",
      "on_line": true,
