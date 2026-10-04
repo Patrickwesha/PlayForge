@@ -31,12 +31,16 @@ export function FormationsClient() {
     for (const s of snaps ?? []) m.set(s.formationId, [...(m.get(s.formationId) ?? []), s]);
     return m;
   }, [snaps]);
-  const usageOf = (f: Formation) => snapsByFormation.get(f.id)?.length ?? f.usage?.count ?? 0;
+  // live count from the snaps on this device; a stored count on a copied or hand-edited formation is not shown as usage
+  const usageOf = (f: Formation) => (snaps ? (snapsByFormation.get(f.id)?.length ?? 0) : (f.usage?.count ?? 0));
   const families = useMemo(() => [...new Set((formations ?? []).map((f) => f.family).filter((x): x is string => !!x))].sort(), [formations]);
   const reviewCount = useMemo(() => (formations ?? []).filter((f) => f.confidence === 'needs-review').length, [formations]);
   const list = useMemo(() => {
+    // a snap id (W1-001) finds only the formation that snap is linked to, not every note that mentions it
+    const snapId = /^w[0-9]+-[0-9k]+$/i.test(q.trim()) ? q.trim().toUpperCase() : null;
     const rows = (formations ?? []).filter(
       (f) =>
+        snapId ? (snapsByFormation.get(f.id) ?? []).some((s) => s.playId.toUpperCase() === snapId) :
         (!family || f.family === family) &&
         (!reviewOnly || f.confidence === 'needs-review') &&
         matchesPlaybook(book, f.id, memberOf) &&
