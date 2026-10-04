@@ -4,11 +4,11 @@
  * database, so the same inputs always give the same ids, names and positions.
  */
 import type { Formation, FormationUsage, QbAlignment, Snap, SnapBackfield, SnapHash, SnapSource, SnapStrength } from '@/model/types';
-import { placePlayers, type AlignedPlayer } from './alignment';
+import { isOnLine, placePlayers, type AlignedPlayer } from './alignment';
 import type { ChartRow, ParsedChart, SkippedRow } from './chart';
 import { TAGS } from './config';
 import type { ParsedFormationsJson } from './formationsJson';
-import { canonicalize, formationIdFor, formationName } from './signature';
+import { canonicalize, formationIdFor, formationName, mirrorPlayers } from './signature';
 import { fallbackTemplate, templateKey, templatesFromExact, type Template } from './templates';
 import { nameFormation } from '@/systems/eagles/nameFormation';
 import { matchFormation } from '@/systems/eagles/matchFormation';
@@ -19,6 +19,13 @@ export type PlanOptions = {
   season: number;
   /** Merge Rt and Lt versions into one formation (the Lt snaps are stored mirrored). */
   mirror: boolean;
+  /**
+   * One card per call: a card whose snaps were all charted Lt (drawn mirrored) joins the Rt card of the
+   * same system name whose picture is closest, so Rt and Lt looks of one call share a card. Implies
+   * mirror. Hand-drawn snaps keep their own card, unmirrored: they are the truth for alignment.
+   * Needs `naming: 'system'`; with chart names it merges exact mirrors only.
+   */
+  mergeByCall?: boolean;
   /** Timestamp written on every row. */
   now: string;
   /** Mark the formations as built-ins (checked-in seeds). */
@@ -216,8 +223,11 @@ export function buildImportPlan(input: { chart?: ParsedChart; json?: ParsedForma
   // snaps with a charted strength first, so a blank-strength snap can join the formation it matches
   const ordered = [...drafts.filter((d) => d.strength), ...drafts.filter((d) => !d.strength)];
   const known = new Set<string>();
+  const byCall = !!opts.mergeByCall && opts.naming === 'system';
+  const mirror = opts.mirror || !!opts.mergeByCall;
   for (const d of ordered) {
-    const c = canonicalize({ personnel: d.personnel, formFamily: d.formFamily, backfield: d.backfield, players: d.players, strength: d.strength }, opts.mirror, known);
+    const drawn = d.players.some((p) => p.at);
+    const c = canonicalize({ personnel: d.personnel, formFamily: d.formFamily, backfield: d.backfield, players: d.players, strength: d.strength }, mirror && !(byCall && drawn), known);
     known.add(c.signature);
     const fid = formationIdFor(c.signature);
     let g = groups.get(fid);
@@ -260,17 +270,40 @@ export function buildImportPlan(input: { chart?: ParsedChart; json?: ParsedForma
   snaps.sort((a, b) => (order.get(a.playId) ?? 0) - (order.get(b.playId) ?? 0));
   for (const g of groups.values()) g.drafts.sort((a, b) => (order.get(a.d.playId) ?? 0) - (order.get(b.d.playId) ?? 0));
 
-  const planned: PlannedFormation[] = [];
+  // one card per call: a mirrored look is drawn on the mirrored hash too
+  const hashOf = (x: { d: Draft; mirrored: boolean }): SnapHash | undefined => (byCall && x.mirrored ? (x.d.hash === 'Left' ? 'Right' : x.d.hash === 'Right' ? 'Left' : x.d.hash) : x.d.hash);
+  let planned: PlannedFormation[] = [];
   for (const [fid, g] of groups) {
     const first = g.drafts[0];
     const d0 = first.d;
-    const hashes = countBy(g.drafts, (x) => x.d.hash);
-    const drawHash = mostCommon(hashes, ['Middle', 'Left', 'Right']);
-    const strengthCounts = countBy(g.drafts, (x) => x.strength);
-    const strength = mostCommon(strengthCounts, ['Rt', 'Lt']);
+    let hashes = countBy(g.drafts, hashOf);
+    let drawHash = mostCommon(hashes, ['Middle', 'Left', 'Right']);
+    let strength = mostCommon(countBy(g.drafts, (x) => x.strength), ['Rt', 'Lt']);
     const exactN = g.drafts.filter((x) => x.d.source === 'exact').length;
     const templateN = g.drafts.length - exactN;
-    const placed = placePlayers(first.players, { hash: drawHash, strength, backfield: d0.backfield, idPrefix: fid, label: `${d0.playId} (${formationName(d0.personnel, d0.backfield, d0.formFamily, strength)})` });
+    const place = () => placePlayers(first.players, { hash: drawHash, strength, backfield: d0.backfield, idPrefix: fid, label: `${d0.playId} (${formationName(d0.personnel, d0.backfield, d0.formFamily, strength)})` });
+    let placed = place();
+    // system name: the formation + tags whose picture is this picture; the rule namer when nothing in the system draws it
+    const nameIt = () => {
+      const rule = opts.naming === 'system' ? nameFormation({ personnel: d0.personnel, backfield: d0.backfield, formFamily: d0.formFamily, strength, players: first.players }) : undefined;
+      const built = rule ? matchFormation({ personnel: d0.personnel, backfield: d0.backfield, strength, placed: placed.placed }) : undefined;
+      return rule && built ? { ...rule, ...built, confidence: 'rule' as const, back: rule.back } : rule ? { ...rule, notes: [...rule.notes, 'No formation plus tags in the system draws this exact picture: named from the picture by rule.'] } : undefined;
+    };
+    let sys = nameIt();
+    if (byCall && sys?.strength === 'Lt' && !g.signature.includes('@')) {
+      // the card shows the call's Rt picture (Y to the right), whichever side the chart called strong
+      for (const x of g.drafts) {
+        x.players = mirrorPlayers(x.players);
+        x.mirrored = !x.mirrored;
+        x.strength = x.strength === 'Lt' ? 'Rt' : x.strength === 'Rt' ? 'Lt' : undefined;
+      }
+      for (const s of snaps) if (s.formationId === fid) s.mirrored = !s.mirrored;
+      hashes = countBy(g.drafts, hashOf);
+      drawHash = mostCommon(hashes, ['Middle', 'Left', 'Right']);
+      strength = mostCommon(countBy(g.drafts, (x) => x.strength), ['Rt', 'Lt']);
+      placed = place();
+      sys = nameIt();
+    }
     warnings.push(...placed.warnings);
     const weeks = [...new Set(g.drafts.map((x) => x.d.week))].sort((a, b) => a - b);
     const snapIds = g.drafts.map((x) => x.d.playId).sort();
@@ -291,10 +324,6 @@ export function buildImportPlan(input: { chart?: ParsedChart; json?: ParsedForma
     const tags = [TAGS.pack, d0.personnel, d0.formFamily, ...weeks.map((w) => `W${w}`)];
     if (exactN === 0) tags.push(TAGS.templateVerify);
     const chartName = formationName(d0.personnel, d0.backfield, d0.formFamily, strength);
-    // system name: the formation + tags whose picture is this picture; the rule namer when nothing in the system draws it
-    const rule = opts.naming === 'system' ? nameFormation({ personnel: d0.personnel, backfield: d0.backfield, formFamily: d0.formFamily, strength, players: first.players }) : undefined;
-    const built = rule ? matchFormation({ personnel: d0.personnel, backfield: d0.backfield, strength, placed: placed.placed }) : undefined;
-    const sys = rule && built ? { ...rule, ...built, confidence: 'rule' as const, back: rule.back } : rule ? { ...rule, notes: [...rule.notes, 'No formation plus tags in the system draws this exact picture: named from the picture by rule.'] } : undefined;
     if (sys) {
       tags.push(sys.base, sys.family);
       const lines = [`System call: ${sys.name} [${d0.personnel}]${sys.confidence === 'closest' ? ' (closest word, check it)' : ''}. Charted as ${chartName}.`];
@@ -327,8 +356,45 @@ export function buildImportPlan(input: { chart?: ParsedChart; json?: ParsedForma
     planned.push({ formation, signature: g.signature, snapIds, count: g.drafts.length, exact: exactN, template: templateN, weeks, hashes, source: exactN === 0 ? 'template' : templateN === 0 ? 'exact' : 'mixed' });
   }
 
-  // same name, different alignment: "#2", "#3" ... by usage
   planned.sort((a, b) => b.count - a.count || a.signature.localeCompare(b.signature));
+  if (byCall) {
+    // one card per call: a card made only of Lt-charted snaps joins the Rt card of the same name whose
+    // picture is closest (fewest players on a different spot); hand-drawn cards neither move nor take others
+    const drawn = (p: PlannedFormation) => p.signature.includes('@');
+    const keysOf = (p: PlannedFormation) => new Set(groups.get(p.formation.id)!.drafts[0].players.filter((x) => x.pos !== 'QB').map((x) => `${x.pos}:${x.side}:${x.align}:${isOnLine(x) ? 'on' : 'off'}:${x.order ?? '?'}`));
+    const distance = (a: PlannedFormation, b: PlannedFormation) => {
+      const ka = keysOf(a), kb = keysOf(b);
+      return [...ka].filter((k) => !kb.has(k)).length + [...kb].filter((k) => !ka.has(k)).length;
+    };
+    const fromLeft = (p: PlannedFormation) => !drawn(p) && groups.get(p.formation.id)!.drafts.every((x) => x.mirrored);
+    const targets = new Map<string, PlannedFormation[]>();
+    for (const p of planned) if (!fromLeft(p) && !drawn(p)) targets.set(p.formation.name, [...(targets.get(p.formation.name) ?? []), p]);
+    const kept: PlannedFormation[] = [];
+    for (const p of planned) {
+      const list = fromLeft(p) ? targets.get(p.formation.name) ?? [] : [];
+      if (!list.length) {
+        kept.push(p);
+        continue;
+      }
+      const best = list.reduce((b, t) => (distance(t, p) < distance(b, p) ? t : b));
+      const gb = groups.get(best.formation.id)!;
+      gb.drafts.push(...groups.get(p.formation.id)!.drafts);
+      for (const s of snaps) if (s.formationId === p.formation.id) s.formationId = best.formation.id;
+      const hashes = countBy(gb.drafts, hashOf);
+      const exactN = gb.drafts.filter((x) => x.d.source === 'exact').length;
+      const weeks = [...new Set(gb.drafts.map((x) => x.d.week))].sort((a, b) => a - b);
+      const snapIds = gb.drafts.map((x) => x.d.playId).sort();
+      Object.assign(best, { snapIds, count: gb.drafts.length, exact: exactN, template: gb.drafts.length - exactN, weeks, hashes, source: exactN === 0 ? 'template' : exactN === gb.drafts.length ? 'exact' : 'mixed' });
+      const f = best.formation;
+      f.usage = { count: gb.drafts.length, snapIds, weeks, hashes: Object.keys(hashes).sort(), exact: exactN, template: gb.drafts.length - exactN };
+      for (const w of weeks) if (!f.tags.includes(`W${w}`)) f.tags.push(`W${w}`);
+      f.note = `${f.note}\nCharted Lt, drawn mirrored on this card (its own look differed a little): ${p.snapIds.join(', ')}`;
+    }
+    planned = kept;
+    planned.sort((a, b) => b.count - a.count || a.signature.localeCompare(b.signature));
+  }
+
+  // same name, different alignment: "#2", "#3" ... by usage
   const byName = new Map<string, PlannedFormation[]>();
   for (const p of planned) {
     const list = byName.get(p.formation.name) ?? [];

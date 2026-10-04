@@ -26,7 +26,7 @@ export function ImportClient() {
   const [json, setJson] = useState<Loaded<ParsedFormationsJson>>(null);
   const [team, setTeam] = useState('PHI');
   const [season, setSeason] = useState(String(new Date().getFullYear()));
-  const [mirror, setMirror] = useState(false);
+  const [mirror, setMirror] = useState(true);
   const [error, setError] = useState<string | null>(null);
   // the selection belongs to one plan: a new plan (new file or option) starts with everything selected
   const [selState, setSelState] = useState<{ plan: ImportPlan | null; ids: Set<string> }>({ plan: null, ids: new Set() });
@@ -65,7 +65,7 @@ export function ImportClient() {
     if (!chart && !json) return { plan: null, error: null };
     try {
       const teamCode = team.trim() || 'TEAM';
-      return { plan: buildImportPlan({ chart: chart?.data, json: json?.data }, { team: teamCode, season: seasonNum, mirror, now: nowIso(), naming: teamCode === 'PHI' ? 'system' : 'chart', source: `${teamCode} ${seasonNum} All-22 chart (${[chart?.name, json?.name].filter(Boolean).join(', ')})` }), error: null };
+      return { plan: buildImportPlan({ chart: chart?.data, json: json?.data }, { team: teamCode, season: seasonNum, mirror, mergeByCall: mirror, now: nowIso(), naming: teamCode === 'PHI' ? 'system' : 'chart', source: `${teamCode} ${seasonNum} All-22 chart (${[chart?.name, json?.name].filter(Boolean).join(', ')})` }), error: null };
     } catch (e) {
       return { plan: null, error: e instanceof Error ? e.message : String(e) };
     }
@@ -133,7 +133,7 @@ export function ImportClient() {
           </label>
           <label className="flex items-center gap-2 pb-1.5 select-none">
             <input type="checkbox" checked={mirror} onChange={(e) => setMirror(e.target.checked)} />
-            Merge Rt and Lt mirrors into one formation
+            One card per call: a look charted Lt joins the Rt card of the same name, drawn mirrored
           </label>
         </div>
         <p className="text-xs text-neutral-500 mt-3">

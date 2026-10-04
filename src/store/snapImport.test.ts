@@ -8,8 +8,8 @@ import { getDb } from './db';
 import { repo, usageFromSnaps } from './repo';
 
 const DATA = path.resolve(__dirname, '../../import-data');
-const load = (mirror = false): ImportPlan =>
-  buildImportPlan({ chart: parseChartXlsx(new Uint8Array(readFileSync(path.join(DATA, 'eagles-all22-chart.xlsx')))), json: parseFormationsJson(applyDrawnAlignments(mergeFormationsJson(readdirSync(DATA).filter((f) => /^W[0-9]+_.*_playforge[.]json$/.test(f)).sort().map((f) => readFileSync(path.join(DATA, f), 'utf8'))), JSON.parse(readFileSync(path.join(DATA, 'drawn-alignments.json'), 'utf8')))) }, { team: 'PHI', season: 2026, mirror, now: new Date().toISOString(), filmWinsWeeks: [1] });
+const load = (merge = true): ImportPlan =>
+  buildImportPlan({ chart: parseChartXlsx(new Uint8Array(readFileSync(path.join(DATA, 'eagles-all22-chart.xlsx')))), json: parseFormationsJson(applyDrawnAlignments(mergeFormationsJson(readdirSync(DATA).filter((f) => /^W[0-9]+_.*_playforge[.]json$/.test(f)).sort().map((f) => readFileSync(path.join(DATA, f), 'utf8'))), JSON.parse(readFileSync(path.join(DATA, 'drawn-alignments.json'), 'utf8')))) }, { team: 'PHI', season: 2026, mirror: merge, mergeByCall: merge, naming: 'system', now: new Date().toISOString(), filmWinsWeeks: [1] });
 
 describe('snap import into the library (Dexie on fake-indexeddb)', () => {
   beforeAll(async () => {
@@ -70,7 +70,7 @@ describe('snap import into the library (Dexie on fake-indexeddb)', () => {
     for (const w of plan.formations[0].weeks) expect(after.tags).toContain(`W${w}`);
   });
 
-  it('new snaps for an existing formation raise its usage; a mirror-merge import lands as its own formations', async () => {
+  it('new snaps for an existing formation raise its usage; a split import (Rt and Lt apart) lands as its own formations', async () => {
     const plan = load();
     const extra = { ...plan.snaps[0], id: 'PHI-2026-W3-001', playId: 'W3-001', week: 3 };
     const fid = extra.formationId;
@@ -82,11 +82,11 @@ describe('snap import into the library (Dexie on fake-indexeddb)', () => {
     expect(now.tags).toContain('W3');
     expect(await repo.counts()).toMatchObject({ snaps: 131 });
 
-    const mirrored = load(true);
+    const split = load(false);
     const before = await repo.counts();
-    const r = await repo.applySnapImport(mirrored);
-    expect(r.snapsAdded).toBe(0); // same snap ids, re-pointed at the merged formations
-    expect(r.formationsAdded).toBeGreaterThan(0); // merged Lt+Rt formations are new ids
+    const r = await repo.applySnapImport(split);
+    expect(r.snapsAdded).toBe(0); // same snap ids, re-pointed at the split formations
+    expect(r.formationsAdded).toBeGreaterThan(0); // the Lt pictures are their own, new ids
     expect((await repo.counts()).formations).toBe(before.formations + r.formationsAdded);
   });
 

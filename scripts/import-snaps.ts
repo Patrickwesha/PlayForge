@@ -5,7 +5,10 @@
  *   npm run import:snaps -- --xlsx a.xlsx --json b.json    other files (copied into import-data/ first)
  *
  * Every import-data/W<week>_*_playforge.json is read, so a new game is one more file.
- *   npm run import:snaps -- --mirror                       merge Rt and Lt into one formation that flips
+ *   npm run import:snaps -- --mirror                       merge only exact Rt/Lt mirror pictures
+ *   npm run import:snaps -- --split                        keep every Rt and Lt picture as its own formation
+ * By default it is one card per call: a look charted Lt attaches, mirrored, to the Rt card of the same
+ * name whose picture is closest. Hand-drawn snaps keep their own card.
  *
  * Same engine as the Formations > Import page (src/importers/snapChart), run with the seed timestamp
  * and deterministic ids, so a later import of the same files in the browser merges into these rows
@@ -33,7 +36,9 @@ const flag = (name: string) => {
   const i = args.indexOf(name);
   return i >= 0 ? args[i + 1] : undefined;
 };
-const mirror = args.includes('--mirror');
+const merge = args.includes('--split') ? 'split' : args.includes('--mirror') ? 'mirror' : 'call';
+const mirror = merge !== 'split';
+const mergeByCall = merge === 'call';
 for (const opt of ['--xlsx', '--json'] as const) {
   const src = flag(opt);
   const target = opt === '--xlsx' ? XLSX : path.join(DATA, path.basename(src ?? ''));
@@ -52,7 +57,7 @@ const merged = applyDrawnAlignments(mergeFormationsJson(files.map((f) => readFil
 const json = parseFormationsJson(merged);
 const team = json.game.team ?? 'PHI';
 const season = json.game.season ?? 2026;
-const plan = buildImportPlan({ chart, json }, { team, season, mirror, now: SEED_TIME, builtin: true, naming: 'system', filmWinsWeeks: FILM_WINS_WEEKS, source: `${team} ${season} All-22 chart (${path.basename(XLSX)}, ${files.join(', ')})` });
+const plan = buildImportPlan({ chart, json }, { team, season, mirror, mergeByCall, now: SEED_TIME, builtin: true, naming: 'system', filmWinsWeeks: FILM_WINS_WEEKS, source: `${team} ${season} All-22 chart (${path.basename(XLSX)}, ${files.join(', ')})` });
 
 const formations = plan.formations.map((p) => p.formation);
 const snaps = plan.snaps;
@@ -84,7 +89,7 @@ writeFileSync(
 );
 
 const s = plan.summary;
-console.log(`${s.snaps} snaps (${Object.entries(s.weeks).map(([w, n]) => `${w} ${n}`).join(', ')}; ${s.exact} exact, ${s.template} template) -> ${s.formations} formations -> ${path.relative(ROOT, OUT)}  revision ${revision}${mirror ? ' (mirror merge on)' : ''}`);
+console.log(`${s.snaps} snaps (${Object.entries(s.weeks).map(([w, n]) => `${w} ${n}`).join(', ')}; ${s.exact} exact, ${s.template} template) -> ${s.formations} formations -> ${path.relative(ROOT, OUT)}  revision ${revision}${merge === 'call' ? ' (one card per call)' : merge === 'mirror' ? ' (exact mirrors merged)' : ' (Rt and Lt apart)'}`);
 console.log(`${plan.skipped.length} row(s) skipped, ${plan.warnings.length} warning(s) -> ${path.relative(ROOT, REPORT)}`);
 console.log('\nTop 10 by usage:');
 for (const p of plan.formations.slice(0, 10)) console.log(`  ${String(p.count).padStart(3)}  ${p.formation.name.padEnd(22)} ${p.source.padEnd(8)} W${p.weeks.join('+W')}`);

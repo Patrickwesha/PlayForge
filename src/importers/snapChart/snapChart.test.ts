@@ -385,11 +385,34 @@ describe('the whole plan on the real files', () => {
     expect(only.snaps.every((s) => s.week === 2 && s.callType === 'other')).toBe(true);
   });
 
+  it('one card per call: every Lt-only look joins the Rt card of the same name, drawn mirrored; drawn snaps keep their own card', () => {
+    const all = readdirSync(DATA).filter((f) => /^W[0-9]+_.*_playforge[.]json$/.test(f)).sort().map((f) => readFileSync(path.join(DATA, f), 'utf8'));
+    const input = { chart: parseChartXlsx(xlsx()), json: parseFormationsJson(applyDrawnAlignments(mergeFormationsJson(all), JSON.parse(readFileSync(path.join(DATA, 'drawn-alignments.json'), 'utf8')))) };
+    const mirrored = buildImportPlan(input, { ...OPTS, mirror: true, naming: 'system', filmWinsWeeks: [1] });
+    const merged = buildImportPlan(input, { ...OPTS, mirror: true, mergeByCall: true, naming: 'system', filmWinsWeeks: [1] });
+    expect(merged.snaps.length).toBe(130);
+    expect(merged.formations.reduce((n, p) => n + p.count, 0)).toBe(130);
+    expect(merged.formations.length).toBeLessThan(mirrored.formations.length);
+    for (const s of merged.snaps) expect(merged.formations.find((p) => p.formation.id === s.formationId)!.snapIds).toContain(s.playId);
+    // a card made only of mirrored snaps survives only when no Rt card carries its name
+    const plain = (n: string) => n.replace(/ #[0-9]+$/, '');
+    for (const p of merged.formations) {
+      const own = merged.snaps.filter((s) => s.formationId === p.formation.id);
+      if (own.every((s) => s.mirrored)) expect(merged.formations.filter((q) => plain(q.formation.name) === plain(p.formation.name) && merged.snaps.some((s) => s.formationId === q.formation.id && !s.mirrored))).toEqual([]);
+    }
+    // every charted card shows the call's Rt picture; only a hand-drawn card may be a Lt call
+    expect(merged.formations.filter((p) => !p.signature.includes('@') && /\bLt\b/.test(p.formation.name)).map((p) => p.formation.name)).toEqual([]);
+    // W1-003 was drawn by hand as a Lt look: it keeps its own unmirrored card
+    const w1003 = merged.snaps.find((s) => s.playId === 'W1-003')!;
+    expect(w1003.mirrored).toBe(false);
+    expect(merged.formations.find((p) => p.formation.id === w1003.formationId)!.count).toBe(1);
+  });
+
   it('matches the checked-in seed data (run `npm run import:snaps` after changing the inputs or the engine)', () => {
     const seed = JSON.parse(readFileSync(path.resolve(__dirname, '../../seeds/data/eagles2026.json'), 'utf8')) as { formations: Formation[]; snaps: { id: string; formationId: string }[] };
     // the seed is written with the Eagles system names; ids and counts do not depend on the naming
     const all = readdirSync(DATA).filter((f) => /^W[0-9]+_.*_playforge[.]json$/.test(f)).sort().map((f) => readFileSync(path.join(DATA, f), 'utf8'));
-    const named = buildImportPlan({ chart: parseChartXlsx(xlsx()), json: parseFormationsJson(applyDrawnAlignments(mergeFormationsJson(all), JSON.parse(readFileSync(path.join(DATA, 'drawn-alignments.json'), 'utf8')))) }, { ...OPTS, naming: 'system', filmWinsWeeks: [1] });
+    const named = buildImportPlan({ chart: parseChartXlsx(xlsx()), json: parseFormationsJson(applyDrawnAlignments(mergeFormationsJson(all), JSON.parse(readFileSync(path.join(DATA, 'drawn-alignments.json'), 'utf8')))) }, { ...OPTS, mirror: true, mergeByCall: true, naming: 'system', filmWinsWeeks: [1] });
     expect(seed.formations.map((f) => [f.id, f.name, f.chartName, f.usage?.count])).toEqual(named.formations.map((p) => [p.formation.id, p.formation.name, p.formation.chartName, p.count]));
     expect(seed.snaps.map((s) => [s.id, s.formationId])).toEqual(named.snaps.map((s) => [s.id, s.formationId]));
   });
