@@ -35,7 +35,7 @@
     },
     {
      "pos": "TE",
-     "name": "K.Mundt",
+     "name": "J.Mundt",
      "side": "L",
      "align": "inline",
      "on_line": true,
@@ -94,7 +94,7 @@
     },
     {
      "pos": "TE",
-     "name": "K.Mundt",
+     "name": "J.Mundt",
      "side": "R",
      "align": "wing",
      "on_line": false,
@@ -215,7 +215,7 @@
     },
     {
      "pos": "TE",
-     "name": "K.Mundt",
+     "name": "J.Mundt",
      "side": "L",
      "align": "inline",
      "on_line": true,
@@ -239,7 +239,7 @@
     },
     {
      "pos": "WR",
-     "name": "Cooper",
+     "name": "D.Cooper",
      "side": "R",
      "align": "tight",
      "on_line": true,
@@ -397,7 +397,7 @@
     },
     {
      "pos": "TE",
-     "name": "K.Mundt",
+     "name": "J.Mundt",
      "side": "R",
      "align": "inline",
      "on_line": true,
@@ -654,7 +654,7 @@
     },
     {
      "pos": "TE",
-     "name": "K.Mundt",
+     "name": "J.Mundt",
      "side": "R",
      "align": "inline",
      "on_line": true,
@@ -697,7 +697,7 @@
     },
     {
      "pos": "TE",
-     "name": "C.Jenkins",
+     "name": "E.Jenkins",
      "side": "L",
      "align": "inline",
      "on_line": true,
@@ -705,7 +705,7 @@
     },
     {
      "pos": "TE",
-     "name": "K.Mundt",
+     "name": "J.Mundt",
      "side": "L",
      "align": "wing",
      "on_line": false,
@@ -756,7 +756,7 @@
     },
     {
      "pos": "TE",
-     "name": "K.Mundt",
+     "name": "J.Mundt",
      "side": "L",
      "align": "wing",
      "on_line": false,
@@ -1189,7 +1189,7 @@
     },
     {
      "pos": "TE",
-     "name": "K.Mundt",
+     "name": "J.Mundt",
      "side": "R",
      "align": "inline",
      "on_line": true,
@@ -2139,7 +2139,7 @@
     },
     {
      "pos": "TE",
-     "name": "G.Mundt",
+     "name": "J.Mundt",
      "side": "R",
      "align": "inline",
      "on_line": false,
@@ -2207,7 +2207,7 @@
     },
     {
      "pos": "TE",
-     "name": "G.Mundt",
+     "name": "J.Mundt",
      "side": "L",
      "align": "wing",
      "on_line": false,
@@ -2321,7 +2321,7 @@
     },
     {
      "pos": "TE",
-     "name": "G.Mundt",
+     "name": "J.Mundt",
      "side": "R",
      "align": "inline",
      "on_line": true,
@@ -2641,7 +2641,7 @@
     },
     {
      "pos": "TE",
-     "name": "G.Mundt",
+     "name": "J.Mundt",
      "side": "R",
      "align": "inline",
      "on_line": false,
@@ -2753,7 +2753,7 @@
     },
     {
      "pos": "WR",
-     "name": "Cooper",
+     "name": "D.Cooper",
      "side": "L",
      "align": "tight",
      "on_line": true,
@@ -2761,7 +2761,7 @@
     },
     {
      "pos": "WR",
-     "name": "Wicks",
+     "name": "D.Wicks",
      "side": "L",
      "align": "slot",
      "on_line": false,
@@ -2813,7 +2813,7 @@
     },
     {
      "pos": "WR",
-     "name": "Cooper",
+     "name": "D.Cooper",
      "side": "R",
      "align": "tight",
      "on_line": true,
@@ -2924,13 +2924,13 @@
     },
     {
      "pos": "RB",
-     "name": "Bigsby",
+     "name": "T.Bigsby",
      "side": "R",
      "align": "gun_offset"
     },
     {
      "pos": "TE",
-     "name": "Mundt",
+     "name": "J.Mundt",
      "side": "L",
      "align": "wing",
      "on_line": false,
@@ -2986,13 +2986,13 @@
     },
     {
      "pos": "RB",
-     "name": "Bigsby",
+     "name": "T.Bigsby",
      "side": "L",
      "align": "gun_offset"
     },
     {
      "pos": "TE",
-     "name": "Mundt",
+     "name": "J.Mundt",
      "side": "L",
      "align": "wing",
      "on_line": false,
@@ -3122,7 +3122,7 @@
     },
     {
      "pos": "WR",
-     "name": "Wicks",
+     "name": "D.Wicks",
      "side": "R",
      "align": "tight",
      "on_line": false,
