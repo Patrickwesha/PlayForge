@@ -8,7 +8,10 @@ with hard cuts. Step 1 finds the cuts with ffmpeg (full frame rate: sampling mis
 
 Step 2 (this script) drops weak cuts, pairs the segments, and writes plays.json:
 
-    python scripts/film/split_plays.py cuts.txt DURATION_SECONDS plays.json
+    python scripts/film/split_plays.py cuts.txt DURATION_SECONDS plays.json [CUT_SECONDS ...]
+
+A real edit can score under MIN_SCORE (a dark or similar-looking frame on both sides). It shows up as single
+plays in the report. Find its line in cuts.txt (pts_time) and pass the time as an extra argument.
 
 A play = {n, sl: [start, end], ez: [start, end] | null}. A segment whose neighbour is not the same
 length (within TOL) is kept as a sideline-only play and listed in the report, so nothing is dropped.
@@ -41,7 +44,9 @@ def read_cuts(path):
 
 def main():
     cuts_path, duration, out = sys.argv[1], float(sys.argv[2]), sys.argv[3]
-    edges = [0.0] + read_cuts(cuts_path) + [duration]
+    # extra cut times (seconds) for real edits that scored under MIN_SCORE: a "single" play that is really two
+    forced = [float(t) for t in sys.argv[4:]]
+    edges = [0.0] + sorted(set(read_cuts(cuts_path) + forced)) + [duration]
     segs = []
     for a, b in zip(edges, edges[1:]):
         if b - a < MIN_LEN and segs:
