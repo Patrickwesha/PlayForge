@@ -3,7 +3,7 @@
     "snaps": 130,
     "exact": 130,
     "template": 0,
-    "formations": 83,
+    "formations": 82,
     "weeks": {
       "W1": 54,
       "W2": 76
@@ -40,37 +40,6 @@
         "W2",
         "Trips",
         "3x1 'T'",
-        "W1"
-      ]
-    },
-    {
-      "id": "snapform-6fb9057055debdb2",
-      "name": "Gun Bunch Rt",
-      "count": 5,
-      "exact": 5,
-      "template": 0,
-      "weeks": [
-        1,
-        2
-      ],
-      "hashes": {
-        "Left": 5
-      },
-      "source": "exact",
-      "snapIds": [
-        "W1-021",
-        "W2-016",
-        "W2-053",
-        "W2-073",
-        "W2-076"
-      ],
-      "tags": [
-        "eagles-2026",
-        "11",
-        "Bunch 'B'",
-        "W2",
-        "Bunch",
-        "Bunch 'B'",
         "W1"
       ]
     },
@@ -122,7 +91,7 @@
       "source": "exact",
       "snapIds": [
         "W2-022",
-        "W2-026",
+        "W2-027",
         "W2-048",
         "W2-063"
       ],
@@ -136,7 +105,37 @@
       ]
     },
     {
-      "id": "snapform-6b0c07cb76cc1f01",
+      "id": "snapform-6fb9057055debdb2",
+      "name": "Gun Bunch Rt",
+      "count": 4,
+      "exact": 4,
+      "template": 0,
+      "weeks": [
+        1,
+        2
+      ],
+      "hashes": {
+        "Left": 4
+      },
+      "source": "exact",
+      "snapIds": [
+        "W1-021",
+        "W2-053",
+        "W2-073",
+        "W2-076"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "Bunch 'B'",
+        "W2",
+        "Bunch",
+        "Bunch 'B'",
+        "W1"
+      ]
+    },
+    {
+      "id": "snapform-0ab57d91a7650ea7",
       "name": "Gun Dyno Rt B",
       "count": 4,
       "exact": 4,
@@ -250,36 +249,6 @@
       ]
     },
     {
-      "id": "snapform-d6dd5ddd14ae7cfb",
-      "name": "Dice Rt Close",
-      "count": 3,
-      "exact": 3,
-      "template": 0,
-      "weeks": [
-        1,
-        2
-      ],
-      "hashes": {
-        "Right": 2,
-        "Middle": 1
-      },
-      "source": "exact",
-      "snapIds": [
-        "W1-020",
-        "W2-025",
-        "W2-043"
-      ],
-      "tags": [
-        "eagles-2026",
-        "11",
-        "2x2 'D'",
-        "W1",
-        "Dice",
-        "2x2 'D'",
-        "W2"
-      ]
-    },
-    {
       "id": "snapform-e32953f80ba9e846",
       "name": "Gun Trips Rt",
       "count": 3,
@@ -304,6 +273,33 @@
         "W1",
         "Trips",
         "3x1 'T'"
+      ]
+    },
+    {
+      "id": "snapform-fe501ddee752fdec",
+      "name": "Gun Fast Rt",
+      "count": 3,
+      "exact": 3,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 3
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-006",
+        "W2-057",
+        "W2-066"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "3x1 'T'",
+        "W2",
+        "Fast",
+        "1x3 'F'"
       ]
     },
     {
@@ -472,8 +468,63 @@
       ]
     },
     {
-      "id": "snapform-003a6dcafe692380",
+      "id": "snapform-68ac0f5bb104514d",
       "name": "Dice Rt",
+      "count": 2,
+      "exact": 2,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 2
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-028",
+        "W2-052"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W2",
+        "Dice",
+        "2x2 'D'"
+      ]
+    },
+    {
+      "id": "snapform-d6dd5ddd14ae7cfb",
+      "name": "Dice Rt Close",
+      "count": 2,
+      "exact": 2,
+      "template": 0,
+      "weeks": [
+        1,
+        2
+      ],
+      "hashes": {
+        "Right": 1,
+        "Middle": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W1-020",
+        "W2-025"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "2x2 'D'",
+        "W1",
+        "Dice",
+        "2x2 'D'",
+        "W2"
+      ]
+    },
+    {
+      "id": "snapform-003a6dcafe692380",
+      "name": "Dice Rt #2",
       "count": 2,
       "exact": 2,
       "template": 0,
@@ -525,7 +576,7 @@
     },
     {
       "id": "snapform-0a8baf69733b3003",
-      "name": "Gun Fast Rt",
+      "name": "Gun Fast Rt #2",
       "count": 2,
       "exact": 2,
       "template": 0,
@@ -576,7 +627,7 @@
       ]
     },
     {
-      "id": "snapform-a885829cf86cf476",
+      "id": "snapform-d7b89c230bd7a1ad",
       "name": "Gun Fast Rt Open",
       "count": 2,
       "exact": 2,
@@ -602,33 +653,6 @@
       ]
     },
     {
-      "id": "snapform-a797a6fdbc060bff",
-      "name": "Gun Trips Rt #2",
-      "count": 2,
-      "exact": 2,
-      "template": 0,
-      "weeks": [
-        2
-      ],
-      "hashes": {
-        "Left": 1,
-        "Right": 1
-      },
-      "source": "exact",
-      "snapIds": [
-        "W2-008",
-        "W2-015"
-      ],
-      "tags": [
-        "eagles-2026",
-        "11",
-        "3x1 'T'",
-        "W2",
-        "Trips",
-        "3x1 'T'"
-      ]
-    },
-    {
       "id": "snapform-8960636ca4432d76",
       "name": "Gun Trips Rt Clamp",
       "count": 2,
@@ -650,6 +674,32 @@
         "11",
         "3x1 'T'",
         "W1",
+        "Trips",
+        "3x1 'T'"
+      ]
+    },
+    {
+      "id": "snapform-d3b20873edee9519",
+      "name": "Gun Trips Rt #2",
+      "count": 2,
+      "exact": 2,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Right": 2
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-015",
+        "W2-070"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "3x1 'T'",
+        "W2",
         "Trips",
         "3x1 'T'"
       ]
@@ -752,16 +802,16 @@
       "source": "exact",
       "snapIds": [
         "W1-039",
-        "W2-027"
+        "W2-026"
       ],
       "tags": [
         "eagles-2026",
         "12",
         "3x1 'T'",
         "W1",
+        "W2",
         "West",
-        "2 Back",
-        "W2"
+        "2 Back"
       ]
     },
     {
@@ -812,31 +862,6 @@
         "W2",
         "Dyno",
         "2x2 'D'"
-      ]
-    },
-    {
-      "id": "snapform-8cd4e4c0a918754e",
-      "name": "Gun Trips Rt Slot",
-      "count": 1,
-      "exact": 1,
-      "template": 0,
-      "weeks": [
-        2
-      ],
-      "hashes": {
-        "Right": 1
-      },
-      "source": "exact",
-      "snapIds": [
-        "W2-006"
-      ],
-      "tags": [
-        "eagles-2026",
-        "11",
-        "2x2 'D'",
-        "W2",
-        "Trips",
-        "3x1 'T'"
       ]
     },
     {
@@ -1015,33 +1040,8 @@
       ]
     },
     {
-      "id": "snapform-3c85a426249cc1dc",
-      "name": "Pistol Dyno Rt",
-      "count": 1,
-      "exact": 1,
-      "template": 0,
-      "weeks": [
-        2
-      ],
-      "hashes": {
-        "Left": 1
-      },
-      "source": "exact",
-      "snapIds": [
-        "W2-024"
-      ],
-      "tags": [
-        "eagles-2026",
-        "11",
-        "2x2 'D'",
-        "W2",
-        "Dyno",
-        "2x2 'D'"
-      ]
-    },
-    {
       "id": "snapform-d8514b3886eccf9a",
-      "name": "Pistol Dyno Rt #2",
+      "name": "Pistol Dyno Rt",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1065,8 +1065,8 @@
       ]
     },
     {
-      "id": "snapform-e9f9ba1947c94e93",
-      "name": "Dice Rt #2",
+      "id": "snapform-bad301e34064ae9d",
+      "name": "Pistol Dyno Rt #2",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1074,24 +1074,24 @@
         2
       ],
       "hashes": {
-        "Right": 1
+        "Left": 1
       },
       "source": "exact",
       "snapIds": [
-        "W2-052"
+        "W2-024"
       ],
       "tags": [
         "eagles-2026",
         "11",
         "2x2 'D'",
         "W2",
-        "Dice",
+        "Dyno",
         "2x2 'D'"
       ]
     },
     {
-      "id": "snapform-e4c91145f6a059f3",
-      "name": "Dice Rt #3",
+      "id": "snapform-3020dd0043691326",
+      "name": "Stack Rt Out",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1103,20 +1103,20 @@
       },
       "source": "exact",
       "snapIds": [
-        "W2-028"
+        "W2-043"
       ],
       "tags": [
         "eagles-2026",
         "11",
         "2x2 'D'",
         "W2",
-        "Dice",
-        "2x2 'D'"
+        "Stack",
+        "2x2 Stack 'S'"
       ]
     },
     {
       "id": "snapform-7f3bd03fe72acbe1",
-      "name": "Dice Rt #4",
+      "name": "Dice Rt #3",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1166,7 +1166,7 @@
     },
     {
       "id": "snapform-e695a2e584a1ffdf",
-      "name": "Dice Rt #5",
+      "name": "Dice Rt #4",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1290,8 +1290,8 @@
       ]
     },
     {
-      "id": "snapform-7ab89008827b2cea",
-      "name": "Gun Trips Rt #3",
+      "id": "snapform-4f584bb645d13058",
+      "name": "Gun Trips Rt Off",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1315,8 +1315,33 @@
       ]
     },
     {
+      "id": "snapform-205ad80408163826",
+      "name": "Gun Trips Rt Off #2",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-008"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "3x1 'T'",
+        "W2",
+        "Trips",
+        "3x1 'T'"
+      ]
+    },
+    {
       "id": "snapform-55aa20369b56e5d0",
-      "name": "Gun Trips Rt Off",
+      "name": "Gun Trips Rt Off #3",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1340,32 +1365,7 @@
       ]
     },
     {
-      "id": "snapform-d3b20873edee9519",
-      "name": "Gun Trips Rt #4",
-      "count": 1,
-      "exact": 1,
-      "template": 0,
-      "weeks": [
-        2
-      ],
-      "hashes": {
-        "Right": 1
-      },
-      "source": "exact",
-      "snapIds": [
-        "W2-070"
-      ],
-      "tags": [
-        "eagles-2026",
-        "11",
-        "3x1 'T'",
-        "W2",
-        "Trips",
-        "3x1 'T'"
-      ]
-    },
-    {
-      "id": "snapform-450090f76b8a256d",
+      "id": "snapform-0a5d11792d95b833",
       "name": "Gun Train Rt",
       "count": 1,
       "exact": 1,
@@ -1390,58 +1390,8 @@
       ]
     },
     {
-      "id": "snapform-8f629bf00a9c5ed6",
-      "name": "Gun Fast Rt #2",
-      "count": 1,
-      "exact": 1,
-      "template": 0,
-      "weeks": [
-        2
-      ],
-      "hashes": {
-        "Right": 1
-      },
-      "source": "exact",
-      "snapIds": [
-        "W2-066"
-      ],
-      "tags": [
-        "eagles-2026",
-        "11",
-        "3x1 'T'",
-        "W2",
-        "Fast",
-        "1x3 'F'"
-      ]
-    },
-    {
-      "id": "snapform-5aabfda7527ca7ed",
-      "name": "Gun Snug Rt Zoom",
-      "count": 1,
-      "exact": 1,
-      "template": 0,
-      "weeks": [
-        2
-      ],
-      "hashes": {
-        "Right": 1
-      },
-      "source": "exact",
-      "snapIds": [
-        "W2-057"
-      ],
-      "tags": [
-        "eagles-2026",
-        "11",
-        "3x1 'T'",
-        "W2",
-        "Snug",
-        "2x2 Stack 'S'"
-      ]
-    },
-    {
-      "id": "snapform-c74ac66cc1ca16ea",
-      "name": "Gun Trips Rt #5",
+      "id": "snapform-2debe492287734b0",
+      "name": "Gun Trips Rt Off #4",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1466,7 +1416,7 @@
     },
     {
       "id": "snapform-c3d16aba431f8b14",
-      "name": "Gun Trips Rt #6",
+      "name": "Gun Trips Rt #3",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1562,6 +1512,31 @@
         "W1",
         "Stack",
         "2x2 Stack 'S'"
+      ]
+    },
+    {
+      "id": "snapform-788bae4e45d66f18",
+      "name": "Gun Buddy Rt",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-016"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "Bunch 'B'",
+        "W2",
+        "Buddy",
+        "Bunch 'B'"
       ]
     },
     {
@@ -1665,33 +1640,8 @@
       ]
     },
     {
-      "id": "snapform-462569d3e5984ddd",
-      "name": "Gun Dyno Rt D",
-      "count": 1,
-      "exact": 1,
-      "template": 0,
-      "weeks": [
-        2
-      ],
-      "hashes": {
-        "Left": 1
-      },
-      "source": "exact",
-      "snapIds": [
-        "W2-061"
-      ],
-      "tags": [
-        "eagles-2026",
-        "11",
-        "Empty",
-        "W2",
-        "Dyno",
-        "Empty"
-      ]
-    },
-    {
-      "id": "snapform-50bbd192611386f0",
-      "name": "Gun Fast Rt Open A",
+      "id": "snapform-649480bfa0421aed",
+      "name": "Gun Fast Rt A",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1711,6 +1661,31 @@
         "Empty",
         "W2",
         "Fast",
+        "Empty"
+      ]
+    },
+    {
+      "id": "snapform-2ee9a6f5482d26cf",
+      "name": "Gun Trips Rt Open E #2",
+      "count": 1,
+      "exact": 1,
+      "template": 0,
+      "weeks": [
+        2
+      ],
+      "hashes": {
+        "Left": 1
+      },
+      "source": "exact",
+      "snapIds": [
+        "W2-061"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "Empty",
+        "W2",
+        "Trips",
         "Empty"
       ]
     },
@@ -1940,8 +1915,8 @@
       ]
     },
     {
-      "id": "snapform-4695a91dda6051d7",
-      "name": "Gun Trips Rt Off #2",
+      "id": "snapform-1008e1471668dfb1",
+      "name": "Gun Dyno Rt #10",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -1960,8 +1935,8 @@
         "12",
         "3x1 'T'",
         "W2",
-        "Trips",
-        "3x1 'T'"
+        "Dyno",
+        "2x2 'D'"
       ]
     },
     {
@@ -2040,8 +2015,8 @@
       ]
     },
     {
-      "id": "snapform-3b2ab081508d5f47",
-      "name": "West Rt Close #3",
+      "id": "snapform-3b490d9523cc8807",
+      "name": "Trips Rt Close",
       "count": 1,
       "exact": 1,
       "template": 0,
@@ -2060,7 +2035,7 @@
         "12",
         "Big",
         "W2",
-        "West",
+        "Trips",
         "3x1 'T'"
       ]
     },
@@ -2200,7 +2175,11 @@
     "W1-050: form family differs (chart 2x2 'D', film 3x1 'T'); the film chart wins this week",
     "W1-051: form family differs (chart 2x2 'D', film 3x1 'T'); the film chart wins this week",
     "W1-054: form family differs (chart 2x2 'D', film 2x2 Stack 'S'); the film chart wins this week",
-    "W2-027: form family differs (chart Big, JSON 3x1 'T'); the chart wins",
-    "W2-035: form family differs (chart Big, JSON 3x1 'T'); the chart wins"
+    "W2-002: form family differs (chart 3x1 'T', JSON 2x2 'D'); the chart wins",
+    "W2-006: form family differs (chart 2x2 'D', JSON Bunch 'B'); the chart wins",
+    "W2-024: backfield differs (chart Pistol, JSON Gun, RB R); the chart wins",
+    "W2-043: form family differs (chart 2x2 'D', JSON 2x2 Stack 'S'); the chart wins",
+    "W2-057: form family differs (chart 3x1 'T', JSON Bunch 'B'); the chart wins",
+    "W2-069: form family differs (chart 3x1 'T', JSON Bunch 'B'); the chart wins"
   ]
 }

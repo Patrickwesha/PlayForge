@@ -34,6 +34,10 @@ def check(s):
         ok = a in ALIGN_QB if p["pos"] == "QB" else a in ALIGN_BACK | ALIGN_RCV
         if not ok:
             out.append(f"{p['pos']} align '{a}' not a known label")
+    for p in ps:
+        sb = p.get("stack_behind")
+        if sb is not None and not isinstance(sb, (bool, int)):
+            out.append(f"{p['pos']} stack_behind '{sb}' must be the order number of the man in front (or true)")
     for side in "LR":
         orders = sorted(p.get("order") or 0 for p in ps if p.get("side") == side and p.get("align") in ALIGN_RCV)
         if orders and orders != list(range(1, len(orders) + 1)):

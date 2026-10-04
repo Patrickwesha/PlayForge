@@ -35,7 +35,7 @@ Eagles are in dark (midnight green) jerseys, white numbers. 2026 numbers seen on
   - `align`: QB: `under_center` | `pistol` | `gun`. Backs: `deep` (I-back depth behind the QB) | `offset` (under center, beside the QB line) | `gun_offset` (beside the QB in the gun) | `pistol_back` | `fb` (in front of the deep back) | `wing_back` (H-back off the tackle's hip, in the backfield). Receivers and tight ends: `inline` (attached to the end of the line, on the ball) | `wing` (off the hip of the end man, off the ball) | `tight` (within about 3 yards of the end man) | `slot` (between the tackle box and the numbers) | `numbers` (on the painted numbers) | `wide` (outside the numbers).
   - `on_line`: true | false (receivers and tight ends only)
   - `order`: receivers and tight ends only: 1 = closest to the ball on that side, counting outward
-  - `stack_behind`: the name (or true) of the player this one is stacked directly behind, only for a stack
+  - `stack_behind`: the `order` number (or true) of the player this one is stacked directly behind, only for a stack. Not a name: the importer rejects it
   - `id_unknown`: true when the body is there but you could not read who it is (name null)
 - Use landmarks (hash, numbers, tackle). Do not estimate yards.
 

@@ -84,15 +84,15 @@
    "yardline": "PHI 28",
    "play_text": "(Shotgun) J.Hurts pass short right to T.Bigsby to PHI 26 for -2 yards (C.Gray, M.Robinson).",
    "personnel": "12",
-   "form_family": "3x1 'T'",
-   "formation": "Gun, RB offset R; R side: TE off the ball behind the RT (wing), Goedert on the line ~2 yds outside the RT, WR on the line outside him; one WR on the numbers L. Snapped as set",
+   "form_family": "2x2 'D'",
+   "formation": "Gun, Bigsby offset R. L: Goedert off the ball just outside the LT, one WR on the numbers. R: Mundt just outside the RT on the line, one WR in the slot (outside the hash, inside the numbers). Goedert then motions across behind the line to the R side, still moving at the snap (as snapped it looks 3x1 R)",
    "backfield": "Gun, RB R",
-   "strength": "Rt",
+   "strength": "Lt",
    "hash": "Middle",
-   "motion": null,
+   "motion": "Goedert / tight L off the ball / across behind the line to R, outside Mundt / moving at snap",
    "confidence": "H/M/H",
    "angles": "Both",
-   "notes": "Endzone: behind offense. Ball between the hash columns on EZ and between the hash rows on SL; both agree. #88 Goedert read on EZ on the line; off-ball TE inferred Mundt. Cross-check: prev W2-001 run left guard no gain, ended between hashes, no expectation.",
+   "notes": "Spot check from All-22 frames (alt/S/p007-*). Set frame 3.0 s, before motion. EZ (camera behind offense) shows #88 GOEDERT on screen-left beside the LT, about a yard off the ball, and #83 MUNDT outside the RT. Goedert runs across behind the line from about 4.5 s and is still moving outside Mundt at 6.5 s; ball out by 7.5 s. The earlier NFL Pro chart recorded that as-snapped 3x1 R picture and had the two tight ends swapped. Changed: form_family 3x1 to 2x2, strength Rt to Lt (balanced, Y side), motion added, Goedert and Mundt sides and on_line. Mundt on the line and the R WR on the line are Medium (EZ crops the WR; SL depth is hard to read).",
    "players": [
     {
      "pos": "QB",
@@ -107,29 +107,29 @@
      "align": "gun_offset"
     },
     {
+     "pos": "TE",
+     "name": "D.Goedert",
+     "side": "L",
+     "align": "tight",
+     "on_line": false,
+     "order": 1
+    },
+    {
      "pos": "WR",
      "name": null,
      "side": "L",
      "align": "numbers",
      "on_line": true,
-     "order": 1,
+     "order": 2,
      "id_unknown": true
     },
     {
      "pos": "TE",
      "name": "J.Mundt",
      "side": "R",
-     "align": "wing",
-     "on_line": false,
-     "order": 1
-    },
-    {
-     "pos": "TE",
-     "name": "D.Goedert",
-     "side": "R",
      "align": "tight",
      "on_line": true,
-     "order": 2
+     "order": 1
     },
     {
      "pos": "WR",
@@ -137,7 +137,7 @@
      "side": "R",
      "align": "slot",
      "on_line": true,
-     "order": 3,
+     "order": 2,
      "id_unknown": true
     }
    ]
@@ -354,15 +354,15 @@
    "yardline": "TEN 43",
    "play_text": "(Shotgun) W.Shipley left tackle to TEN 38 for 5 yards (J.Simmons; A.Hill).",
    "personnel": "11",
-   "form_family": "2x2 'D'",
-   "formation": "Gun, RB offset R; L: Goedert inline, Lemon detached; R: two WRs. As snapped: Lemon in motion across the backfield, tight behind the QB at the snap",
+   "form_family": "Bunch 'B'",
+   "formation": "Set: gun, Shipley offset R. L: Goedert inline, nobody outside him. R: three receivers bunched between the hash and the numbers: Cooper (#80) on the ball as the point, Lemon (#9) inside and off the ball just outside the hash, a third receiver off the ball outside and behind Cooper. As snapped: Lemon came in from the bunch, across in front of Hurts, and was behind the LG-LT at the snap.",
    "backfield": "Gun, RB R",
-   "strength": "Lt",
+   "strength": "Rt",
    "hash": "Left",
-   "motion": "M.Lemon / detached L / across backfield toward R / at snap",
+   "motion": "M.Lemon / bunch R, inside man off the ball / in toward the ball and across in front of the QB to the L / behind the LG-LT at snap",
    "confidence": "H/M/H",
    "angles": "Both",
-   "notes": "Str by Y tiebreak (Goedert inline L). Lemon's exact split cropped on EZ, label from SL (inferred slot). Cross-check: prev W2-005 run left tackle -> Left expected, matches.",
+   "notes": "Set read on SL at 3.0-4.5 s (offense faces screen-right, top = offense L), motion starts at about 5.0 s and the snap is about 6.5 s. EZ (behind the offense, HURTS on the back) shows the ball on the left hash, Goedert attached outside the LT, Shipley to the offense R of Hurts; the R receivers are outside the EZ crop, so the bunch comes from the SL only. Changed from the existing chart: Lemon did not start on the L. All three WRs set on the R, Lemon the inside man of the bunch, so the set is a bunch to the R with Goedert alone on the L, strength Rt (was 2x2 Lt by the Y tiebreak). The existing chart had the motion going L to R; on film it goes R to L. #9 read clearly on the SL zoom; #80 read on the SL zoom (Cooper); the outside man of the bunch not read.",
    "players": [
     {
      "pos": "QB",
@@ -387,28 +387,27 @@
     {
      "pos": "WR",
      "name": "M.Lemon",
-     "side": "L",
+     "side": "R",
      "align": "slot",
      "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Cooper",
+     "side": "R",
+     "align": "slot",
+     "on_line": true,
      "order": 2
     },
     {
      "pos": "WR",
      "name": null,
+     "id_unknown": true,
      "side": "R",
      "align": "slot",
      "on_line": false,
-     "order": 1,
-     "id_unknown": true
-    },
-    {
-     "pos": "WR",
-     "name": null,
-     "side": "R",
-     "align": "wide",
-     "on_line": true,
-     "order": 2,
-     "id_unknown": true
+     "order": 3
     }
    ]
   },
@@ -485,14 +484,14 @@
    "play_text": "(Shotgun) T.Bigsby up the middle to TEN 32 for 1 yard (J.Simmons; J.Johnson).",
    "personnel": "11",
    "form_family": "3x1 'T'",
-   "formation": "Gun, RB offset L; R: Goedert inline, two WRs; L: one WR on the numbers. As snapped: Goedert motions across to the L side, look becomes 2x2",
+   "formation": "Set: gun, Bigsby offset L. L: one WR on the ball on the numbers. R: Goedert attached outside the RT but off the ball (a step deeper than the RT), then two WRs between the hash and the numbers: the inside one on the ball just outside the hash, the outside one off the ball, outside and behind him. As snapped: Goedert crossed behind the line to the L and was off the LT's hip at the snap.",
    "backfield": "Gun, RB L",
    "strength": "Rt",
    "hash": "Left",
-   "motion": "D.Goedert / inline R / across the formation to L (behind LT-LG) / at snap",
-   "confidence": "H/H/H",
+   "motion": "D.Goedert / attached off the ball outside the RT / across behind the line to the L / off the LT's hip at snap",
+   "confidence": "H/M/H",
    "angles": "Both",
-   "notes": "Cross-check: prev W2-007 no-play penalty from Left hash -> Left (weak), matches.",
+   "notes": "Set read on SL at 1.5-4.5 s (offense faces screen-right, top = offense L); Goedert starts across at about 5.5 s and the snap is about 6.5 s. EZ (behind the offense) shows the ball on the left hash, Bigsby (#8) to the offense L of Hurts and Goedert (#88) outside the RT with his feet clearly deeper than the RT's; the R WRs are outside the EZ crop. Family, strength, backfield and hash agree with the existing chart. What changed: on/off the ball. Goedert was not inline: he is off the ball (Off look), and on the R it is the inside WR who is on the ball and the outside WR who is off it (the existing chart had it the other way). That gives seven on the line (five OL, the L WR, the inside R WR). Both R WRs are inside the numbers, so the outside one is slot, not wide. WR numbers not read (the inside R man may be #13, not sure).",
    "players": [
     {
      "pos": "QB",
@@ -509,37 +508,37 @@
     {
      "pos": "WR",
      "name": null,
+     "id_unknown": true,
      "side": "L",
      "align": "numbers",
      "on_line": true,
-     "order": 1,
-     "id_unknown": true
+     "order": 1
     },
     {
      "pos": "TE",
      "name": "D.Goedert",
      "side": "R",
-     "align": "inline",
-     "on_line": true,
+     "align": "wing",
+     "on_line": false,
      "order": 1
     },
     {
      "pos": "WR",
      "name": null,
+     "id_unknown": true,
      "side": "R",
      "align": "slot",
-     "on_line": false,
-     "order": 2,
-     "id_unknown": true
+     "on_line": true,
+     "order": 2
     },
     {
      "pos": "WR",
      "name": null,
+     "id_unknown": true,
      "side": "R",
-     "align": "wide",
-     "on_line": true,
-     "order": 3,
-     "id_unknown": true
+     "align": "slot",
+     "on_line": false,
+     "order": 3
     }
    ]
   },
@@ -553,14 +552,14 @@
    "play_text": "(Shotgun) J.Hurts pass short left to D.Goedert to TEN 28 for 4 yards (C.Barton).",
    "personnel": "11",
    "form_family": "3x1 'T'",
-   "formation": "Gun, RB offset R; R: Goedert inline, WR on the line, M.Brown off the ball outside; L: one WR on the numbers. As snapped: Brown in motion across behind the line to the L side",
+   "formation": "Set: gun, Shipley offset R. L: one WR on the ball on the numbers. R: Goedert attached outside the RT but a step deeper than the RT (off the ball), a WR on the ball just outside the hash, and M.Brown (#0) off the ball just outside and behind that WR, inside the numbers. As snapped: Brown came across behind the line, between Hurts and the OL, and was on the L of Hurts behind the LG at the snap.",
    "backfield": "Gun, RB R",
    "strength": "Rt",
    "hash": "Left",
-   "motion": "M.Brown / off the ball R / across behind the line to L / at snap",
+   "motion": "M.Brown / off the ball outside the R WR / across behind the line, in front of the QB, to the L / behind the LG at snap",
    "confidence": "H/M/H",
    "angles": "Both",
-   "notes": "#0 Brown read on EZ during motion; which R receiver he started as is inferred (outer). Cross-check: prev W2-008 run up the middle, ended between hashes, no expectation.",
+   "notes": "Set read on SL at 3.0-4.5 s (offense faces screen-right, top = offense L); Brown starts in at about 5 s, the snap is just after 7.0 s. EZ (behind the offense) shows the ball on the left hash, Shipley (#28) to the offense R of Hurts and Goedert (#88) outside the RT; #0 read on the SL zoom at the set and on the EZ in motion. Family, strength, backfield and hash agree with the existing chart. What changed: Goedert's feet are a step deeper than the RT's on the SL (same look as W2-008; in W2-006 he is level with the LT), so I have him off the ball (wing), not inline; I am only M on that, the EZ shows him only slightly deeper. Brown is inside the numbers, so slot, not numbers. The existing chart's guess that Brown started as the outer R man is right.",
    "players": [
     {
      "pos": "QB",
@@ -577,34 +576,34 @@
     {
      "pos": "WR",
      "name": null,
+     "id_unknown": true,
      "side": "L",
      "align": "numbers",
      "on_line": true,
-     "order": 1,
-     "id_unknown": true
+     "order": 1
     },
     {
      "pos": "TE",
      "name": "D.Goedert",
      "side": "R",
-     "align": "inline",
-     "on_line": true,
+     "align": "wing",
+     "on_line": false,
      "order": 1
     },
     {
      "pos": "WR",
      "name": null,
+     "id_unknown": true,
      "side": "R",
      "align": "slot",
      "on_line": true,
-     "order": 2,
-     "id_unknown": true
+     "order": 2
     },
     {
      "pos": "WR",
      "name": "M.Brown",
      "side": "R",
-     "align": "numbers",
+     "align": "slot",
      "on_line": false,
      "order": 3
     }
@@ -620,14 +619,14 @@
    "play_text": "(Shotgun) J.Hurts pass short left to D.Smith to TEN 20 for 8 yards (A.Taylor).",
    "personnel": "11",
    "form_family": "Empty",
-   "formation": "Empty gun 3x2: L two WRs (numbers, wide); R Goedert on the line ~4 yds outside RT, a slot, a wide WR. Snapped as set",
+   "formation": "Empty gun 3x2: L two WRs (numbers off the ball, outside the numbers on the line); R Goedert on the line on the R hash, a slot, a WR outside the numbers. Snapped as set",
    "backfield": "Gun",
    "strength": "Rt",
    "hash": "Left",
    "motion": null,
    "confidence": "H/M/H",
    "angles": "Both",
-   "notes": "RB Shipley aligned as a receiver (no back beside QB on EZ); which R spot he held is not readable. Cross-check: prev W2-009 short left to Goedert -> Left expected, matches.",
+   "notes": "Spot check from All-22 frames (alt/S/p015-3.5). Family, strength, backfield and hash hold. Changed: Goedert's align from tight to slot: EZ shows #88 GOEDERT on the line right on the R hash column, well outside the RT, and SL puts him on the near hash row. Shipley is one of the R receivers (no back beside Hurts); the R wide man's number ends in 8 (maybe #28) but I could not read it, so names stay unknown.",
    "players": [
     {
      "pos": "QB",
@@ -657,7 +656,7 @@
      "pos": "TE",
      "name": "D.Goedert",
      "side": "R",
-     "align": "tight",
+     "align": "slot",
      "on_line": true,
      "order": 1
     },
@@ -667,7 +666,8 @@
      "side": "R",
      "align": "slot",
      "on_line": false,
-     "order": 2
+     "order": 2,
+     "id_unknown": true
     },
     {
      "pos": "WR",
@@ -1031,14 +1031,14 @@
    "play_text": "(Shotgun) J.Hurts pass short right intended for D.Smith INTERCEPTED by A.Hooker at TEN -2. A.Hooker to PHI 10 for 92 yards (M.Lemon).",
    "personnel": "11",
    "form_family": "Bunch 'B'",
-   "formation": "Gun, RB offset L; one WR wide L; three-man bunch R (Goedert in the bunch, inferred), outside the tackle box. Snapped as set",
+   "formation": "Gun, Shipley offset L; one WR on the numbers L, on the line; three-man bunch R outside the tackle box: D.Smith the point man on the line, a WR a step off inside him, Goedert deepest, nearly behind Smith. Snapped as set",
    "backfield": "Gun, RB L",
    "strength": "Rt",
    "hash": "Left",
    "motion": null,
    "confidence": "H/M/H",
    "angles": "Both",
-   "notes": "Long 33 s clip; players were settling into the set early in the clip, charted the last still frame (~12.4 s). Bunch names not readable; no TE inline on EZ, so Goedert is in the bunch. Cross-check: prev W2-015 incomplete -> same hash (Left), matches.",
+   "notes": "Spot check from All-22 frames (alt/S/p021-11.0, 12.4). Family, strength, backfield (EZ #28 offset L) and hash (EZ ball just inside the L hash column) hold. Changed: the L WR is on the painted numbers, not outside them (number reads ?3, likely #13 Wicks, not certain so left unknown); in the bunch, #6 D.Smith is the point man on the line and #88 Goedert is the deepest man nearly behind him (both numbers read on SL zoom), so Goedert is not the on-line inside man.",
    "players": [
     {
      "pos": "QB",
@@ -1056,36 +1056,36 @@
      "pos": "WR",
      "name": null,
      "side": "L",
-     "align": "wide",
+     "align": "numbers",
      "on_line": true,
      "order": 1,
      "id_unknown": true
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "side": "R",
+     "align": "slot",
+     "on_line": false,
+     "order": 1,
+     "id_unknown": true
+    },
+    {
+     "pos": "WR",
+     "name": "D.Smith",
+     "side": "R",
+     "align": "slot",
+     "on_line": true,
+     "order": 2
     },
     {
      "pos": "TE",
      "name": "D.Goedert",
      "side": "R",
      "align": "slot",
-     "on_line": true,
-     "order": 1
-    },
-    {
-     "pos": "WR",
-     "name": null,
-     "side": "R",
-     "align": "slot",
-     "on_line": false,
-     "order": 2,
-     "id_unknown": true
-    },
-    {
-     "pos": "WR",
-     "name": null,
-     "side": "R",
-     "align": "slot",
      "on_line": false,
      "order": 3,
-     "id_unknown": true
+     "stack_behind": 2
     }
    ]
   },
@@ -1570,26 +1570,26 @@
    "play_text": "(Shotgun) J.Hurts pass short right to D.Smith to TEN 16 for 8 yards (A.Hooker) [J.Franklin-Myers].",
    "personnel": "11",
    "form_family": "2x2 'D'",
-   "formation": "Pistol, Shipley behind Hurts; L: slot off the ball + WR wide; R: slot + WR wide. No inline TE. Snapped as set",
-   "backfield": "Pistol",
+   "formation": "Gun, Shipley offset R. L: TE in the slot off the ball, WR just outside the numbers on the line. R: WR on the numbers, WR outside the numbers on the line. Shipley then motions across behind Hurts and out to the L, moving at the snap. No inline TE",
+   "backfield": "Gun, RB R",
    "strength": "Lt",
    "hash": "Right",
-   "motion": null,
+   "motion": "Shipley / gun offset R / across behind Hurts and out to the L / moving at snap",
    "confidence": "H/M/H",
    "angles": "Both",
-   "notes": "Q2 orientation: SL offense faces screen-left (top = offense R); EZ camera behind defense (reversed, screen left = offense R). Str by field side (rule v2.1; ball on R hash, field = L). Y not found: balanced 2x2 and Goedert (Y) not identifiable on either angle, pre- or post-snap; all four receiver numbers unreadable. Cross-check: new quarter, prev W2-023 short middle, no expectation.",
+   "notes": "Spot check from All-22 frames (alt/S/p035-4.0, 6.0, 7.0). Q2: SL offense faces screen-left (top = offense R); EZ camera faces the offense (screen-left = offense R). At 4.0 s Shipley #28 is beside Hurts on the offense R; at 6.0 s he is running behind Hurts; at 7.0 s the ball is arriving and he is outside the L tackle. The NFL Pro chart caught him mid-motion and called it pistol. Changed: backfield Pistol to Gun RB R, motion added, Shipley align, R inside WR from slot to numbers. The L slot is the only TE (number #8x, second digit unreadable), so strength stays Lt by the Y rule. #6 D.Smith read on EZ on the R side (not certain which R spot, so names stay unknown). Hash Right holds.",
    "players": [
     {
      "pos": "QB",
      "name": "J.Hurts",
      "side": "C",
-     "align": "pistol"
+     "align": "gun"
     },
     {
      "pos": "RB",
      "name": "W.Shipley",
-     "side": "C",
-     "align": "pistol_back"
+     "side": "R",
+     "align": "gun_offset"
     },
     {
      "pos": "TE",
@@ -1613,7 +1613,7 @@
      "pos": "WR",
      "name": null,
      "side": "R",
-     "align": "slot",
+     "align": "numbers",
      "on_line": false,
      "order": 1,
      "id_unknown": true
@@ -1707,14 +1707,14 @@
    "play_text": "T.Bigsby up the middle to TEN 2 for 9 yards (C.Barton; C.Gray).",
    "personnel": "12",
    "form_family": "3x1 'T'",
-   "formation": "Under center, Bigsby deep I-back; L: TE inline, TE tight beside him on the line, Wicks wide off the ball; R: Smith wide. As snapped: Wicks motions across the backfield to the R side, look becomes 2x2",
+   "formation": "Set: under center, Bigsby deep I-back. L: a TE (#8x) inline on the LT, Mundt (#83) off the ball outside him, Wicks (#13) off the ball a close split outside Mundt, just outside the L hash. R: D.Smith on the ball on the numbers. As snapped: Wicks ran across the backfield to the R and was behind the RT at the snap.",
    "backfield": "Under Center",
    "strength": "Lt",
    "hash": "Right",
-   "motion": "D.Wicks / wide L / across backfield to R / at snap",
+   "motion": "D.Wicks / close split off the ball L / across the backfield behind the QB to the R / behind the RT at snap",
    "confidence": "H/M/H",
    "angles": "Both",
-   "notes": "#13 read on SL in motion. Which TE is inline vs tight not readable (Mundt/Jenkins). Cross-check: prev W2-025 run up the middle, no expectation.",
+   "notes": "Q2: offense faces screen-left on SL, top = offense R. The EZ camera here FACES the offense (we see Hurts' front), so screen left = offense R; both angles agree. Set read at 3.0-4.5 s, Wicks starts at about 5.5 s, snap about 7.2 s. EZ shows the ball on the R hash, Bigsby (#8) deep behind Hurts under center, the inline TE level with the LT and Mundt (#83 read on EZ zoom) with his feet clearly deeper than the inline TE. Family, strength, backfield and hash agree with the existing chart. What changed: the second TE is off the ball (wing), not on the line; Wicks is not wide, he is a close split just outside the L hash (tight); Smith is on the numbers, not outside them. That gives seven on the line (five OL, the inline TE, Smith). If Wicks' close split is counted as attached, this reads as Big instead of 3x1. The inline TE's number shows only the 8 (Jenkins #84 or Goedert #88), so name null.",
    "players": [
     {
      "pos": "QB",
@@ -1731,26 +1731,25 @@
     {
      "pos": "TE",
      "name": null,
+     "id_unknown": true,
      "side": "L",
      "align": "inline",
      "on_line": true,
-     "order": 1,
-     "id_unknown": true
+     "order": 1
     },
     {
      "pos": "TE",
-     "name": null,
+     "name": "J.Mundt",
      "side": "L",
-     "align": "tight",
-     "on_line": true,
-     "order": 2,
-     "id_unknown": true
+     "align": "wing",
+     "on_line": false,
+     "order": 2
     },
     {
      "pos": "WR",
      "name": "D.Wicks",
      "side": "L",
-     "align": "wide",
+     "align": "tight",
      "on_line": false,
      "order": 3
     },
@@ -1758,7 +1757,7 @@
      "pos": "WR",
      "name": "D.Smith",
      "side": "R",
-     "align": "wide",
+     "align": "numbers",
      "on_line": true,
      "order": 1
     }
@@ -1773,15 +1772,15 @@
    "yardline": "TEN 2",
    "play_text": "T.Bigsby up the middle for 2 yards, TOUCHDOWN.",
    "personnel": "12",
-   "form_family": "3x1 'T'",
-   "formation": "Under center, Bigsby deep I-back; L: TE inline, TE wing off his hip, WR off the ball just outside; R: one WR off the ball near the numbers. Snapped as set",
+   "form_family": "Big",
+   "formation": "Under center, Bigsby deep I-back. L: TE inline, Mundt a step off the ball just outside him (wing), Wicks off the ball directly behind the inline TE. R: one WR on the numbers. Snapped as set",
    "backfield": "Under Center",
    "strength": "Lt",
    "hash": "Right",
    "motion": null,
-   "confidence": "H/M/H",
+   "confidence": "H/H/H",
    "angles": "Both",
-   "notes": "Goal line (TEN 2) but only 12 personnel with 2 detached WRs, so 3x1 not Goal Line/Big. R WR shuffles at the snap, not a true motion. Names of L wing/WR not readable. Cross-check: prev W2-026 run up the middle, no expectation.",
+   "notes": "Spot check from All-22 frames (alt/S/p038-9.0, 12.0). Changed family from 3x1 to Big: the only detached receiver is the lone WR on the R; on the L everyone is tight to the end of the line, so Big (no more than one detached) wins. That matches the owner's workbook. Named #83 Mundt (wing) and #13 Wicks (behind the inline TE) from EZ zoom. Inline TE number reads 88 from behind and maybe 84 from the front, left unnamed. Strength Lt, hash Right, backfield hold.",
    "players": [
     {
      "pos": "QB",
@@ -1805,22 +1804,21 @@
      "id_unknown": true
     },
     {
-     "pos": "TE",
-     "name": null,
-     "side": "L",
-     "align": "wing",
-     "on_line": false,
-     "order": 2,
-     "id_unknown": true
-    },
-    {
      "pos": "WR",
-     "name": null,
+     "name": "D.Wicks",
      "side": "L",
      "align": "tight",
      "on_line": false,
-     "order": 3,
-     "id_unknown": true
+     "order": 2,
+     "stack_behind": true
+    },
+    {
+     "pos": "TE",
+     "name": "J.Mundt",
+     "side": "L",
+     "align": "wing",
+     "on_line": false,
+     "order": 3
     },
     {
      "pos": "WR",
@@ -1843,14 +1841,14 @@
    "play_text": "M.Brown left end to PHI 28 for 9 yards (E.Hallett; M.Robinson).",
    "personnel": "11",
    "form_family": "2x2 'D'",
-   "formation": "Under center, Bigsby deep I-back; R: Mundt inline, M.Brown wide; L: two WRs off the ball (slot + wide). As snapped: Brown in jet motion across toward the ball",
+   "formation": "Set: under center, Bigsby deep I-back. R: Mundt (#83) inline on the RT, M.Brown off the ball on the numbers. L: two WRs between the L hash and the numbers: the inside one off the ball just outside the hash, the outside one on the ball about halfway to the numbers. As snapped: Brown came in on jet motion and was just outside Mundt, behind the line, at the snap.",
    "backfield": "Under Center",
    "strength": "Rt",
    "hash": "Right",
-   "motion": "M.Brown / wide R / jet across the formation toward L / at snap",
+   "motion": "M.Brown / off the ball on the numbers R / jet motion in toward the ball, behind the line / just outside Mundt at snap",
    "confidence": "H/M/H",
    "angles": "Both",
-   "notes": "Str by Y tiebreak (Mundt, only TE, inline R). Brown's set spot outside the EZ crop; placed from SL. Cross-check: drive start after TD/kickoff, no expectation.",
+   "notes": "Q2: offense faces screen-left on SL, top = offense R; the EZ camera faces the offense (screen left = offense R). Set still from 0.5 to 4.5 s; Brown starts in at about 5 s and the snap is about 5.8 s. EZ shows the ball on the R hash, Bigsby (#8) deep behind Hurts under center, Mundt (#83) level with the RT on the ball. Family, strength (Y tiebreak, Mundt the only TE), backfield and hash agree with the existing chart. What changed: Brown was off the ball on the numbers, not on the ball and wide (his feet are deeper than the line on the SL); the outside L WR is the one on the ball, inside the numbers, so slot not wide. Seven on the line: five OL, Mundt, the outside L WR. Brown named from the existing chart and the play text (he is the jet man who carries it); the two L WRs not read.",
    "players": [
     {
      "pos": "QB",
@@ -1876,27 +1874,27 @@
      "pos": "WR",
      "name": "M.Brown",
      "side": "R",
-     "align": "wide",
-     "on_line": true,
+     "align": "numbers",
+     "on_line": false,
      "order": 2
     },
     {
      "pos": "WR",
      "name": null,
+     "id_unknown": true,
      "side": "L",
      "align": "slot",
      "on_line": false,
-     "order": 1,
-     "id_unknown": true
+     "order": 1
     },
     {
      "pos": "WR",
      "name": null,
+     "id_unknown": true,
      "side": "L",
-     "align": "wide",
+     "align": "slot",
      "on_line": true,
-     "order": 2,
-     "id_unknown": true
+     "order": 2
     }
    ]
   },
@@ -2186,14 +2184,14 @@
    "play_text": "(Shotgun) J.Hurts pass short left to D.Wicks to TEN 41 for 5 yards (M.Robinson).",
    "personnel": "11",
    "form_family": "3x1 'T'",
-   "formation": "Gun, Shipley offset L; R: trips (two outside on/near the numbers, Wicks inside off the ball); L: one WR wide. As snapped: Wicks motions from the R slot in toward the QB",
+   "formation": "Set: gun, Shipley offset L. R: trips: Wicks (#13) off the ball in the slot, the TE on the ball just inside the numbers, Lemon (#9) off the ball on the numbers. L: D.Smith (#6) on the ball about halfway between the L hash and the numbers. As snapped: Wicks came in behind the line, across the formation in front of the QB, and was just inside Smith on the L, off the ball, at the snap.",
    "backfield": "Gun, RB L",
    "strength": "Rt",
    "hash": "Right",
-   "motion": "D.Wicks / slot R / in toward the backfield beside QB / at snap",
+   "motion": "D.Wicks / slot R, off the ball / across behind the line, in front of the QB, to the L / just inside Smith on the L, off the ball, at snap",
    "confidence": "H/M/H",
    "angles": "Both",
-   "notes": "#13 read on EZ. Jenkins assumed among the R trips (no inline TE visible). Cross-check: prev W2-032 scramble up the middle, no expectation.",
+   "notes": "Q2: offense faces screen-left on SL, top = offense R; EZ faces the offense (screen left = offense R). Set still from 1.5 to 3.0 s; Wicks crouches at 4.5 s and runs from 5 s; the snap is about 7.7 s. EZ shows the ball on the R hash, Shipley (#28) to the offense L of Hurts, Wicks (#13) off the ball outside the RT. Family, strength, backfield and hash agree with the existing chart. What changed: the motion. Wicks does not stop beside the QB; he runs all the way across and is next to Smith on the L at the snap. Widths: Lemon (outer R man, #9 read on SL) is on the numbers, not outside them; Smith (#6 read on SL) is about halfway between the hash and the numbers, so slot, not wide. Seven on the line: five OL, the R TE, Smith. The middle R man is the only TE (11 personnel) but his number was not read; the existing chart says Jenkins, so I left the name null.",
    "players": [
     {
      "pos": "QB",
@@ -2209,12 +2207,11 @@
     },
     {
      "pos": "WR",
-     "name": null,
+     "name": "D.Smith",
      "side": "L",
-     "align": "wide",
+     "align": "slot",
      "on_line": true,
-     "order": 1,
-     "id_unknown": true
+     "order": 1
     },
     {
      "pos": "WR",
@@ -2226,7 +2223,8 @@
     },
     {
      "pos": "TE",
-     "name": "E.Jenkins",
+     "name": null,
+     "id_unknown": true,
      "side": "R",
      "align": "numbers",
      "on_line": true,
@@ -2234,12 +2232,11 @@
     },
     {
      "pos": "WR",
-     "name": null,
+     "name": "M.Lemon",
      "side": "R",
-     "align": "wide",
+     "align": "numbers",
      "on_line": false,
-     "order": 3,
-     "id_unknown": true
+     "order": 3
     }
    ]
   },
@@ -2317,15 +2314,15 @@
    "yardline": "TEN 34",
    "play_text": "T.Bigsby right tackle to TEN 35 for -1 yards (N.Stackhouse, M.Robinson).",
    "personnel": "12",
-   "form_family": "3x1 'T'",
-   "formation": "Under center, Bigsby deep I-back; R: TE inline, TE wing, WR tight outside them; L: one WR wide. Snapped as set",
+   "form_family": "Big",
+   "formation": "Under center, Bigsby deep I-back. R: Jenkins inline, Mundt on the line tight outside him, Cooper a step off the ball just outside Mundt. L: D.Smith alone just inside the numbers. Snapped as set",
    "backfield": "Under Center",
    "strength": "Rt",
    "hash": "Left",
    "motion": null,
-   "confidence": "H/M/H",
+   "confidence": "H/H/H",
    "angles": "Both",
-   "notes": "Long pre-snap (~11 s). R cluster at the EZ crop edge; TE/WR names not readable (Mundt, Jenkins, Smith/Cooper). Cross-check: prev W2-034 Shipley left end pushed ob -> Left expected, matches.",
+   "notes": "Spot check from All-22 frames (alt/S/p055-7.5, 10.0). Changed family 3x1 to Big: only Smith is detached; the three R men are all on the end of the line, so Big (no more than one detached) wins, matching the owner's workbook. Names from EZ zoom: #84 Jenkins inline, #83 Mundt, #80 Cooper; #6 Smith on SL. Mundt is level with Jenkins (not a wing); Cooper is the one off the ball. Smith is at the inside edge of the numbers, not wide. Strength Rt, hash Left, backfield hold.",
    "players": [
     {
      "pos": "QB",
@@ -2341,39 +2338,35 @@
     },
     {
      "pos": "WR",
-     "name": null,
+     "name": "D.Smith",
      "side": "L",
-     "align": "wide",
+     "align": "numbers",
      "on_line": true,
-     "order": 1,
-     "id_unknown": true
+     "order": 1
     },
     {
      "pos": "TE",
-     "name": null,
+     "name": "E.Jenkins",
      "side": "R",
      "align": "inline",
      "on_line": true,
-     "order": 1,
-     "id_unknown": true
+     "order": 1
     },
     {
      "pos": "TE",
-     "name": null,
-     "side": "R",
-     "align": "wing",
-     "on_line": false,
-     "order": 2,
-     "id_unknown": true
-    },
-    {
-     "pos": "WR",
-     "name": null,
+     "name": "J.Mundt",
      "side": "R",
      "align": "tight",
      "on_line": true,
-     "order": 3,
-     "id_unknown": true
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": "Cooper",
+     "side": "R",
+     "align": "tight",
+     "on_line": false,
+     "order": 3
     }
    ]
   },
@@ -2727,14 +2720,14 @@
    "play_text": "(Shotgun) T.Bigsby right guard to TEN 10 for 2 yards (A.Hooker; O.Oladejo). PENALTY on PHI-C.Jurgens, Offensive Holding, 10 yards, enforced at TEN 12 - No Play.",
    "personnel": "11",
    "form_family": "Empty",
-   "formation": "Empty gun 3x2: L three receivers grouped near the numbers; R Mundt standing tight at the end of the line, Bigsby off the ball wide R. As snapped: Bigsby motions back into the backfield and takes the handoff",
+   "formation": "Set: empty gun, three receivers left and two right. Left: a tight three-man group between the hash and the numbers, Cooper on the ball as the point, M.Brown off the ball inside him, Lemon off the ball just outside him and just inside the numbers. Right: Mundt in a two-point stance on the ball attached to the right tackle; Bigsby off the ball outside the numbers. As snapped: Bigsby comes in from the right toward the backfield and takes the handoff.",
    "backfield": "Gun",
    "strength": "Lt",
    "hash": "Right",
-   "motion": "T.Bigsby / off the ball wide R / into the backfield beside QB / at snap",
+   "motion": "T.Bigsby / wide R outside the numbers, off the ball / in toward the formation into the backfield beside the QB / at snap",
    "confidence": "H/M/H",
    "angles": "Both",
-   "notes": "No Play: PHI offensive holding. RB set as a wide receiver then motioned in; charted the set = Empty. Bigsby identity inferred from the play text (he carried). L trio names not readable. Cross-check: prev W2-040 run up the middle, no expectation.",
+   "notes": "Set frame 1.5 to 4.5 s: everybody still; Bigsby starts in at about 5 s, so I charted 4.5 s. Q2: sideline offense faces screen-left (top = offense R). End zone camera faces the offense (QB's front number visible), so screen left = offense R; #83 is screen-left next to #65, which matches top = R on the sideline. Hash: ball on the screen-left hash column on the end zone view and on the upper hash row on the sideline = Right. Read #8 Bigsby (top), #83 Mundt, #80, #9, #0 and #1 on the sideline zoom. Changes vs the existing chart: family, strength, backfield and hash all agree. Mundt is on the ball and attached at a normal split (inline), not standing 'tight'. The left three are now named (Brown inside, Cooper point on the ball, Lemon outside) and they sit inside the numbers as a tight bunch-shaped group, not on the numbers; Empty takes precedence so the family stays Empty. The left side is cropped on the end zone view, so the left widths come from the sideline only (formation M). Seven on the line: five OL, Mundt, Cooper.",
    "players": [
     {
      "pos": "QB",
@@ -2743,47 +2736,44 @@
      "align": "gun"
     },
     {
+     "pos": "WR",
+     "name": "M.Brown",
+     "side": "L",
+     "align": "slot",
+     "on_line": false,
+     "order": 1
+    },
+    {
+     "pos": "WR",
+     "name": "D.Cooper",
+     "side": "L",
+     "align": "slot",
+     "on_line": true,
+     "order": 2
+    },
+    {
+     "pos": "WR",
+     "name": "M.Lemon",
+     "side": "L",
+     "align": "slot",
+     "on_line": false,
+     "order": 3
+    },
+    {
+     "pos": "TE",
+     "name": "J.Mundt",
+     "side": "R",
+     "align": "inline",
+     "on_line": true,
+     "order": 1
+    },
+    {
      "pos": "RB",
      "name": "T.Bigsby",
      "side": "R",
      "align": "wide",
      "on_line": false,
      "order": 2
-    },
-    {
-     "pos": "TE",
-     "name": "J.Mundt",
-     "side": "R",
-     "align": "tight",
-     "on_line": true,
-     "order": 1
-    },
-    {
-     "pos": "WR",
-     "name": null,
-     "side": "L",
-     "align": "slot",
-     "on_line": false,
-     "order": 1,
-     "id_unknown": true
-    },
-    {
-     "pos": "WR",
-     "name": null,
-     "side": "L",
-     "align": "numbers",
-     "on_line": true,
-     "order": 2,
-     "id_unknown": true
-    },
-    {
-     "pos": "WR",
-     "name": null,
-     "side": "L",
-     "align": "numbers",
-     "on_line": false,
-     "order": 3,
-     "id_unknown": true
     }
    ]
   },
@@ -2864,15 +2854,15 @@
    "yardline": "PHI 40",
    "play_text": "S.Barkley right end pushed ob at PHI 41 for 1 yard (M.Robinson). ** Injury Update: PHI-S.Barkley has returned to the game. PENALTY on PHI-T.Steen, Offensive Holding, 10 yards, enforced at PHI 40 - No Play.",
    "personnel": "11",
-   "form_family": "2x2 'D'",
-   "formation": "Under center, Barkley deep I-back; L: Mundt inline, WR tight on the line just outside; R: M.Brown off the ball, WR on the line outside. As snapped: R inside receiver moving at the snap",
+   "form_family": "2x2 Stack 'S'",
+   "formation": "Set (0 to 3.5 s): under center, Barkley deep I-back. Left: a WR on the ball standing on the painted numbers, Mundt off the ball outside him, outside the numbers. Right: two receivers stacked just outside the lower hash, the front man on the ball and M.Brown directly behind him. Then Mundt walks in and stops off the ball a little outside the left tackle (still from about 6 s to 8 s), and Brown comes in from behind the front man at the snap.",
    "backfield": "Under Center",
    "strength": "Lt",
    "hash": "Left",
-   "motion": "WR (inferred Brown) / R slot / short move toward the ball / at snap",
+   "motion": "J.Mundt / wide L outside the numbers, off the ball / in toward the formation / stop-and-set off the ball just outside the LT; M.Brown / R stack, behind the front man / in toward the ball / at snap",
    "confidence": "H/M/H",
    "angles": "Both",
-   "notes": "No Play: PHI offensive holding. Q3 orientation: SL offense faces screen-right (top = offense L); EZ behind offense (#26, #83 backs visible). Str by Y tiebreak (Mundt only TE, inline L). L outside WR at EZ crop edge, placed from SL. Cross-check: new half, drive start, no expectation.",
+   "notes": "Q3: sideline offense faces screen-right (top = offense L); end zone camera behind the offense (Barkley's and Hurts' names on their backs), screen left = offense L, and #83 shows up screen-left after his move: both angles agree. Hash: ball on the upper hash row on the sideline = Left. The strip and a half-second montage show the first set from 0 to 3.5 s with Mundt split out widest on the left; he moves in alone from about 4 s and stops by 6 s, then Brown moves from about 8 s to the snap. Only one man moved, so by the owner's rule (a shift is everybody resetting) Mundt's move is motion and I charted the set before it, at 2.5 s. After Mundt's stop the look is still a 2x2 stack (Mundt off the ball just outside the LT, WR on the numbers). Changes vs the existing chart: family 2x2 'D' -> 2x2 Stack 'S'. The existing chart had Mundt inline and a WR tight outside him on the left; on film Mundt is never inline before the snap, and the left WR is on the numbers. On the right Brown is not a separate slot man: he is stacked directly behind the front receiver and he is the one who moves (the map's 'slot man moves slightly' is Brown coming in from about 8 s). Strength stays Lt by the Y tiebreak (Mundt is the only TE). #0 Brown read on the sideline at 8.5 s; the left WR and the front right WR numbers were not readable. The on/off-ball reads for the right stack and the widths come from the sideline only (both are cropped on the end zone view), so formation M.",
    "players": [
     {
      "pos": "QB",
@@ -2887,21 +2877,30 @@
      "align": "deep"
     },
     {
-     "pos": "TE",
-     "name": "J.Mundt",
+     "pos": "WR",
+     "name": null,
+     "id_unknown": true,
      "side": "L",
-     "align": "inline",
+     "align": "numbers",
      "on_line": true,
      "order": 1
     },
     {
+     "pos": "TE",
+     "name": "J.Mundt",
+     "side": "L",
+     "align": "wide",
+     "on_line": false,
+     "order": 2
+    },
+    {
      "pos": "WR",
      "name": null,
-     "side": "L",
-     "align": "tight",
+     "id_unknown": true,
+     "side": "R",
+     "align": "slot",
      "on_line": true,
-     "order": 2,
-     "id_unknown": true
+     "order": 1
     },
     {
      "pos": "WR",
@@ -2909,16 +2908,8 @@
      "side": "R",
      "align": "slot",
      "on_line": false,
-     "order": 1
-    },
-    {
-     "pos": "WR",
-     "name": null,
-     "side": "R",
-     "align": "numbers",
-     "on_line": true,
      "order": 2,
-     "id_unknown": true
+     "stack_behind": true
     }
    ]
   },
@@ -3140,14 +3131,14 @@
    "play_text": "(Shotgun) J.Hurts sacked at PHI 27 for -11 yards (J.Martin).",
    "personnel": "11",
    "form_family": "3x1 'T'",
-   "formation": "Gun, Shipley offset L; R: Mundt at the end of the line plus two WRs outside (one off the ball); L: one WR on the line. Snapped as set",
+   "formation": "Gun, Shipley offset L; R: Mundt off the ball one man outside the RT (wing), a WR just outside the hash off the ball, a WR inside the numbers on the line; L: one WR at the numbers on the line. Snapped as set",
    "backfield": "Gun, RB L",
    "strength": "Rt",
    "hash": "Left",
    "motion": null,
-   "confidence": "H/M/M",
-   "angles": "SL",
-   "notes": "Endzone served the Sideline clip (same stream, twice; once errored 'Manifest Unavailable' and the page reloaded; filters held, Autoplay re-set OFF). Sideline only. Names not readable; R end man inferred Mundt. Cross-check: prev W2-046 short left to Shipley -> Left expected, matches.",
+   "confidence": "H/M/H",
+   "angles": "Both",
+   "notes": "Spot check from All-22 frames (alt/S/p079-1.5, 3.0, 3.6); EZ was available. Family, strength, backfield (EZ #28 offset L) and hash (EZ ball at the L hash column) hold. Changed: Mundt is off the ball as a wing, not inline (EZ: his feet clearly behind the linemen's, one man outside #65, just before the snap); the outer R WR is inside the numbers, not on them. R WR names not readable.",
    "players": [
     {
      "pos": "QB",
@@ -3174,8 +3165,8 @@
      "pos": "TE",
      "name": "J.Mundt",
      "side": "R",
-     "align": "inline",
-     "on_line": true,
+     "align": "wing",
+     "on_line": false,
      "order": 1
     },
     {
@@ -3191,7 +3182,7 @@
      "pos": "WR",
      "name": null,
      "side": "R",
-     "align": "numbers",
+     "align": "slot",
      "on_line": true,
      "order": 3,
      "id_unknown": true
@@ -3477,14 +3468,14 @@
    "play_text": "J.Hurts pass incomplete short left to S.Barkley.",
    "personnel": "11",
    "form_family": "2x2 'D'",
-   "formation": "Under center, Barkley deep I-back; R: Jenkins inline, WR wide; L: Lemon on the numbers, WR wide off the ball. Snapped as set",
+   "formation": "Under center, Barkley deep I-back; R: Jenkins inline, Cooper at the inside edge of the numbers off the ball; L: Lemon just outside the hash off the ball, a WR inside the numbers on the line. Cooper then motions in to just outside Jenkins and is still moving just before the snap",
    "backfield": "Under Center",
    "strength": "Rt",
    "hash": "Right",
-   "motion": null,
-   "confidence": "H/H/H",
+   "motion": "Cooper / R at the numbers / in toward Jenkins / moving at snap",
+   "confidence": "H/M/H",
    "angles": "Both",
-   "notes": "#9 Lemon read on EZ L. Str by Y tiebreak (Jenkins only TE, inline R; inferred from position). Cross-check: prev W2-051 incomplete -> same hash (Right), matches.",
+   "notes": "Spot check from All-22 frames (alt/S/p089-2.5, 5.0). Family, strength (Y = #84 Jenkins inline R, EZ read), backfield (#26 Barkley deep, EZ read) and hash Right hold. Changed: added Cooper's motion (#80 read on SL 5.0 s; at 2.5 s he is alone at the R numbers, at 5.0 s he is running in outside Jenkins). Lemon (#9 LEMON nameplate on EZ) is just outside the L hash and off the ball; the outer L WR is inside the numbers and on the line (SL), so their on/off is the reverse of the earlier chart. Cooper starts a little off the ball.",
    "players": [
     {
      "pos": "QB",
@@ -3502,16 +3493,16 @@
      "pos": "WR",
      "name": "M.Lemon",
      "side": "L",
-     "align": "numbers",
-     "on_line": true,
+     "align": "slot",
+     "on_line": false,
      "order": 1
     },
     {
      "pos": "WR",
      "name": null,
      "side": "L",
-     "align": "wide",
-     "on_line": false,
+     "align": "slot",
+     "on_line": true,
      "order": 2,
      "id_unknown": true
     },
@@ -3525,12 +3516,11 @@
     },
     {
      "pos": "WR",
-     "name": null,
+     "name": "Cooper",
      "side": "R",
-     "align": "wide",
-     "on_line": true,
-     "order": 2,
-     "id_unknown": true
+     "align": "numbers",
+     "on_line": false,
+     "order": 2
     }
    ]
   },
@@ -3814,15 +3804,15 @@
    "yardline": "PHI 20",
    "play_text": "(Shotgun) S.Barkley up the middle to PHI 24 for 4 yards (A.Hill).",
    "personnel": "11",
-   "form_family": "3x1 'T'",
-   "formation": "Gun, Barkley offset R; R: Lemon as a wing off the hip of the RT, two WRs outside; L: Mundt inline alone. As snapped: Lemon motions across the backfield toward L",
+   "form_family": "Bunch 'B'",
+   "formation": "Set: gun, Barkley beside the QB on the right. Right: a three-man bunch between the hash and the numbers, the point man (#13, inferred Wicks) on the ball, a WR off the ball just outside him and just inside the numbers, and Lemon off the ball just inside him. Left: Mundt inline alone, attached to the left tackle. As snapped: Lemon comes out of the bunch, past the right tackle's hip and across in front of the QB toward the left, still moving at the snap.",
    "backfield": "Gun, RB R",
    "strength": "Rt",
    "hash": "Left",
-   "motion": "M.Lemon / wing R / across backfield toward L / at snap",
-   "confidence": "H/M/M",
+   "motion": "M.Lemon / R bunch, inside man off the ball / in past the RT hip and across in front of the QB toward L / at snap",
+   "confidence": "H/M/H",
    "angles": "Both",
-   "notes": "Q4 orientation: SL offense faces screen-left (top = offense R); EZ camera facing the offense (reversed, screen left = offense R). #1, #26 read on EZ; Lemon identity inferred (#9 seen in motion). Hash: EZ ball on the screen-right column of the pair (= offense L); SL ball between rows, not confirmed, so Medium. Cross-check: change of possession, no expectation.",
+   "notes": "Q4: sideline offense faces screen-left (top = offense R); end zone camera faces the offense (front numbers visible), screen left = offense R: #65 screen-left, #68 and #83 screen-right, Barkley screen-left. Both angles agree. Hash: ball on the lower hash row on the sideline and on the screen-right hash column on the end zone view = Left. A half-second and a third-second montage show everyone still from 2 to 4 s; Lemon leaves the bunch at about 4.3 s and never stops (he passes the RT hip at about 5.7 s without setting) and is in front of the QB at 6.3 s, so the 'wing' in the existing chart is a mid-motion spot, not a set. Changes vs the existing chart: family 3x1 'T' -> Bunch 'B' (the three right receivers are close enough to touch, point man on the ball), and Lemon's set spot is the inside man of the bunch, not a wing off the RT. Strength, backfield and hash agree. #9 read on Lemon's back on the sideline at 6.3 s; #13 read on the point man (Wicks inferred from the roster number, M); the outside bunch man's number not readable. The bunch is cropped on the end zone view, so the bunch read is sideline only (formation M).",
    "players": [
     {
      "pos": "QB",
@@ -3848,27 +3838,26 @@
      "pos": "WR",
      "name": "M.Lemon",
      "side": "R",
-     "align": "wing",
+     "align": "slot",
      "on_line": false,
      "order": 1
     },
     {
      "pos": "WR",
-     "name": null,
+     "name": "D.Wicks",
      "side": "R",
      "align": "slot",
-     "on_line": false,
-     "order": 2,
-     "id_unknown": true
+     "on_line": true,
+     "order": 2
     },
     {
      "pos": "WR",
      "name": null,
+     "id_unknown": true,
      "side": "R",
-     "align": "numbers",
-     "on_line": true,
-     "order": 3,
-     "id_unknown": true
+     "align": "slot",
+     "on_line": false,
+     "order": 3
     }
    ]
   },
@@ -4081,14 +4070,14 @@
    "play_text": "(Shotgun) J.Hurts sacked ob at PHI 29 for 0 yards (J.Franklin-Myers).",
    "personnel": "11",
    "form_family": "Empty",
-   "formation": "Empty gun, compressed: R Jenkins off the ball plus a receiver on the line, both tight to the RT; L receivers tight to the LT with one slightly wider; no back beside Hurts. Snapped as set after a pre-snap reshuffle",
+   "formation": "Empty gun 3x2. R: Jenkins a few yards outside the RT, a WR outside him on the line, a WR out at the numbers off the ball. L: Shipley just outside the L hash off the ball, a WR between the hash and the numbers on the line. Snapped as set",
    "backfield": "Gun",
-   "strength": "Lt",
-   "hash": "Left",
+   "strength": "Rt",
+   "hash": "Middle",
    "motion": null,
-   "confidence": "H/L/M",
+   "confidence": "H/M/H",
    "angles": "Both",
-   "notes": "Resumed after reconnect: helpers present, apOff() = false, filters Week 2 / PHI at TEN / J.Hurts On Field confirmed. Players moved around ~2 to 9 s; set frame ~10.8 s. Receivers all within ~3 yds of the box; L side partly cropped on EZ, side count 3 L / 2 R inferred from SL, Low. #84 read on EZ (R). Shipley's spot not readable. Hash: EZ ball at the screen-right hash column (reversed camera = offense L); SL not conclusive, Medium. Cross-check: prev W2-060 Bigsby right guard -2, ended inside, no expectation.",
+   "notes": "Spot check from All-22 frames (alt/S/p121-0.5, 2.0, 3.5). In this clip the offense is already set at 0.5 s and holds still until the snap just after 3.5 s; the reshuffle in the NFL Pro notes is before this clip starts. Q4: SL offense faces screen-left (top = offense R); EZ camera faces the offense (screen-left = offense R). Changed: strength Lt to Rt (three receivers R, two L on SL; EZ has #84 Jenkins on the R and #28 Shipley on the L); hash Left to Middle (ball between the hash columns on EZ and between the hash rows on SL); the receivers are not compressed. On/off for the R three is Low (SL depth only).",
    "players": [
     {
      "pos": "QB",
@@ -4100,7 +4089,7 @@
      "pos": "TE",
      "name": "E.Jenkins",
      "side": "R",
-     "align": "tight",
+     "align": "slot",
      "on_line": false,
      "order": 1
     },
@@ -4108,36 +4097,35 @@
      "pos": "WR",
      "name": null,
      "side": "R",
-     "align": "tight",
+     "align": "slot",
      "on_line": true,
      "order": 2,
+     "id_unknown": true
+    },
+    {
+     "pos": "WR",
+     "name": null,
+     "side": "R",
+     "align": "numbers",
+     "on_line": false,
+     "order": 3,
      "id_unknown": true
     },
     {
      "pos": "RB",
      "name": "W.Shipley",
      "side": "L",
-     "align": "tight",
+     "align": "slot",
      "on_line": false,
-     "order": 1,
-     "id_unknown": true
-    },
-    {
-     "pos": "WR",
-     "name": null,
-     "side": "L",
-     "align": "tight",
-     "on_line": true,
-     "order": 2,
-     "id_unknown": true
+     "order": 1
     },
     {
      "pos": "WR",
      "name": null,
      "side": "L",
      "align": "slot",
-     "on_line": false,
-     "order": 3,
+     "on_line": true,
+     "order": 2,
      "id_unknown": true
     }
    ]
@@ -4425,14 +4413,14 @@
    "play_text": "(Shotgun) M.Lemon left end to TEN 44 for -5 yards (M.Harris).",
    "personnel": "11",
    "form_family": "3x1 'T'",
-   "formation": "Gun, Bigsby offset L; L: three receivers (Lemon off the ball inside, two WRs outside, one off and one on); R: Mundt inline alone. As snapped: Lemon in jet motion from the L slot across toward R and back on the end-around",
+   "formation": "Set: gun, Bigsby beside the QB on the left. Left: three receivers in a compressed group between the hash and the numbers: Lemon off the ball just outside the lower hash, Cooper on the ball outside him, D.Smith off the ball just outside and behind Cooper, still inside the numbers. Right: Mundt inline alone, attached to the right tackle. As snapped: Lemon comes in from the left slot behind the line and across past the QB toward the right.",
    "backfield": "Gun, RB L",
    "strength": "Lt",
    "hash": "Right",
-   "motion": "M.Lemon / slot L / across the formation toward R / at snap",
+   "motion": "M.Lemon / L slot, inside man off the ball / in behind the line and across past the QB toward R / at snap",
    "confidence": "H/M/H",
    "angles": "Both",
-   "notes": "#9 read on SL, #1 and #8 on EZ (reversed camera). R end man inferred Mundt (only TE). L outside WR names not readable. Cross-check: prev W2-065 Bigsby right guard (inside), no firm expectation.",
+   "notes": "Q4: sideline offense faces screen-left (top = offense R); end zone camera faces the offense, screen left = offense R: #83 attached outside #65 screen-left, #8 Bigsby screen-right beside #1. Both angles agree. Hash: ball on the upper hash row on the sideline and on the screen-left hash column on the end zone view = Right. Charted the 4.0 s frame, before Lemon starts; at 6.5 s he is already behind the line near the QB. Read #9 Lemon (on his back at 6.5 s), #6 Smith and '8x' on the middle left man on the sideline zoom; with Mundt the only TE in 11 personnel the 8x is Cooper (#80), inferred. Changes vs the existing chart: family, strength, backfield and hash agree. The two outside left receivers are now named (Cooper on the ball, Smith off) and they are inside the numbers, not on them. The three left men are compressed but not close enough to touch, so I kept 3x1 'T', not Bunch; Smith is just outside and behind Cooper, not directly behind him, so not a stack. Left side is cropped on the end zone view, so widths are sideline only (formation M).",
    "players": [
     {
      "pos": "QB",
@@ -4456,21 +4444,19 @@
     },
     {
      "pos": "WR",
-     "name": null,
+     "name": "D.Cooper",
      "side": "L",
-     "align": "numbers",
+     "align": "slot",
      "on_line": true,
-     "order": 2,
-     "id_unknown": true
+     "order": 2
     },
     {
      "pos": "WR",
-     "name": null,
+     "name": "D.Smith",
      "side": "L",
-     "align": "numbers",
+     "align": "slot",
      "on_line": false,
-     "order": 3,
-     "id_unknown": true
+     "order": 3
     },
     {
      "pos": "TE",
@@ -4631,15 +4617,15 @@
    "yardline": "PHI 35",
    "play_text": "(Shotgun) J.Hurts pass short right to D.Smith ran ob at PHI 39 for 4 yards.",
    "personnel": "11",
-   "form_family": "3x1 'T'",
-   "formation": "Gun, Shipley offset R; L: three WRs (Smith in the slot off the ball, two outside); R: Mundt detached ~4 yds outside the RT alone. As snapped: Smith motions from the L slot across behind the QB toward R",
+   "form_family": "Bunch 'B'",
+   "formation": "Set: gun, Shipley beside the QB on the right. Left: a three-man bunch just outside the lower hash, well inside the numbers: the point man (#9, read as Lemon) on the ball, D.Smith off the ball just inside him, a WR off the ball just outside him. Right: Mundt alone, standing on the ball, detached a few splits outside the right tackle. As snapped: Smith leaves the bunch and comes across behind the line and the QB toward the right, still moving at the snap.",
    "backfield": "Gun, RB R",
    "strength": "Lt",
    "hash": "Right",
-   "motion": "D.Smith / slot L / across behind the QB toward R / at snap",
+   "motion": "D.Smith / L bunch, inside man off the ball / across behind the line and the QB toward R / at snap",
    "confidence": "H/M/H",
    "angles": "Both",
-   "notes": "#6 read on SL, #83 detached and #1 on EZ (reversed camera). Smith's motion explains the catch to the right. L outside WR names not readable. Cross-check: prev W2-068 incomplete -> same hash (Right), matches.",
+   "notes": "Q4: sideline offense faces screen-left (top = offense R); end zone camera faces the offense, screen left = offense R: #83 screen-left outside #65, #28 Shipley screen-left of #1. Both angles agree. Hash: ball on the upper hash row on the sideline and on the screen-left hash column on the end zone view = Right. A half-second montage shows everyone still from about 2.5 to 4 s; Smith starts at about 4.5 s and is still moving at the snap, so I charted 3.5 s. Changes vs the existing chart: family 3x1 'T' -> Bunch 'B'. The three left men are a tight triangle (point on the ball, one off inside, one off outside) just outside the hash, not spread out to the numbers and outside them as the existing chart had. Mundt: the end zone view puts his feet level with the ball, ahead of the linemen's feet, and the sideline agrees, so I have him on the ball (existing chart had him off); he is detached a few splits outside the RT, at the outer edge of 'tight' (M). Strength, backfield and hash agree. #6 Smith read when he starts moving; the point man shows a 9 on the shoulder (Lemon, M); the outside bunch man may be #13 but I could not confirm it, so null. The bunch is cropped on the end zone view, so the bunch read is sideline only (formation M).",
    "players": [
     {
      "pos": "QB",
@@ -4658,7 +4644,7 @@
      "name": "J.Mundt",
      "side": "R",
      "align": "tight",
-     "on_line": false,
+     "on_line": true,
      "order": 1
     },
     {
@@ -4671,21 +4657,20 @@
     },
     {
      "pos": "WR",
-     "name": null,
+     "name": "M.Lemon",
      "side": "L",
-     "align": "numbers",
+     "align": "slot",
      "on_line": true,
-     "order": 2,
-     "id_unknown": true
+     "order": 2
     },
     {
      "pos": "WR",
      "name": null,
+     "id_unknown": true,
      "side": "L",
-     "align": "wide",
+     "align": "slot",
      "on_line": false,
-     "order": 3,
-     "id_unknown": true
+     "order": 3
     }
    ]
   },
@@ -4974,14 +4959,14 @@
    "play_text": "(Shotgun) J.Hurts scrambles up the middle to TEN 22 for 4 yards (M.Harris).",
    "personnel": "11",
    "form_family": "3x1 'T'",
-   "formation": "Gun, Shipley offset R; L: three receivers stretched outside the LT (slot off the ball, two farther out); R: one WR wide on the line. Snapped as set",
+   "formation": "Gun, Shipley offset R; L: three receivers, one on the L hash off the ball, one between the hash and the numbers on the line, one on the numbers off the ball; R: one WR outside the numbers on the line. Snapped as set",
    "backfield": "Gun, RB R",
    "strength": "Lt",
    "hash": "Right",
    "motion": null,
-   "confidence": "H/M/H",
+   "confidence": "H/H/H",
    "angles": "Both",
-   "notes": "EZ frame is just after the snap (#28 read offset R, reversed camera); set read from SL. Jenkins not attached, inferred in the L trio; names not readable. Cross-check: prev W2-073 incomplete -> same hash (Right), matches.",
+   "notes": "Spot check from All-22 frames (alt/S/p147-1.0, 2.8); EZ has a clean pre-snap frame here. Family, strength, backfield (#28 offset R on EZ) and hash Right hold. Changed: L trio landmarks (hash / inside the numbers / on the numbers, not slot / numbers / wide) and on/off (the middle man is the one on the line; the outer man is deepest). Inner and outer L men both wear 8x numbers (Jenkins #84 and Cooper #80 in some order), the middle man's number reads 9 (likely Lemon), so names stay unknown.",
    "players": [
     {
      "pos": "QB",
@@ -4997,7 +4982,7 @@
     },
     {
      "pos": "TE",
-     "name": "E.Jenkins",
+     "name": null,
      "side": "L",
      "align": "slot",
      "on_line": false,
@@ -5008,8 +4993,8 @@
      "pos": "WR",
      "name": null,
      "side": "L",
-     "align": "numbers",
-     "on_line": false,
+     "align": "slot",
+     "on_line": true,
      "order": 2,
      "id_unknown": true
     },
@@ -5017,8 +5002,8 @@
      "pos": "WR",
      "name": null,
      "side": "L",
-     "align": "wide",
-     "on_line": true,
+     "align": "numbers",
+     "on_line": false,
      "order": 3,
      "id_unknown": true
     },

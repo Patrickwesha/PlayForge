@@ -113,7 +113,7 @@ describe('formations JSON parse', () => {
     expect(j.snaps.length).toBe(76);
     expect(j.skipped).toEqual([]);
     const s2 = j.snaps.find((s) => s.id === 'W2-002')!;
-    expect(s2).toMatchObject({ week: 2, backfield: 'Gun', backfieldDetail: 'Gun, RB R', strength: 'Rt', hash: 'Middle', personnel: '12', formFamily: "3x1 'T'" });
+    expect(s2).toMatchObject({ week: 2, backfield: 'Gun', backfieldDetail: 'Gun, RB R', strength: 'Lt', hash: 'Middle', personnel: '12', formFamily: "2x2 'D'" });
     expect(s2.players.length).toBe(6);
     const s25 = j.snaps.find((s) => s.id === 'W2-025')!;
     expect(s25.strength).toBeUndefined();
