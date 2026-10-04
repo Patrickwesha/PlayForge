@@ -16,7 +16,7 @@ import sys
 ALIGN_QB = {"under_center", "pistol", "gun"}
 ALIGN_BACK = {"deep", "offset", "gun_offset", "pistol_back", "fb", "wing_back"}
 ALIGN_RCV = {"inline", "wing", "tight", "slot", "numbers", "wide"}
-KEEP = ["id", "personnel", "form_family", "formation", "backfield", "strength", "hash", "motion", "confidence", "angles", "notes", "players"]
+KEEP = ["id", "quarter", "clock", "down", "distance", "yardline", "play_text", "personnel", "form_family", "formation", "backfield", "strength", "hash", "motion", "confidence", "angles", "notes", "players"]
 
 
 def check(s):
