@@ -51,6 +51,18 @@ export function FormationsClient() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [formations, q, family, reviewOnly, sort, snapsByFormation, book, memberOf]);
   const hasUsage = (formations ?? []).some((f) => usageOf(f) > 0);
+  // formations that came from the Green Bay book reader (gb19-): guesses from cut-off scans, not the pack (seed-gb19-) or charted snaps
+  const imported = useMemo(() => (formations ?? []).filter((f) => f.id.startsWith('gb19-')), [formations]);
+  const [removing, setRemoving] = useState(false);
+  const removeImported = async () => {
+    if (!confirm(`Remove ${imported.length} formations imported from the Green Bay book? The formation pack and the charted formations stay, and plays keep their own copy of the players. This syncs to your other devices and cannot be undone.`)) return;
+    setRemoving(true);
+    try {
+      for (const f of imported) await repo.deleteFormation(f.id);
+    } finally {
+      setRemoving(false);
+    }
+  };
 
   const create = async () => {
     const f = newFormation({
@@ -109,6 +121,11 @@ export function FormationsClient() {
           </label>
         )}
         <div className="ml-auto flex gap-2">
+          {imported.length > 0 && (
+            <button className={btn} onClick={() => void removeImported()} disabled={removing} title="Delete every formation that came from the Green Bay book reader. The formation pack, the charted formations and formations you created stay.">
+              {removing ? 'Removing…' : `Remove ${imported.length} imported formations`}
+            </button>
+          )}
           <Link href={`/print?formations=${list.map((f) => f.id).join(',')}&layout=9up&title=${encodeURIComponent(side.toUpperCase() + ' FORMATIONS')}`} className={btn}>
             Print sheet
           </Link>
