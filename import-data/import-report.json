@@ -3,7 +3,7 @@
     "snaps": 183,
     "exact": 183,
     "template": 0,
-    "formations": 118,
+    "formations": 117,
     "weeks": {
       "W1": 54,
       "W2": 76,
@@ -41,6 +41,39 @@
         "Trips",
         "3x1 'T'",
         "W1"
+      ]
+    },
+    {
+      "id": "snapform-0ab57d91a7650ea7",
+      "name": "Gun Dyno Rt B",
+      "count": 5,
+      "exact": 5,
+      "template": 0,
+      "weeks": [
+        1,
+        2,
+        3
+      ],
+      "hashes": {
+        "Left": 5
+      },
+      "source": "exact",
+      "snapIds": [
+        "W1-048",
+        "W2-010",
+        "W2-031",
+        "W2-046",
+        "W3-025"
+      ],
+      "tags": [
+        "eagles-2026",
+        "11",
+        "Empty",
+        "W2",
+        "Dyno",
+        "Empty",
+        "W1",
+        "W3"
       ]
     },
     {
@@ -135,36 +168,6 @@
         "Trips",
         "3x1 'T'",
         "W2"
-      ]
-    },
-    {
-      "id": "snapform-0ab57d91a7650ea7",
-      "name": "Gun Dyno Rt B",
-      "count": 4,
-      "exact": 4,
-      "template": 0,
-      "weeks": [
-        1,
-        2
-      ],
-      "hashes": {
-        "Left": 4
-      },
-      "source": "exact",
-      "snapIds": [
-        "W1-048",
-        "W2-010",
-        "W2-031",
-        "W2-046"
-      ],
-      "tags": [
-        "eagles-2026",
-        "11",
-        "Empty",
-        "W2",
-        "Dyno",
-        "Empty",
-        "W1"
       ]
     },
     {
@@ -2433,31 +2436,6 @@
         "11",
         "Empty",
         "W2",
-        "Trips",
-        "Empty"
-      ]
-    },
-    {
-      "id": "snapform-5a4bf1fa03daf7a0",
-      "name": "Gun Trips Rt Open B",
-      "count": 1,
-      "exact": 1,
-      "template": 0,
-      "weeks": [
-        3
-      ],
-      "hashes": {
-        "Left": 1
-      },
-      "source": "exact",
-      "snapIds": [
-        "W3-025"
-      ],
-      "tags": [
-        "eagles-2026",
-        "11",
-        "Empty",
-        "W3",
         "Trips",
         "Empty"
       ]

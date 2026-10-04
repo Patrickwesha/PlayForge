@@ -1617,14 +1617,14 @@
    "play_text": "(Shotgun) J.Hurts pass short right to D.Smith to CHI 49 for 5 yards (J.Johnson).",
    "personnel": "11",
    "form_family": "Empty",
-   "formation": "Set (7 to 8.5 s): Empty gun, Hurts #1 alone. Four to the left between the left hash and the numbers: an inside man off the ball (number ends in 8), a man on the ball (number ends in 6), Wicks #13 and a long-haired receiver outermost. One receiver to the right, outside the numbers. Then Wicks walks across behind the line to the right slot and sets; as snapped it is Empty 3x2: three left (the man on the ball, the long-haired man outside, the 8 inside and off), Wicks in the right slot, one wide right.",
+   "formation": "Set after Wicks stops (about 13.5 s to the snap at about 15.6 s): Empty gun, Hurts #1 alone. Three to the left between the left hash and the numbers: the inside man off the ball (number ends in 8), a man on the ball (number ends in 6), and a long-haired receiver outermost, off the ball near the numbers. Two to the right: Wicks #13 in the right slot off the ball, and one receiver wide right outside the numbers on the ball. Empty 3x2, three to the left.",
    "backfield": "Gun",
    "strength": "Lt",
    "hash": "Right",
-   "motion": "Wicks / outside of the 4-man group left / across the formation to the right slot / stop-and-set about 2 s before the snap",
+   "motion": "D.Wicks / outside of the left group / across behind the line to the right slot / stop-and-set",
    "confidence": "L/M/H",
    "angles": "Both",
-   "notes": "Q2, offense faces screen-right; end zone camera behind the offense (Hurts nameplate), LT #68 screen left. Clip has a long pre-snap. Frames at 7 and 8.5 s show the same 4x1 picture, still; at 10 s a man is crossing and at 12.5 s Wicks #13 is walking into the right slot; 14 and 15 s are still and the snap is about 16 s. Only Wicks moved (the left group adjusted a little), so I chart the set before his move and log the move as stop-and-set. If you count his move as a shift, the snapped look is Empty 3x2 to the left. Personnel is a guess: no back next to Hurts, so the inside left man (number ends in 8) is most likely Shipley #28 split out, and the man on the ball (number ends in 6) could be Ertz #86 or Smith #6. The play text has the ball to D.Smith on the right, which fits Smith being the wide right man and Ertz being on the left. I wrote them as unread. Ball on the right hash on both angles.",
+   "notes": "Re-charted after the stop-and-set. Before, this file charted the 4x1 set at 8.5 s (Empty, Lt, Right hash) and logged Wicks crossing as motion. On a 0.5 s sideline strip I see Wicks #13 leave the outside of the left group at about 10 s, cross behind the line and Hurts (10.5 to 11.5 s), drift into the right slot by 12 to 13 s and stand still from about 13.5 s. On a 0.25 s strip from 13 to 16.75 s nobody moves until the line comes off at about 15.6 s, so he and everyone else are still for about 2 s before the snap. Under the shift rule that is a new set, so I chart the picture after his stop (sideline frame at 14 s). Family and strength stay Empty / Lt and hash stays Right; what changed is the picture: 4x1 became 3x2, Wicks is now the right slot (order 1 right) and the wide right man is order 2. Q2, offense faces screen-right, so the top of the sideline frame is the offense left. End zone camera behind the offense: at 14 s it shows Wicks #13 in the right slot, off the ball, about level with Hurts' heels; the left group is out of that frame, so the left side comes from the sideline only (formation M). The man on the ball left is the end man of a 7-man line with the wide right man; the inside and outside left men stand off the ball. Personnel is still a guess from bodies: no back in the backfield, the inside left man (ends in 8) is most likely Shipley #28 split out, the on-ball left man (ends in 6) could be Ertz #86, and the play text has the ball to D.Smith short right, which fits Smith as the wide right man. I could not read those numbers clean, so they stay unread. Ball near the right hash on both angles.",
    "players": [
     {
      "pos": "QB",
@@ -1652,7 +1652,8 @@
     },
     {
      "pos": "WR",
-     "name": "D.Wicks",
+     "name": null,
+     "id_unknown": true,
      "side": "L",
      "align": "slot",
      "on_line": false,
@@ -1660,12 +1661,11 @@
     },
     {
      "pos": "WR",
-     "name": null,
-     "id_unknown": true,
-     "side": "L",
+     "name": "D.Wicks",
+     "side": "R",
      "align": "slot",
      "on_line": false,
-     "order": 4
+     "order": 1
     },
     {
      "pos": "WR",
@@ -1674,7 +1674,7 @@
      "side": "R",
      "align": "wide",
      "on_line": true,
-     "order": 1
+     "order": 2
     }
    ]
   },
