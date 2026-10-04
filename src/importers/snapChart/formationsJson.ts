@@ -160,3 +160,22 @@ export function mergeFormationsJson(texts: string[]): unknown {
   const first = docs[0];
   return { schema: first?.schema ?? FORMATIONS_JSON_SCHEMA, game: { season: first?.game?.season, team: first?.game?.team }, snaps: docs.flatMap((d) => d.snaps ?? []) };
 }
+
+export type DrawnAlignments = { snaps: Record<string, { from: string; form_family?: string; strength?: string; players: unknown[] }> };
+
+/**
+ * Alignments taken from plays drawn by hand in the editor (import-data/drawn-alignments.json): for those
+ * snaps they replace the charted players, spot for spot. `doc` is the output of mergeFormationsJson.
+ */
+export function applyDrawnAlignments(doc: unknown, drawn: DrawnAlignments | undefined): unknown {
+  if (!drawn) return doc;
+  const d = doc as { snaps: { id: string; players: unknown[]; form_family?: string; strength?: string; notes?: string | null }[] };
+  return {
+    ...d,
+    snaps: d.snaps.map((s) => {
+      const hit = drawn.snaps[s.id];
+      if (!hit) return s;
+      return { ...s, players: hit.players, form_family: hit.form_family ?? s.form_family, strength: hit.strength ?? s.strength, notes: `Alignment from my drawing (${hit.from}).` };
+    }),
+  };
+}

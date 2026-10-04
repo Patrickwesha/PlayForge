@@ -4,7 +4,7 @@ import { strToU8, zipSync } from 'fflate';
 import { describe, expect, it } from 'vitest';
 import { formationSchema, snapSchema } from '@/model/schema';
 import type { Formation } from '@/model/types';
-import { buildImportPlan, canonicalize, fallbackTemplate, formationIdFor, formationName, mergeFormationsJson, numbersForHash, parseChartRows, parseChartXlsx, parseFormationsJson, parseNotes, placePlayers, readSheet, signatureOf, templateKey, templatesFromExact, type AlignedPlayer } from './index';
+import { buildImportPlan, canonicalize, fallbackTemplate, formationIdFor, formationName, applyDrawnAlignments, mergeFormationsJson, numbersForHash, parseChartRows, parseChartXlsx, parseFormationsJson, parseNotes, placePlayers, readSheet, signatureOf, templateKey, templatesFromExact, type AlignedPlayer } from './index';
 import { HASH_FROM_MIDDLE, NUMBERS_FROM_MIDDLE } from './alignment';
 import { BACK_SPOT, QB_DEPTH, RECEIVER, TAGS } from './config';
 
@@ -389,7 +389,7 @@ describe('the whole plan on the real files', () => {
     const seed = JSON.parse(readFileSync(path.resolve(__dirname, '../../seeds/data/eagles2026.json'), 'utf8')) as { formations: Formation[]; snaps: { id: string; formationId: string }[] };
     // the seed is written with the Eagles system names; ids and counts do not depend on the naming
     const all = readdirSync(DATA).filter((f) => /^W[0-9]+_.*_playforge[.]json$/.test(f)).sort().map((f) => readFileSync(path.join(DATA, f), 'utf8'));
-    const named = buildImportPlan({ chart: parseChartXlsx(xlsx()), json: parseFormationsJson(mergeFormationsJson(all)) }, { ...OPTS, naming: 'system', filmWinsWeeks: [1] });
+    const named = buildImportPlan({ chart: parseChartXlsx(xlsx()), json: parseFormationsJson(applyDrawnAlignments(mergeFormationsJson(all), JSON.parse(readFileSync(path.join(DATA, 'drawn-alignments.json'), 'utf8')))) }, { ...OPTS, naming: 'system', filmWinsWeeks: [1] });
     expect(seed.formations.map((f) => [f.id, f.name, f.chartName, f.usage?.count])).toEqual(named.formations.map((p) => [p.formation.id, p.formation.name, p.formation.chartName, p.count]));
     expect(seed.snaps.map((s) => [s.id, s.formationId])).toEqual(named.snaps.map((s) => [s.id, s.formationId]));
   });

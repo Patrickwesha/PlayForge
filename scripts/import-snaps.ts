@@ -16,7 +16,7 @@ import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, writeFi
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SEED_TIME } from '../src/model/seedRules';
-import { buildImportPlan, mergeFormationsJson, parseChartXlsx, parseFormationsJson } from '../src/importers/snapChart';
+import { applyDrawnAlignments, buildImportPlan, mergeFormationsJson, parseChartXlsx, parseFormationsJson, type DrawnAlignments } from '../src/importers/snapChart';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = path.join(ROOT, 'import-data');
@@ -46,19 +46,9 @@ for (const opt of ['--xlsx', '--json'] as const) {
 
 const chart = parseChartXlsx(new Uint8Array(readFileSync(XLSX)));
 const files = jsonFiles();
-const merged = mergeFormationsJson(files.map((f) => readFileSync(path.join(DATA, f), 'utf8'))) as { snaps: { id: string; players: unknown[]; form_family?: string; strength?: string; notes?: string | null }[] };
-// Alignments taken from plays drawn by hand in the editor (import-data/drawn-alignments.json): they replace
-// the charted players for that snap, spot for spot.
 const DRAWN = path.join(DATA, 'drawn-alignments.json');
-const drawn = existsSync(DRAWN) ? (JSON.parse(readFileSync(DRAWN, 'utf8')).snaps as Record<string, { from: string; form_family?: string; strength?: string; players: unknown[] }>) : {};
-for (const s of merged.snaps) {
-  const d = drawn[s.id];
-  if (!d) continue;
-  s.players = d.players;
-  if (d.form_family) s.form_family = d.form_family;
-  if (d.strength) s.strength = d.strength;
-  s.notes = `Alignment from my drawing (${d.from}).`;
-}
+const drawn = existsSync(DRAWN) ? (JSON.parse(readFileSync(DRAWN, 'utf8')) as DrawnAlignments) : undefined;
+const merged = applyDrawnAlignments(mergeFormationsJson(files.map((f) => readFileSync(path.join(DATA, f), 'utf8'))), drawn);
 const json = parseFormationsJson(merged);
 const team = json.game.team ?? 'PHI';
 const season = json.game.season ?? 2026;
