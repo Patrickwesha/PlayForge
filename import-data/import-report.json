@@ -166,6 +166,36 @@
       ]
     },
     {
+      "id": "snapform-acb8396469719d7a",
+      "name": "West Rt",
+      "count": 4,
+      "exact": 4,
+      "template": 0,
+      "weeks": [
+        1,
+        2
+      ],
+      "hashes": {
+        "Left": 4
+      },
+      "source": "exact",
+      "snapIds": [
+        "W1-023",
+        "W1-033",
+        "W2-017",
+        "W2-034"
+      ],
+      "tags": [
+        "eagles-2026",
+        "12",
+        "3x1 'T'",
+        "W2",
+        "West",
+        "3x1 'T'",
+        "W1"
+      ]
+    },
+    {
       "id": "snapform-84db209daa882ef7",
       "name": "Gun Dice Rt Off #2",
       "count": 3,
@@ -303,64 +333,6 @@
         "W2",
         "Deuce",
         "2x2 'D'",
-        "W1"
-      ]
-    },
-    {
-      "id": "snapform-7d4f58c6f1a6d810",
-      "name": "West Rt Close #2",
-      "count": 3,
-      "exact": 3,
-      "template": 0,
-      "weeks": [
-        1,
-        2
-      ],
-      "hashes": {
-        "Left": 3
-      },
-      "source": "exact",
-      "snapIds": [
-        "W1-033",
-        "W1-039",
-        "W2-027"
-      ],
-      "tags": [
-        "eagles-2026",
-        "12",
-        "3x1 'T'",
-        "W1",
-        "West",
-        "2 Back",
-        "W2"
-      ]
-    },
-    {
-      "id": "snapform-acb8396469719d7a",
-      "name": "West Rt",
-      "count": 3,
-      "exact": 3,
-      "template": 0,
-      "weeks": [
-        1,
-        2
-      ],
-      "hashes": {
-        "Left": 3
-      },
-      "source": "exact",
-      "snapIds": [
-        "W1-023",
-        "W2-017",
-        "W2-034"
-      ],
-      "tags": [
-        "eagles-2026",
-        "12",
-        "3x1 'T'",
-        "W2",
-        "West",
-        "3x1 'T'",
         "W1"
       ]
     },
@@ -762,6 +734,34 @@
         "W1",
         "Dice",
         "2x2 'D'"
+      ]
+    },
+    {
+      "id": "snapform-7d4f58c6f1a6d810",
+      "name": "West Rt Close #2",
+      "count": 2,
+      "exact": 2,
+      "template": 0,
+      "weeks": [
+        1,
+        2
+      ],
+      "hashes": {
+        "Left": 2
+      },
+      "source": "exact",
+      "snapIds": [
+        "W1-039",
+        "W2-027"
+      ],
+      "tags": [
+        "eagles-2026",
+        "12",
+        "3x1 'T'",
+        "W1",
+        "West",
+        "2 Back",
+        "W2"
       ]
     },
     {
@@ -1215,7 +1215,7 @@
       ]
     },
     {
-      "id": "snapform-48fa12be7d630068",
+      "id": "snapform-935b8fb7b5c9ed45",
       "name": "Gun Stack Rt Off",
       "count": 1,
       "exact": 1,
