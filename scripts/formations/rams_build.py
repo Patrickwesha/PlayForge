@@ -11,6 +11,9 @@ The diagrams are not to scale, so positions are read as PICTURES and put on Play
   - a # mark is the painted numbers: a man drawn on it is on Mid #s, inside it on Top #s (well inside: #s -2),
     outside it on Bottom #s; a pack extended to the numbers covers Top / Mid / Bottom
   - with no # mark the outermost detached man takes the normal split, #s +2
+  - Store / Stan (a stack): the pair is drawn like an attached pair but stands at the base formation's split
+    (Hash +3 for Trio, else Hash +5), the man on the ball leading and the off man a yard inside; the wide man on
+    that side takes the edge split (Store = Top #s) or the normal split (Stan = #s +2) from the book's words
   - other detached men are slots, spread evenly between the end man and the wide man
   - a letter drawn level with the line is ON the ball, lower is OFF (1 yard)
   - backs: I (0, -5 and -7.5), offset behind a tackle (2, -5), halfback deep at 7.5
@@ -51,6 +54,7 @@ NUM_IN_2, NUM_OUT_2 = 12.67, 18.67  # "#s -2" and "#s +2" (the normal outside sp
 HASH = 3.08  # NFL hash from a ball in the middle
 HASH_5, HASH_3 = round(HASH + 5, 2), round(HASH + 3, 2)
 ATTACHED = 3.35  # first man this close to the center is attached to the tackle
+BASE_SPLIT = {}  # (Rams base word, side) -> the split mark its first detached man is drawn with, filled while building
 
 
 def slug(s):
@@ -92,8 +96,11 @@ def parse_title(title, page):
     return {"base": base, "ramsBase": rams_base, "mods": mods, "personnel": personnel, "family": fam, "ramsTitle": re.sub(r"\s+", " ", title).strip()}
 
 
-def place_side(rcv, marks, notes):
-    """rcv: one side's receivers [{spot, a, on}] sorted by a (distance from center). Returns {spot: (x, y)}."""
+def place_side(rcv, marks, notes, base_split=None, wide=None):
+    """rcv: one side's receivers [{spot, a, on}] sorted by a (distance from center). Returns {spot: (x, y)}.
+    base_split: the split mark ("-3-" / "-5-") the base formation draws for its first detached man, used for a
+    touching pair drawn with no mark. wide: the landmark x the book's words give the outside man on the side
+    of a stack (Store / Stan); the first pair on that side is the stack, never an attached pair."""
     if not rcv:
         return {}
     clusters = [[rcv[0]]]
@@ -109,11 +116,13 @@ def place_side(rcv, marks, notes):
     splits = sorted((m for m in marks if m["mark"] in ("-5-", "-3-")), key=lambda m: m["a"])
     hashes = [m["a"] for m in marks if m["mark"] == "#"]
     detached = []
+    stacked = False
     prev_x, prev_a, prev_te = 2.0, 2.0, False
     for ci, c in enumerate(clusters):
         mark = next((m for m in splits if prev_a - 0.5 <= m["a"] <= c[-1]["a"] + 0.2 and not m.get("used")), None)
         before = any(2.3 < m["a"] < c[0]["a"] - 0.1 for m in splits)  # a split mark between the tackle and him
-        if ci == 0 and c[0]["a"] <= ATTACHED and not before:
+        stack = wide is not None and ci == 0 and len(c) >= 2  # Store / Stan: the pair at the tackle is the stack, not attached
+        if ci == 0 and c[0]["a"] <= ATTACHED and not before and not stack:
             for k, p in enumerate(c):
                 out[p["spot"]] = (3.0 + k, 0 if p["on"] else -1)
             # a split is measured from the last man ON the line: an off-the-ball wing does not move the end of the line
@@ -129,12 +138,13 @@ def place_side(rcv, marks, notes):
             prev_x, prev_a, prev_te = ax + len(c) - 1 - anchor, c[-1]["a"], False
             continue
         if len(c) >= 2 and c[0]["a"] < 4.9:
-            # a touching pair or trio just off the tackle with no mark drawn: the family's 5 yard split
+            # a touching pair or trio just off the tackle with no mark drawn: the base formation's split, else 5
             anchor = next((i for i, p in enumerate(c) if p["on"]), 0)
-            ax = HASH_5
+            ax = HASH_3 if base_split == "-3-" else HASH_5
             for k, p in enumerate(c):
                 out[p["spot"]] = (ax + (k - anchor), 0 if p["on"] else -1)
             prev_x, prev_a, prev_te = ax + len(c) - 1 - anchor, c[-1]["a"], False
+            stacked = stacked or stack
             continue
         detached.append(c)
         prev_a = c[-1]["a"]
@@ -150,7 +160,9 @@ def place_side(rcv, marks, notes):
         outer = c[-1]
         x = NUM_OUT_2
         anchor = len(c) - 1
-        if hashes:
+        if stacked:
+            x = wide  # the book's words place the wide man beside a stack
+        elif hashes:
             h = min(hashes, key=lambda v: abs(v - outer["a"]))
             d = h - outer["a"]
             # on the numbers / just inside them (Edge) / well inside (King)
@@ -189,10 +201,15 @@ def build(cell):
             side = 0 if abs(p["dx"]) < 1 else (2 if p["dx"] > 0 else -2)
             deep = p["spot"] == "H" and side == 0
             players[p["spot"]] = (side, -7.5 if deep else -5)
+    stack = next((m for m in ("Store", "Stan") if m in info["mods"]), None)
+    wide = {"Store": NUM_TOP, "Stan": NUM_OUT_2, None: None}[stack]
     for sign in (-1, 1):
         rcv = sorted(({"spot": p["spot"], "a": abs(p["dx"]), "on": p["dy"] < 0.3} for p in seen.values() if not p["back"] and p["dx"] * sign > 0), key=lambda r: r["a"])
         marks = [{"mark": m["mark"], "a": abs(m["dx"])} for m in cell["marks"] if m["dx"] * sign > 0]
-        for spot, (x, y) in place_side(rcv, marks, notes).items():
+        split = next((m["mark"] for m in sorted(marks, key=lambda m: m["a"]) if m["mark"] in ("-3-", "-5-")), None)
+        if not info["mods"]:
+            BASE_SPLIT[(info["ramsBase"], sign)] = split  # the untagged base is built first (page order)
+        for spot, (x, y) in place_side(rcv, marks, notes, BASE_SPLIT.get((info["ramsBase"], sign)), wide).items():
             players[spot] = (sign * x, y)
     if "H" not in players and info["family"] != "Empty":
         players["H"] = (0, -7.5)
@@ -204,9 +221,10 @@ def build(cell):
         players["Y"] = (zx + 1, -1)  # Click: the Y takes the split off the ball just outside the Z
     on_line = sum(1 for s, (x, y) in players.items() if y == 0 and s not in ("QB",))
     confidence = "derived"
-    if any(m in ("Store", "Stan") for m in info["mods"]):
-        confidence = "needs-review"
-        notes.append("Stack variations are drawn loosely in the book: check the stack against the numbers.")
+    if stack == "Store":
+        notes.append("Store: the pair stacks at the base split, the man on the ball leading; the wide man takes the edge split (Top #s), as the book's words say.")
+    if stack == "Stan":
+        notes.append("Stan: the pair stacks at the base split, the man on the ball leading; the wide man takes the normal split (#s +2), as the book's words say.")
     if on_line != 7:
         confidence = "needs-review"
         notes.append(f"{on_line} men drawn on the line in the book's picture, not 7: check who is on and off the ball.")
