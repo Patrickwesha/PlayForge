@@ -3,6 +3,7 @@ import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { parseBackup } from '@/io/backup';
 import { annotationSchema, pathSchema, playSchema } from '@/model/schema';
+import { PACKERS_2019_FORMATIONS } from '@/seeds/packers2019';
 
 describe('model additions for rebuilt diagrams', () => {
   it('accepts coloured, sized text and brown lines, and stays backward compatible', () => {
@@ -32,7 +33,10 @@ describe.skipIf(!existsSync(LIB))('Green Bay 2019 library (local build)', () => 
     expect(new Set(formations.map((f) => f.id)).size).toBe(formations.length);
     const pb = playbooks.find((p) => p.id === 'gb-2019');
     expect(pb?.name).toBe('Green Bay 2019');
-    const order = pb!.sections.flatMap((s) => s.itemIds);
+    // The formation pages link to the checked-in pack (seed-gb19-*), not to library formations.
+    const packIds = new Set(PACKERS_2019_FORMATIONS.map((f) => f.id));
+    for (const s of pb!.sections.filter((s) => s.kind === 'formations')) expect(s.itemIds.every((id) => packIds.has(id))).toBe(true);
+    const order = pb!.sections.filter((s) => s.kind === 'plays').flatMap((s) => s.itemIds);
     expect(order.every((id) => ids.has(id))).toBe(true);
     expect(order.length).toBe(plays.length);
     const pages = order.map((id) => plays.find((p) => p.id === id)!.sourcePage!);
