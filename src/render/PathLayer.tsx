@@ -117,6 +117,29 @@ function Inserts({ path, built, view, color, sw }: { path: Path; built: BuiltPat
 /** Clear space on each side of a line where it crosses a line drawn before it (yards). */
 const CROSS_GAP = 0.13;
 
+/** Two lines that meet end to end (a branch, a continuation, a stem on a shared bar) are joined, not crossing (yards). */
+const JOIN_TOL = 0.22;
+
+function pointToPolyline(p: Point, poly: Point[]): number {
+  let best = Infinity;
+  for (let i = 0; i + 1 < poly.length; i++) {
+    const a = poly[i];
+    const b = poly[i + 1];
+    const dx = b.x - a.x;
+    const dy = b.y - a.y;
+    const n2 = dx * dx + dy * dy || 1e-9;
+    const t = Math.max(0, Math.min(1, ((p.x - a.x) * dx + (p.y - a.y) * dy) / n2));
+    best = Math.min(best, Math.hypot(p.x - (a.x + t * dx), p.y - (a.y + t * dy)));
+  }
+  return best;
+}
+
+/** An end of one line sits on the other line: the two are one piece of line work and must not cut each other. */
+function joined(a: BuiltPath, b: BuiltPath): boolean {
+  const ends = (x: BuiltPath) => [x.points[0], x.points[x.points.length - 1]];
+  return ends(a).some((e) => pointToPolyline(e, b.points) < JOIN_TOL) || ends(b).some((e) => pointToPolyline(e, a.points) < JOIN_TOL);
+}
+
 const strokeOf = (path: Path) => yd(STROKE[path.width ?? 'normal']);
 
 /**
@@ -135,7 +158,7 @@ export function PathLayer({ diagram, view, selectedPathId, crossGaps = true }: {
     <g data-layer="paths">
       <defs>
         {withBuilt.map((b, i) => {
-          const above = withBuilt.slice(i + 1);
+          const above = withBuilt.slice(i + 1).filter((a) => !joined(a.built, b.built));
           if (above.length === 0 || !crossGaps) return null;
           return (
             <mask key={`m${b.path.id}`} id={`${uid}m${i}`} maskUnits="userSpaceOnUse" x={0} y={0} width={W} height={H}>
@@ -155,7 +178,7 @@ export function PathLayer({ diagram, view, selectedPathId, crossGaps = true }: {
           : path.line === 'dotted' ? `${(sw * 0.1).toFixed(2)} ${(sw * 2.6).toFixed(2)}`
           : undefined;
         const selected = selectedPathId === path.id;
-        const masked = crossGaps && i < withBuilt.length - 1;
+        const masked = crossGaps && withBuilt.slice(i + 1).some((a) => !joined(a.built, built));
         return (
           <g key={path.id} data-hit={`path:${path.id}`} style={{ cursor: 'pointer' }}>
             <path d={built.d} fill="none" stroke="transparent" strokeWidth={yd(HIT_STROKE)} />

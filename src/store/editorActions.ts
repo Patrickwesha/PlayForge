@@ -401,6 +401,45 @@ export function branchFromEnd(pathId: string): string | null {
   return newId;
 }
 
+/**
+ * Start a new line from any point of an existing one (an option off a back's track, a second branch from the
+ * same fork). The new path shares the anchor and begins at that point. Returns the new id.
+ */
+export function branchFromPoint(pathId: string, index: number): string | null {
+  let newId: string | null = null;
+  store().commit((d) => {
+    const dg = diagram(d);
+    const p = dg?.paths[pathId];
+    if (!dg || !p || p.points.length < 2 || !p.points[index]) return;
+    const at = p.points[index];
+    const next = p.points[index + 1] ?? p.points[index];
+    const prev = p.points[index - 1] ?? p.points[index];
+    // heading: the line's direction at that point, turned 45 degrees so the branch reads apart from it
+    let dx = next.x - prev.x;
+    let dy = next.y - prev.y;
+    const l = Math.hypot(dx, dy) || 1;
+    dx /= l;
+    dy /= l;
+    const c = Math.SQRT1_2;
+    const bx = dx * c - dy * c;
+    const by = dx * c + dy * c;
+    const id = rid();
+    dg.paths[id] = {
+      id,
+      anchor: p.anchor,
+      points: [{ x: at.x, y: at.y }, { x: at.x + bx * 3, y: at.y + by * 3 }],
+      end: p.end === 'none' ? 'arrow' : p.end,
+      line: 'dashed',
+      role: p.role,
+      color: p.color,
+      width: p.width,
+    };
+    newId = id;
+  });
+  if (newId) store().setSelection({ playerIds: [], pathId: newId, pointIndex: 1 });
+  return newId;
+}
+
 /** Draw order decides stacking: the FIRST line in the record is on top. */
 function reorderPaths(pathId: string, where: 'front' | 'back') {
   store().commit((d) => {

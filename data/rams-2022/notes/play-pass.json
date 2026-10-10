@@ -1,0 +1,348 @@
+{
+  "section": "play-pass",
+  "source": "Rams 2022 (McVay), 18 Play Pass",
+  "concepts": [
+    {
+      "key": "strike",
+      "indexTitle": "STRIKE",
+      "pageTitle": "STRIKE (SWIRL-BLAZEOUT-BLINK-BLAST)",
+      "pages": [5],
+      "summary": "Play action off Weezy Madison Lick or P15 Willie. The tagged man runs Strike, a 10-yd route in 7 steps that bends to find the hole in the coverage. The other outside man gets the deep tag: Blink at 20, Swirl at 10 and 15, Blast at 20 with 10 and 15 marks, or a Streak with a Comeback alert in the Willie cell. The back's Lick Flat at 3 to 5 and the Check Flat are the outlets. The back stays in the fake and does not abort for a backside secondary blitz, except in the Willie cell where he has it.",
+      "progression": "1 Strike, 2 deep tag (Blink, Swirl, Blast or Streak), 3 Lick Flat or Check Flat",
+      "qb": "7 steps off the fake (7 or 5 in the Swirl cell). Strike bends into the open window.",
+      "positions": {
+        "tagged": "Strike at 10 yds in 7 steps, bend and find the hole (X or Z)",
+        "other outside": "Blink at 20 yds; Swirl at 10 and 15 yds; Blast at 20 yds with 10 and 15 marks; Streak with a Comeback alert at 18 (Willie cell)",
+        "Y": "Sift in the Willie and Blast cells",
+        "F": "Lick Flat at 3 to 5 yds, outlet",
+        "H": "Check Flat at 3 to 5 yds; stays in for the fake, no abort for a backside secondary blitz (has it in the Willie cell)"
+      },
+      "protections": ["Weezy Madison Lick", "P15 Willie"],
+      "formations": ["[11] SNUG RT", "[11] DOUBLE RT CLOSE"],
+      "tags": ["Swirl", "Blaze Out", "Blink", "Blast", "X", "Z"],
+      "alerts": ["Streak with a Comeback alert at 18, outside release (Willie cell)", "Back does not abort for a backside secondary blitz; in the Willie cell he has it"]
+    },
+    {
+      "key": "strike-start-start-basic",
+      "indexTitle": "STRIKE START - START BASIC",
+      "pageTitle": "STRIKE START - START BASIC",
+      "pages": [6],
+      "summary": "Start adds a Stalk Rail: a receiver stalks like a run block and then rails up. Strike Start pairs it with Z on Strike (or Strike T.O.) at 10 in 7 steps and a Sift man who blocks first and can slip to the flat late; against a two-high look that slip is the hot throw. Start Basic is off Action 3 Jet with X on a Basic at 12 to 14, a Skinny T.O. at 10 in 7 steps and H on a Coin from a short Hover at 2 to 4. In this one the back aborts for the backside secondary blitz.",
+      "progression": "Strike Start: 1 Strike, 2 Stalk Rail, 1 plus 3 for the sift outlet. Start Basic: 1 Stalk Rail, 2 Basic, 3 Skinny T.O., order unclear",
+      "qb": "7 steps. Check Wide alert in the Strike Start cell. Any two-high look makes the sift man slipping to the flat the hot throw.",
+      "positions": {
+        "Z": "Strike at 10 yds in 7 steps; Strike T.O. as the alert (Strike Start cell)",
+        "stalk rail": "Stalk then rail; the letter is unclear",
+        "Y": "Sifter: block first, late outlet to the flat (Strike Start cell)",
+        "X": "Basic at 12 to 14 yds (Start Basic cell)",
+        "skinny": "Skinny T.O. at 10 yds in 7 steps (Start Basic cell), letter unclear",
+        "H": "Hover at 2 to 4 yds, Coin (Start Basic cell); aborts for a backside secondary blitz (Strike Start cell)"
+      },
+      "protections": ["Weezy Madison", "Action 3 Jet"],
+      "formations": ["[11] DOUBLE RT CLAMP", "[11] SOUTH RT TOUT F SHORT HOVER"],
+      "tags": ["Start", "Basic", "H Coin", "T.O."],
+      "alerts": ["Check Wide alert", "Two-high look: the sifter slipping to the flat is the hot throw", "Back aborts for a backside secondary blitz"]
+    },
+    {
+      "key": "pylon-post-pitch",
+      "indexTitle": "PYLON (POST) - PITCH",
+      "pageTitle": "PYLON (POST) / PITCH",
+      "pages": [7],
+      "summary": "Boot-style action off Grizzly Sucker or Staple with the QB on the move. X runs a Pylon at 15 (or Pylon Post) as the first read, Y crosses high at 18 to 22 between the numbers and the hash as the second, and a Flat plus a Late Flat from F are the outlets. Pitch puts Z on the Pitch with F on a Late Leak at 5.",
+      "progression": "1 Pylon or Pylon Post, 2 High Cross, 3 Late Flat; Flat is the outlet",
+      "qb": "QB gets out on the move with the action.",
+      "positions": {
+        "X": "Pylon at 15 yds; Pylon Post when tagged",
+        "Z": "Flat (Pylon cells); Pitch (Pitch cell)",
+        "Y": "High Cross at 18 to 22 yds between the numbers and the hash",
+        "F": "Late Flat; Late Leak at 5 yds in the Pitch cell",
+        "H": "Outlet",
+        "QB": "on the move with the action"
+      },
+      "protections": ["Grizzly Sucker", "Grizzly Staple"],
+      "formations": ["[11] SNUG RT"],
+      "tags": ["Pylon", "Post", "Pitch"],
+      "alerts": []
+    },
+    {
+      "key": "blazer-blush-scorch",
+      "indexTitle": "BLAZER - BLUSH - SCORCH",
+      "pageTitle": "BLAZER (CP) - BLUSH (CP) - SCORCH (CP)",
+      "pages": [8],
+      "summary": "Three deep play-action shots over a High Cross at 18 to 22. Blazer: X runs the Blazer as the first read with the High Cross second and the Check Flat third. Blush: X runs a Blink Stutter at 15 instead. Scorch: Z runs a Swirl T.O. at 15 and 10 off Weezy Madison Lick with a Lick Flat and a Bend. The back on Foam deepens his alignment, sells the fake and cleans up the edge.",
+      "progression": "1 Blazer, Blink Stutter or Swirl T.O., 2 High Cross, 3 Check Flat or Lick Flat",
+      "qb": "7 steps off the fake in the Scorch cell. Back does not abort for a backside secondary blitz (Scorch).",
+      "positions": {
+        "X": "Blazer (Blazer cell); Blink Stutter at 15 yds (Blush cell)",
+        "Z": "Swirl T.O. at 15 and 10 yds (Scorch cell)",
+        "Y": "High Cross at 18 to 22 yds between the numbers and the hash",
+        "F": "Lick Flat at 3 to 5 yds (Scorch cell)",
+        "H": "Check Flat at 3 to 5 yds; deepen alignment, sell the fake, clean up the edge (Foam cells)"
+      },
+      "protections": ["Foam", "Weezy Madison Lick"],
+      "formations": ["[11] BUNCH RT KING", "[11] SNUG RT"],
+      "tags": ["CP", "Blazer", "Blush", "Scorch"],
+      "alerts": ["Back: deepen, sell the fake, clean up the edge (Foam)", "Back does not abort for a backside secondary blitz (Scorch)"]
+    },
+    {
+      "key": "throttle-safe",
+      "indexTitle": "THROTTLE - SAFE",
+      "pageTitle": "THROTTLE - SAFE (READ IT)",
+      "pages": [9],
+      "summary": "Throttle: the tagged man runs a 15-yd route that finds the void as the first read with a Field Post at 18 behind it and the Check Flat third. Safe: X runs the Field Post at 18 first, a Swirl at 10 and 15 second, a Flat third, with a Late Leak at 5 from F. The Willie cell adds F on a Blast Read It at 20 with 10 and 15 marks.",
+      "progression": "Throttle: 1 Throttle, 2 Field Post, 3 Check Flat. Safe: 1 Field Post, 2 Swirl, 3 Flat",
+      "qb": "Read It: play the Blast off the coverage. Back deepens and sells the fake on Foam; does not abort on the Staple cell; the Willie cell shows a 6-man slide.",
+      "positions": {
+        "tagged throttle": "Throttle at 15 yds, find the void (X or Z)",
+        "field post": "Field Post at 18 yds (Y in the Throttle cells, X in the Safe cells)",
+        "swirl": "Swirl at 10 and 15 yds (Safe cells)",
+        "F": "Late Leak at 5 yds (Safe cell); Blast Read It at 20 yds with 10 and 15 marks (Willie cell); Seal in the Staple cell",
+        "H": "Check Flat at 3 to 5 yds (2 to 3 yds in the Willie cell)"
+      },
+      "protections": ["Foam", "Grizzly Staple", "Grizzly Sucker", "P15 Willie"],
+      "formations": ["[12] SNUG RT", "[11] SNUG RT", "[11] SOUTH RT CLOSE"],
+      "tags": ["Throttle", "Safe", "Read It", "Blast"],
+      "alerts": ["Alert printed on the Willie cell, target unclear", "Back: deepen, sell the fake, clean up the edge"]
+    },
+    {
+      "key": "stroke-locker",
+      "indexTitle": "STROKE LOCKER",
+      "pageTitle": "STROKE LOCKER",
+      "pages": [10],
+      "summary": "Off Milf Frog or Milf Madison action. The tagged man runs Stroke, an 8-step route, as the first read with Z on a Locker at 20 as the second. Another receiver runs a Fly. The back deepens his alignment and sells the fake, then is a Check Flat at 3 to 5.",
+      "progression": "1 Stroke, 2 Locker; Check Flat outlet",
+      "qb": "8 steps with the action.",
+      "positions": {
+        "tagged": "Stroke, 8 steps (F or X)",
+        "Z": "Locker at 20 yds",
+        "fly": "Fly, letter unclear",
+        "H": "Check Flat at 3 to 5 yds; deepen alignment and sell the fake"
+      },
+      "protections": ["Milf Frog", "Milf Madison"],
+      "formations": ["[11] STACK RT CLOSE", "[11] SOUTH LT CLOSE"],
+      "tags": ["Stroke", "Locker"],
+      "alerts": ["Alert printed, target unclear"]
+    },
+    {
+      "key": "blaze-out-locker",
+      "indexTitle": "BLAZE OUT LOCKER",
+      "pageTitle": "BLAZE OUT LOCKER",
+      "pages": [11],
+      "summary": "Off Foam. X runs Blaze Out at 22 to 25 as the first read with the tagged man (F or Z) on a Locker at 20 as the second. The first cell adds a Waggle. The back deepens, sells the fake, cleans up the edge and then checks the flat at 3 to 5.",
+      "progression": "1 Blaze Out, 2 Locker; Check Flat outlet",
+      "qb": "Back does not abort for a backside secondary blitz (first cell).",
+      "positions": {
+        "X": "Blaze Out at 22 to 25 yds",
+        "tagged": "Locker at 20 yds (F or Z)",
+        "waggle": "Waggle (first cell), letter unclear",
+        "H": "Check Flat at 3 to 5 yds; deepen, sell the fake, clean up the edge"
+      },
+      "protections": ["Foam"],
+      "formations": ["[11] BUNCH RT KING", "[12] SNUG RT"],
+      "tags": ["Blaze Out", "Locker"],
+      "alerts": ["Alert printed on both cells, target unclear", "Back does not abort for a backside secondary blitz"]
+    },
+    {
+      "key": "shake-locker",
+      "indexTitle": "SHAKE LOCKER",
+      "pageTitle": "SHAKE LOCKER",
+      "pages": [12],
+      "summary": "Off Weezy Madison Lick. The tagged man runs Shake, a 5-step route, first; the other outside man runs a Locker at 20 second. Lick Flat at 3 to 5 and Check Flat are the outlets, with a Bend or Sift from the inside man. The back does not abort for a backside secondary blitz.",
+      "progression": "1 Shake, 2 Locker; Lick Flat outlet",
+      "qb": "7-man slide printed. Locker is the alert.",
+      "positions": {
+        "tagged": "Shake in 5 steps (X or Z)",
+        "other outside": "Locker at 20 yds (Z or X)",
+        "Y": "Bend (first cell); Sift (second cell)",
+        "F": "Lick Flat at 3 to 5 yds, outlet",
+        "H": "Check Flat at 3 to 5 yds; no abort for a backside secondary blitz"
+      },
+      "protections": ["Weezy Madison Lick"],
+      "formations": ["[11] SNUG RT"],
+      "tags": ["Shake", "Locker"],
+      "alerts": ["Locker alert", "Back does not abort for a backside secondary blitz"]
+    },
+    {
+      "key": "dash-dapper",
+      "indexTitle": "DASH - DAPPER",
+      "pageTitle": "DASH (STALK FLAT) - DAPPER",
+      "pages": [13],
+      "summary": "Dash: X runs a Pylon at 15 as the first read, a Dagger widens at 18 to 20 behind it, and a Waggle is third over the Check Flat. The Paddy Insert cell adds Z on an Insert Stalk Flat with H on a Check Over and a Deep Special alert. Dapper: X runs the Deep Special with the Dagger widening at 18 to 20 and a Sift inside.",
+      "progression": "Dash: 1 Pylon, 2 Dagger, 3 Waggle. Dapper: 1 Deep Special, 2 Dagger",
+      "qb": "Back deepens, sells the fake and cleans up the edge on Foam; has the secondary blitz in the Paddy Insert cell.",
+      "positions": {
+        "X": "Dash: Pylon at 15 yds; Dapper: Deep Special",
+        "dagger": "Dagger, widen, 18 to 20 yds (15 yd mark), letter unclear",
+        "Z": "Insert Stalk Flat (Paddy Insert cell)",
+        "Y": "Sift (Dapper cell)",
+        "waggle": "Waggle (Dash cell), letter unclear",
+        "H": "Check Flat at 3 to 5 yds (Foam cells); Check Over (Paddy Insert cell)"
+      },
+      "protections": ["Foam", "Paddy Insert"],
+      "formations": ["[12] SPEED PACK RT", "[11] SOUTH RT CLOSE F SHORT"],
+      "tags": ["Dash", "Dapper", "Stalk Flat"],
+      "alerts": ["Deep Special alert", "Back has the secondary blitz (Paddy Insert cell)"]
+    },
+    {
+      "key": "sailor",
+      "indexTitle": "SAILOR",
+      "pageTitle": "SAILOR (STUTTER)",
+      "pages": [14],
+      "summary": "Off Foam. Z runs Sailor at 15 as the first read with a Waggle third and the Check Flat as the outlet. The second read is a Blink Stutter at 15 in one cell and a Blazer in the other; which cell carries the Stutter tag is unclear from the text. The back deepens, sells the fake and cleans up the edge.",
+      "progression": "1 Sailor, 2 Blink Stutter or Blazer, 3 Waggle",
+      "qb": "7-step style shot off the fake; Check Flat is the outlet.",
+      "positions": {
+        "Z": "Sailor at 15 yds",
+        "second read": "Blink Stutter at 15 yds in one cell, Blazer in the other, letter unclear",
+        "waggle": "Waggle, letter unclear",
+        "H": "Check Flat at 3 to 5 yds; deepen, sell the fake, clean up the edge"
+      },
+      "protections": ["Foam"],
+      "formations": ["[12] SPEED PACK RT"],
+      "tags": ["Sailor", "Stutter"],
+      "alerts": []
+    },
+    {
+      "key": "boat-skipper-captain-basic",
+      "indexTitle": "BOAT - SKIPPER - CAPTAIN BASIC",
+      "pageTitle": "BOAT - SKIPPER-CAPTAIN BASIC",
+      "pages": [15],
+      "summary": "Off P12 or P13 Dime action with the QB reversing out. The tagged man runs Boat, a Sail at 12 and 15, as the first read; a Fly Wide is second and the Basic at 12 to 14 is third. H checks over and the Check Flat is the outlet at 5. Blazer widening is the alert. Skipper swaps in a Pylon Post, Captain a Pylon. The back has the secondary blitz.",
+      "progression": "1 Sail, 2 Fly Wide, 3 Basic; Blazer is the alert; Check Over and Check Flat are outlets",
+      "qb": "Reverse out with the Dime fake.",
+      "positions": {
+        "tagged": "Sail at 12 and 15 yds (Y, or F on Skipper)",
+        "fly wide": "Fly Wide, letter unclear",
+        "basic": "Basic at 12 to 14 yds (X, or Y on Skipper)",
+        "blazer": "Blazer, widen, alert",
+        "skipper or captain": "Pylon Post (Skipper), Pylon (Captain)",
+        "H": "Check Over; Check Flat; has the secondary blitz; Flat when tagged H Flat"
+      },
+      "protections": ["P12 Dime Fly", "P12 Dime Flow", "P13 Dime Fly"],
+      "formations": ["[11] SOUTH RT CLAMP", "[11] BUNCH RT KING", "[11] SOUTH RT CLOSE F SHORT"],
+      "tags": ["Boat", "Skipper", "Captain", "Basic", "H Flat"],
+      "alerts": ["Widen Blazer alert", "Back has the secondary blitz", "QB reverses out"]
+    },
+    {
+      "key": "special-rail-scale-rail",
+      "indexTitle": "SPECIAL RAIL - SCALE RAIL",
+      "pageTitle": "SPECIAL RAIL / SCALE RAIL",
+      "pages": [16],
+      "summary": "Rail concepts off P12 Dime Flock or Punch Flight with the QB reversing out. A Fly Rail is the first read, the Special is the alert, a Clear and a Widen Go open the deep middle, and the Check Flat at 3 to 5 is the outlet. Scale Rail adds a Skinny in 7 steps and Y on a Scout Burst: a Scout in 6 steps that widens and fades vs cloud, with H on a Check Burst.",
+      "progression": "1 Fly Rail, 2 Skinny or Clear, 3 Scout or Widen Go, order unclear; Special is the alert",
+      "qb": "Reverse out. Alert Special.",
+      "positions": {
+        "fly rail": "Fly Rail, letter unclear",
+        "special": "Alert Special, letter unclear",
+        "clear": "Clear and Widen Go (Special Rail cell)",
+        "skinny": "Skinny in 7 steps (Scale Rail cell)",
+        "Y": "Scout Burst: Scout in 6 steps, widen, fade vs cloud (Scale Rail cell)",
+        "H": "Check Flat at 3 to 5 yds (Special Rail); Check Burst, outlet at 5 yds (Scale Rail)"
+      },
+      "protections": ["P12 Dime Flock", "P12 Punch Flight"],
+      "formations": ["[11] SCOOT RT EDGE ZAC", "[11] SOUTH RT TOAST"],
+      "tags": ["Special Rail", "Scale Rail", "Scout Burst"],
+      "alerts": ["Alert Special", "Scout fades vs cloud", "QB reverses out"]
+    },
+    {
+      "key": "gronk",
+      "indexTitle": "GRONK",
+      "pageTitle": "GRONK (C.O.) (START) (FLOW)",
+      "pages": [17],
+      "summary": "Off P12 Punch. Gronk is a Rip at 8 to 10 as the first read with a Skinny at 10 in 7 steps and a Go above it. C.O. puts a receiver on a C.O. at 5 as the second read. Start swaps in a Stalk Rail and makes the Skinny a Skinny T.O. H is the Check Flat at 3 to 5 off a 6-man slide and the alert outlet.",
+      "progression": "1 Rip, 2 C.O. or Stalk Rail; alert outlet",
+      "qb": "6-man slide printed. Flow tag listed in the title.",
+      "positions": {
+        "rip": "Rip at 8 to 10 yds, letter unclear",
+        "skinny": "Skinny at 10 yds in 7 steps; Skinny T.O. in the Start cell",
+        "go": "Go (C.O. cell)",
+        "c.o.": "C.O. at 5 yds (C.O. cell)",
+        "stalk rail": "Stalk Rail (Start cell)",
+        "H": "Check Flat at 3 to 5 yds; alert outlet"
+      },
+      "protections": ["P12 Punch"],
+      "formations": ["[11] DOUBLE RT CLOSE"],
+      "tags": ["Gronk", "C.O.", "Start", "Flow"],
+      "alerts": ["Alert outlet"]
+    },
+    {
+      "key": "bleach-leak",
+      "indexTitle": "BLEACH / LEAK",
+      "pageTitle": "BLEACH/LEAK",
+      "pages": [18],
+      "summary": "Two leak plays. Bleach, off Grizzly Sucker: F leaks out late while X runs a Locker at 20 and Z a Blazer, with H to the flat. Leak, off Laker Pin: Y leaks under the linebackers after a pin block, a Low Cross at 10 to 12 is the first read, a Skate and the Flat are the outlets, and the QB gets depth and runs if nothing is there.",
+      "progression": "Leak: 1 Low Cross, 2 Leak. Bleach: 1 Blazer, 2 Leak or Locker, order unclear",
+      "qb": "Leak cell: get depth and run if it is covered.",
+      "positions": {
+        "F": "Bleach: Leak; Leak cell: Pin then release",
+        "X": "Locker at 20 yds (Bleach); Low Cross at 10 to 12 yds (Leak cell, letter unclear)",
+        "Z": "Blazer (Bleach)",
+        "Y": "Leak under the linebackers (Leak cell); Skate tag",
+        "H": "Flat"
+      },
+      "protections": ["Grizzly Sucker", "Laker Pin"],
+      "formations": ["[11] SOUTH RT CLAMP F SHORT", "[12] WEST RT SLOPE"],
+      "tags": ["Bleach", "Leak", "Locker", "Skate"],
+      "alerts": ["Alerts printed on both cells, targets unclear", "QB gets depth and runs (Leak)"]
+    },
+    {
+      "key": "halo",
+      "indexTitle": "HALO",
+      "pageTitle": "HALO (X PP)",
+      "pages": [19],
+      "summary": "Off Paddy. Z runs Halo, a High Cross at 18 to 22 between the numbers and the hash, as the first read and a Stalk Shallow at 5 is second: the stalker stays on the move for a 2 count before releasing. H is a Check Thru at 5 off a 7-man slide and the back has the secondary blitz. A Pylon Post is the alert; the X PP cell shows a Blazer label.",
+      "progression": "1 High Cross, 2 Stalk Shallow; Check Thru outlet; Pylon Post alert",
+      "qb": "7-man slide. Back has the secondary blitz.",
+      "positions": {
+        "Z": "Halo: High Cross at 18 to 22 yds between the numbers and the hash",
+        "stalk shallow": "Stalk Shallow at 5 yds, stay on the move for a 2 count, letter unclear",
+        "X": "Pylon Post alert; PP tag; Blazer label in the X PP cell, unclear",
+        "H": "Check Thru at 5 yds; has the secondary blitz"
+      },
+      "protections": ["Paddy"],
+      "formations": ["[11] BUNCH RT KING"],
+      "tags": ["Halo", "X PP"],
+      "alerts": ["Pylon Post alert", "Back has the secondary blitz"]
+    },
+    {
+      "key": "retro",
+      "indexTitle": "RETRO",
+      "pageTitle": "RETRO",
+      "pages": [20],
+      "summary": "Off Foam. X runs Retro, a High Corner at 18 to 20, as the first read with a T.B. route at 10 to 12 (15-yd mark) second and the Check Flat at 3 to 5 as the outlet. The back deepens, sells the fake and cleans up the edge.",
+      "progression": "1 High Corner, 2 T.B.; Check Flat outlet",
+      "qb": "10-man number printed by H, meaning unclear.",
+      "positions": {
+        "X": "Retro: High Corner at 18 to 20 yds",
+        "t.b.": "T.B. at 10 to 12 yds with a 15 yd mark, letter unclear",
+        "H": "Check Flat at 3 to 5 yds; deepen, sell the fake, clean up the edge"
+      },
+      "protections": ["Foam"],
+      "formations": ["[11] BUNCH RT KING"],
+      "tags": ["Retro"],
+      "alerts": ["Alert printed, target unclear"]
+    },
+    {
+      "key": "hp",
+      "indexTitle": "HP",
+      "pageTitle": "HP (SLACKER-SMASH-SETTLE) (READ IT) (STRIKE)",
+      "pages": [21],
+      "summary": "Boot-style action off Grizzly Staple, Grizzly Pin, Laker Pin or Laker Flock Pin. HP is a 15-yd route as the first read with a Low Cross at 10 to 12 second, H to the flat and F on a Late Leak at 5. Slacker adds a Slack at 4 to 6 with Y on Strike (10 yds, 7 steps). Smash and Settle (Fly Settle at 15) pair HP with X on Strike; Read It plays the HP off MOFC or MOFO. The QB gets depth and runs if it is covered.",
+      "progression": "1 HP, 2 Low Cross or Strike; Flat and Late Leak are outlets",
+      "qb": "Get depth and run when the reads are covered. Read It: MOFC or MOFO decides the HP.",
+      "positions": {
+        "X": "HP at 15 yds (Staple and Pin cells); Strike at 10 yds in 7 steps (Smash and Settle cells)",
+        "Y": "Low Cross at 10 to 12 yds (Staple cell); Strike (Slacker cell)",
+        "Z": "Fly Settle at 15 yds (Settle cell); Pin (Smash cell), unclear",
+        "F": "Late Leak at 5 yds (Staple cell); Pin then release; HP Read It (Flock Pin cell)",
+        "slack": "Slack at 4 to 6 yds (Slacker cell), letter unclear",
+        "H": "Flat",
+        "QB": "get depth and run"
+      },
+      "protections": ["Grizzly Staple", "Grizzly Pin", "Laker Pin", "Laker Flock Pin"],
+      "formations": ["[11] SNUG RT", "[11] SCOOT PACK", "[11] TROFF RT", "[11] BUNCH RT ZAC"],
+      "tags": ["HP", "Slacker", "Smash", "Settle", "Read It", "Strike"],
+      "alerts": ["QB gets depth and runs", "Read It: MOFC or MOFO"]
+    }
+  ]
+}

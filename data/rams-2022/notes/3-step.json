@@ -1,0 +1,243 @@
+{
+  "section": "3-step",
+  "source": "Rams 2022 (McVay), 14 3 Step",
+  "concepts": [
+    {
+      "key": "sticky",
+      "indexTitle": "STICKY",
+      "pageTitle": "STICKY (2*2)",
+      "pages": [5],
+      "summary": "Double Stick: both inside receivers run Stick at 5 and both outside receivers run Flat at 3, so the same picture shows up on each side and the QB works one side. The back is the third option on a Check Thru.",
+      "progression": "1 Stick, 2 Flat, 3 Check Thru (H)",
+      "qb": "3 step. Pick the better side before the snap and work Stick to Flat there.",
+      "positions": {
+        "X": "Flat at 3 yds",
+        "Z": "Flat at 3 yds",
+        "Y": "Stick at 5 yds from the -5- spot",
+        "F": "Stick at 5 yds from the -5- spot",
+        "H": "Check Thru, outlet at 3 yds"
+      },
+      "protections": ["300 Jet", "200 Jet"],
+      "formations": ["[11] SNUG RT", "[11] SOUTH RT CLAMP", "[11] BUNCH RT TITE YUCK", "[11] SPEED PACK RT TOUT FAX"],
+      "tags": ["2x2"],
+      "alerts": []
+    },
+    {
+      "key": "stick",
+      "indexTitle": "STICK",
+      "pageTitle": "STICK (2*2)",
+      "pages": [6],
+      "summary": "One-side Stick: the tagged man (F, Z, X or Y on the call line) runs the Stick at 5, the man next to him runs Flat at 3, and a third receiver works over the ball (OTB). The backside outside receiver runs Thunder as a Yes/No throw and the back checks slow to an outlet.",
+      "progression": "1 Stick, 2 Flat, 3 OTB. Backside Thunder is a Yes/No alert.",
+      "qb": "3 step. Decide on the backside Thunder (Yes/No) before the snap, otherwise work Stick, Flat, OTB.",
+      "positions": {
+        "tagged": "Stick at 5 yds (the letter on the call line: F, Z, X or Y)",
+        "next to tagged": "Flat at 3 yds",
+        "third frontside man": "OTB, over the ball; which letter varies by cell, unclear",
+        "backside outside": "Thunder: break at 6 yds with a quick 5-step stem vs off coverage, stop at 8 yds vs press or cloud. Yes/No. Split rule: +4 to the boundary, +2 to the field or middle; last cell says cheat the split +2 outside the hash",
+        "H": "Check Slow, outlet; 2x2 release"
+      },
+      "protections": ["200 Jet", "300 Jet"],
+      "formations": ["[11] SOUTH RT", "[11] DOUBLE RT CLAMP", "[12] WEST RT TITE FAX", "[11] SPEED RT TOUT ZAC"],
+      "tags": ["2x2", "F", "Z", "X", "Y"],
+      "alerts": ["Thunder is a Yes/No throw on the backside", "Thunder receiver: quick 5 steps against off coverage, 8 yd stop against press or cloud", "Split: +4 to the boundary, +2 to the field or middle"]
+    },
+    {
+      "key": "stitch",
+      "indexTitle": "STITCH",
+      "pageTitle": "STITCH (T.O) (2*2)",
+      "pages": [7],
+      "summary": "Stick plus Thunder on both sides: inside men run Stick at 5, outside men run Thunder at 6 or 8 with a max split, mirrored so the QB picks a side. The T.O. version turns the Stick into a Stick Nod and the Thunder into a Thunder take-off, with the back on a Check Option.",
+      "progression": "1 Stick, 2 Thunder (each side). T.O.: 1 Stick Nod, 2 Thunder T.O.",
+      "qb": "3 step. Thunder is Yes/No; the Stick side gets worked otherwise.",
+      "positions": {
+        "X": "Thunder at 6 or 8 yds, max split +4; T.O. version is Thunder T.O.",
+        "Z": "Thunder at 6 or 8 yds, max split +4; T.O. version is Thunder T.O.",
+        "Y": "Stick at 5 yds; T.O. version is Stick Nod at 5",
+        "F": "Stick at 5 yds; T.O. version is Stick Nod at 5",
+        "H": "Check Thru, outlet at 3 yds; T.O. version is Check Option outlet at 5"
+      },
+      "protections": ["200 Jet"],
+      "formations": ["[11] DOUBLE RT OFF"],
+      "tags": ["2x2", "T.O."],
+      "alerts": ["Thunder: Yes/No, max split +4"]
+    },
+    {
+      "key": "omaha",
+      "indexTitle": "OMAHA",
+      "pageTitle": "OMAHA (T.O.) (2*2)",
+      "pages": [8],
+      "summary": "Outside receivers widen and run Omaha, a 4-step route at 5 yds that turns into a fade against cloud; inside receivers run Stick at 5. Mirrored, with the back on a Check Thru. The T.O. version has the Omaha man sell it in 3 steps and take off, with Stick Nods inside and a Check Option outlet.",
+      "progression": "1 Omaha, 2 Stick, 3 Check Thru (H)",
+      "qb": "3 step. Omaha converts to a fade vs cloud, so read the corner.",
+      "positions": {
+        "X": "Widen, Omaha in 4 steps at 5 yds, fade vs cloud; T.O. version is Omaha T.O. (3 steps then 4)",
+        "Z": "Widen, Omaha in 4 steps at 5 yds, fade vs cloud; T.O. version is Omaha T.O.",
+        "Y": "Stick at 5 yds from the -5- spot; T.O. version is Stick Nod at 5",
+        "F": "Stick at 5 yds from the -5- spot; T.O. version is Stick Nod at 5",
+        "H": "Check Thru, outlet at 3 yds; T.O. version is Check Option outlet at 5"
+      },
+      "protections": ["300 Jet"],
+      "formations": ["[11] SNUG RT", "[12] SOLO RT ACE", "[11] BUNDLE RT TITE FAX", "[11] SOUTH RT CLOSE"],
+      "tags": ["2x2", "T.O."],
+      "alerts": ["Omaha becomes a fade against cloud coverage"]
+    },
+    {
+      "key": "steamer",
+      "indexTitle": "STEAMER",
+      "pageTitle": "STEAMER (3*1)",
+      "pages": [9],
+      "summary": "3x1 version of the Omaha and Stick pair: to the trips side the outside man widens and runs Omaha in 4 steps while the Sticks sit at 5. The single receiver runs Thunder on a max split with a Stomp alert, and the back checks thru to an outlet.",
+      "progression": "1 and 2 printed on the trips side (Stick and Omaha), a separate 1 on the backside Thunder; the exact order is unclear",
+      "qb": "3 step. Backside Thunder is a Yes/No, Stomp is the alert.",
+      "positions": {
+        "trips outside": "Widen, Omaha in 4 steps",
+        "trips inside": "Stick at 5 yds (two Stick labels on the page, so both inside men appear to Stick)",
+        "single receiver": "Thunder at 6 or 8 yds, max split +4, alert Stomp",
+        "H": "Check Thru, outlet at 3 yds"
+      },
+      "protections": ["300 Jet", "200 Jet"],
+      "formations": ["[11] TRIPS RT", "[11] TRAIN RT", "[11] FAST RT TOUT"],
+      "tags": ["3x1"],
+      "alerts": ["Backside Thunder with a Stomp alert", "Thunder is Yes/No", "Max split +4"]
+    },
+    {
+      "key": "stock",
+      "indexTitle": "STOCK",
+      "pageTitle": "STOCK (3*1)",
+      "pages": [10],
+      "summary": "Stick plus Coin to the trips side: one inside man sits on a Stick at 5, another runs Coin at 5, and the outside man runs a Go as an alert. The single receiver runs Thunder (first cell) or widens for Omaha (second cell). The back checks thru.",
+      "progression": "1 Stick, 2 Coin (numbers 1 and 2 on the trips side, a separate 1 on the backside)",
+      "qb": "3 step. Go alert outside, Thunder Yes/No on the backside.",
+      "positions": {
+        "trips outside": "Go, alert",
+        "trips inside": "Stick at 5 yds",
+        "trips third man": "Coin at 5 yds",
+        "single receiver": "Thunder at 6 or 8 yds, max split +4, Yes/No (first cell); widen Omaha in 4 steps (second cell)",
+        "H": "Check Thru, outlet at 3 yds"
+      },
+      "protections": ["300 Jet", "200 Jet"],
+      "formations": ["[11] TRIO RT", "[11] SPEED RT TOUT"],
+      "tags": ["3x1"],
+      "alerts": ["Go alert on the outside man", "Thunder Yes/No"]
+    },
+    {
+      "key": "arrow-bow",
+      "indexTitle": "ARROW BOW",
+      "pageTitle": "ARROW BOW (2*2) / (EMPTY)",
+      "pages": [11],
+      "summary": "The tagged man runs Arrow at 5 from the -5- spot with a Corner at 12 over the top of him as the alert. The other side carries the Bow pair: Flat at 3 and Basic at 12 to 14. Four progression numbers are printed.",
+      "progression": "Numbers 1 to 4 on the page; Flat carries 1 and Arrow and Corner carry 1 and 2 on their side, exact order unclear",
+      "qb": "3 step. Corner is the alert over the Arrow.",
+      "positions": {
+        "tagged": "Arrow at 5 yds from the -5- spot (Z, Y or F on the call line)",
+        "over the tagged man": "Corner at 12 yds, alert",
+        "bow side outside": "Flat at 3 yds",
+        "bow side inside": "Basic at 12 to 14 yds",
+        "fifth man": "a second Arrow at 5 yds appears in each cell; which letter is unclear"
+      },
+      "protections": ["200 Scat", "300 Scram"],
+      "formations": ["[11] SOUTH RT CLOSE", "[11] SOUTH RT CLOUT", "[11] SOUTH RT CLAMP (TRES)", "[11] FAST PACK RT TOUT (C)"],
+      "tags": ["2x2", "Empty", "Z", "Y", "F"],
+      "alerts": ["Corner at 12 yds is the alert"]
+    },
+    {
+      "key": "stick-empty",
+      "indexTitle": "STICK (EMPTY)",
+      "pageTitle": "STICK BOW-BULLET (READ)-CHEDDAR-DAIRY (EMPTY)",
+      "pages": [12],
+      "summary": "Empty Stick with four backside packages. The tagged man runs Stick at 5. Bow puts an Arrow at 5 and a Basic at 12 to 14 behind two Flats. Bullet is a China flat at 3 to 5 with a Dart, read as it unfolds. Cheddar is Skinny, Pivot and Diagonal with a 7-step 10-yd alert. Dairy is two Diagonals, a Skinny and an Arrow, 7 or 5 steps at 10 yds.",
+      "progression": "Numbers 1 to 5 printed per cell; Stick and the Flat beside it carry the low numbers, order of the rest unclear",
+      "qb": "3 step. Bullet is a read; Cheddar and Dairy carry a deep alert.",
+      "positions": {
+        "tagged": "Stick at 5 yds (X, Z or Y on the call line)",
+        "bow": "Flat 3 yds, Flat 3 yds, Arrow 5 yds, Basic 12 to 14 yds",
+        "bullet": "China flat 3 to 5 yds, Dart 5 yds, Flat 3 yds, Basic 12 to 14 yds",
+        "cheddar": "Skinny, Pivot 5 yds, Diagonal, Flat 3 yds; 7 steps 10 yds alert",
+        "dairy": "Diagonal, Diagonal, Skinny, Arrow 5 yds, Flat 3 yds; 7 (5) steps 10 yds"
+      },
+      "protections": ["300 Scram", "200 Scram"],
+      "formations": ["[11] SNUG RT (B)", "[11] SOUTH RT CLAMP (TRES)", "[11] FAST PACK RT TOUT C"],
+      "tags": ["Empty", "Bow", "Bullet", "Read", "Cheddar", "Dairy"],
+      "alerts": ["Bullet is read on the move", "Cheddar and Dairy carry a 7-step 10-yd alert"]
+    },
+    {
+      "key": "spot-bow",
+      "indexTitle": "SPOT BOW",
+      "pageTitle": "SPOT BOW-BULLET(READ)-CHEDDAR-DAIRY (3*1)",
+      "pages": [13],
+      "summary": "Same four packages as the empty Stick page but built on a Spot at 5 from a 3x1 set, with the Spot man told to work wide. Bow, Bullet (read), Cheddar and Dairy fill the other spots the same way.",
+      "progression": "Numbers 1 to 5 per cell; Spot is low in the order, the rest unclear",
+      "qb": "3 step. Bullet is a read; Cheddar and Dairy carry the 7-step alert.",
+      "positions": {
+        "tagged": "Spot at 5 yds, wide (Y, X or F on the call line)",
+        "bow": "Flat 3 yds, Arrow 5 yds, Basic 12 to 14 yds",
+        "bullet": "China flat 3 to 5 yds, Dart 5 yds, Basic 12 to 14 yds",
+        "cheddar": "Skinny, Pivot, Diagonal, 7 steps 10 yds alert",
+        "dairy": "Diagonal, Skinny, Arrow 5 yds, alert"
+      },
+      "protections": ["200 Scat", "300 Scat"],
+      "formations": ["[11] FAST PACK RT TOUT", "[11] BUNCH RT TITE", "[11] SPRINT PACK RT TOUT", "[11] JIGGY PACK RT TITE"],
+      "tags": ["3x1", "Bow", "Bullet", "Read", "Cheddar", "Dairy"],
+      "alerts": ["Bullet is a read", "7-step 10-yd alert on Cheddar and Dairy"]
+    },
+    {
+      "key": "simba-lions",
+      "indexTitle": "SIMBA/LIONS",
+      "pageTitle": "(COIN) LIONS/SIMBA",
+      "pages": [14],
+      "summary": "Two quick empty-style concepts with F on a Coin at 5. Lions is Snags at 5 across the board with a Sluggo option as the alert (3 steps then 2). Simba is Slants: outside man a 3-step Slant, inside men Inside Slants, with a Go alert and the Thunder split rule.",
+      "progression": "Lions: 1 Snag, 2 Snag, 1 on the far side. Simba: 1 Slant, 2 Inside Slant, 3 Inside Slant",
+      "qb": "3 step. Lions: Sluggo is an option alert. Simba: Go alert, Yes/No.",
+      "positions": {
+        "F": "Coin at 5 yds",
+        "lions receivers": "Snag at 5 yds; one outside man has a Sluggo option (3 steps, 2 steps) as the alert",
+        "simba outside": "Slant in 3 steps; Go alert, Yes/No; split +4 to the boundary, +2 to the field or middle",
+        "simba inside": "Inside Slant"
+      },
+      "protections": ["300 Scram"],
+      "formations": ["[11] JAM R TITE UNO", "[11] DOUBLE RT CLOSE A", "[11] TRIPS RT TITE UNO"],
+      "tags": ["Coin", "Lions", "Simba"],
+      "alerts": ["Lions: Sluggo option alert", "Simba: Go alert, Yes/No"]
+    },
+    {
+      "key": "lookie-chops",
+      "indexTitle": "LOOKIE CHOPS",
+      "pageTitle": "LOOKIE CHOPS (EMPTY)",
+      "pages": [15],
+      "summary": "The tagged man runs Lookie at 5, a quick choice route off a straight stem. Chops is the rest of the empty picture: a Stick China in 4 steps, a Stick Nod at 5, and a Go alert on a max split.",
+      "progression": "1 Lookie, 2 Stick China, 3 Stick Nod; Go is the alert",
+      "qb": "3 step. Go alert on the max-split man.",
+      "positions": {
+        "tagged": "Lookie at 5 yds, a sped-up choice route with a vertical stem (F, Y or X on the call line)",
+        "chops 1": "Stick China at 5 yds in 4 steps",
+        "chops 2": "Stick Nod at 5 yds",
+        "chops 3": "Go, alert, max split +4"
+      },
+      "protections": ["300 Scram", "200 Scram"],
+      "formations": ["[11] DOUBLE RT CLOSE (TY)", "[11] FAST RT TOUT (A)", "[11] TRIPS RT TITE UNO"],
+      "tags": ["Empty", "F", "Y", "X"],
+      "alerts": ["Go alert, max split +4"]
+    },
+    {
+      "key": "cofounder",
+      "indexTitle": "COFOUNDER",
+      "pageTitle": "COFOUNDER (EMPTY)",
+      "pages": [16],
+      "summary": "Empty quick concept built on a Faulk at 5 with a Shallow Cross under it, two Dunnys at 5 and a C.O. at 5. A Go alert sits outside. Against a known man look the Faulk becomes the first read.",
+      "progression": "1 Shallow Cross, 2 Faulk, 3 Dunny, 4 C.O.; vs known man the Faulk is 1",
+      "qb": "3 step. If you know it is man, start on the Faulk.",
+      "positions": {
+        "tagged": "Faulk at 5 yds (Y or F on the call line)",
+        "shallow": "Shallow Cross at 5 yds",
+        "dunny": "Dunny at 5 yds (two of them)",
+        "c.o.": "C.O. at 5 yds",
+        "outside": "Go, alert"
+      },
+      "protections": ["200 Scram", "300 Scram"],
+      "formations": ["[11] SPEED RT TOUT A", "[11] DOUBLE RT CLOSE A"],
+      "tags": ["Empty", "Y", "F"],
+      "alerts": ["Go alert", "Known man: Faulk is the first read"]
+    }
+  ]
+}

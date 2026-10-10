@@ -1,0 +1,454 @@
+{
+  "section": "pass-pro",
+  "source": "Rams 2022 (McVay), 05 Pass Pro",
+  "concepts": [
+    {
+      "key": "jet-vs-base-34",
+      "indexTitle": "JET VS. BASE (34)",
+      "pageTitle": "(+/-) 200(300) JET / 2(3) JET vs. BASE (34)",
+      "pages": [5],
+      "summary": "Jet is the six man sort protection: five linemen plus one back, with the other back released. Against a 3-4 the line sorts big to little, outside in, and the center does not tap his hat and point against base 3-4 people. The protection back double reads the two inside backers, first one off the ball, from the call side to the backside. Hot routes are built in.",
+      "qb": "Hots are built in. Move to the gun against any Tuff or Bug inside backer. Against a 34 double bug alert Roger or Louie; it takes two rushers to the back's side to throw hot.",
+      "hb": "Protection back: double read the inside backers, first off the ball, call side then backside. Against Bear, scan against four weak and alert the Hard call both ways (never Hard from gun). Release back: scat release.",
+      "positions": {
+        "OL": "Sort, big to little. Center: no tap hat and point against base 3-4. Alert Hard (hip tap) both sides with the protection back, no Hard in gun. Against Bear or a 34 double bug alert Roger or Louie. Against a 55 front the center goes to four down rules and taps hat and points.",
+        "QB": "Hots built in. Gun against Tuff or Bug backers."
+      },
+      "protections": ["2 Jet (200 Jet)", "3 Jet (300 Jet)"],
+      "fronts": ["35 G", "35", "37", "34 Odd", "34 Jam", "55"],
+      "tags": ["+/-", "200", "300"],
+      "alerts": ["Hard (hip tap) both sides, not from gun.", "Roger or Louie against Bear and the 34 double bug.", "Flipper and Ringo Out are drawn against 37.", "Center can call Ringo or Lucky Out per game plan when uncovered.", "Center flash signal against 34 Jam.", "Back alert scan on every picture."]
+    },
+    {
+      "key": "jet-vs-base-43",
+      "indexTitle": "JET VS. BASE (43)",
+      "pageTitle": "(+/-) 200(300) JET / 2(3) JET vs. BASE (43)",
+      "pages": [6],
+      "summary": "Jet against four down fronts becomes a six man sort and slide. The line slides away from the call, taking the four down linemen and the first backer inside out on the slide side, with Ringo and Lucky as the adjustments. The protection back double reads inside out starting head up on the center.",
+      "qb": "Hots built in. Move to the gun against Tuff backers. Two strong to throw hot. Alert Flipper.",
+      "hb": "Protection back: double read inside out from the center. Against Bear, alert the first defender outside the tackle and scan against four weak. Hard call, never from gun. Release back: scat release.",
+      "positions": {
+        "OL": "Slide away from the call. Four down plus the first backer inside out away from the call. Alert Ringo and Lucky. The digit side guard alerts Hard (hip tap) with the protection back, no Hard in gun. Stick at Hard.",
+        "QB": "Hots built in, Flipper alert."
+      },
+      "protections": ["2 Jet (200 Jet)", "3 Jet (300 Jet)"],
+      "fronts": ["59", "55 Wide", "25 Bear", "43 (6-1)", "57", "25"],
+      "tags": ["+/-", "200", "300"],
+      "alerts": ["Lucky against 59.", "Flipper and Ringo Out against 55 Wide.", "Center flash signal against 25 Bear.", "Ringo Out against 43 (6-1).", "Sort outside in with tap hat and point against 57 and 25.", "Back alert scan."]
+    },
+    {
+      "key": "jet-vs-sub",
+      "indexTitle": "JET VS. SUB",
+      "pageTitle": "(+/-) 200(300) JET / 2(3) JET vs. SUB",
+      "pages": [7, 8, 9, 10],
+      "summary": "Four pages of Jet pictures against nickel and dime fronts with no new rules, only the calls drawn on each front. Lucky and Ringo set the slide against over and under looks, Down Down handles a spinner, Giant Rt or Lt handles a Giant look, and odd spacing gets a sort call. The center makes every middle call in Jet.",
+      "qb": "Alert the middle call. Alert a possible Flipper. Possible Louie call with one for the back against 42 Under Giant. Giant Rt call against the Giant looks.",
+      "hb": "Alert scan on every picture.",
+      "positions": {
+        "OL": "Tap hat and point. Sort inside out or outside in by the picture. Stick against spinner and KC looks. Against 33 Odd the playside guard and tackle point and track the big men. Against 32 Even Spinner declare the J down and point the Mike or Will. Two unknown backer or DB types in an odd spacing structure get sorted outside in (57 KC, 31 Odd).",
+        "QB": "Middle call alert, Flipper alert."
+      },
+      "protections": ["2 Jet (200 Jet)", "3 Jet (300 Jet)"],
+      "fronts": ["42", "42 Even Spinner", "42 Over", "42 Under", "42 Over KC Spinner", "42 Under Spinner", "42 Over KC", "42 Under KC", "32 Even Spinner", "42 Under Giant", "42 Over Giant", "42 Over Jam", "51 Jam", "42 Over Mike Bug", "42 Over Tuff Bug", "33 Odd", "42 Big Abby", "42 Abby Cov 1", "42 Tite Dbl Bug", "42 Even Giant Bug Mon", "42 Mike Mug", "57 KC", "31 Odd", "32 Big Triangle"],
+      "tags": ["+/-", "200", "300"],
+      "alerts": ["Lucky against 42, 42 Over, 32 Even Spinner, 42 Over Tuff Bug and 42 Even Giant Bug Mon.", "Ringo against 42 Even Spinner, 42 Under, 42 Big Abby, 42 Abby Cov 1 and 42 Tite Dbl Bug.", "Down Down against spinner looks.", "Giant Rt or Lt call against the Giant fronts.", "Ron and Lou are only used against a G bubble, per game plan.", "Possible Roger call; possible Lucky or Roger on the Mike.", "Center flash signal against Jam and Mug looks.", "No Hards in gun.", "Tuff tag drawn with Ringo or Lucky against the bug and Abby looks.", "At Games noted on several pictures."]
+    },
+    {
+      "key": "jet-vs-abby",
+      "indexTitle": "JET VS. ABBY",
+      "pageTitle": "200(300) / 2(3) JET ABBY PROTECTION ADJUSTMENT (WADE/PHILLIPS)",
+      "pages": [11],
+      "summary": "The Jet adjustment against a 42 Abby look. The line slides away from the call: the playside guard and tackle block the men on them, and the center, backside guard and backside tackle take the backside A, B and C gaps. The back has the call side A gap defender with no scan.",
+      "qb": "Make the Wade or Phillips call. Wade is the first name and points left, Phillips is the last name and points right.",
+      "hb": "Block the call side A gap defender if he comes. Set in the A gap and watch for anyone looping into it. No scan.",
+      "positions": {
+        "OL": "Slide away from the call. Playside guard and tackle man on. Center and backside guard and tackle: backside A, B, C gaps. Stick and point.",
+        "QB": "Wade (left) or Phillips (right) call."
+      },
+      "protections": ["2 Jet Abby", "3 Jet Abby"],
+      "fronts": ["42 Abby"],
+      "tags": ["Wade", "Phillips", "Abby"],
+      "alerts": ["Back stays in the A gap and watches for loopers."]
+    },
+    {
+      "key": "scat-scram-vs-base-34",
+      "indexTitle": "SCAT / SCRAM VS. BASE (34)",
+      "pageTitle": "(+/-) 200 (300) - 2 (3) SCAT (SCRAM) (BANG) vs. BASE (34)",
+      "pages": [12],
+      "summary": "Scat and Scram are the five man protection with both backs released. Against a 3-4 the line uses most dangerous man rules with a Drag Drag call inside out, and the same against Jam, with Big Dual the alert at a squeeze on either side. Against four down fronts the line has the four linemen and the first backer inside out away from the call, with the center setting the point from the game plan. The number at the front of the call (2 or 3) tells the home back which way to scat.",
+      "qb": "Four down: hot off the extra rusher to the slide side, and off the extra rusher away from the slide (the hot symbol is unreadable in the text). Double bubble: Drag, hot from either side. Jam: hot from either side.",
+      "hb": "Scat. The 2 or 3 at the start of the call sets the scat direction from the home spot. Plus or minus adjusts the alignment. Fullback: scat.",
+      "positions": {
+        "OL": "Base 34: most dangerous man, Drag Drag inside out. Four down: four linemen plus the first backer inside out away from the call to the next threat. Center designates the point; if motion moves the point, change the call. Alerts: Rip and Liz, Ralph and Lester, Big Dual, Flipper.",
+        "F": "Scat.",
+        "H": "Scat, direction from the digit.",
+        "Y": "On Bang, inside receivers and tight ends bang the outside rusher on the way into the route."
+      },
+      "protections": ["2 Scat (200)", "3 Scat (300)", "2 Scram", "3 Scram"],
+      "fronts": ["35", "34 Odd", "35 G", "37", "55", "34 Jam"],
+      "tags": ["+/-", "Bang", "200", "300"],
+      "alerts": ["Drag Drag against 3-4 and Jam.", "Big Dual at a squeeze on both sides.", "Rip drawn against 37.", "Center uses four down rules against 55.", "Bang: inside receivers chip the edge rusher on their release."]
+    },
+    {
+      "key": "scat-scram-vs-base-43",
+      "indexTitle": "SCAT / SCRAM VS. BASE (43)",
+      "pageTitle": "(+/-) 200 (300) - 2 (3) SCAT (SCRAM) (BANG) vs. BASE (43)",
+      "pages": [13],
+      "summary": "Scat and Scram pictures against four down base fronts. The line slides with Rip or Liz to the call and the center points; Big Dual at a squeeze is the alert on nearly every picture. Against 57 Jam the call is Drag Drag with Jam.",
+      "hb": "Scat; the digit sets the direction.",
+      "positions": {
+        "OL": "Four down rules: four linemen plus the first backer inside out away from the call. Rip or Liz to the call. Big Dual at a squeeze. Middle call drawn against 59."
+      },
+      "protections": ["2 Scram (200)", "3 Scat (300)", "3 Scram (300)"],
+      "fronts": ["55 Wide", "25 G", "25 Cub", "25", "59", "57", "53", "57 Jam"],
+      "tags": ["+/-", "Bang", "200", "300"],
+      "alerts": ["Rip against 25 and 57 Jam, Liz against 53 and 59.", "Flipper drawn against 59.", "Big Dual at a squeeze on every picture.", "Drag Drag and Jam against 57 Jam."]
+    },
+    {
+      "key": "scat-scram-vs-sub",
+      "indexTitle": "SCAT / SCRAM VS. SUB",
+      "pageTitle": "(+/-) 200 (300) - 2 (3) SCAT (SCRAM) (BANG) vs. SUB",
+      "pages": [14, 15, 16],
+      "summary": "Three pages of Scat and Scram pictures against nickel fronts. Rip and Liz set the slide, Drag Drag handles the KC and spinner and Giant looks, Down Down handles a spinner, and Lester Lester or Ralph Ralph is the answer to four to the strong side. Bang is drawn on the receivers against several looks.",
+      "qb": "Lester Lester against four strong (42 Under). Ralph Ralph against four strong (33 Odd Will On). Alert the Ralph call against the spinner looks.",
+      "hb": "Scat, direction from the digit. Against 33 Odd Will On the back is at the hot.",
+      "positions": {
+        "OL": "Rip or Liz to the call. Drag Drag against KC, Kong, Giant and spinner looks. Playside tackle sticks on the 3 technique against 42 Under. Big Dual at a squeeze. Giant call against Giant looks.",
+        "Y": "Bang the edge rusher when Bang is on."
+      },
+      "protections": ["2 Scram (200)", "3 Scram (300)", "2 Scat (200)"],
+      "fronts": ["42", "42 Over", "42 Under", "42 Under KC", "42 Over Spinner", "42 Over KC", "42 Under Spinner", "42 Even Spinner", "42 Over KC Kong", "51 Jam", "42 Mike Tuff", "42 Under KC Kong", "42 Under Giant", "42 Over Giant", "32 Even Spinner", "42 Over Jam", "33 Odd Will On", "32 Odd", "42 Over Tuff Bug 00"],
+      "tags": ["+/-", "Bang", "200", "300"],
+      "alerts": ["Liz against 42, 32 Even Spinner and 42 Under Giant; Rip against 42 Over, 42 Over Tuff Bug 00 and 42 Over Giant.", "Down Down against spinner and KC looks.", "Flipper drawn against 42 Over KC.", "Possible Ralph call against 42 Over Giant and 42 Under Giant.", "Drag Drag and Jam against 42 Over Jam."]
+    },
+    {
+      "key": "58-59-vs-base",
+      "indexTitle": "58 / 59 VS. BASE",
+      "pageTitle": "58-59 vs BASE",
+      "pages": [17],
+      "summary": "58 and 59 are the full turn protection, used as the audible protection from one back sets. Every lineman blocks the first gap away from the call, left for 58 and right for 59, and blocks the man the center points to rather than turning blindly. The tight end is the man element on the first lineman from the C gap out, and the back aligns away from the call and takes the C to D gap off the tight end's block.",
+      "hb": "Align away from the call. Block the C to D gap off the tight end's block. Fullback: free release.",
+      "positions": {
+        "OL": "First gap away from the call (L for 58, R for 59). Playside tackle: alert the call side guard bubble, set on the end with eyes on the inside gap, and alert an inside push through the gap. Block the man who is pointed to.",
+        "Y": "Man element: first lineman from the C gap out.",
+        "F": "Free release.",
+        "H": "C to D gap off the tight end's block."
+      },
+      "protections": ["58", "59"],
+      "fronts": ["25", "34", "55", "53 Bear", "57 (3)"],
+      "tags": ["L", "R"],
+      "alerts": ["Playside tackle alerts the guard bubble and the inside push."]
+    },
+    {
+      "key": "58-59-vs-sub",
+      "indexTitle": "58 / 59 VS. SUB",
+      "pageTitle": "58-59 VS SUB",
+      "pages": [18],
+      "summary": "The same full turn rules drawn against nickel fronts. Line blocks the first gap away from the call and the man that is pointed, the tight end has the first lineman from the C gap out, the fullback is free, and the back aligns away from the call and takes the C to D gap off the tight end.",
+      "hb": "Align away from the call, C to D gap off the tight end. Fullback free release.",
+      "positions": {
+        "OL": "First gap away from the call, L or R. Playside tackle alerts the guard bubble and inside push.",
+        "Y": "First lineman from the C gap out."
+      },
+      "protections": ["58", "59"],
+      "fronts": ["42 Over KC", "42 Over Jam", "42 Abby", "42 Under", "42 Over", "42 Over Spinner"],
+      "tags": ["L", "R"]
+    },
+    {
+      "key": "weezy-pass-16-17-wanda-y-sift",
+      "indexTitle": "WEEZY- PASS 16-17 (36-37) WANDA Y SIFT (Y BEND-LICK)",
+      "pageTitle": "PASS 16-17 (36-37) WANDA Y SIFT (BEND - LICK)",
+      "pages": [20],
+      "summary": "Weezy is the play pass off the 16-17 Wanda midzone with the Y sifting or bending back across to the weak side edge man. The playside line sells the zone, the backside tackle, guard and center sell the run for three hard steps and then stop and square up to their gaps. Lick can be added by the call. Weezy always carries a directional term (Bengal, Frog, Madison).",
+      "qb": "Fake 16-17 (36-37) Wanda.",
+      "hb": "Deepen the alignment and sell Wanda through the C gap. Alert any secondary blitz playside, be the outside sideboard of the tackle, then check the flat.",
+      "positions": {
+        "OL": "Sell Wanda frontside. Backside tackle, guard and center: three aggressive run steps, then stop and square up to the gap.",
+        "Y": "Sift or bend to the weak side edge man, the first defender outside the tackle.",
+        "X": "Alert Rib or Lick.",
+        "Z": "Alert Rib or Lick.",
+        "F": "Alert Rib or Lick.",
+        "H": "Sell the run, sideboard, check flat."
+      },
+      "protections": ["Weezy Bengal (P17 Wanda Y Sift)", "Weezy Frog Sift (P17 Wanda Y Bend Sift)", "Weezy Madison (P16 Wanda Y Sift)", "Weezy Madison Lick (P16 Wanda Y Bend Lick)"],
+      "fronts": ["33 Odd (22)", "42 Ov (3)", "42 Ov (22)", "42 Un Jam"],
+      "tags": ["Sift", "Bend", "Lick", "Bengal", "Frog", "Madison"],
+      "alerts": ["Back alerts the secondary blitz playside on every picture.", "Line calls drawn: A, B, Single, Gang, Fan, Bear."]
+    },
+    {
+      "key": "foam-fizz-pass-17-waggle-wiggle",
+      "indexTitle": "\"FOAM\" / \"FIZZ\" PASS 17 (37) WAGGLE-WIGGLE (FLY-FLOW)",
+      "pageTitle": "\"FOAM\" \"FIZZ\" PASS 17 (37) WAGGLE-WIGGLE (FLY-FLIGHT-FLOW-FLOCK)",
+      "pages": [21, 22],
+      "summary": "Play pass selling 17 (37) Wanda where the F waggles or wiggles across to the strong side edge man. Foam pairs with Waggle and Fizz with Wiggle on the pictures. The Y blocks the first defender outside the backside tackle. Fly, Flight, Flow and Flock are the motion versions.",
+      "qb": "Fake 17 Wanda, get depth, feel the edge man.",
+      "hb": "Deepen and sell Wanda through the C gap. Alert the secondary blitz playside, outside sideboard of the tackle, check flat.",
+      "positions": {
+        "OL": "Sell 17 Wanda frontside. Backside tackle, guard and center: three aggressive run steps, then stop and square up to the gap.",
+        "Y": "Block the first defender outside the backside tackle.",
+        "F": "Waggle (or Wiggle) to the strong side edge man: the first defender inside or outside the tight end's block.",
+        "H": "Sell the run, sideboard, check flat."
+      },
+      "protections": ["Foam", "Fizz Flow", "Fizz Fly", "Fizz Flight", "Fizz Flock"],
+      "fronts": ["34", "25 G", "25", "57", "53", "57 Bear", "42", "42 Un G", "42 Jam", "42 Un KC"],
+      "tags": ["Waggle", "Wiggle", "Fly", "Flight", "Flow", "Flock"],
+      "alerts": ["Back alerts the secondary blitz playside.", "Line calls drawn: A, B, C, Single, Fan, Gang, Bear."]
+    },
+    {
+      "key": "mays-milf-pass-15-14-willie",
+      "indexTitle": "\"MAYS\" / \"MILF\" PASS 15-14 (35-34) WILLIE (FLY/FLOW)(SOLID)",
+      "pageTitle": "\"MAYS\" \"MILF\" PASS 15-14 (35-34) WILLIE (SOLID) (FLY-FLIGHT-FLOW-FLOCK)",
+      "pages": [23, 24, 25, 26, 27],
+      "summary": "Willie is the seven man play pass off the 15-14 tite zone, eight men with the Solid tag. The line sells tite zone with low pads and works to the Mike; it is a Mike based protection. The backside tackle and tight end share the end and the Sam with a Man, B or Out call. The back checks the Will to any secondary blitz and then the flat. Mays and Milf are the names for the Fly and Flow versions (Milf is drawn on the Flow pictures).",
+      "qb": "Fake 15-14 Wanda. Alert a new Mike. With Solid, open to the call.",
+      "hb": "Deepen and sell 15-14. Check the Will to any secondary blitz, then the flat. A new Mike means no abort strong. On Solid, make a great fake and drift to the flat.",
+      "positions": {
+        "OL": "Sell tite zone, low pads, work to the Mike. Backside tackle and tight end have the end and Sam (Man, B, Out). Against 34 and 57 with the Will on the ball, Fan to the call side. Against Jam: B Out. Against Bear with a choke player a special call (unreadable in the text). On Solid: alert Fan playside against a two look, covered playside guard sticks with a tite zone jump set, alert Hard, no Hard in gun.",
+        "Y": "Man on the Sam or the end. Out, or T.O., against a choke player.",
+        "F": "Solid: block the number four defender strong.",
+        "H": "Sell the run, Will to secondary blitz, flat."
+      },
+      "protections": ["P15 Willie", "P14 Willie", "P15 Willie Flow (Milf)", "P14 Willie Flight", "P15 Willie Flock", "P15 Willie Solid", "P14 Willie Solid"],
+      "fronts": ["42 Ov (33)", "42 (22)", "42 Un Jam (11B)", "33 (22)", "42 Un (11)", "42 Un G (11)", "Cat Saw", "Dbl Cat Saw", "42 Ov NW3", "Penny M1", "Nickel Cat Saw", "Nickel 61", "42 Ov Wham", "Nickel 61 (Sam On)", "59 (3)", "25 (3 Wk)", "55 (3 Wk)", "34 (4)", "53 Bear", "57 (3)", "61 (Buzz)", "37", "34 Odd", "35 G", "34 Odd Bear", "35", "55"],
+      "tags": ["Mays", "Milf", "Solid", "Fly", "Flight", "Flow", "Flock"],
+      "alerts": ["Line calls drawn: Single, Chip Single, Fan, Money, Double, B Out, Out, T.O., Mob, Gone.", "No Hard; alert Pizza against the under looks. Center alerts Pizza Come On against a Tuff Will.", "C'mon call when the backer cracks his cleats.", "Alert the under adjustment and new Mike ID.", "Against 42 Ov NW3 the line does not Fan; the back has the nickel.", "Playside tackle Fan: hip tap. At Hard drawn on the Bear and buzz looks.", "Nickel on the line and nickel walked pictures (Nickel 61).", "Possible Fan per game plan; alert Go against 42 Ov Wham.", "Solid: combination per game plan against 35 G and 55.", "Back alerts any secondary blitz on every picture."]
+    },
+    {
+      "key": "paddy-pass-12-13-duo",
+      "indexTitle": "\"PADDY\" PASS 12-13 DUO (FLY-FLIGHT/FLOW-FLOCK)",
+      "pageTitle": "\"PADDY\" PASS 12-13 DUO (FLY-FLIGHT/FLOW-FLOCK)",
+      "pages": [28, 29],
+      "summary": "Paddy is the seven man play pass off 12-13 Duo, used against sub defenses. The line has the four down linemen plus the Mike and Will, sells the run with low pads and uses the Duo calls. The Y blocks the end with Tram as the alert. Paddy is assumed to the right; the left side uses directional terms.",
+      "qb": "Run the 12-13 Duo action and fake with the hands, the ball and the eyes. Five step timing.",
+      "hb": "Sell 12-13 Duo. Alert any secondary blitz.",
+      "positions": {
+        "OL": "Four down linemen and the Mike and Will. Duo calls. Sell the run with low pads.",
+        "Y": "Block the end. Alert Tram.",
+        "H": "Sell Duo, secondary blitz."
+      },
+      "protections": ["Pass 12 Duo", "Pass 13 Duo", "Pass 12 Duo Flock", "Pass 12 Duo Flow", "Pass 12 Duo Flight"],
+      "fronts": ["42 Split", "42 Jam", "42 Abby", "42 Under", "42 Over", "42", "33 Mike On", "42 Under KC", "42 Under Sam On", "Penny"],
+      "tags": ["Paddy", "Fly", "Flight", "Flow", "Flock"],
+      "alerts": ["Line calls drawn: Doom, Doom Center, Doom at Dallas, Rake, Lawn, Ace, Tram, A, Fan, T.O., Money.", "Back alerts any secondary blitz on every picture."]
+    },
+    {
+      "key": "pass-12-13-dime",
+      "indexTitle": "PASS 12-13 DIME (FLY/FLOW)",
+      "pageTitle": "PASS 12-13 (13-12) DIME (FLY-FLIGHT/FLOW-FLOCK)",
+      "pages": [30, 31, 32],
+      "summary": "Dime is the six man play pass that sells 12-13 Duo. The line sells Duo on the backside and man blocks the call side; against four down it has the four linemen plus the first backer inside out away from the call. The back has the playside backer. Against Jam or Bear the call is Bullseye.",
+      "qb": "Run the Duo action, fake with hands, ball and eyes. Five step timing.",
+      "hb": "Sell 12-13 Duo. Block the playside backer. Alert any secondary blitz.",
+      "positions": {
+        "OL": "Sell Duo backside, man block call side. Four down plus the first backer inside out away from the call. Alerts: Rake, Lawn, A. Playside guard alerts Hard (hip tap) with the protection back. Bullseye against Jam and Bear.",
+        "H": "Playside backer, secondary blitz."
+      },
+      "protections": ["Pass 12 Dime", "Pass 13 Dime", "Pass 12 Dime Flock", "Pass 12 Dime Flow", "Pass 13 Dime Fly", "Pass 12 Dime Fly"],
+      "fronts": ["42 Split", "42 Over Jam", "42 Under", "42 Over", "42", "42 Un G", "42 Under KC", "(Nickel) 6-1", "42 Abby", "42 Ov Wham", "33 Sam On", "35", "Nickel Cat Saw", "Dbl Cat Saw", "Cat Saw", "42 Over Jam M1"],
+      "tags": ["Fly", "Flight", "Flow", "Flock"],
+      "alerts": ["Line calls drawn: Rake, Lawn, Ace, A, Fan, Money, Stick, Man, Hard, Bullseye.", "Lucky Out, Ringo Out and Roger against the Cat Saw looks.", "Poker against 42 Over Jam.", "Alert Go against 42 Ov Wham.", "At Hard on several pictures.", "Back alerts any secondary blitz."]
+    },
+    {
+      "key": "pass-12-13-punch",
+      "indexTitle": "PASS 12-13 (32-33) (38-39) PUNCH (FLY/FLOW)",
+      "pageTitle": "PASS 12-13 (32-33) PUNCH (FLY-FLIGHT/FLOW-FLOCK)",
+      "pages": [33],
+      "summary": "Punch is a six man play action protection with an attack pull, built off the 12-13 (32-33) Punch run to attack six man fronts. The line gap protects with a hard run sell and the backside guard pulls to the edge man, with the back as the inside sideboard of the puller. The tight end releases. The pictures show a jump set, a one look assess, and the hot.",
+      "qb": "Fake the Punch and sell it with the sink of the ball and the back. One look, assess, hot if needed.",
+      "hb": "Fake 12-13 (32-33) Punch. Block the number one spot and be the inside sideboard of the pulling guard, then release to the called route.",
+      "positions": {
+        "OL": "Gap protection with an aggressive run sell. Backside guard attack pulls for the edge man. Jump set.",
+        "Y": "Release.",
+        "H": "Fake, number one spot, inside sideboard of the puller, release."
+      },
+      "protections": ["Pass 12 Punch", "Pass 32 Punch"],
+      "fronts": ["42", "42 Over W-3", "42 Split", "42 MC", "42 M-2"],
+      "tags": ["Punch", "Fly", "Flight", "Flow", "Flock"],
+      "alerts": ["Line calls drawn: Deuce, Dallas, Me, Choke.", "Dallas on the move: communicate the Go call.", "Hot drawn on each picture."]
+    },
+    {
+      "key": "laker-grizzly-t",
+      "indexTitle": "LAKER-GRIZZLY (T)",
+      "pageTitle": "LAKER-GRIZZLY (T) (SUCKER-STAPLE-PIN-SEAL)",
+      "pages": [34],
+      "summary": "Laker and Grizzly are keeper protections off the midzone where the QB pulls up and sets instead of running. The backside guard and tackle invite the backside tackle inside and pin him so the QB can set up in the C gap area, staying tied together so the defenders cannot read pass. The sifter sifts backside and releases late if nobody threatens. Sucker, Staple, Pin and Seal are the tags.",
+      "qb": "Fake 16-17 and keep away. Get depth and set up.",
+      "hb": "Great fake on 16-17. Alert a strong safety, corner or D gap rusher to the play side. Flat.",
+      "positions": {
+        "OL": "Run sell 17-16 Wanda. Backside guard and tackle invite the backside tackle in and pin him. Run combination calls. Playside tackle alerts the T call for an alley pull.",
+        "Y": "Sifter: sift backside, release late with no outside threat. If the edge man does not close, release and give the QB a quick throw.",
+        "H": "Fake, play side edge rusher, flat."
+      },
+      "protections": ["Laker Sucker", "Grizzly Pin", "Laker T", "Grizzly Staple"],
+      "fronts": ["25 (3 Wk)", "42 Ov 33", "42 33", "42 Un"],
+      "tags": ["T", "Sucker", "Staple", "Pin", "Seal"],
+      "alerts": ["Back alerts the secondary blitz strong.", "Line calls drawn: Single, A, B."]
+    },
+    {
+      "key": "randall-lamar-keep",
+      "indexTitle": "\"RANDALL-LAMAR\" FAKE 16-17 (SIFT/T) KEEP LT-RT (SLIDE)",
+      "pageTitle": "\"RANDALL-LAMAR\" FAKE 16-17 (SIFT/T) KEEP LT-RT (SLIDE)",
+      "pages": [36],
+      "summary": "Randall and Lamar are the break contain keepers off the midzone. The line sells 16-17 Wanda with run combination calls for five steps and then finishes anyone retracing to the play side. The sifter sifts backside and releases late if the edge does not close. Skate adds a slide, and the coaching point is that the line stays firm on the line of scrimmage with Skate. T is the tackle alley pull.",
+      "qb": "Fake 16-17 and keep away. Get depth, feel the edge man.",
+      "hb": "Great fake on 16-17. Alert a strong safety, corner or D gap rusher to the play side. Flat.",
+      "positions": {
+        "OL": "Sell 16-17 Wanda, combination calls, five steps then finish retracers playside. Playside tackle alerts the T call for the alley pull. Stay firm on the line with Skate.",
+        "Y": "Sifter: sift backside, release late with no outside threat. If the edge man does not close, release and give the QB a quick throw.",
+        "H": "Fake, play side edge rusher, flat."
+      },
+      "protections": ["Randall", "Lamar", "Lamar T", "Randall Lob", "Lamar Skate"],
+      "fronts": ["42 Un G", "34 (4)", "42 Jam", "42 Ov 33", "55 (3 Wk)", "57 (3)"],
+      "tags": ["Sift", "T", "Slide", "Skate", "Lob"],
+      "alerts": ["Back alerts the secondary blitz strong.", "Line calls drawn: Single, B, Blow, Fan, Gang."]
+    },
+    {
+      "key": "reptile-lizard-keep",
+      "indexTitle": "REPTILE-LIZARD",
+      "pageTitle": "\"REPTILE-LIZARD\" FAKE 15-14 KEEP RT-LT",
+      "pages": [37],
+      "summary": "Reptile and Lizard are the break contain keepers off the tite zone. The line sells 15-14 Wanda with combination calls for five steps and then finishes retracers to the play side. Sifter, back and QB rules are the same as Randall and Lamar. Flock and Fly are the motion versions.",
+      "qb": "Fake 14-15 and keep away. Get depth, feel the edge man.",
+      "hb": "Great fake on 14-15. Alert a strong safety, corner or D gap rusher to the play side. Flat.",
+      "positions": {
+        "OL": "Sell 15-14 Wanda, combination calls, five steps then finish retracers playside.",
+        "Y": "Sifter: sift backside, release late with no outside threat. If the edge man does not close, release and give the QB a quick throw.",
+        "H": "Fake, play side edge rusher, flat."
+      },
+      "protections": ["Reptile", "Lizard", "Lizard Flock", "Lizard Fly"],
+      "fronts": ["42 Un G", "34 (4)", "42 Jam", "42 Ov 33", "55 (3 Wk)", "57 (3)"],
+      "tags": ["Flock", "Fly", "Skate"],
+      "alerts": ["Back alerts the secondary blitz strong.", "Line calls drawn: Single, A, B, Blow, Fan, Mob."]
+    },
+    {
+      "key": "roll-rt-lt",
+      "indexTitle": "ROLL RT-LT",
+      "pageTitle": "ROLL R-L (FLY)",
+      "pages": [38],
+      "summary": "Roll is the break contain keeper off the midzone where the back and QB fake away and the back gets to the flat right away. The line sells 16-17 Wanda away from the call, and the backside tackle pins and secures the 3 technique because the back leaves fast.",
+      "qb": "Fake 16-17 and keep to the tagged roll side.",
+      "hb": "Flat to the play, quick.",
+      "positions": {
+        "OL": "Sell 16-17 Wanda opposite the call. Backside tackle pins and secures the 3 technique.",
+        "H": "Quick flat to the roll side."
+      },
+      "protections": ["Roll R", "Roll L"],
+      "fronts": ["42 Un G", "42 Ov 33", "55 (3 Wk)", "57 (3)"],
+      "tags": ["Fly"],
+      "alerts": ["Back alerts the secondary blitz strong.", "Line calls drawn: Single, A, B."]
+    },
+    {
+      "key": "ruffles-lays-hb-chip-screen",
+      "indexTitle": "\"RUFFLES-LAYS\" HB CHIP SCREEN",
+      "pageTitle": "\"RUFFLES-LAYS\" JET (2-3 JET) HB CHIP SCREEN LT-RT",
+      "pages": [40, 41],
+      "summary": "Chip screen to the back off Jet protection with two count timing. The line uses Jet rules with Ringo or Lucky to the screen side; the playside tackle invites the inside rush, and the playside guard, center and backside guard block two counts and release. The guard and center use a you/me call off the tackle's alignment to decide who is first out. The back sells downhill, chips an outside rusher at three and a half yards, turns back over the inside shoulder and catches the ball in front of him.",
+      "qb": "Three step drop and give ground to the screen side.",
+      "hb": "Scan the defense before the snap. Sell downhill to the C/D gap. Chip the outside rusher at three and a half yards if he goes outside the tackle. Turn back over the inside shoulder and catch the ball in front of you.",
+      "positions": {
+        "OL": "Jet rules, Ringo or Lucky to the screen. Against known pressure leave one for the back. Guard and tackle away from the screen use Scat rules with Big Dual at a squeeze. Playside tackle sets to invite the inside rush; the back chips if the end goes outside. Playside guard, center and backside guard block two counts then release. First out blocks the first defender screen side, second out the second. If second out and the lineman does not rush hard, stick on him. Against Jam and Abby the playside guard is first out. Backside guard adds on against a jet technique rusher and rat kills to seal the middle. Odd spacing: Sort Sort, both guards release. Both playside guard and center covered: guard first out.",
+        "X": "Three by one playside receiver: block the deep defender; against cloud release inside to get him.",
+        "H": "Chip, turn, catch."
+      },
+      "protections": ["Ruffles", "Lays", "2 Jet", "3 Jet"],
+      "fronts": ["42 Ov 44", "42 33 Wk", "42 Under Jam", "42 Un G 33", "42 Split 22 Tampa", "42 Abby 44", "42 Un KC", "42 Un 33"],
+      "tags": ["Lt", "Rt"],
+      "alerts": ["Lucky, Ringo, Ringo Tuff and Poker drawn by front.", "QB hot off the end against 42 Abby 44.", "Receivers block the deep defender, near half safety and far half safety (B.D.D., N.H.S., F.H.S.)."]
+    },
+    {
+      "key": "house-hefner-willie-screen",
+      "indexTitle": "\"HOUSE\" / \"HEFNER\" LT-RT PASS 15-14 WILLIE SCREEN LT-RT TO HB",
+      "pageTitle": "\"HOUSE\" \"HEFNER\" LT-RT PASS 15-14 WILLIE SCREEN LT-RT TO HB",
+      "pages": [42],
+      "summary": "Play action screen to the back off Wanda or Flash action with three count timing and a C gap catch point. House sells Wanda, Hefner sells Flash, and it is only run to a G bubble. The line fakes the 6-7 hole technique with the Willie assignments, and the frontside guard, center and backside guard block three counts before releasing. The playside guard calls Double to send the tackle out if he cannot get through against slot pressure.",
+      "qb": "Fake the tite zone, seven steps and drift, throw the screen.",
+      "hb": "Fake tite zone to the screen side guard. Check the protection, bump to the screen, and screen off a blitzer. Key the playside guard for the best release (A or B gap), turn to the ball, chase the outside hip of the near blocker.",
+      "positions": {
+        "OL": "Fake the 6-7 hole, Willie assignments. Frontside guard, center and backside guard block three counts then release. First out blocks the most dangerous man, second out the next. On Flash, see through two gaps. Playside guard calls Double against slot pressure.",
+        "H": "Fake, check, bump, catch, chase."
+      },
+      "protections": ["House L", "Hefner R", "Pass 15-14 Willie"],
+      "fronts": ["42 (22)", "42 Over (22)", "42 NW3 33Wk"],
+      "tags": ["Lt", "Rt", "Flash", "Wanda"],
+      "alerts": ["Run to a G bubble only.", "Screen off the blitzer.", "Alert Double if the playside guard cannot get through.", "Receivers block the near half safety and deep defender; a high cross and pylon route are drawn."]
+    },
+    {
+      "key": "roof-ceiling-willie-screen",
+      "indexTitle": "\"ROOF-CEILING\" (FLY/FLOW) PASS 15-14 WILLIE SCREEN RT-LT TO Y",
+      "pageTitle": "\"ROOF-CEILING\" (FLY/FLOW) PASS 15-14 WILLIE SCREEN RT-LT TO 'Y'",
+      "pages": [43],
+      "summary": "Three count screen to the tight end off the 15-14 Willie protection, catch point in the C/D gap area with a Split landmark. The screen side tackle always releases and the center is second out when the front allows; if everyone is covered only the tackle goes. The Y blocks three counts and catches on the upfield shoulder.",
+      "qb": "Fake 15-14 Wanda, set up looking away from the screen, retreat from the first pressure, and throw to the Y off seven steps on the upfield shoulder.",
+      "hb": "Fake 15-14 Wanda through the B gap. Block the secondary blitz weak.",
+      "positions": {
+        "OL": "Screen side tackle always releases; watch for a match player on the tight end. Center second out when the structure allows. All covered: only the screen side tackle releases.",
+        "Y": "Block three counts. Catch on the upfield shoulder. Speed up against a blitzer. C/D gap landmark. T.O. call against a choke player.",
+        "H": "Fake through the B gap, secondary blitz weak."
+      },
+      "protections": ["Roof", "Ceiling", "Roof Fly", "Ceiling Fly", "Pass 15-14 Willie"],
+      "fronts": ["42 (22)", "42 Ov (33 Wk)", "25 Jam (Zone)", "42 (33)", "42 Un G", "42 Un Son"],
+      "tags": ["Fly", "Flow", "Rt", "Lt"],
+      "alerts": ["Alert the under adjustment and new Mike ID.", "Center uncovered note against 42 Un Son.", "Line calls drawn: Single, A, B, Sift.", "Receivers block the deep defender, near half safety and most dangerous deep defender."]
+    },
+    {
+      "key": "klay-curry-ge",
+      "indexTitle": "KLAY-CURRY (G.E.)",
+      "pageTitle": "KLAY-CURRY (G.E.)",
+      "pages": [44],
+      "summary": "Quick perimeter screen to the outside receiver of a three man surface. G.E. means the tackle grabs the end. The line sets, stops and goes to the number three, four and five defenders counted outside in and then the most dangerous man, with Rip or Liz to the call. The #1 pushes up three steps against a bump or one against access, #2 blocks the corner, #3 blocks the most dangerous man.",
+      "qb": "Quick game footwork. Ready to drift toward the play and change the arm angle.",
+      "hb": "Protect off the tackle's hip and alert a squeeze by the tackle.",
+      "positions": {
+        "OL": "Set, stop and go. Playside tackle to the #3 defender outside in, reading how deep he is and how he is playing. Playside guard to #4, staying on a 3 technique who does not rush or jets upfield. Center to #5, staying on an A gap defender who does the same. Guard and center take #4 by who gets out first. Backside guard to the most dangerous man: backside backer, post safety or backside split safety. Screen tackle and guard read the perimeter for coverage changes. Alert slot pressure. Blitzers are allowed through, except against zero. With G.E. the tackle jumps the defender and every lineman adds one to his count. Against zero snatch the man in your gap; only the tackle gets out.",
+        "X": "#1: push up three steps against a bump, one against access, inside edge of the numbers landmark.",
+        "Z": "#2: block the corner.",
+        "Y": "#3: block the most dangerous man, #2 or #3.",
+        "F": "Backside: block the deep defender."
+      },
+      "protections": ["Klay", "Curry G.E."],
+      "fronts": ["42 Un Jam", "33 Odd", "42 22", "42 Ov", "42 Abby (Zero)"],
+      "tags": ["G.E."],
+      "alerts": ["Rip or Liz to the call; possible Ralph or Lester.", "Liz Tuff and Squeeze against 42 Abby (Zero).", "Tackle jumps and sticks to the end against zero."]
+    },
+    {
+      "key": "slammer-ge",
+      "indexTitle": "SLAMMER (G.E.)",
+      "pageTitle": "SLAMMER LT-RT (G.E.)",
+      "pages": [45],
+      "summary": "Quick perimeter screen to the outside receiver of a two man surface. The playside tackle releases to block the #2 defender from outside in, the line counts #2, #3, #4 and then the most dangerous man, and the #2 receiver blocks the most dangerous defender. The receiver takes one step back to catch, the back makes a token fake across the ball, and the QB throws with catch and throw mechanics.",
+      "qb": "Get the ball out as fast as possible. Catch and throw.",
+      "hb": "Token fake across the ball.",
+      "positions": {
+        "OL": "Set, stop and go. Playside tackle to the #2 defender outside in, reading how deep he is and how he is playing. Playside guard to #3, staying on a 3 technique who does not rush. Center to #4, staying on an A gap defender who does not rush. Guard and center take #3 by first out. Backside guard to the most dangerous man. Alert all out and slot pressure; blitzers are allowed through except against zero. G.E.: tackle jumps the defender, everyone adds one to the count. Playside guard rat kills against Jam. Against zero snatch the man in your gap; only the tackle gets out.",
+        "X": "#1: one step back and catch the screen.",
+        "Z": "#2: block the most dangerous defender (#1).",
+        "Y": "Backside: man over.",
+        "F": "Backside: man over."
+      },
+      "protections": ["Slammer Lt", "Slammer Lt G.E."],
+      "fronts": ["42 Over Jam", "42 22", "42 Over", "42 Un G", "42 Abby (Zero)"],
+      "tags": ["G.E.", "Lt", "Rt"],
+      "alerts": ["Rip or Liz to the call; possible Ralph or Lester.", "Liz Tuff and Squeeze against 42 Abby (Zero)."]
+    },
+    {
+      "key": "giannis",
+      "indexTitle": "GIANNIS",
+      "pageTitle": "GIANNIS FROG-MADISON (G.E.)",
+      "pages": [46],
+      "summary": "Quick perimeter screen to the #2 receiver of a three man surface. The #1 blocks the corner, the #2 pushes up three steps against a bump or one against access and comes back, and the #3 blocks the most dangerous man. The line counts #3, #4, #5 and the most dangerous man the same as Klay and Curry. Frog and Madison are the directional terms.",
+      "qb": "Quick game footwork, ready to drift and change the arm angle.",
+      "hb": "Protect off the tackle's hip, alert the squeeze.",
+      "positions": {
+        "OL": "Set, stop and go to #3, #4, #5 outside in and then the most dangerous man; same coaching points as Klay and Curry. Rip or Liz to the call. Against zero grab the man in your gap; only the tackle gets out.",
+        "X": "#1: block the corner.",
+        "Z": "#2: push up and catch, inside edge of the numbers landmark.",
+        "Y": "#3: block the most dangerous man, #2 or #3.",
+        "F": "Backside: block the deep defender."
+      },
+      "protections": ["Giannis Madison", "Giannis Frog"],
+      "fronts": ["42 22", "42 Ov", "42 Abby (Zero)"],
+      "tags": ["G.E.", "Frog", "Madison"],
+      "alerts": ["Rip against 42 22, Liz against 42 Ov, Liz Tuff and Squeeze against 42 Abby (Zero).", "Possible Ralph or Lester."]
+    }
+  ]
+}

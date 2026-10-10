@@ -1,0 +1,3593 @@
+{
+ "_generated": "Written by scripts/rams/extract_fronts.py from the Rams 2022 Defensive Identification diagrams. Positions and names only.",
+ "fronts": [
+  {
+   "name": "35 34",
+   "group": "base",
+   "page": 13,
+   "pageTitle": "30 FRONTS",
+   "unit": 25.2,
+   "defenders": [
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -2.9,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -1.99,
+     "y": 1.24
+    },
+    {
+     "label": "J",
+     "role": "LB",
+     "x": -0.98,
+     "y": 2.51
+    },
+    {
+     "label": "N",
+     "role": "DL",
+     "x": 0.03,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.09,
+     "y": 2.49
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.01,
+     "y": 1.24
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 3.25,
+     "y": 1.24
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.0
+    }
+   ]
+  },
+  {
+   "name": "34 Bow",
+   "group": "base",
+   "page": 13,
+   "pageTitle": "30 FRONTS",
+   "unit": 25.08,
+   "defenders": [
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -2.76,
+     "y": 1.23
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.0,
+     "y": 1.25
+    },
+    {
+     "label": "J",
+     "role": "LB",
+     "x": -1.81,
+     "y": 2.46
+    },
+    {
+     "label": "N",
+     "role": "DL",
+     "x": 0.03,
+     "y": 1.25
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 0.07,
+     "y": 2.5
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.17,
+     "y": 1.25
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 2.18,
+     "y": 2.49
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.02
+    }
+   ]
+  },
+  {
+   "name": "34 Boss",
+   "group": "base",
+   "page": 13,
+   "pageTitle": "30 FRONTS",
+   "unit": 25.08,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.23,
+     "y": 1.25
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -2.11,
+     "y": 2.49
+    },
+    {
+     "label": "J",
+     "role": "LB",
+     "x": -0.36,
+     "y": 2.43
+    },
+    {
+     "label": "N",
+     "role": "DL",
+     "x": 0.03,
+     "y": 1.25
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.02,
+     "y": 1.25
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 2.04,
+     "y": 2.5
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 3.27,
+     "y": 1.25
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.02
+    }
+   ]
+  },
+  {
+   "name": "35 FUP",
+   "group": "base",
+   "page": 13,
+   "pageTitle": "30 FRONTS",
+   "unit": 25.17,
+   "defenders": [
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -2.56,
+     "y": 1.25
+    },
+    {
+     "label": "FS",
+     "role": "DB",
+     "x": -1.87,
+     "y": 2.39
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -1.26,
+     "y": 1.25
+    },
+    {
+     "label": "J",
+     "role": "LB",
+     "x": -0.2,
+     "y": 2.28
+    },
+    {
+     "label": "N",
+     "role": "DL",
+     "x": 0.27,
+     "y": 1.25
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.7,
+     "y": 2.26
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.25,
+     "y": 1.25
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 3.26,
+     "y": 1.25
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.01
+    }
+   ]
+  },
+  {
+   "name": "34 Tilt",
+   "group": "base",
+   "page": 13,
+   "pageTitle": "30 FRONTS",
+   "unit": 25.22,
+   "defenders": [
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -2.89,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -1.98,
+     "y": 1.24
+    },
+    {
+     "label": "J",
+     "role": "LB",
+     "x": -0.79,
+     "y": 2.33
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.09,
+     "y": 2.48
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.01,
+     "y": 1.24
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 3.25,
+     "y": 1.24
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.0
+    }
+   ]
+  },
+  {
+   "name": "35 FUP",
+   "group": "base",
+   "page": 13,
+   "pageTitle": "30 FRONTS",
+   "unit": 25.22,
+   "defenders": [
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -2.89,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -1.33,
+     "y": 1.24
+    },
+    {
+     "label": "J",
+     "role": "LB",
+     "x": -0.89,
+     "y": 2.35
+    },
+    {
+     "label": "N",
+     "role": "DL",
+     "x": 0.72,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.09,
+     "y": 2.36
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.2,
+     "y": 1.24
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 3.25,
+     "y": 1.24
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.0
+    }
+   ]
+  },
+  {
+   "name": "34 Jam",
+   "group": "base",
+   "page": 13,
+   "pageTitle": "30 FRONTS",
+   "unit": 25.17,
+   "defenders": [
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -2.55,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -1.44,
+     "y": 1.24
+    },
+    {
+     "label": "J",
+     "role": "LB",
+     "x": -0.93,
+     "y": 2.22
+    },
+    {
+     "label": "N",
+     "role": "DL",
+     "x": 0.03,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 1.35,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 2.12,
+     "y": 2.44
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 3.26,
+     "y": 1.24
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.01
+    }
+   ]
+  },
+  {
+   "name": "34 Bear",
+   "group": "base",
+   "page": 13,
+   "pageTitle": "30 FRONTS",
+   "unit": 25.2,
+   "defenders": [
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -2.55,
+     "y": 1.24
+    },
+    {
+     "label": "FS",
+     "role": "DB",
+     "x": -1.54,
+     "y": 2.45
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -1.44,
+     "y": 1.24
+    },
+    {
+     "label": "N",
+     "role": "DL",
+     "x": 0.03,
+     "y": 1.24
+    },
+    {
+     "label": "J",
+     "role": "LB",
+     "x": 0.75,
+     "y": 2.36
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 1.35,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 3.04,
+     "y": 1.23
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 3.82,
+     "y": 1.24
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.0
+    }
+   ]
+  },
+  {
+   "name": "25 KC 25",
+   "group": "base",
+   "page": 14,
+   "pageTitle": "20 FRONTS",
+   "unit": 25.13,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.47,
+     "y": 1.25
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -1.48,
+     "y": 2.46
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -1.26,
+     "y": 1.25
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 0.26,
+     "y": 1.25
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.43,
+     "y": 2.49
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.21,
+     "y": 1.25
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 3.26,
+     "y": 1.25
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.01
+    }
+   ]
+  },
+  {
+   "name": "59 53",
+   "group": "base",
+   "page": 15,
+   "pageTitle": "20'S 50 FRONTS",
+   "unit": 25.27,
+   "defenders": [
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -2.74,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -1.97,
+     "y": 1.24
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.37,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 0.29,
+     "y": 2.51
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.17,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.19,
+     "y": 1.24
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 3.24,
+     "y": 1.24
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "57 55",
+   "group": "base",
+   "page": 15,
+   "pageTitle": "20'S 50 FRONTS",
+   "unit": 25.27,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.46,
+     "y": 1.24
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -1.23,
+     "y": 2.48
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.37,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 0.42,
+     "y": 2.51
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.17,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.19,
+     "y": 1.24
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 3.24,
+     "y": 1.24
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "55 WIDE",
+   "group": "base",
+   "page": 15,
+   "pageTitle": "20'S 50 FRONTS",
+   "unit": 25.26,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.46,
+     "y": 1.24
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -1.23,
+     "y": 2.48
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.37,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 0.42,
+     "y": 2.51
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.17,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.98,
+     "y": 1.24
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 3.75,
+     "y": 1.24
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.0
+    }
+   ]
+  },
+  {
+   "name": "59 SAM CHOKE",
+   "group": "base",
+   "page": 15,
+   "pageTitle": "20'S 50 FRONTS",
+   "unit": 25.28,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.46,
+     "y": 1.24
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -1.23,
+     "y": 2.48
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.37,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 0.42,
+     "y": 2.51
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.17,
+     "y": 1.24
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 3.0,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 3.6,
+     "y": 1.24
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "57 KC",
+   "group": "base",
+   "page": 15,
+   "pageTitle": "20'S 50 FRONTS",
+   "unit": 25.17,
+   "defenders": [
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -3.0,
+     "y": 1.26
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -1.98,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": -1.14,
+     "y": 2.49
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.01,
+     "y": 1.24
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 0.87,
+     "y": 2.49
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.96,
+     "y": 1.21
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 3.26,
+     "y": 1.24
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.01
+    }
+   ]
+  },
+  {
+   "name": "45 43",
+   "group": "base",
+   "page": 16,
+   "pageTitle": "40 FRONTS",
+   "unit": 25.04,
+   "defenders": [
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -3.11,
+     "y": 1.25
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.03,
+     "y": 1.25
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.84,
+     "y": 1.25
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": -0.02,
+     "y": 2.53
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.16,
+     "y": 1.25
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 2.16,
+     "y": 2.56
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 3.22,
+     "y": 1.25
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.02
+    }
+   ]
+  },
+  {
+   "name": "45 43",
+   "group": "base",
+   "page": 16,
+   "pageTitle": "40 FRONTS",
+   "unit": 25.02,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.66,
+     "y": 1.35
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -1.99,
+     "y": 2.53
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.84,
+     "y": 1.25
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 0.09,
+     "y": 2.54
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.16,
+     "y": 1.25
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 1.96,
+     "y": 2.53
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 3.0,
+     "y": 1.25
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.02
+    }
+   ]
+  },
+  {
+   "name": "45 WIDE",
+   "group": "base",
+   "page": 16,
+   "pageTitle": "40 FRONTS",
+   "unit": 25.04,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.53,
+     "y": 1.25
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -2.05,
+     "y": 2.54
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.84,
+     "y": 1.25
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 0.21,
+     "y": 2.53
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.16,
+     "y": 1.25
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 3.05,
+     "y": 1.25
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 3.8,
+     "y": 1.25
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.02
+    }
+   ]
+  },
+  {
+   "name": "45 43",
+   "group": "base",
+   "page": 16,
+   "pageTitle": "40 FRONTS",
+   "unit": 25.02,
+   "defenders": [
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -2.77,
+     "y": 1.25
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -1.99,
+     "y": 1.25
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.88,
+     "y": 1.25
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": -0.02,
+     "y": 2.54
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.12,
+     "y": 1.25
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.04,
+     "y": 1.25
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 3.28,
+     "y": 1.25
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.02
+    }
+   ]
+  },
+  {
+   "name": "57 JAM 25 JAM",
+   "group": "base",
+   "page": 17,
+   "pageTitle": "JAM & BEAR",
+   "unit": 25.32,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.65,
+     "y": 1.24
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -1.56,
+     "y": 2.53
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -1.23,
+     "y": 1.24
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.01,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 1.19,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.71,
+     "y": 2.51
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 3.24,
+     "y": 1.24
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "25 BEAR",
+   "group": "base",
+   "page": 17,
+   "pageTitle": "JAM & BEAR",
+   "unit": 25.32,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.68,
+     "y": 1.24
+    },
+    {
+     "label": "FS",
+     "role": "DB",
+     "x": -1.6,
+     "y": 2.73
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -1.23,
+     "y": 1.24
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.01,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 1.19,
+     "y": 1.24
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": 1.37,
+     "y": 2.53
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 2.71,
+     "y": 1.24
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 3.71,
+     "y": 1.24
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "57 BEAR",
+   "group": "base",
+   "page": 17,
+   "pageTitle": "JAM & BEAR",
+   "unit": 25.32,
+   "defenders": [
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -2.54,
+     "y": 1.24
+    },
+    {
+     "label": "J",
+     "role": "LB",
+     "x": -1.31,
+     "y": 2.3
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -1.25,
+     "y": 1.24
+    },
+    {
+     "label": "N",
+     "role": "DL",
+     "x": 0.01,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 1.1,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.75,
+     "y": 2.31
+    },
+    {
+     "label": "SS",
+     "role": "DB",
+     "x": 2.98,
+     "y": 1.15
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 3.76,
+     "y": 1.18
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "34 BEAR 34 JAM",
+   "group": "base",
+   "page": 17,
+   "pageTitle": "JAM & BEAR",
+   "unit": 25.32,
+   "defenders": [
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -2.47,
+     "y": 1.25
+    },
+    {
+     "label": "J",
+     "role": "LB",
+     "x": -1.74,
+     "y": 2.41
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -1.23,
+     "y": 1.24
+    },
+    {
+     "label": "N",
+     "role": "DL",
+     "x": 0.0,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 1.19,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.69,
+     "y": 2.44
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 3.24,
+     "y": 1.24
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "57 BEAR",
+   "group": "base",
+   "page": 17,
+   "pageTitle": "JAM & BEAR",
+   "unit": 25.32,
+   "defenders": [
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -2.54,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": -1.71,
+     "y": 2.49
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -1.25,
+     "y": 1.24
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.01,
+     "y": 1.24
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.1,
+     "y": 1.24
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 1.96,
+     "y": 2.49
+    },
+    {
+     "label": "SS",
+     "role": "DB",
+     "x": 2.98,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 3.75,
+     "y": 1.24
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "41",
+   "group": "nickel",
+   "page": 18,
+   "pageTitle": "NICKEL/DIME FRONTS (4 MAN LINE)",
+   "unit": 25.32,
+   "defenders": [
+    {
+     "label": "Nw",
+     "role": "DB",
+     "x": -3.46,
+     "y": 2.48
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.3,
+     "y": 1.29
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.76,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 0.2,
+     "y": 2.56
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.17,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.5,
+     "y": 1.24
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.61
+    }
+   ]
+  },
+  {
+   "name": "41 OVER",
+   "group": "nickel",
+   "page": 18,
+   "pageTitle": "NICKEL/DIME FRONTS (4 MAN LINE)",
+   "unit": 25.32,
+   "defenders": [
+    {
+     "label": "Nw",
+     "role": "DB",
+     "x": -3.46,
+     "y": 2.48
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.3,
+     "y": 1.29
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.34,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 0.54,
+     "y": 2.56
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.17,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.5,
+     "y": 1.24
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.61
+    }
+   ]
+  },
+  {
+   "name": "41 UNDER",
+   "group": "nickel",
+   "page": 18,
+   "pageTitle": "NICKEL/DIME FRONTS (4 MAN LINE)",
+   "unit": 25.34,
+   "defenders": [
+    {
+     "label": "Nw",
+     "role": "DB",
+     "x": -3.46,
+     "y": 2.47
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.3,
+     "y": 1.23
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -1.32,
+     "y": 1.24
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 0.26,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 0.54,
+     "y": 2.55
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.26,
+     "y": 1.24
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.61
+    }
+   ]
+  },
+  {
+   "name": "42 OVER",
+   "group": "nickel",
+   "page": 18,
+   "pageTitle": "NICKEL/DIME FRONTS (4 MAN LINE)",
+   "unit": 25.32,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.3,
+     "y": 1.29
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -1.03,
+     "y": 2.51
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.41,
+     "y": 1.24
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.17,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.54,
+     "y": 2.55
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 3.01,
+     "y": 1.24
+    },
+    {
+     "label": "Ns",
+     "role": "DB",
+     "x": 4.39,
+     "y": 2.48
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "42 OVER KC",
+   "group": "nickel",
+   "page": 18,
+   "pageTitle": "NICKEL/DIME FRONTS (4 MAN LINE)",
+   "unit": 25.31,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.3,
+     "y": 1.29
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -1.03,
+     "y": 2.51
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.05,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.54,
+     "y": 2.55
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 2.03,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 3.5,
+     "y": 1.24
+    },
+    {
+     "label": "Ns",
+     "role": "DB",
+     "x": 4.39,
+     "y": 2.48
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "42 UNDER KC",
+   "group": "nickel",
+   "page": 18,
+   "pageTitle": "NICKEL/DIME FRONTS (4 MAN LINE)",
+   "unit": 25.31,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.92,
+     "y": 1.24
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -2.03,
+     "y": 1.24
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -1.03,
+     "y": 2.51
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.05,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.54,
+     "y": 2.55
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 3.01,
+     "y": 1.24
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "42 UNDER",
+   "group": "nickel",
+   "page": 18,
+   "pageTitle": "NICKEL/DIME FRONTS (4 MAN LINE)",
+   "unit": 25.34,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.3,
+     "y": 1.22
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -1.32,
+     "y": 1.24
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -1.03,
+     "y": 2.5
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 0.3,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.53,
+     "y": 2.55
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 3.01,
+     "y": 1.24
+    },
+    {
+     "label": "Ns",
+     "role": "DB",
+     "x": 4.39,
+     "y": 2.47
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "42 UNDER JAM",
+   "group": "nickel",
+   "page": 18,
+   "pageTitle": "NICKEL/DIME FRONTS (4 MAN LINE)",
+   "unit": 25.08,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.72,
+     "y": 1.23
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -1.33,
+     "y": 1.25
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -0.01,
+     "y": 2.53
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 0.01,
+     "y": 1.25
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 1.38,
+     "y": 1.25
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 3.23,
+     "y": 1.25
+    },
+    {
+     "label": "Ns",
+     "role": "DB",
+     "x": 4.43,
+     "y": 2.5
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.02
+    }
+   ]
+  },
+  {
+   "name": "42 OVER JAM",
+   "group": "nickel",
+   "page": 18,
+   "pageTitle": "NICKEL/DIME FRONTS (4 MAN LINE)",
+   "unit": 25.08,
+   "defenders": [
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -2.96,
+     "y": 1.25
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -1.31,
+     "y": 1.23
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.05,
+     "y": 1.25
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 0.03,
+     "y": 2.53
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.18,
+     "y": 1.25
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 3.33,
+     "y": 1.25
+    },
+    {
+     "label": "Ns",
+     "role": "DB",
+     "x": 4.44,
+     "y": 2.5
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.02
+    }
+   ]
+  },
+  {
+   "name": "42",
+   "group": "nickel",
+   "page": 18,
+   "pageTitle": "NICKEL/DIME FRONTS (4 MAN LINE)",
+   "unit": 25.32,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.3,
+     "y": 1.29
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -1.03,
+     "y": 2.51
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.76,
+     "y": 1.24
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.17,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.54,
+     "y": 2.56
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 3.01,
+     "y": 1.24
+    },
+    {
+     "label": "Ns",
+     "role": "DB",
+     "x": 4.39,
+     "y": 2.48
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "42 ABBY 42 SPLIT",
+   "group": "nickel",
+   "page": 18,
+   "pageTitle": "NICKEL/DIME FRONTS (4 MAN LINE)",
+   "unit": 25.32,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.77,
+     "y": 1.25
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -1.32,
+     "y": 1.23
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -1.03,
+     "y": 2.5
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.04,
+     "y": 2.55
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.17,
+     "y": 1.23
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 3.01,
+     "y": 1.23
+    },
+    {
+     "label": "Ns",
+     "role": "DB",
+     "x": 4.39,
+     "y": 2.47
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "42 OVER JAM",
+   "group": "nickel",
+   "page": 18,
+   "pageTitle": "NICKEL/DIME FRONTS (4 MAN LINE)",
+   "unit": 25.32,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.74,
+     "y": 1.28
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -1.48,
+     "y": 1.23
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -0.54,
+     "y": 1.28
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 0.56,
+     "y": 1.28
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.35,
+     "y": 1.23
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 3.01,
+     "y": 1.23
+    },
+    {
+     "label": "Ns",
+     "role": "DB",
+     "x": 5.19,
+     "y": 2.55
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "42 ABBY SON",
+   "group": "nickel",
+   "page": 19,
+   "pageTitle": "NICKEL FRONTS",
+   "unit": 25.28,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.7,
+     "y": 1.27
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -1.52,
+     "y": 1.24
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -0.54,
+     "y": 1.29
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 0.56,
+     "y": 1.29
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.35,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.99,
+     "y": 1.24
+    },
+    {
+     "label": "SS",
+     "role": "DB",
+     "x": 3.96,
+     "y": 1.26
+    },
+    {
+     "label": "Ns",
+     "role": "DB",
+     "x": 4.84,
+     "y": 2.48
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "42 ABBY JUMP",
+   "group": "nickel",
+   "page": 19,
+   "pageTitle": "NICKEL FRONTS",
+   "unit": 25.31,
+   "defenders": [
+    {
+     "label": "FS",
+     "role": "DB",
+     "x": -3.34,
+     "y": 1.29
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.48,
+     "y": 1.23
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -1.56,
+     "y": 1.24
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -0.54,
+     "y": 1.29
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 0.56,
+     "y": 1.29
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.5,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 3.28,
+     "y": 1.24
+    },
+    {
+     "label": "Ns",
+     "role": "DB",
+     "x": 5.2,
+     "y": 2.48
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "42 ABBY FON 42 OVER GIANT",
+   "group": "nickel",
+   "page": 19,
+   "pageTitle": "NICKEL FRONTS",
+   "unit": 25.32,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.3,
+     "y": 1.29
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -1.03,
+     "y": 2.51
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 0.19,
+     "y": 1.24
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.17,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.53,
+     "y": 2.56
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 3.01,
+     "y": 1.24
+    },
+    {
+     "label": "Ns",
+     "role": "DB",
+     "x": 4.39,
+     "y": 2.48
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "42 UNDER GIANT",
+   "group": "nickel",
+   "page": 19,
+   "pageTitle": "NICKEL FRONTS",
+   "unit": 25.28,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.3,
+     "y": 1.22
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -1.32,
+     "y": 1.24
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -1.03,
+     "y": 2.51
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.25,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.54,
+     "y": 2.56
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.44,
+     "y": 1.24
+    },
+    {
+     "label": "Ns",
+     "role": "DB",
+     "x": 4.28,
+     "y": 2.48
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "42 OVER WILL ON (WON)",
+   "group": "nickel",
+   "page": 19,
+   "pageTitle": "NICKEL FRONTS",
+   "unit": 25.28,
+   "defenders": [
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -3.21,
+     "y": 1.29
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.1,
+     "y": 1.24
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.41,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 0.33,
+     "y": 2.56
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.17,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 3.02,
+     "y": 1.24
+    },
+    {
+     "label": "Ns",
+     "role": "DB",
+     "x": 4.4,
+     "y": 2.48
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "42 OVER SAM ON",
+   "group": "nickel",
+   "page": 19,
+   "pageTitle": "NICKEL FRONTS",
+   "unit": 25.28,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.3,
+     "y": 1.29
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": -0.91,
+     "y": 2.56
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.34,
+     "y": 1.24
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.17,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.4,
+     "y": 1.24
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 3.27,
+     "y": 1.23
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "42 ABBY JUMP",
+   "group": "nickel",
+   "page": 19,
+   "pageTitle": "NICKEL FRONTS",
+   "unit": 25.28,
+   "defenders": [
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -2.81,
+     "y": 1.27
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -1.48,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -0.45,
+     "y": 1.44
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 0.61,
+     "y": 1.42
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.35,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 3.24,
+     "y": 1.27
+    },
+    {
+     "label": "Ns",
+     "role": "DB",
+     "x": 5.2,
+     "y": 2.56
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "42 OVER S CHOKE",
+   "group": "nickel",
+   "page": 19,
+   "pageTitle": "NICKEL FRONTS",
+   "unit": 25.28,
+   "defenders": [
+    {
+     "label": "Nw",
+     "role": "DB",
+     "x": -3.47,
+     "y": 2.48
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.3,
+     "y": 1.29
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": -0.91,
+     "y": 2.56
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.34,
+     "y": 1.24
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.17,
+     "y": 1.24
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 2.97,
+     "y": 1.23
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 3.78,
+     "y": 1.24
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "42 OVER SS CHOKE",
+   "group": "nickel",
+   "page": 19,
+   "pageTitle": "NICKEL FRONTS",
+   "unit": 25.29,
+   "defenders": [
+    {
+     "label": "Nw",
+     "role": "DB",
+     "x": -3.47,
+     "y": 2.48
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.3,
+     "y": 1.28
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": -0.91,
+     "y": 2.56
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.34,
+     "y": 1.24
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.17,
+     "y": 1.24
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 1.54,
+     "y": 2.66
+    },
+    {
+     "label": "SS",
+     "role": "DB",
+     "x": 2.99,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 3.86,
+     "y": 1.24
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "42 OVER SPINNER",
+   "group": "nickel",
+   "page": 19,
+   "pageTitle": "NICKEL FRONTS",
+   "unit": 25.29,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.3,
+     "y": 1.28
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -1.03,
+     "y": 2.51
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.41,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 0.99,
+     "y": 2.0
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.98,
+     "y": 2.51
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 2.53,
+     "y": 1.24
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "42 OVER SPINNER",
+   "group": "nickel",
+   "page": 19,
+   "pageTitle": "NICKEL FRONTS",
+   "unit": 25.32,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.3,
+     "y": 1.28
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -1.02,
+     "y": 2.5
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.76,
+     "y": 1.23
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 0.75,
+     "y": 1.23
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.54,
+     "y": 2.55
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 3.01,
+     "y": 1.23
+    },
+    {
+     "label": "Ns",
+     "role": "DB",
+     "x": 4.39,
+     "y": 2.47
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "42 TITE 42 UNDER SPINNER",
+   "group": "nickel",
+   "page": 19,
+   "pageTitle": "NICKEL FRONTS",
+   "unit": 25.31,
+   "defenders": [
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -2.3,
+     "y": 1.22
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -1.79,
+     "y": 2.5
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -0.63,
+     "y": 2.05
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 0.3,
+     "y": 1.23
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.53,
+     "y": 2.55
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.5,
+     "y": 1.23
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "42 UNDER G",
+   "group": "nickel",
+   "page": 20,
+   "pageTitle": "NICKEL FRONTS",
+   "unit": 25.31,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.3,
+     "y": 1.29
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -1.38,
+     "y": 2.51
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -1.32,
+     "y": 1.24
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 0.75,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.54,
+     "y": 2.56
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.77,
+     "y": 1.24
+    },
+    {
+     "label": "Ns",
+     "role": "DB",
+     "x": 4.39,
+     "y": 2.48
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "42 EVEN",
+   "group": "nickel",
+   "page": 20,
+   "pageTitle": "NICKEL FRONTS",
+   "unit": 25.31,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.3,
+     "y": 1.29
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -1.03,
+     "y": 1.24
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -1.03,
+     "y": 2.51
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 0.99,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.54,
+     "y": 2.56
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 3.01,
+     "y": 1.24
+    },
+    {
+     "label": "Ns",
+     "role": "DB",
+     "x": 4.4,
+     "y": 2.48
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "33 Odd",
+   "group": "nickel",
+   "page": 21,
+   "pageTitle": "ss NICKEL FRONTS (3 MAN LINE)",
+   "unit": 25.31,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.15,
+     "y": 1.21
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -1.04,
+     "y": 2.51
+    },
+    {
+     "label": "N",
+     "role": "DL",
+     "x": 0.0,
+     "y": 1.24
+    },
+    {
+     "label": "J",
+     "role": "LB",
+     "x": 1.41,
+     "y": 2.48
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.3,
+     "y": 1.21
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 2.93,
+     "y": 1.16
+    },
+    {
+     "label": "Ns",
+     "role": "DB",
+     "x": 4.54,
+     "y": 2.43
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "33 Jam",
+   "group": "nickel",
+   "page": 21,
+   "pageTitle": "ss NICKEL FRONTS (3 MAN LINE)",
+   "unit": 25.01,
+   "defenders": [
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -2.83,
+     "y": 1.29
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -1.3,
+     "y": 1.22
+    },
+    {
+     "label": "N",
+     "role": "DL",
+     "x": 0.0,
+     "y": 1.25
+    },
+    {
+     "label": "J",
+     "role": "LB",
+     "x": 0.0,
+     "y": 2.61
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 1.38,
+     "y": 1.22
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 3.28,
+     "y": 1.17
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.03
+    }
+   ]
+  },
+  {
+   "name": "32 Odd",
+   "group": "nickel",
+   "page": 21,
+   "pageTitle": "ss NICKEL FRONTS (3 MAN LINE)",
+   "unit": 25.32,
+   "defenders": [
+    {
+     "label": "Nw",
+     "role": "DB",
+     "x": -3.43,
+     "y": 2.43
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.14,
+     "y": 1.21
+    },
+    {
+     "label": "J",
+     "role": "LB",
+     "x": -0.81,
+     "y": 2.38
+    },
+    {
+     "label": "N",
+     "role": "DL",
+     "x": 0.01,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 0.82,
+     "y": 2.37
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.44,
+     "y": 1.21
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.69
+    }
+   ]
+  },
+  {
+   "name": "33 Odd Stack",
+   "group": "nickel",
+   "page": 21,
+   "pageTitle": "ss NICKEL FRONTS (3 MAN LINE)",
+   "unit": 25.32,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.15,
+     "y": 1.21
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -2.06,
+     "y": 2.51
+    },
+    {
+     "label": "N",
+     "role": "DL",
+     "x": 0.0,
+     "y": 1.24
+    },
+    {
+     "label": "J",
+     "role": "LB",
+     "x": 0.54,
+     "y": 2.48
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.83,
+     "y": 1.21
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 2.93,
+     "y": 2.48
+    },
+    {
+     "label": "Ns",
+     "role": "DB",
+     "x": 4.53,
+     "y": 2.43
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "33 Odd",
+   "group": "nickel",
+   "page": 21,
+   "pageTitle": "ss NICKEL FRONTS (3 MAN LINE)",
+   "unit": 25.31,
+   "defenders": [
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -2.64,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.14,
+     "y": 1.21
+    },
+    {
+     "label": "J",
+     "role": "LB",
+     "x": -0.94,
+     "y": 2.46
+    },
+    {
+     "label": "N",
+     "role": "DL",
+     "x": 0.01,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 0.95,
+     "y": 2.51
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.78,
+     "y": 1.21
+    },
+    {
+     "label": "Ns",
+     "role": "DB",
+     "x": 4.54,
+     "y": 2.43
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "33 Odd Zero Sup",
+   "group": "nickel",
+   "page": 21,
+   "pageTitle": "ss NICKEL FRONTS (3 MAN LINE)",
+   "unit": 25.31,
+   "defenders": [
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -2.9,
+     "y": 1.21
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.14,
+     "y": 1.21
+    },
+    {
+     "label": "N",
+     "role": "DL",
+     "x": 0.01,
+     "y": 1.24
+    },
+    {
+     "label": "J",
+     "role": "LB",
+     "x": 0.36,
+     "y": 2.48
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.83,
+     "y": 1.21
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 3.87,
+     "y": 1.11
+    },
+    {
+     "label": "Ns",
+     "role": "DB",
+     "x": 4.54,
+     "y": 2.43
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "33 Odd",
+   "group": "nickel",
+   "page": 21,
+   "pageTitle": "ss NICKEL FRONTS (3 MAN LINE)",
+   "unit": 25.31,
+   "defenders": [
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.14,
+     "y": 1.21
+    },
+    {
+     "label": "J",
+     "role": "LB",
+     "x": -1.08,
+     "y": 2.43
+    },
+    {
+     "label": "N",
+     "role": "DL",
+     "x": 0.0,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.08,
+     "y": 2.48
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.3,
+     "y": 1.21
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 3.25,
+     "y": 1.16
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "62",
+   "group": "goal-line",
+   "page": 22,
+   "pageTitle": "GOAL LINE FRONTS",
+   "unit": 25.2,
+   "defenders": [
+    {
+     "label": "C",
+     "role": "DB",
+     "x": -4.06,
+     "y": 1.41
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.91,
+     "y": 1.24
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -1.98,
+     "y": 1.21
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -1.35,
+     "y": 2.36
+    },
+    {
+     "label": "N",
+     "role": "DL",
+     "x": -0.51,
+     "y": 1.24
+    },
+    {
+     "label": "N",
+     "role": "DL",
+     "x": 0.56,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 0.96,
+     "y": 2.33
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.91,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 3.02,
+     "y": 1.24
+    },
+    {
+     "label": "SS",
+     "role": "DB",
+     "x": 3.24,
+     "y": 2.82
+    },
+    {
+     "label": "C",
+     "role": "DB",
+     "x": 4.34,
+     "y": 1.29
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.0
+    }
+   ]
+  },
+  {
+   "name": "62 Gaps",
+   "group": "goal-line",
+   "page": 22,
+   "pageTitle": "GOAL LINE FRONTS",
+   "unit": 25.2,
+   "defenders": [
+    {
+     "label": "C",
+     "role": "DB",
+     "x": -4.05,
+     "y": 1.41
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.91,
+     "y": 1.24
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -1.53,
+     "y": 1.21
+    },
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -1.35,
+     "y": 2.36
+    },
+    {
+     "label": "N",
+     "role": "DL",
+     "x": -0.51,
+     "y": 1.24
+    },
+    {
+     "label": "N",
+     "role": "DL",
+     "x": 0.57,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 0.96,
+     "y": 2.33
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.47,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 3.03,
+     "y": 1.24
+    },
+    {
+     "label": "SS",
+     "role": "DB",
+     "x": 3.24,
+     "y": 2.82
+    },
+    {
+     "label": "C",
+     "role": "DB",
+     "x": 4.34,
+     "y": 1.29
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.0
+    }
+   ]
+  },
+  {
+   "name": "44 Even",
+   "group": "short-yardage",
+   "page": 23,
+   "pageTitle": "SHORT YARDAGE FRONTS",
+   "unit": 25.27,
+   "defenders": [
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -2.74,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -1.97,
+     "y": 1.24
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -1.01,
+     "y": 1.24
+    },
+    {
+     "label": "J",
+     "role": "LB",
+     "x": -1.0,
+     "y": 2.54
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 0.99,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.67,
+     "y": 2.51
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.19,
+     "y": 1.24
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 3.24,
+     "y": 1.24
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 2.99
+    }
+   ]
+  },
+  {
+   "name": "44 Tite",
+   "group": "short-yardage",
+   "page": 23,
+   "pageTitle": "SHORT YARDAGE FRONTS",
+   "unit": 25.27,
+   "defenders": [
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -2.74,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -1.97,
+     "y": 1.24
+    },
+    {
+     "label": "J",
+     "role": "LB",
+     "x": -1.07,
+     "y": 2.44
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.67,
+     "y": 1.24
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 0.55,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.67,
+     "y": 2.51
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.2,
+     "y": 1.24
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 3.24,
+     "y": 1.24
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.0
+    }
+   ]
+  },
+  {
+   "name": "44 Over",
+   "group": "short-yardage",
+   "page": 23,
+   "pageTitle": "SHORT YARDAGE FRONTS",
+   "unit": 25.26,
+   "defenders": [
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -2.75,
+     "y": 1.24
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -1.97,
+     "y": 1.24
+    },
+    {
+     "label": "J",
+     "role": "LB",
+     "x": -1.09,
+     "y": 2.52
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -0.37,
+     "y": 1.24
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 1.17,
+     "y": 1.24
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 1.54,
+     "y": 2.52
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.2,
+     "y": 1.24
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 3.24,
+     "y": 1.24
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.0
+    }
+   ]
+  },
+  {
+   "name": "44 Under",
+   "group": "short-yardage",
+   "page": 23,
+   "pageTitle": "SHORT YARDAGE FRONTS",
+   "unit": 25.17,
+   "defenders": [
+    {
+     "label": "W",
+     "role": "LB",
+     "x": -3.09,
+     "y": 1.25
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": -2.47,
+     "y": 1.25
+    },
+    {
+     "label": "J",
+     "role": "LB",
+     "x": -1.78,
+     "y": 2.55
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": -1.26,
+     "y": 1.25
+    },
+    {
+     "label": "T",
+     "role": "DL",
+     "x": 0.26,
+     "y": 1.25
+    },
+    {
+     "label": "M",
+     "role": "LB",
+     "x": 0.99,
+     "y": 2.52
+    },
+    {
+     "label": "E",
+     "role": "DL",
+     "x": 2.2,
+     "y": 1.25
+    },
+    {
+     "label": "S",
+     "role": "LB",
+     "x": 3.26,
+     "y": 1.25
+    }
+   ],
+   "offense": [
+    {
+     "label": "Y",
+     "x": 3.01
+    }
+   ]
+  }
+ ]
+}
