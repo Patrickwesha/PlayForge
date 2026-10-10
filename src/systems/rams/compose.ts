@@ -100,7 +100,49 @@ function placeFromDrawing(spec: RamsPlaySpec, playId: string): Placed {
   return { players, how: 'drawing', review, applied: [], notes: [] };
 }
 
+/**
+ * Some cells draw the mirror of their header (a left-side run drawn with the bunch on the right under the same
+ * "Bunch L" line). The drawing is the truth for the picture, so the placed formation flips to match it.
+ */
+function matchDrawingSide(placed: Placed, spec: RamsPlaySpec): Placed {
+  const skill: RamsSpot[] = ['X', 'Y', 'Z', 'F', 'U', 'H'];
+  const bySpot = new Map(placed.players.map((p) => [p.label as RamsSpot, p]));
+  let agree = 0;
+  let disagree = 0;
+  for (const s of skill) {
+    const d = spec.offense[s];
+    const p = bySpot.get(s);
+    if (!d || !p || Math.abs(d[0]) < 1 || Math.abs(p.x) < 1) continue;
+    if (Math.sign(d[0]) === Math.sign(p.x)) agree++;
+    else disagree++;
+  }
+  if (disagree <= agree) return placed;
+  return {
+    ...placed,
+    players: placed.players.map((p) => flipPlayer(p, { landmarks: LANDMARKS })),
+    review: [...placed.review, 'The book draws this cell as the mirror of its formation line; the picture follows the drawing.'],
+  };
+}
+
+/** The book draws a gun look the call line does not name: the QB goes to gun depth and the back beside him. */
+function matchDrawingDepth(placed: Placed, spec: RamsPlaySpec): Placed {
+  const q = spec.offense.Q;
+  const qp = placed.players.find((p) => p.label === 'Q');
+  if (!q || !qp || q[1] > -3 || qp.y < -3) return placed;
+  const players = placed.players.map((p) => {
+    if (p.label === 'Q') return { ...p, y: -5 };
+    const d = p.label ? spec.offense[p.label as RamsSpot] : undefined;
+    if (d && d[1] < -2.5 && p.y < -2.5 && Math.abs(d[1] - q[1]) < 1.2) return { ...p, x: r2(d[0] - q[0]), y: -5 };
+    return p;
+  });
+  return { ...placed, players, review: [...placed.review, 'Drawn from the gun; the formation line does not say Gun.'] };
+}
+
 function placeFormation(spec: RamsPlaySpec, playId: string): Placed {
+  return matchDrawingDepth(matchDrawingSide(placeFormationAsCalled(spec, playId), spec), spec);
+}
+
+function placeFormationAsCalled(spec: RamsPlaySpec, playId: string): Placed {
   const f = spec.formation;
   const direction = f?.direction ?? 'RT';
   const mirror = (ps: Player[]) => (direction === 'LT' ? ps.map((p) => flipPlayer(p, { landmarks: LANDMARKS })) : ps);
@@ -171,6 +213,20 @@ function makeWarp(spec: RamsPlaySpec, final: Map<RamsSpot, Player>): (x: number)
     keep.push(k);
   }
   if (keep.length < 2) return (x) => x;
+  // the drawing is compressed sideways only out where the wide receivers stand: line work near the formation's
+  // core (blocks, bars, backfield tracks) keeps its true length for a yard past the last man in the core
+  const buffered: [number, number][] = [...keep];
+  for (let i = 0; i < keep.length - 1; i++) {
+    const [a, b] = [keep[i], keep[i + 1]];
+    const stretched = b[0] - a[0] > 2 && (b[1] - a[1]) / (b[0] - a[0]) > 1.6;
+    if (!stretched) continue;
+    // the knot nearer the ball is the core side: a yard of true length past it, then the stretch out to the wide man
+    if (Math.abs(a[0]) <= Math.abs(b[0])) buffered.push([a[0] + 1, a[1] + 1]);
+    else buffered.push([b[0] - 1, b[1] - 1]);
+  }
+  const dedup: [number, number][] = [];
+  for (const k of buffered.sort((a, b) => a[0] - b[0])) if (!dedup.length || (k[0] - dedup[dedup.length - 1][0] > 0.2 && k[1] > dedup[dedup.length - 1][1])) dedup.push(k);
+  keep.splice(0, keep.length, ...dedup);
   return (x: number) => {
     if (x <= keep[0][0]) return keep[0][1] + (x - keep[0][0]);
     const last = keep[keep.length - 1];
@@ -184,22 +240,40 @@ function makeWarp(spec: RamsPlaySpec, final: Map<RamsSpot, Player>): (x: number)
   };
 }
 
-const DEF_Y = (role: 'DL' | 'LB' | 'DB', y: number) => (role === 'DL' ? 1.2 : role === 'LB' ? Math.max(3.5, Math.min(7, y * 1.1)) : Math.max(4.5, y * 1.3));
+// The front seven stand where the book drew them (their letters sit just above the bars the blocks end on);
+// the drawing's secondary is shallow, so the backs go deeper.
+const DEF_Y = (role: 'DL' | 'LB' | 'DB', y: number) => (role === 'DL' ? Math.max(1.8, y) : role === 'LB' ? Math.max(1.8, Math.min(7, y)) : Math.max(4.5, y * 1.3));
 
-function pathFrom(spec: RamsPlaySpec, rp: RamsPath, owner: Player | undefined, warp: (x: number) => number, shiftY: number, id: string): Path | null {
-  const pts = rp.pts.map(([x, y]) => ({ x: warp(x), y: y + shiftY }));
+function pathFrom(spec: RamsPlaySpec, rp: RamsPath, owner: Player | undefined, warp: (x: number) => number, yMap: (y: number) => number, id: string): Path | null {
+  const pts = rp.pts.map(([x, y]) => ({ x: warp(x), y: yMap(y) }));
   if (pts.length < 2) return null;
   const length = pts.reduce((n, p, i) => (i ? n + Math.hypot(p.x - pts[i - 1].x, p.y - pts[i - 1].y) : 0), 0);
   if (length < 0.4) return null;
-  const end: Path['end'] = rp.end === 'arrow' ? 'arrow' : rp.end === 'tbar' ? 'tbar' : 'none';
+  const end: Path['end'] = rp.end === 'arrow' ? 'arrow' : rp.end === 'tbar' ? 'tbar' : rp.end === 'dot' ? 'dot' : 'none';
   const role: Path['role'] = rp.role === 'ball' ? 'ball' : rp.role === 'block' ? 'block' : rp.role === 'route' ? 'route' : 'free';
   if (!owner) {
-    return { id, anchor: { kind: 'free' }, points: pts.map((p) => ({ x: r2(p.x), y: r2(p.y) })), end, line: rp.dashed ? 'dashed' : 'solid', role: 'free' };
+    // a bar several stems meet (a double team) is a block line of its own, with no end mark
+    return { id, anchor: { kind: 'free' }, points: pts.map((p) => ({ x: r2(p.x), y: r2(p.y) })), end: rp.role === 'bar' ? 'none' : end, line: rp.dashed ? 'dashed' : 'solid', role: rp.role === 'bar' ? 'block' : 'free' };
   }
   const rel: PathPoint[] = pts.map((p) => ({ x: r2(p.x - owner.x), y: r2(p.y - owner.y) }));
   // a line that starts at the man starts at his center (the symbol hides the stub)
-  if (!rp.branch && Math.hypot(rel[0].x, rel[0].y) < 1.3) rel[0] = { x: 0, y: 0 };
+  if (!rp.branch && Math.hypot(rel[0].x, rel[0].y) < 2) rel[0] = { x: 0, y: 0 };
   return { id, anchor: { kind: 'player', playerId: owner.id }, points: rel, end, line: rp.dashed ? 'dashed' : 'solid', role, ...(role === 'ball' ? { primary: true } : {}) };
+}
+
+/** The book's boxed notes are short lines; a long note wraps so it stays inside the picture. */
+function wrapNote(text: string, width = 22): string {
+  if (text.length <= width) return text;
+  const lines: string[] = [];
+  let line = '';
+  for (const w of text.split(/\s+/)) {
+    if (line && (line + ' ' + w).length > width) {
+      lines.push(line);
+      line = w;
+    } else line = line ? line + ' ' + w : w;
+  }
+  if (line) lines.push(line);
+  return lines.join('\n');
 }
 
 function motionTag(spec: RamsPlaySpec, spot: RamsSpot): string {
@@ -223,11 +297,31 @@ export function composeRamsPlay(spec: RamsPlaySpec): Play {
   const players = placed.players.map((p) => ({ ...p, x: r2(p.x), y: r2(p.y) }));
   const final = bySpot(players);
   const warp = makeWarp(spec, final);
-  const shiftOf = (spot: RamsSpot | null): number => {
-    if (!spot) return 0;
+  // The drawing's backfield is shallower than the real alignment (the book's HB stands at 7.5, drawn about 4.7):
+  // a back's line keeps its crossing point and everything past the line, and its backfield part stretches to
+  // start at the man. Men on or near the line keep the drawing's depths as they are.
+  // The drawing squeezes the wide men in; the field warp stretches them back out. A man's own line work keeps
+  // its drawn shape within a few yards of him (a 3-yard hook stays 3 yards), and only further off follows the
+  // field warp, so a crossing route still reaches the middle of the field.
+  const warpFor = (spot: RamsSpot | null): ((x: number) => number) => {
+    if (!spot) return warp;
     const p = final.get(spot);
     const d = spec.offense[spot];
-    return p && d ? p.y - d[1] : 0;
+    if (!p || !d) return warp;
+    const ox = d[0];
+    const fx = p.x;
+    return (x) => {
+      const w = Math.min(1, Math.max(0, (Math.abs(x - ox) - 4) / 4));
+      return w * warp(x) + (1 - w) * (fx + (x - ox));
+    };
+  };
+  const yMapOf = (spot: RamsSpot | null): ((y: number) => number) => {
+    if (!spot) return (y) => y;
+    const p = final.get(spot);
+    const d = spec.offense[spot];
+    if (!p || !d || d[1] > -0.5 || p.y > -0.5) return (y) => y;
+    const k = p.y / d[1];
+    return (y) => (y < 0 ? y * k : y);
   };
   const paths: Record<string, Path> = {};
   const annotations: Record<string, Annotation> = {};
@@ -236,17 +330,17 @@ export function composeRamsPlay(spec: RamsPlaySpec): Play {
   for (const rp of spec.paths) {
     const owner = rp.spot ? final.get(rp.spot) : undefined;
     if (rp.role === 'motion' && owner && rp.ghost) {
-      const from: Point = { x: r2(warp(rp.ghost[0])), y: r2(Math.min(-1, rp.ghost[1] + shiftOf(rp.spot))) };
-      const inner = rp.pts.slice(1, -1).map(([x, y]) => ({ x: r2(warp(x)), y: r2(Math.min(-1, y + shiftOf(rp.spot))) }));
+      const from: Point = { x: r2(warp(rp.ghost[0])), y: r2(Math.min(-1, yMapOf(rp.spot)(rp.ghost[1]))) };
+      const inner = rp.pts.slice(1, -1).map(([x, y]) => ({ x: r2(warp(x)), y: r2(Math.min(-1, yMapOf(rp.spot)(y))) }));
       const motion: PlayerMotion = { from, tag: motionTag(spec, rp.spot as RamsSpot), kind: 'motion', ...(inner.length ? { via: inner } : {}) };
       owner.motion = motion;
       continue;
     }
-    const path = pathFrom(spec, rp, owner, warp, shiftOf(rp.spot), `${id}-p${n++}`);
+    const path = pathFrom(spec, rp, owner, warpFor(rp.spot), yMapOf(rp.spot), `${id}-p${n++}`);
     if (path) paths[path.id] = path;
   }
   for (const rp of spec.freePaths) {
-    const path = pathFrom(spec, rp, undefined, warp, 0, `${id}-p${n++}`);
+    const path = pathFrom(spec, rp, undefined, warp, (y) => y, `${id}-p${n++}`);
     if (path) paths[path.id] = path;
   }
   // a ghost with no motion line: still a pre-snap spot worth showing
@@ -259,9 +353,56 @@ export function composeRamsPlay(spec: RamsPlaySpec): Play {
   let a = 0;
   for (const l of spec.labels) {
     const style = LABEL_STYLE[l.kind];
-    const x = r2(warp(l.x));
-    const y = r2(l.y + shiftOf(l.spot));
-    annotations[`${id}-a${a++}`] = { id: `${id}-a${a}`, kind: 'text', x, y, text: l.text, style: style.style ?? 'plain', size: style.size, ...(style.color ? { color: style.color } : {}) } as TextAnnotation;
+    // a label keeps its printed offset from the nearest point of its man's line work, so it moves with the line
+    let x = r2(warp(l.x));
+    let y = r2(yMapOf(l.spot)(l.y));
+    if (l.spot) {
+      let near: { d: number; x: number; y: number } | null = null;
+      for (const rp of spec.paths) {
+        if (rp.spot !== l.spot) continue;
+        for (const [px, py] of rp.pts) {
+          const d = Math.hypot(px - l.x, py - l.y);
+          if (!near || d < near.d) near = { d, x: px, y: py };
+        }
+      }
+      if (near && near.d < 4) {
+        x = r2(warpFor(l.spot)(near.x) + (l.x - near.x));
+        y = r2(yMapOf(l.spot)(near.y) + (l.y - near.y));
+      }
+    }
+    const text = l.kind === 'note' ? wrapNote(l.text) : l.text;
+    // the print is smaller than the editor's type: a word beside a man moves out until it clears his symbol
+    const owner = l.spot ? final.get(l.spot) : undefined;
+    if (owner) {
+      const lines = text.split('\n');
+      const halfW = 0.31 * Math.max(...lines.map((t) => t.length)) + 0.1;
+      const halfH = 0.42 * lines.length;
+      const dx = x - owner.x;
+      const dy = y - owner.y;
+      if (Math.abs(dx) < halfW + 0.65 && Math.abs(dy) < halfH + 0.55) {
+        if (Math.abs(dy) > 0.45 && Math.abs(dx) < 0.8) y = r2(owner.y + Math.sign(dy) * (halfH + 0.6));
+        else x = r2(owner.x + (dx < 0 ? -1 : 1) * (halfW + 0.7));
+      }
+    }
+    annotations[`${id}-a${a++}`] = { id: `${id}-a${a}`, kind: 'text', x, y, text, style: style.style ?? 'plain', size: style.size, ...(style.color ? { color: style.color } : {}) } as TextAnnotation;
+  }
+  // two words printed close together stay apart in the editor's larger type: the lower one steps down
+  const texts = Object.values(annotations).filter((an): an is TextAnnotation => an.kind === 'text');
+  const box = (t: TextAnnotation) => {
+    const lines = t.text.split('\n');
+    return { hw: 0.31 * Math.max(...lines.map((l) => l.length)) + 0.1, hh: 0.42 * lines.length };
+  };
+  texts.sort((p, q) => q.y - p.y);
+  for (let i = 0; i < texts.length; i++) {
+    for (let j = 0; j < i; j++) {
+      const a = texts[j];
+      const b = texts[i];
+      const ba = box(a);
+      const bb = box(b);
+      const dx = Math.abs(a.x - b.x);
+      const dy = a.y - b.y;
+      if (dx < ba.hw + bb.hw && dy < ba.hh + bb.hh + 0.1 && dy > -0.5) b.y = r2(a.y - (ba.hh + bb.hh + 0.15));
+    }
   }
   // the defense over the line
   const defense: Player[] = spec.defenders.map((d, i) => ({

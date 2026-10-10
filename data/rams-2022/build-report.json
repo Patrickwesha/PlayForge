@@ -1,24 +1,21 @@
 {
- "cells": 899,
- "plays": 899,
+ "cells": 862,
+ "plays": 862,
  "noFormation": [
   "dropback-cans p18 c1: [11] BRAWLIN LASSO / SCRABBLE F MEXICO Z BLAZER (CAN) ZONE ANSWER",
-  "dropback-cans p18 c2: [11] BRAWLIN LASSO / SCRABBLE F MEXICO Z BLAZER (CAN) ZONE ANSWER",
   "play-pass p21 c2: [11] SCOOT PACK / GRIZZLY PIN X HP SLACKER Y STRIKE",
   "screens p10 c3: [11] ROCKIN SHORTY UNO Y SHORT / SLAMMER GE RT TO Y",
   "screens p10 c4: [11] ROLLIN B X SHORT / SLAMMER LT TO X",
   "two-minute p9 c1: [11] BRAWLIN SPEAR / ",
   "two-minute p12 c1: [13Z/12] VICTORY / ",
   "two-minute p12 c3: [13Z/12] VICTORY SNEAK / ",
-  "two-minute p16 c1: OMAHA GIMME / ",
-  "two-minute p16 c3: OMAHA GIMME / "
+  "two-minute p16 c1: OMAHA GIMME / "
  ],
  "noCall": [
   "two-minute p9 c1: [11] BRAWLIN SPEAR",
   "two-minute p12 c1: [13Z/12] VICTORY",
   "two-minute p12 c3: [13Z/12] VICTORY SNEAK",
-  "two-minute p16 c1: OMAHA GIMME",
-  "two-minute p16 c3: OMAHA GIMME"
+  "two-minute p16 c1: OMAHA GIMME"
  ],
  "unknownWords": {
   "[13JX]": 4,
@@ -26,7 +23,6 @@
   "O": 1
  },
  "packMiss": [
-  "dropback-cans p16: Flutey Rt ([11] FLUTEY RT)",
   "dropback-cans p16: Flutey Rt ([11] FLUTEY RT)",
   "play-pass p16: Scoot Rt Edge ([11] SCOOT RT EDGE ZAC)",
   "screens p8: Scoot pack Rt ([12] SCOOT PACK RT (TOUT))",

@@ -315,9 +315,12 @@ def identify_players(cell):
         spots.setdefault(s, (x, 0.0))
     used = set(id(o) for o in left + right)
     rest = [o for o in unlabeled if id(o) not in used]
-    # the quarterback: the unlabeled man right behind the center; the back: the deepest one in the middle
+    # the quarterback: the unlabeled man right behind the center, under center or in the gun (the pass sections
+    # print his drop number in the ring instead of a letter); the back: the deepest one in the middle
     if "Q" not in spots:
         q = sorted([o for o in rest if abs(o["x"]) < 0.9 and -3.2 < o["y"] < -0.5], key=lambda o: -o["y"])
+        if not q:
+            q = sorted([o for o in rest if abs(o["x"]) < 0.9 and -6.5 < o["y"] <= -3.2 and o["shape"] == "ring"], key=lambda o: -o["y"])
         if q:
             spots["Q"] = (q[0]["x"], q[0]["y"])
             rest = [o for o in rest if o is not q[0]]
@@ -346,6 +349,13 @@ def path_role(spot, path, is_run):
     return "route"
 
 
+def is_defense_ink(p):
+    """The book draws the defence's movement (a safety rolling down, the backers' fit line) in green or brown;
+    the offence's lines are black, blue (the ball carrier on a sweep) or red (a changed assignment)."""
+    r, g, b = p.get("color") or (0, 0, 0)
+    return (g > 0.35 and r < 0.2 and b < 0.2) or (r > 0.45 and 0.1 < g < 0.4 and b < 0.15)
+
+
 def attach_paths(cell, spots):
     """Give every path an owner spot. Returns [{spot, pts (absolute diagram yards), dashed, end, startMark, role, branch}]."""
     owners = {}
@@ -359,14 +369,54 @@ def attach_paths(cell, spots):
         return best
     out = []
     pending = []
+    bars = []
+    def ink(p):
+        return tuple(round(c, 1) for c in (p.get("color") or (0, 0, 0)))
+    def continues(k):
+        """A coloured line (the book's blue jet man, a red changed assignment) that starts where a line of the
+        same colour ends continues it, even when it also starts beside a man."""
+        p = paths[k]
+        if ink(p) == (0.0, 0.0, 0.0) or len(p["pts"]) < 2:
+            return False
+        for j, q in enumerate(paths):
+            if j != k and ink(q) == ink(p) and len(q["pts"]) >= 2 and math.hypot(q["pts"][-1][0] - p["pts"][0][0], q["pts"][-1][1] - p["pts"][0][1]) < 0.5:
+                return True
+        return False
+    def in_note_box(q):
+        """The underline of a progression number, or the frame of a boxed note: print, not line work."""
+        pts = q["pts"]
+        length = sum(math.hypot(pts[i + 1][0] - pts[i][0], pts[i + 1][1] - pts[i][1]) for i in range(len(pts) - 1))
+        for l in cell["labels"]:
+            lines = l["text"].split("\n")
+            half_w = max(0.6, 0.17 * max(len(t) for t in lines))
+            half_h = 0.55 * len(lines) + 0.9
+            if l["kind"] == "note":
+                half_w, half_h = max(1.5, half_w + 0.6), half_h + 0.6
+            elif length > 0.8:
+                continue
+            if all(abs(x - l["x"]) < half_w and abs(y - l["y"]) < half_h for x, y in pts):
+                return True
+        return False
+    def is_callout(q):
+        """A cloud drawn around a word: a small closed shape."""
+        pts = q["pts"]
+        if len(pts) < 5 or math.hypot(pts[0][0] - pts[-1][0], pts[0][1] - pts[-1][1]) > 0.35:
+            return False
+        xs, ys = [x for x, _ in pts], [y for _, y in pts]
+        return max(xs) - min(xs) < 4 and max(ys) - min(ys) < 2.5
     for k, p in enumerate(paths):
         pts = p["pts"]
         if len(pts) < 2:
             continue
+        if is_defense_ink(p) or in_note_box(p) or is_callout(p):
+            continue
         length = sum(math.hypot(pts[i + 1][0] - pts[i][0], pts[i + 1][1] - pts[i][1]) for i in range(len(pts) - 1))
+        if p.get("bar"):
+            bars.append({"spot": None, "pts": pts, "dashed": p["dashed"], "end": "none", "startMark": "none", "role": "bar"})
+            continue
         hit = nearest_spot(pts[0], 0.75) or nearest_spot(pts[0], 1.05)
         hit_end = nearest_spot(pts[-1], 0.75)
-        if hit_end and (not hit or hit_end[0] < hit[0]) and p["startMark"] in ("arrow", "tbar"):
+        if hit_end and (not hit or hit_end[0] < hit[0]) and p["startMark"] in ("arrow", "tbar", "dot"):
             pts = list(reversed(pts))
             p = dict(p, end=p["startMark"], startMark=p["end"])
             hit = hit_end
@@ -376,31 +426,61 @@ def attach_paths(cell, spots):
             if far:
                 out.append({"spot": far[1], "pts": pts, "dashed": True, "end": p["end"], "startMark": p["startMark"], "role": "motion", "ghost": [p["anchor"]["x"], p["anchor"]["y"]]})
                 continue
-        if hit and length >= 0.4:
+        long_enough = length >= 0.4 or (p["end"] == "tbar" and length >= 0.15)
+        if hit and hit[0] < 0.5 and long_enough and not continues(k):
+            # a stem chained with the outline of a half-filled symbol: the vertices inside the symbol go
+            sx, sy = spots[hit[1]]
+            pts = list(pts)
+            while len(pts) > 2 and math.hypot(pts[1][0] - sx, pts[1][1] - sy) < 0.6:
+                pts.pop(0)
             out.append({"spot": hit[1], "pts": pts, "dashed": p["dashed"], "end": p["end"], "startMark": p["startMark"], "role": None, "k": k})
-        elif length >= 0.4:
-            pending.append({"pts": pts, "dashed": p["dashed"], "end": p["end"], "startMark": p["startMark"], "k": k})
-    # unanchored paths: a continuation or a branch of an owned path
+        elif long_enough:
+            pending.append({"pts": pts, "dashed": p["dashed"], "end": p["end"], "startMark": p["startMark"], "k": k,
+                            "ring": hit or nearest_spot(pts[0], 1.4), "ringEnd": nearest_spot(pts[-1], 1.05)})
+    # the rest: a continuation or a branch of an owned line (its start snaps onto that line), else a man's own line
     changed = True
     while changed and pending:
         changed = False
         for q in list(pending):
             best = None
+            # a line with no man at either end may sit a little further off the line it continues (a route
+            # leaving the far end of a T-bar)
+            tol = 0.5 if (q.get("ring") or q.get("ringEnd")) else 0.75
             for o in out:
                 for vi, v in enumerate(o["pts"]):
                     for where, e in (("start", q["pts"][0]), ("end", q["pts"][-1])):
                         d = math.hypot(v[0] - e[0], v[1] - e[1])
-                        if d < 0.45 and (best is None or d < best[0]):
+                        if d < tol and (best is None or d < best[0]):
                             best = (d, o, where, vi)
             if best:
                 d, o, where, vi = best
-                pts = q["pts"] if where == "start" else list(reversed(q["pts"]))
+                # a line whose far end sits on a man is that man's own line (it leads to the join, not from it):
+                # nothing else ever runs into a player's symbol
+                far = q.get("ringEnd") if where == "start" else q.get("ring")
+                if far and far[1] != o["spot"]:
+                    pts = list(reversed(q["pts"])) if where == "start" else list(q["pts"])
+                    end = q["startMark"] if where == "start" else q["end"]
+                    start_mark = q["end"] if where == "start" else q["startMark"]
+                    out.append({"spot": far[1], "pts": pts, "dashed": q["dashed"], "end": end, "startMark": start_mark, "role": None, "k": q["k"]})
+                    pending.remove(q)
+                    changed = True
+                    continue
+                pts = list(q["pts"]) if where == "start" else list(reversed(q["pts"]))
+                pts[0] = list(o["pts"][vi])
                 end = q["end"] if where == "start" else q["startMark"]
                 start_mark = q["startMark"] if where == "start" else q["end"]
                 out.append({"spot": o["spot"], "pts": pts, "dashed": q["dashed"], "end": end, "startMark": start_mark, "role": None, "branch": True})
                 pending.remove(q)
                 changed = True
-    free = [{"spot": None, "pts": q["pts"], "dashed": q["dashed"], "end": q["end"], "startMark": q["startMark"], "role": "free"} for q in pending]
+        if not changed:
+            # nothing joins a line: the nearest ring (a little further off) owns the next one
+            ringed = [q for q in pending if q.get("ring")]
+            if ringed:
+                q = min(ringed, key=lambda q: q["ring"][0])
+                out.append({"spot": q["ring"][1], "pts": q["pts"], "dashed": q["dashed"], "end": q["end"], "startMark": q["startMark"], "role": None, "k": q["k"]})
+                pending.remove(q)
+                changed = True
+    free = [{"spot": None, "pts": q["pts"], "dashed": q["dashed"], "end": q["end"], "startMark": q["startMark"], "role": "free"} for q in pending if not in_note_box(q)] + bars
     return out, free
 
 
@@ -408,14 +488,17 @@ def attach_labels(cell, spots, owned):
     """Every label goes to the nearest player or to the owner of the nearest route point."""
     out = []
     for l in cell["labels"]:
+        if re.fullmatch(r"\d\+?", l["text"].strip()) and any(math.hypot(l["x"] - x, l["y"] - y) < 0.4 for x, y in spots.values()):
+            continue
         best = None
+        # a word printed under a man is his, not the neighbour's beside him: sideways distance counts more
         for s, (x, y) in spots.items():
-            d = math.hypot(l["x"] - x, l["y"] - y)
+            d = math.hypot(1.6 * (l["x"] - x), l["y"] - y)
             if best is None or d < best[0]:
                 best = (d, s)
         for o in owned:
             for v in o["pts"]:
-                d = math.hypot(l["x"] - v[0], l["y"] - v[1]) * 1.15
+                d = math.hypot(1.3 * (l["x"] - v[0]), l["y"] - v[1]) * 1.15
                 if best is None or d < best[0]:
                     best = (d, o["spot"])
         spot = best[1] if best and best[0] < 3.0 else None
@@ -525,6 +608,15 @@ def main():
                 for o in owned:
                     if o.get("role") != "motion":
                         o["role"] = path_role(o["spot"], o, is_run)
+                # one ball carrier: on a jet or fly the motion man's line carries it, else the back's; the other
+                # arrow is the fake
+                balls = [o for o in owned if o.get("role") == "ball"]
+                if len(balls) > 1:
+                    jet = bool(re.search(r"\b(FLY|JET|FLIGHT|SLALOM)\b", (cline or "").upper()))
+                    keep = next((o for o in balls if (o["spot"] != "H") == jet), balls[0])
+                    for o in balls:
+                        if o is not keep:
+                            o["role"] = "route"
                 labels = attach_labels(cell, spots, owned)
                 # formation in the pack?
                 pack_key, pack_personnel = None, None
@@ -568,12 +660,13 @@ def main():
                 for l in labels:
                     if not l["spot"]:
                         continue
+                    word = " ".join(l["text"].split())
                     if l["kind"] == "block":
-                        block_calls.setdefault(l["spot"], []).append(l["text"])
+                        block_calls.setdefault(l["spot"], []).append(word)
                     elif l["kind"] == "route":
-                        route_words.setdefault(l["spot"], []).append(l["text"])
+                        route_words.setdefault(l["spot"], []).append(word)
                     elif l["kind"] == "depth":
-                        depth_words.setdefault(l["spot"], []).append(l["text"])
+                        depth_words.setdefault(l["spot"], []).append(word)
                 for letter, w in call["routeWordsFromCall"].items():
                     route_words.setdefault(letter, [])
                     if w not in route_words[letter]:

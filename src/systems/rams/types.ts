@@ -25,9 +25,9 @@ export type RamsPath = {
   spot: RamsSpot | null;
   pts: [number, number][];
   dashed: boolean;
-  end: 'arrow' | 'tbar' | 'none';
-  startMark: 'arrow' | 'tbar' | 'none';
-  role: 'block' | 'route' | 'ball' | 'motion' | 'free' | null;
+  end: 'arrow' | 'tbar' | 'dot' | 'none';
+  startMark: 'arrow' | 'tbar' | 'dot' | 'none';
+  role: 'block' | 'route' | 'ball' | 'motion' | 'free' | 'bar' | null;
   branch?: boolean;
   ghost?: [number, number];
 };

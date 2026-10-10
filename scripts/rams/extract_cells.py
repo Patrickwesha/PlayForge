@@ -95,6 +95,7 @@ def page_spans(page):
 def page_shapes(page):
     """Rings (offense), squares (center), discs (filled back), dashed rings (motion ghosts), polylines, arrowheads."""
     rings, squares, discs, ghosts, polys, heads = [], [], [], [], [], []
+    dots = []
     for d in page.get_drawings():
         r = d["rect"]
         kinds = collections.Counter(it[0] for it in d["items"])
@@ -103,6 +104,10 @@ def page_shapes(page):
         fill = d.get("fill")
         color = d.get("color")
         square_like = 8 < r.width < 30 and 8 < r.height < 30 and abs(r.width - r.height) < 3.5
+        dot_like = 2 < r.width <= 8 and 2 < r.height <= 8 and abs(r.width - r.height) < 2
+        if dot_like and kinds.get("c") == 4 and fill is not None and sum(fill) < 1.5 and not dashed:
+            dots.append(((r.x0 + r.x1) / 2, (r.y0 + r.y1) / 2))
+            continue
         if square_like and kinds.get("c") == 4 and not dashed:
             c = ((r.x0 + r.x1) / 2, (r.y0 + r.y1) / 2)
             if fill is not None and sum(fill) < 1.5:
@@ -182,38 +187,166 @@ def page_shapes(page):
     heads = dedupe(heads, lambda h: rk(h["tip"]))
     # rings drawn on top of a disc (both exist for a filled back) count once
     rings = [c for c in rings if not any(dist(c, d) < 3 for d in discs)]
-    return rings, squares, discs, ghosts, polys, heads
+    dots = dedupe(dots, rk)
+    return rings, squares, discs, ghosts, polys, heads, dots
 
 
-def chain(polys):
-    """Join polylines whose ends meet (same dash style) into longer ones."""
+def doubles_back(prev, joint, nxt):
+    """The leg joint->nxt runs straight back over prev->joint (the second half of a bar drawn from its middle)."""
+    v = (joint[0] - prev[0], joint[1] - prev[1])
+    w = (nxt[0] - joint[0], nxt[1] - joint[1])
+    nv, nw = math.hypot(*v), math.hypot(*w)
+    if nv < 1e-6 or nw < 1e-6:
+        return False
+    return (v[0] * w[0] + v[1] * w[1]) / (nv * nw) < -0.95
+
+
+def chain(polys, junctions=()):
+    """Join polylines whose ends meet (same dash style) into longer ones. Nothing joins across a junction (the
+    point a T-bar or a shared bar sits on: the line there ends at the bar and the next line starts from it)."""
     polys = [dict(p, pts=list(p["pts"])) for p in polys]
+    def at_junction(pt):
+        return any(dist(pt, q) < 2.5 for q in junctions)
     changed = True
     while changed:
         changed = False
         for i in range(len(polys)):
             a = polys[i]
-            if a is None:
+            if a is None or a.get("bar"):
                 continue
             for j in range(len(polys)):
                 b = polys[j]
-                if i == j or b is None or a["dashed"] != b["dashed"]:
+                if i == j or b is None or b.get("bar") or a["dashed"] != b["dashed"]:
                     continue
-                if dist(a["pts"][-1], b["pts"][0]) < 1.6:
+                if dist(a["pts"][-1], b["pts"][0]) < 1.6 and not at_junction(a["pts"][-1]) and not doubles_back(a["pts"][-2], a["pts"][-1], b["pts"][1]):
                     a["pts"] += b["pts"][1:]
-                elif dist(a["pts"][-1], b["pts"][-1]) < 1.6:
+                elif dist(a["pts"][-1], b["pts"][-1]) < 1.6 and not at_junction(a["pts"][-1]) and not doubles_back(a["pts"][-2], a["pts"][-1], b["pts"][-2]):
                     a["pts"] += list(reversed(b["pts"]))[1:]
-                elif dist(a["pts"][0], b["pts"][-1]) < 1.6:
+                elif dist(a["pts"][0], b["pts"][-1]) < 1.6 and not at_junction(a["pts"][0]) and not doubles_back(a["pts"][1], a["pts"][0], b["pts"][-2]):
                     a["pts"] = b["pts"] + a["pts"][1:]
-                elif dist(a["pts"][0], b["pts"][0]) < 1.6:
+                elif dist(a["pts"][0], b["pts"][0]) < 1.6 and not at_junction(a["pts"][0]) and not doubles_back(a["pts"][1], a["pts"][0], b["pts"][1]):
                     a["pts"] = list(reversed(b["pts"])) + a["pts"][1:]
                 else:
                     continue
                 a["len"] += b["len"]
+                a["tbar_pts"] = a.get("tbar_pts", []) + b.get("tbar_pts", [])
                 polys[j] = None
                 changed = True
                 break
     return [p for p in polys if p]
+
+
+def dewiggle(p):
+    """A drift or chip is drawn as a squiggle inside the line: drop the wiggle, keep the line."""
+    pts = list(p["pts"])
+    changed = True
+    while changed and len(pts) > 2:
+        changed = False
+        for i in range(1, len(pts) - 1):
+            if dist(pts[i - 1], pts[i]) < 3.5 and dist(pts[i], pts[i + 1]) < 3.5:
+                del pts[i]
+                changed = True
+                break
+    return dict(p, pts=pts)
+
+
+def split_embedded_bars(p):
+    """A T-bar the PDF drew inside the line itself (the line runs to the bar's middle, out to one end and back
+    across): cut the bar off and keep its point as the line's T-bar mark."""
+    pts = list(p["pts"])
+    marks = list(p.get("tbar_pts", []))
+    def cut_end():
+        nonlocal pts
+        if len(pts) < 4:
+            return False
+        j, a, b = pts[-3], pts[-2], pts[-1]
+        if dist(j, a) <= 20 and dist(a, b) <= 34 and doubles_back(j, a, b) and not doubles_back(pts[-4], j, a):
+            v = (j[0] - pts[-4][0], j[1] - pts[-4][1])
+            w = (a[0] - j[0], a[1] - j[1])
+            nv, nw = math.hypot(*v) or 1e-9, math.hypot(*w) or 1e-9
+            if abs(v[0] * w[0] + v[1] * w[1]) / (nv * nw) < 0.6:
+                pts = pts[:-2]
+                marks.append(j)
+                return True
+        return False
+    if cut_end():
+        pass
+    pts.reverse()
+    if cut_end():
+        pass
+    pts.reverse()
+    out = dict(p, pts=pts, len=sum(dist(pts[i], pts[i + 1]) for i in range(len(pts) - 1)))
+    if marks:
+        out["tbar_pts"] = marks
+    return out
+
+
+def merge_bar_halves(polys):
+    """A bar drawn from its middle outward comes as two short collinear pieces: make it one segment."""
+    polys = [dict(p, pts=list(p["pts"])) for p in polys]
+    def short_straight(p):
+        return p is not None and len(p["pts"]) == 2 and p["len"] <= 20
+    changed = True
+    while changed:
+        changed = False
+        for i in range(len(polys)):
+            a = polys[i]
+            if not short_straight(a):
+                continue
+            for j in range(len(polys)):
+                b = polys[j]
+                if i == j or not short_straight(b) or a["dashed"] != b["dashed"]:
+                    continue
+                for ea in (0, 1):
+                    for eb in (0, 1):
+                        if dist(a["pts"][ea], b["pts"][eb]) >= 1.6:
+                            continue
+                        far_a, far_b = a["pts"][1 - ea], b["pts"][1 - eb]
+                        v = (a["pts"][ea][0] - far_a[0], a["pts"][ea][1] - far_a[1])
+                        w = (far_b[0] - b["pts"][eb][0], far_b[1] - b["pts"][eb][1])
+                        nv, nw = math.hypot(*v) or 1e-9, math.hypot(*w) or 1e-9
+                        if (v[0] * w[0] + v[1] * w[1]) / (nv * nw) > 0.97:
+                            a["pts"] = [far_a, far_b]
+                            a["len"] = dist(far_a, far_b)
+                            polys[j] = None
+                            changed = True
+                            break
+                    if changed:
+                        break
+                if changed:
+                    break
+    return [p for p in polys if p]
+
+
+def find_bars(polys):
+    """Before chaining: a short straight segment another line's end meets is a block bar. Met by one line it is
+    that line's T-bar end (the line keeps the point, the bar goes); met by two or more (a double team, the dashed
+    bar the climbs reach) it stays a bar of its own. Returns the junction points, where no line may be joined."""
+    junctions = []
+    hits = {}
+    for i, seg in enumerate(polys):
+        if len(seg["pts"]) != 2 or not (5 <= seg["len"] <= 34):
+            continue
+        for j, path in enumerate(polys):
+            if i == j or len(path["pts"]) < 2:
+                continue
+            where = is_tbar(seg, path)
+            if where:
+                hits.setdefault(i, []).append((j, where))
+    drop = set()
+    for i, found in hits.items():
+        ends = {(j, where) for j, where in found}
+        if len({j for j, _ in ends}) == 1:
+            for j, where in ends:
+                pt = polys[j]["pts"][-1] if where == "end" else polys[j]["pts"][0]
+                polys[j].setdefault("tbar_pts", []).append(pt)
+                junctions.append(pt)
+            drop.add(i)
+        else:
+            polys[i]["bar"] = True
+            for j, where in ends:
+                junctions.append(polys[j]["pts"][-1] if where == "end" else polys[j]["pts"][0])
+    return [p for i, p in enumerate(polys) if i not in drop], junctions
 
 
 def simplify(pts, eps=0.9):
@@ -239,29 +372,39 @@ def is_tbar(seg, path):
     if seg["len"] > 34 or seg["len"] < 5 or len(seg["pts"]) > 3 or seg["dashed"] != path["dashed"]:
         return None
     a, b = seg["pts"][0], seg["pts"][-1]
-    def seg_dist(p):
+    def seg_t(p):
         ab = (b[0] - a[0], b[1] - a[1])
         n2 = ab[0] ** 2 + ab[1] ** 2 or 1e-9
-        t = max(0.0, min(1.0, ((p[0] - a[0]) * ab[0] + (p[1] - a[1]) * ab[1]) / n2))
-        return dist(p, (a[0] + t * ab[0], a[1] + t * ab[1]))
+        return ((p[0] - a[0]) * ab[0] + (p[1] - a[1]) * ab[1]) / n2
+    def seg_dist(p):
+        t = max(0.0, min(1.0, seg_t(p)))
+        return dist(p, (a[0] + t * (b[0] - a[0]), a[1] + t * (b[1] - a[1])))
     for end, prev in ((path["pts"][-1], path["pts"][-2]), (path["pts"][0], path["pts"][1])):
         if seg_dist(end) < 2.2 and dist(end, prev) > 2.5:
+            # two short pieces: the bar is the one the other's end meets away from its own ends
+            if len(path["pts"]) == 2 and path["len"] < seg["len"] and not (0.2 <= seg_t(end) <= 0.8):
+                continue
             v = (end[0] - prev[0], end[1] - prev[1])
             w = (seg["pts"][-1][0] - seg["pts"][0][0], seg["pts"][-1][1] - seg["pts"][0][1])
             nv, nw = math.hypot(*v) or 1e-9, math.hypot(*w) or 1e-9
             cosang = abs(v[0] * w[0] + v[1] * w[1]) / (nv * nw)
-            if cosang < 0.45:
+            # square to the stem, or a flat bar a slanted stem meets in its middle (a wing's block on a backer)
+            if cosang < 0.45 or (cosang < 0.85 and 0.2 <= seg_t(end) <= 0.8):
                 return "end" if end is path["pts"][-1] else "start"
     return None
 
 
-def group_labels(spans, line_gap=2.5, x_gap=9, row_gap=9.5):
+def group_labels(spans, line_gap=2.5, x_gap=9, row_gap=9.5, row_joiner=" "):
     """Words of the same size, colour and font that sit on one line, then lines stacked under each other."""
+    # a superscript (3rd, 4th) is printed smaller and a little above its line: read it on that line
+    sizes = sorted(s["size"] for s in spans)
+    median = sizes[len(sizes) // 2] if sizes else 0
+    spans = [dict(s, y=s["y"] + (2.5 if s["size"] < median - 1.5 else 0)) for s in spans]
     spans = sorted(spans, key=lambda s: (round(s["y"]), s["x0"]))
     lines = []
     for s in spans:
         for ln in lines:
-            if abs(ln["y"] - s["y"]) <= line_gap and ln["size"] == s["size"] and ln["color"] == s["color"] and s["x0"] - ln["x1"] < x_gap and s["x0"] >= ln["x0"] - 2:
+            if abs(ln["y"] - s["y"]) <= line_gap and abs(ln["size"] - s["size"]) <= 2.5 and ln["color"] == s["color"] and s["x0"] - ln["x1"] < x_gap and s["x0"] >= ln["x0"] - 2:
                 ln["text"] += " " + s["text"]
                 ln["x1"] = max(ln["x1"], s["x1"])
                 ln["x0"] = min(ln["x0"], s["x0"])
@@ -274,8 +417,8 @@ def group_labels(spans, line_gap=2.5, x_gap=9, row_gap=9.5):
         cx = (ln["x0"] + ln["x1"]) / 2
         for g in out:
             gcx = (g["x0"] + g["x1"]) / 2
-            if ln["size"] == g["size"] and ln["color"] == g["color"] and 0 < ln["y"] - g["ylast"] <= row_gap and abs(cx - gcx) < max(9, 0.6 * (g["x1"] - g["x0"] + 1)):
-                g["text"] += " " + ln["text"]
+            if abs(ln["size"] - g["size"]) <= 2.5 and ln["color"] == g["color"] and 0 < ln["y"] - g["ylast"] <= row_gap and abs(cx - gcx) < max(9, 0.6 * (g["x1"] - g["x0"] + 1)):
+                g["text"] += row_joiner + ln["text"]
                 g["ylast"] = ln["y"]
                 g["x0"], g["x1"] = min(g["x0"], ln["x0"]), max(g["x1"], ln["x1"])
                 g["y1"] = ln["y1"]
@@ -285,7 +428,7 @@ def group_labels(spans, line_gap=2.5, x_gap=9, row_gap=9.5):
     for g in out:
         g["x"] = (g["x0"] + g["x1"]) / 2
         g["y"] = (g["y0"] + g["y1"]) / 2
-        g["text"] = re.sub(r"\s+", " ", g["text"]).strip()
+        g["text"] = "\n".join(re.sub(r"[ \t]+", " ", t).strip() for t in g["text"].split("\n") if t.strip())
     return out
 
 
@@ -402,7 +545,9 @@ def assign_cells(headers, items, key=lambda it: (it["x"], it["y"])):
 
 def extract_page(page, section, pageno, kind):
     spans = page_spans(page)
-    rings, squares, discs, ghosts, polys, heads = page_shapes(page)
+    # the page number at the foot of the page is print, not a label
+    spans = [s for s in spans if not (s["y"] > page.rect.height - 40 and re.fullmatch(r"\d+", s["text"].strip()))]
+    rings, squares, discs, ghosts, polys, heads, dots = page_shapes(page)
     rows = None
     if section == "pass-pro":
         rowmap = collections.defaultdict(list)
@@ -432,18 +577,24 @@ def extract_page(page, section, pageno, kind):
     text_lines = group_labels([s for s in spans if classify_span(s) in ("concept", "note") and s["y"] < top - 8], line_gap=3, x_gap=30, row_gap=0)
     page_text = [l["text"] for l in sorted(text_lines, key=lambda l: (l["y"], l["x0"]))]
 
-    polys = chain(polys)
-    # block ends: a short bar across a line end
-    tbars = set()
-    for i, seg in enumerate(polys):
-        for j, path in enumerate(polys):
-            if i == j or len(path["pts"]) < 2 or (len(seg["pts"]) <= 2 and len(path["pts"]) <= 2 and path["len"] < seg["len"]):
-                continue
-            where = is_tbar(seg, path)
-            if where:
-                path.setdefault("tbar", []).append(where)
-                tbars.add(i)
-    polys = [p for i, p in enumerate(polys) if i not in tbars]
+    # block bars first (on the raw pieces, so a stem, its bar and the line leaving the bar stay three things),
+    # then the pieces chain into lines, and a T-bar point becomes the mark on the line end it sits on
+    # the tiny pieces of a chip squiggle go (they touch each other); a tiny stem between a ring and its bar stays
+    tiny = [p for p in polys if not p["dashed"] and p["len"] < 3.5]
+    def touches_tiny(p):
+        return any(q is not p and min(dist(a, b) for a in (p["pts"][0], p["pts"][-1]) for b in (q["pts"][0], q["pts"][-1])) < 1.6 for q in tiny)
+    polys = [p for p in polys if p["dashed"] or p["len"] >= 3.5 or not touches_tiny(p)]
+    polys = [split_embedded_bars(dewiggle(p)) for p in polys]
+    polys = merge_bar_halves(polys)
+    polys, junctions = find_bars(polys)
+    junctions += [pt for p in polys for pt in p.get("tbar_pts", [])]
+    polys = chain(polys, junctions)
+    for p in polys:
+        for pt in p.get("tbar_pts", []):
+            if dist(pt, p["pts"][-1]) < 2.5:
+                p.setdefault("tbar", []).append("end")
+            elif dist(pt, p["pts"][0]) < 2.5:
+                p.setdefault("tbar", []).append("start")
     # arrowheads: attach to the nearest line end
     for h in heads:
         best, bd = None, None
@@ -454,6 +605,17 @@ def extract_page(page, section, pageno, kind):
                     best, bd = (p, where), d
         if best and bd < 4.5:
             best[0].setdefault("arrow", []).append(best[1])
+
+    # settle dots: a line ends on one
+    for dot in dots:
+        best, bd = None, None
+        for p in polys:
+            for where, end in (("end", p["pts"][-1]), ("start", p["pts"][0])):
+                d = dist(dot, end)
+                if bd is None or d < bd:
+                    best, bd = (p, where), d
+        if best and bd < 4.5:
+            best[0].setdefault("dot", []).append(best[1])
 
     by_cell_spans = assign_cells(headers, spans)
     by_cell_rings = assign_cells(headers, [{"x": c[0], "y": c[1]} for c in rings])
@@ -554,7 +716,7 @@ def extract_page(page, section, pageno, kind):
         cellno = next((s["text"] for s in cs if classify_span(s) == "cellno"), None)
         labels = []
         for cls, kindname in (("redlabel", "block"), ("routelabel", "route"), ("depth", "depth"), ("progression", "progression"), ("bluenote", "note"), ("whitenote", "note"), ("note", "note")):
-            groups = group_labels([s for s in cs if classify_span(s) == cls and s["y"] > h["y"] + 10])
+            groups = group_labels([s for s in cs if classify_span(s) == cls and s["y"] > h["y"] + 10], row_gap=11, row_joiner="\n")
             for g in groups:
                 x, y = to_yd(g["x"], g["y"])
                 labels.append({"kind": kindname, "text": g["text"], "x": x, "y": y, "color": g["color"]})
@@ -574,6 +736,7 @@ def extract_page(page, section, pageno, kind):
                 continue
             arrow = p.get("arrow", [])
             tbar = p.get("tbar", [])
+            dot = p.get("dot", [])
             # start the path at the end that sits on a player (ring, disc or ghost); the other end is the business end
             start_end = None
             best = None
@@ -588,13 +751,17 @@ def extract_page(page, section, pageno, kind):
                     ypts.reverse()
                     arrow = ["end" if a == "start" else "start" for a in arrow]
                     tbar = ["end" if a == "start" else "start" for a in tbar]
+                    dot = ["end" if a == "start" else "start" for a in dot]
                 sx, sy_ = to_yd(best[3]["x"], best[3]["y"])
                 anchor = {"shape": best[2], "x": sx, "y": sy_, "dist": round(best[0] / unit, 2)}
             else:
                 anchor = None
-            end = "arrow" if "end" in arrow else "tbar" if "end" in tbar else "none"
-            paths.append({"pts": ypts, "dashed": p["dashed"], "end": end, "startMark": "arrow" if "start" in arrow else "tbar" if "start" in tbar else "none", "anchor": anchor, "width": round(p["width"], 2), "color": p["color"]})
+            end = "arrow" if "end" in arrow else "tbar" if "end" in tbar else "dot" if "end" in dot else "none"
+            start_mark = "arrow" if "start" in arrow else "tbar" if "start" in tbar else "dot" if "start" in dot else "none"
+            paths.append({"pts": ypts, "dashed": p["dashed"], "end": end, "startMark": start_mark, "anchor": anchor, "width": round(p["width"], 2), "color": p["color"], "bar": bool(p.get("bar"))})
         ghosts_yd = [dict(zip(("x", "y"), to_yd(g["x"], g["y"]))) for g in by_cell_ghosts[i]]
+        if not paths:
+            continue  # nothing drawn: a spare template cell, or a "vs ..." note with no picture
         cells.append({
             "section": section, "page": pageno, "cell": i + 1, "cellNumber": cellno, "title": title,
             "formationLine": h["formation"], "callLine": h["call"], "front": front, "frontNote": frontnote, "inheritedHeader": bool(h.get("inherited")),

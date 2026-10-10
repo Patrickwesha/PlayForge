@@ -16,10 +16,10 @@ import { composeRamsPlay } from '@/systems/rams/compose';
 import type { RamsPlayPack } from '@/systems/rams/types';
 
 const OUT = path.resolve(import.meta.dirname, '../renders/rams-2022');
-const W = 1200;
-const H = 900;
+const W = 1200 * Number(process.env.SCALE ?? 1);
+const H = 900 * Number(process.env.SCALE ?? 1);
 
-it('renders Rams plays to files', async () => {
+it('renders Rams plays to files', { timeout: 600000 }, async () => {
   mkdirSync(OUT, { recursive: true });
   const pack = JSON.parse(readFileSync(path.resolve(import.meta.dirname, '../public/rams-2022/plays.json'), 'utf8')) as RamsPlayPack;
   const wanted = (process.env.KEYS ?? '').split(',').map((s) => s.trim()).filter(Boolean);
@@ -28,7 +28,7 @@ it('renders Rams plays to files', async () => {
   for (const spec of specs) {
     const play = composeRamsPlay(spec);
     const svg = renderToStaticMarkup(<PlayThumb diagram={play.diagram} aspect={W / H} />).replace('<svg ', `<svg width="${W}" height="${H}" `);
-    await sharp(Buffer.from(svg)).png().toFile(path.join(OUT, `${spec.key}.png`));
+    await sharp(Buffer.from(svg), { density: 72 * Number(process.env.SCALE ?? 1) }).png().toFile(path.join(OUT, `${spec.key}.png`));
     rows.push(`<div><h3>${spec.key} - ${play.formationLabel} / ${play.name} (${play.defense?.front ?? ''})</h3><img src="${spec.key}.png" width="600"><pre>${(play.reviewNotes ?? []).join('\n')}</pre></div>`);
   }
   writeFileSync(path.join(OUT, 'index.html'), `<html><body>${rows.join('')}</body></html>`);
