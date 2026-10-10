@@ -208,6 +208,9 @@ export function Inspector() {
                 <button className={btn} onClick={() => A.curvePath(selPath.id)}>Curve</button>
                 <button className={btn} onClick={() => A.straightenPath(selPath.id)}>Straighten</button>
                 <button className={btn} onClick={() => A.branchFromEnd(selPath.id)}>Branch from end</button>
+                {selection.pointIndex !== undefined && selection.pointIndex > 0 && selection.pointIndex < selPath.points.length - 1 && (
+                  <button className={btn} onClick={() => A.branchFromPoint(selPath.id, selection.pointIndex!)} title="A new line from the selected point; add as many as the play needs">Branch from point</button>
+                )}
                 <button className={btn} onClick={() => A.bringPathToFront(selPath.id)} title="On top where lines cross">Bring to front</button>
                 <button className={btn} onClick={() => A.sendPathToBack(selPath.id)} title="Underneath where lines cross">Send to back</button>
                 <button className={`${btn} ${selPath.primary ? 'bg-yellow-200' : ''}`} onClick={() => A.updatePath(selPath.id, { primary: !selPath.primary })}>Primary</button>

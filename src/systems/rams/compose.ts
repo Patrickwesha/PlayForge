@@ -244,8 +244,8 @@ function makeWarp(spec: RamsPlaySpec, final: Map<RamsSpot, Player>): (x: number)
 // the drawing's secondary is shallow, so the backs go deeper.
 const DEF_Y = (role: 'DL' | 'LB' | 'DB', y: number) => (role === 'DL' ? Math.max(1.8, y) : role === 'LB' ? Math.max(1.8, Math.min(7, y)) : Math.max(4.5, y * 1.3));
 
-function pathFrom(spec: RamsPlaySpec, rp: RamsPath, owner: Player | undefined, warp: (x: number) => number, yMap: (y: number) => number, id: string): Path | null {
-  const pts = rp.pts.map(([x, y]) => ({ x: warp(x), y: yMap(y) }));
+function pathFrom(spec: RamsPlaySpec, rp: RamsPath, owner: Player | undefined, warp: (x: number, y: number) => number, yMap: (y: number) => number, id: string): Path | null {
+  const pts = rp.pts.map(([x, y]) => ({ x: warp(x, y), y: yMap(y) }));
   if (pts.length < 2) return null;
   const length = pts.reduce((n, p, i) => (i ? n + Math.hypot(p.x - pts[i - 1].x, p.y - pts[i - 1].y) : 0), 0);
   if (length < 0.4) return null;
@@ -315,6 +315,34 @@ export function composeRamsPlay(spec: RamsPlaySpec): Play {
       return w * warp(x) + (1 - w) * (fx + (x - ox));
     };
   };
+  // A shared bar (a double team, the dashed bar at the backer) stays one straight bar of its drawn length, placed
+  // by the field warp at its middle; every line point on the bar (the stems' ends, the climbs' starts) maps in the
+  // bar's frame, so the combo stays connected and straight and a stem bends a little instead.
+  const bars = spec.freePaths
+    .filter((fp) => fp.role === 'bar' && fp.pts.length >= 2)
+    .map((fp) => {
+      const cx = (fp.pts[0][0] + fp.pts[fp.pts.length - 1][0]) / 2;
+      const wx = warp(cx);
+      return { pts: fp.pts, frame: (x: number) => wx + (x - cx) };
+    });
+  const onBar = (x: number, y: number) => {
+    for (const b of bars) {
+      for (let i = 0; i + 1 < b.pts.length; i++) {
+        const [ax, ay] = b.pts[i];
+        const [bx, by] = b.pts[i + 1];
+        const dx = bx - ax;
+        const dy = by - ay;
+        const n2 = dx * dx + dy * dy || 1e-9;
+        const t = Math.max(0, Math.min(1, ((x - ax) * dx + (y - ay) * dy) / n2));
+        if (Math.hypot(x - (ax + t * dx), y - (ay + t * dy)) < 0.45) return b;
+      }
+    }
+    return null;
+  };
+  const withBars = (f: (x: number) => number) => (x: number, y: number) => {
+    const b = onBar(x, y);
+    return b ? b.frame(x) : f(x);
+  };
   const yMapOf = (spot: RamsSpot | null): ((y: number) => number) => {
     if (!spot) return (y) => y;
     const p = final.get(spot);
@@ -336,11 +364,11 @@ export function composeRamsPlay(spec: RamsPlaySpec): Play {
       owner.motion = motion;
       continue;
     }
-    const path = pathFrom(spec, rp, owner, warpFor(rp.spot), yMapOf(rp.spot), `${id}-p${n++}`);
+    const path = pathFrom(spec, rp, owner, withBars(warpFor(rp.spot)), yMapOf(rp.spot), `${id}-p${n++}`);
     if (path) paths[path.id] = path;
   }
   for (const rp of spec.freePaths) {
-    const path = pathFrom(spec, rp, undefined, warp, (y) => y, `${id}-p${n++}`);
+    const path = pathFrom(spec, rp, undefined, withBars(warp), (y) => y, `${id}-p${n++}`);
     if (path) paths[path.id] = path;
   }
   // a ghost with no motion line: still a pre-snap spot worth showing

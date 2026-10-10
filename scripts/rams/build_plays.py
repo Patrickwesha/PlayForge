@@ -433,9 +433,9 @@ def attach_paths(cell, spots):
             pts = list(pts)
             while len(pts) > 2 and math.hypot(pts[1][0] - sx, pts[1][1] - sy) < 0.6:
                 pts.pop(0)
-            out.append({"spot": hit[1], "pts": pts, "dashed": p["dashed"], "end": p["end"], "startMark": p["startMark"], "role": None, "k": k})
+            out.append({"spot": hit[1], "pts": pts, "dashed": p["dashed"], "end": p["end"], "startMark": p["startMark"], "role": None, "k": k, "color": ink(p)})
         elif long_enough:
-            pending.append({"pts": pts, "dashed": p["dashed"], "end": p["end"], "startMark": p["startMark"], "k": k,
+            pending.append({"pts": pts, "dashed": p["dashed"], "end": p["end"], "startMark": p["startMark"], "k": k, "color": ink(p),
                             "ring": hit or nearest_spot(pts[0], 1.4), "ringEnd": nearest_spot(pts[-1], 1.05)})
     # the rest: a continuation or a branch of an owned line (its start snaps onto that line), else a man's own line
     changed = True
@@ -446,14 +446,35 @@ def attach_paths(cell, spots):
             # a line with no man at either end may sit a little further off the line it continues (a route
             # leaving the far end of a T-bar)
             tol = 0.5 if (q.get("ring") or q.get("ringEnd")) else 0.75
+            # the fork may sit anywhere along the line, not only on a vertex (a back's option off his track,
+            # several branches from one point): the nearest point of the line is the join. A coloured line
+            # joins a line of its own colour first (the red changed assignment, the blue jet man), and a vertex
+            # beats a point along a line, so a route crossing the back's track does not hang off the track.
             for o in out:
-                for vi, v in enumerate(o["pts"]):
-                    for where, e in (("start", q["pts"][0]), ("end", q["pts"][-1])):
+                same_ink = o.get("color") == q.get("color")
+                if q.get("color") != (0.0, 0.0, 0.0) and not same_ink and any(x.get("color") == q.get("color") for x in out):
+                    continue
+                for where, e in (("start", q["pts"][0]), ("end", q["pts"][-1])):
+                    for vi, v in enumerate(o["pts"]):
                         d = math.hypot(v[0] - e[0], v[1] - e[1])
                         if d < tol and (best is None or d < best[0]):
-                            best = (d, o, where, vi)
+                            best = (d, o, where, vi, None)
+                    for si in range(len(o["pts"]) - 1):
+                        a, b = o["pts"][si], o["pts"][si + 1]
+                        dx, dy = b[0] - a[0], b[1] - a[1]
+                        n2 = dx * dx + dy * dy or 1e-9
+                        t = max(0.0, min(1.0, ((e[0] - a[0]) * dx + (e[1] - a[1]) * dy) / n2))
+                        if t <= 0.02 or t >= 0.98:
+                            continue
+                        foot = [a[0] + t * dx, a[1] + t * dy]
+                        d = math.hypot(foot[0] - e[0], foot[1] - e[1]) + 0.25
+                        if d < tol and (best is None or d < best[0]):
+                            best = (d, o, where, si + 1, foot)
             if best:
-                d, o, where, vi = best
+                d, o, where, vi, foot = best
+                if foot is not None:
+                    # the fork becomes a vertex of the line it leaves, so the two draw as one piece of line work
+                    o["pts"].insert(vi, [round(foot[0], 2), round(foot[1], 2)])
                 # a line whose far end sits on a man is that man's own line (it leads to the join, not from it):
                 # nothing else ever runs into a player's symbol
                 far = q.get("ringEnd") if where == "start" else q.get("ring")
@@ -461,7 +482,7 @@ def attach_paths(cell, spots):
                     pts = list(reversed(q["pts"])) if where == "start" else list(q["pts"])
                     end = q["startMark"] if where == "start" else q["end"]
                     start_mark = q["end"] if where == "start" else q["startMark"]
-                    out.append({"spot": far[1], "pts": pts, "dashed": q["dashed"], "end": end, "startMark": start_mark, "role": None, "k": q["k"]})
+                    out.append({"spot": far[1], "pts": pts, "dashed": q["dashed"], "end": end, "startMark": start_mark, "role": None, "k": q["k"], "color": q.get("color")})
                     pending.remove(q)
                     changed = True
                     continue
@@ -469,7 +490,7 @@ def attach_paths(cell, spots):
                 pts[0] = list(o["pts"][vi])
                 end = q["end"] if where == "start" else q["startMark"]
                 start_mark = q["startMark"] if where == "start" else q["end"]
-                out.append({"spot": o["spot"], "pts": pts, "dashed": q["dashed"], "end": end, "startMark": start_mark, "role": None, "branch": True})
+                out.append({"spot": o["spot"], "pts": pts, "dashed": q["dashed"], "end": end, "startMark": start_mark, "role": None, "branch": True, "color": q.get("color")})
                 pending.remove(q)
                 changed = True
         if not changed:
@@ -477,7 +498,7 @@ def attach_paths(cell, spots):
             ringed = [q for q in pending if q.get("ring")]
             if ringed:
                 q = min(ringed, key=lambda q: q["ring"][0])
-                out.append({"spot": q["ring"][1], "pts": q["pts"], "dashed": q["dashed"], "end": q["end"], "startMark": q["startMark"], "role": None, "k": q["k"]})
+                out.append({"spot": q["ring"][1], "pts": q["pts"], "dashed": q["dashed"], "end": q["end"], "startMark": q["startMark"], "role": None, "k": q["k"], "color": q.get("color")})
                 pending.remove(q)
                 changed = True
     free = [{"spot": None, "pts": q["pts"], "dashed": q["dashed"], "end": q["end"], "startMark": q["startMark"], "role": "free"} for q in pending if not in_note_box(q)] + bars

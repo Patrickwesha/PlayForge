@@ -365,6 +365,9 @@ export function MiniToolbar({ svgRef, wrapRef }: { svgRef: RefObject<SVGSVGEleme
           <Group>
             <button className={`${btn} ${path.primary ? 'bg-yellow-300 text-black hover:bg-yellow-300' : ''}`} onClick={() => A.updatePath(path.id, { primary: !path.primary })} title="Highlight (P)">Primary</button>
             <button className={btn} onClick={() => A.branchFromEnd(path.id)} title="Add another line starting at this line's end (alternate route, second leg)">Branch</button>
+            {selection.pointIndex !== undefined && selection.pointIndex > 0 && selection.pointIndex < path.points.length - 1 && (
+              <button className={btn} onClick={() => A.branchFromPoint(path.id, selection.pointIndex!)} title="Add another line starting at this point (an option off the track; add as many as you need)">Branch here</button>
+            )}
             <button className={btn} onClick={() => A.bringPathToFront(path.id)} title="Put this line on top where lines cross">Front</button>
             <button className={btn} onClick={() => A.sendPathToBack(path.id)} title="Put this line underneath where lines cross">Back</button>
             <button className={`${btn} text-red-300`} onClick={() => A.deletePath(path.id)}>Delete</button>

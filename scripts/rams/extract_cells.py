@@ -185,8 +185,16 @@ def page_shapes(page):
     rings, squares, discs, ghosts = dedupe(rings, rk), dedupe(squares, rk), dedupe(discs, rk), dedupe(ghosts, rk)
     polys = dedupe(polys, lambda p: (p["dashed"], tuple((round(x), round(y)) for x, y in p["pts"])))
     heads = dedupe(heads, lambda h: rk(h["tip"]))
-    # rings drawn on top of a disc (both exist for a filled back) count once
+    # rings drawn on top of a disc (both exist for a filled back) count once; a man drawn twice a point apart once
     rings = [c for c in rings if not any(dist(c, d) < 3 for d in discs)]
+    def squash(items):
+        out = []
+        for c in items:
+            if not any(dist(c, o) < 3 for o in out):
+                out.append(c)
+        return out
+    rings, squares, discs, ghosts = squash(rings), squash(squares), squash(discs), squash(ghosts)
+    polys = [p for p in polys if (p.get("width") or 1) >= 0.5]  # the hairline outline of a half-filled symbol
     dots = dedupe(dots, rk)
     return rings, squares, discs, ghosts, polys, heads, dots
 
@@ -606,16 +614,12 @@ def extract_page(page, section, pageno, kind):
         if best and bd < 4.5:
             best[0].setdefault("arrow", []).append(best[1])
 
-    # settle dots: a line ends on one
+    # settle dots: every line end on the dot carries it (the stem that ends there and the option that leaves it)
     for dot in dots:
-        best, bd = None, None
         for p in polys:
             for where, end in (("end", p["pts"][-1]), ("start", p["pts"][0])):
-                d = dist(dot, end)
-                if bd is None or d < bd:
-                    best, bd = (p, where), d
-        if best and bd < 4.5:
-            best[0].setdefault("dot", []).append(best[1])
+                if dist(dot, end) < 4.5:
+                    p.setdefault("dot", []).append(where)
 
     by_cell_spans = assign_cells(headers, spans)
     by_cell_rings = assign_cells(headers, [{"x": c[0], "y": c[1]} for c in rings])
