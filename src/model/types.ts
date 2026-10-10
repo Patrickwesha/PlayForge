@@ -390,6 +390,8 @@ export type Play = {
   reviewNotes?: string[];
   /** The diagram cell on `sourcePage` this play was rebuilt from (e.g. "c3"). */
   sourceCell?: string;
+  /** Another book's call for the same play (the Rams 2022 words when the name is the system call). Searchable, never shown as the name. */
+  alias?: string;
   /** A diagram rebuilt from a scanned page: how closely the vector matches the drawing. */
   rebuild?: PlayRebuild;
   createdAt: string;

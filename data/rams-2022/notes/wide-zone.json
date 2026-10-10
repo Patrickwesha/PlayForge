@@ -1,0 +1,395 @@
+{
+  "section": "wide-zone",
+  "source": "Rams 2022 (McVay), 06 Wide Zone",
+  "concepts": [
+    {
+      "key": "18-19-zap",
+      "indexTitle": "(12/13) (3*1) 18-19 ZAP",
+      "pages": [
+        5,
+        6,
+        7
+      ],
+      "summary": "One back wide zone at the strong side edge out of 12 or 13 personnel. The tight end and wing pair with the play side tackle so the three of them cover the end, the Sam and the strong safety.",
+      "qb": "Open to the play side on the 3 or 9 o'clock line. Give the ball deep. Carry out the keeper fake.",
+      "hb": "Toes at seven and a half yards. Open with a lateral step and aim for the D gap. Press that spot, read the end man on the line and then the next defender inside. One cut, then go.",
+      "criteria": "No check. Call it and run it.",
+      "positions": {
+        "OL": "Play side tackle joins the Y and F on the end, Sam and strong safety. The diagrams pick the combination by front: Zap, Double, Single, Triple, Chip Double, Chip Single, Chip Triple, Gang, Storm Triple and a Cutoff vs the 6-1. The center makes a Fup call on some looks.",
+        "Y": "Tight end. Works with the F and the tackle on the end, Sam and strong safety.",
+        "F": "Wing. Third man in the tight end and tackle combination."
+      },
+      "tags": [
+        "Zap",
+        "Double",
+        "Triple",
+        "Single",
+        "Chip",
+        "Gang",
+        "Fup"
+      ],
+      "personnel": [
+        "12",
+        "13"
+      ],
+      "alerts": []
+    },
+    {
+      "key": "18-19-zap-fup",
+      "indexTitle": "(12/13) (3*1) (TOSS) 18-19 ZAP FUP (SIFT) (CAN) R/P",
+      "pages": [
+        8,
+        9
+      ],
+      "summary": "The same strong edge wide zone, but Fup is built into the call so the line's targeting comes back one spot without a call at the line. The Z has to be where he can block the strong safety. Can be run as a Toss.",
+      "qb": "Open to the play side on the 3 or 9 o'clock line. Give the ball deep. Carry out the keeper fake. On a Toss, reverse out, pitch it, then carry out the keeper fake.",
+      "hb": "Toes at seven and a half yards. Open with a lateral step and aim for the D gap. Press that spot, read the end man on the line and then the next defender inside. One cut, then go. On a Toss, run a lateral crossover with a slight downhill lean, same D gap track and same read.",
+      "criteria": "Can out of it when the support player cannot be blocked.",
+      "positions": {
+        "OL": "Fup is automatic. The center is marked Fup on the diagrams. Combinations by front: Zap, Chip Triple, Chip Single, Chip Double, Money, Cutoff vs the 6-1.",
+        "Z": "Must line up where he can get to the strong safety."
+      },
+      "tags": [
+        "Toss",
+        "Zap",
+        "Fup",
+        "Sift",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "12",
+        "13"
+      ],
+      "alerts": [
+        "Fup is automatic on this call and pulls the targeting back one spot."
+      ],
+      "can": "Run or pass check vs unblockable support."
+    },
+    {
+      "key": "18-19-zap-key",
+      "indexTitle": "(12/13) (1 BACK SLOT) 18-19 ZAP KEY (SIFT) (CAN) R/P",
+      "pages": [
+        10,
+        11
+      ],
+      "summary": "Strong edge wide zone from a one back slot formation. The play side tackle, Y and F take the end, the Sam and the corner. Key tells the line there is no Fup call, with two exceptions: corners over, and weak rotation.",
+      "qb": "From under center, open to the play side on the 3 or 9 o'clock line. Give the ball deep. Carry out the keeper fake.",
+      "hb": "Toes at seven and a half yards. Open with a lateral step and aim for the D gap. Press that spot, read the end man on the line and then the next defender inside. One cut, then go.",
+      "criteria": "Can when two defensive backs show to the play side.",
+      "positions": {
+        "OL": "No Fup unless the corners are over or the coverage rotates weak. Combinations shown: Zap, Double, Gang, Chip Double, Single, Triple, Cutoff vs the 6-1. On the corners over look the center calls Fup, the play side tackle goes Money, and Chip Double is the alert.",
+        "Y": "With the F and the tackle, blocks the end, Sam and corner.",
+        "F": "With the Y and the tackle, blocks the end, Sam and corner."
+      },
+      "tags": [
+        "Zap",
+        "Key",
+        "Sift",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "12",
+        "13"
+      ],
+      "alerts": [
+        "Key turns off Fup calls. Corners over and weak rotation bring Fup back on.",
+        "The index lists this concept at p10 and the next one at p11, but p11 still holds Zap Key diagrams."
+      ],
+      "can": "Vs two DBs to the play side."
+    },
+    {
+      "key": "18-19-zap-fly-flight",
+      "indexTitle": "(12) (1 BACK SLOT) 18-19 ZAP FLY-FLIGHT (CAN) R/P",
+      "pages": [
+        12,
+        13
+      ],
+      "summary": "Strong edge wide zone where the slot receiver goes in Fly motion to make a 3x1 picture, which drags the corner out of the play. Flight is the same motion with a late snap.",
+      "qb": "Open to the play side on the 3 or 9 o'clock line. Give the ball deep. Carry out the keeper fake.",
+      "hb": "Toes at seven and a half yards. Open with a lateral step and aim for the D gap. Press that spot, read the end man on the line and then the next defender inside. One cut, then go.",
+      "criteria": "Can if a corner blitz is threatened.",
+      "positions": {
+        "OL": "Alert the Fup targeting before the snap. Combinations shown: Zap, Double, Chip Double, Chip Single, Chip Triple, Money, Triple, Cutoff vs the 6-1. The center is marked Fup on several fronts."
+      },
+      "tags": [
+        "Zap",
+        "Fly",
+        "Flight",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "12"
+      ],
+      "alerts": [
+        "Fup targeting is alerted pre-snap.",
+        "Flight means Fly motion, snapped late."
+      ],
+      "can": "Vs the threat of corner pressure."
+    },
+    {
+      "key": "18-19-f-sift",
+      "indexTitle": "(12) (3*1/2 BACK) 18-19 F SIFT (CAN) R/P",
+      "pages": [
+        14,
+        15
+      ],
+      "summary": "Split flow wide zone to the strong edge. The F sifts back across the formation while the run goes strong, from a 3x1 or two back look in 12 personnel.",
+      "qb": "Open to the play side on the 3 or 9 o'clock line. Give the ball deep. Carry out the keeper fake.",
+      "hb": "Toes at seven and a half yards. Open with a lateral step and aim for the D gap. Press that spot, read the end man on the line and then the next defender inside. One cut, then go.",
+      "criteria": "Can when the safety support cannot be blocked.",
+      "positions": {
+        "OL": "Combinations shown: Double, Gang, Triple, Single.",
+        "F": "Sifts to the backside, giving the split flow look."
+      },
+      "tags": [
+        "F Sift",
+        "Sift",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "12"
+      ],
+      "alerts": [],
+      "can": "Vs an unblockable safety."
+    },
+    {
+      "key": "18-19-zyn-pulse",
+      "indexTitle": "(11) (3*1) (TOSS) 18-19 ZYN PULSE (CAN) R/P",
+      "pages": [
+        16,
+        17
+      ],
+      "summary": "Strong edge wide zone from 11 personnel bunch. The play side tackle, Y and slot receiver take the end, the nickel and the third defender counting in from the sideline. The outside receiver on the play side blocks Structure rules unless a Pull call is made on Pulse. Toss is available.",
+      "qb": "From under center, open to the play side on the 3 or 9 o'clock line. Give the ball deep. Carry out the keeper fake. On a Toss, reverse out, pitch it, then carry out the keeper fake.",
+      "hb": "Toes at seven and a half yards. Open with a lateral step and aim for the D gap. Press that spot, read the end man on the line and then the next defender inside. One cut, then go. On a Toss, run a lateral crossover with a slight downhill lean, same D gap track and same read.",
+      "criteria": "Can vs play side external pressure.",
+      "positions": {
+        "OL": "Combinations shown: Zyn, Money, Chip Double, Chip Single, Triple, Thru. Vs a Shell look there is no pull back. On some fronts the Triple depends on where the end lines up.",
+        "Y": "With the tackle and slot, blocks the end, nickel and the third defender from the sideline.",
+        "F": "Slot. Part of the three man unit on end, nickel and third defender. If the end aligns outside the F, the F goes Thru on him.",
+        "Z": "Play side outside receiver blocks Structure rules unless a Pull call comes on Pulse."
+      },
+      "tags": [
+        "Toss",
+        "Zyn",
+        "Pulse",
+        "Fist",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "11"
+      ],
+      "alerts": [
+        "Pulse: against any single high defense the targeting comes back one spot. Against a Shell look there is no pull back.",
+        "Fist means Flow motion vs weak rotation.",
+        "If the end lines up outside the F, the F takes him Thru."
+      ],
+      "can": "Vs play side external pressure."
+    },
+    {
+      "key": "18-19-sift",
+      "indexTitle": "(11) (2*2) 18-19 (SIFT) (CAN) R/P",
+      "pages": [
+        18,
+        19
+      ],
+      "summary": "Base 11 personnel wide zone at the strong side out of a 2x2 look, usually with a Sift. The back reads for a bounce on this one.",
+      "qb": "From under center, open to the play side on the 3 or 9 o'clock line. Give the ball deep. Carry out the keeper fake.",
+      "hb": "From under center, toes at seven and a half yards. Open with a lateral step and aim for the D gap. Press it. This one is a bounce read, not a one cut run.",
+      "criteria": "Can when the support player cannot be blocked.",
+      "positions": {
+        "OL": "Combinations shown: Money, Chip Double, Triple, Chip Single, Gang, Double. One diagram notes the bounce."
+      },
+      "tags": [
+        "Sift",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "11"
+      ],
+      "alerts": [],
+      "can": "Vs unblockable support."
+    },
+    {
+      "key": "18-19-fly-flight-sift",
+      "indexTitle": "(11) (2*2) (TOSS) 18-19 FLY-FLIGHT (SIFT) (CAN) R/P",
+      "pages": [
+        20
+      ],
+      "summary": "Sub personnel wide zone to the strong edge with Fly motion toward the run. Meant for nickel odd and jam fronts. Toss is available.",
+      "qb": "Open to the play side on the 3 or 9 o'clock line. Give the ball deep. Carry out the keeper fake. On a Toss, reverse out, pitch it, then carry out the keeper fake.",
+      "hb": "Toes at seven and a half yards. Open with a lateral step and aim for the D gap. Press that spot, read the end man on the line and then the next defender inside. One cut, then go. On a Toss, run a lateral crossover with a slight downhill lean, same D gap track and same read.",
+      "criteria": "Can when the support player cannot be blocked.",
+      "positions": {
+        "OL": "Combinations shown: Chip Double, Money, Double."
+      },
+      "tags": [
+        "Toss",
+        "Fly",
+        "Flight",
+        "Sift",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "11"
+      ],
+      "alerts": [
+        "Built for nickel odd and jam fronts."
+      ],
+      "can": "Vs unblockable support."
+    },
+    {
+      "key": "18-19-structure-sift",
+      "indexTitle": "(11) (2*2) 18-19 STRUCTURE (SIFT)",
+      "pages": [
+        21,
+        22
+      ],
+      "summary": "Wide zone at the strong side out of a 2x2 look. Structure tells the blockers to block the defense's front and coverage structure instead of a box count. Bounce read run.",
+      "qb": "Open to the play side on the 3 or 9 o'clock line. Give the ball deep. Carry out the keeper fake.",
+      "hb": "Toes at seven and a half yards. Open with a lateral step and aim for the D gap. Press it. This one is a bounce read, not a one cut run.",
+      "criteria": "No check. Call it and run it.",
+      "positions": {
+        "OL": "Single or Money Thru is decided by where the linebacker lines up, with an alert for Single based on the Mike. A safety sitting at linebacker level turns on the Push. Combinations shown: Single, Push Triple, Triple, Gang, Chip Single, Double."
+      },
+      "tags": [
+        "Structure",
+        "Sift"
+      ],
+      "personnel": [
+        "11"
+      ],
+      "alerts": [
+        "A safety down at linebacker level means Push it.",
+        "Single or Money Thru depends on the linebacker's alignment."
+      ]
+    },
+    {
+      "key": "18-19-structure-flow-flock",
+      "indexTitle": "(11) (3*1) 18-19 STRUCTURE FLOW-FLOCK (CAN) R/P",
+      "pages": [
+        23,
+        24
+      ],
+      "summary": "Strong side wide zone from a 3x1 set with Flow motion going away from the run side. Structure means the blockers take the front and coverage structure. Flow is Fly motion going away from the run; Flock is Flow with a late snap. Bounce read run.",
+      "qb": "Open to the play side on the 3 or 9 o'clock line. Give the ball deep. Carry out the keeper fake.",
+      "hb": "Toes at seven and a half yards. Open with a lateral step and aim for the D gap. Press it. This one is a bounce read, not a one cut run.",
+      "criteria": "Can vs play side external pressure.",
+      "positions": {
+        "OL": "Combinations shown: Triple, Gang, Push Triple, Push Single, Money, Push Double."
+      },
+      "tags": [
+        "Structure",
+        "Flow",
+        "Flock",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "11"
+      ],
+      "alerts": [
+        "Flow is Fly motion going away from the run. Flock is Flow with a late snap point."
+      ],
+      "can": "Vs play side external pressure."
+    },
+    {
+      "key": "19-18-trinity-pulse",
+      "indexTitle": "(11/12) (2*2/1 BACK SLOT) 19-18 TRINITY (PULSE) (CAN) R/P",
+      "pages": [
+        25,
+        26,
+        27
+      ],
+      "summary": "Open side wide zone with a three man combination between the slot receiver and the play side tackle. Trinity means triple to the nickel: the slot and the line account for four down linemen, two linebackers and the nickel, which in 12 personnel is the most dangerous DB.",
+      "qb": "Open to the play side on the 3 or 9 o'clock line. Give the ball deep. Carry out the keeper fake.",
+      "hb": "Toes at seven and a half yards. Open with a lateral step and aim for the D gap. Press that spot, read the end man on the line and then the next defender inside. One cut, then go.",
+      "criteria": "Can vs play side external pressure.",
+      "positions": {
+        "OL": "Single or Money Thru depends on the linebacker's alignment. Combinations shown: Trinity, Single, Gang, Chip Single.",
+        "F": "Slot. Works the Trinity triple with the play side tackle to the nickel."
+      },
+      "tags": [
+        "Trinity",
+        "Pulse",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "11",
+        "12"
+      ],
+      "alerts": [
+        "Pulse: against any single high defense the targeting comes back one spot. Against a Shell look there is no pull back.",
+        "In 12 personnel the nickel in the count is the most dangerous DB.",
+        "Single or Money Thru depends on the linebacker's alignment."
+      ],
+      "can": "Vs play side external pressure."
+    },
+    {
+      "key": "19-18-trinity-fly-pulse",
+      "indexTitle": "(11) (2*2) 19-18 TRINITY FLY PULSE (CAN) R/P",
+      "pages": [
+        28,
+        29
+      ],
+      "summary": "Trinity with Fly motion toward the run side. The slot and the line still account for the nickel, four down linemen and two linebackers.",
+      "qb": "Open to the play side on the 3 or 9 o'clock line. Adjust on the second step for the motion. Carry out the keeper fake.",
+      "hb": "Toes at seven and a half yards. Open with a lateral step and aim for the D gap. Press that spot, read the end man on the line and then the next defender inside. One cut, then go.",
+      "criteria": "Can vs play side external pressure.",
+      "positions": {
+        "OL": "Combinations shown: Money Thru, Chip Single, Single, Gang, Trinity. One diagram vs an Over Shell front is marked Bypass."
+      },
+      "tags": [
+        "Trinity",
+        "Fly",
+        "Pulse",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "11"
+      ],
+      "alerts": [
+        "Pulse: against any single high defense the targeting comes back one spot. Against a Shell look there is no pull back."
+      ],
+      "can": "Vs play side external pressure."
+    },
+    {
+      "key": "19-18-trinity-flow-flock",
+      "indexTitle": "(11) (1*3) 19-18 TRINITY FLOW-FLOCK (CAN) R/P",
+      "pages": [
+        30,
+        31
+      ],
+      "summary": "Trinity from a 1x3 set with Flow motion going away from the run side. Flow is Fly motion going away from the run and the late snap version is Flock (the page prints Flight for it).",
+      "qb": "Open to the play side on the 3 or 9 o'clock line. Adjust on the second step for the motion. Carry out the keeper fake.",
+      "hb": "Toes at seven and a half yards. Open with a lateral step and aim for the D gap. Press that spot, read the end man on the line and then the next defender inside. One cut, then go.",
+      "criteria": "Can vs play side external pressure.",
+      "positions": {
+        "OL": "Combinations shown: Money Thru, Trinity, Gang, Push Single."
+      },
+      "tags": [
+        "Trinity",
+        "Flow",
+        "Flock",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "11"
+      ],
+      "alerts": [
+        "The diagram formations carry an Alert Sock tag (Speed Pack with Sock)."
+      ],
+      "can": "Vs play side external pressure."
+    }
+  ]
+}

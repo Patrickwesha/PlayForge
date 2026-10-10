@@ -1,0 +1,106 @@
+{
+  "section": "tight-zone",
+  "source": "Rams 2022 (McVay), 09 Tight Zone",
+  "concepts": [
+    {
+      "key": "15-14-wanda",
+      "indexTitle": "(11/12) (3*1/2*2) 15-14 (35-34) WANDA (MAYBE/MISTY/MIFF) (CAN) R/P",
+      "pages": [5, 6],
+      "summary": "One-back tight zone run to the weak side. Shown from 3x1 and 2x2 sets, under center as 15-14 and from the gun as 35-34. The perimeter blocks by 4-5 rules on the most dangerous man.",
+      "qb": "Under center: open to 5 or 7 o'clock, fix the depth on the second step, get the ball to the back as deep as you can, then set up as if to pass. Miff flips the ball handling to reverse. Gun: toes at 5 yards, tight zone gun footwork, get out of the back's lane and carry out the keeper fake. The game plan may have the QB set to pass instead.",
+      "hb": "Under center: 7.5 yards deep. Open step, crossover, lead step. Aim for the B gap and get downhill with the shoulders square. Gun: same footwork, but the aim is the A gap.",
+      "criteria": "From 2x2 the check is for slot pressure. From 3x1 there is no check: call it and run it.",
+      "positions": {
+        "Z": "Carries the Maybe tag on the cards, which lets him pick his block on the second level.",
+        "Y": "Labeled on the end man with a B, Single, Money or Mob call depending on the front."
+      },
+      "tags": ["Maybe", "Misty", "Miff", "Can", "R/P"],
+      "personnel": ["11", "12"],
+      "alerts": [
+        "Misty runs Maybe rules with a possible Insert by the backside receiver.",
+        "Miff runs Maybe rules with reverse ball handling. Against a Fup safety the motion goes to Fly, so be ready for the linebackers to slide.",
+        "Against Jam fronts the cards show a Take 2 call on the bunch side."
+      ]
+    },
+    {
+      "key": "14-15-wifi",
+      "indexTitle": "(11) (2*2) 14-15 (34-35) WIFI (FLINCH)(BUBBLE) (CAN) R/P",
+      "pages": [7, 8],
+      "summary": "Wanda with the tight end sifting across the formation. One-back tight zone with split flow, aimed at the closed side. It is a two-man surface run.",
+      "qb": "Under center: open to 5 or 7 o'clock, adjust on the second step, hand off as deep as you can and sell the keeper. Gun: toes at 5 yards, tight zone footwork, clear the back's lane, sell the keeper. The game plan may call for a pass set.",
+      "hb": "Under center: 7.5 yards deep. Open step, crossover, lead step, track the B gap, downhill with square shoulders. Gun: line up with the inside foot on the guard's outside foot, same footwork, track the A gap.",
+      "criteria": "Check it against Shell.",
+      "positions": {
+        "Y": "Works across the formation on the cross sift to the backside end.",
+        "F": "Labeled Gain or Man Over on the cards, so he blocks out on his man on the perimeter."
+      },
+      "tags": ["Flinch", "Bubble", "Can", "R/P"],
+      "personnel": ["11"],
+      "alerts": [
+        "Flinch is shown on the cards against Jam looks, with the nickel as the target.",
+        "The Can only applies against Shell."
+      ],
+      "can": "Against Shell only."
+    },
+    {
+      "key": "14-15-wifi-fly-flight",
+      "indexTitle": "(11) (2*2) 14-15 (34-35) WIFI FLY-FLIGHT (CAN) R/P",
+      "pages": [9, 10],
+      "summary": "Wifi with Fly motion added. One-back tight zone with split flow at the closed side, two-man surface, and a receiver crossing on the Fly. Flight is the same motion with a late snap point.",
+      "qb": "Under center: reverse ball handling. Open to 5 or 7 o'clock, adjust on the second step, hand off deep and set for the pass. Gun: toes at 5 yards, tight zone footwork, clear the back's lane, sell the keeper. The game plan may call for a pass set.",
+      "hb": "Under center: 7.5 yards deep. Open step, crossover, lead step, track the B gap, downhill with square shoulders. Gun: inside foot on the guard's outside foot, same footwork, track the A gap.",
+      "criteria": "Check it against any outside pressure.",
+      "positions": {
+        "Y": "Cross sift to the backside end. On the cards he carries a Single (Lawn), Money or Mob call depending on the front.",
+        "F": "Usually the Fly man on the cards. He motions across before the snap and is labeled Gain or Fan on the perimeter."
+      },
+      "tags": ["Fly", "Flight", "Can", "R/P"],
+      "personnel": ["11"],
+      "alerts": [
+        "Flight means Fly motion with a late snap point."
+      ]
+    },
+    {
+      "key": "14-15-f-sift-fly-flight",
+      "indexTitle": "(12/13) (2 BACK SLOT/1 BACK SLOT) 14-15 (34-35) F SIFT FLY-FLIGHT (CAN) R/P",
+      "pages": [11, 12],
+      "summary": "Tight zone at the closed side from one-back or two-back slot sets. The F sifts across the formation and a Fly motion comes with it. Flight is the same motion with a late snap point.",
+      "qb": "Under center: reverse ball handling. Open to 5 or 7 o'clock, adjust on the second step, hand off deep and set for the pass. Gun: toes at 5 yards, tight zone footwork, clear the back's lane, sell the keeper. The game plan may call for a pass set.",
+      "hb": "Under center: 7.5 yards deep. Open step, crossover, lead step, track the B gap, downhill with square shoulders. Gun: inside foot on the guard's outside foot, same footwork, track the A gap.",
+      "criteria": "Check it against any outside pressure.",
+      "positions": {
+        "F": "Sifts across the formation to the backside. Labeled A, B, Mob, Money or Tite Double on the cards depending on the front.",
+        "Y": "Stays on the closed side. Against odd fronts the cards show Triple at Plug and Tite Double calls on his side.",
+        "Z": "The Fly man on most cards, motioning across the formation to the closed side."
+      },
+      "tags": ["Fly", "Flight", "Can", "R/P"],
+      "personnel": ["12", "13"],
+      "alerts": [
+        "Flight means Fly motion with a late snap point.",
+        "Against a 6-1 the cards show a Money Thru call on the backside."
+      ]
+    },
+    {
+      "key": "14-15-fly-flight-ice",
+      "indexTitle": "(11) (2*2) 14-15 (34-35) FLY-FLIGHT ICE (CAN) R/P",
+      "pages": [13, 14],
+      "summary": "One-back tight zone to the closed side built off the Mike, with Fly motion and the Ice tag. Ice is a Ski (insert across) to the open side while the backside tackle takes the end man on his own with a Money call. Flight is Fly motion with a late snap point.",
+      "qb": "Open to the play side at 5 or 7 o'clock, adjust on the second step, sell the keeper. Gun: toes at 5 yards, tight zone gun footwork, clear the back's lane, sell the keeper. The game plan may call for a pass set.",
+      "hb": "Toes at 7.5 yards. Open step, crossover, lead step, track the B gap, downhill with square shoulders. Gun: inside foot on the guard's outside foot, same footwork, track the A gap.",
+      "criteria": "Check it against outside pressure on the play side, or when the backside B gap needs to be open.",
+      "positions": {
+        "OL": "Backside tackle is on the defensive end by himself with a Money call when Ice is on. Against odd fronts the cards show Tite Triple at Plug.",
+        "F": "The Ice man on the cards: inserts across to the open side.",
+        "Z": "The Fly man on the cards, motioning to the closed side."
+      },
+      "tags": ["Fly", "Flight", "Ice", "Can", "R/P"],
+      "personnel": ["11"],
+      "alerts": [
+        "Some cards are tagged Alert X Short or Alert F Short, and those cards are marked pass only.",
+        "A Book call shows up on the backside against Sup looks.",
+        "The Can is only against a look where the backside B gap must be open."
+      ],
+      "can": "Against a look where the backside B gap needs to be open."
+    }
+  ]
+}

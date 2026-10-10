@@ -1,0 +1,221 @@
+{
+  "section": "screens",
+  "source": "Rams 2022 (McVay), 21 Screens",
+  "concepts": [
+    {
+      "key": "ruffles-lays",
+      "indexTitle": "RUFFLES-LAYS",
+      "pageTitle": "RUFFLES-LAYS (CAN) R/P (3*1 / 2*2)",
+      "pages": [
+        5
+      ],
+      "summary": "Chip screen to the halfback off Jet protection, Ruffles to one side and Lays to the other. The receivers block the secondary: the near man takes the deep defender (B.D.D.) and the others take the near and far half safeties (N.H.S., F.H.S.). Can R/P means the call can be checked to the run or the pass.",
+      "qb": "Three steps and drift away from the rush, then throw the screen.",
+      "hb": "Sell the run downhill, chip the outside rusher, then turn and catch the screen (full rules on the pass protection page).",
+      "positions": {
+        "OL": "Jet rules, then two counts and release to the screen side.",
+        "X": "Block the deep defender.",
+        "Z": "Block the near half safety.",
+        "Y": "Block the deep defender or far half safety, by the picture.",
+        "F": "Block a half safety. Against Cover 2, release inside to reach the safety.",
+        "H": "Chip and catch the screen."
+      },
+      "protections": [
+        "Ruffles",
+        "Lays"
+      ],
+      "formations": [
+        "[11/12] SOUTH RT CLOSE",
+        "[11/12] TRIPS RT"
+      ],
+      "tags": [
+        "Can",
+        "R/P"
+      ],
+      "alerts": [
+        "Against Cover 2 the receiver releases inside to block the safety."
+      ]
+    },
+    {
+      "key": "house-hefner",
+      "indexTitle": "HOUSE-HEFNER",
+      "pageTitle": "HEFNER (FLOCK) - HOUSE (2*2)",
+      "pages": [
+        6
+      ],
+      "summary": "Play action screen to the halfback off the 15-14 Willie action. House sells Wanda, Hefner sells Flash. The back catches at about 8 yards wide of the line while a receiver runs a high cross at 18 to 22 yards between the numbers and the hash to pull the coverage, and the outside receivers block the deep defender and near half safety. Frog is the directional term on both cells.",
+      "qb": "Fake the tite zone, drop seven and drift, keep the eyes away from the screen, then throw.",
+      "hb": "Fake to the screen side guard, check the protection, then bump out and set up for the screen at about 8 yards wide. Chase the outside hip of the near blocker.",
+      "positions": {
+        "OL": "Willie assignments for three counts, then release to the screen.",
+        "Y": "Flow across on the high cross at 18 to 22 yards, landing between the numbers and the hash.",
+        "Z": "Pylon route to clear the corner.",
+        "X": "Block the deep defender.",
+        "F": "Block the near half safety."
+      },
+      "protections": [
+        "Hefner Frog",
+        "House Frog"
+      ],
+      "formations": [
+        "[11] SOUTH RT CLOSE",
+        "[11] BUNCH RT ZAC"
+      ],
+      "tags": [
+        "Flock",
+        "Frog",
+        "Close",
+        "Zac"
+      ],
+      "alerts": [
+        "QB keeps big eyes away from the screen side."
+      ]
+    },
+    {
+      "key": "roof-ceiling",
+      "indexTitle": "ROOF-CEILING",
+      "pageTitle": "ROOF-CEILING (FLY-FLIGHT/FLOW-FLOCK) (3*1 / 2*2 / 1*3)",
+      "pages": [
+        7
+      ],
+      "summary": "Three count screen to the tight end off the 15-14 Willie action, Roof to one side and Ceiling to the other. The Y blocks for three counts and then slips out to catch in the C/D gap area. One receiver runs a flat to pull the flat player, the others block the deep defender (B.D.D.), the near half safety or the most dangerous deep defender (B.M.D.D.). Fly and Flow motion versions reverse the QB out.",
+      "qb": "Fake the tite zone, look away from the screen, drift from the first pressure, and throw to the Y off seven steps.",
+      "hb": "Fake through the B gap and block any weak side pressure.",
+      "positions": {
+        "OL": "Willie protection. The screen side tackle always releases; the center is second out when the front allows.",
+        "Y": "Block three counts, then catch the screen on the upfield shoulder in the C/D gap area.",
+        "X": "Block the deep defender.",
+        "Z": "Flat, or block the near half safety.",
+        "F": "Block the most dangerous deep defender."
+      },
+      "protections": [
+        "Roof",
+        "Ceiling",
+        "Roof Flow",
+        "Ceiling Fly"
+      ],
+      "formations": [
+        "[11] SOUTH RT CLAMP",
+        "[11] SOUTH LT CLAMP",
+        "[11] BUNCH RT",
+        "[11] BUNCH RT KING YUCK"
+      ],
+      "tags": [
+        "Fly",
+        "Flight",
+        "Flow",
+        "Flock",
+        "Clamp",
+        "King",
+        "Yuck"
+      ]
+    },
+    {
+      "key": "klay-curry",
+      "indexTitle": "KLAY-CURRY",
+      "pageTitle": "KLAY/CURRY (GE) (3*1 / EMPTY)",
+      "pages": [
+        8
+      ],
+      "summary": "Quick perimeter screen to the outside receiver of a three man surface. The #1 pushes up one step against free access or three steps against a bump before coming back for the ball, #2 blocks the corner, #3 blocks the most dangerous defender, and the backside receivers block the man over them. GE means the tackle grabs the end so the line can get out.",
+      "qb": "Quick game footwork. Be ready to drift toward the play and change the arm angle.",
+      "hb": "Protect off the tackle's hip and watch for the tackle being squeezed.",
+      "positions": {
+        "OL": "Set, stop and go to the #3, #4, #5 defenders counted outside in, then the most dangerous man. Rip or Liz to the call.",
+        "X": "As the #1, push up and come back for the screen.",
+        "Z": "As the #2, block the corner.",
+        "Y": "As the #3, block the most dangerous defender.",
+        "F": "Backside: man over."
+      },
+      "protections": [
+        "Klay",
+        "Curry GE"
+      ],
+      "formations": [
+        "[12] SCOOT PACK RT (TOUT)",
+        "[11] TRAIN RT TITE UNO"
+      ],
+      "tags": [
+        "GE",
+        "Tout",
+        "Tite",
+        "Uno"
+      ],
+      "alerts": [
+        "Free access: one step. Bump: three steps."
+      ]
+    },
+    {
+      "key": "giannis",
+      "indexTitle": "GIANNIS",
+      "pageTitle": "GIANNIS DIRECTIONAL TERMS (GE) (3*1 / EMPTY)",
+      "pages": [
+        9
+      ],
+      "summary": "The same quick screen as Klay and Curry but thrown to the #2 receiver of the three man surface. The #1 blocks the corner, #2 pushes up (one step vs access, three vs bump) and comes back for the ball, #3 blocks the most dangerous defender, backside blocks man over. Frog and Madison are the directional terms.",
+      "qb": "Quick game footwork, ready to drift and change the arm angle.",
+      "hb": "Protect off the tackle's hip; alert the squeeze.",
+      "positions": {
+        "OL": "Set, stop and go to #3, #4, #5 outside in, then the most dangerous man. Rip or Liz to the call.",
+        "X": "Block the corner when the #1.",
+        "F": "Catch the screen when the #2.",
+        "Y": "Block the most dangerous defender when the #3.",
+        "Z": "Backside: man over."
+      },
+      "protections": [
+        "Giannis Madison"
+      ],
+      "formations": [
+        "[11] BUNCH RT TRES",
+        "[11] TREY RT"
+      ],
+      "tags": [
+        "GE",
+        "Madison",
+        "Frog",
+        "Tres"
+      ],
+      "alerts": [
+        "Free access: one step. Bump: three steps."
+      ]
+    },
+    {
+      "key": "slammer",
+      "indexTitle": "SLAMMER",
+      "pageTitle": "SLAMMER (GE) (2*2 / EMPTY)",
+      "pages": [
+        10
+      ],
+      "summary": "Quick screen to the outside receiver of a two man surface. The receiver takes one step back to a depth of about three and a half yards to catch, the #2 blocks the most dangerous defender (usually the #1 defender), and the playside tackle releases to block the second defender from outside in. The call names the target: Slammer Lt to F, Slammer Rt to Y, Slammer Lt to X.",
+      "qb": "Get the ball out as fast as possible, catch and throw.",
+      "hb": "Token fake across the ball.",
+      "positions": {
+        "OL": "Set, stop and go to #2, #3, #4 outside in, then the most dangerous man. The playside tackle gets out to the #2 defender. Rip or Liz to the call.",
+        "F": "One step back, catch the screen at three and a half yards, when named.",
+        "Y": "Block the most dangerous defender as the #2, or catch it when named.",
+        "X": "Backside: man over, or catch it when named.",
+        "Z": "Backside: man over."
+      },
+      "protections": [
+        "Slammer Lt to F",
+        "Slammer GE Rt to Y",
+        "Slammer Lt to X"
+      ],
+      "formations": [
+        "[11] SOUTH RT CLAMP",
+        "[11] FAST PACK RT OPEN ZAC",
+        "[11] ROCKIN SHORTY UNO Y SHORT",
+        "[11] ROLLIN B X SHORT"
+      ],
+      "tags": [
+        "GE",
+        "Clamp",
+        "Open",
+        "Zac",
+        "Uno",
+        "Y Short",
+        "X Short"
+      ]
+    }
+  ]
+}

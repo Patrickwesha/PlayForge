@@ -1,0 +1,292 @@
+{
+  "section": "dropback-cans",
+  "source": "Rams 2022 (McVay), 17 Dropback Man-Zone Cans",
+  "concepts": [
+    {
+      "key": "faulk-2x2-empty",
+      "indexTitle": "FAULK (2X2/EMPTY)",
+      "pageTitle": "FAULK (CAN) ZONE ANSWER (2*2/EMPTY)",
+      "pages": [5],
+      "summary": "Man beater built on the tagged man's Faulk at 5: he works to win inside and only goes over the top as a last resort. A Shallow Cross at 5 runs under him and a Clear takes the lid off; the backside Bench at 18 to 20 widens as the alert. The call is paired with a zone answer by the Can word, but the page does not name it.",
+      "progression": "1 Faulk, 2 Shallow Cross, 3 Clear; Bench is the alert; Check Wide outlet",
+      "qb": "Dropback. Can to the zone answer when the look is not man.",
+      "positions": {
+        "tagged": "Faulk at 5 yds from the -5- spot: win inside first, over the top only as a last resort (F or Z)",
+        "shallow": "Shallow Cross at 5 yds",
+        "clear": "Clear (H in the first cell, F in the second)",
+        "bench": "Widen, Bench at 18 to 20 yds, alert",
+        "H": "Check Wide, outlet; Flat at 2 to 3 yds in the empty cell"
+      },
+      "protections": ["200 Jet", "300 Jet", "200 Scram"],
+      "formations": ["[11] SOUTH RT CLAMP", "[11] SOUTH R TOAST TRES"],
+      "tags": ["Can", "Zone Answer", "2x2", "Empty", "F", "Z"],
+      "alerts": ["Widen Bench is the alert"]
+    },
+    {
+      "key": "faulk-3x1-empty",
+      "indexTitle": "FAULK (3X1/EMPTY)",
+      "pageTitle": "FAULK (CORNER) (SPECK) (CAN) ZONE ANSWER (3*1/EMPTY)",
+      "pages": [6],
+      "summary": "3x1 Faulk. The tagged man runs Faulk at 5 (inside first, over the top last) with a Dunny at 5 and a Shallow Cross at 5 around him; X runs a Comeback at 18 with an outside release as the alert. Corner swaps the Dunny for a Y Corner at 12. Speck adds Specials. Can to the zone answer, not named on the page.",
+      "progression": "1 Faulk, 2 Dunny or Corner, 3 Shallow Cross; Comeback is the alert; Check Wide outlet",
+      "qb": "Dropback. Comeback alert outside. Can to the zone answer.",
+      "positions": {
+        "tagged": "Faulk at 5 yds (F or Z)",
+        "X": "Comeback at 18 yds, outside release, alert",
+        "Y": "Dunny at 5 yds; Corner at 12 yds when tagged; Special in the Speck cell",
+        "shallow": "Shallow Cross at 5 yds",
+        "H": "Check Wide, outlet"
+      },
+      "protections": ["300 Jet"],
+      "formations": ["[11] TRIPS RT", "[11] BOX RT"],
+      "tags": ["Can", "Zone Answer", "3x1", "Empty", "Corner", "Speck"],
+      "alerts": ["Comeback alert, outside release"]
+    },
+    {
+      "key": "indy-duck",
+      "indexTitle": "INDY DUCK",
+      "pageTitle": "INDY DUCK (CAN) ZONE ANSWER (4*1) (HOVER-BOLT)",
+      "pages": [7],
+      "summary": "X is alone on the backside with a 3-step Slant or a Sluggo as the first read. Duck is the four-man side: two Unders at 5 with a Corner at 12 as the alert and a wide clear. H comes across on a Hover or Fly motion (Hover or Bolt).",
+      "progression": "1 X Slant or Sluggo, 2 Under, 3 Under; Corner is the alert",
+      "qb": "Dropback. Start on X, then the Unders. Can to the zone answer.",
+      "positions": {
+        "X": "Slant in 3 steps (Slant cell); Sluggo in 3 steps (Sluggo cell)",
+        "unders": "Under at 5 yds, two of them (Z and F or Z and Y, unclear)",
+        "corner": "Corner at 12 yds, alert",
+        "wide": "a receiver marked Wide, clearing",
+        "H": "Hover or Fly motion into the four-man side"
+      },
+      "protections": ["300 Scram"],
+      "formations": ["[11] TRIO RT H HOVER", "[11] TREY RT DOS H FLY"],
+      "tags": ["Can", "Zone Answer", "4x1", "Indy", "Hover", "Bolt", "Slant", "Sluggo"],
+      "alerts": ["Corner is the alert"]
+    },
+    {
+      "key": "dancer-switch",
+      "indexTitle": "DANCER SWITCH",
+      "pageTitle": "DANCER (SWITCH) TRASH (CAN) ZONE ANSWER (3*1/EMPTY)",
+      "pages": [8],
+      "summary": "Dancer is a Go on a max split (Yes/No) with a Seam at 10 to 12 and a Diagonal next to it; Trash is the backside Shallow Cross at 5 marked as the man alert. Switch has the Seam and Go widen and trade releases, with a printed order: X first, F second, Z third. H checks trail.",
+      "progression": "1 Diagonal, 2 Seam, 3 Shallow Cross; Go is Yes/No",
+      "qb": "Dropback. Go is Yes/No; Shallow Cross is the alert against man. Can to the zone answer.",
+      "positions": {
+        "go": "Go, max split +4, Yes/No",
+        "seam": "Seam at 10 to 12 yds; widen Seam in Switch",
+        "diagonal": "Diagonal",
+        "shallow": "Shallow Cross at 5 yds, alert vs man",
+        "H": "Check Trail; Rib Trail in the Lick cell",
+        "switch order": "X releases first, F second, Z third"
+      },
+      "protections": ["3 Jet", "2 Jet", "3 Scram Lick"],
+      "formations": ["[11] TRIPS RT TITE", "[11] SPEED RT TOUT", "[11] BOX RT TITE", "[11] FAST PACK L TOUT C"],
+      "tags": ["Can", "Zone Answer", "3x1", "Empty", "Switch", "Trash", "Lick"],
+      "alerts": ["Go is Yes/No", "Shallow Cross is the alert vs man"]
+    },
+    {
+      "key": "choice-diagonal",
+      "indexTitle": "CHOICE DIAGONAL",
+      "pageTitle": "CHOICE DIAGONAL COIN-STEAL (CAN) ZONE ANSWER (EMPTY)",
+      "pages": [9],
+      "summary": "Empty man beater: the Choice at 5 is the first read with a Diagonal next to it. Coin at 5 or Steal fills the third spot and a Bench at 18 to 20 and a Go are alerts. Releases follow a traffic pattern (Z first, X second, F third) to make the defender miss a count. The Steal cell adds a Locked Thunder at 6 with a Stomp.",
+      "progression": "1 Choice, 2 Diagonal, 3 Coin or Steal; Bench and Go are alerts",
+      "qb": "Dropback. Go is Yes/No. Can to the zone answer.",
+      "positions": {
+        "choice": "Choice at 5 yds (F or Y)",
+        "diagonal": "Diagonal (X or F)",
+        "coin": "Coin at 5 yds (Y, first cell)",
+        "steal": "Steal (X, second cell)",
+        "bench": "Bench at 18 to 20 yds, alert",
+        "go": "Go, Yes/No",
+        "thunder": "Locked Thunder at 6 yds with Stomp (second cell)",
+        "traffic": "Z goes first, X second, F third"
+      },
+      "protections": ["Scram"],
+      "formations": ["[11] SPEED PACK RT TOUT A", "[11] BUNDLE RT TITE UNO"],
+      "tags": ["Can", "Zone Answer", "Empty", "Coin", "Steal"],
+      "alerts": ["Bench alert", "Go is Yes/No", "Release order makes the defender miss a count"]
+    },
+    {
+      "key": "swim-diagonal",
+      "indexTitle": "SWIM DIAGONAL",
+      "pageTitle": "SWIM DIAGONAL COIN-STEAL (CAN) ZONE ANSWER (EMPTY)",
+      "pages": [10],
+      "summary": "Same empty shell as Choice Diagonal with Swim in place of Choice. Swim shows as a Money at 5 with a Swirl at 10 and 15 beside the Diagonal; Coin at 5 or Steal with a Locked Thunder at 6 fills the rest. Same traffic pattern: Z, then X, then F.",
+      "progression": "1 Swim (Money), 2 Diagonal, 3 Coin or Steal; Go is Yes/No",
+      "qb": "Dropback. Go is Yes/No. Can to the zone answer.",
+      "positions": {
+        "swim": "Money at 5 yds with a Swirl at 10 and 15 yds; which letter has which is unclear (F or Y tagged)",
+        "diagonal": "Diagonal, 18 to 20 yd mark in the first cell",
+        "coin": "Coin at 5 yds (Y, first cell)",
+        "steal": "Steal (X, second cell)",
+        "thunder": "Locked Thunder at 6 yds with Stomp (second cell)",
+        "go": "Go, Yes/No",
+        "traffic": "Z goes first, X second, F third"
+      },
+      "protections": ["Scram"],
+      "formations": ["[11] SPEED PACK RT TOUT A", "[11] BUNDLE RT TITE UNO"],
+      "tags": ["Can", "Zone Answer", "Empty", "Coin", "Steal"],
+      "alerts": ["Go is Yes/No", "Alerts printed on both cells, targets unclear"]
+    },
+    {
+      "key": "pressure-trash",
+      "indexTitle": "PRESSURE TRASH",
+      "pageTitle": "PRESSURE TRASH (CAN) ZONE ANSWER (3*1)",
+      "pages": [11],
+      "summary": "F runs Pressure, a 10 to 12 yd route, as the first read. The outside man runs a Go on a max split with a Clear alert, and Trash is the Shallow Cross at 5 on the backside marked as an alert. H checks trail.",
+      "progression": "1 Pressure, 2 Check Trail, 3 Shallow Cross; Go is the Clear alert",
+      "qb": "Dropback. Can to the zone answer.",
+      "positions": {
+        "F": "Pressure at 10 to 12 yds",
+        "go": "Go, max split +4, Clear alert",
+        "shallow": "Shallow Cross at 5 yds, alert",
+        "H": "Check Trail"
+      },
+      "protections": ["2 Jet", "Jax Lt"],
+      "formations": ["[11] SPEED RT TOUT", "[11] TRIO RT"],
+      "tags": ["Can", "Zone Answer", "3x1", "Trash"],
+      "alerts": ["Go with a Clear alert", "Shallow Cross alert"]
+    },
+    {
+      "key": "blinds-snag",
+      "indexTitle": "BLINDS SNAG",
+      "pageTitle": "BLINDS SNAG (CAN) ZONE ANSWER (3*1)",
+      "pages": [12],
+      "summary": "Y runs a Go to clear. Snag at 5 is the first read, a Basic at 12 to 14 the second and a Special the third, with the whole thing marked as a man alert. H checks wide as the outlet.",
+      "progression": "1 Snag, 2 Basic, 3 Special; Check Wide outlet",
+      "qb": "Dropback. Alert man. Can to the zone answer.",
+      "positions": {
+        "Y": "Go",
+        "snag": "Snag at 5 yds (F)",
+        "basic": "Basic at 12 to 14 yds",
+        "special": "Special",
+        "H": "Check Wide, outlet"
+      },
+      "protections": ["Jax Rt"],
+      "formations": ["[11] SPEED PACK RT OPEN"],
+      "tags": ["Can", "Zone Answer", "3x1", "Y Go"],
+      "alerts": ["Alert man"]
+    },
+    {
+      "key": "shutter",
+      "indexTitle": "SHUTTER",
+      "pageTitle": "SHUTTER H COIN (CAN) ZONE ANSWER (3*1)",
+      "pages": [13],
+      "summary": "A motion man comes across and the trips side runs Snag at 5, an Under T.O. at 5 and a Special, with a Go alert outside. H runs Coin and checks coin at 2 to 4 as the outlet.",
+      "progression": "1 Snag, 2 Under T.O., 3 Special; Go is the alert",
+      "qb": "Dropback. Can to the zone answer.",
+      "positions": {
+        "snag": "Snag at 5 yds",
+        "under": "Under T.O. at 5 yds",
+        "special": "Special",
+        "go": "Go, alert",
+        "H": "Coin; Check Coin outlet at 2 to 4 yds",
+        "motion": "Z motion (first cell) or F motion (second cell)"
+      },
+      "protections": ["3 Jet", "Jax Lt"],
+      "formations": ["[11] Z MO TREY RT", "[11] F MO TRIO STORE RT"],
+      "tags": ["Can", "Zone Answer", "3x1", "H Coin", "Z Mo", "F Mo"],
+      "alerts": ["Go alert"]
+    },
+    {
+      "key": "braves-3x1",
+      "indexTitle": "BRAVES (3X1)",
+      "pageTitle": "BRAVES (RAIL) (CAN) ZONE ANSWER (3*1)",
+      "pages": [14],
+      "summary": "Three crossers at stacked depths, all caught on the move: a low shallow cross at 5, a depth-set shallow cross at 7 and a Deep Sit at 10 to 12 whose man keeps his eyes on the QB. H runs a Rail. The tagged man sets which receiver carries which cross.",
+      "progression": "Numbers 1 to 4; H Rail is 1, Eyes is 3; the rest unclear",
+      "qb": "Dropback. Can to the zone answer.",
+      "positions": {
+        "low cross": "S.C. (Low) at 5 yds, on the move",
+        "depth set": "S.C. (Depth Set) at 7 yds, on the move",
+        "deep sit": "Deep Sit at 10 to 12 yds, eyes on the QB",
+        "H": "Rail",
+        "tagged": "F, X or Z on the call line; which cross he takes is unclear"
+      },
+      "protections": ["2 Scat", "3 Scat"],
+      "formations": ["[11] Y SHORT BUNCH RT TITE", "[11] FAST PACK RT", "[11] SPEED PACK RT TOUT SKIP"],
+      "tags": ["Can", "Zone Answer", "3x1", "Rail"],
+      "alerts": []
+    },
+    {
+      "key": "braves-empty",
+      "indexTitle": "BRAVES (EMPTY)",
+      "pageTitle": "BRAVES (CAN) ZONE ANSWER (EMPTY)",
+      "pages": [15],
+      "summary": "Empty Braves from a bunch: the same three crossers (low at 5, depth set at 7, Deep Sit at 10 to 12 with eyes on the QB), a Shallow at 5 and a Corner at 12 as the alert. H Go sends H deep instead.",
+      "progression": "1, 2, 3 printed; Corner is the alert",
+      "qb": "Dropback. Can to the zone answer.",
+      "positions": {
+        "low cross": "S.C. (Low) at 5 yds, on the move",
+        "depth set": "S.C. (Depth Set) at 7 yds, on the move",
+        "deep sit": "Deep Sit at 10 to 12 yds, eyes on the QB",
+        "Y": "Shallow at 5 yds",
+        "corner": "Corner at 12 yds, alert",
+        "H": "Go when tagged H Go"
+      },
+      "protections": ["Scram"],
+      "formations": ["[11] BUNCH RT TITE DOS", "[11] BUNCH RT TITE UNO"],
+      "tags": ["Can", "Zone Answer", "Empty", "H Go"],
+      "alerts": ["Corner alert"]
+    },
+    {
+      "key": "steal-ny",
+      "indexTitle": "STEAL NY",
+      "pageTitle": "STEAL-COIN NEW YORK (CAN) ZONE ANSWER (EMPTY)",
+      "pages": [16],
+      "summary": "New York is a quick empty package: a Stomp Now in 1 step, a Special, and a Locked Thunder at 6 with a Stomp. F runs Steal in the first cell; X runs Coin at 5 in the second with a Go (Yes/No) and an 18 to 20 yd route outside.",
+      "progression": "1, 2, 3 printed; Stomp Now and Special lead, order unclear",
+      "qb": "Dropback. Go is Yes/No in the Coin cell. Can to the zone answer.",
+      "positions": {
+        "F": "Steal (first cell)",
+        "X": "Coin at 5 yds (second cell)",
+        "stomp now": "Stomp Now, 1 step",
+        "special": "Special",
+        "thunder": "Locked Thunder at 6 yds, Stomp",
+        "go": "Go, Yes/No (second cell)"
+      },
+      "protections": ["3 Scram", "Scram"],
+      "formations": ["[11] FLUTEY RT", "[11] TRIO STAN RT TUNA"],
+      "tags": ["Can", "Zone Answer", "Empty", "Steal", "Coin"],
+      "alerts": ["Go is Yes/No", "Alerts printed on both cells, targets unclear"]
+    },
+    {
+      "key": "glider-usher",
+      "indexTitle": "GLIDER USHER",
+      "pageTitle": "GLIDER USHER (CAN) ZONE ANSWER (EMPTY)",
+      "pages": [17],
+      "summary": "Empty package with Glances outside, an Under at 5 and a Shallow underneath, and H on a Rail. Three reads printed, no alerts.",
+      "progression": "1, 2, 3 printed; order unclear",
+      "qb": "Dropback. Can to the zone answer.",
+      "positions": {
+        "glances": "Glance (two receivers)",
+        "under": "Under at 5 yds",
+        "shallow": "Shallow",
+        "H": "Rail"
+      },
+      "protections": ["Scram"],
+      "formations": ["[11] SPEED PACK RT A", "[11] TRIO RT TUNA"],
+      "tags": ["Can", "Zone Answer", "Empty"],
+      "alerts": []
+    },
+    {
+      "key": "mexico",
+      "indexTitle": "MEXICO",
+      "pageTitle": "(SCRABBLE) MEXICO BLAZER (CAN) ZONE ANSWER (EMPTY)",
+      "pages": [18],
+      "summary": "F runs Mexico, a High Cross at 18 to 22 between the numbers and the hash, with Z on a Blazer that sets the depth. Bang Flats at 2 to 3 are the outlets and the fifth man slams first. Scrabble protection.",
+      "progression": "1 High Cross; Bang Flat outlets",
+      "qb": "Dropback off Scrabble. Can to the zone answer.",
+      "positions": {
+        "F": "Mexico: High Cross at 18 to 22 yds between the numbers and the hash",
+        "Z": "Blazer, depth setter",
+        "H": "Bang Flat at 2 to 3 yds, outlet",
+        "other": "a second Bang Flat outlet and a Slam; letters unclear"
+      },
+      "protections": ["Scrabble"],
+      "formations": ["[11] BRAWLIN LASSO"],
+      "tags": ["Can", "Zone Answer", "Empty", "Scrabble", "Blazer"],
+      "alerts": ["Alert printed, target unclear"]
+    }
+  ]
+}

@@ -12,6 +12,7 @@ import { CanBadge } from '@/components/CanBadge';
 import { PlayThumb } from '@/render/PlayThumb';
 import { FormationPicker } from '@/editor/FormationPicker';
 import { PlaybookChip, PlaybookFilter, matchesPlaybook, usePlaybookMembership, type PlaybookFilterValue } from '@/components/PlaybookFilter';
+import { playSearchText } from '@/systems/rams/compose';
 
 const btn = 'text-xs px-2 py-1 rounded border border-neutral-300 bg-white hover:border-black';
 const CATS: (PlayCategory | 'All')[] = ['All', 'Run', 'Pass', 'PA', 'Screen', 'Special'];
@@ -25,14 +26,17 @@ export function PlaysClient() {
   const [book, setBook] = useState<PlaybookFilterValue>('');
   const plays = useLiveQuery(() => repo.listPlays(), []);
   const { playbooks, memberOf } = usePlaybookMembership('plays');
+  // every word of the play counts: name, the other book's call, formation, concept, protection, blocking calls, routes, motions, front, notes
+  const words = q.toLowerCase().split(/\s+/).filter(Boolean);
   const list = useMemo(
     () =>
-      (plays ?? []).filter(
-        (p) =>
-          (cat === 'All' || p.category === cat) &&
-          matchesPlaybook(book, p.id, memberOf) &&
-          `${p.name} ${p.formationLabel ?? ''} ${p.personnel ?? ''} ${p.tags.join(' ')} ${playDefenseLabel(p)}`.toLowerCase().includes(q.toLowerCase()),
-      ),
+      (plays ?? []).filter((p) => {
+        if (!(cat === 'All' || p.category === cat) || !matchesPlaybook(book, p.id, memberOf)) return false;
+        if (!words.length) return true;
+        const text = playSearchText(p);
+        return words.every((w) => text.includes(w));
+      }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [plays, q, cat, book, memberOf],
   );
 

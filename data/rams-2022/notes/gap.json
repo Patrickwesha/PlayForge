@@ -1,0 +1,144 @@
+{
+  "section": "gap",
+  "source": "Rams 2022 (McVay), 11 Gap Runs",
+  "concepts": [
+    {
+      "key": "12-13-duo",
+      "indexTitle": "(11/12/13) (3*1/2*2)  12-13 DUO (MAYBE/MIFF/TIM) (DOT) (CAN) R/P",
+      "pages": [5, 6, 7, 8, 9, 10],
+      "summary": "Strong side gap run with no puller. It hits the playside B gap and the first playside linebacker, and lives in the one-back sets. From 3x1 the line has the four down men plus the Mike and Will, and the Y and F handle the end and the Sam (nickel). From 2x2 the line has the four down men plus the Sam and Mike.",
+      "qb": "Open to 5 or 7 o'clock, adjust on the second step, get the ball to the back as deep as you can, then set up for the pass. Gun: toes at 5 yards.",
+      "hb": "7.5 yards deep. Open step, crossover, lead step and track the B gap (from 2x2, the outside foot of the playside guard). Get downhill with the shoulders square and read how the first playside linebacker reacts.",
+      "criteria": "Check it against slot pressure (stated on the 2x2 page).",
+      "positions": {
+        "OL": "3x1: four down linemen, the Mike and the Will. 2x2: four down linemen, the Sam and the Mike. Line calls on the cards include Doom, Doom Center, Ace, Tram, Lawn, Rake and Quad.",
+        "Y": "With the F, responsible for the end and the Sam. On the Gaps variant the Y and F take the innermost defenders.",
+        "F": "With the Y, responsible for the end and the Sam. On the Gaps variant the Y and F take the innermost defenders.",
+        "Z": "Carries the Maybe tag on most cards. On the Gaps variant he takes the outermost defender."
+      },
+      "tags": ["Maybe", "Misty", "Miff", "Tim", "Dot", "Gaps", "Can", "R/P"],
+      "personnel": ["11", "12", "13"],
+      "alerts": [
+        "Miff: Maybe with an insert. Against a Fup safety the motion goes to Fly, and the linebackers may slide.",
+        "Tim: the backside tackle takes the end by himself with a Money call, and the slot receiver takes the best path to the nickel.",
+        "Alert Ace against some fronts, decided by where the backside linebacker lines up, per the game plan.",
+        "Dot appears on one 2x2 card as a tag in front of the formation. The pages do not define it."
+      ]
+    },
+    {
+      "key": "12-13-doctor",
+      "indexTitle": "(11/12/13) (3*1/2*2)  12-13 DOCTOR (FLOW-FLOCK (SHOVE)) (CAN) R/P",
+      "pages": [11, 12],
+      "summary": "Gap run with no puller and a receiver wrapping to the point of attack. The back jabs away and takes an over-the-top handoff, with the aim of bouncing to the edge. It starts in 2x2 and the wrap builds a final 3x1 surface. The wrapping receiver takes the most dangerous man.",
+      "qb": "Open to 5 or 7 o'clock away from the run, go vertical on the second step, over-the-top ball handling with speed, finish with the keeper fake. When Flow motion is on, open at 6 o'clock.",
+      "hb": "Jab step away, over-the-top handoff. First aiming point is the D gap, then it is a D-to-C gap run. Read the tight end's block out to the wrapper.",
+      "criteria": "Check it against slot pressure.",
+      "positions": {
+        "OL": "Line calls on the cards are Bounce Doom or Bounce Ace, sometimes at Tram, with Me and You calls for the end man. A Book call shows against Fup and Buzz.",
+        "Z": "The wrapper on most cards, blocking the most dangerous man at the point of attack.",
+        "Y": "Blocks the edge; the back reads his block first."
+      },
+      "tags": ["Flow", "Flock", "Shove", "Can", "R/P"],
+      "personnel": ["11", "12", "13"],
+      "alerts": [
+        "Shove moves every target one spot forward.",
+        "Flock is Flow motion with a late snap point."
+      ]
+    },
+    {
+      "key": "12-13-surgeon",
+      "indexTitle": "(11/12) (3*1/2*2/1*3)  12-13 SURGEON (FLOW-FLOCK (SHOVE)) (FLY) (CAN) R/P",
+      "pages": [13, 14, 15],
+      "summary": "Gap run with no puller and a receiver wrapping to the point of attack, jab and over-the-top handoff, meant to bounce outside. It can start in 2x2 and wrap a receiver, start in 3x1 and use Flow motion away from the point before the wrap, or start in 1x3 and use Fly motion to the point before the wrap. Every version ends in a three-man surface. The wrapper takes the most dangerous man.",
+      "qb": "Open to 5 or 7 o'clock away from the run, go vertical on the second step, over-the-top ball handling with speed, finish with the keeper fake. When Flow motion is on, open at 6 o'clock.",
+      "hb": "Jab step away, over-the-top handoff. First aiming point is the D gap, then it is a D-to-C gap run. Read the tight end's block out to the wrapper.",
+      "criteria": "Check it against any outside pressure.",
+      "positions": {
+        "OL": "Line calls on the cards are Bounce Doom, Bounce Ace at Doom, or Bounce Tram, with Me and You calls for the end man, plus Plug, Fan, Quad, Lawn and Book against odd and 6-1 fronts.",
+        "Z": "The wrapper or the Fly man depending on the start formation.",
+        "F": "Carries a Sly tag on the Edge cards."
+      },
+      "tags": ["Flow", "Flock", "Shove", "Fly", "Can", "R/P"],
+      "personnel": ["11", "12"],
+      "alerts": [
+        "Flock is Flow motion with a late snap point.",
+        "Shove moves every target one spot forward."
+      ]
+    },
+    {
+      "key": "12-13-dentist",
+      "indexTitle": "(11) (2*2/1*3)  12-13 DENTIST (FLOW-FLOCK) (CAN) R/P",
+      "pages": [16, 17],
+      "summary": "Gap run with no puller, jab and over-the-top handoff, meant to bounce outside. It can start in 1x3 and wrap a receiver to the point to end in 2x2, or start in 2x2 with Flow motion and a wrap to end in 2x2.",
+      "qb": "Open to 5 or 7 o'clock away from the run, go vertical on the second step, over-the-top ball handling with speed, finish with the keeper fake. When Flow motion is on, open at 6 o'clock.",
+      "hb": "Jab step away, over-the-top handoff. First aiming point is the D gap, then it is a D-to-C gap run. Read the tight end's block out to the wrapper.",
+      "criteria": "Check it against any outside pressure.",
+      "positions": {
+        "OL": "Line calls on the cards are Bounce Doom or Bounce Ace, with Me and You calls for the end man and Money or Rake on the backside."
+      },
+      "tags": ["Flow", "Flock", "Can", "R/P"],
+      "personnel": ["11"],
+      "alerts": [
+        "Alert Ace against some fronts, decided by where the backside linebacker lines up, per the game plan."
+      ]
+    },
+    {
+      "key": "12-13-load-chuck-wrap",
+      "indexTitle": "(12/13) (1 BACK SLOT/2*2) 12-13 LOAD CHUCK WRAP (CAN) R/P",
+      "pages": [18, 19],
+      "summary": "One-back strong side counter gap scheme. Load tells the F and Y tight ends they have the end and the second linebacker spot. The backside guard attack-pulls for the end man on the line and a receiver wraps to the point of attack.",
+      "qb": "Reverse out and hand off over the top. Snap it when the Fly man is even with the QB. Leave the A gap to the back and sell the keeper. Ghost means fake the ghost action.",
+      "hb": "7.5 yards deep. Rocker step. Aim at the A gap and press it. Read the trapper's block, then the wrapper's.",
+      "criteria": "Check it against any outside pressure.",
+      "positions": {
+        "OL": "Backside guard attack-pulls to kick the end man. The backside tackle post-hinges. Line calls on the cards are Trey, Deuce, Dallas and Quad.",
+        "Y": "With the F, handles the end and the second linebacker spot.",
+        "F": "With the Y, handles the end and the second linebacker spot. Sifts on the Dallas call.",
+        "X": "The wrapper on X Wrap cards (from Slimmer X Short).",
+        "Z": "The wrapper on Z Wrap cards (from Slot Z Short)."
+      },
+      "tags": ["Load", "Chuck", "Wrap", "X Wrap", "Z Wrap", "Ghost", "Can", "R/P"],
+      "personnel": ["12", "13"],
+      "alerts": []
+    },
+    {
+      "key": "12-13-punch",
+      "indexTitle": "(11) (2*2) 12-13 (32-33) PUNCH (FLOW-FLOCK WRAP-FLY (TWO-FER)) (CAN) R/P",
+      "pages": [20, 21],
+      "summary": "One-back strong side gap run with gap-wrap blocking. The line blocks its gaps to the backside and the backside guard attack-pulls for the end man on the line. The Y takes the best release to the playside linebacker.",
+      "qb": "Under center: reverse out and hand off deep and tight without pushing the back off his track, then sell the keeper. Gun: tight zone footwork, clear the back's lane, sell the keeper. The game plan may call for a pass set.",
+      "hb": "7.5 yards deep. Under center: shuffle drop step, aim at the A gap, press it and read the trapper. Gun: bucket lead step to the B gap.",
+      "criteria": "Check it against any outside pressure. Jam is fine.",
+      "positions": {
+        "OL": "Gap blocks to the backside, backside guard attack-pulls for the end man, backside tackle post-hinges. Line calls on the cards are Deuce and Dallas.",
+        "Y": "Best release to the playside linebacker. Labeled Arc or Thru on some cards.",
+        "X": "The wrapper on Flow Wrap cards, from X Short.",
+        "F": "Labeled Man Over, Off or Sift on the cards depending on the version."
+      },
+      "tags": ["Flow", "Flock", "Wrap", "Fly", "Sift", "Two-Fer", "Can", "R/P"],
+      "personnel": ["11"],
+      "alerts": [
+        "The Fly Two-Fer card is tagged 2 Jet instead of Run/Pass."
+      ]
+    },
+    {
+      "key": "13-12-barkley",
+      "indexTitle": "(11) (2*2/3*1) 13-12 (33-32) BARKLEY (MIFF) (CAN) R/P",
+      "pages": [22, 23],
+      "summary": "One-back weak side gap run with gap-wrap blocking and counter action. The backside guard attack-pulls to kick out the end man on the line, and the Y wraps to the spot the line call gives him.",
+      "qb": "Under center: reverse out at 6 o'clock and hand off over the top. Leave the A gap to the back and sell the keeper. Gun: toes at 5 yards, bring the ball to the back, then set for the pass.",
+      "hb": "Under center: 7.5 yards deep, rocker step, aim at the A gap and press it. Read the trapper's block, then the wrapper's. Gun: bucket lead step to the B gap.",
+      "criteria": "Check it against any outside pressure.",
+      "positions": {
+        "OL": "Backside guard attack-pulls to kick the end man. Backside tackle post-hinges. Line calls on the cards are Back, Deuce, Dallas and Hinge, and the playside tackle is told to flash and track.",
+        "Y": "Wraps to the spot named by the line call.",
+        "F": "Labeled Man Over on most cards."
+      },
+      "tags": ["Miff", "Tango", "Can", "R/P"],
+      "personnel": ["11"],
+      "alerts": [
+        "Tango calls are possible by game plan. The Miff cards from Bunch show Tango on the backside."
+      ]
+    }
+  ]
+}

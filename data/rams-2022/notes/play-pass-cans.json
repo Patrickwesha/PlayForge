@@ -1,0 +1,27 @@
+{
+  "section": "play-pass-cans",
+  "source": "Rams 2022 (McVay), 19 Play Pass Man-Zone Cans",
+  "concepts": [
+    {
+      "key": "cross-mexico",
+      "indexTitle": "CROSS / MEXICO",
+      "pageTitle": "CROSS (HIGH) / MEXICO (GO) (CAN) ZONE ANSWER",
+      "pages": [5],
+      "summary": "Play-action crossers with a Can to a zone answer the page does not name. Cross: the tagged man runs a High Cross at 18 to 22 between the numbers and the hash as the first read while a Fly Wide sets the depth as the second; the Check Flat at 3 to 5 is the outlet. F High (Paddy Insert cell) layers a low and a depth-set shallow cross under the High Cross with H on a Check Over and an outlet at 5. Mexico (Milf Frog) stacks a low and a high shallow cross with a Fly on top and H on a Check Thru at 5.",
+      "progression": "Cross: 1 High Cross, 2 Fly Wide. Mexico: 1, 2, 3 printed on the low cross, high cross and Fly, order unclear",
+      "qb": "Back deepens and sells the fake on the Paddy Fly and Milf Frog cells and has the secondary blitz in every cell. Can to the zone answer.",
+      "positions": {
+        "tagged": "High Cross at 18 to 22 yds between the numbers and the hash (Z or X)",
+        "fly wide": "Fly Wide, depth setter (Paddy Fly cell), letter unclear",
+        "F": "High tag: High Cross over the two shallow crosses (Paddy Insert cell)",
+        "shallow crosses": "S.C. (Low) and S.C. (Depth Set) in the Insert cell; S.C. (Low) and S.C. (High) in the Mexico cell, letters unclear",
+        "fly": "Fly (Mexico cell), letter unclear",
+        "H": "Check Flat at 3 to 5 yds (Cross); Check Over (Insert); Check Thru at 5 yds (Mexico); has the secondary blitz"
+      },
+      "protections": ["Paddy Fly", "Paddy Insert", "Milf Frog"],
+      "formations": ["[11] SPEED PACK RT FAX", "[11] Z MO SOUTH RT CLOSE", "[11] SOUTH RT CLAMP"],
+      "tags": ["Can", "Zone Answer", "Cross", "High", "Mexico", "Go", "Z Mo"],
+      "alerts": ["Back has the secondary blitz", "Alerts printed on the Insert and Mexico cells, targets unclear"]
+    }
+  ]
+}
