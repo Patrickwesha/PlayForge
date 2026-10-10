@@ -158,8 +158,11 @@ def page_shapes(page):
                 p0, p1, p2, p3 = [(q.x, q.y) for q in it[1:5]]
                 if not pts or dist(pts[-1], p0) > 0.6:
                     pts.append(p0)
+                elif pts:
+                    pts[-1] = (pts[-1][0], pts[-1][1], 1)  # the join of two curves is smooth
+                # the book's curves: the sampled points are flagged smooth so the editor draws a curve through them
                 for t in (0.25, 0.5, 0.75, 1.0):
-                    pts.append(bez(p0, p1, p2, p3, t))
+                    pts.append(bez(p0, p1, p2, p3, t) + (1,))
             elif it[0] == "re":
                 rr = it[1]
                 if rr.width > 30 or rr.height > 30:
@@ -183,7 +186,7 @@ def page_shapes(page):
         return out
     rk = lambda c: (round(c[0]), round(c[1]))
     rings, squares, discs, ghosts = dedupe(rings, rk), dedupe(squares, rk), dedupe(discs, rk), dedupe(ghosts, rk)
-    polys = dedupe(polys, lambda p: (p["dashed"], tuple((round(x), round(y)) for x, y in p["pts"])))
+    polys = dedupe(polys, lambda p: (p["dashed"], tuple((round(q[0]), round(q[1])) for q in p["pts"])))
     heads = dedupe(heads, lambda h: rk(h["tip"]))
     # rings drawn on top of a disc (both exist for a filled back) count once; a man drawn twice a point apart once
     rings = [c for c in rings if not any(dist(c, d) < 3 for d in discs)]
@@ -729,7 +732,7 @@ def extract_page(page, section, pageno, kind):
             pts = simplify(p["pts"])
             if len(pts) < 2:
                 continue
-            ypts = [to_yd(x, y) for x, y in pts]
+            ypts = [to_yd(q[0], q[1]) + ((1,) if len(q) > 2 and q[2] else ()) for q in pts]
             length_yd = sum(math.hypot(ypts[k + 1][0] - ypts[k][0], ypts[k + 1][1] - ypts[k][1]) for k in range(len(ypts) - 1))
             if length_yd < 0.25:
                 continue

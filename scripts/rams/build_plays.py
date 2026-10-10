@@ -394,7 +394,7 @@ def attach_paths(cell, spots):
                 half_w, half_h = max(1.5, half_w + 0.6), half_h + 0.6
             elif length > 0.8:
                 continue
-            if all(abs(x - l["x"]) < half_w and abs(y - l["y"]) < half_h for x, y in pts):
+            if all(abs(q[0] - l["x"]) < half_w and abs(q[1] - l["y"]) < half_h for q in pts):
                 return True
         return False
     def is_callout(q):
@@ -402,7 +402,7 @@ def attach_paths(cell, spots):
         pts = q["pts"]
         if len(pts) < 5 or math.hypot(pts[0][0] - pts[-1][0], pts[0][1] - pts[-1][1]) > 0.35:
             return False
-        xs, ys = [x for x, _ in pts], [y for _, y in pts]
+        xs, ys = [q[0] for q in pts], [q[1] for q in pts]
         return max(xs) - min(xs) < 4 and max(ys) - min(ys) < 2.5
     for k, p in enumerate(paths):
         pts = p["pts"]

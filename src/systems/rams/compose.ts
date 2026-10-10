@@ -245,7 +245,7 @@ function makeWarp(spec: RamsPlaySpec, final: Map<RamsSpot, Player>): (x: number)
 const DEF_Y = (role: 'DL' | 'LB' | 'DB', y: number) => (role === 'DL' ? Math.max(1.8, y) : role === 'LB' ? Math.max(1.8, Math.min(7, y)) : Math.max(4.5, y * 1.3));
 
 function pathFrom(spec: RamsPlaySpec, rp: RamsPath, owner: Player | undefined, warp: (x: number, y: number) => number, yMap: (y: number) => number, id: string): Path | null {
-  const pts = rp.pts.map(([x, y]) => ({ x: warp(x, y), y: yMap(y) }));
+  const pts = rp.pts.map(([x, y, smooth]) => ({ x: warp(x, y), y: yMap(y), smooth: smooth === 1 }));
   if (pts.length < 2) return null;
   const length = pts.reduce((n, p, i) => (i ? n + Math.hypot(p.x - pts[i - 1].x, p.y - pts[i - 1].y) : 0), 0);
   if (length < 0.4) return null;
@@ -253,9 +253,10 @@ function pathFrom(spec: RamsPlaySpec, rp: RamsPath, owner: Player | undefined, w
   const role: Path['role'] = rp.role === 'ball' ? 'ball' : rp.role === 'block' ? 'block' : rp.role === 'route' ? 'route' : 'free';
   if (!owner) {
     // a bar several stems meet (a double team) is a block line of its own, with no end mark
-    return { id, anchor: { kind: 'free' }, points: pts.map((p) => ({ x: r2(p.x), y: r2(p.y) })), end: rp.role === 'bar' ? 'none' : end, line: rp.dashed ? 'dashed' : 'solid', role: rp.role === 'bar' ? 'block' : 'free' };
+    return { id, anchor: { kind: 'free' }, points: pts.map((p, i) => ({ x: r2(p.x), y: r2(p.y), ...(p.smooth && i > 0 && i < pts.length - 1 ? { smooth: true } : {}) })), end: rp.role === 'bar' ? 'none' : end, line: rp.dashed ? 'dashed' : 'solid', role: rp.role === 'bar' ? 'block' : 'free' };
   }
-  const rel: PathPoint[] = pts.map((p) => ({ x: r2(p.x - owner.x), y: r2(p.y - owner.y) }));
+  // the book's curves stay curves: a point sampled from a bezier is smooth (never the two ends of the line)
+  const rel: PathPoint[] = pts.map((p, i) => ({ x: r2(p.x - owner.x), y: r2(p.y - owner.y), ...(p.smooth && i > 0 && i < pts.length - 1 ? { smooth: true } : {}) }));
   // a line that starts at the man starts at his center (the symbol hides the stub)
   if (!rp.branch && Math.hypot(rel[0].x, rel[0].y) < 2) rel[0] = { x: 0, y: 0 };
   return { id, anchor: { kind: 'player', playerId: owner.id }, points: rel, end, line: rp.dashed ? 'dashed' : 'solid', role, ...(role === 'ball' ? { primary: true } : {}) };

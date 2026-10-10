@@ -21,9 +21,12 @@ export type RamsFormationWords = {
   name: string;
 };
 
+/** x, y in drawing yards; a third element 1 marks a point sampled from one of the book's curves (drawn smooth). */
+export type RamsPoint = [number, number] | [number, number, number];
+
 export type RamsPath = {
   spot: RamsSpot | null;
-  pts: [number, number][];
+  pts: RamsPoint[];
   dashed: boolean;
   end: 'arrow' | 'tbar' | 'dot' | 'none';
   startMark: 'arrow' | 'tbar' | 'dot' | 'none';
