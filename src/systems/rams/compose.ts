@@ -124,22 +124,99 @@ function matchDrawingSide(placed: Placed, spec: RamsPlaySpec): Placed {
   };
 }
 
-/** The book draws a gun look the call line does not name: the QB goes to gun depth and the back beside him. */
+/**
+ * The book draws a gun look the call line does not name: the QB goes to gun depth and the back beside him. A back
+ * drawn level with a gun quarterback stands level with him on the field too, so his track leaves him cleanly.
+ */
 function matchDrawingDepth(placed: Placed, spec: RamsPlaySpec): Placed {
   const q = spec.offense.Q;
   const qp = placed.players.find((p) => p.label === 'Q');
-  if (!q || !qp || q[1] > -3 || qp.y < -3) return placed;
+  if (!q || !qp || q[1] > -3) return placed;
+  const wasGun = qp.y < -3;
+  const qy = wasGun ? qp.y : -5;
   const players = placed.players.map((p) => {
-    if (p.label === 'Q') return { ...p, y: -5 };
+    if (p.label === 'Q') return wasGun ? p : { ...p, y: qy };
     const d = p.label ? spec.offense[p.label as RamsSpot] : undefined;
-    if (d && d[1] < -2.5 && p.y < -2.5 && Math.abs(d[1] - q[1]) < 1.2) return { ...p, x: r2(d[0] - q[0]), y: -5 };
+    if (d && d[1] < -2.5 && p.y < -2.5 && Math.abs(d[1] - q[1]) < 1.2 && Math.abs(d[0] - q[0]) > 0.6) return { ...p, x: r2(qp.x + Math.sign(d[0] - q[0]) * Math.max(1.5, Math.abs(d[0] - q[0]))), y: qy };
     return p;
   });
-  return { ...placed, players, review: [...placed.review, 'Drawn from the gun; the formation line does not say Gun.'] };
+  return { ...placed, players, review: wasGun ? placed.review : [...placed.review, 'Drawn from the gun; the formation line does not say Gun.'] };
+}
+
+/**
+ * The drawing is the truth for who stands where. When the pack's formation orders the receivers differently from
+ * the cell (the book's Trout Rt draws Y inside, F, then Z), the men swap spots so the picture, and every route,
+ * comes off the right man. A man the book draws tight (attached or in the slot) that the pack sends wide, or the
+ * other way round, moves to the drawing's spot on the nearest landmark.
+ */
+function matchDrawingOrder(placed: Placed, spec: RamsPlaySpec): Placed {
+  const skill: RamsSpot[] = ['X', 'Y', 'Z', 'F', 'U'];
+  const players = placed.players.map((p) => ({ ...p }));
+  const review = [...placed.review];
+  const byLabel = new Map(players.map((p) => [p.label as RamsSpot, p]));
+  const drawn = skill.filter((s) => {
+    const d = spec.offense[s];
+    const p = byLabel.get(s);
+    return !!d && !!p && d[1] >= -2.5 && p.y >= -2.5;
+  });
+  for (const side of [-1, 1]) {
+    const men = drawn.filter((s) => Math.sign(spec.offense[s]![0] || 1) === side && Math.sign(byLabel.get(s)!.x || 1) === side);
+    if (men.length < 2) continue;
+    const spotsHere = men.map((s) => ({ x: byLabel.get(s)!.x, y: byLabel.get(s)!.y }));
+    const byDrawn = [...men].sort((a, b) => Math.abs(spec.offense[a]![0]) - Math.abs(spec.offense[b]![0]));
+    const byPlaced = [...spotsHere].sort((a, b) => Math.abs(a.x) - Math.abs(b.x));
+    // every assignment of the placed spots to the men: rank order first, then on or off the ball
+    const perms = (n: number): number[][] => (n === 1 ? [[0]] : perms(n - 1).flatMap((p) => Array.from({ length: n }, (_, i) => [...p.slice(0, i), n - 1, ...p.slice(i)])));
+    let best: { cost: number; assign: number[] } | null = null;
+    for (const assign of perms(men.length)) {
+      let cost = 0;
+      byDrawn.forEach((s, rank) => {
+        const spot = byPlaced[assign[rank]];
+        const onDrawn = spec.offense[s]![1] > -0.5;
+        cost += Math.abs(assign[rank] - rank) + ((spot.y > -0.5) !== onDrawn ? 1.5 : 0);
+      });
+      if (!best || cost < best.cost - 1e-9) best = { cost, assign };
+    }
+    if (!best) continue;
+    const moved: string[] = [];
+    byDrawn.forEach((s, rank) => {
+      const spot = byPlaced[best!.assign[rank]];
+      const p = byLabel.get(s)!;
+      if (Math.abs(p.x - spot.x) > 0.01 || Math.abs(p.y - spot.y) > 0.01) {
+        p.x = spot.x;
+        p.y = spot.y;
+        moved.push(s);
+      }
+    });
+    if (moved.length) review.push(`The book draws ${moved.join(', ')} in a different order from the pack formation; the picture follows the drawing.`);
+  }
+  // tight in the drawing but wide on the field, or wide in the drawing but tight on the field
+  const core = drawn.filter((s) => Math.abs(spec.offense[s]![0]) < 6 && Math.abs(byLabel.get(s)!.x) < 6);
+  for (const s of drawn) {
+    const d = spec.offense[s]!;
+    const p = byLabel.get(s)!;
+    const dx = Math.abs(d[0]);
+    const px = Math.abs(p.x);
+    const sign = Math.sign(d[0] || 1);
+    if (dx >= 6 && px < 6) {
+      // past the last man the drawing keeps true yards: so does the field
+      const outer = core.filter((c) => Math.sign(spec.offense[c]![0] || 1) === sign).sort((a, b) => Math.abs(spec.offense[b]![0]) - Math.abs(spec.offense[a]![0]))[0];
+      const want = outer ? Math.abs(byLabel.get(outer)!.x) + (dx - Math.abs(spec.offense[outer]![0])) : dx * 2.6;
+      const lm = nearestLandmark(LANDMARKS.filter((l) => Math.sign(l.x) === sign && Math.abs(l.x) >= 6), sign * want);
+      if (lm) {
+        p.x = lm.x;
+        review.push(`${s} is drawn wide; the pack formation had him inside, so he stands on ${lm.label}.`);
+      }
+    } else if (dx <= 4.4 && px >= 6) {
+      p.x = r2(sign * (dx <= 3.4 ? 3 : 4));
+      review.push(`${s} is drawn tight; the pack formation had him wide, so he stands ${Math.abs(p.x)} yards from the ball.`);
+    }
+  }
+  return { ...placed, players, review };
 }
 
 function placeFormation(spec: RamsPlaySpec, playId: string): Placed {
-  return matchDrawingDepth(matchDrawingSide(placeFormationAsCalled(spec, playId), spec), spec);
+  return matchDrawingOrder(matchDrawingDepth(matchDrawingSide(placeFormationAsCalled(spec, playId), spec), spec), spec);
 }
 
 function placeFormationAsCalled(spec: RamsPlaySpec, playId: string): Placed {
@@ -245,7 +322,13 @@ function makeWarp(spec: RamsPlaySpec, final: Map<RamsSpot, Player>): (x: number)
 const DEF_Y = (role: 'DL' | 'LB' | 'DB', y: number) => (role === 'DL' ? Math.max(1.8, y) : role === 'LB' ? Math.max(1.8, Math.min(7, y)) : Math.max(4.5, y * 1.3));
 
 function pathFrom(spec: RamsPlaySpec, rp: RamsPath, owner: Player | undefined, warp: (x: number, y: number) => number, yMap: (y: number) => number, id: string): Path | null {
-  const pts = rp.pts.map(([x, y, smooth]) => ({ x: warp(x, y), y: yMap(y), smooth: smooth === 1 }));
+  let pts = rp.pts.map(([x, y, smooth]) => ({ x: warp(x, y), y: yMap(y), smooth: smooth === 1 }));
+  if (!owner && rp.pts.length === 2 && Math.abs(rp.pts[0][1] - rp.pts[1][1]) < 0.15 && Math.abs(rp.pts[0][0] - rp.pts[1][0]) < 1.3) {
+    // a short flat dash with no owner (a rung of the book's draw ladder) keeps its true width about its middle
+    const mid = warp((rp.pts[0][0] + rp.pts[1][0]) / 2, rp.pts[0][1]);
+    const half = Math.abs(rp.pts[0][0] - rp.pts[1][0]) / 2;
+    pts = [{ ...pts[0], x: mid - half }, { ...pts[1], x: mid + half }];
+  }
   if (pts.length < 2) return null;
   const length = pts.reduce((n, p, i) => (i ? n + Math.hypot(p.x - pts[i - 1].x, p.y - pts[i - 1].y) : 0), 0);
   if (length < 0.4) return null;

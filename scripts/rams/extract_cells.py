@@ -411,6 +411,15 @@ def group_labels(spans, line_gap=2.5, x_gap=9, row_gap=9.5, row_joiner=" "):
     sizes = sorted(s["size"] for s in spans)
     median = sizes[len(sizes) // 2] if sizes else 0
     spans = [dict(s, y=s["y"] + (2.5 if s["size"] < median - 1.5 else 0)) for s in spans]
+    # an ordinal's superscript (the "th" of "4th") is smaller and sits a little higher: it joins its word with no
+    # space, so the rest of the line can follow it
+    sups = [s for s in spans if s["size"] < median - 1.5 and re.fullmatch(r"(st|nd|rd|th)", s["text"].strip())]
+    for sup in sups:
+        word = min([w for w in spans if w is not sup and abs(w["y"] - sup["y"]) < 4 and abs(sup["x0"] - w["x1"]) < 2.5], key=lambda w: abs(sup["x0"] - w["x1"]), default=None)
+        if word:
+            word["text"] += sup["text"].strip()
+            word["x1"] = max(word["x1"], sup["x1"])
+            spans.remove(sup)
     spans = sorted(spans, key=lambda s: (round(s["y"]), s["x0"]))
     lines = []
     for s in spans:
@@ -472,8 +481,8 @@ def classify_span(s):
         return "cellno"
     if 9.5 <= size <= 10.5 and "Bookman" in font and color == 0 and re.fullmatch(r"\d", t):
         return "progression"
-    if "Courier" in font and re.search(r"\bY(ar)?ds?\b|^\d+(-\d+)?$|^\+?\d", t) and size <= 8.5:
-        return "depth"
+    if "Courier" in font and re.search(r"\bY(ar)?ds?\b|^\d+(-\d+)?$|^\+?\d", t) and size <= 8.5 and not (t.startswith("(") and ")" not in t):
+        return "depth"  # an open bracket is the first row of a note, read with the rows under it
     if "Courier" in font and size <= 8.5:
         return "routelabel"
     if color == BLUE:
@@ -554,8 +563,23 @@ def assign_cells(headers, items, key=lambda it: (it["x"], it["y"])):
     return out
 
 
+def merge_superscripts(spans):
+    """An ordinal's superscript ("4th") is a smaller span a little above its word: it joins the word, so the
+    word classifies and groups as one piece of text."""
+    sizes = sorted(s["size"] for s in spans)
+    median = sizes[len(sizes) // 2] if sizes else 0
+    out = list(spans)
+    for sup in [s for s in spans if s["size"] < median - 1.5 and re.fullmatch(r"(st|nd|rd|th)", s["text"].strip())]:
+        word = min([w for w in out if w is not sup and abs(w["y"] - sup["y"]) < 6 and abs(sup["x0"] - w["x1"]) < 2.5 and w["size"] >= median - 1.5], key=lambda w: abs(sup["x0"] - w["x1"]), default=None)
+        if word:
+            word["text"] += sup["text"].strip()
+            word["x1"] = max(word["x1"], sup["x1"])
+            out.remove(sup)
+    return out
+
+
 def extract_page(page, section, pageno, kind):
-    spans = page_spans(page)
+    spans = merge_superscripts(page_spans(page))
     # the page number at the foot of the page is print, not a label
     spans = [s for s in spans if not (s["y"] > page.rect.height - 40 and re.fullmatch(r"\d+", s["text"].strip()))]
     rings, squares, discs, ghosts, polys, heads, dots = page_shapes(page)
@@ -583,6 +607,30 @@ def extract_page(page, section, pageno, kind):
     headers.sort(key=lambda h: (round(h["y"] / 30), h["x"]))
     for i, h in enumerate(headers):
         h["i"] = i
+    # the diagram grid (in points): the column edges (the page's margins, the middle, the midpoints between header
+    # columns) and the rows' top and bottom lines (just under each header, and the page's foot). A line whose
+    # points all sit on the grid, running along it, is the cell's frame or a ruled yard line, not line work.
+    centers = sorted({round(h["x"] / 40) * 40 for h in headers})
+    col_edges = [page.rect.x0 + 40, page.rect.x1 - 40, (page.rect.x0 + page.rect.x1) / 2] + [(a + b) / 2 for a, b in zip(centers, centers[1:])]
+    frame_ys = sorted({h["y"] + 14 for h in headers}) + [page.rect.y1 - 40]
+    def on_grid(pt):
+        return min(abs(pt[0] - e) for e in col_edges) < 14 or min(abs(pt[1] - fy) for fy in frame_ys) < 18
+    def is_frame(pts_pt, length_yd):
+        if length_yd < 5 or len(pts_pt) > 6:
+            return False
+        axis = all(abs(pts_pt[i + 1][0] - pts_pt[i][0]) < 2 or abs(pts_pt[i + 1][1] - pts_pt[i][1]) < 2 for i in range(len(pts_pt) - 1))
+        if not axis:
+            return False
+        if all(on_grid(q) for q in pts_pt):
+            return True
+        # a ruled yard line or a frame: one flat line wider than any route (16 yards), or anything drawn deeper
+        # than the deepest back (nothing of the play is drawn 6.5 yards behind the ball)
+        if len(pts_pt) == 2 and abs(pts_pt[0][1] - pts_pt[1][1]) < 2 and length_yd > 16:
+            return True
+        # a ruled yard line: one flat line from column edge to column edge
+        if len(pts_pt) == 2 and abs(pts_pt[0][1] - pts_pt[1][1]) < 2 and all(min(abs(q[0] - e) for e in col_edges) < 14 for q in pts_pt):
+            return True
+        return False
     # page-level text: the concept / footwork lines above the first header
     top = min(h["y"] for h in headers)
     text_lines = group_labels([s for s in spans if classify_span(s) in ("concept", "note") and s["y"] < top - 8], line_gap=3, x_gap=30, row_gap=0)
@@ -736,11 +784,8 @@ def extract_page(page, section, pageno, kind):
             length_yd = sum(math.hypot(ypts[k + 1][0] - ypts[k][0], ypts[k + 1][1] - ypts[k][1]) for k in range(len(ypts) - 1))
             if length_yd < 0.25:
                 continue
-            straight = len(pts) == 2
-            if straight and length_yd > 14 and abs(ypts[0][1] - ypts[1][1]) < 0.2:
-                continue  # the cell's frame
-            if straight and length_yd > 10 and abs(ypts[0][0] - ypts[1][0]) < 0.2:
-                continue
+            if is_frame(pts, length_yd) or all(q[1] < -6.5 for q in ypts):
+                continue  # the cell's frame or a ruled yard line
             arrow = p.get("arrow", [])
             tbar = p.get("tbar", [])
             dot = p.get("dot", [])

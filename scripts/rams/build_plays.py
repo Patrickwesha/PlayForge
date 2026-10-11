@@ -318,9 +318,9 @@ def identify_players(cell):
     # the quarterback: the unlabeled man right behind the center, under center or in the gun (the pass sections
     # print his drop number in the ring instead of a letter); the back: the deepest one in the middle
     if "Q" not in spots:
-        q = sorted([o for o in rest if abs(o["x"]) < 0.9 and -3.2 < o["y"] < -0.5], key=lambda o: -o["y"])
+        q = sorted([o for o in rest if abs(o["x"]) < 1.6 and -3.2 < o["y"] < -0.5], key=lambda o: (round(abs(o["x"])), -o["y"]))
         if not q:
-            q = sorted([o for o in rest if abs(o["x"]) < 0.9 and -6.5 < o["y"] <= -3.2 and o["shape"] == "ring"], key=lambda o: -o["y"])
+            q = sorted([o for o in rest if abs(o["x"]) < 1.6 and -6.5 < o["y"] <= -3.2 and o["shape"] == "ring"], key=lambda o: (abs(o["x"]), -o["y"]))
         if q:
             spots["Q"] = (q[0]["x"], q[0]["y"])
             rest = [o for o in rest if o is not q[0]]
@@ -344,7 +344,7 @@ def path_role(spot, path, is_run):
         return "block"
     if spot == "Q":
         return "free"
-    if is_run and spot in ("H", "F") and path["end"] == "arrow":
+    if is_run and spot in ("H", "F", "X", "Y", "Z") and path["end"] == "arrow":
         return "ball"
     return "route"
 
@@ -365,6 +365,16 @@ def attach_paths(cell, spots):
         for s, (x, y) in spots.items():
             d = math.hypot(pt[0] - x, pt[1] - y)
             if d < limit and (best is None or d < best[0]):
+                best = (d, s)
+        return best
+    def back_spot(pt):
+        """A back in the backfield: his line may start up to 2.2 yards off his ring (drawn shallow, stepping up)."""
+        best = None
+        for s, (x, y) in spots.items():
+            if s not in ("H", "F", "Q") or y > -2.5:
+                continue
+            d = math.hypot(pt[0] - x, pt[1] - y)
+            if d < 2.2 and (best is None or d < best[0]):
                 best = (d, s)
         return best
     out = []
@@ -398,12 +408,29 @@ def attach_paths(cell, spots):
                 return True
         return False
     def is_callout(q):
-        """A cloud drawn around a word: a small closed shape."""
+        """A cloud drawn around a word (a small closed shape), or a box of any size (a note's frame)."""
         pts = q["pts"]
         if len(pts) < 5 or math.hypot(pts[0][0] - pts[-1][0], pts[0][1] - pts[-1][1]) > 0.35:
             return False
-        xs, ys = [q[0] for q in pts], [q[1] for q in pts]
-        return max(xs) - min(xs) < 4 and max(ys) - min(ys) < 2.5
+        return True  # a line that comes back to its start is a shape drawn around something, never a route
+    def is_rung(p):
+        """A short flat dash: with others like it stacked at an even spacing it is a ladder (the book's draw
+        lane), drawn as it is, never chained into a zigzag."""
+        a, b = p["pts"][0], p["pts"][-1]
+        return len(p["pts"]) == 2 and abs(a[1] - b[1]) < 0.15 and 0.35 < abs(a[0] - b[0]) < 1.3
+    rungs = [p for p in paths if is_rung(p)]
+    ladder = set()
+    for p in rungs:
+        a = p["pts"][0]
+        mates = [q for q in rungs if q is not p and abs(q["pts"][0][0] - a[0]) < 0.25 and abs(q["pts"][-1][0] - p["pts"][-1][0]) < 0.25 and 0.3 < abs(q["pts"][0][1] - a[1]) < 0.9]
+        if mates:
+            ladder.add(id(p))
+    def departs(pt_list, spot):
+        """The line leaves the ring: its start is its point nearest the ring (a line passing a ring is not his)."""
+        sx, sy = spots[spot]
+        d0 = math.hypot(pt_list[0][0] - sx, pt_list[0][1] - sy)
+        return all(math.hypot(q[0] - sx, q[1] - sy) >= d0 - 0.1 for q in pt_list[1:])
+    motions = []  # (spot, pts) of every motion line, for the blue ink
     for k, p in enumerate(paths):
         pts = p["pts"]
         if len(pts) < 2:
@@ -413,6 +440,9 @@ def attach_paths(cell, spots):
         length = sum(math.hypot(pts[i + 1][0] - pts[i][0], pts[i + 1][1] - pts[i][1]) for i in range(len(pts) - 1))
         if p.get("bar"):
             bars.append({"spot": None, "pts": pts, "dashed": p["dashed"], "end": "none", "startMark": "none", "role": "bar"})
+            continue
+        if id(p) in ladder:
+            bars.append({"spot": None, "pts": pts, "dashed": p["dashed"], "end": "none", "startMark": "none", "role": "free"})
             continue
         hit = nearest_spot(pts[0], 0.75) or nearest_spot(pts[0], 1.05)
         hit_end = nearest_spot(pts[-1], 0.75)
@@ -427,7 +457,7 @@ def attach_paths(cell, spots):
                 out.append({"spot": far[1], "pts": pts, "dashed": True, "end": p["end"], "startMark": p["startMark"], "role": "motion", "ghost": [p["anchor"]["x"], p["anchor"]["y"]]})
                 continue
         long_enough = length >= 0.4 or (p["end"] == "tbar" and length >= 0.15)
-        if hit and hit[0] < 0.5 and long_enough and not continues(k):
+        if hit and hit[0] < 0.95 and long_enough and not continues(k) and departs(pts, hit[1]):
             # a stem chained with the outline of a half-filled symbol: the vertices inside the symbol go
             sx, sy = spots[hit[1]]
             pts = list(pts)
@@ -436,12 +466,13 @@ def attach_paths(cell, spots):
             out.append({"spot": hit[1], "pts": pts, "dashed": p["dashed"], "end": p["end"], "startMark": p["startMark"], "role": None, "k": k, "color": ink(p)})
         elif long_enough:
             pending.append({"pts": pts, "dashed": p["dashed"], "end": p["end"], "startMark": p["startMark"], "k": k, "color": ink(p),
-                            "ring": hit or nearest_spot(pts[0], 1.4), "ringEnd": nearest_spot(pts[-1], 1.05)})
+                            "ring": hit or nearest_spot(pts[0], 1.4) or back_spot(pts[0]), "ringEnd": nearest_spot(pts[-1], 1.05) or back_spot(pts[-1])})
     # the rest: a continuation or a branch of an owned line (its start snaps onto that line), else a man's own line
-    changed = True
-    while changed and pending:
-        changed = False
-        for q in list(pending):
+    # every round takes the surest reading left: a piece joins the line it continues or forks from, or a man owns
+    # the line leaving his ring, whichever is nearer
+    while pending:
+        cands = []
+        for q in pending:
             best = None
             # a line with no man at either end may sit a little further off the line it continues (a route
             # leaving the far end of a T-bar)
@@ -455,8 +486,19 @@ def attach_paths(cell, spots):
                 if q.get("color") != (0.0, 0.0, 0.0) and not same_ink and any(x.get("color") == q.get("color") for x in out):
                     continue
                 for where, e in (("start", q["pts"][0]), ("end", q["pts"][-1])):
+                    nxt = q["pts"][1] if where == "start" else q["pts"][-2]
                     for vi, v in enumerate(o["pts"]):
                         d = math.hypot(v[0] - e[0], v[1] - e[1])
+                        # a piece that carries on from the far end of a line with no end mark continues it (the
+                        # line was cut where another crossed it); a line's middle vertex is a crossing or a fork,
+                        # weaker than the end it leads from
+                        if vi == len(o["pts"]) - 1 and o["end"] == "none" and len(o["pts"]) >= 2:
+                            ax, ay = o["pts"][-1][0] - o["pts"][-2][0], o["pts"][-1][1] - o["pts"][-2][1]
+                            bx, by = nxt[0] - e[0], nxt[1] - e[1]
+                            na, nb = math.hypot(ax, ay) or 1e-9, math.hypot(bx, by) or 1e-9
+                            d -= 0.5 if (ax * bx + ay * by) / (na * nb) > 0.7 else 0.25
+                        elif 0 < vi < len(o["pts"]) - 1:
+                            d += 0.25
                         if d < tol and (best is None or d < best[0]):
                             best = (d, o, where, vi, None)
                     for si in range(len(o["pts"]) - 1):
@@ -471,36 +513,60 @@ def attach_paths(cell, spots):
                         if d < tol and (best is None or d < best[0]):
                             best = (d, o, where, si + 1, foot)
             if best:
-                d, o, where, vi, foot = best
-                if foot is not None:
-                    # the fork becomes a vertex of the line it leaves, so the two draw as one piece of line work
-                    o["pts"].insert(vi, [round(foot[0], 2), round(foot[1], 2)])
-                # a line whose far end sits on a man is that man's own line (it leads to the join, not from it):
-                # nothing else ever runs into a player's symbol
-                far = q.get("ringEnd") if where == "start" else q.get("ring")
-                if far and far[1] != o["spot"]:
-                    pts = list(reversed(q["pts"])) if where == "start" else list(q["pts"])
-                    end = q["startMark"] if where == "start" else q["end"]
-                    start_mark = q["end"] if where == "start" else q["startMark"]
-                    out.append({"spot": far[1], "pts": pts, "dashed": q["dashed"], "end": end, "startMark": start_mark, "role": None, "k": q["k"], "color": q.get("color")})
-                    pending.remove(q)
-                    changed = True
-                    continue
-                pts = list(q["pts"]) if where == "start" else list(reversed(q["pts"]))
-                pts[0] = list(o["pts"][vi])
-                end = q["end"] if where == "start" else q["startMark"]
-                start_mark = q["startMark"] if where == "start" else q["end"]
-                out.append({"spot": o["spot"], "pts": pts, "dashed": q["dashed"], "end": end, "startMark": start_mark, "role": None, "branch": True, "color": q.get("color")})
-                pending.remove(q)
-                changed = True
-        if not changed:
-            # nothing joins a line: the nearest ring (a little further off) owns the next one
-            ringed = [q for q in pending if q.get("ring")]
-            if ringed:
-                q = min(ringed, key=lambda q: q["ring"][0])
+                cands.append((best[0], q, ("join", best)))
+            # the nearest ring (a little further off) owns a line; a line whose far end sits on a man (a back's
+            # route drawn out from his check bar) is his, read from that end
+            if q.get("ring"):
+                cands.append((q["ring"][0], q, ("ring", False)))
+            elif q.get("ringEnd"):
+                cands.append((q["ringEnd"][0] + 0.3, q, ("ring", True)))
+        if not cands:
+            break
+        d, q, (kind, arg) = min(cands, key=lambda t: t[0])
+        pending.remove(q)
+        if kind == "ring":
+            if arg:
+                out.append({"spot": q["ringEnd"][1], "pts": list(reversed(q["pts"])), "dashed": q["dashed"], "end": q["startMark"], "startMark": q["end"], "role": None, "k": q["k"], "color": q.get("color")})
+            else:
                 out.append({"spot": q["ring"][1], "pts": q["pts"], "dashed": q["dashed"], "end": q["end"], "startMark": q["startMark"], "role": None, "k": q["k"], "color": q.get("color")})
-                pending.remove(q)
-                changed = True
+            continue
+        d, o, where, vi, foot = arg
+        if foot is not None:
+            # the fork becomes a vertex of the line it leaves, so the two draw as one piece of line work
+            o["pts"].insert(vi, [round(foot[0], 2), round(foot[1], 2)])
+        # a line whose far end sits on a man is that man's own line (it leads to the join, not from it):
+        # nothing else ever runs into a player's symbol
+        far = q.get("ringEnd") if where == "start" else q.get("ring")
+        if far and far[1] != o["spot"]:
+            pts = list(reversed(q["pts"])) if where == "start" else list(q["pts"])
+            end = q["startMark"] if where == "start" else q["end"]
+            start_mark = q["end"] if where == "start" else q["startMark"]
+            out.append({"spot": far[1], "pts": pts, "dashed": q["dashed"], "end": end, "startMark": start_mark, "role": None, "k": q["k"], "color": q.get("color")})
+            continue
+        pts = list(q["pts"]) if where == "start" else list(reversed(q["pts"]))
+        pts[0] = list(o["pts"][vi])
+        end = q["end"] if where == "start" else q["startMark"]
+        start_mark = q["startMark"] if where == "start" else q["end"]
+        out.append({"spot": o["spot"], "pts": pts, "dashed": q["dashed"], "end": end, "startMark": start_mark, "role": None, "branch": True, "color": q.get("color")})
+    # the book's blue line is the jet man: his motion runs to the quarterback and the blue line carries on from
+    # there (sometimes back the other way). A blue line hung on the quarterback belongs to the man whose motion
+    # passes its start.
+    def near_line(pt, pts_, tol):
+        for i in range(len(pts_) - 1):
+            a, b = pts_[i], pts_[i + 1]
+            dx, dy = b[0] - a[0], b[1] - a[1]
+            n2 = dx * dx + dy * dy or 1e-9
+            t = max(0.0, min(1.0, ((pt[0] - a[0]) * dx + (pt[1] - a[1]) * dy) / n2))
+            if math.hypot(a[0] + t * dx - pt[0], a[1] + t * dy - pt[1]) < tol:
+                return True
+        return False
+    for o in out:
+        if o["spot"] != "Q" or o.get("color") != (0.0, 0.0, 1.0):
+            continue
+        movers = [m for m in out if m["spot"] not in ("Q",) + tuple(OL_SPOTS) and m["dashed"] and near_line(o["pts"][0], m["pts"], 1.0)]
+        if movers:
+            o["spot"] = movers[0]["spot"]
+            o["blue"] = True
     free = [{"spot": None, "pts": q["pts"], "dashed": q["dashed"], "end": q["end"], "startMark": q["startMark"], "role": "free"} for q in pending if not in_note_box(q)] + bars
     return out, free
 
@@ -631,13 +697,39 @@ def main():
                         o["role"] = path_role(o["spot"], o, is_run)
                 # one ball carrier: on a jet or fly the motion man's line carries it, else the back's; the other
                 # arrow is the fake
-                balls = [o for o in owned if o.get("role") == "ball"]
-                if len(balls) > 1:
-                    jet = bool(re.search(r"\b(FLY|JET|FLIGHT|SLALOM)\b", (cline or "").upper()))
-                    keep = next((o for o in balls if (o["spot"] != "H") == jet), balls[0])
-                    for o in balls:
-                        if o is not keep:
-                            o["role"] = "route"
+                # one ball carrier. A numbered run (14, 38) is the back's ball: a receiver's arrow on it is the
+                # fly fake. A jet or sweep word with no number (Spirit, Alaska) is the motion man's: his blue
+                # line, else the longest receiver's line, else the receiver's line drawn to the handoff point.
+                balls = [o for o in owned if o.get("role") == "ball"] if is_run else []
+                def plen(o):
+                    return sum(math.hypot(o["pts"][i + 1][0] - o["pts"][i][0], o["pts"][i + 1][1] - o["pts"][i][1]) for i in range(len(o["pts"]) - 1))
+                numbered = bool(re.match(r"\s*\d\d\b", cline or ""))
+                jet = bool(re.search(r"\b(FLY|JET|FLIGHT|SLALOM|SPIRIT|ALASKA|AMERICAN|ALLEGIANT|ROCKET|MISSILE|AROUND|REVERSE)\b", (cline or "").upper()))
+                keep = None
+                if not is_run:
+                    keep = None
+                elif numbered or not jet:
+                    backs = [o for o in balls if o["spot"] in ("H", "F")]
+                    keep = max(backs, key=plen) if backs else None
+                else:
+                    blue = [o for o in owned if o.get("blue") and not o["dashed"] and o["end"] == "arrow"]
+                    cands = [o for o in balls if o["spot"] not in ("H", "Q")]
+                    if blue:
+                        keep = max(blue, key=plen)
+                        keep["role"] = "ball"
+                    elif cands:
+                        keep = max(cands, key=plen)
+                    else:
+                        qx, qy = spots.get("Q", (0.0, -1.0))
+                        hand = [o for o in owned if o["spot"] in ("X", "Y", "Z", "F") and not o.get("branch") and math.hypot(o["pts"][-1][0] - qx, o["pts"][-1][1] - qy) < 2.0 and len(o["pts"]) >= 2]
+                        if hand:
+                            keep = max(hand, key=plen)
+                            keep["role"] = "ball"
+                        elif balls:
+                            keep = balls[0]
+                for o in owned:
+                    if o.get("role") == "ball" and o is not keep:
+                        o["role"] = "route"
                 labels = attach_labels(cell, spots, owned)
                 # formation in the pack?
                 pack_key, pack_personnel = None, None
