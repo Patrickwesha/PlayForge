@@ -179,8 +179,11 @@ const ALIGNMENT: Record<string, Align> = {
       const weakSlot = b.receivers(-1)[1];
       te.x = weakSlot ? Math.abs(weakSlot.x) : (b.tackle(1) + wide.x) / 2;
       te.y = OFF_BALL;
+      // a trips side already has a man in that slot: the Y flexes to the inside slot, halfway to him
+      const taken = b.receivers(1).find((p) => p !== te && Math.abs(p.x - te.x) < 1.5);
+      if (taken) te.x = (b.tackle(1) + taken.x) / 2;
       b.rebalance('OPEN', 1, [te]);
-      return { basis: 'words', page: 17, effect: `${te.label} flexes off the ball into the strong slot and ${wide.label} steps onto the line (Dice with Open = Dyno)` };
+      return { basis: 'words', page: 17, effect: `${te.label} flexes off the ball into the strong slot${taken ? ` inside ${taken.label}` : ''} and ${wide.label} steps onto the line (Dice with Open = Dyno)` };
     }
     // p-024 (Crack Rt Open): alone on his side, he takes the 5 yard split and stays on the ball
     te.x = SPLIT_X;

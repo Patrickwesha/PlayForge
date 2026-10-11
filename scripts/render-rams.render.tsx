@@ -21,7 +21,7 @@ const H = 900 * Number(process.env.SCALE ?? 1);
 
 it('renders Rams plays to files', { timeout: 600000 }, async () => {
   mkdirSync(OUT, { recursive: true });
-  const pack = JSON.parse(readFileSync(path.resolve(import.meta.dirname, '../public/rams-2022/plays.json'), 'utf8')) as RamsPlayPack;
+  const pack = JSON.parse(readFileSync(process.env.PLAYS ?? path.resolve(import.meta.dirname, '../public/rams-2022/plays.json'), 'utf8')) as RamsPlayPack;
   const wanted = (process.env.KEYS ?? '').split(',').map((s) => s.trim()).filter(Boolean);
   const specs = wanted.length ? pack.plays.filter((p) => wanted.includes(p.key)) : [...new Map(pack.plays.map((p) => [p.section, p])).values()];
   const rows: string[] = [];

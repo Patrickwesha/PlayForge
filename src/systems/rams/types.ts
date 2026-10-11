@@ -66,6 +66,9 @@ export type RamsPlaySpec = {
   packPersonnel: string | null;
   baseKey: string | null;
   personnel: string | null;
+  /** The formation is the call's own (a call sheet's line), not the book's: the picture follows the call, and a
+   * man the book drew on the other side of the ball runs his drawn line work mirrored about his new spot. */
+  formationIsCalled?: boolean;
   runNumber: number | null;
   runFamily: string | null;
   toss: boolean;

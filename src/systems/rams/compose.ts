@@ -216,6 +216,8 @@ function matchDrawingOrder(placed: Placed, spec: RamsPlaySpec): Placed {
 }
 
 function placeFormation(spec: RamsPlaySpec, playId: string): Placed {
+  // a call sheet's own formation is the truth for the picture: the drawing only lends its line work
+  if (spec.formationIsCalled) return placeFormationAsCalled(spec, playId);
   return matchDrawingOrder(matchDrawingDepth(matchDrawingSide(placeFormationAsCalled(spec, playId), spec), spec), spec);
 }
 
@@ -280,6 +282,7 @@ function makeWarp(spec: RamsPlaySpec, final: Map<RamsSpot, Player>): (x: number)
     const p = final.get(spot);
     if (!p || !pos) continue;
     if (pos[1] < -2.5 || p.y < -2.5) continue; // backs do not stretch the field
+    if (Math.abs(pos[0]) > 0.8 && Math.abs(p.x) > 0.8 && Math.sign(pos[0]) !== Math.sign(p.x)) continue; // a man who crossed the ball runs mirrored in his own frame
     knots.push([pos[0], p.x]);
   }
   knots.sort((a, b) => a[0] - b[0]);
@@ -342,6 +345,18 @@ function pathFrom(spec: RamsPlaySpec, rp: RamsPath, owner: Player | undefined, w
   const rel: PathPoint[] = pts.map((p, i) => ({ x: r2(p.x - owner.x), y: r2(p.y - owner.y), ...(p.smooth && i > 0 && i < pts.length - 1 ? { smooth: true } : {}) }));
   // a line that starts at the man starts at his center (the symbol hides the stub)
   if (!rp.branch && Math.hypot(rel[0].x, rel[0].y) < 2) rel[0] = { x: 0, y: 0 };
+  else if (!rp.branch && spec.formationIsCalled && owner.label) {
+    // the call's formation moved the man well away from where the book drew him (a wide man into the backfield):
+    // his line still leaves from him
+    const d = spec.offense[owner.label as RamsSpot];
+    if (d && Math.hypot(d[0] - owner.x, d[1] - owner.y) > 3) {
+      const { x: sx, y: sy } = rel[0];
+      for (const q of rel) {
+        q.x = r2(q.x - sx);
+        q.y = r2(q.y - sy);
+      }
+    }
+  }
   return { id, anchor: { kind: 'player', playerId: owner.id }, points: rel, end, line: rp.dashed ? 'dashed' : 'solid', role, ...(role === 'ball' ? { primary: true } : {}) };
 }
 
@@ -394,6 +409,9 @@ export function composeRamsPlay(spec: RamsPlaySpec): Play {
     if (!p || !d) return warp;
     const ox = d[0];
     const fx = p.x;
+    // a man who stands on the other side of the ball from where the book drew him (the call's formation puts
+    // him there) runs his line work mirrored about his new spot: an in-cut still cuts in, a crosser still crosses
+    if (Math.abs(ox) > 0.8 && Math.abs(fx) > 0.8 && Math.sign(ox) !== Math.sign(fx)) return (x) => fx - (x - ox);
     return (x) => {
       const w = Math.min(1, Math.max(0, (Math.abs(x - ox) - 4) / 4));
       return w * warp(x) + (1 - w) * (fx + (x - ox));
