@@ -1,9 +1,25 @@
 import type { BackupV2, Formation, Play, Playbook, Settings } from '@/model/types';
-import { backupV2Schema } from '@/model/schema';
+import { z } from 'zod';
+import { backupV2Schema, formationSchema, playSchema, playbookSchema } from '@/model/schema';
 import { importLegacy, looksLegacy } from './legacyImport';
 
+/**
+ * A pack: formations, plays and playbooks to ADD to a library, with no settings. Used for playbooks that are
+ * kept out of the public repo (a coach's private book) and handed over as a file. Imported with repo.addPack,
+ * so it never touches settings and never overwrites a row the library already has.
+ */
+export const packSchema = z.object({
+  app: z.literal('playforge'),
+  kind: z.literal('pack'),
+  name: z.string(),
+  formations: z.array(formationSchema),
+  plays: z.array(playSchema),
+  playbooks: z.array(playbookSchema),
+});
+export type PlayForgePack = z.infer<typeof packSchema>;
+
 export type ParsedBackup = {
-  source: 'playforge-v2' | 'playforge-lite';
+  source: 'playforge-v2' | 'playforge-lite' | 'playforge-pack';
   data: { formations: Formation[]; plays: Play[]; playbooks: Playbook[]; settings?: Settings };
   warnings: string[];
 };
@@ -15,6 +31,11 @@ export function parseBackup(text: string): ParsedBackup {
     json = JSON.parse(text);
   } catch {
     throw new Error('Not a JSON file');
+  }
+  if (json && typeof json === 'object' && (json as { kind?: string }).kind === 'pack') {
+    const r = packSchema.safeParse(json);
+    if (!r.success) throw new Error(`Pack failed validation: ${r.error.issues[0]?.path.join('.')} ${r.error.issues[0]?.message}`);
+    return { source: 'playforge-pack', data: { formations: r.data.formations as Formation[], plays: r.data.plays as Play[], playbooks: r.data.playbooks as Playbook[] }, warnings: [] };
   }
   if (json && typeof json === 'object' && (json as { app?: string }).app === 'playforge') {
     const r = backupV2Schema.safeParse(json);

@@ -37,6 +37,11 @@ export function SettingsClient() {
     try {
       const text = await file.text();
       const result = parseBackup(text);
+      if (result.source === 'playforge-pack') {
+        const r = await repo.addPack(result.data);
+        setMsg(`Pack added: ${r.added} new rows${r.kept ? `, kept ${r.kept} you already had` : ''}. Settings untouched.`);
+        return;
+      }
       if (mode === 'replace' && !confirm('Replace ALL current formations, plays, and playbooks with the file contents?')) return;
       await repo.importAll(result.data, mode);
       setMsg(`Imported ${result.data.formations.length} formations, ${result.data.plays.length} plays, ${result.data.playbooks.length} playbooks (${result.source}).${result.warnings.length ? ' Warnings: ' + result.warnings.join('; ') : ''}`);
@@ -111,7 +116,7 @@ export function SettingsClient() {
           </select>
           <input ref={fileRef} type="file" accept="application/json,.json" className="text-sm" onChange={(e) => e.target.files?.[0] && void importFile(e.target.files[0])} />
         </div>
-        <p className="text-xs text-neutral-500 mt-2">Accepts PlayForge v2 backups and PlayForge-Lite exports (plays, formations, playbooks).</p>
+        <p className="text-xs text-neutral-500 mt-2">Accepts PlayForge v2 backups, PlayForge-Lite exports, and pack files (a playbook to add: never touches settings or your edits).</p>
         {msg && <div className="mt-3 text-sm border border-neutral-300 rounded p-2 bg-neutral-50">{msg}</div>}
       </section>
 
