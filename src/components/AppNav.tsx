@@ -9,12 +9,13 @@ const LINKS: { href: string; label: string }[] = [
   { href: '/formations', label: 'Formations' },
   { href: '/playbooks', label: 'Playbooks' },
   { href: '/systems/eagles-2026', label: 'System' },
+  { href: '/systems/beast-2026', label: 'Beast' },
   { href: '/settings', label: 'Settings' },
 ];
 
 export function AppNav() {
   const pathname = usePathname();
-  if (pathname.startsWith('/print')) return null;
+  if (pathname.startsWith('/print') || pathname.endsWith('/print')) return null;
   return (
     <header className="no-print h-11 shrink-0 flex items-center gap-1 px-3 bg-black text-white border-b border-black">
       <Link href="/" className="font-bold tracking-wide text-sm mr-3">

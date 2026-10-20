@@ -52,6 +52,14 @@ One language for charting and drawing the Eagles every week, at **System** in th
 - `src/systems/eagles/nameMotion.ts` turns the chart's motion note (who / from / path / timing) into a motion word: Rt / Lt, Righty / Lefty, Short, Fly, Behind, Lab / Rat. Tight ends are the Y and backs the H (`roster.ts`); a receiver whose job film cannot show is written WR.
 - A PHI import (and `npm run import:snaps`) names formations in the system: `Gun Dice Rt`, `West Lt Slot`, `Gun Trips Lt G`. The chart's own name stays in `chartName` and in the note, with the reasoning. Ids are still the alignment signature, so re-imports merge as before.
 
+## Beast Offense 2026 (2nd / 3rd grade)
+
+My Beast playbook (Playmaker export: formations, run plays, pass plays, Call Sheet V3) rebuilt for 7 and 8 year olds, at **Beast** in the nav (`/systems/beast-2026`). One language: wristband number = the play (1 to 10, the V3 order), color = the side the Y and the wings line up on (Red right, Yellow left), play number = who carries and the hole (even right, odd left), and the line blocks GOD (Gap, On, Down) on every run. The no-huddle is the check-with-me system: City + Color + Day.
+
+- `src/systems/beast/content.ts`: the ten concepts with kid names (Train, Hammer, Rocket, Crossover, Limo, Elevator, Magic, Pop, Boomerang, Ice), city words, hand signals, positions, GOD, cadence and days, the call sheet sections, the opening script, IF / THEN, and the 12-week install plan.
+- `src/systems/beast/plays.ts`: 9 formations and 20 plays. Red is drawn here, Yellow is the exact mirror. Every player's job is a position note. Plays where my sheets disagree with themselves are `needs-review` with the reason.
+- "Add the Beast playbook to my library" (`repo.addPack`) writes the rows once and never overwrites an edit. Print sheets: `/systems/beast-2026/print?sheet=callsheet|wristband|jobs|install|teach`. `npm run render:beast` writes PNGs to `renders/beast-2026/`.
+
 ## Play and route packs
 
 The 2019 Packers route library (159 routes, pages 70-103) and the Install #1 plays are checked in as seeds next to the formation pack. Nothing is traced from the scanned diagrams: route geometry is derived from the depths and breaks the book states in words, and a play is an imported formation + a protection + a route word per receiver (or a run family), drawn with `src/geometry/routeLibrary.ts` and the block presets.

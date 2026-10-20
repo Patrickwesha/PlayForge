@@ -236,6 +236,40 @@ export const repo = {
     });
     notifyLocalChange();
   },
+  /**
+   * Add a ready-made pack (a system's formations, plays and playbook) to the library. Rows the library
+   * already has are left alone, so a second click never overwrites an edit; new rows are stamped now and
+   * queued for sync like any save. A row deleted earlier comes back, because the user asked for it.
+   */
+  async addPack(pack: Pick<BackupV2, 'formations' | 'plays' | 'playbooks'>): Promise<{ added: number; kept: number }> {
+    const db = getDb();
+    const now = nowIso();
+    let added = 0;
+    let kept = 0;
+    await db.transaction('rw', [db.formations, db.plays, db.playbooks, db.outbox, db.tombstones], async () => {
+      const groups: [ItemKind, Entity[]][] = [
+        ['formation', pack.formations],
+        ['play', pack.plays],
+        ['playbook', pack.playbooks],
+      ];
+      for (const [kind, rows] of groups) {
+        for (const raw of rows) {
+          if (await tableFor(db, kind).get(raw.id)) {
+            kept += 1;
+            continue;
+          }
+          const key = itemKey(kind, raw.id);
+          const row = { ...structuredClone(raw), createdAt: now, updatedAt: now };
+          await tableFor(db, kind).put(row);
+          await db.outbox.put({ key, kind, id: row.id, op: 'put', at: now });
+          await db.tombstones.delete(key);
+          added += 1;
+        }
+      }
+    });
+    notifyLocalChange();
+    return { added, kept };
+  },
   /** Start this device over with the built-ins. The UI only allows it while signed out of sync. */
   async resetToSeeds() {
     const db = getDb();
