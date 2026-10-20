@@ -1,18 +1,19 @@
 import { notFound } from 'next/navigation';
-import { BEAST_SYSTEM_ID } from '@/systems/beast/content';
-import { BeastPrint, type BeastSheet } from './BeastPrint';
+import { youthSystem } from '@/systems/youth/registry';
+import { YouthPrint, type YouthSheet } from './YouthPrint';
 
-const SHEETS: BeastSheet[] = ['callsheet', 'wristband', 'jobs', 'install', 'teach'];
+const SHEETS: YouthSheet[] = ['callsheet', 'wristband', 'jobs', 'install', 'teach'];
 
 export async function generateMetadata(props: { params: Promise<{ id: string }>; searchParams: Promise<{ sheet?: string }> }) {
+  const { id } = await props.params;
   const { sheet } = await props.searchParams;
-  return { title: `Beast ${sheet ?? 'print'} - PlayForge` };
+  return { title: `${youthSystem(id)?.short ?? 'System'} ${sheet ?? 'print'} - PlayForge` };
 }
 
 export default async function SystemPrintPage(props: { params: Promise<{ id: string }>; searchParams: Promise<{ sheet?: string }> }) {
   const { id } = await props.params;
   const { sheet } = await props.searchParams;
-  if (id !== BEAST_SYSTEM_ID) notFound();
-  const s = (SHEETS.includes(sheet as BeastSheet) ? sheet : 'callsheet') as BeastSheet;
-  return <BeastPrint sheet={s} />;
+  if (!youthSystem(id)) notFound();
+  const s = (SHEETS.includes(sheet as YouthSheet) ? sheet : 'callsheet') as YouthSheet;
+  return <YouthPrint id={id} sheet={s} />;
 }

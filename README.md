@@ -60,6 +60,12 @@ My Beast playbook (Playmaker export: formations, run plays, pass plays, Call She
 - `src/systems/beast/plays.ts`: 9 formations and 20 plays. Red is drawn here, Yellow is the exact mirror. Every player's job is a position note. Plays where my sheets disagree with themselves are `needs-review` with the reason.
 - "Add the Beast playbook to my library" (`repo.addPack`) writes the rows once and never overwrites an edit. Print sheets: `/systems/beast-2026/print?sheet=callsheet|wristband|jobs|install|teach`. `npm run render:beast` writes PNGs to `renders/beast-2026/`.
 
+## Kid West Coast Offense 2026 (2nd / 3rd grade)
+
+The offense McVay and Shanahan would build for their own kids, at **West Coast** in the nav (`/systems/wco-2026`). Same ten-play count and the same language as the Beast (wristband number, Red / Yellow, play number = carrier + hole, check-with-me), built on one look (Pro: Q under center, F and H stacked) and one main run (Surf, the wide zone) that every other play copies for two steps: Dart (duo with the fullback), Jet, Cutback (GT counter), Boot (naked), Leak, Hook (stick from bunch), Web (halfback screen), Zipper (mesh), Ice. Line rules: STEP-HIT-UP on zone, GOD on gap runs, Pass GOD on passes.
+
+Both youth offenses run on one engine: `src/systems/youth/` (`types.ts` the system shape, `build.ts` formations, Red plays, Yellow mirrors, playbook and job helpers, `registry.ts` the list). A system is data: `src/systems/beast/` and `src/systems/wco/`. The system page, print sheets and the Rams-style book (`/systems/<id>`, `/print?sheet=...`, `/book`) work for any of them; `src/systems/youth/youth.test.ts` checks every rule for every system. Book PDF: `node scripts/export-beast-book.mjs http://localhost:3000/systems/wco-2026/book out.pdf`. Drawings: `SYSTEM=wco-2026 npm run render:beast`.
+
 ## Play and route packs
 
 The 2019 Packers route library (159 routes, pages 70-103) and the Install #1 plays are checked in as seeds next to the formation pack. Nothing is traced from the scanned diagrams: route geometry is derived from the depths and breaks the book states in words, and a play is an imported formation + a protection + a route word per receiver (or a run family), drawn with `src/geometry/routeLibrary.ts` and the block presets.

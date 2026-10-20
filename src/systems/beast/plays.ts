@@ -6,21 +6,24 @@
  * Units are yards, x = 0 at the ball (+ right), y = 0 at the line (+ downfield). Path points are relative to
  * their player. Line spacing follows PlayForge: linemen 1 yard apart, the ends at 3.
  */
-import type { FitOptions } from '@/geometry/bounds';
-import type { Diagram, Formation, Path, PathPoint, Play, PlayCategory, Playbook, Player, PlayerRole } from '@/model/types';
-import { flipDiagram, flipLabel } from '@/geometry/flip';
+import type { Play } from '@/model/types';
 import { fieldLandmarks, landmarkById } from '@/geometry/landmarks';
-import { BEAST_ID_PREFIX, BEAST_PLAYBOOK_ID, BEAST_TAG, COLORS, CONCEPTS, type Concept, type Side } from './content';
+import { buildYouthSystem, YOUTH_FIT, YOUTH_PACK_TIME } from '@/systems/youth/build';
+import type { FormationSpec, Line, PlayDraw, Pt, Spot, YouthSystemDef } from '@/systems/youth/types';
+import {
+  BEAST_ID_PREFIX, BEAST_PLAYBOOK_ID, BEAST_SYSTEM_ID, BEAST_TAG, CADENCE, CALL_SHEET, CONCEPTS, DAYS, GOD, IF_THEN, INSTALL, LEGEND, POSITIONS, PRACTICE_70, SCRIPT, WATCHERS,
+  type Concept, type Side,
+} from './content';
 
 /** Tight fit for small youth thumbnails (wristbands, call sheet strip): the plays are short. */
-export const BEAST_FIT: FitOptions = { pad: 0.8, minBack: 5, minDown: 4, minSide: 6 };
+export const BEAST_FIT = YOUTH_FIT;
 
 /** Every pack row carries this time; "Add to my library" restamps rows as it writes them. */
-export const BEAST_PACK_TIME = '2026-10-19T00:00:00.000Z';
+export const BEAST_PACK_TIME = YOUTH_PACK_TIME;
+
 
 // ---------------------------------------------------------------- formations
 
-type Spot = { label: string; x: number; y: number; role: PlayerRole; alignment?: string };
 
 const LINE: Spot[] = [
   { label: 'LT', x: -2, y: 0, role: 'OL' },
@@ -38,21 +41,11 @@ const at = (id: string) => {
 };
 const HASH5 = at('hash+5-right');
 
-export type BeastFormationSpec = {
-  key: string;
-  name: string;
-  /** Red / Yellow, or null for a balanced look. */
-  side: Side | null;
-  family: string;
-  qb: 'under' | 'pistol';
-  cue: string;
-  spots: Spot[];
-};
+export type BeastFormationSpec = FormationSpec;
 
-/** Right-side and balanced formations; Left ones are mirrors (see FORMATION_SPECS). */
 const RIGHT_FORMATIONS: BeastFormationSpec[] = [
   {
-    key: 'beast-right', name: 'Beast Right', side: 'right', family: 'Beast', qb: 'under',
+    key: 'beast-right', name: 'Beast Right', callName: 'Beast Right (Base)', side: 'right', family: 'Beast', qb: 'under',
     cue: 'Y and both wings on the Red side. 1 and 2 four yards back, 2 on the wing side.',
     spots: [
       { label: 'F', x: -3, y: 0, role: 'TE' }, ...LINE, { label: 'Y', x: 3, y: 0, role: 'TE' },
@@ -98,81 +91,7 @@ const RIGHT_FORMATIONS: BeastFormationSpec[] = [
   },
 ];
 
-const mirrorSpec = (f: BeastFormationSpec): BeastFormationSpec => ({
-  ...f,
-  key: f.key.replace('right', 'left'),
-  name: f.name.replace('Right', 'Left'),
-  side: 'left',
-  cue: f.cue.replace(/Red/g, 'Yellow'),
-  spots: f.spots.map((s) => ({ ...s, x: s.alignment ? -s.x : -s.x, label: flipLabel(s.label), alignment: s.alignment?.replace('-right', '-left') })),
-});
-
-export const FORMATION_SPECS: BeastFormationSpec[] = RIGHT_FORMATIONS.flatMap((f) => (f.side === 'right' ? [f, mirrorSpec(f)] : [f]));
-
-const formationId = (key: string) => `${BEAST_ID_PREFIX}f-${key}`;
-
-function players(prefix: string, spots: Spot[]): Record<string, Player> {
-  const out: Record<string, Player> = {};
-  for (const s of spots) {
-    const id = `${prefix}-${s.label.toLowerCase()}`;
-    out[id] = {
-      id,
-      side: 'offense',
-      symbol: s.role === 'C' ? 'square' : 'circle',
-      label: s.label,
-      x: s.x,
-      y: s.y,
-      role: s.role,
-      labelColor: s.label === '1' ? 'red' : undefined,
-      ...(s.alignment ? { alignment: s.alignment } : {}),
-    };
-  }
-  return out;
-}
-
-export const BEAST_FORMATIONS: Formation[] = FORMATION_SPECS.map((f) => ({
-  id: formationId(f.key),
-  name: f.side ? `${f.name} (${COLORS[f.side].word})` : f.name,
-  side: 'offense',
-  personnel: undefined,
-  playersPerSide: 11,
-  players: players(formationId(f.key), f.spots),
-  tags: [BEAST_TAG, 'youth', f.family.toLowerCase()],
-  family: f.family,
-  strength: f.side ?? undefined,
-  qbAlignment: f.qb,
-  source: 'Beast Offense Formations (Playmaker, 2026-02-28)',
-  note: f.cue,
-  confidence: 'derived',
-  builtin: false,
-  createdAt: BEAST_PACK_TIME,
-  updatedAt: BEAST_PACK_TIME,
-}));
-
-export const beastFormationByKey = new Map(FORMATION_SPECS.map((f, i) => [f.key, BEAST_FORMATIONS[i]]));
-
 // ---------------------------------------------------------------- path language
-
-/** [x, y] or [x, y, 's'] for a point the line curves through. Relative to the player. */
-type Pt = [number, number] | [number, number, 's'];
-type Kind = 'block' | 'run' | 'fake' | 'route' | 'read1' | 'pull' | 'ball' | 'action';
-type Line = { who: string; kind: Kind; pts: Pt[] };
-
-const pts = (p: Pt[]): PathPoint[] => p.map(([x, y, s]) => (s ? { x, y, smooth: true } : { x, y }));
-
-function pathFor(id: string, playerId: string, l: Line): Path {
-  const base = { id, anchor: { kind: 'player' as const, playerId }, points: pts(l.pts) };
-  switch (l.kind) {
-    case 'block': return { ...base, end: 'tbar', line: 'solid', role: 'block' };
-    case 'pull': return { ...base, end: 'arrow', line: 'solid', role: 'block' };
-    case 'run': return { ...base, end: 'arrow', line: 'solid', role: 'route', color: 'red', width: 'thick' };
-    case 'fake': return { ...base, end: 'arrow', line: 'dashed', role: 'route' };
-    case 'route': return { ...base, end: 'arrow', line: 'solid', role: 'route' };
-    case 'read1': return { ...base, end: 'arrow', line: 'solid', role: 'route', primary: true };
-    case 'ball': return { ...base, end: 'arrow', line: 'dashed', role: 'ball', color: 'red' };
-    case 'action': return { ...base, end: 'dot', line: 'solid', role: 'route' };
-  }
-}
 
 // blocks every play reuses (relative, Red side: + x is toward the wings)
 const TOWARD_WINGS: Pt[] = [[0, 0], [0.8, 0.6]];
@@ -188,15 +107,7 @@ const passPro = (...who: string[]) => who.map((w) => b(w, SET));
 
 // ---------------------------------------------------------------- the ten concepts, drawn Red
 
-export type PlayDraw = {
-  lines: Line[];
-  /** Big red words on the field (Ice). */
-  text?: { x: number; y: number; t: string }[];
-  /** Assignments by Red-side label. {wing} / {away} become right / left (mirrored on Yellow). */
-  notes: Record<string, string>;
-  /** Where my source pages disagree with each other, and what I drew. */
-  review?: string[];
-};
+export type { PlayDraw };
 
 const ballTo = (from: [number, number], to: [number, number]): Line => ({ who: '1', kind: 'ball', pts: [from, [to[0], to[1] + 4]] });
 
@@ -435,153 +346,71 @@ export const DRAWINGS: Record<string, PlayDraw> = {
   },
 };
 
-// ---------------------------------------------------------------- build plays
+// ---------------------------------------------------------------- the system
 
-const playId = (side: Side, c: Concept) => `${BEAST_ID_PREFIX}${COLORS[side].word.toLowerCase()}-${c.n}-${c.key}`;
-const categoryOf = (c: Concept): PlayCategory => (c.kind === 'run' ? 'Run' : c.kind === 'pass' ? (c.key === 'pop' || c.key === 'elevator' ? 'Pass' : 'PA') : 'Special');
-const words = (s: string, side: Side) => s.replace(/\{wing\}/g, side).replace(/\{away\}/g, side === 'right' ? 'left' : 'right');
-
-/** The coach's call from Call Sheet V3, e.g. "Beast Right (Base) 14 Blast". */
-export function coachCall(side: Side, c: Concept): string {
-  const num = c.numbers[side];
-  return `${COLORS[side].formation} (Base) ${num ? `${num} ` : ''}${c.coach}`;
-}
-
-/** What the card says, e.g. "14 HAMMER". */
-export function kidCall(side: Side, c: Concept): string {
-  const num = c.numbers[side];
-  return `${num ? `${num} ` : ''}${c.kid}`.toUpperCase();
-}
-
-export const wristbandLabel = (side: Side, c: Concept) => `${COLORS[side].word.toUpperCase()} ${c.n}`;
-
-function buildRight(c: Concept): { diagram: Diagram; notes: Record<string, string> } {
-  const f = beastFormationByKey.get('beast-right')!;
-  const pid = playId('right', c);
-  const byLabel = new Map<string, Player>();
-  const diagram: Diagram = { players: {}, paths: {}, annotations: {} };
-  for (const p of Object.values(f.players)) {
-    const id = `${pid}-${p.label.toLowerCase()}`;
-    diagram.players[id] = { ...p, id };
-    byLabel.set(p.label, diagram.players[id]);
-  }
-  const draw = DRAWINGS[c.key];
-  draw.lines.forEach((l, i) => {
-    const p = byLabel.get(l.who);
-    if (!p) throw new Error(`${c.key}: no player ${l.who}`);
-    const id = `${pid}-r${i + 1}`;
-    diagram.paths[id] = pathFor(id, p.id, l);
-  });
-  draw.text?.forEach((t, i) => {
-    const id = `${pid}-a${i + 1}`;
-    diagram.annotations[id] = { id, kind: 'text', x: t.x, y: t.y, text: t.t, style: 'redCaps', size: 'md' };
-  });
-  const notes: Record<string, string> = {};
-  for (const [label, text] of Object.entries(draw.notes)) {
-    const p = byLabel.get(label);
-    if (!p) throw new Error(`${c.key}: note for missing player ${label}`);
-    notes[p.id] = words(text, 'right');
-  }
-  return { diagram, notes };
-}
-
-/** Mirror a Red drawing into Yellow: same paths, every x flipped, ids renamed so they read right. */
-function mirror(c: Concept, red: Diagram): { diagram: Diagram; notes: Record<string, string> } {
-  const from = playId('right', c);
-  const to = playId('left', c);
-  const flipped = flipDiagram(red);
-  const idMap = new Map<string, string>();
-  const diagram: Diagram = { players: {}, paths: {}, annotations: {} };
-  for (const p of Object.values(flipped.players)) {
-    const id = `${to}-${p.label.toLowerCase()}`;
-    idMap.set(p.id, id);
-    diagram.players[id] = { ...p, id };
-  }
-  for (const p of Object.values(flipped.paths)) {
-    const id = p.id.replace(from, to);
-    const anchor = p.anchor.kind === 'player' ? { kind: 'player' as const, playerId: idMap.get(p.anchor.playerId)! } : p.anchor;
-    diagram.paths[id] = { ...p, id, anchor };
-  }
-  for (const a of Object.values(flipped.annotations)) {
-    const id = a.id.replace(from, to);
-    diagram.annotations[id] = { ...a, id };
-  }
-  const draw = DRAWINGS[c.key];
-  const notes: Record<string, string> = {};
-  for (const [label, text] of Object.entries(draw.notes)) notes[`${to}-${flipLabel(label).toLowerCase()}`] = words(text, 'left');
-  return { diagram, notes };
-}
-
-function makePlay(side: Side, c: Concept, d: { diagram: Diagram; notes: Record<string, string> }): Play {
-  const draw = DRAWINGS[c.key];
-  const formation = beastFormationByKey.get(side === 'right' ? 'beast-right' : 'beast-left')!;
-  return {
-    id: playId(side, c),
-    name: kidCall(side, c),
-    formationId: formation.id,
-    formationLabel: `${COLORS[side].formation} (${COLORS[side].word})`.toUpperCase(),
-    category: categoryOf(c),
-    tags: [BEAST_TAG, 'youth', c.key, c.kind, `week-${c.week}`, COLORS[side].word.toLowerCase()],
-    notes: `${c.kidSays}\n\nCoach: ${c.coachNote}\n\nSignal: ${c.signal}. Check with me: ${c.cities.join(' / ')} ${COLORS[side].word}.`,
-    positionNotes: d.notes,
-    wristband: wristbandLabel(side, c),
-    diagram: d.diagram,
-    source: 'Beast Offense (Playmaker, 2026-02-28)',
-    rawCall: coachCall(side, c),
-    concept: c.coach,
-    install: c.week,
-    confidence: draw.review?.length ? 'needs-review' : 'derived',
-    reviewNotes: draw.review,
-    createdAt: BEAST_PACK_TIME,
-    updatedAt: BEAST_PACK_TIME,
-  };
-}
-
-export const BEAST_PLAYS: Play[] = CONCEPTS.flatMap((c) => {
-  const red = buildRight(c);
-  return [makePlay('right', c, red), makePlay('left', c, mirror(c, red.diagram))];
-});
-
-export const beastPlay = (side: Side, key: string) => BEAST_PLAYS.find((p) => p.id === playId(side, CONCEPTS.find((c) => c.key === key)!));
-
-/** A player's note on a play, by the label he wears (LT, 3, Y ...). */
-export function jobOf(play: Play, label: string): string {
-  const p = Object.values(play.diagram.players).find((x) => x.label === label);
-  return (p && play.positionNotes[p.id]) || '';
-}
-
-/**
- * One position's jobs on every concept: the player cards. Sides are said as "the wing side" / "the other side"
- * so one line works for both colors. A lineman's job can change with the color (on Yellow the left guard does
- * what the right guard does on Red), so `yellow` is set only when it differs.
- */
-export const JOB_LABELS = ['1', '2', '3', '4', 'Y', 'F', 'LT', 'LG', 'C', 'RG', 'RT'];
-const sideless = (s: string) => s.replace(/\{wing\}/g, 'wing').replace(/\{away\}/g, 'other');
-export function jobsFor(label: string): { concept: Concept; red: string; yellow?: string }[] {
-  return CONCEPTS.map((c) => {
-    const notes = DRAWINGS[c.key].notes;
-    const red = sideless(notes[label] ?? '');
-    const yellow = sideless(notes[flipLabel(label)] ?? '');
-    return { concept: c, red, yellow: yellow !== red ? yellow : undefined };
-  });
-}
-
-/** The playbook row: runs, passes, Ice, then the formations. Prints 6-up with the existing print page. */
-export const BEAST_PLAYBOOK: Playbook = {
-  id: BEAST_PLAYBOOK_ID,
-  name: 'BEAST OFFENSE',
+export const BEAST_DEF: YouthSystemDef = {
+  id: BEAST_SYSTEM_ID,
+  title: 'Beast Offense 2026',
+  short: 'BEAST',
   subtitle: '2nd & 3rd grade',
-  cover: { title: 'BEAST OFFENSE', subtitle: '2nd & 3rd grade · GOD blocking · Red right, Yellow left', season: '2026', showCover: true },
-  sections: [
-    { id: `${BEAST_ID_PREFIX}s-runs`, title: 'Runs', kind: 'plays', itemIds: CONCEPTS.filter((c) => c.kind === 'run').flatMap((c) => [playId('right', c), playId('left', c)]) },
-    { id: `${BEAST_ID_PREFIX}s-pass`, title: 'Passes', kind: 'plays', itemIds: CONCEPTS.filter((c) => c.kind === 'pass').flatMap((c) => [playId('right', c), playId('left', c)]) },
-    { id: `${BEAST_ID_PREFIX}s-ice`, title: 'Ice (freeze)', kind: 'plays', itemIds: CONCEPTS.filter((c) => c.kind === 'special').flatMap((c) => [playId('right', c), playId('left', c)]) },
-    { id: `${BEAST_ID_PREFIX}s-formations`, title: 'Formations', kind: 'formations', itemIds: BEAST_FORMATIONS.map((f) => f.id) },
+  intro: 'My Beast playbook rebuilt for 7 and 8 year olds. Ten plays, two colors, one blocking rule. The wristband number is the play, the color is the side, and the line blocks GOD on every run.',
+  wordmark: ['BEAST', 'OFFENSE'],
+  badge: 'B',
+  idPrefix: BEAST_ID_PREFIX,
+  tag: BEAST_TAG,
+  playbookId: BEAST_PLAYBOOK_ID,
+  source: 'Beast Offense (Playmaker, 2026-02-28)',
+  formationSource: 'Beast Offense Formations (Playmaker, 2026-02-28)',
+  baseFormation: { right: 'beast-right', left: 'beast-left' },
+  formations: RIGHT_FORMATIONS,
+  concepts: CONCEPTS,
+  drawings: DRAWINGS,
+  colorMeans: { right: 'Beast Right: the Y and both wings line up on the right', left: 'Beast Left: they line up on the left' },
+  awayWord: 'goes AWAY from the wings',
+  withAway: 'Train, Hammer and Rocket go the way the wings are. Crossover, Limo and Boomerang go the other way. That is the trick.',
+  sideWords: { wing: 'wing', away: 'other' },
+  coachWordFrom: 'on Call Sheet V3',
+  positions: POSITIONS,
+  blocking: {
+    rules: [
+      { key: 'god', title: GOD.title, usedOn: 'Every run', steps: GOD.steps },
+      { key: 'pass', title: 'Pass GOD', usedOn: 'Every pass', steps: GOD.pass },
+    ],
+    inside: GOD.inside,
+    exceptions: GOD.exceptions,
+  },
+  legend: LEGEND,
+  cadence: CADENCE,
+  cadenceNote: 'We changed "Red, Set, Go" to "Ready, Set, Go" because Red means right.',
+  days: DAYS,
+  checkWithMe: 'Beast Red, check with me!',
+  install: INSTALL,
+  callSheet: CALL_SHEET,
+  script: SCRIPT,
+  ifThen: IF_THEN,
+  watchers: WATCHERS,
+  practice: PRACTICE_70,
+  checkThese: [
+    { label: 'Beast Left', text: 'the formation sheet kept the Y on the right with the wings on the left, but every Beast Left play puts the Y with the wings. I used the plays, so Yellow is a true mirror of Red.' },
+    { label: 'Colors', text: 'V3 used GREEN / BLUE on the wristband and Red / Yellow in the no-huddle. Everything is Red / Yellow now so the kids learn one color word per side.' },
+    { label: 'Cities', text: 'V3 had Boston (Blast) and Buffalo (Buck) both on B, and Syracuse (Sweep) and Seattle (Sweep Pass) both on S. The kid names all start with different letters, so the city words changed.' },
+    { label: 'Cadence', text: '"Red, Set, Go" became "Ready, Set, Go" because Red now means right.' },
   ],
-  defaultLayout: '6up',
-  paper: 'letter',
-  createdAt: BEAST_PACK_TIME,
-  updatedAt: BEAST_PACK_TIME,
 };
 
-export const BEAST_PACK = { formations: BEAST_FORMATIONS, plays: BEAST_PLAYS, playbooks: [BEAST_PLAYBOOK] };
+export const BEAST = buildYouthSystem(BEAST_DEF);
+
+// names the rest of the app already uses
+export const FORMATION_SPECS = BEAST.formationSpecs;
+export const BEAST_FORMATIONS = BEAST.formationRows;
+export const beastFormationByKey = BEAST.formationByKey;
+export const BEAST_PLAYS = BEAST.plays;
+export const BEAST_PLAYBOOK = BEAST.playbook;
+export const BEAST_PACK = BEAST.pack;
+export const JOB_LABELS = BEAST.jobLabels;
+export const beastPlay = (side: Side, key: string) => BEAST.play(side, key);
+export const coachCall = (side: Side, c: Concept) => BEAST.coachCall(side, c);
+export const kidCall = (side: Side, c: Concept) => BEAST.kidCall(side, c);
+export const wristbandLabel = (side: Side, c: Concept) => BEAST.wristbandLabel(side, c);
+export const jobOf = (play: Play, label: string) => BEAST.jobOf(play, label);
+export const jobsFor = (label: string) => BEAST.jobsFor(label);

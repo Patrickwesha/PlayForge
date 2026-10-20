@@ -1,19 +1,26 @@
 'use client';
 
 import Link from 'next/link';
-import type { CSSProperties, ReactNode } from 'react';
+import { createContext, useContext, type CSSProperties, type ReactNode } from 'react';
 import { FONT_STACK } from '@/model/constants';
 import { PlayThumb } from '@/render/PlayThumb';
-import { HoleChart } from '@/systems/beast/HoleChart';
-import {
-  CADENCE, CALL_SHEET, COLORS, CONCEPTS, DAYS, GOD, IF_THEN, INSTALL, LEGEND, POSITIONS, SCRIPT, conceptByKey, type Side,
-} from '@/systems/beast/content';
-import { BEAST_FIT, FORMATION_SPECS, beastPlay, coachCall, jobsFor, kidCall } from '@/systems/beast/plays';
+import { HoleChart } from '@/systems/youth/HoleChart';
+import { COLORS, type Side } from '@/systems/youth/types';
+import type { YouthSystem } from '@/systems/youth/build';
+import { youthSystem } from '@/systems/youth/registry';
 
-export type BeastSheet = 'callsheet' | 'wristband' | 'jobs' | 'install' | 'teach';
+export type YouthSheet = 'callsheet' | 'wristband' | 'jobs' | 'install' | 'teach';
 
-const LANDSCAPE: BeastSheet[] = ['callsheet'];
-const SHEET_NAMES: Record<BeastSheet, string> = { callsheet: 'Call sheet', wristband: 'Wristbands', jobs: 'Player cards', install: 'Install plan', teach: 'Teaching sheet' };
+/** The system being printed; set by YouthPrint and YouthBook. */
+export const SysContext = createContext<YouthSystem | null>(null);
+export const useSys = () => {
+  const s = useContext(SysContext);
+  if (!s) throw new Error('no youth system in context');
+  return s;
+};
+
+const LANDSCAPE: YouthSheet[] = ['callsheet'];
+const SHEET_NAMES: Record<YouthSheet, string> = { callsheet: 'Call sheet', wristband: 'Wristbands', jobs: 'Player cards', install: 'Install plan', teach: 'Teaching sheet' };
 
 export function Page({ landscape, children, pad = 0.35 }: { landscape?: boolean; children: ReactNode; pad?: number }) {
   const w = landscape ? 11 : 8.5;
@@ -40,19 +47,32 @@ const sideChip = (side: Side, text: ReactNode, style?: CSSProperties) => (
 
 // ---------------------------------------------------------------- call sheet
 
+/** The call sheet sections in two columns, about the same height each (section order kept). */
+function callColumns(sys: YouthSystem): string[][] {
+  const total = sys.callSheet.reduce((n, s) => n + s.rows.length + 1.5, 0);
+  const cols: string[][] = [[], []];
+  let h = 0;
+  for (const s of sys.callSheet) {
+    cols[h < total / 2 ? 0 : 1].push(s.id);
+    h += s.rows.length + 1.5;
+  }
+  return cols;
+}
+
 function CallSection({ id }: { id: string }) {
-  const s = CALL_SHEET.find((x) => x.id === id)!;
+  const sys = useSys();
+  const s = sys.callSheet.find((x) => x.id === id)!;
   return (
     <div style={{ marginBottom: 5, breakInside: 'avoid' }}>
       <div style={{ background: s.color, color: s.ink, fontWeight: 800, textAlign: 'center', fontSize: '9pt', padding: '1px 0', textTransform: 'uppercase' }}>{s.title}</div>
       {s.rows.map(([side, key], i) => {
-        const c = conceptByKey.get(key)!;
+        const c = sys.conceptByKey.get(key)!;
         return (
           <div key={i} style={{ display: 'grid', gridTemplateColumns: '0.2in 0.75in 1fr', alignItems: 'center', borderBottom: '0.5px solid #bbb', padding: '0.5px 0', whiteSpace: 'nowrap' }}>
             <span style={{ background: s.color, color: s.ink, textAlign: 'center', fontWeight: 800 }}>{i + 1}</span>
             <span style={{ paddingLeft: 3 }}>{sideChip(side, `${COLORS[side].word.toUpperCase()} ${c.n}`, { fontSize: '7.5pt' })}</span>
             <span style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
-              <b>{kidCall(side, c)}</b> <span style={{ color: '#666', fontSize: '6.5pt' }}>{coachCall(side, c).replace(' (Base)', '')}</span>
+              <b>{sys.kidCall(side, c)}</b> <span style={{ color: '#666', fontSize: '6.5pt' }}>{sys.coachCall(side, c).replace(' (Base)', '')}</span>
             </span>
           </div>
         );
@@ -62,28 +82,25 @@ function CallSection({ id }: { id: string }) {
 }
 
 export function CallSheet() {
+  const sys = useSys();
   return (
     <Page landscape pad={0.3}>
       <TitleBar
-        title="BEAST OFFENSE · CALL SHEET"
+        title={`${sys.title.toUpperCase()} · CALL SHEET`}
         right={
           <>
-            {sideChip('right', 'RED = RIGHT')} {sideChip('left', 'YELLOW = LEFT')} &nbsp; Cadence: {CADENCE}
+            {sideChip('right', 'RED = RIGHT')} {sideChip('left', 'YELLOW = LEFT')} &nbsp; Cadence: {sys.cadence}
           </>
         }
       />
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1.25fr', gap: 8, flex: 1, minHeight: 0 }}>
-        <div>
-          <CallSection id="first10" />
-          <CallSection id="misdirection" />
-          <CallSection id="twopoint" />
-        </div>
-        <div>
-          <CallSection id="tempo" />
-          <CallSection id="playaction" />
-          <CallSection id="short" />
-          <CallSection id="long" />
-        </div>
+        {callColumns(sys).map((col, i) => (
+          <div key={i}>
+            {col.map((id) => (
+              <CallSection key={id} id={id} />
+            ))}
+          </div>
+        ))}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
           <div>
             <div style={{ background: '#2E9E4F', color: '#fff', fontWeight: 800, textAlign: 'center', padding: '1px 0' }}>NO-HUDDLE: CHECK WITH ME</div>
@@ -98,7 +115,7 @@ export function CallSheet() {
                 </tr>
               </thead>
               <tbody>
-                {CONCEPTS.map((c) => (
+                {sys.concepts.map((c) => (
                   <tr key={c.key} style={{ borderBottom: '0.5px solid #bbb' }}>
                     <td style={{ fontWeight: 800 }}>{c.n}</td>
                     <td style={{ fontWeight: 800 }}>{c.kid}</td>
@@ -110,26 +127,26 @@ export function CallSheet() {
               </tbody>
             </table>
             <div style={{ fontSize: '7.5pt', marginTop: 2 }}>
-              {DAYS.map((d) => (
+              {sys.days.map((d) => (
                 <div key={d.day}>
                   <b>{d.day}:</b> {d.means}
                 </div>
               ))}
               <div>
-                <b>Line up:</b> &ldquo;Beast Red, check with me&rdquo;, two-point stance, eyes on the coach. Then City + Color + Day.
+                <b>Line up:</b> &ldquo;{sys.checkWithMe}&rdquo; Two-point stance, eyes on the coach. Then City + Color + Day.
               </div>
             </div>
           </div>
           <div>
             <div style={{ background: '#444', color: '#fff', fontWeight: 800, textAlign: 'center', padding: '1px 0' }}>IF YOU SEE &rarr; CALL</div>
             <div style={{ fontSize: '7.5pt' }}>
-              {IF_THEN.map((r) => (
+              {sys.ifThen.map((r) => (
                 <div key={r.see}>
-                  {r.see} &rarr; <b>{r.call.map((k) => conceptByKey.get(k)!.kid).join(' / ')}</b>
+                  {r.see} &rarr; <b>{r.call.map((k) => sys.conceptByKey.get(k)!.kid).join(' / ')}</b>
                 </div>
               ))}
               <div style={{ marginTop: 2 }}>
-                <b>Script:</b> {SCRIPT.map(({ entry: [side, key] }) => `${COLORS[side].word[0]}${conceptByKey.get(key)!.n} ${conceptByKey.get(key)!.kid}`).join(' · ')}
+                <b>Script:</b> {sys.script.map(({ entry: [side, key] }) => `${COLORS[side].word[0]}${sys.conceptByKey.get(key)!.n} ${sys.conceptByKey.get(key)!.kid}`).join(' · ')}
               </div>
             </div>
           </div>
@@ -140,12 +157,12 @@ export function CallSheet() {
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(10, 1fr)', gap: 3, marginTop: 5 }}>
         {(['right', 'left'] as Side[]).flatMap((side) =>
-          CONCEPTS.map((c) => (
+          sys.concepts.map((c) => (
             <div key={`${side}${c.key}`} style={{ border: '1px solid #000' }}>
               <div style={{ fontSize: '6.5pt', fontWeight: 800, textAlign: 'center', background: COLORS[side].hex, color: COLORS[side].ink }}>
                 {COLORS[side].word.toUpperCase()} {c.n} {c.kid.toUpperCase()}
               </div>
-              <PlayThumb diagram={beastPlay(side, c.key)!.diagram} aspect={1.7} fit={BEAST_FIT} />
+              <PlayThumb diagram={sys.play(side, c.key)!.diagram} aspect={1.7} fit={sys.fit} />
             </div>
           )),
         )}
@@ -159,22 +176,23 @@ export function CallSheet() {
 const CARD: CSSProperties = { width: '3.7in', height: '2.45in', border: '1.5px dashed #000', padding: '0.08in', boxSizing: 'border-box', display: 'flex', flexDirection: 'column' };
 
 function TextCard() {
+  const sys = useSys();
   return (
     <div style={CARD}>
       <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 900, fontSize: '9pt', borderBottom: '1.5px solid #000' }}>
-        <span>BEAST</span>
+        <span>{sys.short}</span>
         <span>
           {sideChip('right', 'RED = RIGHT')} {sideChip('left', 'YELLOW = LEFT')}
         </span>
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridTemplateRows: 'repeat(5, 1fr)', gridAutoFlow: 'column', flex: 1, columnGap: 6 }}>
-        {CONCEPTS.map((c) => (
+        {sys.concepts.map((c) => (
           <div key={c.key} style={{ display: 'flex', alignItems: 'center', gap: 4, borderBottom: '0.5px solid #ccc' }}>
             <span style={{ fontSize: '15pt', fontWeight: 900, width: '0.32in', textAlign: 'right' }}>{c.n}</span>
             <span style={{ lineHeight: 1.05 }}>
               <span style={{ fontSize: '10.5pt', fontWeight: 900 }}>{c.kid.toUpperCase()}</span>
               <br />
-              <span style={{ fontSize: '6.5pt' }}>{c.kind === 'run' ? `${c.carrier} runs ${c.withWings ? 'with' : 'away from'} the wings` : c.kind === 'pass' ? 'pass' : 'freeze'}</span>
+              <span style={{ fontSize: '6.5pt' }}>{c.kind === 'run' ? `${c.carrier} carries${c.withWings ? '' : ', away side'}` : c.kind === 'pass' ? 'pass' : 'freeze'}</span>
             </span>
           </div>
         ))}
@@ -184,20 +202,21 @@ function TextCard() {
 }
 
 function PictureCard({ side }: { side: Side }) {
+  const sys = useSys();
   return (
     <div style={CARD}>
       <div style={{ fontWeight: 900, fontSize: '8.5pt', borderBottom: '1.5px solid #000', display: 'flex', justifyContent: 'space-between' }}>
-        <span>BEAST · PICTURES</span>
+        <span>{sys.short} · PICTURES</span>
         {sideChip(side, `${COLORS[side].word.toUpperCase()} SIDE`)}
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gridTemplateRows: 'repeat(2, 1fr)', flex: 1, gap: 2, marginTop: 2 }}>
-        {CONCEPTS.map((c) => (
+        {sys.concepts.map((c) => (
           <div key={c.key} style={{ border: '0.5px solid #999', display: 'flex', flexDirection: 'column', minHeight: 0 }}>
             <div style={{ fontSize: '6.5pt', fontWeight: 900, textAlign: 'center' }}>
               {c.n} {c.kid.toUpperCase()}
             </div>
             <div style={{ flex: 1, minHeight: 0 }}>
-              <PlayThumb diagram={beastPlay(side, c.key)!.diagram} aspect={1.05} fit={BEAST_FIT} />
+              <PlayThumb diagram={sys.play(side, c.key)!.diagram} aspect={1.05} fit={sys.fit} />
             </div>
           </div>
         ))}
@@ -207,11 +226,12 @@ function PictureCard({ side }: { side: Side }) {
 }
 
 function CoachCard() {
+  const sys = useSys();
   return (
     <div style={CARD}>
       <div style={{ fontWeight: 900, fontSize: '8.5pt', borderBottom: '1.5px solid #000' }}>COACH · CHECK WITH ME</div>
       <div style={{ fontSize: '7pt', flex: 1 }}>
-        {CONCEPTS.map((c) => (
+        {sys.concepts.map((c) => (
           <div key={c.key}>
             <b>
               {c.n} {c.kid}
@@ -223,7 +243,7 @@ function CoachCard() {
           <b>Days:</b> Monday = first GO · Saturday = SET · Friday = fake count, second GO
         </div>
         <div>
-          <b>Freeze:</b> Ice. <b>Cadence:</b> {CADENCE}
+          <b>Freeze:</b> Ice and Friday. <b>Cadence:</b> {sys.cadence}
         </div>
       </div>
     </div>
@@ -243,7 +263,7 @@ function Wristbands() {
         </div>
       </Page>
       <Page pad={0.4}>
-        <TitleBar title="WRISTBANDS: PICTURES" right="For 1 and the coaches. Red on the left, Yellow on the right." />
+        <TitleBar title="WRISTBANDS: PICTURES" right="For the QB and the coaches. Red on the left, Yellow on the right." />
         <div style={grid}>
           {Array.from({ length: 3 }, (_, i) => [<PictureCard key={`r${i}`} side="right" />, <PictureCard key={`l${i}`} side="left" />])}
           <CoachCard />
@@ -257,8 +277,9 @@ function Wristbands() {
 // ---------------------------------------------------------------- player cards
 
 function JobCard({ label }: { label: string }) {
-  const pos = POSITIONS.find((p) => p.label === label) ?? POSITIONS.find((p) => (label.endsWith('G') ? p.label === 'G' : label.endsWith('T') ? p.label === 'T' : false));
-  const rows = jobsFor(label);
+  const sys = useSys();
+  const pos = sys.positions.find((p) => p.label === label) ?? sys.positions.find((p) => (label.endsWith('G') ? p.label === 'G' : label.endsWith('T') ? p.label === 'T' : false));
+  const rows = sys.jobsFor(label);
   return (
     <div style={{ border: '1.5px dashed #000', padding: '0.1in', breakInside: 'avoid', height: '4.85in', overflow: 'hidden' }}>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, borderBottom: '1.5px solid #000', marginBottom: 3 }}>
@@ -288,12 +309,14 @@ function JobCard({ label }: { label: string }) {
 }
 
 function PlayerCards() {
-  const pages = [['1', '2'], ['3', '4'], ['Y', 'F'], ['LT', 'LG'], ['C', 'RG'], ['RT']];
+  const sys = useSys();
+  const pages: string[][] = [];
+  for (let i = 0; i < sys.jobLabels.length; i += 2) pages.push(sys.jobLabels.slice(i, i + 2));
   return (
     <>
       {pages.map((labels) => (
         <Page key={labels.join()} pad={0.4}>
-          <TitleBar title="BEAST · MY JOBS" right="Wing side = the side the Y and the wings line up on. GOD = Gap, On, Down." />
+          <TitleBar title={`${sys.short} · MY JOBS`} right={`"${sys.sideWords.wing} side" = the color side. ${sys.blocking.rules.map((r) => r.title).join(" · ")}`} />
           <div style={{ display: 'grid', gridTemplateRows: `repeat(${labels.length}, auto)`, gap: 8 }}>
             {labels.map((l) => (
               <JobCard key={l} label={l} />
@@ -308,12 +331,13 @@ function PlayerCards() {
 // ---------------------------------------------------------------- install plan
 
 export function Install() {
-  const chunks = [INSTALL.slice(0, 4), INSTALL.slice(4, 8), INSTALL.slice(8)];
+  const sys = useSys();
+  const chunks = [sys.install.slice(0, 4), sys.install.slice(4, 8), sys.install.slice(8)];
   return (
     <>
       {chunks.map((weeks, i) => (
         <Page key={i} pad={0.4}>
-          <TitleBar title={`BEAST · INSTALL PLAN (${i + 1}/${chunks.length})`} right="Do not add the next week until the checks pass." />
+          <TitleBar title={`${sys.short} · INSTALL PLAN (${i + 1}/${chunks.length})`} right="Do not add the next week until the checks pass." />
           <div style={{ display: 'grid', gridTemplateRows: 'repeat(4, 1fr)', gap: 6, flex: 1, minHeight: 0 }}>
             {weeks.map((w) => (
               <div key={w.week} style={{ border: '1.5px solid #000', padding: '0.06in', overflow: 'hidden', fontSize: '8.5pt' }}>
@@ -322,17 +346,17 @@ export function Install() {
                   <span style={{ fontWeight: 800 }}>{w.title}</span>
                   {w.adds.map((k) => (
                     <span key={k} style={{ background: '#000', color: '#fff', padding: '0 4px', fontWeight: 800 }}>
-                      {conceptByKey.get(k)!.n} {conceptByKey.get(k)!.kid}
+                      {sys.conceptByKey.get(k)!.n} {sys.conceptByKey.get(k)!.kid}
                     </span>
                   ))}
                   {w.formations.map((k) => (
                     <span key={k} style={{ border: '1px solid #000', padding: '0 4px' }}>
-                      {FORMATION_SPECS.find((f) => f.key === k)!.name}
+                      {sys.formationSpecs.find((f) => f.key === k)!.name}
                     </span>
                   ))}
                 </div>
                 <div><b>Line:</b> {w.line}</div>
-                <div><b>Backs and ends:</b> {w.skill}</div>
+                <div><b>Backs and receivers:</b> {w.skill}</div>
                 <div><b>Calling:</b> {w.calling}</div>
                 <div><b>Drills:</b> {w.drills.join(' · ')}</div>
                 <div>
@@ -351,16 +375,17 @@ export function Install() {
 // ---------------------------------------------------------------- teaching sheet
 
 function Teach() {
+  const sys = useSys();
   return (
     <Page pad={0.4}>
-      <TitleBar title="BEAST OFFENSE · HOW WE TALK" right="2nd & 3rd grade · 2026" />
+      <TitleBar title={`${sys.title.toUpperCase()} · HOW WE TALK`} right={sys.subtitle} />
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, fontSize: '9.5pt' }}>
         <div>
           <h3 style={{ fontSize: '12pt', fontWeight: 900 }}>1. Color = side</h3>
-          <p>{sideChip('right', 'RED')} Y and the wings line up on the RIGHT.</p>
-          <p>{sideChip('left', 'YELLOW')} Y and the wings line up on the LEFT.</p>
+          <p>{sideChip('right', 'RED')} {sys.colorMeans.right}.</p>
+          <p>{sideChip('left', 'YELLOW')} {sys.colorMeans.left}.</p>
           <h3 style={{ fontSize: '12pt', fontWeight: 900, marginTop: 6 }}>2. Number = the play</h3>
-          <p>&ldquo;Red 2&rdquo; = Hammer to the Red side. Look at your wristband.</p>
+          <p>&ldquo;Red 2&rdquo; = {sys.concepts[1].kid} to the Red side. Look at your wristband.</p>
           <h3 style={{ fontSize: '12pt', fontWeight: 900, marginTop: 6 }}>3. Play number = who and where</h3>
           <p>First number = who gets the ball. Second number = the hole. Even right, odd left.</p>
         </div>
@@ -368,27 +393,28 @@ function Teach() {
           <HoleChart width={340} />
         </div>
       </div>
-      <div style={{ border: '2px solid #000', padding: 6, margin: '8px 0' }}>
-        <div style={{ fontSize: '13pt', fontWeight: 900 }}>LINEMEN: GOD</div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
-          {GOD.steps.map((s) => (
-            <div key={s.letter}>
-              <div style={{ fontSize: '28pt', fontWeight: 900, lineHeight: 1 }}>{s.letter}</div>
-              <div style={{ fontWeight: 800 }}>{s.word}</div>
-              <div>{s.ask}</div>
-              <div style={{ fontWeight: 700 }}>{s.then}</div>
-            </div>
-          ))}
+      {sys.blocking.rules.map((rule) => (
+        <div key={rule.key} style={{ border: '2px solid #000', padding: 5, margin: '6px 0' }}>
+          <div style={{ fontSize: '12pt', fontWeight: 900 }}>
+            LINEMEN: {rule.title.toUpperCase()} <span style={{ fontSize: '8.5pt', fontWeight: 600 }}>({rule.usedOn})</span>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: `repeat(${rule.steps.length}, 1fr)`, gap: 8 }}>
+            {rule.steps.map((st) => (
+              <div key={st.letter + st.word}>
+                <div style={{ fontSize: '22pt', fontWeight: 900, lineHeight: 1 }}>{st.letter}</div>
+                <div style={{ fontWeight: 800 }}>{st.word}</div>
+                {st.ask && <div>{st.ask}</div>}
+                <div style={{ fontWeight: 700 }}>{st.then}</div>
+              </div>
+            ))}
+          </div>
         </div>
-        <div style={{ marginTop: 4 }}>{GOD.inside}</div>
-        <div style={{ marginTop: 2 }}>
-          <b>On a pass:</b> {GOD.pass.map((s) => `${s.letter} = ${s.word}`).join(' · ')}.
-        </div>
-      </div>
+      ))}
+      <div style={{ fontSize: '9pt', marginBottom: 6 }}>{sys.blocking.inside}</div>
       <div style={{ display: 'grid', gridTemplateColumns: '1.3fr 1fr', gap: 10, fontSize: '8.5pt' }}>
         <div>
           <div style={{ fontWeight: 900, fontSize: '11pt' }}>WHO IS WHO</div>
-          {POSITIONS.map((p) => (
+          {sys.positions.map((p) => (
             <div key={p.label}>
               <b>
                 {p.label} {p.kid}:
@@ -399,7 +425,7 @@ function Teach() {
         </div>
         <div>
           <div style={{ fontWeight: 900, fontSize: '11pt' }}>THE 10 PLAYS</div>
-          {CONCEPTS.map((c) => (
+          {sys.concepts.map((c) => (
             <div key={c.key}>
               <b>
                 {c.n} {c.kid}:
@@ -408,14 +434,14 @@ function Teach() {
             </div>
           ))}
           <div style={{ fontWeight: 900, fontSize: '11pt', marginTop: 6 }}>READING A PICTURE</div>
-          {LEGEND.map((l) => (
+          {sys.legend.map((l) => (
             <div key={l.mark}>
               <b>{l.mark}:</b> {l.means}
             </div>
           ))}
           <div style={{ fontWeight: 900, fontSize: '11pt', marginTop: 6 }}>SNAP COUNT</div>
-          <div>{CADENCE}</div>
-          {DAYS.map((d) => (
+          <div>{sys.cadence}</div>
+          {sys.days.map((d) => (
             <div key={d.day}>
               <b>{d.day}:</b> {d.means}
             </div>
@@ -428,17 +454,19 @@ function Teach() {
 
 // ---------------------------------------------------------------- page
 
-export function BeastPrint({ sheet }: { sheet: BeastSheet }) {
+export function YouthPrint({ id, sheet }: { id: string; sheet: YouthSheet }) {
+  const sys = youthSystem(id)!;
   const landscape = LANDSCAPE.includes(sheet);
   return (
+    <SysContext.Provider value={sys}>
     <div style={{ background: '#e5e5e5', minHeight: '100vh', paddingBottom: '0.5in' }}>
       <style>{`@media print { @page { size: letter ${landscape ? 'landscape' : 'portrait'}; margin: 0; } }`}</style>
       <div className="no-print" style={{ display: 'flex', gap: 8, alignItems: 'center', padding: '8px 12px', background: '#000', color: '#fff', marginBottom: 12, flexWrap: 'wrap' }}>
-        <Link href="/systems/beast-2026#print" style={{ fontWeight: 700 }}>
-          &larr; Beast
+        <Link href={`/systems/${sys.id}#print`} style={{ fontWeight: 700 }}>
+          &larr; {sys.title}
         </Link>
-        {(Object.keys(SHEET_NAMES) as BeastSheet[]).map((s) => (
-          <Link key={s} href={`/systems/beast-2026/print?sheet=${s}`} style={{ padding: '2px 8px', borderRadius: 4, background: s === sheet ? '#fff' : 'transparent', color: s === sheet ? '#000' : '#ddd' }}>
+        {(Object.keys(SHEET_NAMES) as YouthSheet[]).map((s) => (
+          <Link key={s} href={`/systems/${sys.id}/print?sheet=${s}`} style={{ padding: '2px 8px', borderRadius: 4, background: s === sheet ? '#fff' : 'transparent', color: s === sheet ? '#000' : '#ddd' }}>
             {SHEET_NAMES[s]}
           </Link>
         ))}
@@ -452,5 +480,6 @@ export function BeastPrint({ sheet }: { sheet: BeastSheet }) {
       {sheet === 'install' && <Install />}
       {sheet === 'teach' && <Teach />}
     </div>
+    </SysContext.Provider>
   );
 }

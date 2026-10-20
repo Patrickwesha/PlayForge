@@ -1,18 +1,19 @@
 import Link from 'next/link';
 import { EAGLES_SYSTEM_ID } from '@/systems/eagles/system';
-import { BEAST_SYSTEM_ID } from '@/systems/beast/content';
+import { YOUTH_SYSTEMS, youthSystem } from '@/systems/youth/registry';
 import { SystemClient } from './SystemClient';
-import { BeastClient } from './BeastClient';
+import { YouthClient } from './YouthClient';
 
 export async function generateMetadata(props: { params: Promise<{ id: string }> }) {
   const { id } = await props.params;
-  if (id === BEAST_SYSTEM_ID) return { title: 'Beast Offense 2026 - PlayForge' };
+  const youth = youthSystem(id);
+  if (youth) return { title: `${youth.title} - PlayForge` };
   return { title: id === EAGLES_SYSTEM_ID ? 'Eagles 2026 system - PlayForge' : 'System - PlayForge' };
 }
 
 export default async function SystemPage(props: { params: Promise<{ id: string }> }) {
   const { id } = await props.params;
-  if (id === BEAST_SYSTEM_ID) return <BeastClient />;
+  if (youthSystem(id)) return <YouthClient id={id} />;
   if (id !== EAGLES_SYSTEM_ID)
     return (
       <main className="max-w-2xl mx-auto p-8 space-y-3">
@@ -20,9 +21,11 @@ export default async function SystemPage(props: { params: Promise<{ id: string }
         <Link className="underline block" href={`/systems/${EAGLES_SYSTEM_ID}`}>
           Open the Eagles 2026 system
         </Link>
-        <Link className="underline block" href={`/systems/${BEAST_SYSTEM_ID}`}>
-          Open the Beast Offense 2026
-        </Link>
+        {Object.values(YOUTH_SYSTEMS).map((s) => (
+          <Link key={s.id} className="underline block" href={`/systems/${s.id}`}>
+            Open {s.title}
+          </Link>
+        ))}
       </main>
     );
   return <SystemClient />;

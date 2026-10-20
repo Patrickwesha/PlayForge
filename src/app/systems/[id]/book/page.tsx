@@ -1,11 +1,14 @@
 import { notFound } from 'next/navigation';
-import { BEAST_SYSTEM_ID } from '@/systems/beast/content';
-import { BeastBook } from './BeastBook';
+import { youthSystem } from '@/systems/youth/registry';
+import { YouthBook } from './YouthBook';
 
-export const metadata = { title: 'Beast Offense 2026 playbook - PlayForge' };
-
-export default async function BeastBookPage(props: { params: Promise<{ id: string }> }) {
+export async function generateMetadata(props: { params: Promise<{ id: string }> }) {
   const { id } = await props.params;
-  if (id !== BEAST_SYSTEM_ID) notFound();
-  return <BeastBook />;
+  return { title: `${youthSystem(id)?.title ?? 'System'} playbook - PlayForge` };
+}
+
+export default async function YouthBookPage(props: { params: Promise<{ id: string }> }) {
+  const { id } = await props.params;
+  if (!youthSystem(id)) notFound();
+  return <YouthBook id={id} />;
 }

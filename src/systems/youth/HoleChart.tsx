@@ -1,4 +1,4 @@
-import { COLORS, HOLES } from './content';
+import { COLORS, HOLES } from './types';
 
 /**
  * The line with its gap letters and hole numbers (odd left, even right). Plain SVG with inline attributes so
@@ -44,7 +44,7 @@ export function HoleChart({ width = 560 }: { width?: number }) {
       {HOLES.numbers.right.map((n, i) => (
         <text key={`r${n}`} x={rightHoles[i]} y={lineY + 52} textAnchor="middle" fontFamily="Arial" fontSize={22} fontWeight={700}>{n}</text>
       ))}
-      <text x={cx} y={H - 10} textAnchor="middle" fontFamily="Arial" fontSize={12} fill="#444">14 = 1 carries, hole 4 (right guard) · 23 = 2 carries, hole 3 (left of the center)</text>
+      <text x={cx} y={H - 10} textAnchor="middle" fontFamily="Arial" fontSize={12} fill="#444">First number = who carries. Second number = the hole. 28 = 2 carries, hole 8 (outside right).</text>
     </svg>
   );
 }

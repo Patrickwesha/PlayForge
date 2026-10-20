@@ -15,44 +15,10 @@ export const BEAST_ID_PREFIX = 'beast26-';
 export const BEAST_TAG = 'beast-2026';
 export const BEAST_PLAYBOOK_ID = 'beast26-playbook';
 
-export type Side = 'right' | 'left';
+import { COLORS, HOLES, type Concept, type InstallWeek, type SheetEntry, type CallSection, type Side } from '@/systems/youth/types';
 
-export const COLORS = {
-  right: { word: 'Red', hex: '#D0021B', ink: '#ffffff', formation: 'Beast Right' },
-  left: { word: 'Yellow', hex: '#FFD60A', ink: '#000000', formation: 'Beast Left' },
-} as const;
-
-export type ConceptKind = 'run' | 'pass' | 'special';
-
-export type Concept = {
-  /** Wristband number. Same number both sides; the color picks the side. */
-  n: number;
-  key: string;
-  /** What the kids call it. Every first letter is different so the city code works. */
-  kid: string;
-  /** The Call Sheet V3 word. */
-  coach: string;
-  kind: ConceptKind;
-  /** Play numbers from my Beast sheets. 0 = no number (passes and Ice). */
-  numbers: Record<Side, number>;
-  /** Who gets the ball. */
-  carrier: string;
-  /** Where it goes, in kid words. */
-  where: string;
-  /** true = the ball goes the way the Y and the wings line up; false = it goes away from them (the trick plays). */
-  withWings: boolean;
-  /** One line a 7 year old can say back. */
-  kidSays: string;
-  /** Hand signal from the sideline. */
-  signal: string;
-  /** Check-with-me words. Any word that starts with the same letter means the same play. */
-  cities: string[];
-  /** Call Sheet V3 city, for reference while the coaches switch over. */
-  oldCity?: string;
-  /** Install week (see INSTALL). */
-  week: number;
-  coachNote: string;
-};
+export { COLORS, HOLES };
+export type { Concept, InstallWeek, SheetEntry, Side };
 
 export const CONCEPTS: Concept[] = [
   {
@@ -98,7 +64,7 @@ export const CONCEPTS: Concept[] = [
     coachNote: 'Two-man read, high to low. F, 2 and 3 stay in and protect. If both are covered, 1 tucks and runs.',
   },
   {
-    n: 7, key: 'magic', kid: 'Magic', coach: 'Sweep Pass', kind: 'pass', numbers: { right: 0, left: 0 },
+    n: 7, key: 'magic', kid: 'Magic', coach: 'Sweep Pass', kind: 'pass', playAction: true, numbers: { right: 0, left: 0 },
     carrier: 'Y or F', where: 'Fake Rocket, throw to Y on the corner', withWings: true,
     kidSays: 'It looks exactly like Rocket. Then poof, 1 throws it.',
     signal: 'Wave a magic wand', cities: ['Mesquite', 'Maine'], oldCity: 'Seattle', week: 6,
@@ -175,14 +141,6 @@ export const GOD = {
   ],
 };
 
-/** Hole numbers and gap letters, left to right as the offense sees it (Call Sheet + 2024 gap chart). */
-export const HOLES = {
-  rule: 'First number = who gets the ball (1, 2 or 4). Second number = the hole. Even numbers go right, odd numbers go left.',
-  line: ['LT', 'LG', 'C', 'RG', 'RT'],
-  gaps: ['C', 'B', 'A', 'A', 'B', 'C'],
-  numbers: { left: [9, 7, 5, 3, 1], right: [0, 2, 4, 6, 8] },
-};
-
 export const LEGEND = [
   { mark: 'Red line with an arrow', means: 'The ball carrier.' },
   { mark: 'Black line with a T at the end', means: 'A block. The T is where you hit him.' },
@@ -191,21 +149,6 @@ export const LEGEND = [
   { mark: 'Dashed line', means: 'A fake, or where the ball is thrown.' },
   { mark: 'Square', means: 'The center.' },
 ];
-
-export type InstallWeek = {
-  week: number;
-  title: string;
-  /** Concept keys added this week. */
-  adds: string[];
-  /** Formations added this week. */
-  formations: string[];
-  line: string;
-  skill: string;
-  calling: string;
-  drills: string[];
-  /** Kids should be able to do or say these before you add the next week. */
-  readyWhen: string[];
-};
 
 /**
  * Comfort-gated: a week's plays are not added until the team passes the last week's "ready when" checks.
@@ -311,8 +254,7 @@ export const INSTALL: InstallWeek[] = [
 ];
 
 /** Call Sheet V3 sections, rewritten with the kid names. Entries are [side, concept key]. */
-export type SheetEntry = [Side, string];
-export const CALL_SHEET: { id: string; title: string; color: string; ink: string; rows: SheetEntry[] }[] = [
+export const CALL_SHEET: CallSection[] = [
   { id: 'first10', title: 'First 10', color: '#000000', ink: '#ffffff', rows: [['right', 'hammer'], ['right', 'magic'], ['right', 'rocket'], ['right', 'elevator'], ['right', 'crossover'], ['right', 'limo'], ['right', 'pop'], ['right', 'boomerang'], ['right', 'ice'], ['left', 'hammer'], ['left', 'rocket']] },
   { id: 'misdirection', title: 'Misdirection', color: '#D0021B', ink: '#ffffff', rows: [['right', 'crossover'], ['right', 'limo'], ['right', 'boomerang'], ['left', 'limo'], ['left', 'crossover'], ['left', 'boomerang']] },
   { id: 'tempo', title: 'Tempo (no-huddle)', color: '#F28C28', ink: '#ffffff', rows: [['right', 'hammer'], ['right', 'magic'], ['right', 'rocket'], ['right', 'crossover'], ['right', 'pop'], ['left', 'hammer'], ['left', 'rocket']] },

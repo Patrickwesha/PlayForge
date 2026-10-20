@@ -11,6 +11,7 @@ const LINKS: { href: string; label: string }[] = [
   { href: '/playbooks/rams-2022', label: 'Rams 2022' },
   { href: '/systems/eagles-2026', label: 'System' },
   { href: '/systems/beast-2026', label: 'Beast' },
+  { href: '/systems/wco-2026', label: 'West Coast' },
   { href: '/settings', label: 'Settings' },
 ];
 

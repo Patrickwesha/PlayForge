@@ -1,7 +1,7 @@
 /**
  * Render the Beast 2026 plays and formations with the shared renderer, for a visual check.
  *
- *   npm run render:beast
+ *   npm run render:beast              (SYSTEM=wco-2026 npm run render:beast for the West Coast)
  *
  * Output: renders/beast-2026/<id>.png and a contact sheet, renders/beast-2026/sheet.png (gitignored).
  */
@@ -12,9 +12,10 @@ import sharp from 'sharp';
 import { it } from 'vitest';
 import { FORMATION_FIT } from '@/geometry/bounds';
 import { PlayThumb } from '@/render/PlayThumb';
-import { BEAST_FORMATIONS, BEAST_PLAYS } from '@/systems/beast/plays';
+import { YOUTH_SYSTEMS } from '@/systems/youth/registry';
 
-const OUT = path.resolve(import.meta.dirname, '../renders/beast-2026');
+const SYS = YOUTH_SYSTEMS[process.env.SYSTEM ?? 'beast-2026'];
+const OUT = path.resolve(import.meta.dirname, `../renders/${SYS.id}`);
 const W = 900;
 const H = 600;
 
@@ -22,8 +23,8 @@ it('renders the beast pack', async () => {
   mkdirSync(OUT, { recursive: true });
   const tiles: { input: Buffer; left: number; top: number }[] = [];
   const items = [
-    ...BEAST_PLAYS.map((p) => ({ id: p.id, title: `${p.wristband}  ${p.name}`, svg: renderToStaticMarkup(<PlayThumb diagram={p.diagram} aspect={W / H} />) })),
-    ...BEAST_FORMATIONS.map((f) => ({ id: f.id, title: f.name, svg: renderToStaticMarkup(<PlayThumb diagram={{ players: f.players, paths: {}, annotations: {} }} aspect={W / H} fit={FORMATION_FIT} />) })),
+    ...SYS.plays.map((p) => ({ id: p.id, title: `${p.wristband}  ${p.name}`, svg: renderToStaticMarkup(<PlayThumb diagram={p.diagram} aspect={W / H} />) })),
+    ...SYS.formationRows.map((f) => ({ id: f.id, title: f.name, svg: renderToStaticMarkup(<PlayThumb diagram={{ players: f.players, paths: {}, annotations: {} }} aspect={W / H} fit={FORMATION_FIT} />) })),
   ];
   const cols = 4;
   for (const [i, it] of items.entries()) {

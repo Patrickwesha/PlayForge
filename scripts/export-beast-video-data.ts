@@ -8,24 +8,27 @@
  */
 import { writeFileSync } from 'node:fs';
 import { resolvePoints } from '@/geometry/path';
-import { CADENCE, COLORS, CONCEPTS, DAYS, GOD, HOLES, INSTALL, POSITIONS } from '@/systems/beast/content';
-import { BEAST_FORMATIONS, BEAST_PLAYS, FORMATION_SPECS, jobsFor } from '@/systems/beast/plays';
+import { COLORS, HOLES } from '@/systems/youth/types';
+import { YOUTH_SYSTEMS } from '@/systems/youth/registry';
 
-const out = process.argv[2] ?? 'renders/beast-2026/beast-2026.video-data.json';
+// SYSTEM=wco-2026 npx tsx scripts/export-beast-video-data.ts  for the West Coast offense
+const SYS = YOUTH_SYSTEMS[process.env.SYSTEM ?? 'beast-2026'];
+const { cadence: CADENCE, concepts: CONCEPTS, days: DAYS, install: INSTALL, positions: POSITIONS, formationRows: BEAST_FORMATIONS, plays: BEAST_PLAYS, formationSpecs: FORMATION_SPECS, jobsFor, blocking } = SYS;
+const out = process.argv[2] ?? `renders/${SYS.id}/${SYS.id}.video-data.json`;
 const r = (n: number) => Math.round(n * 100) / 100;
 
 const kindOf = (p: { role: string; end: string; line: string; color?: string; primary?: boolean }) =>
   p.role === 'ball' ? 'throw' : p.color === 'red' ? 'ball-carrier' : p.line === 'dashed' ? 'fake' : p.role === 'block' ? (p.end === 'arrow' ? 'pull-lead' : 'block') : p.end === 'dot' ? 'qb-action' : p.primary ? 'route-first-look' : 'route';
 
 const data = {
-  about: 'Beast Offense 2026, 2nd and 3rd grade. Yards: x = 0 at the ball (+ right), y = 0 at the line (+ downfield).',
+  about: `${SYS.title}, ${SYS.subtitle}. Yards: x = 0 at the ball (+ right), y = 0 at the line (+ downfield).`,
   language: {
-    colors: { right: COLORS.right.word, left: COLORS.left.word, rule: 'The color is the side the Y and both wings line up on.' },
+    colors: { right: COLORS.right.word, left: COLORS.left.word, rule: `Red = ${SYS.colorMeans.right}. Yellow = ${SYS.colorMeans.left}.` },
     numbers: HOLES.rule,
     holes: HOLES,
     cadence: CADENCE,
     days: DAYS,
-    god: GOD,
+    blocking,
     positions: POSITIONS,
   },
   formations: FORMATION_SPECS.map((s, i) => ({
@@ -47,7 +50,7 @@ const data = {
     handSignal: c.signal,
     checkWithMeWords: c.cities,
     installWeek: c.week,
-    jobs: Object.fromEntries(['1', '2', '3', '4', 'Y', 'F', 'LT', 'LG', 'C', 'RG', 'RT'].map((l) => {
+    jobs: Object.fromEntries(SYS.jobLabels.map((l) => {
       const j = jobsFor(l).find((x) => x.concept.key === c.key)!;
       return [l, j.yellow ? { red: j.red, yellow: j.yellow } : j.red];
     })),
