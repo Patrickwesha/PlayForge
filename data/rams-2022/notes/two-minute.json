@@ -1,0 +1,250 @@
+{
+  "section": "two-minute",
+  "source": "Rams 2022 (McVay), 24 2 Min",
+  "philosophy": [
+    "Two minute tempo is used at the end of the half and when trailing at the end of the game.",
+    "Personnel is 11 unless told otherwise.",
+    "The count is Turbo. With crowd noise it moves to Center One.",
+    "The sideline gives the first formation and play. With the clock running the QB calls everything after that.",
+    "Any no huddle package (Rollin for example) can be the base.",
+    "The QB tells the line and back the run or protection out loud, then signals the tight end and receivers by hand.",
+    "Know the half, the time left, whether a touchdown or a field goal is needed, and how many timeouts remain. For a field goal the head coach gives the yard line the kicker needs.",
+    "All timeouts come from the sideline.",
+    "Everyone relays the call. Be sure of the calls and signals.",
+    "Move fast without rushing. Nobody needs to make a hero play, just do the job.",
+    "Know the down. The QB never spikes it on fourth down.",
+    "The QB runs only for big yards or to get out of bounds.",
+    "Time beats yards. Do not fight for inches: secure the ball, go down, and get set. Still know when the chains have to move on third and fourth down.",
+    "After the play, put the ball on the inside edge of the hash fast. Never throw it to the official.",
+    "On or outside the numbers, get out of bounds going forward. Going out sideways or backwards does not stop the clock.",
+    "Caught inside the numbers with no way out, turn upfield and get down.",
+    "The clock starts on the whistle, not the snap, after a measurement where the ball stayed in bounds, after an official's timeout for technical reasons, after an offensive penalty in the last minute, and after a booth challenge where the ball stayed in bounds.",
+    "Any ball carrier can give himself up so the offense can call timeout or spike it. Players are told before the play when that applies.",
+    "Backs: a blitz is likely right after the clock stops. The protection job comes first. Run sharp routes, there are yards underneath when the defense protects deep.",
+    "Line: stunts and games are coming. Climb out of piles and get set fast.",
+    "Down-Down Timeout: 6 to 11 seconds left and yards matter. After the catch or run the ball carrier slides feet first, and the sideline calls timeout as soon as he is down.",
+    "Down-Down Clock: 12 to 17 seconds left. Same slide, then everyone sprints to Double Rt Off ready for the Clock call.",
+    "Down-Down Mayday: 18 or more seconds left, running a third down play with no timeouts and no spike available on fourth down. Same slide, then get off the field sideways so the field goal unit can get on."
+  ],
+  "concepts": [
+    {
+      "key": "sideline-plays",
+      "indexTitle": "SIDELINE PLAYS",
+      "pageTitle": "SIDELINE PLAYS",
+      "pages": [
+        8
+      ],
+      "summary": "One sideline shot: Trout Rt 2 Scat Layers X Bench. The X runs a Bench, a deep sideline route at 18 to 20 yards, the F a deep sail at 12 to 15, the H a flat at 3 to 5, and the Z a go at 20 to 25 as the alert. Deep pressure is the alert note on the line.",
+      "progression": "1 X Bench, 2 F deep sail, 3 Y, as best read. The Z go is an alert.",
+      "qb": "Alert the go against deep pressure.",
+      "hb": "Flat at 3 to 5 yards from the Scat release.",
+      "positions": {
+        "X": "Bench at 18 to 20 yards.",
+        "F": "Deep sail, 12 to 15 yards.",
+        "H": "Flat, 3 to 5 yards.",
+        "Z": "Go, alert.",
+        "Y": "Third read, route not labeled."
+      },
+      "protections": [
+        "2 Scat"
+      ],
+      "formations": [
+        "[11] TROUT RT"
+      ],
+      "tags": [
+        "Layers",
+        "Bench"
+      ],
+      "alerts": [
+        "Z go against deep pressure."
+      ]
+    },
+    {
+      "key": "down-down-plays",
+      "indexTitle": "DOWN-DOWN PLAYS",
+      "pageTitle": "DOWN - DOWN PLAYS",
+      "pages": [
+        9
+      ],
+      "summary": "Three plays for the Down-Down situations. Brawlin Spear: a push and widen dagger at 8 yards with a deep dagger at 18 to 20, a slam, a blink alert and a yes/no at 20, with a check wide outlet. Double Rt Close A 300 Scram Lions: three step slants everywhere, split four yards wider to the boundary and two to the field or middle, inside slants from the inside men. Swift Rt Tout Tres 3 Scrabble Samurai: a far cross at 22 to 25, a lick flat at 3 to 5, a rib shallow, a low cross and a widen dagger at 10 to 12.",
+      "progression": "Spear: 1 dagger, 2 dagger pivot, as best read. Lions: 1 and 2 the outside slants, 3 the inside slant. Samurai: 1 widen dagger, 2 far cross, 3 lick flat, 4 rib shallow, 5 low cross, as best read.",
+      "qb": "Three steps on Lions.",
+      "positions": {
+        "Z": "Push and widen dagger at 8 yards (Spear); slant; far cross at 22 to 25 (Samurai).",
+        "F": "Dagger at 18 to 20 (Spear); slant; lick flat at 3 to 5 (Samurai).",
+        "Y": "Slam (Spear); inside slant; rib shallow (Samurai).",
+        "X": "Yes/no at 20 (Spear); slant; low cross at 20 (Samurai).",
+        "H": "Check wide outlet (Spear); inside slant; widen dagger at 10 to 12 (Samurai)."
+      },
+      "protections": [
+        "Brawlin",
+        "300 Scram",
+        "3 Scrabble"
+      ],
+      "formations": [
+        "[11/12] DOUBLE RT CLOSE A",
+        "[11] SWIFT RT TOUT TRES"
+      ],
+      "tags": [
+        "Spear",
+        "Lions",
+        "Samurai",
+        "Close",
+        "A",
+        "Tout",
+        "Tres"
+      ],
+      "alerts": [
+        "Blink alert on Spear.",
+        "Lions splits: plus 4 to the boundary, plus 2 to the field or middle."
+      ]
+    },
+    {
+      "key": "final-plays",
+      "indexTitle": "FINAL PLAYS",
+      "pageTitle": "FINAL PLAYS",
+      "pages": [
+        10,
+        11
+      ],
+      "summary": "Four end of game plays. Gun Bunch Rt Extend Tite 3 Jet Stay Hail Mary: a jumper, a front tip and a back tip, with the QB able to call go. Double Rt Close A 3 Scram 5 Verts (can) Curry: five verticals with a middle clear, routes to the goal line, the back helping left, Y and F making a you/me call against a bump, scramble rules when the play breaks down, and Curry as the quick screen check. West Rt Acer Center Rt: a tight zone play used to burn time and center the ball for a field goal, with the H set at 3 yards opposite the wing behind the guard to clean up any leak, and the QB getting to the line fast, centering and kneeling on a count of one. West Rt Tighter Boot Rt Foul Ball: fourth down with 6 seconds or less, when a punt could be blocked, the QB rolls right and throws the ball away deep along the right sideline while the wide receiver runs a go on a max split and everyone else protects.",
+      "qb": "Hail Mary: go call from the QB. 5 Verts: run the routes to win, scramble rules off schedule. Center Rt: hurry to the line, center the ball, take a knee. Foul Ball: roll right and throw it away deep along the sideline.",
+      "hb": "5 Verts: help left. Center Rt: H aligns at 3 yards opposite the wing behind the guard and secures leakage to the edge.",
+      "positions": {
+        "X": "Front tip (Hail Mary); go to the goal line (5 Verts); go on a max split plus 4 (Foul Ball).",
+        "Z": "Jumper (Hail Mary); go (5 Verts).",
+        "Y": "Front tip (Hail Mary); you/me call with F against a bump (5 Verts).",
+        "F": "Back tip (Hail Mary); middle clear, Save 2, end zone plus 3 (5 Verts).",
+        "OL": "Tight zone on Center Rt. Protection on Foul Ball."
+      },
+      "protections": [
+        "3 Jet Stay",
+        "3 Scram",
+        "Boot Rt"
+      ],
+      "formations": [
+        "[11] GUN BUNCH RT EXTEND TITE",
+        "[11/01] DOUBLE RT CLOSE A",
+        "[13X] WEST RT ACER",
+        "[13Z] WEST RT TIGHTER"
+      ],
+      "tags": [
+        "Hail Mary",
+        "5 Verts",
+        "Curry",
+        "Center Rt",
+        "Foul Ball",
+        "Extend",
+        "Tite",
+        "Close",
+        "A",
+        "Acer",
+        "Tighter"
+      ],
+      "alerts": [
+        "Center Rt can go right or left.",
+        "Foul Ball is for 6 seconds or less on fourth down."
+      ],
+      "can": "5 Verts can be checked to Curry."
+    },
+    {
+      "key": "victory-sneak",
+      "indexTitle": "VICTORY (SNEAK)",
+      "pageTitle": "VICTORY (SNEAK)",
+      "pages": [
+        12
+      ],
+      "summary": "Victory ends the game on a knee when the downs cover the clock. The snap comes with 2 seconds on the play clock, the QB steps back once and kneels, and 2 to 4 seconds run off. Both backs walk up into the A gaps with their eyes on the exchange, the line wedges and expects contact, and the Z plays deep safety 7 yards behind the QB watching the ball and never moving up. Victory Sneak is for a backed up end of half or game when there is no room to kneel: the QB sneaks through the soft A gap, the backs push the pile, and the Z sits at 5 yards.",
+      "qb": "Snap at 2 seconds on the play clock. Victory: one step back and kneel. Sneak: go through the soft A gap.",
+      "hb": "Both backs up in the A gaps either side of the QB, eyes on the snap. On the Sneak, push the pile.",
+      "positions": {
+        "OL": "Wedge and expect contact.",
+        "Z": "Deep safety behind the QB, 7 yards on Victory and 5 on Victory Sneak. Eyes on the ball, do not move toward the line."
+      },
+      "formations": [
+        "[13Z/12] VICTORY",
+        "[13Z/12] VICTORY SNEAK"
+      ],
+      "tags": [
+        "Sneak"
+      ],
+      "alerts": [
+        "Expect a 2 to 4 second run off per play."
+      ]
+    },
+    {
+      "key": "clock-clock",
+      "indexTitle": "CLOCK-CLOCK",
+      "pageTitle": "CLOCK, CLOCK",
+      "pages": [
+        13
+      ],
+      "summary": "Spike to stop the clock when giving up a down is worth it. The QB shouts Clock Clock over and over, everyone sprints to the ball and sets in a legal formation from Double Rt Off: line shoe to shoe in a two point stance, skill players facing forward, outside receivers on the ball and inside receivers off.",
+      "qb": "Yell Clock Clock repeatedly, get set, spike it.",
+      "positions": {
+        "OL": "Shoe to shoe, two point stance.",
+        "X": "On the ball.",
+        "Z": "On the ball.",
+        "Y": "Off the ball.",
+        "F": "Off the ball."
+      },
+      "formations": [
+        "[11] DOUBLE RT OFF"
+      ]
+    },
+    {
+      "key": "911-sticky",
+      "indexTitle": "911 / STICKY",
+      "pageTitle": "911 / STICKY",
+      "pages": [
+        14
+      ],
+      "summary": "911 is the last play with the clock running, no timeouts and no time to spike: Double Rt Off 3 Jet Aggie on Turbo. Three seams bend at 10 to 12 yards against two safeties and break to open grass, the outside men run go routes on a max split, and releases and spacing decide it. Aggie is the 2x2 name, Dancer the 3x1. Sticky is for beating a challenge flag: Snug Rt 300 Jet X and Z Stick Thru on Set Hut, sticks at 5 yards, flats at 2 to 3, and a check thru outlet at 3. For a shot in that spot the call is Swoosh Swoosh, Snug Rt 3 Jet Swoosh, with the same mechanics.",
+      "qb": "911 on Turbo. Sticky on Set Hut. Swoosh Swoosh for the shot.",
+      "hb": "Sticky: check thru and outlet at 3 yards.",
+      "positions": {
+        "X": "Go on a max split plus 4 (911); Stick at 5 (Sticky).",
+        "Z": "Go on a max split plus 4 (911); Stick at 5 (Sticky).",
+        "Y": "Seam, bend at 10 to 12 (911); flat at 2 to 3 (Sticky).",
+        "F": "Seam, bend at 10 to 12 (911); flat at 2 to 3 (Sticky).",
+        "H": "Seam (911); check thru outlet (Sticky)."
+      },
+      "protections": [
+        "3 Jet",
+        "300 Jet"
+      ],
+      "formations": [
+        "DOUBLE RT OFF",
+        "SNUG RT"
+      ],
+      "tags": [
+        "Aggie",
+        "Dancer",
+        "Stick Thru",
+        "Swoosh"
+      ],
+      "alerts": [
+        "Against two safeties the seams bend at 10 to 12 yards and break to daylight.",
+        "Aggie is the 2x2 word, Dancer the 3x1."
+      ]
+    },
+    {
+      "key": "omaha-gimme",
+      "indexTitle": "OMAHA GIMME",
+      "pageTitle": "OMAHA GIMME",
+      "pages": [
+        16
+      ],
+      "summary": "With 5 to 10 seconds left and a shot play called, the QB signals Omaha to the outside receiver when he has free access. That receiver runs a 5 yard Omaha, catches it and gets out of bounds with enough time left for one more play.",
+      "qb": "Signal Omaha to the outside receiver against free access.",
+      "positions": {
+        "X": "Omaha at 5 yards when signaled, then out of bounds.",
+        "Z": "Omaha at 5 yards when signaled, then out of bounds."
+      },
+      "tags": [
+        "Omaha",
+        "Gimme"
+      ]
+    }
+  ]
+}

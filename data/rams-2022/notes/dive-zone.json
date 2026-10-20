@@ -1,0 +1,65 @@
+{
+  "section": "dive-zone",
+  "source": "Rams 2022 (McVay), 10 Gun Only Dive Zone / Zone Read",
+  "concepts": [
+    {
+      "key": "31-30-wanda",
+      "indexTitle": "(11) (2*2/1*3) 31-30 WANDA (SKI) (SOLID) (ALSTOTT/DICKERSON) (CAN) R/P",
+      "pages": [5, 6],
+      "summary": "One-back dive zone from the gun, run to the weak side. Alstott and Dickerson are the one-word names for the call on the cards. Gun only.",
+      "qb": "Toes at 5 yards. Tight zone gun footwork, step out of the back's lane and sell the keeper fake. The game plan may call for a pass set instead.",
+      "hb": "Line up with the inside foot on the guard's outside foot. Open lead step and track the backside A gap.",
+      "criteria": "Check it against slot pressure.",
+      "positions": {
+        "X": "On Solid the backside receiver has no insert job. On Ski he skates and inserts.",
+        "Y": "Labeled on the end man with a B, Rake, Single (Lawn), Mob or Tite Double call depending on the front.",
+        "F": "Labeled Man Over on the cards, so he blocks the man over him on the perimeter."
+      },
+      "tags": ["Ski", "Solid", "Alstott", "Dickerson", "Can", "R/P"],
+      "personnel": ["11"],
+      "alerts": [
+        "Solid: the backside receiver does not carry insert rules.",
+        "Ski: skate with an insert.",
+        "Several cards show a Drive call on the backside against Over fronts."
+      ]
+    },
+    {
+      "key": "31-30-polar",
+      "indexTitle": "(11) (2*2) 31-30 POLAR (CAN) R/P",
+      "pages": [7, 8],
+      "summary": "One-back dive zone read from the gun, aimed at the open side. The QB reads the end man on the line. The tight end away from the point of attack picks the best release to get to support: arc over a 6 technique, go through against a 9 technique.",
+      "qb": "Heels at 5 yards. Reach and ride the back, and be ready to pull and accelerate off the disconnect.",
+      "hb": "Line up with the inside foot on the guard's outside foot. Open lead step and track the backside A gap.",
+      "criteria": "Check it against slot pressure.",
+      "positions": {
+        "QB": "Reads the end man on the line of scrimmage.",
+        "Y": "Away from the point. Best release for the support player: arc versus a 6 technique, through versus a 9 technique.",
+        "X": "Labeled Block Corner on most cards.",
+        "F": "Labeled Man Over on the cards."
+      },
+      "tags": ["Can", "R/P"],
+      "personnel": ["11"],
+      "alerts": [
+        "The cards carry Drive, Single (Lawn), Single (Rake), Mob, A and B calls on the line depending on the front."
+      ]
+    },
+    {
+      "key": "31-30-wanda-read",
+      "indexTitle": "(11) (1*3 OPEN/3*1) 31-30 (30-31) WANDA READ (CAN) R/P",
+      "pages": [9, 10],
+      "summary": "One-back dive zone read from the gun at an open side. Both edges are open and there is no tight end to release on the backside. The QB reads the end man on the line.",
+      "qb": "Heels at 5 yards. Reach and ride the back, and be ready to pull and accelerate off the disconnect.",
+      "hb": "Line up with the inside foot on the guard's outside foot. Open lead step and track the backside A gap.",
+      "criteria": "Check it against any outside pressure.",
+      "positions": {
+        "QB": "Reads the end man on the line of scrimmage."
+      },
+      "tags": ["Can", "R/P"],
+      "personnel": ["11"],
+      "alerts": [
+        "Perimeter blocks are 4-5 Man on the open side and 4-5 MDM on the other side on the cards.",
+        "Line calls on the cards include Mob, Single (Lawn), Rake, Drive, Tite Double, A and B."
+      ]
+    }
+  ]
+}

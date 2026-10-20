@@ -2,7 +2,7 @@ import Dexie, { type EntityTable } from 'dexie';
 import type { Formation, Play, Playbook, Snap } from '@/model/types';
 import { SEED_TIME, itemKey } from '@/model/seedRules';
 import type { OutboxRow, TombstoneRow } from '@/sync/types';
-import { DEFENSE_FORMATIONS, DEMO_PLAYS, EAGLES_2026_FORMATIONS, EAGLES_2026_FORMATION_ID_PREFIX, EAGLES_2026_REVISION, EAGLES_2026_SNAPS, EAGLES_2026_SNAP_ID_PREFIX, OFFENSE_FORMATIONS, PACKERS_2019_FORMATIONS, PACKERS_2019_ID_PREFIX, PACKERS_2019_PLAYS, PACKERS_2019_PLAYS_REVISION, PACKERS_2019_PLAY_ID_PREFIX, PACKERS_2019_REVISION } from '@/seeds';
+import { DEFENSE_FORMATIONS, DEMO_PLAYS, EAGLES_2026_FORMATIONS, EAGLES_2026_FORMATION_ID_PREFIX, EAGLES_2026_REVISION, EAGLES_2026_SNAPS, EAGLES_2026_SNAP_ID_PREFIX, OFFENSE_FORMATIONS, PACKERS_2019_FORMATIONS, PACKERS_2019_ID_PREFIX, PACKERS_2019_PLAYS, PACKERS_2019_PLAYS_REVISION, PACKERS_2019_PLAY_ID_PREFIX, PACKERS_2019_REVISION, RAMS_FRONTS } from '@/seeds';
 
 export type SettingRow = { key: string; value: unknown };
 
@@ -39,7 +39,7 @@ export class PlayForgeDB extends Dexie {
 
 export const DEMO_PLAYBOOK_ID = 'seed-playbook-beast';
 /** Bump when built-in formations or demo plays change; untouched seed rows are refreshed on open. */
-export const SEED_VERSION = 5;
+export const SEED_VERSION = 6;
 /**
  * 2026-10-03: the charted Eagles formations were rebuilt (frame-by-frame Week 1, system names, landmark
  * alignment) and the copies made by earlier chart imports were retired at the owner's request. A chart
@@ -48,7 +48,7 @@ export const SEED_VERSION = 5;
 const CHART_RESET = '2026-10-04T03:00:00.000Z';
 /** What the database records as seeded. The pack revision is a content hash, so re-running the formation import refreshes open databases without a manual bump. */
 export const SEED_STAMP = `${SEED_VERSION}:${PACKERS_2019_REVISION}:${PACKERS_2019_PLAYS_REVISION}:${EAGLES_2026_REVISION}`;
-const SEED_FORMATIONS = [...OFFENSE_FORMATIONS, ...DEFENSE_FORMATIONS, ...PACKERS_2019_FORMATIONS, ...EAGLES_2026_FORMATIONS];
+const SEED_FORMATIONS = [...OFFENSE_FORMATIONS, ...DEFENSE_FORMATIONS, ...RAMS_FRONTS, ...PACKERS_2019_FORMATIONS, ...EAGLES_2026_FORMATIONS];
 /**
  * No built-in plays: the library holds only plays made in the editor or imported on request. The demo
  * plays and the Green Bay install plays that older versions seeded are removed below when untouched.

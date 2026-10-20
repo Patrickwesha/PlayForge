@@ -1,0 +1,124 @@
+{
+  "section": "gun-mid-zone",
+  "source": "Rams 2022 (McVay), 08 Gun Only Mid Zone",
+  "concepts": [
+    {
+      "key": "37-36-sponge",
+      "indexTitle": "(11) (3*1/1*3 OPEN) 37-36 SPONGE (CAN) R/P",
+      "pages": [
+        5
+      ],
+      "summary": "Gun Wash, which is Wanda Push with a Bubble attached. Offset gun mid zone to the open side with the bubble as a built in answer. The line accounts for four down and two backers in the box and alerts a Push call to a free safety.",
+      "qb": "Toes at five yards. Kick back and shuffle to clear the back's path, then carry out the keeper fake. The game plan may turn this into a pass set.",
+      "hb": "Inside leg on the guard's outside leg. Open with a lateral step and aim for the B gap.",
+      "criteria": "Can vs play side pressure or a four count.",
+      "positions": {
+        "OL": "Box count with the Push call to the free safety. Combinations shown: B/Money, Single, Money. One diagram marks the backside tackle Sift."
+      },
+      "tags": [
+        "Sponge",
+        "Push",
+        "Bubble",
+        "Bengal",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "11"
+      ],
+      "alerts": [
+        "Every diagram carries the bubble.",
+        "One diagram is tagged Bengal."
+      ],
+      "can": "Vs play side pressure or a four count."
+    },
+    {
+      "key": "37-36-gain",
+      "indexTitle": "(11) (2*2) 37-36 GAIN (CAN) R/P",
+      "pages": [
+        6
+      ],
+      "summary": "Gun Wash (Wanda Push) to the open side. Gain tells the line a pre-snap motion is coming that does not change the passing strength. The line accounts for four down and two backers in the box and alerts a Push call aimed at a down safety.",
+      "qb": "Toes at five yards. Kick back and shuffle to clear the back's path, then carry out the keeper fake. The game plan may turn this into a pass set.",
+      "hb": "Inside leg on the guard's outside leg. Open with a lateral step and aim for the B gap.",
+      "criteria": "Can vs play side pressure.",
+      "positions": {
+        "OL": "Box count with the Push call aimed at a down safety. Combinations shown: Single, B/Money."
+      },
+      "tags": [
+        "Gain",
+        "Push",
+        "Bubble",
+        "Bolt",
+        "Orbit",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "11"
+      ],
+      "alerts": [
+        "The motion on Gain does not change passing strength.",
+        "Every diagram carries the bubble."
+      ],
+      "can": "Vs play side pressure."
+    },
+    {
+      "key": "37-36-gordon",
+      "indexTitle": "(11) (2*2) 37-36 GORDON (CAN) R/P",
+      "pages": [
+        7
+      ],
+      "summary": "Gun Flash Sift (Wanda Flow) to the open side. Gordon tells the line a pre-snap motion is coming that changes the passing strength. The line targets the second defender counting in from the sideline, with a possible Push to the nickel.",
+      "qb": "Toes at five yards. Kick back and shuffle to clear the back's path, then carry out the keeper fake. The game plan may turn this into a pass set.",
+      "hb": "Inside leg on the guard's outside leg. Open with a lateral step and aim for the B gap.",
+      "criteria": "Can vs play side external pressure.",
+      "positions": {
+        "OL": "Targets the second defender from the sideline. Possible Push to the nickel. Combinations shown: Single, Money."
+      },
+      "tags": [
+        "Gordon",
+        "Push",
+        "Bubble",
+        "Bolt",
+        "Hover",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "11"
+      ],
+      "alerts": [
+        "The motion on Gordon changes passing strength.",
+        "Traveler alert on one diagram.",
+        "Every diagram carries the bubble."
+      ],
+      "can": "Vs play side external pressure."
+    },
+    {
+      "key": "37-36-wagyu",
+      "indexTitle": "(11) (2*2/1*3/3*1) 37-36 WAGYU (CAN) R/P",
+      "pages": [
+        8,
+        9
+      ],
+      "summary": "Gun Wanda to the open side from 2x2, 1x3 or 3x1. Box count run: the line plus the tight end account for four down and two backers.",
+      "qb": "Toes at five yards. Kick back and shuffle to clear the back's path, then carry out the keeper fake. The game plan may turn this into a pass set.",
+      "hb": "Inside leg on the guard's outside leg. Open with a lateral step and aim for the B gap.",
+      "criteria": "Can vs play side external pressure.",
+      "positions": {
+        "OL": "Box count. Combinations shown: Single, Money, Gang, Double."
+      },
+      "tags": [
+        "Wagyu",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "11"
+      ],
+      "alerts": [],
+      "can": "Vs play side external pressure."
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "section": "run-alerts",
+  "source": "Rams 2022 (McVay), 22 Run Alerts",
+  "concepts": [
+    {
+      "key": "3-man-alerts-solutions",
+      "indexTitle": "3 Man Alerts-Solutions",
+      "pageTitle": "3 MAN ALERTS - SOLUTIONS",
+      "pages": [
+        5
+      ],
+      "summary": "Run calls paired with a quick throw to a three receiver side. The inside receiver runs a bubble while the other two block the #1 defender and the most dangerous man, so the QB can pull the ball from the run and throw when the numbers favor it. Z Bolt is a one receiver version where the Z runs a quick bolt route off the Gain run.",
+      "qb": "Read the count to the three man side before the snap. Run the play or throw the alert.",
+      "hb": "Run the called play (Sponge, Sponge Exchange, Gain).",
+      "positions": {
+        "F": "Bubble from the inside spot.",
+        "Y": "Block the most dangerous defender.",
+        "Z": "Block the #1 defender, or run the Bolt when tagged.",
+        "X": "Backside single receiver, no change."
+      },
+      "formations": [
+        "[11] TRIO RT",
+        "[11] SPEED RT TOUT",
+        "[11] DOUBLE RT TOAST Z BOLT"
+      ],
+      "tags": [
+        "Bubble",
+        "Exchange",
+        "Bolt",
+        "Tout",
+        "Toast"
+      ],
+      "alerts": [
+        "37 Sponge with bubble.",
+        "36 Sponge Exchange with bubble.",
+        "36 Gain with Z Bolt."
+      ]
+    },
+    {
+      "key": "2-man-alerts-solutions",
+      "indexTitle": "2 Man Alerts - Solutions",
+      "pageTitle": "2 MAN ALERTS - SOLUTIONS",
+      "pages": [
+        6,
+        7
+      ],
+      "summary": "Quick throws attached to runs when there are two receivers to a side. The options are a bubble from the inside man with the outside man blocking the most dangerous defender, a Stork by the X with the inside man blocking the man over him, a sight adjust hitch against a cat (press) corner, Nows by both outside receivers off Duo, an Insert Shield from a stack where the front man shields the defender, and an X Fade with the #2 running a Now.",
+      "qb": "Check the count and the leverage on the two man side; throw the alert or hand the ball off.",
+      "hb": "Run the called play (36 Sway, 15 Wanda, 16 Sift, 12 Duo).",
+      "positions": {
+        "F": "Bubble on 36 Sway F Bubble.",
+        "X": "Stork, Fade, Now, or sight adjust hitch, by the call.",
+        "Z": "Block the man over, run the Now, or shield on the stack.",
+        "Y": "Sift on 16 Sift."
+      },
+      "formations": [
+        "[11] DOUBLE RT CLAMP",
+        "[11] DOUBLE RT CLOSE",
+        "[11] SOUTH RT CLOSE F SHORT",
+        "[11] STACK RT CLOSE Z SHORT"
+      ],
+      "tags": [
+        "Bubble",
+        "Stork",
+        "Sift",
+        "Nows",
+        "Insert Shield",
+        "Fade",
+        "#2 Now",
+        "Clamp",
+        "Close",
+        "Stack"
+      ],
+      "alerts": [
+        "Sight adjust to a hitch against a cat corner on 16 Sift.",
+        "X Fade carries a #2 Now with it."
+      ]
+    },
+    {
+      "key": "1-man-solutions",
+      "indexTitle": "1 Man Solutions",
+      "pageTitle": "1 MAN SOLUTIONS",
+      "pages": [
+        8,
+        9
+      ],
+      "summary": "Quick throws to a single receiver off a run. The X runs a Stork, a one step Now against a corner playing force or man on, or a Fade with a cutoff landmark. Off 17 Wash from bunch the single receiver sight adjusts to a hitch against a cat corner. The Y sifts and the rest of the picture runs the play.",
+      "qb": "Look at the single receiver's corner before the snap. Throw the Now or Stork when the corner gives it, otherwise run the play.",
+      "hb": "Run the called play (18 Zap, 17 Wash).",
+      "positions": {
+        "X": "Stork, Now (one step), Fade with a cutoff, or sight adjust hitch.",
+        "Y": "Sift on the Wash plays."
+      },
+      "formations": [
+        "[12] WEST RT",
+        "[12] WEST RT ACE",
+        "[11] BUNCH RT KING"
+      ],
+      "tags": [
+        "Stork",
+        "Now",
+        "Fade",
+        "Sight Adjust",
+        "Ace",
+        "King"
+      ],
+      "alerts": [
+        "Now is a one step throw against force or man on.",
+        "Hitch sight adjust against a cat corner on 17 Wash."
+      ]
+    }
+  ]
+}

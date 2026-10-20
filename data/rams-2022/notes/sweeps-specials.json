@@ -1,0 +1,82 @@
+{
+  "section": "sweeps-specials",
+  "source": "Rams 2022 (McVay), 13 Sweeps and Specials",
+  "concepts": [
+    {
+      "key": "allegiant-american",
+      "indexTitle": "(11/12/13) (2*2) (FLIP) ALLEGIANT-AMERICAN (EXCHANGE) (CAN) R/P",
+      "pages": [5, 6],
+      "summary": "Jet sweep to the open side with 16-17 run action going the other way. It brings two blockers to the play side.",
+      "qb": "Snap it when the motion man reaches the B gap. Open to the jet runner, then carry on with the mid zone fake away from the sweep.",
+      "hb": "Toes at 7.5 yards. Lateral open step and track the C gap. Fake 17-16.",
+      "criteria": "Check it against playside pressure.",
+      "positions": {
+        "OL": "Targets number 2 counting in from the sideline. The playside tackle blocks toward the sweep when a two-point stance player is on that side.",
+        "Z": "On the cards one playside receiver arcs to number 2 and the other blocks the widest, number 1.",
+        "Y": "Labeled Gang, Single or B on the cards depending on the front."
+      },
+      "tags": ["Flip", "Exchange", "Push", "Can", "R/P"],
+      "personnel": ["11", "12", "13"],
+      "alerts": [
+        "Possible Push call to the nickel.",
+        "Be ready for the linebackers to slide, and for a straighten up call.",
+        "A two-point stance player on the sweep side means reach."
+      ]
+    },
+    {
+      "key": "allegiant-american-one",
+      "indexTitle": "(11/12/13) (3*1) (FLIP) ALLEGIANT-AMERICAN ONE (CAN) R/P",
+      "pages": [7],
+      "summary": "Jet sweep to the open side with 16-17 run action the other way, run from 3x1. It brings one blocker to the play side. One tells the playside receiver to block the most dangerous man.",
+      "qb": "Snap it when the motion man reaches the B gap. Open to the jet runner, then carry on with the mid zone fake away from the sweep.",
+      "hb": "Toes at 7.5 yards. Lateral open step and track the C gap. Fake 17-16.",
+      "criteria": "Check it against playside pressure.",
+      "positions": {
+        "OL": "Targets number 2 counting in from the sideline. The playside tackle blocks toward the sweep when a two-point stance player is on that side.",
+        "X": "The lone playside receiver on One: blocks the most dangerous man by the 8-9 rule."
+      },
+      "tags": ["Flip", "One", "Can", "R/P"],
+      "personnel": ["11", "12", "13"],
+      "alerts": [
+        "Possible Push call to the nickel.",
+        "Be ready for the linebackers to slide."
+      ]
+    },
+    {
+      "key": "spirit-alaska",
+      "indexTitle": "(11/12/13) (2*2) (FLIP) SPIRIT-ALASKA (CAN) R/P",
+      "pages": [8],
+      "summary": "Jet sweep to a closed side with 17-16 run action the other way. It brings two blockers to the play side.",
+      "qb": "Snap it when the motion man reaches the B gap. Open to the jet runner, then carry on with the mid zone fake away from the sweep. The sweep runner takes the ball at 3.5 to 4 yards deep and bows a little after the mesh.",
+      "hb": "Fake 17-16 Wanda.",
+      "criteria": "Check it against playside pressure.",
+      "positions": {
+        "Y": "Blocks the linebacker force player. Labeled Single, Mob or Double on the cards.",
+        "Z": "On the cards one playside receiver arcs to number 2 and the other blocks the widest, number 1.",
+        "F": "Push Single on some cards."
+      },
+      "tags": ["Flip", "Can", "R/P"],
+      "personnel": ["11", "12", "13"],
+      "alerts": [
+        "9 call is possible.",
+        "Be ready for the linebackers to slide.",
+        "Perimeter rule on the cards is 6-7 MDM or 8-9 MDM depending on the set."
+      ]
+    },
+    {
+      "key": "missile-rocket",
+      "indexTitle": "(11/12/13) (2*2) (FLIP) MISSILE/ROCKET",
+      "pages": [9],
+      "summary": "Full flow jet sweep to the strong side.",
+      "qb": "Snap it when the motion man reaches the B gap. Open away from the sweep, hand to the sweep runner at 4 yards, then carry on with the Wanda fake.",
+      "hb": "Fake 14-15.",
+      "criteria": "Check it against playside outside pressure.",
+      "positions": {},
+      "tags": ["Flip", "Can", "R/P"],
+      "personnel": ["11", "12", "13"],
+      "alerts": [
+        "Perimeter rule on the cards is 8-9 MDM."
+      ]
+    }
+  ]
+}

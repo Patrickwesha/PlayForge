@@ -1,0 +1,391 @@
+{
+  "section": "mid-zone",
+  "source": "Rams 2022 (McVay), 07 Mid Zone",
+  "concepts": [
+    {
+      "key": "17-16-wanda-tiff-insert",
+      "indexTitle": "(11/12) (2*2) 17-16 WANDA/TIFF (INSERT) (CAN) R/P",
+      "pages": [
+        5,
+        6
+      ],
+      "summary": "Open side mid zone from 2x2. Wanda means a box count: the line plus the tight end account for four down linemen and two linebackers. Tiff is Wanda with a Flinch. Insert is available.",
+      "qb": "Open to the play side on the 4 or 8 o'clock line. Adjust on the second step. Carry out the keeper fake.",
+      "hb": "Toes at seven and a half yards. Open with a lateral step and aim for the C gap. Press that spot, read the end man on the line and then the next defender inside. One cut, then go.",
+      "criteria": "Can vs play side external pressure or a Palms look.",
+      "positions": {
+        "OL": "Box count, four down and two backers with the tight end. Combinations shown: Single, Gang, Lag, Swoop, Insert, Flinch, Corner."
+      },
+      "tags": [
+        "Wanda",
+        "Tiff",
+        "Insert",
+        "Flinch",
+        "Sift",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "11",
+        "12"
+      ],
+      "alerts": [
+        "Tiff is Wanda with a Flinch.",
+        "The diagrams show the can being used vs internal DB pressure."
+      ],
+      "can": "Vs play side external pressure, Palms, or internal DB pressure."
+    },
+    {
+      "key": "17-16-wanda-wash-insert",
+      "indexTitle": "(11/12) (3*1) 17-16 WANDA-WASH (INSERT) (CAN) R/P",
+      "pages": [
+        7,
+        8,
+        9
+      ],
+      "summary": "Open side mid zone from 3x1. Wanda means the box count. Wash is Wanda Push: the line still takes four down and two backers in the box and alerts a Push call to a free safety.",
+      "qb": "Open to the play side on the 4 or 8 o'clock line. Adjust on the second step. Carry out the keeper fake.",
+      "hb": "Toes at seven and a half yards. Open with a lateral step and aim for the C gap. Press that spot, read the end man on the line and then the next defender inside. One cut, then go.",
+      "criteria": "Wanda: can when the safety support cannot be blocked or vs play side external pressure. Wash: can vs a four count or play side external pressure.",
+      "positions": {
+        "OL": "On Wash, Push call to the free safety. Combinations shown: Single, Gang, Money Thru, and Fan from the 12 personnel looks."
+      },
+      "tags": [
+        "Wanda",
+        "Wash",
+        "Push",
+        "Insert",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "11",
+        "12"
+      ],
+      "alerts": [
+        "Wash adds the Push call to the free safety.",
+        "The diagrams show the can being used vs a four count."
+      ],
+      "can": "Wanda: vs unblockable safety support or play side external pressure. Wash: vs a four count or play side external pressure."
+    },
+    {
+      "key": "17-16-wanda-fly-flight-insert-slalom",
+      "indexTitle": "(11/12) (3*1) 17-16 (37-36) WANDA FLY-FLIGHT (INSERT) (SLALOM) (CAN) R/P",
+      "pages": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "summary": "Open side mid zone with Fly motion toward the run side. The set starts 3x1 and ends 2x2. Line plus tight end account for four down and two backers. Flight is Fly with a late snap. Slalom (X-Slalom on the diagrams) is a tag for the receiver.",
+      "qb": "Reverse out and handle the ball on the 4 or 8 o'clock line. Adjust on the second step. Carry out the keeper fake. From the gun, toes at five yards. Kick back and shuffle to clear the back's path, then carry out the keeper fake. The game plan may turn this into a pass set.",
+      "hb": "Toes at seven and a half yards. Open with a lateral step and aim for the C gap. Press that spot, read the end man on the line and then the next defender inside. One cut, then go. From the gun, line up with the inside leg on the guard's outside leg, open laterally and aim for the B gap.",
+      "criteria": "Can vs play side external pressure. Cat pressure adjustments come from the game plan.",
+      "positions": {
+        "OL": "Combinations shown: Single, Gang, Fan. On Slalom the line cannot give up penetration or the Slalom gets knocked off."
+      },
+      "tags": [
+        "Wanda",
+        "Fly",
+        "Flight",
+        "Insert",
+        "Slalom",
+        "X-Slalom",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "11",
+        "12"
+      ],
+      "alerts": [
+        "Flight means Fly motion, snapped late.",
+        "On Slalom, penetration kills the play. The line has to keep the front clean.",
+        "Cat pressure adjustments by game plan."
+      ],
+      "can": "Vs play side external pressure."
+    },
+    {
+      "key": "17-16-wanda-fist",
+      "indexTitle": "(11/12) (3*1) 17-16 (37-36) WANDA FIST (CAN) R/P",
+      "pages": [
+        14,
+        15,
+        16
+      ],
+      "summary": "Open side mid zone where Fist turns on a Fly motion only against single high weak rotation. The motion takes care of the free safety rotated weak. Line plus tight end account for four down and two backers.",
+      "qb": "Reverse out and handle the ball on the 4 or 8 o'clock line. Adjust on the second step. Carry out the keeper fake. From the gun, toes at five yards. Kick back and shuffle to clear the back's path, then carry out the keeper fake. The game plan may turn this into a pass set.",
+      "hb": "Toes at seven and a half yards. Open with a lateral step and aim for the C gap. Press that spot, read the end man on the line and then the next defender inside. One cut, then go. From the gun, line up with the inside leg on the guard's outside leg, open laterally and aim for the B gap.",
+      "criteria": "Can vs play side external pressure.",
+      "positions": {
+        "OL": "Combinations shown: Single, Gang, Insert, Money Thru, Fan."
+      },
+      "tags": [
+        "Wanda",
+        "Fist",
+        "Insert",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "11",
+        "12"
+      ],
+      "alerts": [
+        "Shell look: no Fly motion. Strong rotation: no Fly motion.",
+        "Weak rotation gets Wanda Fly. Shell gets plain Wanda."
+      ],
+      "can": "Vs play side external pressure."
+    },
+    {
+      "key": "17-16-waffles-flight-ski",
+      "indexTitle": "(11) (2*2) 17-16 (37-36) WAFFLES (FLIGHT) (SKI) (CAN) R/P",
+      "pages": [
+        17,
+        18
+      ],
+      "summary": "Wanda Fly with a Skate or Slalom by the innermost receiver away from the run side, so it looks like 2x2 Wanda. The S in Waffles stands for the Skate or Slalom. SKI is Skate with Insert. Line plus tight end account for four down and two backers.",
+      "qb": "Reverse out and handle the ball on the 4 or 8 o'clock line. Adjust on the second step. Carry out the keeper fake. From the gun, toes at five yards. Kick back and shuffle to clear the back's path, then carry out the keeper fake. The game plan may turn this into a pass set.",
+      "hb": "Toes at seven and a half yards. Open with a lateral step and aim at the tackle's outside leg. Press that spot, read the end man on the line and then the next defender inside. One cut, then go. From the gun, line up with the inside leg on the guard's outside leg, open laterally and aim for the B gap.",
+      "criteria": "Can vs play side external pressure.",
+      "positions": {
+        "OL": "Combinations shown: Gang, Single, Swoop."
+      },
+      "tags": [
+        "Waffles",
+        "Flight",
+        "Ski",
+        "Skate",
+        "Slalom",
+        "Sift",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "11"
+      ],
+      "alerts": [
+        "Pairs with the American and Allegiant concepts.",
+        "One diagram cans to 17 Sift."
+      ],
+      "can": "Vs play side external pressure. One diagram shows the can going to 17 Sift."
+    },
+    {
+      "key": "17-16-flash-flock-sift",
+      "indexTitle": "(11/12) (2*2) 17-16 (37-36) FLASH (FLOCK) (SIFT)(CAN) R/P",
+      "pages": [
+        19,
+        20
+      ],
+      "summary": "Wanda with Flow motion. On a pre-snap read the ball can go to the receiver in Flow motion (the Spirit and Alaska plays). With the Sift tag the tight end sifts the backside and the back gets the ball. The line targets the second defender counting in from the sideline.",
+      "qb": "Open to the play side on the 4 or 8 o'clock line and adjust on the second step. Give the ball deep. Carry out the keeper fake. From the gun, toes at five yards. Kick back and shuffle to clear the back's path, then carry out the keeper fake. The game plan may turn this into a pass set.",
+      "hb": "Toes at seven and a half yards. Open with a lateral step and aim for the C gap. Press that spot, read the end man on the line and then the next defender inside. One cut, then go. From the gun, split the tackle's inside leg, open laterally and aim for the B gap.",
+      "criteria": "Can vs a G bubble, play side external pressure, or a jam.",
+      "positions": {
+        "OL": "Targets the second defender in from the sideline. Combinations shown: Single, Push NS, Push Single.",
+        "Y": "With the Sift tag, sifts to the backside and the back carries."
+      },
+      "tags": [
+        "Flash",
+        "Flock",
+        "Sift",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "11",
+        "12"
+      ],
+      "alerts": [
+        "If the nickel travels, a Straighten Up call may come.",
+        "Traveler alert is a man coverage indicator.",
+        "One diagram notes the ball should go to the Fly receiver.",
+        "Flock means Flow motion, snapped late."
+      ],
+      "can": "Vs a jam or when there is no G bubble, per the diagrams."
+    },
+    {
+      "key": "16-17-sift",
+      "indexTitle": "(11) (2*2) 16-17 (36-37) (SIFT) (CAN) R/P",
+      "pages": [
+        21,
+        22
+      ],
+      "summary": "Closed side mid zone. The blocking keys off the Mike. It usually carries a Sift.",
+      "qb": "Open to the play side on the 4 or 8 o'clock line. Adjust on the second step. Carry out the keeper fake. From the gun, toes at five yards. Kick back and shuffle to clear the back's path, then carry out the keeper fake. The game plan may turn this into a pass set.",
+      "hb": "Toes at seven and a half yards. Open with a lateral step and aim for the C gap. Press that spot, read the end man on the line and then the next defender inside. One cut, then go. From the gun, line up with the inside leg on the guard's outside leg, open laterally and aim for the B gap.",
+      "criteria": "Can when the support player cannot be blocked.",
+      "positions": {
+        "OL": "Play side tackle always blocks the end. Combinations shown: Single, Fan.",
+        "Y": "Blocks the Sam."
+      },
+      "tags": [
+        "Sift",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "11"
+      ],
+      "alerts": [
+        "Vs Penny structures the preference is 18-19 instead.",
+        "The diagrams show the can vs nickel pressure, and one Zebra away from pressure."
+      ],
+      "can": "Vs unblockable support, and vs nickel pressure on the diagrams."
+    },
+    {
+      "key": "16-17-stress",
+      "indexTitle": "(11) (2*2) 16-17 (36-37) STRESS",
+      "pages": [
+        23,
+        24
+      ],
+      "summary": "Straight Sift mid zone to the closed edge. The line and tight end block the box by structure. The tight end goes Thru or Arc for the second defender in from the sideline, the play side receiver takes the first, and the line works to the third. Stress is an automatic sift, so the backside tackle must Sift or make a B call. Sub personnel only, not base. Use it against nickel.",
+      "qb": "Open to the play side on the 4 or 8 o'clock line. Adjust on the second step. Carry out the keeper fake. From the gun, toes at five yards. Kick back and shuffle to clear the back's path, then carry out the keeper fake. The game plan may turn this into a pass set.",
+      "hb": "Toes at seven and a half yards. Open with a lateral step and aim for the C gap. Press that spot, read the end man on the line and then the next defender inside. One cut, then go. From the gun, line up with the inside leg on the guard's outside leg, open laterally and aim for the B gap.",
+      "criteria": "No check. Call it and run it.",
+      "positions": {
+        "OL": "Block the box structure and work to the third defender from the sideline. Backside tackle must Sift or B. Combinations shown: Gang, Single, Structure.",
+        "Y": "Thru or Arc for the second defender counting in from the sideline.",
+        "Z": "Play side receiver takes the first defender from the sideline."
+      },
+      "tags": [
+        "Stress",
+        "Sift",
+        "Arc",
+        "Thru"
+      ],
+      "personnel": [
+        "11"
+      ],
+      "alerts": [
+        "Stress is an automatic sift.",
+        "Sub personnel only. Use it against nickel."
+      ]
+    },
+    {
+      "key": "16-17-sway-fly-flight",
+      "indexTitle": "(11) (2*2) 16-17 (36-37) SWAY FLY-FLIGHT (CAN) R/P",
+      "pages": [
+        25,
+        26
+      ],
+      "summary": "Wanda with a cross sift and Fly motion toward the run side. Split flow mid zone to the closed side, run at a two man surface.",
+      "qb": "Reverse out and handle the ball on the 4 or 8 o'clock line. Let the Fly motion reach you. Adjust on the second step. Carry out the keeper fake. From the gun, toes at five yards. Kick back and shuffle to clear the back's path, then carry out the keeper fake. The game plan may turn this into a pass set.",
+      "hb": "Toes at seven and a half yards. Open with a lateral step and aim for the C gap. Press that spot, read the end man on the line and then the next defender inside. One cut, then go. From the gun, line up with the inside leg on the guard's outside leg, open laterally and aim for the B gap.",
+      "criteria": "Can vs any external pressure.",
+      "positions": {
+        "OL": "Combinations shown: Gang, Single, Fan."
+      },
+      "tags": [
+        "Sway",
+        "Fly",
+        "Flight",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "11"
+      ],
+      "alerts": [
+        "Flight means Fly motion, snapped late.",
+        "One diagram cans to 2 Jet."
+      ],
+      "can": "Vs any external pressure. One diagram shows the can going to 2 Jet."
+    },
+    {
+      "key": "16-17-sway-flinch-bubble",
+      "indexTitle": "(11) (2*2) 16-17 (36-37) SWAY (FLINCH)(BUBBLE) (CAN) R/P",
+      "pages": [
+        27,
+        28
+      ],
+      "summary": "Wanda with a cross sift and no motion. Split flow mid zone to the closed side at a two man surface. Flinch and Bubble are the tags.",
+      "qb": "Open to the play side on the 4 or 8 o'clock line. Adjust on the second step. Carry out the keeper fake. From the gun, toes at five yards. Kick back and shuffle to clear the back's path, then carry out the keeper fake. The game plan may turn this into a pass set.",
+      "hb": "Toes at seven and a half yards. Open with a lateral step and aim for the C gap. Press that spot, read the end man on the line and then the next defender inside. One cut, then go. From the gun, line up with the inside leg on the guard's outside leg, open laterally and aim for the B gap.",
+      "criteria": "Can vs a Shell look only.",
+      "positions": {
+        "OL": "Combinations shown: Gang, Single, Fan."
+      },
+      "tags": [
+        "Sway",
+        "Flinch",
+        "Bubble",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "11"
+      ],
+      "alerts": [
+        "One diagram reminds the QB to open up deep for the back."
+      ],
+      "can": "Vs Shell only."
+    },
+    {
+      "key": "16-17-fly-flight-ice",
+      "indexTitle": "(11) (2*2) 16-17 (36-37) FLY-FLIGHT ICE (CAN) R/P",
+      "pages": [
+        29,
+        30
+      ],
+      "summary": "Closed side mid zone keyed off the Mike that carries a Fly and/or an Ice. Ice is a Ski to the open side with the backside tackle going Man Money on the end. Flight is Fly with a late snap.",
+      "qb": "Open to the play side on the 4 or 8 o'clock line. Adjust on the second step. Carry out the keeper fake. From the gun, toes at five yards. Kick back and shuffle to clear the back's path, then carry out the keeper fake. The game plan may turn this into a pass set.",
+      "hb": "Toes at seven and a half yards. Open with a lateral step and aim for the C gap. Press that spot, read the end man on the line and then the next defender inside. One cut, then go. From the gun, line up with the inside leg on the guard's outside leg, open laterally and aim for the B gap.",
+      "criteria": "Can vs play side external pressure, or when the backside B gap needs to be open.",
+      "positions": {
+        "OL": "Play side tackle always blocks the end. With Ice the backside tackle goes Man Money on the end. Money is the label on the diagrams.",
+        "Y": "Blocks the Sam."
+      },
+      "tags": [
+        "Fly",
+        "Flight",
+        "Ice",
+        "Ski",
+        "Sift",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "11"
+      ],
+      "alerts": [
+        "Pairs with the Spirit and Alaska concepts."
+      ],
+      "can": "Vs play side external pressure or when an open backside B gap is needed."
+    },
+    {
+      "key": "16-17-force-flock-bolt-balloon",
+      "indexTitle": "(11) (3*1) 16-17 (36-37) FORCE (FLOCK)(BOLT BALLOON) (CAN) R/P",
+      "pages": [
+        31,
+        32
+      ],
+      "summary": "Wash with a Y sift plus Flow motion before the snap, run to the closed side from 3x1. The line works to the second defender in from the sideline and the receiver takes the most dangerous man to the first. Flock is Flow with a late snap.",
+      "qb": "Open to the play side on the 4 or 8 o'clock line. Give the ball deep and adjust on the second step. Carry out the keeper fake. From the gun, toes at five yards. Kick back and shuffle to clear the back's path, then carry out the keeper fake. The game plan may turn this into a pass set.",
+      "hb": "Toes at seven and a half yards. Open with a lateral step and aim for the C gap. Press that spot, read the end man on the line and then the next defender inside. One cut, then go. From the gun, line up with the inside leg on the guard's outside leg, open laterally and aim for the B gap.",
+      "criteria": "Can vs play side external pressure or a jam.",
+      "positions": {
+        "OL": "Works to the second defender from the sideline. The center is marked with a Push call. Combinations shown: Push Single, Fan.",
+        "Y": "Sifts.",
+        "Z": "Most dangerous man to the first defender from the sideline."
+      },
+      "tags": [
+        "Force",
+        "Flock",
+        "Bolt Balloon",
+        "Push",
+        "Can",
+        "R/P"
+      ],
+      "personnel": [
+        "11"
+      ],
+      "alerts": [
+        "Center Push call comes with a Traveler alert.",
+        "The diagrams show the can vs a jam."
+      ],
+      "can": "Vs play side external pressure or a jam."
+    }
+  ]
+}

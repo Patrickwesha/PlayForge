@@ -1,0 +1,59 @@
+{
+  "section": "situational",
+  "source": "Rams 2022 (McVay), 25 Situational",
+  "philosophy": [
+    "Backed up means the ball is between the minus 5 and the minus 1.",
+    "Backed up: the standard is a first down, to flip the field for the defense. A 95 yard drive against the defense deflates them.",
+    "Backed up: an offensive penalty is half the distance, and one in the end zone with the ball in the end zone is a safety.",
+    "Backed up: everything is about the ball. Expect hard counts. No penalties, no negative plays, trust the technique.",
+    "Backed up: the QB knows his depth in the pocket, stays off the end line, and gets the ball out fast.",
+    "Backed up: runners stay vertical, no wasted inches. Expect play pass for the explosive. Victory Sneak is possible inside the 1, mostly at the end of a half or game.",
+    "Four minute: control the ball and run the clock out to win.",
+    "Four minute: run it well into loaded boxes, make first downs and finish on the field, stay in bounds, no penalties, protect the ball, concentrate and execute.",
+    "Four minute clock: each play in bounds burns at least 35 seconds. A first down with the clock running and the defense out of timeouts is at least 105 seconds. If they call timeout, expect 6 to 10 seconds per play. An offensive penalty costs about 35 seconds plus a free stoppage.",
+    "Four minute QB: be ready to run on any pass, a sack beats a dangerous throw, take every completion that is there, break the huddle at 15 on the play clock and snap it inside 3, and follow the ball carrier after the handoff.",
+    "Four minute ball carriers: ball security, get upfield, no lost yards, stay in bounds and fall down near the sideline if needed.",
+    "Rolex: when the situation is called Rolex, time matters more than points. Go down short of the goal line to keep the clock moving and keep the ball.",
+    "Four minute: expect 8 and 9 man fronts with desperation blitzes and stunts, defenders trying to strip the ball, and hard penetrators. Never let a man through your gap.",
+    "Scramble in the field, outside receivers: if the QB comes your way, cut the route off and run deep toward the end zone; keep going if nobody is deep, otherwise stop and work back to him. If the QB goes away, break to an in route with a safety in the middle, or a deep post if the middle is open.",
+    "Scramble in the field, other receivers: work toward the QB at the depth of the called route. Near the sideline, sit unless the QB nods you back the other way, and stay on the same level.",
+    "Scramble in the red zone: on the last play every receiver gets into the end zone.",
+    "Scramble in the red zone: deep receiver to the scramble side goes to the back pylon and sits unless the QB nods him back. Short receiver to that side goes to the front pylon and sits unless nodded.",
+    "Scramble in the red zone: inside receiver away from the scramble works toward the QB at least 2 yards deep in the end zone. Outside receiver away looks for a window under the goal post. The back gets 2 yards deep in the end zone and mirrors the QB.",
+    "Scramble in the red zone: if both receivers to the scramble side are at the same depth, the outside man takes the front pylon and the inside man the back pylon."
+  ],
+  "concepts": [
+    {
+      "key": "scramble-mechanics-field",
+      "indexTitle": "SCRAMBLE MECHANICS (FIELD)",
+      "pageTitle": "SCRAMBLE MECHANICS - FIELD",
+      "pages": [7],
+      "summary": "Rules for receivers when the QB is chased out of the pocket between the 20s. Outside receivers go deep when the QB comes to them and come back if the deep coverage is there; away from the QB they break to an in route against a middle safety or a deep post against an open middle. Inside receivers work toward the QB on the same level and sit near the sideline unless he nods them back. Two example pictures.",
+      "qb": "Nod to a sitting receiver to reverse him on the same level.",
+      "positions": {
+        "X": "Outside rule: deep toward the goal line on your side, in or post away.",
+        "Z": "Outside rule: deep toward the goal line on your side, in or post away.",
+        "Y": "Inside rule: work to the QB at the called depth, sit near the sideline.",
+        "F": "Inside rule: work to the QB at the called depth, sit near the sideline.",
+        "H": "Inside rule: work to the QB at the called depth."
+      }
+    },
+    {
+      "key": "scramble-mechanics-redzone",
+      "indexTitle": "SCRAMBLE MECHANICS (REDZONE)",
+      "pageTitle": "SCRAMBLE MECHANICS - RED ZONE",
+      "pages": [8],
+      "summary": "Scramble rules inside the red zone. The deep man to the scramble side takes the back pylon and the short man the front pylon, both sitting unless the QB nods. Away from the scramble the inside man works toward the QB at least 2 yards deep in the end zone and the outside man looks for a window under the goal post. The back mirrors the QB 2 yards deep in the end zone. On the last play everyone gets into the end zone. Same depth to the scramble side: outside man front pylon, inside man back pylon.",
+      "qb": "Nod a sitting receiver to reverse him.",
+      "hb": "Get 2 yards deep in the end zone and mirror the QB.",
+      "positions": {
+        "X": "Back or front pylon to the scramble side; under the goal post away.",
+        "Z": "Back or front pylon to the scramble side; under the goal post away.",
+        "Y": "Front pylon to the scramble side when short; 2 yards deep toward the QB away.",
+        "F": "Front pylon to the scramble side when short; 2 yards deep toward the QB away.",
+        "H": "2 yards deep in the end zone, mirror the QB."
+      },
+      "alerts": ["Last play of the situation: every receiver must get into the end zone."]
+    }
+  ]
+}

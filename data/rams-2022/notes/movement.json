@@ -1,0 +1,418 @@
+{
+  "section": "movement",
+  "source": "Rams 2022 (McVay), 20 Movement",
+  "concepts": [
+    {
+      "key": "keep-2x2",
+      "indexTitle": "KEEP 2X2",
+      "pageTitle": "KEEP (SIFT) (2*2)",
+      "pages": [
+        5
+      ],
+      "summary": "The base keeper from a two by two look off the Randall or Lamar midzone fake. To the keep side there is a low cross at 10 to 12 yards and a high corner at 18 to 20 yards, the back leaks late to the flat, and the backside receiver works an outside release runback. The Sift tag sends the tight end across the backside.",
+      "progression": "Numbers 1 to 3 sit on the low cross, the corner and the late flat. Best read: 1 low cross, 2 high corner, 3 late down flat. The exact order is unclear in the extracted text.",
+      "qb": "Fake the midzone, get depth and run to the keep side. Far corner is an alert.",
+      "hb": "Sell the run, then come late to the flat.",
+      "positions": {
+        "Y": "Low cross, 10 to 12 yards.",
+        "Z": "High corner at 18 to 20 yards. A far corner alert is drawn on the pictures.",
+        "X": "Backside runback: outside release to 20 yards and come back to 15. Against cloud, sit on the sideline at 15.",
+        "H": "Late down flat.",
+        "QB": "Get depth and run."
+      },
+      "protections": [
+        "Randall",
+        "Lamar",
+        "Randall (Sift)"
+      ],
+      "formations": [
+        "[12] SOLO RT",
+        "[12] SOLO RT ACE",
+        "[11] DOUBLE RT",
+        "[12/11] SNUG RT"
+      ],
+      "tags": [
+        "Sift"
+      ],
+      "alerts": [
+        "Far corner alert on the deep route.",
+        "Backside runback sits on the sideline at 15 yards against cloud."
+      ]
+    },
+    {
+      "key": "keep-skate",
+      "indexTitle": "KEEP SKATE",
+      "pageTitle": "KEEP (SIFT/PIN) SKATE (2*2)",
+      "pages": [
+        6
+      ],
+      "summary": "The same keeper with the Skate tag, which turns the line into a slide away from the keep. The routes stay the same: low cross at 10 to 12, high corner at 18 to 20, late flat from the back, runback on the backside. Pin replaces Sift and has the F pin the edge instead of sifting.",
+      "progression": "Numbers 1 to 3 on the low cross, corner and late flat. Best read: 1 low cross, 2 high corner, 3 late down flat. Order unclear in the text.",
+      "qb": "Get depth and run to the keep side.",
+      "hb": "Late down flat.",
+      "positions": {
+        "OL": "Slide (Skate) away from the keep side.",
+        "Y": "Low cross, 10 to 12 yards.",
+        "Z": "High corner, 18 to 20 yards.",
+        "X": "Backside runback: outside release, 20 yards, back to 15. Sit on the sideline at 15 against cloud.",
+        "F": "Sift across the backside, or Pin the edge when Pin is called.",
+        "H": "Late down flat."
+      },
+      "protections": [
+        "Randall (Sift) Skate",
+        "Lamar Skate",
+        "Randall Sift Skate",
+        "Randall Pin Skate"
+      ],
+      "formations": [
+        "[12/11] SNUG RT",
+        "[11/12] SNUG RT",
+        "[11] BUNCH RT ZAC",
+        "[11] SOUTH RT CLAMP F SHORT"
+      ],
+      "tags": [
+        "Sift",
+        "Pin",
+        "Skate",
+        "Zac",
+        "Clamp",
+        "F Short"
+      ]
+    },
+    {
+      "key": "keep-husker-skate-2x2",
+      "indexTitle": "KEEP HUSKER (SKATE) 2X2",
+      "pageTitle": "HUSKER (SKATE) (2*2)",
+      "pages": [
+        7
+      ],
+      "summary": "Keeper with the Husker tag: the deep route becomes a Husker corner at 12 yards with a me/you call between the two receivers on that side. The low cross at 10 to 12 and the late down flat stay the same. Skate adds the line slide.",
+      "progression": "Best read: 1 low cross, 2 Husker corner, 3 down flat. Order unclear in the text.",
+      "qb": "Get depth and run.",
+      "hb": "Late down flat.",
+      "positions": {
+        "X": "Low cross at 10 to 12 yards. Far corner alert.",
+        "Z": "Husker corner at 12 yards, me/you call with the inside receiver.",
+        "Y": "Down flat.",
+        "H": "Flat.",
+        "F": "Slide side player on the Skate version."
+      },
+      "protections": [
+        "Lamar Husker",
+        "Lamar Husker Skate"
+      ],
+      "formations": [
+        "[12] WEST RT SLIM",
+        "[12] WEST RT ACE ZAC"
+      ],
+      "tags": [
+        "Husker",
+        "Skate",
+        "Slim",
+        "Ace",
+        "Zac"
+      ],
+      "alerts": [
+        "Far corner alert.",
+        "Me/you call on the Husker corner."
+      ]
+    },
+    {
+      "key": "keep-fly-sift-skate",
+      "indexTitle": "KEEP FLY SIFT SKATE",
+      "pageTitle": "KEEP FLY (SIFT) SKATE (H SNEAK) (2*2)",
+      "pages": [
+        8
+      ],
+      "summary": "Keeper with Fly motion across the formation, so the QB reverses out instead of opening to the fake. Routes: low cross at 10 to 12, high corner at 18 to 20, flat, line slide. The backside receiver keeps the runback. H Sneak has the back sneak out late instead of a normal flat.",
+      "progression": "Numbers 1 to 3 on the low cross, corner and flat. Best read: 1 low cross, 2 high corner, 3 flat. Order unclear in the text.",
+      "qb": "Reverse out with the Fly motion, then get depth and run.",
+      "hb": "Flat. With H Sneak, hold and sneak out late.",
+      "positions": {
+        "OL": "Slide (Skate).",
+        "Z": "Fly motion across the formation.",
+        "Y": "Low cross, 10 to 12 yards.",
+        "X": "High corner at 18 to 20 yards, or the backside runback (sit on the sideline at 15 against cloud) depending on the picture.",
+        "F": "Sift the backside, or Pin on the Pin version.",
+        "H": "Flat, or Sneak late."
+      },
+      "protections": [
+        "Randall Fly Skate",
+        "Randall Fly Sift Skate",
+        "Randall Pin Skate H Sneak"
+      ],
+      "formations": [
+        "[11] SOUTH RT CLOSE",
+        "[11] DBL RT CLOSE",
+        "[11] SPEED RT SOCK",
+        "[11] Y MO SOUTH RT CLAMP F SHORT"
+      ],
+      "tags": [
+        "Fly",
+        "Sift",
+        "Pin",
+        "Skate",
+        "H Sneak",
+        "Close",
+        "Sock",
+        "Clamp",
+        "F Short",
+        "Y Mo"
+      ]
+    },
+    {
+      "key": "keep-fluster",
+      "indexTitle": "KEEP FLUSTER",
+      "pageTitle": "KEEP FLUSTER (H SNEAK) (@ OSCAR)",
+      "pages": [
+        9
+      ],
+      "summary": "Fluster combines the Fly motion with the Husker corner at 12 yards. The low cross at 10 to 12, the flat and the line slide stay. The QB reverses out. Oscar is a tag attached on the Solo Rt Ace version; the page does not define it.",
+      "progression": "Numbers 1 to 3 on the cross, the Husker corner and the flat. Order unclear in the text.",
+      "qb": "Reverse out, get depth and run.",
+      "hb": "Flat, or Sneak late when H Sneak is called.",
+      "positions": {
+        "OL": "Slide.",
+        "Z": "Fly motion.",
+        "Y": "Low cross at 10 to 12 yards.",
+        "X": "Husker corner at 12 yards.",
+        "H": "Flat."
+      },
+      "protections": [
+        "Lamar Fluster",
+        "Randall Fluster (Oscar)"
+      ],
+      "formations": [
+        "[11] SOUTH RT CLOSE F SHORT",
+        "[12] SOLO RT ACE"
+      ],
+      "tags": [
+        "Fluster",
+        "H Sneak",
+        "Oscar",
+        "Close",
+        "F Short",
+        "Ace"
+      ]
+    },
+    {
+      "key": "keep-bunch",
+      "indexTitle": "KEEP (BUNCH)",
+      "pageTitle": "KEEP (HUSKER) (SLACKER) (3*1)",
+      "pages": [
+        10
+      ],
+      "summary": "Keeper from a bunch. The bunch gives a low cross at 10 to 12, a down flat and a late down flat, and a deep route that is a high corner at 18 to 20 in the base version or a Husker corner at 12 with a me/you call. Slacker adds a 5 yard slack route under the Husker corner.",
+      "progression": "Numbers 1 to 3 on the low cross, the flats and the corner. Best read: 1 low cross, 2 down flat, 3 corner. Order unclear in the text.",
+      "qb": "Get depth and run.",
+      "hb": "Flat.",
+      "positions": {
+        "Y": "Low cross, 10 to 12 yards.",
+        "Z": "Down flat on the base version. Slack route at 5 yards on Slacker.",
+        "F": "Late down flat.",
+        "X": "High corner at 18 to 20 yards, or Husker corner at 12 with the me/you call.",
+        "H": "Flat."
+      },
+      "protections": [
+        "Lamar",
+        "Lamar Husker",
+        "Lamar Slacker"
+      ],
+      "formations": [
+        "[11/12] BUNCH RT",
+        "[11/12] BUNCH RT TITE"
+      ],
+      "tags": [
+        "Husker",
+        "Slacker",
+        "Tite"
+      ]
+    },
+    {
+      "key": "keep-flow-bunch",
+      "indexTitle": "KEEP FLOW (BUNCH)",
+      "pageTitle": "KEEP FLY (HUSKER) (SLALOM) (3*1)",
+      "pages": [
+        11
+      ],
+      "summary": "Bunch keeper with Fly motion, so the QB reverses out. The bunch runs a low cross, a flat and a late down flat, with a high corner at 18 to 20 or a Husker corner at 12. X Slalom is a route tag for the single receiver on the Husker version.",
+      "progression": "Numbers 1 to 3 on the flat, the cross and the corner. Order unclear in the text.",
+      "qb": "Reverse out, get depth and run.",
+      "hb": "Flat.",
+      "positions": {
+        "Y": "Fly motion across the formation, then low cross.",
+        "Z": "Fly on the Husker version, or the corner.",
+        "F": "Late down flat.",
+        "X": "High corner at 18 to 20, or the Slalom route with the me/you Husker corner.",
+        "H": "Flat."
+      },
+      "protections": [
+        "Lamar Fly",
+        "Lamar Fly Husker X Slalom"
+      ],
+      "formations": [
+        "[11/12] BUNCH RT TITE",
+        "[11] BUNCH RT TITE"
+      ],
+      "tags": [
+        "Fly",
+        "Husker",
+        "Slalom",
+        "Tite"
+      ]
+    },
+    {
+      "key": "keep-3x1-width",
+      "indexTitle": "KEEP (3X1 WIDTH)",
+      "pageTitle": "KEEP (SMASH) (3*1 WIDTH)",
+      "pages": [
+        12
+      ],
+      "summary": "Keeper from a spread trips look. The trips side runs a low cross, an extended down flat at 5 yards and a late down flat; the single receiver runs the backside runback. The Smash tag turns the outside two into a 6 yard hitch and a corner at 12.",
+      "progression": "Numbers 1 to 3 on the low cross, the flats and the backside runback. Order unclear in the text.",
+      "qb": "Get depth and run. From gun on the Smash version.",
+      "hb": "Flat.",
+      "positions": {
+        "Y": "Low cross at 10 to 12, or the corner at 12 on Smash.",
+        "Z": "Extended down flat at 5 yards, or the 6 yard hitch on Smash.",
+        "F": "Late down flat.",
+        "X": "Backside runback: outside release, 20 yards, back to 15. Sit on the sideline at 15 against cloud.",
+        "H": "Flat."
+      },
+      "protections": [
+        "Lamar",
+        "Lamar Smash"
+      ],
+      "formations": [
+        "[11] F MO TRIPS RT",
+        "[11] (GUN) Y MO TROFF RT TITE"
+      ],
+      "tags": [
+        "Smash",
+        "F Mo",
+        "Y Mo",
+        "Gun",
+        "Tite"
+      ]
+    },
+    {
+      "key": "lizard-reptile-oscar",
+      "indexTitle": "LIZARD-REPTILE (OSCAR)",
+      "pageTitle": "REPTILE - LIZARD (OSCAR)",
+      "pages": [
+        13
+      ],
+      "summary": "Keeper off the tite zone fake instead of midzone. The F slams the edge and then inserts to a corner at 12 yards, which is the first read. The Y runs the low cross at 10 to 12, the back goes to the flat, and the outside receiver has a far corner alert.",
+      "progression": "1 insert corner by F after the slam, 2 low cross, 3 flat.",
+      "qb": "Get depth and run. Far corner is an alert.",
+      "hb": "Flat.",
+      "positions": {
+        "F": "Slam the edge, then insert corner at 12 yards.",
+        "Y": "Low cross, 10 to 12 yards.",
+        "Z": "Far corner alert.",
+        "H": "Flat."
+      },
+      "protections": [
+        "Lizard (Oscar)"
+      ],
+      "formations": [
+        "[12] SOLO RT ACE"
+      ],
+      "tags": [
+        "Oscar",
+        "Ace"
+      ],
+      "alerts": [
+        "Far corner alert on the outside receiver."
+      ]
+    },
+    {
+      "key": "lizard-reptile-flock",
+      "indexTitle": "LIZARD-REPTILE FLOCK",
+      "pageTitle": "LIZARD-REPTILE FLOCK (2*2)",
+      "pages": [
+        14
+      ],
+      "summary": "The tite zone keeper with Flock motion. The Z flies across and runs a go, the F slams and inserts to the corner at 12, the Y runs the low cross, the back goes to the flat.",
+      "progression": "1 insert corner by F, 2 low cross, 3 flat.",
+      "qb": "Get depth and run.",
+      "hb": "Flat.",
+      "positions": {
+        "Z": "Fly motion across, then go.",
+        "F": "Slam, then insert corner at 12 yards.",
+        "Y": "Low cross, 10 to 12 yards.",
+        "H": "Flat."
+      },
+      "protections": [
+        "Lizard Flock"
+      ],
+      "formations": [
+        "[11] SOUTH RT CLOSE"
+      ],
+      "tags": [
+        "Flock",
+        "Close"
+      ]
+    },
+    {
+      "key": "lizard-reptile-fly",
+      "indexTitle": "LIZARD-REPTILE FLY",
+      "pageTitle": "LIZARD-REPTILE FLY (3*1)",
+      "pages": [
+        15
+      ],
+      "summary": "The tite zone keeper with Fly motion from a three by one look. The F flies across, the Z slams and inserts to the corner at 12, the Y runs the low cross, the back goes to the flat.",
+      "progression": "1 insert corner by Z, 2 low cross, 3 flat.",
+      "qb": "Get depth and run.",
+      "hb": "Flat.",
+      "positions": {
+        "F": "Fly motion across the formation.",
+        "Z": "Slam, then insert corner at 12 yards.",
+        "Y": "Low cross, 10 to 12 yards.",
+        "H": "Flat."
+      },
+      "protections": [
+        "Lizard Fly"
+      ],
+      "formations": [
+        "[12] WEST RT ACE"
+      ],
+      "tags": [
+        "Fly",
+        "Ace"
+      ]
+    },
+    {
+      "key": "t-keepers",
+      "pageTitle": "\"T\" KEEPERS",
+      "pages": [
+        16
+      ],
+      "summary": "Not on the index. Keeper with the T tag, which pulls the playside tackle into the alley (see the Randall-Lamar protection page). One blocker stays in for one count (1 block) before the routes develop. Routes: low cross at 10 to 12, high corner at 18 to 20, late down flat from the back.",
+      "progression": "Numbers 1 to 3 on the low cross, the corner and the flat. Order unclear in the text.",
+      "hb": "Late down flat.",
+      "positions": {
+        "OL": "Playside tackle pulls to the alley on the T call.",
+        "F": "Block for one count, then release (1 block).",
+        "Y": "Low cross, 10 to 12 yards.",
+        "Z": "High corner, 18 to 20 yards.",
+        "H": "Late down flat."
+      },
+      "protections": [
+        "Lamar T (Oscar)",
+        "Randall T (Oscar)"
+      ],
+      "formations": [
+        "[11] SOUTH RT CLAMP",
+        "[11] BUNCH RT TITE YUCK"
+      ],
+      "tags": [
+        "T",
+        "Oscar",
+        "Clamp",
+        "Tite",
+        "Yuck"
+      ]
+    }
+  ]
+}

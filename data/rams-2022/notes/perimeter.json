@@ -1,0 +1,46 @@
+{
+  "section": "perimeter",
+  "source": "Rams 2022 (McVay), 12 Perimeter Runs",
+  "concepts": [
+    {
+      "key": "19-18-delta-ferrari",
+      "indexTitle": "(11/12) (2*2) 19-18 DELTA FERRARI (CAN) R/P",
+      "pages": [5],
+      "summary": "Fake jet sweep one way, then a toss the other way with one man cracking.",
+      "qb": "Reverse pivot. Fake the jet sweep, toss to the back and sell the keeper.",
+      "hb": "7.5 yards deep. Lateral crossover run to take the toss. Stay lateral and read the force and the alley blocking on the edge.",
+      "criteria": "Check it against G Bub, pressure, or a jam zone look.",
+      "positions": {
+        "F": "The motion man. Sells the Spirit or Alaska jet sweep.",
+        "Z": "Labeled Single or Thru on the cards: the crack block.",
+        "Y": "Labeled Speed B or Gang on the cards."
+      },
+      "tags": ["Can", "R/P"],
+      "personnel": ["11", "12"],
+      "alerts": [
+        "Be ready for the linebackers to slide with the motion.",
+        "Perimeter rule on the cards is 8-9 MDM."
+      ]
+    },
+    {
+      "key": "38-39-race",
+      "indexTitle": "(11/12) (2*2)(1*3) 38-39 RACE (CAN) R/P",
+      "pages": [6, 7],
+      "summary": "An 8 or 9 hole run that attacks the perimeter with pull and pin blocking. The playside guard and tackle are alert to pull depending on how the defense lines up.",
+      "qb": "Heels at 5 yards. Kick back and hand off underneath, then sell the keeper.",
+      "hb": "Line up with the inside foot on the guard's outside foot. Open and run flat through the QB's toes. Get the ball out to the numbers and read the pullers.",
+      "criteria": "Not against a two-high look. Check it against any pressure.",
+      "positions": {
+        "OL": "Playside guard and tackle pull or pin based on alignment. The center makes a Me or You call on the cards, with a Tight Shade note and a Jam rule.",
+        "Y": "Shows a bubble look. Against a 6 technique he influences and blocks down. Against a 9 technique he makes a Thru call and goes through to the first defender inside, on or off the ball. Against Choke he makes a 9 call and blocks the Choke player.",
+        "F": "Labeled Man Over or Gain on the cards."
+      },
+      "tags": ["Can", "R/P"],
+      "personnel": ["11", "12"],
+      "alerts": [
+        "Thru call against a 9 technique.",
+        "9 call and block the Choke player against a Choke look."
+      ]
+    }
+  ]
+}

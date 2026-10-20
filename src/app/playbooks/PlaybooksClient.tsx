@@ -31,6 +31,12 @@ export function PlaybooksClient() {
           + New playbook
         </button>
       </div>
+      <Link href="/playbooks/rams-2022" className="flex items-center gap-3 border border-neutral-300 bg-white rounded px-3 py-2 mb-3 hover:border-black">
+        <div className="flex-1">
+          <div className="font-bold uppercase">Rams 2022, in the Eagles system</div>
+          <div className="text-xs text-neutral-500">Every diagram of the McVay 2022 book with the Green Bay words, grouped by install and situation. Search it, then add it to your library.</div>
+        </div>
+      </Link>
       {!playbooks && <div className="text-neutral-500">Loading…</div>}
       <div className="flex flex-col gap-2">
         {playbooks?.map((pb) => {

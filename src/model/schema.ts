@@ -187,6 +187,7 @@ export const playSchema = z.object({
   confidence: z.enum(['derived', 'needs-review']).optional(),
   reviewNotes: z.array(z.string()).optional(),
   sourceCell: z.string().optional(),
+  alias: z.string().optional(),
   rebuild: z
     .object({
       confidence: z.enum(['high', 'medium', 'low']),

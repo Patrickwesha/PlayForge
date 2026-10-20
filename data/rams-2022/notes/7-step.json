@@ -1,0 +1,265 @@
+{
+  "section": "7-step",
+  "source": "Rams 2022 (McVay), 16 7 Step",
+  "concepts": [
+    {
+      "key": "dribble-indy",
+      "indexTitle": "DRIBBLE INDY",
+      "pageTitle": "DRIBBLE INDY (3*1)",
+      "pages": [5],
+      "summary": "Z runs Dribble to the trips side with a Shallow Cross at 5 under a Basic at 12 to 14 and a Dagger behind them at 18 to 20. X is isolated on the backside with a Comeback at 18 (outside release, fade vs cloud) or a Go. The back is a Check Burst.",
+      "progression": "1 Shallow Cross, 2 Basic, 3 Dagger, 4 Check Burst (H)",
+      "qb": "7 step. X Comeback is the alert in the CB cell; X Go is Yes/No in the Go cell.",
+      "positions": {
+        "X": "Comeback at 18 yds, outside release, fade vs cloud (CB cell); Go, Yes/No (Go cell)",
+        "Z": "Dribble: Dagger at 18 to 20 yds, widen to 20 in the second cell",
+        "Y": "Basic at 12 to 14 yds",
+        "F": "Shallow Cross at 5 yds",
+        "H": "Check Burst, fourth in the order"
+      },
+      "protections": ["Jax Lt"],
+      "formations": ["[11] TREY RT", "[11] TRIO STORE RT"],
+      "tags": ["3x1", "Indy", "X CB", "X GO"],
+      "alerts": ["X Comeback is the alert", "X Go is Yes/No"]
+    },
+    {
+      "key": "blade",
+      "indexTitle": "BLADE",
+      "pageTitle": "(RIB/LICK) BLADE (STUTTER/STEM GO/SWIRL T.O.) H WIDE (3*1)",
+      "pages": [6],
+      "summary": "A High Cross at 18 to 22 between the numbers and the hash is the first look, with a Dagger at 20 (widen at 15) behind a Dagger Pivot at 8 that serves as the outlet. X gets a tag on the backside: Stutter, Stem Go at 10, Swirl T.O. at 10, or Blazer. H checks wide. Rib or Lick sets the back's release.",
+      "progression": "1 High Cross, 2 X tag (alert), 3 Dagger, outlet Dagger Pivot",
+      "qb": "7 step. X tag is the alert; Dagger Pivot is the outlet.",
+      "positions": {
+        "X": "Stutter (alert), Stem Go at 10 yds, Swirl T.O. at 10 yds, or Blazer, per the call",
+        "Z": "High Cross at 18 to 22 yds between the numbers and the hash",
+        "Y": "Dagger at 20 yds, 15 yd widen point",
+        "F": "Dagger Pivot at 8 yds, outlet",
+        "H": "Check Wide; Slam on the way out"
+      },
+      "protections": ["3 Jet Rib", "Jax Lt Rib"],
+      "formations": ["[11] TROFF RT TITE", "[11] TROFF RT", "[11] BUNCH RT TITE"],
+      "tags": ["3x1", "Rib", "Lick", "Stutter", "Stem Go", "Swirl T.O.", "H Wide"],
+      "alerts": ["X tag is the alert"]
+    },
+    {
+      "key": "safe-blast",
+      "indexTitle": "SAFE BLAST",
+      "pageTitle": "(RIB-LICK) SAFE BLAST (READ IT) (BLAST-BLINK INDY) (3*1)",
+      "pages": [7],
+      "summary": "X runs Safe, a Field Post at 18, as the first look. The back's Rib Flat at 3 to 5 is second. Blast at 20 (breaks at 10 and 15) or Blink at 20 by the tagged man is third, with a Swirl at 10 and 15 and a Check Wide as outlets. Read It means the Blast is read on the move.",
+      "progression": "1 Field Post, 2 Rib Flat, 3 Blast or Blink; Swirl and Check Wide are outlets",
+      "qb": "7 step. Read It: play the Blast off the coverage.",
+      "positions": {
+        "X": "Safe: Field Post at 18 yds",
+        "tagged": "Blast at 20 yds with marks at 10 and 15 (Z or F), or Blink at 20 yds (F)",
+        "Y": "Swirl at 10 and 15 yds, outlet",
+        "H": "Rib Flat at 3 to 5 yds; Slam first",
+        "fifth man": "Check Wide, outlet"
+      },
+      "protections": ["3 Jet Rib", "Jax Lt Rib"],
+      "formations": ["[11] BUNCH RT TITE", "[11] BUNDLE RT TITE"],
+      "tags": ["3x1", "Rib", "Lick", "Read It", "Indy", "Blast", "Blink"],
+      "alerts": ["Alert printed on the first cell, target unclear"]
+    },
+    {
+      "key": "boat-yacht-3x1",
+      "indexTitle": "BOAT-YACHT (3*1)",
+      "pageTitle": "(RIB-LICK) BOAT-YACHT DAGGER-BASIC (T.O.) (3*1)",
+      "pages": [8],
+      "summary": "Boat is a Sail at 12 (Sail T.O. in the first cell) over the back's Rib or Lick Flat at 3 to 5, with a Blazer widening to 15 as the alert and a Cover 2 note next to the Sail. The backside tag is Dagger (widen, 20) or Basic (12, with T.O.). Yacht is the same shape with the Slam and Blazer swapped around the formation. H checks coin at 2 to 4.",
+      "progression": "1 Sail, 2 Rib Flat; Blazer is the alert; backside Dagger or Basic comes off the look",
+      "qb": "7 step. Cover 2 note on the Sail. Widen Blazer is the alert.",
+      "positions": {
+        "F": "Boat or Yacht: Sail at 12 yds (Sail T.O. in cell one); X runs it in the Stack cell",
+        "X": "Dagger at 18 to 20 yds, widen (Z in the Stack cell); Basic T.O. at 12 yds in the Troff cell",
+        "Z": "Blazer, widen, 15 yds, alert",
+        "Y": "Slam then release, 15 to 18 yds",
+        "H": "Rib Flat or Lick Flat at 3 to 5 yds (Lick Flat at 2 to 3); Check Coin at 2 to 4 yds"
+      },
+      "protections": ["3 Jet Rib", "2 Jet Lick", "Jax Lt Rib"],
+      "formations": ["[11] BUNCH RT KING", "[11] STACK RT YUCK", "[11] TROFF RT EDGE", "[11] BOX RT TITE"],
+      "tags": ["3x1", "Rib", "Lick", "Boat", "Yacht", "Dagger", "Basic", "T.O."],
+      "alerts": ["Widen Blazer is the alert", "Cover 2 note on the Sail"]
+    },
+    {
+      "key": "boat-dunny-3x1",
+      "indexTitle": "BOAT DUNNY (3*1)",
+      "pageTitle": "BOAT DUNNY DAGGER-BASIC (T.O.) (3*1)",
+      "pages": [9],
+      "summary": "F motions and runs Boat (Sail at 12) with Y on a Dunny at 5 beneath it instead of the back flat. Blazer widening to 15 is the alert. X runs Dagger or Basic on the backside and H checks coin at 2 to 4.",
+      "progression": "1 Sail, 2 Dunny, 3 Dagger or Basic; Blazer is the alert",
+      "qb": "7 step. Cover 2 note on the Sail.",
+      "positions": {
+        "F": "Motion, Sail at 12 yds",
+        "Y": "Dunny at 5 yds",
+        "Z": "Blazer, widen, 15 to 18 yds, alert",
+        "X": "Dagger at 18 to 20 yds, widen (first cell); Basic at 12 to 14 yds (second cell)",
+        "H": "Check Coin, outlet at 2 to 4 yds"
+      },
+      "protections": ["Jax Lt"],
+      "formations": ["[11] F MO TRIO R TITE", "[11] F MO TRIO RT"],
+      "tags": ["3x1", "Dunny", "Dagger", "Basic", "T.O.", "F Mo"],
+      "alerts": ["Widen Blazer is the alert"]
+    },
+    {
+      "key": "spear-blink",
+      "indexTitle": "SPEAR BLINK",
+      "pageTitle": "(RIB-LICK) SPEAR BLINK (3*1)",
+      "pages": [10],
+      "summary": "Spear is a Dagger at 18 to 20 that pushes and widens, with a Dagger Pivot at 8 under it. The tagged Blink man runs a 20-yd Blink as the Yes/No. H checks wide as the outlet after a Slam.",
+      "progression": "1 Spear (Dagger), 2 Dagger Pivot; Blink is Yes/No; Check Wide is the outlet",
+      "qb": "7 step. Decide the Blink Yes/No off the look, then work Dagger to Pivot.",
+      "positions": {
+        "tagged spear": "Dagger at 18 to 20 yds, push and widen (Z or X)",
+        "tagged blink": "Blink at 20 yds, Yes/No (X or F)",
+        "pivot": "Dagger Pivot at 8 yds; H or F depending on the cell, unclear",
+        "Y": "Slam then release, 15 yds mark",
+        "H": "Check Wide, outlet"
+      },
+      "protections": ["3 Jet Rib"],
+      "formations": ["[11] BUNCH RT TITE", "[11] JOCK PACK RT TITE", "[11] TROFF RT TITE"],
+      "tags": ["3x1", "Rib", "Lick", "Blink"],
+      "alerts": ["Blink is Yes/No", "Alert printed next to the Slam man"]
+    },
+    {
+      "key": "sword",
+      "indexTitle": "SWORD",
+      "pageTitle": "(RIB-LICK) SWORD (DAPPER) (COINS) (2*2)",
+      "pages": [11],
+      "summary": "2x2 with the tagged man on a pushing Dagger at 18 to 20 and a Pylon at 15 on the other side. The outside man runs a Comeback at 18 with an outside release (fade vs cloud) as an alert. Coins puts the back on a Rib Coin at 5 with a Check Coin outlet at 2 to 4. Dapper is the same picture with the Dagger widening to 20.",
+      "progression": "1 Dagger, 2 Comeback alert, 3 Pylon; Rib Coin and Check Coin are outlets",
+      "qb": "7 step. Comeback is the alert, fade vs cloud.",
+      "positions": {
+        "tagged": "Sword or Dapper: Dagger at 18 to 20 yds, push (X); Dapper widens to 20 (F)",
+        "Z": "Comeback at 18 yds, outside release, fade vs cloud, alert",
+        "Y": "Pylon at 15 yds",
+        "H": "Rib Coin at 5 yds; Check Coin outlet at 2 to 4 yds",
+        "F": "unclear in the Sword cell"
+      },
+      "protections": ["3 Jet Rib"],
+      "formations": ["[11] DOUBLE RT OFF", "[11] SOUTH RT OFF"],
+      "tags": ["2x2", "Rib", "Lick", "Dapper", "Coins"],
+      "alerts": ["Comeback alert, outside release, fade vs cloud"]
+    },
+    {
+      "key": "bingo-3x1-2x2",
+      "indexTitle": "BINGO (3*1 / 2*2)",
+      "pageTitle": "(RIB-LICK) BINGO CB-SHAKE-BENCH (3*1 / 2*2)",
+      "pages": [12],
+      "summary": "F runs Bingo, a Blazer, as the first read with a Basic at 12 to 14 behind it. The tagged outside man runs a Comeback at 18 with an outside release (Yes/No, fade vs cloud) on a max split. The back runs Rib Coin at 5 and checks coin at 2 to 4. Shake and Bench are the other tags listed for the outside man.",
+      "progression": "1 Blazer, 2 Basic, 3 Check Coin; Comeback is Yes/No",
+      "qb": "7 step. Comeback is the Yes/No alert.",
+      "positions": {
+        "F": "Bingo: Blazer",
+        "tagged": "Comeback at 18 yds, outside release, fade vs cloud, Yes/No (X or Z); Shake or Bench by tag",
+        "Y": "Basic at 12 to 14 yds; Slam first in the 3x1 cell",
+        "H": "Rib Coin at 5 yds; Check Coin at 2 to 4 yds",
+        "other outside": "max split +4"
+      },
+      "protections": ["Jax Lt Rib", "3 Jet Rib"],
+      "formations": ["[11] BUNCH RT", "[11] SOUTH RT OFF"],
+      "tags": ["3x1", "2x2", "Rib", "Lick", "CB", "Shake", "Bench"],
+      "alerts": ["Comeback is Yes/No, fade vs cloud", "Max split +4"]
+    },
+    {
+      "key": "warrant-badge-blast",
+      "indexTitle": "WARRANT-BADGE-BLAST",
+      "pageTitle": "(RIB-LICK) WARRANT-BADGE-BLAST (SHORT POST/SHAKE) (3*1)",
+      "pages": [13],
+      "summary": "Three versions of one 3x1 picture. The first read is a Search at 15 that settles in the open grass between the hashes. The back's Rib Flat at 3 to 5 is second. The third man changes by word: Warrant is a Swirl at 10 and 15, Badge is a Blink at 20, Blast is the 20-yd Blast with marks at 10 and 15. X can add a Short Post (7 steps, Yes/No). H slams and checks wide.",
+      "progression": "1 Search, 2 Rib Flat, 3 Swirl, Blink or Blast",
+      "qb": "7 step. Short Post tag on X is Yes/No.",
+      "positions": {
+        "Y": "Search at 15 yds, find the void between the hashes",
+        "Z": "Warrant: Swirl at 10 and 15 yds; Badge: Blink at 20 yds; Blast: Blast at 20 yds with 10 and 15 marks",
+        "X": "unlabeled in the base cells; Short Post in 7 steps, Yes/No, when tagged",
+        "F": "Slam then release, outlet",
+        "H": "Rib Flat at 3 to 5 yds; Check Wide"
+      },
+      "protections": ["3 Jet Rib", "Jax Lt Rib"],
+      "formations": ["[11] BUNCH RT TITE", "[11] BUNCH RT EDGE", "[11] BUNCH RT"],
+      "tags": ["3x1", "Rib", "Lick", "Warrant", "Badge", "Blast", "Short Post", "Shake"],
+      "alerts": ["Short Post is Yes/No"]
+    },
+    {
+      "key": "pearls",
+      "indexTitle": "PEARLS",
+      "pageTitle": "(RIB-LICK) PEARLS DAGGER-BASIC (T.O.) (3*1)",
+      "pages": [14],
+      "summary": "Pearls is a Pylon at 15 as the first read, a Swirl at 10 and 15 as the second, and the back's Rib Flat at 3 to 5 as the third, with a Cover 2 note on the Pylon. X runs Dagger at 18 to 20 or Basic at 12 to 14 on the backside, Basic T.O. in the third cell. H checks coin at 2 to 4.",
+      "progression": "1 Pylon, 2 Swirl, 3 Rib Flat, 4 Basic (second cell); Check Coin outlet",
+      "qb": "7 step. Cover 2 note on the Pylon. Basic T.O. is the alert in the third cell.",
+      "positions": {
+        "Z": "Pylon at 15 yds",
+        "Y": "Swirl at 10 and 15 yds",
+        "X": "Dagger at 18 to 20 yds (cell one); Basic at 12 to 14 yds (cell two); Basic T.O., alert (cell three)",
+        "F": "Slam then release, 15 yds",
+        "H": "Rib Flat at 3 to 5 yds; Check Coin at 2 to 4 yds"
+      },
+      "protections": ["3 Jet Rib", "Jax Lt Rib"],
+      "formations": ["[11] BUNCH RT", "[11] Y MO BUNDLE RT", "[11] BUNCH RT TITE"],
+      "tags": ["3x1", "Rib", "Lick", "Dagger", "Basic", "T.O.", "Y Mo"],
+      "alerts": ["Cover 2 note on the Pylon", "Basic T.O. alert"]
+    },
+    {
+      "key": "obama-bench",
+      "indexTitle": "OBAMA-BENCH",
+      "pageTitle": "(BANG) BENCH - OBAMA (T.O.) (2*2)",
+      "pages": [15],
+      "summary": "Mirrored 2x2 deep concept. Bench puts both outside men on a Bench at 18 to 20 with C.O. routes at 5 inside, the back on a Check Option outlet at 5. Obama keeps the Bench but adds the Bang Flat at 3 to 5 and a Slam. Bench T.O. turns the tagged outside man loose.",
+      "progression": "1 Bench, 2 C.O. (Bench, each side); 1 Bench, 2 Bang Flat (Obama)",
+      "qb": "7 step. Pick a side; Check Option is the outlet.",
+      "positions": {
+        "X": "Bench at 18 to 20 yds, 15 yd mark; Bench T.O. when tagged",
+        "Z": "Bench at 18 to 20 yds",
+        "Y": "C.O. at 5 yds (Bench); Slam then release (Obama)",
+        "F": "C.O. at 5 yds (Bench); Slam then release (Obama)",
+        "H": "Check Option, outlet at 5 yds (Bench); Bang Flat at 3 to 5 yds (Obama)"
+      },
+      "protections": ["2 Jet Bang", "2 Jet", "3 Jet"],
+      "formations": ["[11/12] SNUG RT", "[11] DOUBLE RT OFF", "[11] SPREAD RT", "[11] SNUG RT"],
+      "tags": ["2x2", "Bang", "T.O.", "X T.O."],
+      "alerts": []
+    },
+    {
+      "key": "bang-swirl-bozo",
+      "indexTitle": "BANG SWIRL (BOZO)",
+      "pageTitle": "(BANG) SWIRL (BOZO) (2*2)",
+      "pages": [16],
+      "summary": "Mirrored Swirls at 10 and 15 from both inside men with the back's Bang Flat at 3 to 5 under them and a Slam outside. Bozo changes one side to a Basic at 12 to 14 and makes the other Swirl a Swirl T.O. Check Option at 5 is the outlet.",
+      "progression": "1 Swirl, 2 Bang Flat (Swirl); 1 Swirl T.O., 2 Slam, 3 Basic (Bozo), order unclear",
+      "qb": "7 step. Check Option is the outlet.",
+      "positions": {
+        "Y": "Swirl at 10 and 15 yds; Basic at 12 to 14 yds in Bozo",
+        "F": "Swirl at 10 and 15 yds; Swirl T.O. in Bozo",
+        "X": "Slam then release",
+        "Z": "Slam then release",
+        "H": "Bang Flat at 3 to 5 yds; Check Option outlet at 5 yds"
+      },
+      "protections": ["3 Jet Bang"],
+      "formations": ["[11/12] SNUG RT"],
+      "tags": ["2x2", "Bang", "Bozo"],
+      "alerts": []
+    },
+    {
+      "key": "samurai-sensei-shredder",
+      "indexTitle": "SAMURAI-SENSEI-SHREDDER",
+      "pageTitle": "(SCRABBLE) SAMURAI-SENSEI-SHREDDER",
+      "pages": [17],
+      "summary": "Three crossing-route cousins off Scrabble protection from the same Swift formation. Samurai: Far Cross at 22 to 25 over a Low Cross at 10 to 12, Rib Shallow at 5, Lick Flat at 3 to 5, Dagger widening to 20. Sensei: Sail at 12 and 15 with a Deep Diagonal, Lick Shallow at 5, Rib Flat at 3 to 5. Shredder: Blazer, Deep Diagonal and Deep Skinny over the Rib Shallow and Lick Flat.",
+      "progression": "Samurai 1 to 5 with Far Cross and Low Cross early, order unclear; Sensei 1 to 5; Shredder 1 and 2 with an outlet",
+      "qb": "7 step. Sensei and Shredder carry alerts on the deep routes.",
+      "positions": {
+        "samurai": "Far Cross 22 to 25 yds, Low Cross 10 to 12 yds, Rib Shallow 5 yds, Lick Flat 3 to 5 yds, Dagger widen 20 yds",
+        "sensei": "Sail 12 and 15 yds (alert), Deep Diagonal, Lick Shallow 5 yds, Rib Flat 3 to 5 yds",
+        "shredder": "Blazer, Deep Diagonal, Deep Skinny (alert), Rib Shallow 5 yds, Lick Flat 3 to 5 yds, outlet",
+        "letters": "which letter runs which route is unclear from the text"
+      },
+      "protections": ["3 Scrabble"],
+      "formations": ["SWIFT RT TOUT TRES", "[11] SWIFT RT TOUT TRES"],
+      "tags": ["Scrabble", "Samurai", "Sensei", "Shredder"],
+      "alerts": ["Sensei: Sail alert", "Shredder: alerts on the deep routes"]
+    }
+  ]
+}

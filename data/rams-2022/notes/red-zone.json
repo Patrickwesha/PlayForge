@@ -1,0 +1,398 @@
+{
+  "section": "red-zone",
+  "source": "Rams 2022 (McVay), 23 Redzone",
+  "concepts": [
+    {
+      "key": "spray",
+      "indexTitle": "SPRAY",
+      "pageTitle": "SPRAY (OUT) (DRIVE) WHIRL [CAN] R/P (2*2)",
+      "pages": [
+        5
+      ],
+      "summary": "Red zone two by two concept where the F runs the Spray, a speed cut or stick with the option to widen, and the Z runs a Whirl behind it. The Y drive is a shallow cross with a check slow note, the X runs a stick or speed cut, and the back is the outlet. Spray Out turns the F route into an out. Can R/P means it can be checked to a run.",
+      "progression": "1+ the F Spray, 1 the Y drive, 2 the Whirl, 3 the X stick, 4 the outlet, as best read from the pictures.",
+      "qb": "Check Burst is the alert. Several routes carry a Save 2 note and a depth of 5 yards, or 1 yard into the end zone on third and fourth down.",
+      "hb": "Outlet.",
+      "positions": {
+        "F": "Spray: speed cut or stick, widen option. Out on the Out version.",
+        "Y": "Drive: shallow cross, check slow.",
+        "Z": "Whirl, 1 yard into the end zone, Save 2.",
+        "X": "Stick or speed cut, Save 2.",
+        "H": "Outlet."
+      },
+      "protections": [
+        "2 Jet",
+        "58",
+        "3 Jet"
+      ],
+      "formations": [
+        "[11] SOUTH LT",
+        "[11] FAST PACK RT ZAC 'O'",
+        "[11] (Z FLOAT/RAT-LAB) SOUTH RT CLOSE"
+      ],
+      "tags": [
+        "Out",
+        "Drive",
+        "Whirl",
+        "Can",
+        "R/P",
+        "Zac",
+        "Close",
+        "Z Float",
+        "Rat-Lab"
+      ],
+      "alerts": [
+        "Check Burst.",
+        "Depth rule: 5 yards, or 1 yard into the end zone on third and fourth down."
+      ]
+    },
+    {
+      "key": "point-fade-burst",
+      "indexTitle": "POINT FADE BURST",
+      "pageTitle": "POINT FADE BURST (3*1)",
+      "pages": [
+        6
+      ],
+      "summary": "Three by one concept from a bunch. The Point side runs a corner with an inside release, a widen pivot and a flat, with the corner capped at the 6 yard line. The single receiver runs a Fade as the alert. The back is the outlet and Check Burst is the alert tag.",
+      "progression": "Numbers 1 to 3 on the flat, the corner and the pivot. Order unclear in the text.",
+      "qb": "Fade alert to the single receiver. Check Burst.",
+      "hb": "Outlet.",
+      "positions": {
+        "Y": "Corner with an inside release, capped at the 6 yard line.",
+        "Z": "Widen pivot.",
+        "F": "Flat, 1 yard into the end zone, or 5 yards and 1 yard in on third and fourth down.",
+        "X": "Fade alert.",
+        "H": "Outlet."
+      },
+      "protections": [
+        "300 Jet",
+        "200 Jet"
+      ],
+      "formations": [
+        "[11] Y SHORT BUNCH RT",
+        "[11] SWIFT PACK RT OPEN"
+      ],
+      "tags": [
+        "Point",
+        "Fade",
+        "Burst",
+        "Y Short",
+        "Open"
+      ],
+      "alerts": [
+        "Fade alert on the single receiver.",
+        "Check Burst.",
+        "Cap the corner at the 6 yard line."
+      ]
+    },
+    {
+      "key": "chin-dart-chops",
+      "indexTitle": "CHIN DART - CHOPS",
+      "pageTitle": "CHIN DART (READ) - CHOPS (EMPTY/3*1 / 2*2)",
+      "pages": [
+        7
+      ],
+      "summary": "Chin is a choice in at 5 yards by the named receiver with a stick nod next to it and a flat china at 3 to 5 yards under it. Omaha China is a four step version of the china. Dart sends the named man on the dart route; Dart Read lets him read it. Chops is the two by two version with a check wide outlet. The outside receiver has a corner alert at 12 yards or a fade.",
+      "progression": "1 choice in at 5 yards, 2 stick nod, 3 flat china, 4 the corner or fade alert, as best read.",
+      "qb": "Four steps. Flat china landmark: outside edge of the numbers to the field, two yards outside the numbers to the boundary.",
+      "hb": "Flat china or check wide outlet, by the picture.",
+      "positions": {
+        "Y": "Choice in at 5 yards (Chin), or Chops.",
+        "H": "Chin Dart Read from the Speed Pack, or flat.",
+        "F": "Chin Dart from North Rt Close, or corner alert at 12.",
+        "X": "Corner at 12 yards or fade alert.",
+        "Z": "Dart at 5 yards, or stick nod."
+      },
+      "protections": [
+        "2 Scram",
+        "2 Jet"
+      ],
+      "formations": [
+        "[11] SOUTH RT CLAMP 'TRES'",
+        "[11] SPEED PACK RT TOUT 'C'",
+        "[11] NORTH RT CLOSE",
+        "[11] TROFF RT SLIM UNO"
+      ],
+      "tags": [
+        "Chin",
+        "Dart",
+        "Read",
+        "Chops",
+        "Omaha China",
+        "Clamp",
+        "Tres",
+        "Tout",
+        "Close",
+        "Slim",
+        "Uno"
+      ],
+      "alerts": [
+        "Corner alert at 12 yards.",
+        "Omaha China: four step version of the china."
+      ]
+    },
+    {
+      "key": "mooch-dart-chops",
+      "indexTitle": "MOOCH DART - CHOPS",
+      "pageTitle": "MOOCH(O) DART (READ) - CHOPS (EMPTY/3*1 / 2*2)",
+      "pages": [
+        8
+      ],
+      "summary": "The same family as Chin but the named receiver runs the Mooch, a money route at 5 yards, with a widen go outside him, a stick nod, and a flat china at 3 to 5 yards. Omaha China is the four step china. Dart and Dart Read work as on the Chin page. Chops is the two by two version.",
+      "progression": "1 money route at 5 yards, 2 widen go, 3 flat china and stick nod, 4 corner alert at 12, as best read.",
+      "qb": "Four steps. Corner alert at 12 yards.",
+      "hb": "Flat china or outlet.",
+      "positions": {
+        "F": "Mooch from Snug, or corner alert at 12.",
+        "Y": "Mooch Chops or Mooch Dart Read from South Rt Clamp.",
+        "H": "Mooch Dart from the Speed Pack.",
+        "X": "Widen go, or stick nod.",
+        "Z": "Widen go, or dart at 5 yards."
+      },
+      "protections": [
+        "3 Scram",
+        "2 Scram",
+        "2 Scat"
+      ],
+      "formations": [
+        "[11] SNUG RT 'B'",
+        "[11] SOUTH RT CLAMP 'DOS'",
+        "[11] SPEED PACK RT TOUT",
+        "[11] SOUTH RT CLAMP 'TRES'"
+      ],
+      "tags": [
+        "Mooch",
+        "Dart",
+        "Read",
+        "Chops",
+        "Money",
+        "Omaha China",
+        "B",
+        "Dos",
+        "Tres",
+        "Tout"
+      ],
+      "alerts": [
+        "Corner alert at 12 yards."
+      ]
+    },
+    {
+      "key": "racer",
+      "indexTitle": "RACER",
+      "pageTitle": "RACER (WHEEL (SCAT PRO))",
+      "pages": [
+        9
+      ],
+      "summary": "Two race routes cross the field at different levels, one deep and one shallow, with a pivot underneath and a Whirl by the outside receiver. The back is the outlet, or runs a Wheel when Scat protection is called. The deep routes are run 1 yard into the end zone and the cap is the 8 yard line. P.O.R. is printed on the whirl receiver; its meaning is unclear.",
+      "progression": "1 and 2 the deep and shallow race routes, 3 pivot, 4 outlet or P.O.R., as best read.",
+      "qb": "Check Burst. Routes end 1 yard into the end zone, or at 5 yards on third and fourth down goal.",
+      "hb": "Outlet, or Wheel on 2 Scat Racer H Wheel.",
+      "positions": {
+        "Y": "Deep race.",
+        "Z": "Shallow race or Whirl.",
+        "F": "Race or pivot, Save 2.",
+        "X": "Whirl or widen whirl, Save 2.",
+        "H": "Outlet or Wheel."
+      },
+      "protections": [
+        "3 Jet",
+        "2 Jet",
+        "2 Scat"
+      ],
+      "formations": [
+        "[11] TRIO RT",
+        "[11] SPEED RT OPEN",
+        "[11] BUNCH RT"
+      ],
+      "tags": [
+        "Wheel",
+        "Scat",
+        "Open"
+      ],
+      "alerts": [
+        "Check Burst.",
+        "Cap at the 8 yard line."
+      ]
+    },
+    {
+      "key": "backer",
+      "indexTitle": "BACKER",
+      "pageTitle": "BACKER (3*1)",
+      "pages": [
+        10
+      ],
+      "summary": "Three by one version of the race family. One receiver runs a race back, coming back against the grain, while the others run the deep and shallow race routes and a pivot. P.O.R. race is printed on one route. The deep routes are 1 yard into the end zone and the cap is the 8 yard line. Five reads are numbered.",
+      "progression": "Numbers 1 to 5 on the race back, the deep and shallow race, the pivot and the outlet. Order unclear in the text.",
+      "qb": "Check Burst. Five reads.",
+      "hb": "Outlet or pivot.",
+      "positions": {
+        "X": "Race back.",
+        "Y": "Race, shallow or on the move.",
+        "Z": "Deep race or widen race.",
+        "F": "Pivot, Save 2.",
+        "H": "Outlet."
+      },
+      "protections": [
+        "Jax Lt",
+        "2 Jet",
+        "2 Timely",
+        "Jax Rt"
+      ],
+      "formations": [
+        "[11] TRIO RT",
+        "[11] SWIFT RT OPEN",
+        "[11] DOUBLE RT YUCK",
+        "[11] BUNCH RT"
+      ],
+      "tags": [
+        "Open",
+        "Yuck"
+      ],
+      "alerts": [
+        "Check Burst.",
+        "Cap at the 8 yard line."
+      ]
+    },
+    {
+      "key": "attack-h-coin",
+      "indexTitle": "ATTACK H COIN",
+      "pageTitle": "ATTACK (DARE) (RACE) (SWIRL WIDE) H COIN 3*1",
+      "pages": [
+        11
+      ],
+      "summary": "Three by one concept. The Attack route works to the goal line, with a seam stop or race next to it and a go or fade on the outside whose job is to clear, not to get the ball: if it is not thrown he turns it into a whirl. The H runs a Coin, with Check Coin as the pre snap call. Dare and Race change the inside routes, and Swirl Wide sends the X on a swirl at 10 to 15 yards.",
+      "progression": "1 the Attack route, 2 the seam stop or race, 3 the go or fade, 4 the outlet, as best read.",
+      "qb": "Check Coin pre snap. Attack to the goal line.",
+      "hb": "Coin route, or outlet.",
+      "positions": {
+        "Y": "Attack to the goal line, or race.",
+        "Z": "Seam stop, race, or Save 2.",
+        "F": "Race, 1 yard into the end zone, or outlet.",
+        "X": "Go or fade. Do not look for the ball; run the whirl if it does not come. Swirl Wide at 10 to 15 yards when tagged.",
+        "H": "Coin."
+      },
+      "protections": [
+        "3 Jet",
+        "Jax Lt",
+        "Jax Rt"
+      ],
+      "formations": [
+        "[11] TRIO RT",
+        "[11] SPRINT PACK RT OPEN"
+      ],
+      "tags": [
+        "Dare",
+        "Race",
+        "Swirl Wide",
+        "H Coin",
+        "Open"
+      ],
+      "alerts": [
+        "Check Coin.",
+        "Check Wide on the Swirl Wide version."
+      ]
+    },
+    {
+      "key": "fire-2-fly-crossers",
+      "indexTitle": "FIRE 2 FLY CROSSERS",
+      "pageTitle": "FIRE 2 FLY CROSSERS",
+      "pages": [
+        12
+      ],
+      "summary": "Fly motion by the F who then runs to the flat, with the X on crossers (a low shallow cross and a high shallow cross drawn on the picture) and a cut route as the first read. One receiver works the back end line as the alert.",
+      "progression": "1 the cut, 2 and 3 the crossers, as best read.",
+      "qb": "Back end line alert.",
+      "hb": "Flat off the fly motion.",
+      "positions": {
+        "F": "Fly, then flat.",
+        "X": "Shallow cross low and high.",
+        "Y": "Cut, Save 2.",
+        "Z": "Back end line alert."
+      },
+      "protections": [
+        "Fire 2"
+      ],
+      "formations": [
+        "[11] SOUTH RT CLOSE"
+      ],
+      "tags": [
+        "Fly",
+        "Crossers",
+        "Close"
+      ],
+      "alerts": [
+        "Back end line alert."
+      ]
+    },
+    {
+      "key": "joe-oakley-coco",
+      "indexTitle": "JOE (OAKLEY-COCO)",
+      "pageTitle": "JOE RT-LT FLOW-BOLT OAKLEY-COCO (CAN) ZONE ANSWER (EMPTY)",
+      "pages": [
+        13
+      ],
+      "summary": "An empty formation zone answer. Joe Rt or Lt sets the direction, Flow and Bolt are the motion versions. Two shallow crosses come from opposite sides with a corner over the top. Oakley and Coco are tags that change a named receiver's route (Y Coco, F Coco, X Low). C.O. is printed on the corner; its meaning is unclear. Can means it can be checked.",
+      "progression": "1 the corner, 2 the shallow crosses, as best read.",
+      "qb": "Zone answer. Four steps with the Omaha on the Scoot Pack version.",
+      "positions": {
+        "X": "Shallow cross, or low cross on X Low.",
+        "Y": "Shallow cross, or Coco.",
+        "Z": "Corner, or bolt motion.",
+        "F": "Coco, or race with Save 2.",
+        "H": "Omaha widen, or corner."
+      },
+      "protections": [
+        "Joe"
+      ],
+      "formations": [
+        "[11] SOUTH LT TOUT C",
+        "[11] BUNCH RT TITE TRES",
+        "[11] SCOOT PACK LT B Z BOLT"
+      ],
+      "tags": [
+        "Flow",
+        "Bolt",
+        "Oakley",
+        "Coco",
+        "Madison",
+        "X Low",
+        "Can",
+        "Tout",
+        "Tite",
+        "Tres",
+        "B"
+      ]
+    },
+    {
+      "key": "roll-rt-fly",
+      "indexTitle": "ROLL RT FLY",
+      "pageTitle": "ROLL RT FLY (HUSKER) (CAN) ZONE ANSWER",
+      "pages": [
+        14
+      ],
+      "summary": "The Roll protection with Fly motion as a zone answer in the red zone. The back gets to the flat right away at 1 yard, the Y runs the low cross, a receiver runs a late down flat, and the outside man runs a corner, or a Husker corner at 12 with a me/you call on the Husker version. The F flies across.",
+      "progression": "1 the flat at 1 yard, 2 the low cross, 3 the late down flat and corner, as best read.",
+      "qb": "Fake the midzone and roll to the call side (see the Roll protection page).",
+      "hb": "Flat to the roll side, quick, at 1 yard.",
+      "positions": {
+        "H": "Flat at 1 yard.",
+        "Y": "Low cross.",
+        "X": "Late down flat.",
+        "Z": "Corner, or Husker corner at 12 with the me/you call.",
+        "F": "Fly motion."
+      },
+      "protections": [
+        "Roll Rt"
+      ],
+      "formations": [
+        "[11] BUNCH RT TITE"
+      ],
+      "tags": [
+        "Fly",
+        "Husker",
+        "Can",
+        "Tite"
+      ]
+    }
+  ]
+}
