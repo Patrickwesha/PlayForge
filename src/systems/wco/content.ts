@@ -1,7 +1,8 @@
 /**
  * Kid West Coast Offense 2026 (2nd / 3rd grade): the offense Sean McVay and Kyle Shanahan would build for their
  * own kids. Ten plays, same count as the Beast. The ideas are theirs, made small:
- * - one look for everything: Q under center, F and H stacked behind him (21 personnel), Y on the color side;
+ * - one look for everything: the Pistol (Q at 3 yards, H straight behind him, F next to Q), Y on the color side;
+ *   Bunch is the one look from the Gun;
  * - wide zone (Surf) is the play everything comes off: Dart, Cutback, Jet, Boot and Leak all look like Surf or
  *   Dart for the first two steps ("illusion of complexity");
  * - motion on purpose (Jet), naked bootleg off the run fake (Boot), a fullback who leads (Dart), the GT counter
@@ -34,7 +35,7 @@ export const CONCEPTS: Concept[] = [
     carrier: 'H', where: 'A gap, right behind F', withWings: true,
     kidSays: 'F is the arrow, H is the dart. Throw it straight through the A gap.',
     signal: 'Throw a dart', cities: ['Dallas', 'Delaware'], week: 2,
-    coachNote: 'Downhill run with the fullback leading, the Shanahan way. The line blocks GOD with a double team at the point. Same first step as Leak.',
+    coachNote: 'Downhill run with the fullback leading, the Shanahan way. F crosses in front of H from his spot next to Q. The line blocks GOD with a double team at the point. Same first step as Leak.',
   },
   {
     n: 3, key: 'jet', kid: 'Jet', coach: 'Jet Sweep', kind: 'run', numbers: { right: 49, left: 48 },
@@ -55,7 +56,7 @@ export const CONCEPTS: Concept[] = [
     carrier: 'F, Y or X', where: 'Fake Surf, Q boots the other way', withWings: false,
     kidSays: 'Everybody goes one way. Q sneaks the ball the other way and throws to his buddies.',
     signal: 'Tap your shoe', cities: ['Bedford', 'Boston'], week: 5,
-    coachNote: 'Naked bootleg off Surf: the play McVay and Shanahan build their pass game on. Three receivers at three levels to the boot side: F low (flat), Y middle (cross), X high (clear). First look is the shortest throw.',
+    coachNote: 'Naked bootleg off Surf: the play McVay and Shanahan build their pass game on. F fakes his Surf block on the end, then sneaks to the flat. Three receivers at three levels to the boot side: F low (flat), Y middle (cross), X high (clear). First look is the shortest throw.',
   },
   {
     n: 6, key: 'leak', kid: 'Leak', coach: 'Play-Action Leak', kind: 'pass', playAction: true, numbers: { right: 0, left: 0 },
@@ -69,7 +70,7 @@ export const CONCEPTS: Concept[] = [
     carrier: 'Y or F', where: 'Quick throw from bunch: Y hook, F flat', withWings: true,
     kidSays: 'Y hooks, F runs flat. Throw to whoever is open.',
     signal: 'Make a hook with your finger', cities: ['Houston', 'Hawaii'], week: 8,
-    coachNote: 'Quick game: the Stick concept from bunch. Three steps, one read: the hook, then the flat.',
+    coachNote: 'Quick game: the Stick concept from Gun Bunch. Catch, one step, one read: the hook, then the flat.',
   },
   {
     n: 8, key: 'web', kid: 'Web', coach: 'Halfback Screen', kind: 'pass', numbers: { right: 0, left: 0 },
@@ -97,9 +98,9 @@ export const CONCEPTS: Concept[] = [
 export const conceptByKey = new Map(CONCEPTS.map((c) => [c.key, c]));
 
 export const POSITIONS = [
-  { label: 'Q', kid: 'The Captain', job: 'Takes the snap under center. Hands off, fakes, boots and throws. Number 1 in the play numbers.', lineup: 'Under the center, hands under his seat.' },
-  { label: 'H', kid: 'The Runner', job: 'Carries Surf, Dart and Cutback. Fakes on everything else. Number 2.', lineup: 'Straight behind Q, toes at 6 yards.' },
-  { label: 'F', kid: 'The Bulldozer', job: 'The fullback. Leads on Dart, blocks the edge on Surf, sneaks to the flat on Boot. Number 3.', lineup: 'Straight behind Q, toes at 3 yards.' },
+  { label: 'Q', kid: 'The Captain', job: 'Catches the snap in the pistol (the gun on Bunch). Hands off, fakes, boots and throws. Number 1 in the play numbers.', lineup: 'Pistol: toes at 3 yards behind the center. Gun: 5 yards.' },
+  { label: 'H', kid: 'The Runner', job: 'Carries Surf, Dart and Cutback. Fakes on everything else. Number 2.', lineup: 'Straight behind Q, toes at 5 1/2 yards. Next to Q in the gun.' },
+  { label: 'F', kid: 'The Bulldozer', job: 'The fullback. Leads on Dart, seals the back side on Surf, sneaks to the flat on Boot. Number 3.', lineup: 'Next to Q on the side away from the Y.' },
   { label: 'Y', kid: 'The Anchor', job: 'Tight end. Wherever Y goes is the color side. Blocks, crosses on Boot, leaks on Leak.', lineup: 'On the line, next to the tackle on the color side.' },
   { label: 'Z', kid: 'Zoom', job: 'Receiver on the Y side. Goes in motion and carries Jet. Number 4.', lineup: 'Hash +3 on the Y side, one yard back.' },
   { label: 'X', kid: 'Lightning', job: 'Receiver on the other side. Runs deep to clear space, crosses on Zipper.', lineup: 'Hash +4 on the other side, on the line.' },
@@ -145,12 +146,12 @@ export const LEGEND = [
 
 export const INSTALL: InstallWeek[] = [
   {
-    week: 1, title: 'Line up and Surf', adds: ['surf'], formations: ['pro-right', 'pro-left'],
-    line: 'Stance and splits (one foot). STEP-HIT-UP: everybody steps together. Center to Q under-center snap, 20 a day.',
-    skill: 'Pro Red and Pro Yellow: who goes where. Q reverse pivot and handoff to H at 6 yards. H: one cut (Bang, Bend, Bounce).',
+    week: 1, title: 'Line up and Surf', adds: ['surf'], formations: ['pistol-right', 'pistol-left'],
+    line: 'Stance and splits (one foot). STEP-HIT-UP: everybody steps together. Pistol snap from the center to Q at 3 yards, 20 a day.',
+    skill: 'Pistol Red and Pistol Yellow: who goes where. Q catches the snap and puts the ball in H\'s belly as H runs by. H: one cut (Bang, Bend, Bounce).',
     calling: 'Huddle only. "Red 1" = Surf to the Red side. Snap on Monday.',
     drills: ['Formation Freeze: coach yells Red or Yellow, everyone sprints to his spot', 'Wave drill: the line steps together on the snap, five in a row', 'Bang-Bend-Bounce: three cones, coach points, H cuts'],
-    readyWhen: ['All 11 line up Pro Red and Pro Yellow in under 10 seconds', 'The line takes the same first step on every snap', 'Center to Q snap is clean 8 out of 10'],
+    readyWhen: ['All 11 line up Pistol Red and Pistol Yellow in under 10 seconds', 'The line takes the same first step on every snap', 'Pistol snap is clean 8 out of 10 (chest high, no bounces)'],
   },
   {
     week: 2, title: 'Dart', adds: ['dart'], formations: [],
@@ -163,7 +164,7 @@ export const INSTALL: InstallWeek[] = [
   {
     week: 3, title: 'Jet and Ice', adds: ['jet', 'ice'], formations: [],
     line: 'STEP-HIT-UP to the other side on Jet. Ice: nobody moves.',
-    skill: 'Z jet motion: full speed, snap when Z reaches the guard. Q hands to Z on the run, then fakes Surf to H.',
+    skill: 'Z jet motion: full speed, in front of Q. Snap when Z reaches the guard. Q steps up, hands to Z on the run, then fakes Surf to H.',
     calling: 'Saturday added (snap on SET). Jet is always on Monday at first so the timing stays the same.',
     drills: ['Jet timing: Z runs motion, Q claps, snap at the guard, 10 reps a side', 'Ice drill: coach jumps, only the center can snap'],
     readyWhen: ['Clean Jet handoff 8 of 10 at full speed', 'Nobody moves on Ice, 3 reps in a row'],
@@ -196,17 +197,17 @@ export const INSTALL: InstallWeek[] = [
     week: 7, title: 'No-huddle: check with me', adds: [], formations: [],
     line: 'Two-point ready stance until the call, then get set.',
     skill: 'Everybody looks to the sideline after lining up.',
-    calling: '"Pro Red, check with me!" then City + Color + Day ("Sachse Red Monday" = Surf right on the first GO). Start with Surf, Dart, Jet. Add Friday (fake count).',
+    calling: '"Pistol Red, check with me!" then City + Color + Day ("Sachse Red Monday" = Surf right on the first GO). Start with Surf, Dart, Jet. Add Friday (fake count).',
     drills: ['City game: coach says a city, players shout the play', 'Fast break: line up, look, set, snap in under 15 seconds'],
     readyWhen: ['Five check-with-me plays in a row with no wrong play'],
   },
   {
-    week: 8, title: 'Hook from Bunch', adds: ['hook'], formations: ['bunch-right', 'bunch-left'],
-    line: 'Quick pass set. Pass GOD.',
-    skill: 'Bunch: Z in front on the line, Y and F one step back on each side of him. Y hooks at 5, F to the flat, Z clears deep. Q: three steps, throw on time.',
+    week: 8, title: 'Hook from Gun Bunch', adds: ['hook'], formations: ['gun-bunch-right', 'gun-bunch-left'],
+    line: 'Quick pass set. Pass GOD. Gun snap: 5 yards, chest high.',
+    skill: 'Gun Bunch: Q at 5 yards, H next to him. Z in front on the line, Y and F one step back on each side of him. Y hooks at 5, F to the flat, Z clears deep. Q: catch, one step, throw on time.',
     calling: 'Hook on Saturday (quick snap). Good on 3rd and short.',
-    drills: ['Bunch line-up: Red and Yellow, 10 seconds', 'Hook-flat read: coach covers one, Q throws the other'],
-    readyWhen: ['Team lines up Bunch both colors', 'Y catches 7 of 10 hooks'],
+    drills: ['Gun snaps: 20 a day from 5 yards', 'Bunch line-up: Red and Yellow, 10 seconds', 'Hook-flat read: coach covers one, Q throws the other'],
+    readyWhen: ['Team lines up Gun Bunch both colors', 'Gun snap is clean 8 out of 10', 'Y catches 7 of 10 hooks'],
   },
   {
     week: 9, title: 'Leak and Web', adds: ['leak', 'web'], formations: [],
@@ -217,7 +218,7 @@ export const INSTALL: InstallWeek[] = [
     readyWhen: ['Y releases on time 4 of 5', 'The web is set before the catch'],
   },
   {
-    week: 10, title: 'Zipper and Ace', adds: ['zipper'], formations: ['ace-right', 'ace-left'],
+    week: 10, title: 'Zipper and Ace', adds: ['zipper'], formations: ['pistol-ace-right', 'pistol-ace-left'],
     line: 'Pass GOD. Ace: two tight ends, same rules.',
     skill: 'X crosses under at 4, Y over at 6: they zip past each other. Z clears deep, F to the flat.',
     calling: 'Zipper against man coverage. Ace for the same runs with two tight ends.',
@@ -225,7 +226,7 @@ export const INSTALL: InstallWeek[] = [
     readyWhen: ['X and Y cross without running into each other', 'Team lines up Ace both colors'],
   },
   {
-    week: 11, title: 'Jumbo, red zone and two-point', adds: [], formations: ['jumbo'],
+    week: 11, title: 'Jumbo, red zone and two-point', adds: [], formations: ['pistol-jumbo'],
     line: 'Short yardage: Dart and Cutback from Jumbo. Low pad level.',
     skill: 'Two-minute: no-huddle with Saturday snaps.',
     calling: 'Two-point list from the call sheet. Use the watcher tallies to pick plays.',
@@ -278,7 +279,7 @@ export const WATCHERS = [
 
 export const PRACTICE_70 = [
   { time: '0:00 - 0:10', what: 'Formation Freeze: coach calls a color and a formation, everyone sprints to his spot and freezes.' },
-  { time: '0:10 - 0:25', what: 'Line: stance, the wave (STEP-HIT-UP), GOD, pulls. Backs: snaps under center, handoffs, fakes.' },
+  { time: '0:10 - 0:25', what: 'Line: stance, the wave (STEP-HIT-UP), GOD, pulls. Backs: pistol and gun snaps, handoffs, fakes.' },
   { time: '0:25 - 0:45', what: 'Skill drills for this week\'s plays (Bang-Bend-Bounce, Jet timing, Hide the ball).' },
   { time: '0:45 - 1:05', what: 'Team: this week\'s plays both colors, then the 6-play script.' },
   { time: '1:05 - 1:10', what: 'Check yourself: kids explain one play back to a coach in their own words.' },
@@ -286,7 +287,8 @@ export const PRACTICE_70 = [
 
 export const CHECK_THESE = [
   { label: 'Two run rules', text: 'STEP-HIT-UP (zone) on Surf and Jet, GOD on Dart and Cutback, Pass GOD on every pass. If two rules is too much early, block Surf with GOD for the first two weeks; the picture is the same.' },
-  { label: 'Under center', text: 'McVay and Shanahan put the QB under center so every run and every fake starts the same way. If the snap is shaky, Pistol runs the same plays.' },
+  { label: 'Pistol, not under center', text: 'Q catches the snap at 3 yards and H stays straight behind him, so every run and fake still starts the same way (the McVay / Shanahan idea) without the under-center exchange. Bunch comes from the Gun so Q sees the hook right away. The pistol snap needs daily reps: 20 a practice.' },
+  { label: 'F next to Q', text: 'in the pistol F starts beside Q on the side away from the Y. He leads across on Dart, seals the back side on Surf and fakes that same seal before sneaking to the flat on Boot.' },
   { label: 'Jet and Boot go away from the Y', text: 'on purpose. Everything looks like Surf, then the ball goes the other way. That is the whole idea of their offense.' },
   { label: 'Condensed splits', text: 'X on Hash +4 and Z on Hash +3 (NFL field level) keep blocks and throws short for 7 year olds. Widen them if your field is narrow.' },
   { label: 'Boot first look', text: 'is the flat (the shortest throw), then the cross. McVay often reads cross first; for 7 year olds the flat is the safer throw.' },
