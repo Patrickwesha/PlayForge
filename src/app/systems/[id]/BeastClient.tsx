@@ -380,6 +380,10 @@ export function BeastClient() {
 
       <H2 id="print" sub="Each one opens a print-ready page. Use the browser's Print, landscape for the call sheet.">Print</H2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        <Link href="/systems/beast-2026/book" className="border-2 border-black rounded bg-white p-3 hover:bg-neutral-50">
+          <div className="font-bold">The whole playbook</div>
+          <div className="text-sm text-neutral-600">37 pages laid out like the Rams 2022 book: section covers, contents, every play with its jobs, call sheet, install plan. Print to PDF.</div>
+        </Link>
         {PRINTS.map(([sheet, label, what]) => (
           <Link key={sheet} href={`/systems/beast-2026/print?sheet=${sheet}`} className="border border-neutral-300 rounded bg-white p-3 hover:border-black">
             <div className="font-bold">{label}</div>

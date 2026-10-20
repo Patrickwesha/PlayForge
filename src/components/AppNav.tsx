@@ -16,7 +16,7 @@ const LINKS: { href: string; label: string }[] = [
 
 export function AppNav() {
   const pathname = usePathname();
-  if (pathname.startsWith('/print') || pathname.endsWith('/print')) return null;
+  if (pathname.startsWith('/print') || pathname.endsWith('/print') || pathname.endsWith('/book')) return null;
   return (
     <header className="no-print h-11 shrink-0 flex items-center gap-1 px-3 bg-black text-white border-b border-black">
       <Link href="/" className="font-bold tracking-wide text-sm mr-3">

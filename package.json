@@ -13,7 +13,9 @@
     "import:plays": "python scripts/playbook/build_plays.py && vitest run src/seeds/packers2019Plays.test.ts",
     "render:plays": "vitest run --config vitest.render.config.mts scripts/render-plays.render.tsx",
     "import:snaps": "tsx scripts/import-snaps.ts",
-    "render:beast": "vitest run --config vitest.render.config.mts scripts/render-beast.render.tsx"
+    "render:beast": "vitest run --config vitest.render.config.mts scripts/render-beast.render.tsx",
+    "export:beast-book": "node scripts/export-beast-book.mjs",
+    "export:beast-video-data": "tsx scripts/export-beast-video-data.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.116.0",

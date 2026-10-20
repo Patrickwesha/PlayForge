@@ -15,17 +15,17 @@ export type BeastSheet = 'callsheet' | 'wristband' | 'jobs' | 'install' | 'teach
 const LANDSCAPE: BeastSheet[] = ['callsheet'];
 const SHEET_NAMES: Record<BeastSheet, string> = { callsheet: 'Call sheet', wristband: 'Wristbands', jobs: 'Player cards', install: 'Install plan', teach: 'Teaching sheet' };
 
-function Page({ landscape, children, pad = 0.35 }: { landscape?: boolean; children: ReactNode; pad?: number }) {
+export function Page({ landscape, children, pad = 0.35 }: { landscape?: boolean; children: ReactNode; pad?: number }) {
   const w = landscape ? 11 : 8.5;
   const h = landscape ? 8.5 : 11;
   return (
-    <section className="sheet" style={{ width: `${w}in`, height: `${h}in`, padding: `${pad}in`, fontFamily: FONT_STACK, fontSize: '9pt', lineHeight: 1.25 }}>
+    <section className={`sheet${landscape ? ' land' : ''}`} style={{ width: `${w}in`, height: `${h}in`, padding: `${pad}in`, fontFamily: FONT_STACK, fontSize: '9pt', lineHeight: 1.25 }}>
       {children}
     </section>
   );
 }
 
-function TitleBar({ title, right }: { title: string; right?: ReactNode }) {
+export function TitleBar({ title, right }: { title: string; right?: ReactNode }) {
   return (
     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#000', color: '#fff', padding: '4px 8px', marginBottom: 6 }}>
       <div style={{ fontSize: '14pt', fontWeight: 900, letterSpacing: 0.5 }}>{title}</div>
@@ -61,7 +61,7 @@ function CallSection({ id }: { id: string }) {
   );
 }
 
-function CallSheet() {
+export function CallSheet() {
   return (
     <Page landscape pad={0.3}>
       <TitleBar
@@ -307,7 +307,7 @@ function PlayerCards() {
 
 // ---------------------------------------------------------------- install plan
 
-function Install() {
+export function Install() {
   const chunks = [INSTALL.slice(0, 4), INSTALL.slice(4, 8), INSTALL.slice(8)];
   return (
     <>
